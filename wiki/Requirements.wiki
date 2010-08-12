@@ -7,9 +7,7 @@ And it is implemented as the Eclipse plugin. More about Eclipse platform: http:/
 Using the cfeditor, system administrators can create the structured projects, check the cfengine syntax, use the Version Control system to manage the project changes, and others...
 
 = Details =
-The editor functionality logically can be separated into two groups: _minimal suit_ and _normal suit_
-
-Complete Documentation should be provided to the software package.
+The editor functionality logically can be separated into two groups: _minimal suit_ and _normal suit_. Complete Documentation should be provided to the software package.
 
 == minimal suit ==
 Includes "standard" features of the eclipse editor frame:
