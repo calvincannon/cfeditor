@@ -1,4 +1,4 @@
-This is the project outline to make the documentation more structured.
+#summary The project outline to make the documentation more structured.
 
 = Documentation Structure =
 
