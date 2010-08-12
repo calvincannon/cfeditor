@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Project requirements
 
 = What is the cfeditor? =
 cfeditor stays for configuration editor and is designed for the cfengine version 3 Configuration Management Engine. More about cfengine: http://www.cfengine.org
