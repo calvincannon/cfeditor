@@ -9,7 +9,7 @@ Using the cfeditor, system administrators can create the structured projects, ch
 = Why do we need it?=
 To provide the IDE for System Administrators to create the cfengine Configuration Management Engine (http://www.cfengine.org/) projects.
 
-The purpose of the project is to reduce the gap between software development and the system administration, and provide the useful interface to the system configuration engine, by using the rich Eclipse platform functionality.
+The main purpose is to reduce the gap between software development and the system administration, and provide the useful interface to the system configuration engine, by using the rich Eclipse platform functionality.
 
 Can be useful for the system administrators, which are newcomers to the cfengine (current version 3) language syntax. And also to provide the way to make a system administration tasks structure similar to the software development projects.
 
