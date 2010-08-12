@@ -7,29 +7,29 @@ And it is implemented as the Eclipse plugin. More about Eclipse platform: http:/
 Using the cfeditor, system administrators can create the structured projects, check the cfengine syntax, use the Version Control system to manage the project changes, and others...
 
 = Details =
-The editor functionality logically can be separated into two groups:
- # minimal suit
- # normal suit
+The editor functionality logically can be separated into two groups: _minimal suit_ and _normal suit_
 
 Complete Documentation should be provided to the software package.
 
 == minimal suit ==
 Includes "standard" features of the eclipse editor frame:
-* create structured project 
- ** dirs: inputs/lib, inputs/tasks, repl/ 
- ** files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf
-* text coloring
-* current line highlighting
-* syntax highlighting
-* overview ruler
-* error squiggles
-* different kind of hovers
-* dynamically updated outliner
-* content assist
-* bracket matching
-* find/replace
+ * project structure
+  * dirs: inputs/lib, inputs/tasks, repl/ 
+  * files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf
+ * editor options
+  * text coloring
+  * current line highlighting
+  * syntax highlighting
+  * error squiggles
+  * content assist
+  * bracket matching
+ * frame options
+  * overview ruler
+  * different kind of hovers
+  * dynamically updated outliner
+  * find/replace
 
 == normal suit ==
 Some additional tasks can be done to extend the editor functionality, as:
-* code validation (connecting with the cf-promises)
-* dynamically content assistance 
+ * code validation (connecting with the cf-promises)
+ * dynamically content assistance 
