@@ -1,5 +1,11 @@
 #summary The project outline to make the documentation more structured.
 
+= What is the cfeditor? =
+cfeditor stays for configuration editor and is designed for the cfengine version 3 Configuration Management Engine. More about cfengine: http://www.cfengine.org
+And it is implemented as the Eclipse plugin. More about Eclipse platform: http://http://www.eclipse.org
+
+Using the cfeditor, system administrators can create the structured projects, check the cfengine syntax, use the Version Control system to manage the project changes, and others...
+
 = Documentation Structure =
 
 == [Requirements] ==
