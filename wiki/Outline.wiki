@@ -1,0 +1,6 @@
+This is the project outline to make the documentation more structured.
+
+= Documentation Structure =
+
+ # [Requirements]
+ # [http://code.google.com/a/eclipselabs.org/p/cfeditor/issues/list Known issues]
