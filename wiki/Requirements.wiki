@@ -1,0 +1,35 @@
+#summary One-sentence summary of this page.
+
+= What is the cfeditor? =
+cfeditor stays for configuration editor and is designed for the cfengine version 3 Configuration Management Engine. More about cfengine: http://www.cfengine.org
+And it is implemented as the Eclipse plugin. More about Eclipse platform: http://http://www.eclipse.org
+
+Using the cfeditor, system administrators can create the structured projects, check the cfengine syntax, use the Version Control system to manage the project changes, and others...
+
+= Details =
+The editor functionality logically can be separated into two groups:
+ # minimal suit
+ # normal suit
+
+Complete Documentation should be provided to the software package.
+
+== minimal suit ==
+Includes "standard" features of the eclipse editor frame:
+* create structured project 
+ ** dirs: inputs/lib, inputs/tasks, repl/ 
+ ** files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf
+* text coloring
+* current line highlighting
+* syntax highlighting
+* overview ruler
+* error squiggles
+* different kind of hovers
+* dynamically updated outliner
+* content assist
+* bracket matching
+* find/replace
+
+== normal suit ==
+Some additional tasks can be done to extend the editor functionality, as:
+* code validation (connecting with the cf-promises)
+* dynamically content assistance 
