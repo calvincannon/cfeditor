@@ -23,5 +23,5 @@ Includes "standard" features of the eclipse editor frame:
 
 == normal suit ==
 Some additional tasks can be done to extend the editor functionality, as:
- * code validation (connecting with the cf-promises)
+ * code validation 
  * dynamically content assistance 
