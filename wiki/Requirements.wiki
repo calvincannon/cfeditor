@@ -1,10 +1,11 @@
 #summary Project requirements
 
-= Details =
-The editor functionality logically can be separated into two groups: _minimal suit_ and _normal suit_. Complete Documentation should be provided to the software package.
+= Requirements for release 0.1 =
+== Release date==
+release: 01.10.2010
 
-== minimal suit ==
-Includes "standard" features of the eclipse editor frame:
+== Functionality ==
+=== source code editor===
  * project structure
   * dirs: inputs/lib, inputs/tasks, repl/ 
   * files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf
@@ -21,7 +22,36 @@ Includes "standard" features of the eclipse editor frame:
   * dynamically updated outliner
   * find/replace
 
-== normal suit ==
-Some additional tasks can be done to extend the editor functionality, as:
- * code validation 
+=== interpreter ===
+No functionality for this release.
+=== debugger ===
+No functionality for this release.
+
+
+= Requirements for release 1.0 =
+== Release date==
+release: do not defined yet.
+
+== Functionality ==
+=== source code editor===
+ * project structure
+  * dirs: inputs/lib, inputs/tasks, repl/ 
+  * files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf
+ * editor options
+  * text coloring
+  * current line highlighting
+  * syntax highlighting
+  * error squiggles
+  * content assist
+  * bracket matching
+ * frame options
+  * overview ruler
+  * different kind of hovers
+  * dynamically updated outliner
+  * find/replace
  * dynamically content assistance 
+
+=== interpreter ===
+ * code validation 
+=== debugger ===
+No functionality for this release.
