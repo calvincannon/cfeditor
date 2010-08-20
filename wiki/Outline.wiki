@@ -1,5 +1,4 @@
 #summary The project outline to make the documentation more structured.
-
 = What is the cfeditor? =
 cfeditor stays for configuration editor and is designed for the cfengine version 3 Configuration Management Engine. More about cfengine: http://www.cfengine.org.
 It is implemented as Eclipse plugin. More about Eclipse platform: http://http://www.eclipse.org
@@ -7,7 +6,7 @@ It is implemented as Eclipse plugin. More about Eclipse platform: http://http://
 Using the cfeditor, system administrators can create the structured projects, check the cfengine syntax, use the Version Control system to manage the project changes, and others...
 
 = Why do we need it?=
-To provide the IDE for System Administrators to create the cfengine Configuration Management Engine (http://www.cfengine.org/) projects.
+To provide the IDE for System Administrators (primary for the Linux System Administrators) to create the projects, based on the cfengine Configuration Management Engine (http://www.cfengine.org/).
 
 The main purpose is to reduce the gap between software development and the system administration, and provide the useful interface to the system configuration engine, by using the rich Eclipse platform functionality.
 
