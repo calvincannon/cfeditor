@@ -10,7 +10,7 @@
 = Functionality =
 == source code editor == 
 || *release*|| *project structure* || *current status* || 
-|| r.0.1 || dirs: inputs/lib, inputs/tasks, repl/; || || 
+|| r.0.1 || dirs: inputs/lib, inputs/tasks, input/services, repl/scripts, repl/configs || || 
 || r.0.1 || files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf || || 
 || ... || ... || ... || 
 || r.1.0 || basic skeleton for "typical" cfeditor project ||  || 
