@@ -6,7 +6,7 @@ It is implemented as Eclipse plugin. More about Eclipse platform: http://http://
 Using the cfeditor, system administrators can create the structured projects, check the cfengine syntax, use the Version Control system to manage the project changes, and others...
 
 = Why do we need it?=
-To provide the IDE for System Administrators (primary for the Linux System Administrators) to create the projects, based on the cfengine Configuration Management Engine (http://www.cfengine.org/).
+To provide the [http://en.wikipedia.org/wiki/Integrated_development_environment Integrated development environment (IDE)] for System Administrators (primary for the Linux System Administrators) to create the projects, based on the cfengine Configuration Management Engine.
 
 The main purpose is to reduce the gap between software development and the system administration, and provide the useful interface to the system configuration engine, by using the rich Eclipse platform functionality.
 
