@@ -36,10 +36,4 @@
 || *release*|| *interpreter options* || *current status* ||
 || ... || ... || ... || 
 || r.1.0 || Only for Linux: code validation with cf-promises || ||
-|| r.1.0 || Only for Linux: integration with cf-agent --dry-run, --inform   || ||
-
-==debugger==
-|| *release*|| *debugger options* || *current status* ||
-|| ... || ... || ... || 
-|| r.1.0 || Only for Linux: integration with cf-agent --debug  || ||
-|| r.1.0 || Only for Linux: integration with cf-agent --debug  || ||
+|| r.1.0 || Only for Linux: integration with cf-agent (--dry-run, --inform, --debug) || ||
