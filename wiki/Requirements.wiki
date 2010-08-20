@@ -31,7 +31,7 @@
 || r.0.1 || dynamically updated outliner || ||
 || r.0.1 || find/replace || ||
 || ... || ... || ... || 
-|| r.0.1 || eclipse basic frame options || ... || 
+|| r.1.0 || eclipse basic frame options ||  || 
 
 ==interpreter==
 || *release*|| *interpreter options* || *current status* ||
