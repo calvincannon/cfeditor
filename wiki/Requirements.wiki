@@ -33,7 +33,9 @@
 || ... || ... || ... || 
 
 ==interpreter==
-No requirements yet.
+|| *release*|| *debugger options* || *current status* ||
+|| ... || ... || ... || 
+|| r.1.0 || No requirements  || ||
 
 ==debugger==
 || *release*|| *debugger options* || *current status* ||
