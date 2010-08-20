@@ -36,6 +36,6 @@
 No requirements yet.
 
 ==debugger==
-|| *release|| *frame options || * current status ||
+|| *release*|| *debugger options* || *current status* ||
 || ... || ... || ... || 
 || r.1.0 || code validation  || ||
