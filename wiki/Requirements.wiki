@@ -9,12 +9,12 @@
 
 = Functionality =
 == source code editor == 
-|| *release|| * project structure: || * current status || 
+|| *release*|| *project structure* || *current status* || 
 || r.0.1 || dirs: inputs/lib, inputs/tasks, repl/; || || 
 || r.0.1 || files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf || || 
 || ... || ... || ... || 
 
-|| *release|| *editor options || * current status ||
+|| *release*|| *editor options* || *current status* ||
 || r.0.1 || text coloring  || ||
 || r.0.1 || current line highlighting || ||
 || r.0.1 || syntax highlighting || ||
@@ -25,7 +25,7 @@
 || r.1.0 || dynamically content assistance || ||
 
 
-|| *release|| *frame options || * current status ||
+|| *release*|| *frame options* || *current status* ||
 || r.0.1 || overview ruler || ||
 || r.0.1 || different kind of hovers || ||
 || r.0.1 || dynamically updated outliner || ||
