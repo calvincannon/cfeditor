@@ -1,57 +1,39 @@
 #summary Project requirements
 
-= Requirements for release 0.1 =
-== Release date==
-release: 01.10.2010
+= Releases =
+|| Release || Release Date ||
+|| r.0.1 || 01.10.2010 ||
+|| r.1.0 || do not defined yet ||
 
-== Functionality ==
-=== source code editor===
- * project structure
-  * dirs: inputs/lib, inputs/tasks, repl/ 
-  * files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf
- * editor options
-  * text coloring
-  * current line highlighting
-  * syntax highlighting
-  * error squiggles
-  * content assist
-  * bracket matching
- * frame options
-  * overview ruler
-  * different kind of hovers
-  * dynamically updated outliner
-  * find/replace
+= Functionality =
+== source code editor == 
+|| *release|| * project structure: || * current status || 
+|| r.0.1 || dirs: inputs/lib, inputs/tasks, repl/; || || 
+|| r.0.1 || files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf || || 
+|| ... || ... || ... || 
 
-=== interpreter ===
-No functionality for this release.
-=== debugger ===
-No functionality for this release.
+|| *release|| *editor options || * current status ||
+|| r.0.1 || text coloring  || ||
+|| r.0.1 || current line highlighting || ||
+|| r.0.1 || syntax highlighting || ||
+|| r.0.1 || error squiggles || ||
+|| r.0.1 || content assist || ||
+|| r.0.1 || bracket matching || ||
+|| ... || ... || ... || 
+|| r.1.0 || dynamically content assistance || ||
 
 
-= Requirements for release 1.0 =
-== Release date==
-release: do not defined yet.
+|| *release|| *frame options || * current status ||
+|| r.0.1 || overview ruler || ||
+|| r.0.1 || different kind of hovers || ||
+|| r.0.1 || dynamically updated outliner || ||
+|| r.0.1 || find/replace || ||
+|| ... || ... || ... || 
 
-== Functionality ==
-=== source code editor===
- * project structure
-  * dirs: inputs/lib, inputs/tasks, repl/ 
-  * files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf
- * editor options
-  * text coloring
-  * current line highlighting
-  * syntax highlighting
-  * error squiggles
-  * content assist
-  * bracket matching
- * frame options
-  * overview ruler
-  * different kind of hovers
-  * dynamically updated outliner
-  * find/replace
- * dynamically content assistance 
+==interpreter==
+No requirements yet.
 
-=== interpreter ===
- * code validation 
-=== debugger ===
-No functionality for this release.
+==debugger==
+|| *release|| *frame options || * current status ||
+|| ... || ... || ... || 
+|| r.1.0 || code validation  || ||
