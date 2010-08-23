@@ -1,9 +1,6 @@
 package cfeditor.projects;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.ByteArrayInputStream;
 import java.net.URI;
 
 import org.eclipse.core.resources.IContainer;
@@ -93,36 +90,35 @@ public class CfeditorProjectSupport {
 	}
 
 	/**
-	 * Creates a new file in the project.
+	 * Creates a new file in the file system and in the project structure.
 	 * 
 	 * @param file
 	 */
 	private static void createFile(IFile file) {
-		FileOutputStream out;
+		// FileOutputStream out;
 		// PrintStream p;
-
+		// try {
+		// out = new FileOutputStream(file.getLocation().toString());
+		// p = new PrintStream(out);
+		// p.println(file.getLocation().toString());
+		// p.println(file.getLocation().toOSString());
+		// //p.println(file.getLocation().toPortableString());
+		// p.close();
+		// out.close();
+		// } catch (FileNotFoundException e) {
+		// e.printStackTrace();
+		// } catch (IOException e) {
+		// e.printStackTrace();
+		// }
 		try {
-			out = new FileOutputStream(file.getName());
-
-			// p = new PrintStream(out);
-			//
-			// p.println(file.getName());
-			//
-			// p.close();
-
-			out.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		try {
-			file.create(new FileInputStream(file.getName()), false, null);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			// FileInputStream(file.getLocation().toString());
+			file.create(new ByteArrayInputStream(new byte[0]), false, null);
+			// } catch (FileNotFoundException e) {
+			// e.printStackTrace();
 		} catch (CoreException e) {
 			e.printStackTrace();
+			// } catch (IOException e) {
+			// e.printStackTrace();
 		}
 	}
 
