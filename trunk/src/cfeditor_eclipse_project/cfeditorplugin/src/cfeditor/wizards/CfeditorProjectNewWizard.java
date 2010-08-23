@@ -12,7 +12,7 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.dialogs.WizardNewProjectCreationPage;
 import org.eclipse.ui.wizards.newresource.BasicNewProjectResourceWizard;
 
-import cfeditor.projects.CustomProjectSupport;
+import cfeditor.projects.CfeditorProjectSupport;
 
 /**
  * The project wizard for a Cfeditor project.
@@ -55,7 +55,7 @@ public class CfeditorProjectNewWizard extends Wizard implements INewWizard, IExe
 		if (!_pageOne.useDefaults()) {
 			location = _pageOne.getLocationURI();
 		} // else location == null
-		CustomProjectSupport.createProject(name, location);
+		CfeditorProjectSupport.createProject(name, location);
 		BasicNewProjectResourceWizard.updatePerspective(_configurationElement);
 		return true;
 	}
