@@ -1,0 +1,1 @@
+To use this plugin just put the *.jar file in the plugin directory of your eclipse installation and restart eclipse.
