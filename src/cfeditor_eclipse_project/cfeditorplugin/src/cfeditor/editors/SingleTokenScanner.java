@@ -11,13 +11,25 @@ import org.eclipse.jface.text.rules.Token;
  * 
  */
 public class SingleTokenScanner extends BufferedRuleBasedScanner {
-	
+//	ColorManager manager;
 	/**
 	 * The constructor. Sets default return token.
 	 * 
 	 * @param attribute the attribute for the default token
 	 */
 	public SingleTokenScanner(TextAttribute attribute) {
+		//manager =new ColorManager();
 		setDefaultReturnToken(new Token(attribute));
+//		
+//		IToken string =
+//			new Token(
+//				new TextAttribute(manager.getColor(ICfColorConstants.RED)));
+//
+//		IRule[] rules = new IRule[1];
+//
+//		
+//		rules[0] = new WhitespaceRule(new XMLWhitespaceDetector());
+//
+//		setRules(rules);
 	}
 }

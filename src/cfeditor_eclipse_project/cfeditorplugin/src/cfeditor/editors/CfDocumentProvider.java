@@ -24,11 +24,7 @@ public class CfDocumentProvider extends FileDocumentProvider {
 	protected IDocument createDocument(Object element) throws CoreException {
 		IDocument document = super.createDocument(element);
 		if (document != null) {
-			IDocumentPartitioner partitioner = new CfPartitioner( // TODO
-																	// FastPartitioner
-																	// instead
-																	// of
-																	// CfPartitioner
+			IDocumentPartitioner partitioner = new CfPartitioner( // TODO FastPartitioner instead of CfPartitioner
 					new CfPartitionScanner(), new String[] { CfPartitionScanner.CF_LISTING,
 							CfPartitionScanner.CF_COMMENT });
 			partitioner.connect(document);
