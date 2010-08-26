@@ -1,0 +1,31 @@
+# @name : update.cf 
+# @author:
+# @information: 
+#   cf3 configuration file
+#   fix /var/cfengine, /var/cfengine/bin/, /var/cfengine/ppkeys/ directories
+#   update configuration from repository
+# IMPORTANT: bundle name must be included into the promises.cf
+
+bundle agent update {
+vars:
+    "preconf"       string => "${g.masterfiles}/cf3.preconf";
+    
+files:
+    # Fix directories
+    "/var/cfengine/."
+        create              => "true",
+        perms               => bsystem("0700","root","root");
+
+    "/var/cfengine/bin/."
+        create              => "true",
+        perms               => bsystem("0700","root","root");
+
+    "/var/cfengine/ppkeys/."
+        perms               => bsystem("0700","root","root");
+}
+
+body perms bsystem(p,u,g) {
+    mode    => "${p}";
+    owners  => { "${u}" };
+    groups  => { "${g}" };
+}

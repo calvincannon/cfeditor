@@ -1,0 +1,13 @@
+# @name: promises.cf 
+# @author:
+# @information: 
+#   cf3 configuration file
+#   the main cf3 configuration file
+
+body common control {
+    version     => "0.1";
+    
+    bundlesequence => {};
+ 
+    inputs => {"update.cf"};      
+}
