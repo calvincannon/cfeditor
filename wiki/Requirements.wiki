@@ -10,19 +10,19 @@
 = Functionality =
 == source code editor == 
 || *release*|| *project structure* || *current status* || 
-|| r.0.1 || dirs: inputs/cflib, inputs/tasks, inputs/services || ||
-|| r.0.1 || dirs: repl/scripts, repl/configs, repl/modules || || 
-|| r.0.1 || dirs: repl/scripts/monitors, repl/scripts/reports, repl/scripts/services, repl/scripts/tasks || ||
-|| r.0.1 || dirs: repl/configs/services, repl/configs/tasks || || 
-|| r.0.1 || files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf || || 
+|| r.0.1 || dirs: inputs/cflib, inputs/tasks, inputs/services ||✔||
+|| r.0.1 || dirs: repl/scripts, repl/configs, repl/modules ||✔|| 
+|| r.0.1 || dirs: repl/scripts/monitors, repl/scripts/reports, repl/scripts/services, repl/scripts/tasks ||✔||
+|| r.0.1 || dirs: repl/configs/services, repl/configs/tasks ||✔|| 
+|| r.0.1 || files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf ||✔|| 
 || ... || ... || ... || 
 || r.1.0 || basic skeleton for "typical" cfeditor project ||  || 
 
 
 || *release*|| *editor options* || *current status* ||
-|| r.0.1 || text coloring  || ||
-|| r.0.1 || current line highlighting || ||
-|| r.0.1 || syntax highlighting || ||
+|| r.0.1 || text coloring  ||✔||
+|| r.0.1 || current line highlighting ||✔||
+|| r.0.1 || syntax highlighting ||✔||
 || r.0.1 || error squiggles || ||
 || r.0.1 || content assist || ||
 || r.0.1 || bracket matching || ||
@@ -34,7 +34,7 @@
 || r.0.1 || overview ruler || ||
 || r.0.1 || different kind of hovers || ||
 || r.0.1 || dynamically updated outliner || ||
-|| r.0.1 || find/replace || ||
+|| r.0.1 || find/replace ||✔||
 || ... || ... || ... || 
 || r.1.0 || eclipse basic frame options ||  || 
 
