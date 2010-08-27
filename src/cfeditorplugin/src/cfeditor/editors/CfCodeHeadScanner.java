@@ -29,8 +29,8 @@ public class CfCodeHeadScanner extends CfCodeScanner {
 		super(manager);
 		IToken wordToken = new Token(new TextAttribute(manager.getColor(ICfColorConstants.CF_WORD), null, 1));
 		IToken functionWordToken = new Token(new TextAttribute(manager.getColor(ICfColorConstants.DEFAULT), null, 2));
+		IToken quoteToken = new Token(new TextAttribute(manager.getColor(ICfColorConstants.QUOTE)));
 		IToken defaultToken = new Token(new TextAttribute(manager.getColor(ICfColorConstants.DEFAULT)));
-		IToken quote = new Token(new TextAttribute(manager.getColor(ICfColorConstants.QUOTE)));
 
 		// String[] words = {"common", "control", "agent", "server", "monitor",
 		// "runagent", "executor",
@@ -47,25 +47,27 @@ public class CfCodeHeadScanner extends CfCodeScanner {
 		ArrayList<String> functionwords = defProvider.getDefinitions("functionwords");
 
 		WordRule wordRule = new WordRule(new CfWordDetector(), defaultToken);
+		WordRule functionWordRule = new WordRule(new CfFunctionWordDetector(), Token.UNDEFINED);
 
 		for (String strWord : mainwords) {
 			wordRule.addWord(strWord, wordToken);
 		}
-		
+
 		for (String strWord : functionwords) {
-			wordRule.addWord(strWord+":", functionWordToken);
+			functionWordRule.addWord(strWord, functionWordToken);
 		}
 		// for (String strWord : words) {
 		// wordRule.addWord(strWord, wordToken);
 		// }
 
-		IRule[] rules = new IRule[2];
+		IRule[] rules = new IRule[3];
 		// rules[0] = new WordPatternRule(new CfWordDetector(), "body", "",
 		// wordToken);
 		// rules[1] = new WordPatternRule(new CfWordDetector(), "bundle", "",
 		// wordToken);
-		rules[0] = new MultiLineRule("\"", "\"", quote, '\\');
-		rules[1] = wordRule;
+		rules[0] = new MultiLineRule("\"", "\"", quoteToken, '\\');
+		rules[1] = functionWordRule;
+		rules[2] = wordRule;
 
 		setRules(rules);
 	}
