@@ -1,15 +1,14 @@
-# @name : update.cf 
+# @name: update.cf
 # @author:
-# @information: 
-#   cf3 configuration file
-#   fix /var/cfengine, /var/cfengine/bin/, /var/cfengine/ppkeys/ directories
-#   update configuration from repository
+# @information:
+# 	cf3 configuration file
+# 	fix /var/cfengine, /var/cfengine/bin/, /var/cfengine/ppkeys/ directories
+# 	update configuration from repository
 # IMPORTANT: bundle name must be included into the promises.cf
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# toDo: add promises for the update procedure 
 
 bundle agent update {
-vars:
-    "preconf"       string => "${g.masterfiles}/cf3.preconf";
-    
 files:
     # Fix directories
     "/var/cfengine/."
