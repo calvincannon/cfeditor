@@ -47,7 +47,7 @@ public class CfeditorProjectSupport {
 			filemap.put("inputs/failsafe.cf", true);
 			filemap.put("inputs/promises.cf", true);
 			filemap.put("inputs/update.cf", true);
-			filemap.put("inputs/cflib/cfengine_cflib.cf", true);
+			filemap.put("inputs/cflib/cfengine_stdlib.cf", true);
 
 			addToProjectStructure(project, paths, filemap);
 		} catch (CoreException e) {

@@ -1,11 +1,11 @@
-# @name: failsafe.cf 
+# @name: failsafe.cf
 # @author:
-# @information: 
-#   cf3 configuration file
-#
-# toDo: create promises to manage failsafe procedure (bootstrap)
- 
-body common control { 
-    bundlesequence  => { "update" }; 
-    inputs          => { "update.cf" }; 
+# @information:
+# 	cf3 configuration file
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# toDo: create promises to manage failsafe procedure (bootstrap) and put them into the bundlesequence
+
+body common control {
+	bundlesequence => { "update" };
+	inputs => { "update.cf" };
 }
