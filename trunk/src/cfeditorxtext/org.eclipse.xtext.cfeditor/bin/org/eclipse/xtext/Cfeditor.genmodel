@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.xtext.cfeditor/src-gen"
+    editDirectory="/org.eclipse.xtext.cfeditor.edit/src" editorDirectory="/org.eclipse.xtext.cfeditor.editor/src"
+    modelPluginID="org.eclipse.xtext.cfeditor" forceOverwrite="true" modelName="Cfeditor"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.eclipse.xtext.cfeditor.edit"
+    editorPluginID="org.eclipse.xtext.cfeditor.editor">
+  <genPackages prefix="Cfeditor" basePackage="org.eclipse.xtext" disposableProviderFactory="true"
+      ecorePackage="Cfeditor.ecore#/">
+    <genClasses ecoreClass="Cfeditor.ecore#//CfModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//CfModel/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfeditor.ecore#//AbstractElement"/>
+    <genClasses ecoreClass="Cfeditor.ecore#//Part">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//Part/component"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfeditor.ecore#//Bundle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//Bundle/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//Bundle/promiseType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//Bundle/methods"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfeditor.ecore#//Body">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//Body/promiseType"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfeditor.ecore#//Methode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//Methode/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//Methode/zuweisung"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfeditor.ecore#//Zuweisung">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//Zuweisung/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfeditor.ecore#//PromiseType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//PromiseType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfeditor.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//Component/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,65 @@
+grammar org.eclipse.xtext.Cfeditor hidden(WS, SL_COMMENT)
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+generate cfeditor "http://www.eclipse.org/xtext/Cfeditor"
+
+CfModel:
+	(elements+=AbstractElement)*;
+
+terminal ID:
+	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
+
+terminal INT returns ecore::EInt:
+	('0'..'9')+;
+
+	//terminal STRING:
+//	'"' ('\\' ('b' | 't' | 'n' | 'f' | 'r' | '"' | "'" | '\\' ) | !('\\' | '"'))* '"' |
+//	"'" ('\\' ('b' | 't' | 'n' | 'f' | 'r' | '"' | "'" | '\\' ) | !('\\' | "'"))* "'";
+
+//terminal STRING:
+//'"'('\\"'|!('"'))*'"';
+terminal STRING:
+	'"' (!('\\' | '"') | '\\' .)* '"' |
+	"'" (!('\\' | "'") | '\\' .)* "'"; //TODO works but not fine when \" occurs
+terminal SL_COMMENT:
+	'#' !('\n' | '\r')* ('\r'? '\n')?;
+
+terminal WS:
+	(' ' | '\t' | '\r' | '\n')+;
+
+terminal ANY_OTHER:
+	.;
+
+AbstractElement:
+	Part;
+
+Part:
+	(Bundle | Body);
+
+Bundle:
+	'bundle' component=Component name=ID '{' (promiseType+=PromiseType ':' (methods+=Methode)* )* '}';
+
+Body:
+	'body' component=Component promiseType='control' '{' '}';
+
+Methode:
+name=STRING (';'|zuweisung+=Zuweisung (','zuweisung+=Zuweisung)*';');
+
+Zuweisung:
+name=ID ('=>' (ID|STRING)* )?;
+
+PromiseType:
+	name=('access' | 'classes' | 'commands' | 'databases' | 'environments' | 'files' | 'inferences' | 'interfaces' |
+	'measurements' | 'methods' | 'occurrences' | 'outputs' | 'packages' | 'processes' | 'reports' | 'roles' | 'services' |
+	'storage' | 'topics' | 'vars');
+
+Component:
+	name=('common' | 'agent' | 'server' | 'monitor' | 'runagent' | 'executor' | 'knowledge' | 'reporter'
+	/*| 'hub'*/);
+	/*
+CompoundBody:
+	name=('action' | 'classes' | 'contain' | 'database_server' | 'environment_interface' | 'environment_resources' | 'acl' |
+	'changes' | 'copy_from' | 'delete' | 'depth_search' | 'edit_defaults' | 'file_select' | 'link_from' | 'perms' |
+	'rename' | 'select_region' | 'delete_select' | 'insert_select' | 'location' | 'edit_field' | 'replace_with' | 'tcp_ip'
+	| 'package_method' | 'process_count' | 'process_select' | 'service_method' | 'mount' | 'volume' | 'association' |
+	'infer' | 'match_value');*/

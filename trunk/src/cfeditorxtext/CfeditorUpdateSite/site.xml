@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.xtext.cfeditorfeature_0.1.0.jar" id="org.eclipse.xtext.cfeditorfeature" version="0.1.0">
+      <category name="cfeditor.category"/>
+   </feature>
+   <category-def name="cfeditor.category" label="Cfeditor"/>
+</site>
