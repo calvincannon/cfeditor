@@ -72,40 +72,58 @@ public interface CfeditorFactory extends EFactory
   Body createBody();
 
   /**
-   * Returns a new object of class '<em>Methode</em>'.
+   * Returns a new object of class '<em>Body Function</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Methode</em>'.
+   * @return a new object of class '<em>Body Function</em>'.
    * @generated
    */
-  Methode createMethode();
+  BodyFunction createBodyFunction();
 
   /**
-   * Returns a new object of class '<em>Zuweisung</em>'.
+   * Returns a new object of class '<em>Special Function</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Zuweisung</em>'.
+   * @return a new object of class '<em>Special Function</em>'.
    * @generated
    */
-  Zuweisung createZuweisung();
+  SpecialFunction createSpecialFunction();
 
   /**
-   * Returns a new object of class '<em>Promise Type</em>'.
+   * Returns a new object of class '<em>Bundle Promise Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Promise Type</em>'.
+   * @return a new object of class '<em>Bundle Promise Type</em>'.
    * @generated
    */
-  PromiseType createPromiseType();
+  BundlePromiseType createBundlePromiseType();
 
   /**
-   * Returns a new object of class '<em>Component</em>'.
+   * Returns a new object of class '<em>Body Promise Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Component</em>'.
+   * @return a new object of class '<em>Body Promise Type</em>'.
    * @generated
    */
-  Component createComponent();
+  BodyPromiseType createBodyPromiseType();
+
+  /**
+   * Returns a new object of class '<em>Bundle Component</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bundle Component</em>'.
+   * @generated
+   */
+  BundleComponent createBundleComponent();
+
+  /**
+   * Returns a new object of class '<em>Body Component</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Component</em>'.
+   * @generated
+   */
+  BodyComponent createBodyComponent();
 
   /**
    * Returns the package supported by this factory.

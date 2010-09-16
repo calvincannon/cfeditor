@@ -6,8 +6,8 @@ package org.eclipse.xtext.ui.outline;
 import org.eclipse.xtext.ui.editor.outline.actions.DefaultContentOutlineNodeAdapterFactory;
 
 public class CfeditorOutlineNodeAdapterFactory extends DefaultContentOutlineNodeAdapterFactory {
-
-	private static final Class<?>[] types = { 
+	
+	private static final Class<?>[] TYPES = { 
 		// provide list of classes to adapt to, e.g.:
 		// Entity.class
 		// Service.class
@@ -15,7 +15,7 @@ public class CfeditorOutlineNodeAdapterFactory extends DefaultContentOutlineNode
 
 	@Override
 	public Class<?>[] getAdapterList() {
-		return types;
+		return TYPES;
 	}
 
 }

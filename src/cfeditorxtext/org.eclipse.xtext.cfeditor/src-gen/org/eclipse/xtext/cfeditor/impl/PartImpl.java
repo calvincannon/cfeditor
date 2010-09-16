@@ -7,15 +7,12 @@
 package org.eclipse.xtext.cfeditor.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.xtext.cfeditor.CfeditorPackage;
-import org.eclipse.xtext.cfeditor.Component;
 import org.eclipse.xtext.cfeditor.Part;
 
 /**
@@ -25,7 +22,7 @@ import org.eclipse.xtext.cfeditor.Part;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.xtext.cfeditor.impl.PartImpl#getComponent <em>Component</em>}</li>
+ *   <li>{@link org.eclipse.xtext.cfeditor.impl.PartImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,14 +31,24 @@ import org.eclipse.xtext.cfeditor.Part;
 public class PartImpl extends AbstractElementImpl implements Part
 {
   /**
-   * The cached value of the '{@link #getComponent() <em>Component</em>}' containment reference.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getComponent()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected Component component;
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -69,9 +76,9 @@ public class PartImpl extends AbstractElementImpl implements Part
    * <!-- end-user-doc -->
    * @generated
    */
-  public Component getComponent()
+  public String getName()
   {
-    return component;
+    return name;
   }
 
   /**
@@ -79,53 +86,12 @@ public class PartImpl extends AbstractElementImpl implements Part
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetComponent(Component newComponent, NotificationChain msgs)
+  public void setName(String newName)
   {
-    Component oldComponent = component;
-    component = newComponent;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CfeditorPackage.PART__COMPONENT, oldComponent, newComponent);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setComponent(Component newComponent)
-  {
-    if (newComponent != component)
-    {
-      NotificationChain msgs = null;
-      if (component != null)
-        msgs = ((InternalEObject)component).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CfeditorPackage.PART__COMPONENT, null, msgs);
-      if (newComponent != null)
-        msgs = ((InternalEObject)newComponent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CfeditorPackage.PART__COMPONENT, null, msgs);
-      msgs = basicSetComponent(newComponent, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CfeditorPackage.PART__COMPONENT, newComponent, newComponent));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case CfeditorPackage.PART__COMPONENT:
-        return basicSetComponent(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+      eNotify(new ENotificationImpl(this, Notification.SET, CfeditorPackage.PART__NAME, oldName, name));
   }
 
   /**
@@ -138,8 +104,8 @@ public class PartImpl extends AbstractElementImpl implements Part
   {
     switch (featureID)
     {
-      case CfeditorPackage.PART__COMPONENT:
-        return getComponent();
+      case CfeditorPackage.PART__NAME:
+        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -154,8 +120,8 @@ public class PartImpl extends AbstractElementImpl implements Part
   {
     switch (featureID)
     {
-      case CfeditorPackage.PART__COMPONENT:
-        setComponent((Component)newValue);
+      case CfeditorPackage.PART__NAME:
+        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -171,8 +137,8 @@ public class PartImpl extends AbstractElementImpl implements Part
   {
     switch (featureID)
     {
-      case CfeditorPackage.PART__COMPONENT:
-        setComponent((Component)null);
+      case CfeditorPackage.PART__NAME:
+        setName(NAME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -188,10 +154,27 @@ public class PartImpl extends AbstractElementImpl implements Part
   {
     switch (featureID)
     {
-      case CfeditorPackage.PART__COMPONENT:
-        return component != null;
+      case CfeditorPackage.PART__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //PartImpl

@@ -73,10 +73,12 @@ public class CfeditorFactoryImpl extends EFactoryImpl implements CfeditorFactory
       case CfeditorPackage.PART: return createPart();
       case CfeditorPackage.BUNDLE: return createBundle();
       case CfeditorPackage.BODY: return createBody();
-      case CfeditorPackage.METHODE: return createMethode();
-      case CfeditorPackage.ZUWEISUNG: return createZuweisung();
-      case CfeditorPackage.PROMISE_TYPE: return createPromiseType();
-      case CfeditorPackage.COMPONENT: return createComponent();
+      case CfeditorPackage.BODY_FUNCTION: return createBodyFunction();
+      case CfeditorPackage.SPECIAL_FUNCTION: return createSpecialFunction();
+      case CfeditorPackage.BUNDLE_PROMISE_TYPE: return createBundlePromiseType();
+      case CfeditorPackage.BODY_PROMISE_TYPE: return createBodyPromiseType();
+      case CfeditorPackage.BUNDLE_COMPONENT: return createBundleComponent();
+      case CfeditorPackage.BODY_COMPONENT: return createBodyComponent();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -142,10 +144,10 @@ public class CfeditorFactoryImpl extends EFactoryImpl implements CfeditorFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Methode createMethode()
+  public BodyFunction createBodyFunction()
   {
-    MethodeImpl methode = new MethodeImpl();
-    return methode;
+    BodyFunctionImpl bodyFunction = new BodyFunctionImpl();
+    return bodyFunction;
   }
 
   /**
@@ -153,10 +155,10 @@ public class CfeditorFactoryImpl extends EFactoryImpl implements CfeditorFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Zuweisung createZuweisung()
+  public SpecialFunction createSpecialFunction()
   {
-    ZuweisungImpl zuweisung = new ZuweisungImpl();
-    return zuweisung;
+    SpecialFunctionImpl specialFunction = new SpecialFunctionImpl();
+    return specialFunction;
   }
 
   /**
@@ -164,10 +166,10 @@ public class CfeditorFactoryImpl extends EFactoryImpl implements CfeditorFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public PromiseType createPromiseType()
+  public BundlePromiseType createBundlePromiseType()
   {
-    PromiseTypeImpl promiseType = new PromiseTypeImpl();
-    return promiseType;
+    BundlePromiseTypeImpl bundlePromiseType = new BundlePromiseTypeImpl();
+    return bundlePromiseType;
   }
 
   /**
@@ -175,10 +177,32 @@ public class CfeditorFactoryImpl extends EFactoryImpl implements CfeditorFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Component createComponent()
+  public BodyPromiseType createBodyPromiseType()
   {
-    ComponentImpl component = new ComponentImpl();
-    return component;
+    BodyPromiseTypeImpl bodyPromiseType = new BodyPromiseTypeImpl();
+    return bodyPromiseType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BundleComponent createBundleComponent()
+  {
+    BundleComponentImpl bundleComponent = new BundleComponentImpl();
+    return bundleComponent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BodyComponent createBodyComponent()
+  {
+    BodyComponentImpl bodyComponent = new BodyComponentImpl();
+    return bodyComponent;
   }
 
   /**

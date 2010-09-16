@@ -6,12 +6,13 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="org.eclipse.xtext.ui.CfeditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
-            contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
-            default="true"
-            extensions="cf"
-            id="org.eclipse.xtext.Cfeditor"
-            name="Cfeditor Editor">
+              class="org.eclipse.xtext.ui.CfeditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+              contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
+              default="true"
+              extensions="cf"
+              icon="icons/cffile.gif"
+              id="org.eclipse.xtext.Cfeditor"
+              name="Cfeditor Editor">
         </editor>
     </extension>
     <extension
@@ -196,13 +197,21 @@
             id="cfeditor.category.wizards"
             name="Cfeditor">
       </category>
+      <wizard
+            category="cfeditor.category.wizards"
+            class="org.eclipse.xtext.ui.wizard.NewCfFileWizard"
+            icon="icons/cffile.gif"
+            id="org.eclipse.xtext.ui.wizard.NewCfFileWizard"
+            name="Cf File"
+            project="false">
+      </wizard>
    </extension>
    <extension
          point="org.eclipse.ui.perspectives">
       <perspective
             class="org.eclipse.xtext.ui.perspectives.CfPerspective"
             id="cfeditor.perspective"
-            name="Cfeditor Perspective">
+            name="Cfeditor">
       </perspective>
    </extension>
    <extension
@@ -232,5 +241,44 @@
          </view>
       </perspectiveExtension>
    </extension>
+   
+   <extension  
+  point="org.eclipse.ui.navigator.navigatorContent">
+ <commonWizard
+            type="new"
+            wizardId="org.eclipse.xtext.ui.wizard.NewCfFileWizard">
+  <enablement>
+   <or>
+    <adapt type="org.eclipse.core.resources.IFolder" />
+           <adapt type="org.eclipse.core.resources.IProject" /> 
+             <adapt type="org.eclipse.core.resources.IWorkspaceRoot" />
+             <adapt
+                   type="org.eclipse.core.resources.IFile">
+             </adapt> 
+   </or>
+  </enablement>
+ </commonWizard>
+ <commonWizard
+       type="new"
+       wizardId="org.eclipse.xtext.ui.wizard.CfeditorNewProjectWizard">
+    <enablement>
+       <or>
+          <adapt
+                type="org.eclipse.core.resources.IFolder">
+          </adapt>
+          <adapt
+                type="org.eclipse.core.resources.IProject">
+          </adapt>
+          <adapt
+                type="org.eclipse.core.resources.IWorkspaceRoot">
+          </adapt>
+          <adapt
+                type="org.eclipse.core.resources.IFile">
+          </adapt>
+       </or>
+    </enablement>
+ </commonWizard>
+</extension>
+   
 
 </plugin>

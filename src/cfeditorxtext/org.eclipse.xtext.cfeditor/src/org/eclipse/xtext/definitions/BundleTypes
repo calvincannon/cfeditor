@@ -39,3 +39,11 @@ knowledge#inferences
 reporter#vars
 reporter#classes
 reporter#reports
+
+edit_line#vars
+edit_line#classes
+edit_line#reports
+edit_line#delete_lines
+edit_line#insert_lines
+edit_xml
+usebundle

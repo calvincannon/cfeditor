@@ -16,7 +16,7 @@ import com.google.inject.Inject;
 public class CfeditorLabelProvider extends DefaultEObjectLabelProvider {
 
 	@Inject
-	public CfeditorLabelProvider(AdapterFactoryLabelProvider delegate) {
+	public CfeditorLabelProvider(final AdapterFactoryLabelProvider delegate) {
 		super(delegate);
 	}
 

@@ -118,13 +118,13 @@ public interface CfeditorPackage extends EPackage
   int PART = 2;
 
   /**
-   * The feature id for the '<em><b>Component</b></em>' containment reference.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PART__COMPONENT = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
+  int PART__NAME = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Part</em>' class.
@@ -146,22 +146,22 @@ public interface CfeditorPackage extends EPackage
   int BUNDLE = 3;
 
   /**
-   * The feature id for the '<em><b>Component</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BUNDLE__COMPONENT = PART__COMPONENT;
-
-  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BUNDLE__NAME = PART_FEATURE_COUNT + 0;
+  int BUNDLE__NAME = PART__NAME;
+
+  /**
+   * The feature id for the '<em><b>Component</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUNDLE__COMPONENT = PART_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Promise Type</b></em>' containment reference list.
@@ -173,22 +173,13 @@ public interface CfeditorPackage extends EPackage
   int BUNDLE__PROMISE_TYPE = PART_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Methods</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BUNDLE__METHODS = PART_FEATURE_COUNT + 2;
-
-  /**
    * The number of structural features of the '<em>Bundle</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BUNDLE_FEATURE_COUNT = PART_FEATURE_COUNT + 3;
+  int BUNDLE_FEATURE_COUNT = PART_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.eclipse.xtext.cfeditor.impl.BodyImpl <em>Body</em>}' class.
@@ -201,22 +192,31 @@ public interface CfeditorPackage extends EPackage
   int BODY = 4;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY__NAME = PART__NAME;
+
+  /**
    * The feature id for the '<em><b>Component</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BODY__COMPONENT = PART__COMPONENT;
+  int BODY__COMPONENT = PART_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Promise Type</b></em>' attribute.
+   * The feature id for the '<em><b>Promise Type</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BODY__PROMISE_TYPE = PART_FEATURE_COUNT + 0;
+  int BODY__PROMISE_TYPE = PART_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Body</em>' class.
@@ -225,17 +225,63 @@ public interface CfeditorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY_FEATURE_COUNT = PART_FEATURE_COUNT + 1;
+  int BODY_FEATURE_COUNT = PART_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.xtext.cfeditor.impl.MethodeImpl <em>Methode</em>}' class.
+   * The meta object id for the '{@link org.eclipse.xtext.cfeditor.impl.BodyFunctionImpl <em>Body Function</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipse.xtext.cfeditor.impl.MethodeImpl
-   * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getMethode()
+   * @see org.eclipse.xtext.cfeditor.impl.BodyFunctionImpl
+   * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getBodyFunction()
    * @generated
    */
-  int METHODE = 5;
+  int BODY_FUNCTION = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_FUNCTION__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Values</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_FUNCTION__VALUES = 1;
+
+  /**
+   * The feature id for the '<em><b>Function</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_FUNCTION__FUNCTION = 2;
+
+  /**
+   * The number of structural features of the '<em>Body Function</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_FUNCTION_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.eclipse.xtext.cfeditor.impl.SpecialFunctionImpl <em>Special Function</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipse.xtext.cfeditor.impl.SpecialFunctionImpl
+   * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getSpecialFunction()
+   * @generated
+   */
+  int SPECIAL_FUNCTION = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -244,35 +290,35 @@ public interface CfeditorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int METHODE__NAME = 0;
+  int SPECIAL_FUNCTION__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Zuweisung</b></em>' containment reference list.
+   * The feature id for the '<em><b>Parameters</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int METHODE__ZUWEISUNG = 1;
+  int SPECIAL_FUNCTION__PARAMETERS = 1;
 
   /**
-   * The number of structural features of the '<em>Methode</em>' class.
+   * The number of structural features of the '<em>Special Function</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int METHODE_FEATURE_COUNT = 2;
+  int SPECIAL_FUNCTION_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.eclipse.xtext.cfeditor.impl.ZuweisungImpl <em>Zuweisung</em>}' class.
+   * The meta object id for the '{@link org.eclipse.xtext.cfeditor.impl.BundlePromiseTypeImpl <em>Bundle Promise Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipse.xtext.cfeditor.impl.ZuweisungImpl
-   * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getZuweisung()
+   * @see org.eclipse.xtext.cfeditor.impl.BundlePromiseTypeImpl
+   * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getBundlePromiseType()
    * @generated
    */
-  int ZUWEISUNG = 6;
+  int BUNDLE_PROMISE_TYPE = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -281,26 +327,26 @@ public interface CfeditorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ZUWEISUNG__NAME = 0;
+  int BUNDLE_PROMISE_TYPE__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Zuweisung</em>' class.
+   * The number of structural features of the '<em>Bundle Promise Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ZUWEISUNG_FEATURE_COUNT = 1;
+  int BUNDLE_PROMISE_TYPE_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.xtext.cfeditor.impl.PromiseTypeImpl <em>Promise Type</em>}' class.
+   * The meta object id for the '{@link org.eclipse.xtext.cfeditor.impl.BodyPromiseTypeImpl <em>Body Promise Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipse.xtext.cfeditor.impl.PromiseTypeImpl
-   * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getPromiseType()
+   * @see org.eclipse.xtext.cfeditor.impl.BodyPromiseTypeImpl
+   * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getBodyPromiseType()
    * @generated
    */
-  int PROMISE_TYPE = 7;
+  int BODY_PROMISE_TYPE = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -309,26 +355,26 @@ public interface CfeditorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROMISE_TYPE__NAME = 0;
+  int BODY_PROMISE_TYPE__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Promise Type</em>' class.
+   * The number of structural features of the '<em>Body Promise Type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROMISE_TYPE_FEATURE_COUNT = 1;
+  int BODY_PROMISE_TYPE_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.eclipse.xtext.cfeditor.impl.ComponentImpl <em>Component</em>}' class.
+   * The meta object id for the '{@link org.eclipse.xtext.cfeditor.impl.BundleComponentImpl <em>Bundle Component</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipse.xtext.cfeditor.impl.ComponentImpl
-   * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getComponent()
+   * @see org.eclipse.xtext.cfeditor.impl.BundleComponentImpl
+   * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getBundleComponent()
    * @generated
    */
-  int COMPONENT = 8;
+  int BUNDLE_COMPONENT = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -337,16 +383,44 @@ public interface CfeditorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPONENT__NAME = 0;
+  int BUNDLE_COMPONENT__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Component</em>' class.
+   * The number of structural features of the '<em>Bundle Component</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMPONENT_FEATURE_COUNT = 1;
+  int BUNDLE_COMPONENT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipse.xtext.cfeditor.impl.BodyComponentImpl <em>Body Component</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipse.xtext.cfeditor.impl.BodyComponentImpl
+   * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getBodyComponent()
+   * @generated
+   */
+  int BODY_COMPONENT = 10;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_COMPONENT__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Body Component</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_COMPONENT_FEATURE_COUNT = 1;
 
 
   /**
@@ -391,15 +465,15 @@ public interface CfeditorPackage extends EPackage
   EClass getPart();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.eclipse.xtext.cfeditor.Part#getComponent <em>Component</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipse.xtext.cfeditor.Part#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Component</em>'.
-   * @see org.eclipse.xtext.cfeditor.Part#getComponent()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.eclipse.xtext.cfeditor.Part#getName()
    * @see #getPart()
    * @generated
    */
-  EReference getPart_Component();
+  EAttribute getPart_Name();
 
   /**
    * Returns the meta object for class '{@link org.eclipse.xtext.cfeditor.Bundle <em>Bundle</em>}'.
@@ -412,15 +486,15 @@ public interface CfeditorPackage extends EPackage
   EClass getBundle();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.xtext.cfeditor.Bundle#getName <em>Name</em>}'.
+   * Returns the meta object for the containment reference '{@link org.eclipse.xtext.cfeditor.Bundle#getComponent <em>Component</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.eclipse.xtext.cfeditor.Bundle#getName()
+   * @return the meta object for the containment reference '<em>Component</em>'.
+   * @see org.eclipse.xtext.cfeditor.Bundle#getComponent()
    * @see #getBundle()
    * @generated
    */
-  EAttribute getBundle_Name();
+  EReference getBundle_Component();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.eclipse.xtext.cfeditor.Bundle#getPromiseType <em>Promise Type</em>}'.
@@ -434,17 +508,6 @@ public interface CfeditorPackage extends EPackage
   EReference getBundle_PromiseType();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.xtext.cfeditor.Bundle#getMethods <em>Methods</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Methods</em>'.
-   * @see org.eclipse.xtext.cfeditor.Bundle#getMethods()
-   * @see #getBundle()
-   * @generated
-   */
-  EReference getBundle_Methods();
-
-  /**
    * Returns the meta object for class '{@link org.eclipse.xtext.cfeditor.Body <em>Body</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -455,110 +518,185 @@ public interface CfeditorPackage extends EPackage
   EClass getBody();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.xtext.cfeditor.Body#getPromiseType <em>Promise Type</em>}'.
+   * Returns the meta object for the containment reference '{@link org.eclipse.xtext.cfeditor.Body#getComponent <em>Component</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Promise Type</em>'.
+   * @return the meta object for the containment reference '<em>Component</em>'.
+   * @see org.eclipse.xtext.cfeditor.Body#getComponent()
+   * @see #getBody()
+   * @generated
+   */
+  EReference getBody_Component();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.eclipse.xtext.cfeditor.Body#getPromiseType <em>Promise Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Promise Type</em>'.
    * @see org.eclipse.xtext.cfeditor.Body#getPromiseType()
    * @see #getBody()
    * @generated
    */
-  EAttribute getBody_PromiseType();
+  EReference getBody_PromiseType();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.xtext.cfeditor.Methode <em>Methode</em>}'.
+   * Returns the meta object for class '{@link org.eclipse.xtext.cfeditor.BodyFunction <em>Body Function</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Methode</em>'.
-   * @see org.eclipse.xtext.cfeditor.Methode
+   * @return the meta object for class '<em>Body Function</em>'.
+   * @see org.eclipse.xtext.cfeditor.BodyFunction
    * @generated
    */
-  EClass getMethode();
+  EClass getBodyFunction();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.xtext.cfeditor.Methode#getName <em>Name</em>}'.
+   * Returns the meta object for the containment reference '{@link org.eclipse.xtext.cfeditor.BodyFunction#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.eclipse.xtext.cfeditor.Methode#getName()
-   * @see #getMethode()
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see org.eclipse.xtext.cfeditor.BodyFunction#getName()
+   * @see #getBodyFunction()
    * @generated
    */
-  EAttribute getMethode_Name();
+  EReference getBodyFunction_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.eclipse.xtext.cfeditor.Methode#getZuweisung <em>Zuweisung</em>}'.
+   * Returns the meta object for the attribute list '{@link org.eclipse.xtext.cfeditor.BodyFunction#getValues <em>Values</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Zuweisung</em>'.
-   * @see org.eclipse.xtext.cfeditor.Methode#getZuweisung()
-   * @see #getMethode()
+   * @return the meta object for the attribute list '<em>Values</em>'.
+   * @see org.eclipse.xtext.cfeditor.BodyFunction#getValues()
+   * @see #getBodyFunction()
    * @generated
    */
-  EReference getMethode_Zuweisung();
+  EAttribute getBodyFunction_Values();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.xtext.cfeditor.Zuweisung <em>Zuweisung</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.eclipse.xtext.cfeditor.BodyFunction#getFunction <em>Function</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Zuweisung</em>'.
-   * @see org.eclipse.xtext.cfeditor.Zuweisung
+   * @return the meta object for the containment reference list '<em>Function</em>'.
+   * @see org.eclipse.xtext.cfeditor.BodyFunction#getFunction()
+   * @see #getBodyFunction()
    * @generated
    */
-  EClass getZuweisung();
+  EReference getBodyFunction_Function();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.xtext.cfeditor.Zuweisung#getName <em>Name</em>}'.
+   * Returns the meta object for class '{@link org.eclipse.xtext.cfeditor.SpecialFunction <em>Special Function</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.eclipse.xtext.cfeditor.Zuweisung#getName()
-   * @see #getZuweisung()
+   * @return the meta object for class '<em>Special Function</em>'.
+   * @see org.eclipse.xtext.cfeditor.SpecialFunction
    * @generated
    */
-  EAttribute getZuweisung_Name();
+  EClass getSpecialFunction();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.xtext.cfeditor.PromiseType <em>Promise Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Promise Type</em>'.
-   * @see org.eclipse.xtext.cfeditor.PromiseType
-   * @generated
-   */
-  EClass getPromiseType();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipse.xtext.cfeditor.PromiseType#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.eclipse.xtext.cfeditor.SpecialFunction#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.eclipse.xtext.cfeditor.PromiseType#getName()
-   * @see #getPromiseType()
+   * @see org.eclipse.xtext.cfeditor.SpecialFunction#getName()
+   * @see #getSpecialFunction()
    * @generated
    */
-  EAttribute getPromiseType_Name();
+  EAttribute getSpecialFunction_Name();
 
   /**
-   * Returns the meta object for class '{@link org.eclipse.xtext.cfeditor.Component <em>Component</em>}'.
+   * Returns the meta object for the attribute list '{@link org.eclipse.xtext.cfeditor.SpecialFunction#getParameters <em>Parameters</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Component</em>'.
-   * @see org.eclipse.xtext.cfeditor.Component
+   * @return the meta object for the attribute list '<em>Parameters</em>'.
+   * @see org.eclipse.xtext.cfeditor.SpecialFunction#getParameters()
+   * @see #getSpecialFunction()
    * @generated
    */
-  EClass getComponent();
+  EAttribute getSpecialFunction_Parameters();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipse.xtext.cfeditor.Component#getName <em>Name</em>}'.
+   * Returns the meta object for class '{@link org.eclipse.xtext.cfeditor.BundlePromiseType <em>Bundle Promise Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bundle Promise Type</em>'.
+   * @see org.eclipse.xtext.cfeditor.BundlePromiseType
+   * @generated
+   */
+  EClass getBundlePromiseType();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipse.xtext.cfeditor.BundlePromiseType#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.eclipse.xtext.cfeditor.Component#getName()
-   * @see #getComponent()
+   * @see org.eclipse.xtext.cfeditor.BundlePromiseType#getName()
+   * @see #getBundlePromiseType()
    * @generated
    */
-  EAttribute getComponent_Name();
+  EAttribute getBundlePromiseType_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipse.xtext.cfeditor.BodyPromiseType <em>Body Promise Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Body Promise Type</em>'.
+   * @see org.eclipse.xtext.cfeditor.BodyPromiseType
+   * @generated
+   */
+  EClass getBodyPromiseType();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipse.xtext.cfeditor.BodyPromiseType#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.eclipse.xtext.cfeditor.BodyPromiseType#getName()
+   * @see #getBodyPromiseType()
+   * @generated
+   */
+  EAttribute getBodyPromiseType_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipse.xtext.cfeditor.BundleComponent <em>Bundle Component</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bundle Component</em>'.
+   * @see org.eclipse.xtext.cfeditor.BundleComponent
+   * @generated
+   */
+  EClass getBundleComponent();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipse.xtext.cfeditor.BundleComponent#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.eclipse.xtext.cfeditor.BundleComponent#getName()
+   * @see #getBundleComponent()
+   * @generated
+   */
+  EAttribute getBundleComponent_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipse.xtext.cfeditor.BodyComponent <em>Body Component</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Body Component</em>'.
+   * @see org.eclipse.xtext.cfeditor.BodyComponent
+   * @generated
+   */
+  EClass getBodyComponent();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipse.xtext.cfeditor.BodyComponent#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.eclipse.xtext.cfeditor.BodyComponent#getName()
+   * @see #getBodyComponent()
+   * @generated
+   */
+  EAttribute getBodyComponent_Name();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -622,12 +760,12 @@ public interface CfeditorPackage extends EPackage
     EClass PART = eINSTANCE.getPart();
 
     /**
-     * The meta object literal for the '<em><b>Component</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PART__COMPONENT = eINSTANCE.getPart_Component();
+    EAttribute PART__NAME = eINSTANCE.getPart_Name();
 
     /**
      * The meta object literal for the '{@link org.eclipse.xtext.cfeditor.impl.BundleImpl <em>Bundle</em>}' class.
@@ -640,12 +778,12 @@ public interface CfeditorPackage extends EPackage
     EClass BUNDLE = eINSTANCE.getBundle();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Component</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute BUNDLE__NAME = eINSTANCE.getBundle_Name();
+    EReference BUNDLE__COMPONENT = eINSTANCE.getBundle_Component();
 
     /**
      * The meta object literal for the '<em><b>Promise Type</b></em>' containment reference list feature.
@@ -654,14 +792,6 @@ public interface CfeditorPackage extends EPackage
      * @generated
      */
     EReference BUNDLE__PROMISE_TYPE = eINSTANCE.getBundle_PromiseType();
-
-    /**
-     * The meta object literal for the '<em><b>Methods</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BUNDLE__METHODS = eINSTANCE.getBundle_Methods();
 
     /**
      * The meta object literal for the '{@link org.eclipse.xtext.cfeditor.impl.BodyImpl <em>Body</em>}' class.
@@ -674,84 +804,64 @@ public interface CfeditorPackage extends EPackage
     EClass BODY = eINSTANCE.getBody();
 
     /**
-     * The meta object literal for the '<em><b>Promise Type</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Component</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute BODY__PROMISE_TYPE = eINSTANCE.getBody_PromiseType();
+    EReference BODY__COMPONENT = eINSTANCE.getBody_Component();
 
     /**
-     * The meta object literal for the '{@link org.eclipse.xtext.cfeditor.impl.MethodeImpl <em>Methode</em>}' class.
+     * The meta object literal for the '<em><b>Promise Type</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.eclipse.xtext.cfeditor.impl.MethodeImpl
-     * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getMethode()
      * @generated
      */
-    EClass METHODE = eINSTANCE.getMethode();
+    EReference BODY__PROMISE_TYPE = eINSTANCE.getBody_PromiseType();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '{@link org.eclipse.xtext.cfeditor.impl.BodyFunctionImpl <em>Body Function</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.eclipse.xtext.cfeditor.impl.BodyFunctionImpl
+     * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getBodyFunction()
      * @generated
      */
-    EAttribute METHODE__NAME = eINSTANCE.getMethode_Name();
+    EClass BODY_FUNCTION = eINSTANCE.getBodyFunction();
 
     /**
-     * The meta object literal for the '<em><b>Zuweisung</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference METHODE__ZUWEISUNG = eINSTANCE.getMethode_Zuweisung();
+    EReference BODY_FUNCTION__NAME = eINSTANCE.getBodyFunction_Name();
 
     /**
-     * The meta object literal for the '{@link org.eclipse.xtext.cfeditor.impl.ZuweisungImpl <em>Zuweisung</em>}' class.
+     * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.eclipse.xtext.cfeditor.impl.ZuweisungImpl
-     * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getZuweisung()
      * @generated
      */
-    EClass ZUWEISUNG = eINSTANCE.getZuweisung();
+    EAttribute BODY_FUNCTION__VALUES = eINSTANCE.getBodyFunction_Values();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Function</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ZUWEISUNG__NAME = eINSTANCE.getZuweisung_Name();
+    EReference BODY_FUNCTION__FUNCTION = eINSTANCE.getBodyFunction_Function();
 
     /**
-     * The meta object literal for the '{@link org.eclipse.xtext.cfeditor.impl.PromiseTypeImpl <em>Promise Type</em>}' class.
+     * The meta object literal for the '{@link org.eclipse.xtext.cfeditor.impl.SpecialFunctionImpl <em>Special Function</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.eclipse.xtext.cfeditor.impl.PromiseTypeImpl
-     * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getPromiseType()
+     * @see org.eclipse.xtext.cfeditor.impl.SpecialFunctionImpl
+     * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getSpecialFunction()
      * @generated
      */
-    EClass PROMISE_TYPE = eINSTANCE.getPromiseType();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PROMISE_TYPE__NAME = eINSTANCE.getPromiseType_Name();
-
-    /**
-     * The meta object literal for the '{@link org.eclipse.xtext.cfeditor.impl.ComponentImpl <em>Component</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipse.xtext.cfeditor.impl.ComponentImpl
-     * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getComponent()
-     * @generated
-     */
-    EClass COMPONENT = eINSTANCE.getComponent();
+    EClass SPECIAL_FUNCTION = eINSTANCE.getSpecialFunction();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -759,7 +869,87 @@ public interface CfeditorPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute COMPONENT__NAME = eINSTANCE.getComponent_Name();
+    EAttribute SPECIAL_FUNCTION__NAME = eINSTANCE.getSpecialFunction_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Parameters</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPECIAL_FUNCTION__PARAMETERS = eINSTANCE.getSpecialFunction_Parameters();
+
+    /**
+     * The meta object literal for the '{@link org.eclipse.xtext.cfeditor.impl.BundlePromiseTypeImpl <em>Bundle Promise Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.xtext.cfeditor.impl.BundlePromiseTypeImpl
+     * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getBundlePromiseType()
+     * @generated
+     */
+    EClass BUNDLE_PROMISE_TYPE = eINSTANCE.getBundlePromiseType();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUNDLE_PROMISE_TYPE__NAME = eINSTANCE.getBundlePromiseType_Name();
+
+    /**
+     * The meta object literal for the '{@link org.eclipse.xtext.cfeditor.impl.BodyPromiseTypeImpl <em>Body Promise Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.xtext.cfeditor.impl.BodyPromiseTypeImpl
+     * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getBodyPromiseType()
+     * @generated
+     */
+    EClass BODY_PROMISE_TYPE = eINSTANCE.getBodyPromiseType();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BODY_PROMISE_TYPE__NAME = eINSTANCE.getBodyPromiseType_Name();
+
+    /**
+     * The meta object literal for the '{@link org.eclipse.xtext.cfeditor.impl.BundleComponentImpl <em>Bundle Component</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.xtext.cfeditor.impl.BundleComponentImpl
+     * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getBundleComponent()
+     * @generated
+     */
+    EClass BUNDLE_COMPONENT = eINSTANCE.getBundleComponent();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUNDLE_COMPONENT__NAME = eINSTANCE.getBundleComponent_Name();
+
+    /**
+     * The meta object literal for the '{@link org.eclipse.xtext.cfeditor.impl.BodyComponentImpl <em>Body Component</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipse.xtext.cfeditor.impl.BodyComponentImpl
+     * @see org.eclipse.xtext.cfeditor.impl.CfeditorPackageImpl#getBodyComponent()
+     * @generated
+     */
+    EClass BODY_COMPONENT = eINSTANCE.getBodyComponent();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BODY_COMPONENT__NAME = eINSTANCE.getBodyComponent_Name();
 
   }
 

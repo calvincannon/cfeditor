@@ -15,7 +15,7 @@ package org.eclipse.xtext.cfeditor;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.eclipse.xtext.cfeditor.Part#getComponent <em>Component</em>}</li>
+ *   <li>{@link org.eclipse.xtext.cfeditor.Part#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,29 +26,29 @@ package org.eclipse.xtext.cfeditor;
 public interface Part extends AbstractElement
 {
   /**
-   * Returns the value of the '<em><b>Component</b></em>' containment reference.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Component</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Component</em>' containment reference.
-   * @see #setComponent(Component)
-   * @see org.eclipse.xtext.cfeditor.CfeditorPackage#getPart_Component()
-   * @model containment="true"
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see org.eclipse.xtext.cfeditor.CfeditorPackage#getPart_Name()
+   * @model
    * @generated
    */
-  Component getComponent();
+  String getName();
 
   /**
-   * Sets the value of the '{@link org.eclipse.xtext.cfeditor.Part#getComponent <em>Component</em>}' containment reference.
+   * Sets the value of the '{@link org.eclipse.xtext.cfeditor.Part#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Component</em>' containment reference.
-   * @see #getComponent()
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
    * @generated
    */
-  void setComponent(Component value);
+  void setName(String value);
 
 } // Part

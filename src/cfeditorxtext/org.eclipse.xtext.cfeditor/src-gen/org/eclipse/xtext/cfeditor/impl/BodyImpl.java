@@ -6,13 +6,24 @@
  */
 package org.eclipse.xtext.cfeditor.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.eclipse.xtext.cfeditor.Body;
+import org.eclipse.xtext.cfeditor.BodyComponent;
+import org.eclipse.xtext.cfeditor.BodyFunction;
 import org.eclipse.xtext.cfeditor.CfeditorPackage;
 
 /**
@@ -22,6 +33,7 @@ import org.eclipse.xtext.cfeditor.CfeditorPackage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipse.xtext.cfeditor.impl.BodyImpl#getComponent <em>Component</em>}</li>
  *   <li>{@link org.eclipse.xtext.cfeditor.impl.BodyImpl#getPromiseType <em>Promise Type</em>}</li>
  * </ul>
  * </p>
@@ -31,24 +43,24 @@ import org.eclipse.xtext.cfeditor.CfeditorPackage;
 public class BodyImpl extends PartImpl implements Body
 {
   /**
-   * The default value of the '{@link #getPromiseType() <em>Promise Type</em>}' attribute.
+   * The cached value of the '{@link #getComponent() <em>Component</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPromiseType()
+   * @see #getComponent()
    * @generated
    * @ordered
    */
-  protected static final String PROMISE_TYPE_EDEFAULT = null;
+  protected BodyComponent component;
 
   /**
-   * The cached value of the '{@link #getPromiseType() <em>Promise Type</em>}' attribute.
+   * The cached value of the '{@link #getPromiseType() <em>Promise Type</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getPromiseType()
    * @generated
    * @ordered
    */
-  protected String promiseType = PROMISE_TYPE_EDEFAULT;
+  protected EList<BodyFunction> promiseType;
 
   /**
    * <!-- begin-user-doc -->
@@ -76,8 +88,60 @@ public class BodyImpl extends PartImpl implements Body
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getPromiseType()
+  public BodyComponent getComponent()
   {
+    return component;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetComponent(BodyComponent newComponent, NotificationChain msgs)
+  {
+    BodyComponent oldComponent = component;
+    component = newComponent;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CfeditorPackage.BODY__COMPONENT, oldComponent, newComponent);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setComponent(BodyComponent newComponent)
+  {
+    if (newComponent != component)
+    {
+      NotificationChain msgs = null;
+      if (component != null)
+        msgs = ((InternalEObject)component).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CfeditorPackage.BODY__COMPONENT, null, msgs);
+      if (newComponent != null)
+        msgs = ((InternalEObject)newComponent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CfeditorPackage.BODY__COMPONENT, null, msgs);
+      msgs = basicSetComponent(newComponent, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CfeditorPackage.BODY__COMPONENT, newComponent, newComponent));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<BodyFunction> getPromiseType()
+  {
+    if (promiseType == null)
+    {
+      promiseType = new EObjectContainmentEList<BodyFunction>(BodyFunction.class, this, CfeditorPackage.BODY__PROMISE_TYPE);
+    }
     return promiseType;
   }
 
@@ -86,12 +150,17 @@ public class BodyImpl extends PartImpl implements Body
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPromiseType(String newPromiseType)
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    String oldPromiseType = promiseType;
-    promiseType = newPromiseType;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CfeditorPackage.BODY__PROMISE_TYPE, oldPromiseType, promiseType));
+    switch (featureID)
+    {
+      case CfeditorPackage.BODY__COMPONENT:
+        return basicSetComponent(null, msgs);
+      case CfeditorPackage.BODY__PROMISE_TYPE:
+        return ((InternalEList<?>)getPromiseType()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -104,6 +173,8 @@ public class BodyImpl extends PartImpl implements Body
   {
     switch (featureID)
     {
+      case CfeditorPackage.BODY__COMPONENT:
+        return getComponent();
       case CfeditorPackage.BODY__PROMISE_TYPE:
         return getPromiseType();
     }
@@ -115,13 +186,18 @@ public class BodyImpl extends PartImpl implements Body
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
+      case CfeditorPackage.BODY__COMPONENT:
+        setComponent((BodyComponent)newValue);
+        return;
       case CfeditorPackage.BODY__PROMISE_TYPE:
-        setPromiseType((String)newValue);
+        getPromiseType().clear();
+        getPromiseType().addAll((Collection<? extends BodyFunction>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +213,11 @@ public class BodyImpl extends PartImpl implements Body
   {
     switch (featureID)
     {
+      case CfeditorPackage.BODY__COMPONENT:
+        setComponent((BodyComponent)null);
+        return;
       case CfeditorPackage.BODY__PROMISE_TYPE:
-        setPromiseType(PROMISE_TYPE_EDEFAULT);
+        getPromiseType().clear();
         return;
     }
     super.eUnset(featureID);
@@ -154,27 +233,12 @@ public class BodyImpl extends PartImpl implements Body
   {
     switch (featureID)
     {
+      case CfeditorPackage.BODY__COMPONENT:
+        return component != null;
       case CfeditorPackage.BODY__PROMISE_TYPE:
-        return PROMISE_TYPE_EDEFAULT == null ? promiseType != null : !PROMISE_TYPE_EDEFAULT.equals(promiseType);
+        return promiseType != null && !promiseType.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (promiseType: ");
-    result.append(promiseType);
-    result.append(')');
-    return result.toString();
   }
 
 } //BodyImpl

@@ -10,18 +10,19 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.dialogs.WizardNewProjectCreationPage;
 import org.eclipse.ui.wizards.newresource.BasicNewProjectResourceWizard;
 
+//TODO delete this class (rename NewProjectWizard to CfeditorProjectWizard
 /**
  * The project wizard for a Cfeditor project.
  * 
  * @author Andreas Bender
  * 
  */
-public class CfeditorProjectWizard  extends Wizard implements INewWizard, IExecutableExtension{
+public class CfeditorProjectWizard extends Wizard implements INewWizard, IExecutableExtension {
 	/**
 	 * the wizard page
 	 */
 	private WizardNewProjectCreationPage mainPage;
-	
+
 	/**
 	 * the configuration element
 	 */
@@ -38,7 +39,7 @@ public class CfeditorProjectWizard  extends Wizard implements INewWizard, IExecu
 	 * @see org.eclipse.ui.IWorkbenchWizard#init(org.eclipse.ui.IWorkbench,
 	 *      org.eclipse.jface.viewers.IStructuredSelection)
 	 */
-	//@Override
+	// @Override
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 	}
 
@@ -49,7 +50,7 @@ public class CfeditorProjectWizard  extends Wizard implements INewWizard, IExecu
 	public boolean performFinish() {
 		BasicNewProjectResourceWizard.updatePerspective(_configurationElement);
 		return true;
-	}//TODO
+	}// TODO
 
 	/**
 	 * Adds pages to the wizard and sets titles and descriptions.
@@ -65,21 +66,23 @@ public class CfeditorProjectWizard  extends Wizard implements INewWizard, IExecu
 	}
 
 	/**
-	 * @see org.eclipse.core.runtime.IExecutableExtension#setInitializationData(org.eclipse.core.runtime.IConfigurationElement, java.lang.String, java.lang.Object)
+	 * @see org.eclipse.core.runtime.IExecutableExtension#setInitializationData(org.eclipse.core.runtime.IConfigurationElement,
+	 *      java.lang.String, java.lang.Object)
 	 */
-	//@Override
+	// @Override
 	public void setInitializationData(IConfigurationElement config, String propertyName, Object data)
 			throws CoreException {
 		_configurationElement = config;
 	}
-	
+
 	/**
-	 * Use this method to read the project settings from the wizard pages and feed them into the project info class.
+	 * Use this method to read the project settings from the wizard pages and
+	 * feed them into the project info class.
 	 */
 	protected IProjectInfo getProjectInfo() {
 		org.eclipse.xtext.ui.wizard.CfeditorProjectInfo projectInfo = new org.eclipse.xtext.ui.wizard.CfeditorProjectInfo();
 		projectInfo.setProjectName(mainPage.getProjectName());
 		return projectInfo;
-	}//TODO
+	}// TODO
 
 }

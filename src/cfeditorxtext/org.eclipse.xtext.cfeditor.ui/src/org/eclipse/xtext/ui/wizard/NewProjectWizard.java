@@ -19,16 +19,20 @@ import org.eclipse.xtext.ui.util.FileOpener;
 
 import com.google.inject.Inject;
 
-public class NewProjectWizard extends Wizard implements INewWizard,
-		IExecutableExtension {
+/**
+ * Wizard for a new Cfeditor project.
+ * 
+ * @author Andreas Bender
+ *
+ */
+public class NewProjectWizard extends Wizard implements INewWizard, IExecutableExtension {
 
 	/**
 	 * the configuration element
 	 */
 	private IConfigurationElement _configurationElement;
 
-	private static final Logger logger = Logger
-			.getLogger(XtextNewProjectWizard.class);
+	private static final Logger logger = Logger.getLogger(XtextNewProjectWizard.class);
 
 	protected IStructuredSelection selection;
 
@@ -41,6 +45,11 @@ public class NewProjectWizard extends Wizard implements INewWizard,
 
 	private WizardNewProjectCreationPage mainPage;
 
+	/**
+	 * Constructor. Sets wizard window title.
+	 * 
+	 * @param creator
+	 */
 	@Inject
 	public NewProjectWizard(IProjectCreator creator) {
 		this.creator = creator;
@@ -48,12 +57,14 @@ public class NewProjectWizard extends Wizard implements INewWizard,
 		setWindowTitle("New Cfeditor Project");
 	}
 
+	/**
+	 * Creates the project and updates the perspective (sets current perspective to Cfeditor perspective).
+	 */
 	@Override
 	public boolean performFinish() {
 		final IProjectInfo projectInfo = getProjectInfo();
 		IRunnableWithProgress op = new IRunnableWithProgress() {
-			public void run(IProgressMonitor monitor)
-					throws InvocationTargetException {
+			public void run(IProgressMonitor monitor) throws InvocationTargetException {
 				try {
 					doFinish(projectInfo, monitor);
 				} catch (Exception e) {
@@ -70,17 +81,21 @@ public class NewProjectWizard extends Wizard implements INewWizard,
 		} catch (InvocationTargetException e) {
 			logger.error(e.getMessage(), e);
 			Throwable realException = e.getTargetException();
-			MessageDialog.openError(getShell(), "Error",
-					realException.getMessage());
+			MessageDialog.openError(getShell(), "Error", realException.getMessage());
 			return false;
 		}
-		
+
 		BasicNewProjectResourceWizard.updatePerspective(_configurationElement);
 		return true;
 	}
 
-	protected void doFinish(final IProjectInfo projectInfo,
-			final IProgressMonitor monitor) {
+	/**
+	 * Runs project creator and opens the first file found in the defined root folder in the editor.
+	 * 
+	 * @param projectInfo
+	 * @param monitor
+	 */
+	protected void doFinish(final IProjectInfo projectInfo, final IProgressMonitor monitor) {
 		try {
 			creator.setProjectInfo(projectInfo);
 			creator.run(monitor);
@@ -93,11 +108,22 @@ public class NewProjectWizard extends Wizard implements INewWizard,
 		}
 	}
 
+	/**
+	 * Initializes workbench and selection.
+	 * 
+	 * @param workbench
+	 * @param selection
+	 */
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 		this.workbench = workbench;
 		this.selection = selection;
 	}
 
+	/**
+	 * Returns workbench.
+	 * 
+	 * @return workbench
+	 */
 	public IWorkbench getWorkbench() {
 		return workbench;
 	}
@@ -127,8 +153,16 @@ public class NewProjectWizard extends Wizard implements INewWizard,
 		addPage(mainPage);
 	}
 
-	public void setInitializationData(IConfigurationElement config,
-			String propertyName, Object data) throws CoreException {
+	/**
+	 * Sets the configuration element.
+	 * 
+	 * @param config 
+	 * @param propertyName 
+	 * @param data 
+	 * @throws CoreException 
+	 */
+	public void setInitializationData(IConfigurationElement config, String propertyName, Object data)
+			throws CoreException {
 		_configurationElement = config;
 	}
 }
