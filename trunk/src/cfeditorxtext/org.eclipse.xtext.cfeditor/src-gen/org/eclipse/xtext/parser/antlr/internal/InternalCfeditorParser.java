@@ -24,15 +24,15 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalCfeditorParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'bundle'", "'{'", "':'", "'}'", "'body'", "'control'", "';'", "','", "'=>'", "'access'", "'classes'", "'commands'", "'databases'", "'environments'", "'files'", "'inferences'", "'interfaces'", "'measurements'", "'methods'", "'occurrences'", "'outputs'", "'packages'", "'processes'", "'reports'", "'roles'", "'services'", "'storage'", "'topics'", "'vars'", "'common'", "'agent'", "'server'", "'monitor'", "'runagent'", "'executor'", "'knowledge'", "'reporter'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ANY_OTHER", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_SL_COMMENT", "RULE_WS", "'=>'", "';'", "','", "'('", "')'", "'bundle'", "'{'", "':'", "'}'", "'body'"
     };
-    public static final int RULE_ID=4;
-    public static final int RULE_STRING=5;
-    public static final int RULE_ANY_OTHER=9;
-    public static final int RULE_INT=6;
-    public static final int RULE_WS=8;
+    public static final int RULE_ID=5;
+    public static final int RULE_STRING=6;
+    public static final int RULE_ANY_OTHER=4;
+    public static final int RULE_INT=7;
+    public static final int RULE_WS=9;
+    public static final int RULE_SL_COMMENT=8;
     public static final int EOF=-1;
-    public static final int RULE_SL_COMMENT=7;
 
         public InternalCfeditorParser(TokenStream input) {
             super(input);
@@ -126,7 +126,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==10||LA1_0==14) ) {
+                if ( (LA1_0==15||LA1_0==19) ) {
                     alt1=1;
                 }
 
@@ -193,8 +193,234 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
     // $ANTLR end ruleCfModel
 
 
+    // $ANTLR start entryRulePLACEHOLDER
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:124:1: entryRulePLACEHOLDER returns [String current=null] : iv_rulePLACEHOLDER= rulePLACEHOLDER EOF ;
+    public final String entryRulePLACEHOLDER() throws RecognitionException {
+        String current = null;
+
+        AntlrDatatypeRuleToken iv_rulePLACEHOLDER = null;
+
+
+        try {
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:125:2: (iv_rulePLACEHOLDER= rulePLACEHOLDER EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:126:2: iv_rulePLACEHOLDER= rulePLACEHOLDER EOF
+            {
+             currentNode = createCompositeNode(grammarAccess.getPLACEHOLDERRule(), currentNode); 
+            pushFollow(FOLLOW_rulePLACEHOLDER_in_entryRulePLACEHOLDER167);
+            iv_rulePLACEHOLDER=rulePLACEHOLDER();
+            _fsp--;
+
+             current =iv_rulePLACEHOLDER.getText(); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePLACEHOLDER178); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end entryRulePLACEHOLDER
+
+
+    // $ANTLR start rulePLACEHOLDER
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:133:1: rulePLACEHOLDER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ANY_OTHER_0= RULE_ANY_OTHER | this_ID_1= RULE_ID | this_STRING_2= RULE_STRING | kw= '=>' | kw= ';' | kw= ',' | kw= '(' | kw= ')' ) ;
+    public final AntlrDatatypeRuleToken rulePLACEHOLDER() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+
+        Token this_ANY_OTHER_0=null;
+        Token this_ID_1=null;
+        Token this_STRING_2=null;
+        Token kw=null;
+
+         setCurrentLookahead(); resetLookahead(); 
+            
+        try {
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:138:6: ( (this_ANY_OTHER_0= RULE_ANY_OTHER | this_ID_1= RULE_ID | this_STRING_2= RULE_STRING | kw= '=>' | kw= ';' | kw= ',' | kw= '(' | kw= ')' ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:139:1: (this_ANY_OTHER_0= RULE_ANY_OTHER | this_ID_1= RULE_ID | this_STRING_2= RULE_STRING | kw= '=>' | kw= ';' | kw= ',' | kw= '(' | kw= ')' )
+            {
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:139:1: (this_ANY_OTHER_0= RULE_ANY_OTHER | this_ID_1= RULE_ID | this_STRING_2= RULE_STRING | kw= '=>' | kw= ';' | kw= ',' | kw= '(' | kw= ')' )
+            int alt2=8;
+            switch ( input.LA(1) ) {
+            case RULE_ANY_OTHER:
+                {
+                alt2=1;
+                }
+                break;
+            case RULE_ID:
+                {
+                alt2=2;
+                }
+                break;
+            case RULE_STRING:
+                {
+                alt2=3;
+                }
+                break;
+            case 10:
+                {
+                alt2=4;
+                }
+                break;
+            case 11:
+                {
+                alt2=5;
+                }
+                break;
+            case 12:
+                {
+                alt2=6;
+                }
+                break;
+            case 13:
+                {
+                alt2=7;
+                }
+                break;
+            case 14:
+                {
+                alt2=8;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("139:1: (this_ANY_OTHER_0= RULE_ANY_OTHER | this_ID_1= RULE_ID | this_STRING_2= RULE_STRING | kw= '=>' | kw= ';' | kw= ',' | kw= '(' | kw= ')' )", 2, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt2) {
+                case 1 :
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:139:6: this_ANY_OTHER_0= RULE_ANY_OTHER
+                    {
+                    this_ANY_OTHER_0=(Token)input.LT(1);
+                    match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_rulePLACEHOLDER218); 
+
+                    		current.merge(this_ANY_OTHER_0);
+                        
+                     
+                        createLeafNode(grammarAccess.getPLACEHOLDERAccess().getANY_OTHERTerminalRuleCall_0(), null); 
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:147:10: this_ID_1= RULE_ID
+                    {
+                    this_ID_1=(Token)input.LT(1);
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePLACEHOLDER244); 
+
+                    		current.merge(this_ID_1);
+                        
+                     
+                        createLeafNode(grammarAccess.getPLACEHOLDERAccess().getIDTerminalRuleCall_1(), null); 
+                        
+
+                    }
+                    break;
+                case 3 :
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:155:10: this_STRING_2= RULE_STRING
+                    {
+                    this_STRING_2=(Token)input.LT(1);
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePLACEHOLDER270); 
+
+                    		current.merge(this_STRING_2);
+                        
+                     
+                        createLeafNode(grammarAccess.getPLACEHOLDERAccess().getSTRINGTerminalRuleCall_2(), null); 
+                        
+
+                    }
+                    break;
+                case 4 :
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:164:2: kw= '=>'
+                    {
+                    kw=(Token)input.LT(1);
+                    match(input,10,FOLLOW_10_in_rulePLACEHOLDER294); 
+
+                            current.merge(kw);
+                            createLeafNode(grammarAccess.getPLACEHOLDERAccess().getEqualsSignGreaterThanSignKeyword_3(), null); 
+                        
+
+                    }
+                    break;
+                case 5 :
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:171:2: kw= ';'
+                    {
+                    kw=(Token)input.LT(1);
+                    match(input,11,FOLLOW_11_in_rulePLACEHOLDER313); 
+
+                            current.merge(kw);
+                            createLeafNode(grammarAccess.getPLACEHOLDERAccess().getSemicolonKeyword_4(), null); 
+                        
+
+                    }
+                    break;
+                case 6 :
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:178:2: kw= ','
+                    {
+                    kw=(Token)input.LT(1);
+                    match(input,12,FOLLOW_12_in_rulePLACEHOLDER332); 
+
+                            current.merge(kw);
+                            createLeafNode(grammarAccess.getPLACEHOLDERAccess().getCommaKeyword_5(), null); 
+                        
+
+                    }
+                    break;
+                case 7 :
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:185:2: kw= '('
+                    {
+                    kw=(Token)input.LT(1);
+                    match(input,13,FOLLOW_13_in_rulePLACEHOLDER351); 
+
+                            current.merge(kw);
+                            createLeafNode(grammarAccess.getPLACEHOLDERAccess().getLeftParenthesisKeyword_6(), null); 
+                        
+
+                    }
+                    break;
+                case 8 :
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:192:2: kw= ')'
+                    {
+                    kw=(Token)input.LT(1);
+                    match(input,14,FOLLOW_14_in_rulePLACEHOLDER370); 
+
+                            current.merge(kw);
+                            createLeafNode(grammarAccess.getPLACEHOLDERAccess().getRightParenthesisKeyword_7(), null); 
+                        
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+             resetLookahead(); 
+            	    lastConsumedNode = currentNode;
+                
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end rulePLACEHOLDER
+
+
     // $ANTLR start entryRuleAbstractElement
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:124:1: entryRuleAbstractElement returns [EObject current=null] : iv_ruleAbstractElement= ruleAbstractElement EOF ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:205:1: entryRuleAbstractElement returns [EObject current=null] : iv_ruleAbstractElement= ruleAbstractElement EOF ;
     public final EObject entryRuleAbstractElement() throws RecognitionException {
         EObject current = null;
 
@@ -202,16 +428,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:125:2: (iv_ruleAbstractElement= ruleAbstractElement EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:126:2: iv_ruleAbstractElement= ruleAbstractElement EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:206:2: (iv_ruleAbstractElement= ruleAbstractElement EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:207:2: iv_ruleAbstractElement= ruleAbstractElement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getAbstractElementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleAbstractElement_in_entryRuleAbstractElement166);
+            pushFollow(FOLLOW_ruleAbstractElement_in_entryRuleAbstractElement410);
             iv_ruleAbstractElement=ruleAbstractElement();
             _fsp--;
 
              current =iv_ruleAbstractElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAbstractElement176); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAbstractElement420); 
 
             }
 
@@ -229,7 +455,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleAbstractElement
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:133:1: ruleAbstractElement returns [EObject current=null] : this_Part_0= rulePart ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:214:1: ruleAbstractElement returns [EObject current=null] : this_Part_0= rulePart ;
     public final EObject ruleAbstractElement() throws RecognitionException {
         EObject current = null;
 
@@ -239,13 +465,13 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:138:6: (this_Part_0= rulePart )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:140:5: this_Part_0= rulePart
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:219:6: (this_Part_0= rulePart )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:221:5: this_Part_0= rulePart
             {
              
                     currentNode=createCompositeNode(grammarAccess.getAbstractElementAccess().getPartParserRuleCall(), currentNode); 
                 
-            pushFollow(FOLLOW_rulePart_in_ruleAbstractElement222);
+            pushFollow(FOLLOW_rulePart_in_ruleAbstractElement466);
             this_Part_0=rulePart();
             _fsp--;
 
@@ -273,7 +499,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRulePart
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:156:1: entryRulePart returns [EObject current=null] : iv_rulePart= rulePart EOF ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:237:1: entryRulePart returns [EObject current=null] : iv_rulePart= rulePart EOF ;
     public final EObject entryRulePart() throws RecognitionException {
         EObject current = null;
 
@@ -281,16 +507,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:157:2: (iv_rulePart= rulePart EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:158:2: iv_rulePart= rulePart EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:238:2: (iv_rulePart= rulePart EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:239:2: iv_rulePart= rulePart EOF
             {
              currentNode = createCompositeNode(grammarAccess.getPartRule(), currentNode); 
-            pushFollow(FOLLOW_rulePart_in_entryRulePart256);
+            pushFollow(FOLLOW_rulePart_in_entryRulePart500);
             iv_rulePart=rulePart();
             _fsp--;
 
              current =iv_rulePart; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePart266); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePart510); 
 
             }
 
@@ -308,7 +534,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start rulePart
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:165:1: rulePart returns [EObject current=null] : (this_Bundle_0= ruleBundle | this_Body_1= ruleBody ) ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:246:1: rulePart returns [EObject current=null] : (this_Bundle_0= ruleBundle | this_Body_1= ruleBody ) ;
     public final EObject rulePart() throws RecognitionException {
         EObject current = null;
 
@@ -320,33 +546,33 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:170:6: ( (this_Bundle_0= ruleBundle | this_Body_1= ruleBody ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:171:1: (this_Bundle_0= ruleBundle | this_Body_1= ruleBody )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:251:6: ( (this_Bundle_0= ruleBundle | this_Body_1= ruleBody ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:252:1: (this_Bundle_0= ruleBundle | this_Body_1= ruleBody )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:171:1: (this_Bundle_0= ruleBundle | this_Body_1= ruleBody )
-            int alt2=2;
-            int LA2_0 = input.LA(1);
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:252:1: (this_Bundle_0= ruleBundle | this_Body_1= ruleBody )
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA2_0==10) ) {
-                alt2=1;
+            if ( (LA3_0==15) ) {
+                alt3=1;
             }
-            else if ( (LA2_0==14) ) {
-                alt2=2;
+            else if ( (LA3_0==19) ) {
+                alt3=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("171:1: (this_Bundle_0= ruleBundle | this_Body_1= ruleBody )", 2, 0, input);
+                    new NoViableAltException("252:1: (this_Bundle_0= ruleBundle | this_Body_1= ruleBody )", 3, 0, input);
 
                 throw nvae;
             }
-            switch (alt2) {
+            switch (alt3) {
                 case 1 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:172:5: this_Bundle_0= ruleBundle
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:253:5: this_Bundle_0= ruleBundle
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getPartAccess().getBundleParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleBundle_in_rulePart313);
+                    pushFollow(FOLLOW_ruleBundle_in_rulePart557);
                     this_Bundle_0=ruleBundle();
                     _fsp--;
 
@@ -358,12 +584,12 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:182:5: this_Body_1= ruleBody
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:263:5: this_Body_1= ruleBody
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getPartAccess().getBodyParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleBody_in_rulePart340);
+                    pushFollow(FOLLOW_ruleBody_in_rulePart584);
                     this_Body_1=ruleBody();
                     _fsp--;
 
@@ -397,7 +623,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleBundle
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:198:1: entryRuleBundle returns [EObject current=null] : iv_ruleBundle= ruleBundle EOF ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:279:1: entryRuleBundle returns [EObject current=null] : iv_ruleBundle= ruleBundle EOF ;
     public final EObject entryRuleBundle() throws RecognitionException {
         EObject current = null;
 
@@ -405,16 +631,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:199:2: (iv_ruleBundle= ruleBundle EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:200:2: iv_ruleBundle= ruleBundle EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:280:2: (iv_ruleBundle= ruleBundle EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:281:2: iv_ruleBundle= ruleBundle EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBundleRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBundle_in_entryRuleBundle375);
+            pushFollow(FOLLOW_ruleBundle_in_entryRuleBundle619);
             iv_ruleBundle=ruleBundle();
             _fsp--;
 
              current =iv_ruleBundle; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBundle385); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBundle629); 
 
             }
 
@@ -432,7 +658,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBundle
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:207:1: ruleBundle returns [EObject current=null] : ( 'bundle' ( (lv_component_1_0= ruleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= rulePromiseType ) ) ':' ( (lv_methods_6_0= ruleMethode ) )* )* '}' ) ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:288:1: ruleBundle returns [EObject current=null] : ( 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}' ) ;
     public final EObject ruleBundle() throws RecognitionException {
         EObject current = null;
 
@@ -441,33 +667,31 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
         EObject lv_promiseType_4_0 = null;
 
-        EObject lv_methods_6_0 = null;
-
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:212:6: ( ( 'bundle' ( (lv_component_1_0= ruleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= rulePromiseType ) ) ':' ( (lv_methods_6_0= ruleMethode ) )* )* '}' ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:213:1: ( 'bundle' ( (lv_component_1_0= ruleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= rulePromiseType ) ) ':' ( (lv_methods_6_0= ruleMethode ) )* )* '}' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:293:6: ( ( 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}' ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:294:1: ( 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}' )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:213:1: ( 'bundle' ( (lv_component_1_0= ruleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= rulePromiseType ) ) ':' ( (lv_methods_6_0= ruleMethode ) )* )* '}' )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:213:3: 'bundle' ( (lv_component_1_0= ruleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= rulePromiseType ) ) ':' ( (lv_methods_6_0= ruleMethode ) )* )* '}'
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:294:1: ( 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:294:3: 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}'
             {
-            match(input,10,FOLLOW_10_in_ruleBundle420); 
+            match(input,15,FOLLOW_15_in_ruleBundle664); 
 
                     createLeafNode(grammarAccess.getBundleAccess().getBundleKeyword_0(), null); 
                 
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:217:1: ( (lv_component_1_0= ruleComponent ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:218:1: (lv_component_1_0= ruleComponent )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:298:1: ( (lv_component_1_0= ruleBundleComponent ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:299:1: (lv_component_1_0= ruleBundleComponent )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:218:1: (lv_component_1_0= ruleComponent )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:219:3: lv_component_1_0= ruleComponent
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:299:1: (lv_component_1_0= ruleBundleComponent )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:300:3: lv_component_1_0= ruleBundleComponent
             {
              
-            	        currentNode=createCompositeNode(grammarAccess.getBundleAccess().getComponentComponentParserRuleCall_1_0(), currentNode); 
+            	        currentNode=createCompositeNode(grammarAccess.getBundleAccess().getComponentBundleComponentParserRuleCall_1_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleComponent_in_ruleBundle441);
-            lv_component_1_0=ruleComponent();
+            pushFollow(FOLLOW_ruleBundleComponent_in_ruleBundle685);
+            lv_component_1_0=ruleBundleComponent();
             _fsp--;
 
 
@@ -480,7 +704,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             	       			current, 
             	       			"component",
             	        		lv_component_1_0, 
-            	        		"Component", 
+            	        		"BundleComponent", 
             	        		currentNode);
             	        } catch (ValueConverterException vce) {
             				handleValueConverterException(vce);
@@ -493,14 +717,14 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:241:2: ( (lv_name_2_0= RULE_ID ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:242:1: (lv_name_2_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:322:2: ( (lv_name_2_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:323:1: (lv_name_2_0= RULE_ID )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:242:1: (lv_name_2_0= RULE_ID )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:243:3: lv_name_2_0= RULE_ID
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:323:1: (lv_name_2_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:324:3: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundle458); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundle702); 
 
             			createLeafNode(grammarAccess.getBundleAccess().getNameIDTerminalRuleCall_2_0(), "name"); 
             		
@@ -526,36 +750,36 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,11,FOLLOW_11_in_ruleBundle473); 
+            match(input,16,FOLLOW_16_in_ruleBundle717); 
 
                     createLeafNode(grammarAccess.getBundleAccess().getLeftCurlyBracketKeyword_3(), null); 
                 
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:269:1: ( ( (lv_promiseType_4_0= rulePromiseType ) ) ':' ( (lv_methods_6_0= ruleMethode ) )* )*
-            loop4:
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:350:1: ( ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )*
+            loop5:
             do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( ((LA4_0>=19 && LA4_0<=38)) ) {
-                    alt4=1;
+                if ( (LA5_0==RULE_ID) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt4) {
+                switch (alt5) {
             	case 1 :
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:269:2: ( (lv_promiseType_4_0= rulePromiseType ) ) ':' ( (lv_methods_6_0= ruleMethode ) )*
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:350:2: ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )*
             	    {
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:269:2: ( (lv_promiseType_4_0= rulePromiseType ) )
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:270:1: (lv_promiseType_4_0= rulePromiseType )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:350:2: ( (lv_promiseType_4_0= ruleBundlePromiseType ) )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:351:1: (lv_promiseType_4_0= ruleBundlePromiseType )
             	    {
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:270:1: (lv_promiseType_4_0= rulePromiseType )
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:271:3: lv_promiseType_4_0= rulePromiseType
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:351:1: (lv_promiseType_4_0= ruleBundlePromiseType )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:352:3: lv_promiseType_4_0= ruleBundlePromiseType
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getBundleAccess().getPromiseTypePromiseTypeParserRuleCall_4_0_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getBundleAccess().getPromiseTypeBundlePromiseTypeParserRuleCall_4_0_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_rulePromiseType_in_ruleBundle495);
-            	    lv_promiseType_4_0=rulePromiseType();
+            	    pushFollow(FOLLOW_ruleBundlePromiseType_in_ruleBundle739);
+            	    lv_promiseType_4_0=ruleBundlePromiseType();
             	    _fsp--;
 
 
@@ -568,7 +792,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             	    	       			current, 
             	    	       			"promiseType",
             	    	        		lv_promiseType_4_0, 
-            	    	        		"PromiseType", 
+            	    	        		"BundlePromiseType", 
             	    	        		currentNode);
             	    	        } catch (ValueConverterException vce) {
             	    				handleValueConverterException(vce);
@@ -581,61 +805,44 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    match(input,12,FOLLOW_12_in_ruleBundle505); 
+            	    match(input,17,FOLLOW_17_in_ruleBundle749); 
 
             	            createLeafNode(grammarAccess.getBundleAccess().getColonKeyword_4_1(), null); 
             	        
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:297:1: ( (lv_methods_6_0= ruleMethode ) )*
-            	    loop3:
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:378:1: ( rulePLACEHOLDER )*
+            	    loop4:
             	    do {
-            	        int alt3=2;
-            	        int LA3_0 = input.LA(1);
+            	        int alt4=2;
+            	        int LA4_0 = input.LA(1);
 
-            	        if ( (LA3_0==RULE_STRING) ) {
-            	            alt3=1;
+            	        if ( (LA4_0==RULE_ID) ) {
+            	            int LA4_2 = input.LA(2);
+
+            	            if ( ((LA4_2>=RULE_ANY_OTHER && LA4_2<=RULE_STRING)||(LA4_2>=10 && LA4_2<=14)||LA4_2==18) ) {
+            	                alt4=1;
+            	            }
+
+
+            	        }
+            	        else if ( (LA4_0==RULE_ANY_OTHER||LA4_0==RULE_STRING||(LA4_0>=10 && LA4_0<=14)) ) {
+            	            alt4=1;
             	        }
 
 
-            	        switch (alt3) {
+            	        switch (alt4) {
             	    	case 1 :
-            	    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:298:1: (lv_methods_6_0= ruleMethode )
+            	    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:378:2: rulePLACEHOLDER
             	    	    {
-            	    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:298:1: (lv_methods_6_0= ruleMethode )
-            	    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:299:3: lv_methods_6_0= ruleMethode
-            	    	    {
-            	    	     
-            	    	    	        currentNode=createCompositeNode(grammarAccess.getBundleAccess().getMethodsMethodeParserRuleCall_4_2_0(), currentNode); 
-            	    	    	    
-            	    	    pushFollow(FOLLOW_ruleMethode_in_ruleBundle526);
-            	    	    lv_methods_6_0=ruleMethode();
+            	    	    pushFollow(FOLLOW_rulePLACEHOLDER_in_ruleBundle759);
+            	    	    rulePLACEHOLDER();
             	    	    _fsp--;
-
-
-            	    	    	        if (current==null) {
-            	    	    	            current = factory.create(grammarAccess.getBundleRule().getType().getClassifier());
-            	    	    	            associateNodeWithAstElement(currentNode.getParent(), current);
-            	    	    	        }
-            	    	    	        try {
-            	    	    	       		add(
-            	    	    	       			current, 
-            	    	    	       			"methods",
-            	    	    	        		lv_methods_6_0, 
-            	    	    	        		"Methode", 
-            	    	    	        		currentNode);
-            	    	    	        } catch (ValueConverterException vce) {
-            	    	    				handleValueConverterException(vce);
-            	    	    	        }
-            	    	    	        currentNode = currentNode.getParent();
-            	    	    	    
-
-            	    	    }
 
 
             	    	    }
             	    	    break;
 
             	    	default :
-            	    	    break loop3;
+            	    	    break loop4;
             	        }
             	    } while (true);
 
@@ -644,11 +851,11 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop4;
+            	    break loop5;
                 }
             } while (true);
 
-            match(input,13,FOLLOW_13_in_ruleBundle539); 
+            match(input,18,FOLLOW_18_in_ruleBundle765); 
 
                     createLeafNode(grammarAccess.getBundleAccess().getRightCurlyBracketKeyword_5(), null); 
                 
@@ -675,7 +882,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleBody
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:333:1: entryRuleBody returns [EObject current=null] : iv_ruleBody= ruleBody EOF ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:390:1: entryRuleBody returns [EObject current=null] : iv_ruleBody= ruleBody EOF ;
     public final EObject entryRuleBody() throws RecognitionException {
         EObject current = null;
 
@@ -683,16 +890,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:334:2: (iv_ruleBody= ruleBody EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:335:2: iv_ruleBody= ruleBody EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:391:2: (iv_ruleBody= ruleBody EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:392:2: iv_ruleBody= ruleBody EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBodyRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBody_in_entryRuleBody575);
+            pushFollow(FOLLOW_ruleBody_in_entryRuleBody801);
             iv_ruleBody=ruleBody();
             _fsp--;
 
              current =iv_ruleBody; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBody585); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBody811); 
 
             }
 
@@ -710,38 +917,40 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBody
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:342:1: ruleBody returns [EObject current=null] : ( 'body' ( (lv_component_1_0= ruleComponent ) ) ( (lv_promiseType_2_0= 'control' ) ) '{' '}' ) ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:399:1: ruleBody returns [EObject current=null] : ( 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( (lv_promiseType_5_0= ruleBodyFunction ) )* '}' ) ;
     public final EObject ruleBody() throws RecognitionException {
         EObject current = null;
 
-        Token lv_promiseType_2_0=null;
+        Token lv_name_2_0=null;
         EObject lv_component_1_0 = null;
+
+        EObject lv_promiseType_5_0 = null;
 
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:347:6: ( ( 'body' ( (lv_component_1_0= ruleComponent ) ) ( (lv_promiseType_2_0= 'control' ) ) '{' '}' ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:348:1: ( 'body' ( (lv_component_1_0= ruleComponent ) ) ( (lv_promiseType_2_0= 'control' ) ) '{' '}' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:404:6: ( ( 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( (lv_promiseType_5_0= ruleBodyFunction ) )* '}' ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:405:1: ( 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( (lv_promiseType_5_0= ruleBodyFunction ) )* '}' )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:348:1: ( 'body' ( (lv_component_1_0= ruleComponent ) ) ( (lv_promiseType_2_0= 'control' ) ) '{' '}' )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:348:3: 'body' ( (lv_component_1_0= ruleComponent ) ) ( (lv_promiseType_2_0= 'control' ) ) '{' '}'
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:405:1: ( 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( (lv_promiseType_5_0= ruleBodyFunction ) )* '}' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:405:3: 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( (lv_promiseType_5_0= ruleBodyFunction ) )* '}'
             {
-            match(input,14,FOLLOW_14_in_ruleBody620); 
+            match(input,19,FOLLOW_19_in_ruleBody846); 
 
                     createLeafNode(grammarAccess.getBodyAccess().getBodyKeyword_0(), null); 
                 
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:352:1: ( (lv_component_1_0= ruleComponent ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:353:1: (lv_component_1_0= ruleComponent )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:409:1: ( (lv_component_1_0= ruleBodyComponent ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:410:1: (lv_component_1_0= ruleBodyComponent )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:353:1: (lv_component_1_0= ruleComponent )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:354:3: lv_component_1_0= ruleComponent
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:410:1: (lv_component_1_0= ruleBodyComponent )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:411:3: lv_component_1_0= ruleBodyComponent
             {
              
-            	        currentNode=createCompositeNode(grammarAccess.getBodyAccess().getComponentComponentParserRuleCall_1_0(), currentNode); 
+            	        currentNode=createCompositeNode(grammarAccess.getBodyAccess().getComponentBodyComponentParserRuleCall_1_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleComponent_in_ruleBody641);
-            lv_component_1_0=ruleComponent();
+            pushFollow(FOLLOW_ruleBodyComponent_in_ruleBody867);
+            lv_component_1_0=ruleBodyComponent();
             _fsp--;
 
 
@@ -754,7 +963,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             	       			current, 
             	       			"component",
             	        		lv_component_1_0, 
-            	        		"Component", 
+            	        		"BodyComponent", 
             	        		currentNode);
             	        } catch (ValueConverterException vce) {
             				handleValueConverterException(vce);
@@ -767,25 +976,29 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:376:2: ( (lv_promiseType_2_0= 'control' ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:377:1: (lv_promiseType_2_0= 'control' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:433:2: ( (lv_name_2_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:434:1: (lv_name_2_0= RULE_ID )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:377:1: (lv_promiseType_2_0= 'control' )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:378:3: lv_promiseType_2_0= 'control'
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:434:1: (lv_name_2_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:435:3: lv_name_2_0= RULE_ID
             {
-            lv_promiseType_2_0=(Token)input.LT(1);
-            match(input,15,FOLLOW_15_in_ruleBody659); 
+            lv_name_2_0=(Token)input.LT(1);
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBody884); 
 
-                    createLeafNode(grammarAccess.getBodyAccess().getPromiseTypeControlKeyword_2_0(), "promiseType"); 
-                
+            			createLeafNode(grammarAccess.getBodyAccess().getNameIDTerminalRuleCall_2_0(), "name"); 
+            		
 
             	        if (current==null) {
             	            current = factory.create(grammarAccess.getBodyRule().getType().getClassifier());
             	            associateNodeWithAstElement(currentNode, current);
             	        }
-            	        
             	        try {
-            	       		set(current, "promiseType", lv_promiseType_2_0, "control", lastConsumedNode);
+            	       		set(
+            	       			current, 
+            	       			"name",
+            	        		lv_name_2_0, 
+            	        		"ID", 
+            	        		lastConsumedNode);
             	        } catch (ValueConverterException vce) {
             				handleValueConverterException(vce);
             	        }
@@ -796,13 +1009,95 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,11,FOLLOW_11_in_ruleBody682); 
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:457:2: ( rulePLACEHOLDER )*
+            loop6:
+            do {
+                int alt6=2;
+                int LA6_0 = input.LA(1);
 
-                    createLeafNode(grammarAccess.getBodyAccess().getLeftCurlyBracketKeyword_3(), null); 
+                if ( ((LA6_0>=RULE_ANY_OTHER && LA6_0<=RULE_STRING)||(LA6_0>=10 && LA6_0<=14)) ) {
+                    alt6=1;
+                }
+
+
+                switch (alt6) {
+            	case 1 :
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:457:3: rulePLACEHOLDER
+            	    {
+            	    pushFollow(FOLLOW_rulePLACEHOLDER_in_ruleBody899);
+            	    rulePLACEHOLDER();
+            	    _fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop6;
+                }
+            } while (true);
+
+            match(input,16,FOLLOW_16_in_ruleBody903); 
+
+                    createLeafNode(grammarAccess.getBodyAccess().getLeftCurlyBracketKeyword_4(), null); 
                 
-            match(input,13,FOLLOW_13_in_ruleBody692); 
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:461:1: ( (lv_promiseType_5_0= ruleBodyFunction ) )*
+            loop7:
+            do {
+                int alt7=2;
+                int LA7_0 = input.LA(1);
 
-                    createLeafNode(grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_4(), null); 
+                if ( (LA7_0==RULE_ID) ) {
+                    alt7=1;
+                }
+
+
+                switch (alt7) {
+            	case 1 :
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:462:1: (lv_promiseType_5_0= ruleBodyFunction )
+            	    {
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:462:1: (lv_promiseType_5_0= ruleBodyFunction )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:463:3: lv_promiseType_5_0= ruleBodyFunction
+            	    {
+            	     
+            	    	        currentNode=createCompositeNode(grammarAccess.getBodyAccess().getPromiseTypeBodyFunctionParserRuleCall_5_0(), currentNode); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleBodyFunction_in_ruleBody924);
+            	    lv_promiseType_5_0=ruleBodyFunction();
+            	    _fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = factory.create(grammarAccess.getBodyRule().getType().getClassifier());
+            	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+            	    	        }
+            	    	        try {
+            	    	       		add(
+            	    	       			current, 
+            	    	       			"promiseType",
+            	    	        		lv_promiseType_5_0, 
+            	    	        		"BodyFunction", 
+            	    	        		currentNode);
+            	    	        } catch (ValueConverterException vce) {
+            	    				handleValueConverterException(vce);
+            	    	        }
+            	    	        currentNode = currentNode.getParent();
+            	    	    
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop7;
+                }
+            } while (true);
+
+            match(input,18,FOLLOW_18_in_ruleBody935); 
+
+                    createLeafNode(grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_6(), null); 
                 
 
             }
@@ -826,25 +1121,25 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
     // $ANTLR end ruleBody
 
 
-    // $ANTLR start entryRuleMethode
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:413:1: entryRuleMethode returns [EObject current=null] : iv_ruleMethode= ruleMethode EOF ;
-    public final EObject entryRuleMethode() throws RecognitionException {
+    // $ANTLR start entryRuleBodyFunction
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:497:1: entryRuleBodyFunction returns [EObject current=null] : iv_ruleBodyFunction= ruleBodyFunction EOF ;
+    public final EObject entryRuleBodyFunction() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleMethode = null;
+        EObject iv_ruleBodyFunction = null;
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:414:2: (iv_ruleMethode= ruleMethode EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:415:2: iv_ruleMethode= ruleMethode EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:498:2: (iv_ruleBodyFunction= ruleBodyFunction EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:499:2: iv_ruleBodyFunction= ruleBodyFunction EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getMethodeRule(), currentNode); 
-            pushFollow(FOLLOW_ruleMethode_in_entryRuleMethode728);
-            iv_ruleMethode=ruleMethode();
+             currentNode = createCompositeNode(grammarAccess.getBodyFunctionRule(), currentNode); 
+            pushFollow(FOLLOW_ruleBodyFunction_in_entryRuleBodyFunction971);
+            iv_ruleBodyFunction=ruleBodyFunction();
             _fsp--;
 
-             current =iv_ruleMethode; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMethode738); 
+             current =iv_ruleBodyFunction; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyFunction981); 
 
             }
 
@@ -858,55 +1153,60 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleMethode
+    // $ANTLR end entryRuleBodyFunction
 
 
-    // $ANTLR start ruleMethode
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:422:1: ruleMethode returns [EObject current=null] : ( ( (lv_name_0_0= RULE_STRING ) ) ( ';' | ( ( (lv_zuweisung_2_0= ruleZuweisung ) ) ( ',' ( (lv_zuweisung_4_0= ruleZuweisung ) ) )* ';' ) ) ) ;
-    public final EObject ruleMethode() throws RecognitionException {
+    // $ANTLR start ruleBodyFunction
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:506:1: ruleBodyFunction returns [EObject current=null] : ( ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';' ) ;
+    public final EObject ruleBodyFunction() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_0_0=null;
-        EObject lv_zuweisung_2_0 = null;
+        Token lv_values_2_0=null;
+        Token lv_values_4_0=null;
+        Token lv_values_6_0=null;
+        EObject lv_name_0_0 = null;
 
-        EObject lv_zuweisung_4_0 = null;
+        EObject lv_function_8_0 = null;
 
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:427:6: ( ( ( (lv_name_0_0= RULE_STRING ) ) ( ';' | ( ( (lv_zuweisung_2_0= ruleZuweisung ) ) ( ',' ( (lv_zuweisung_4_0= ruleZuweisung ) ) )* ';' ) ) ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:428:1: ( ( (lv_name_0_0= RULE_STRING ) ) ( ';' | ( ( (lv_zuweisung_2_0= ruleZuweisung ) ) ( ',' ( (lv_zuweisung_4_0= ruleZuweisung ) ) )* ';' ) ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:511:6: ( ( ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';' ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:512:1: ( ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';' )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:428:1: ( ( (lv_name_0_0= RULE_STRING ) ) ( ';' | ( ( (lv_zuweisung_2_0= ruleZuweisung ) ) ( ',' ( (lv_zuweisung_4_0= ruleZuweisung ) ) )* ';' ) ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:428:2: ( (lv_name_0_0= RULE_STRING ) ) ( ';' | ( ( (lv_zuweisung_2_0= ruleZuweisung ) ) ( ',' ( (lv_zuweisung_4_0= ruleZuweisung ) ) )* ';' ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:512:1: ( ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:512:2: ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';'
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:428:2: ( (lv_name_0_0= RULE_STRING ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:429:1: (lv_name_0_0= RULE_STRING )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:512:2: ( (lv_name_0_0= ruleBodyPromiseType ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:513:1: (lv_name_0_0= ruleBodyPromiseType )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:429:1: (lv_name_0_0= RULE_STRING )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:430:3: lv_name_0_0= RULE_STRING
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:513:1: (lv_name_0_0= ruleBodyPromiseType )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:514:3: lv_name_0_0= ruleBodyPromiseType
             {
-            lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMethode780); 
+             
+            	        currentNode=createCompositeNode(grammarAccess.getBodyFunctionAccess().getNameBodyPromiseTypeParserRuleCall_0_0(), currentNode); 
+            	    
+            pushFollow(FOLLOW_ruleBodyPromiseType_in_ruleBodyFunction1027);
+            lv_name_0_0=ruleBodyPromiseType();
+            _fsp--;
 
-            			createLeafNode(grammarAccess.getMethodeAccess().getNameSTRINGTerminalRuleCall_0_0(), "name"); 
-            		
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getMethodeRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            current = factory.create(grammarAccess.getBodyFunctionRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode.getParent(), current);
             	        }
             	        try {
             	       		set(
             	       			current, 
             	       			"name",
             	        		lv_name_0_0, 
-            	        		"STRING", 
-            	        		lastConsumedNode);
+            	        		"BodyPromiseType", 
+            	        		currentNode);
             	        } catch (ValueConverterException vce) {
             				handleValueConverterException(vce);
             	        }
+            	        currentNode = currentNode.getParent();
             	    
 
             }
@@ -914,68 +1214,65 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:452:2: ( ';' | ( ( (lv_zuweisung_2_0= ruleZuweisung ) ) ( ',' ( (lv_zuweisung_4_0= ruleZuweisung ) ) )* ';' ) )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            match(input,10,FOLLOW_10_in_ruleBodyFunction1037); 
 
-            if ( (LA6_0==16) ) {
-                alt6=1;
-            }
-            else if ( (LA6_0==RULE_ID) ) {
-                alt6=2;
-            }
-            else {
+                    createLeafNode(grammarAccess.getBodyFunctionAccess().getEqualsSignGreaterThanSignKeyword_1(), null); 
+                
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:540:1: ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) )
+            int alt9=3;
+            switch ( input.LA(1) ) {
+            case RULE_STRING:
+                {
+                alt9=1;
+                }
+                break;
+            case 16:
+                {
+                alt9=2;
+                }
+                break;
+            case RULE_ID:
+                {
+                alt9=3;
+                }
+                break;
+            default:
                 NoViableAltException nvae =
-                    new NoViableAltException("452:2: ( ';' | ( ( (lv_zuweisung_2_0= ruleZuweisung ) ) ( ',' ( (lv_zuweisung_4_0= ruleZuweisung ) ) )* ';' ) )", 6, 0, input);
+                    new NoViableAltException("540:1: ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) )", 9, 0, input);
 
                 throw nvae;
             }
-            switch (alt6) {
+
+            switch (alt9) {
                 case 1 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:452:4: ';'
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:540:2: ( (lv_values_2_0= RULE_STRING ) )
                     {
-                    match(input,16,FOLLOW_16_in_ruleMethode796); 
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:540:2: ( (lv_values_2_0= RULE_STRING ) )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:541:1: (lv_values_2_0= RULE_STRING )
+                    {
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:541:1: (lv_values_2_0= RULE_STRING )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:542:3: lv_values_2_0= RULE_STRING
+                    {
+                    lv_values_2_0=(Token)input.LT(1);
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction1055); 
 
-                            createLeafNode(grammarAccess.getMethodeAccess().getSemicolonKeyword_1_0(), null); 
-                        
-
-                    }
-                    break;
-                case 2 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:457:6: ( ( (lv_zuweisung_2_0= ruleZuweisung ) ) ( ',' ( (lv_zuweisung_4_0= ruleZuweisung ) ) )* ';' )
-                    {
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:457:6: ( ( (lv_zuweisung_2_0= ruleZuweisung ) ) ( ',' ( (lv_zuweisung_4_0= ruleZuweisung ) ) )* ';' )
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:457:7: ( (lv_zuweisung_2_0= ruleZuweisung ) ) ( ',' ( (lv_zuweisung_4_0= ruleZuweisung ) ) )* ';'
-                    {
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:457:7: ( (lv_zuweisung_2_0= ruleZuweisung ) )
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:458:1: (lv_zuweisung_2_0= ruleZuweisung )
-                    {
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:458:1: (lv_zuweisung_2_0= ruleZuweisung )
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:459:3: lv_zuweisung_2_0= ruleZuweisung
-                    {
-                     
-                    	        currentNode=createCompositeNode(grammarAccess.getMethodeAccess().getZuweisungZuweisungParserRuleCall_1_1_0_0(), currentNode); 
-                    	    
-                    pushFollow(FOLLOW_ruleZuweisung_in_ruleMethode824);
-                    lv_zuweisung_2_0=ruleZuweisung();
-                    _fsp--;
-
+                    			createLeafNode(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_0_0(), "values"); 
+                    		
 
                     	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getMethodeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	            current = factory.create(grammarAccess.getBodyFunctionRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode, current);
                     	        }
                     	        try {
                     	       		add(
                     	       			current, 
-                    	       			"zuweisung",
-                    	        		lv_zuweisung_2_0, 
-                    	        		"Zuweisung", 
-                    	        		currentNode);
+                    	       			"values",
+                    	        		lv_values_2_0, 
+                    	        		"STRING", 
+                    	        		lastConsumedNode);
                     	        } catch (ValueConverterException vce) {
                     				handleValueConverterException(vce);
                     	        }
-                    	        currentNode = currentNode.getParent();
                     	    
 
                     }
@@ -983,54 +1280,97 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:481:2: ( ',' ( (lv_zuweisung_4_0= ruleZuweisung ) ) )*
-                    loop5:
-                    do {
-                        int alt5=2;
-                        int LA5_0 = input.LA(1);
 
-                        if ( (LA5_0==17) ) {
-                            alt5=1;
+                    }
+                    break;
+                case 2 :
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:565:6: ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' )
+                    {
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:565:6: ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:565:8: '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}'
+                    {
+                    match(input,16,FOLLOW_16_in_ruleBodyFunction1077); 
+
+                            createLeafNode(grammarAccess.getBodyFunctionAccess().getLeftCurlyBracketKeyword_2_1_0(), null); 
+                        
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:569:1: ( (lv_values_4_0= RULE_STRING ) )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:570:1: (lv_values_4_0= RULE_STRING )
+                    {
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:570:1: (lv_values_4_0= RULE_STRING )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:571:3: lv_values_4_0= RULE_STRING
+                    {
+                    lv_values_4_0=(Token)input.LT(1);
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction1094); 
+
+                    			createLeafNode(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_1_0(), "values"); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = factory.create(grammarAccess.getBodyFunctionRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode, current);
+                    	        }
+                    	        try {
+                    	       		add(
+                    	       			current, 
+                    	       			"values",
+                    	        		lv_values_4_0, 
+                    	        		"STRING", 
+                    	        		lastConsumedNode);
+                    	        } catch (ValueConverterException vce) {
+                    				handleValueConverterException(vce);
+                    	        }
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:593:2: ( ',' ( (lv_values_6_0= RULE_STRING ) ) )*
+                    loop8:
+                    do {
+                        int alt8=2;
+                        int LA8_0 = input.LA(1);
+
+                        if ( (LA8_0==12) ) {
+                            alt8=1;
                         }
 
 
-                        switch (alt5) {
+                        switch (alt8) {
                     	case 1 :
-                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:481:4: ',' ( (lv_zuweisung_4_0= ruleZuweisung ) )
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:593:4: ',' ( (lv_values_6_0= RULE_STRING ) )
                     	    {
-                    	    match(input,17,FOLLOW_17_in_ruleMethode835); 
+                    	    match(input,12,FOLLOW_12_in_ruleBodyFunction1110); 
 
-                    	            createLeafNode(grammarAccess.getMethodeAccess().getCommaKeyword_1_1_1_0(), null); 
+                    	            createLeafNode(grammarAccess.getBodyFunctionAccess().getCommaKeyword_2_1_2_0(), null); 
                     	        
-                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:485:1: ( (lv_zuweisung_4_0= ruleZuweisung ) )
-                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:486:1: (lv_zuweisung_4_0= ruleZuweisung )
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:597:1: ( (lv_values_6_0= RULE_STRING ) )
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:598:1: (lv_values_6_0= RULE_STRING )
                     	    {
-                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:486:1: (lv_zuweisung_4_0= ruleZuweisung )
-                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:487:3: lv_zuweisung_4_0= ruleZuweisung
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:598:1: (lv_values_6_0= RULE_STRING )
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:599:3: lv_values_6_0= RULE_STRING
                     	    {
-                    	     
-                    	    	        currentNode=createCompositeNode(grammarAccess.getMethodeAccess().getZuweisungZuweisungParserRuleCall_1_1_1_1_0(), currentNode); 
-                    	    	    
-                    	    pushFollow(FOLLOW_ruleZuweisung_in_ruleMethode856);
-                    	    lv_zuweisung_4_0=ruleZuweisung();
-                    	    _fsp--;
+                    	    lv_values_6_0=(Token)input.LT(1);
+                    	    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction1127); 
 
+                    	    			createLeafNode(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_2_1_0(), "values"); 
+                    	    		
 
                     	    	        if (current==null) {
-                    	    	            current = factory.create(grammarAccess.getMethodeRule().getType().getClassifier());
-                    	    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	    	            current = factory.create(grammarAccess.getBodyFunctionRule().getType().getClassifier());
+                    	    	            associateNodeWithAstElement(currentNode, current);
                     	    	        }
                     	    	        try {
                     	    	       		add(
                     	    	       			current, 
-                    	    	       			"zuweisung",
-                    	    	        		lv_zuweisung_4_0, 
-                    	    	        		"Zuweisung", 
-                    	    	        		currentNode);
+                    	    	       			"values",
+                    	    	        		lv_values_6_0, 
+                    	    	        		"STRING", 
+                    	    	        		lastConsumedNode);
                     	    	        } catch (ValueConverterException vce) {
                     	    				handleValueConverterException(vce);
                     	    	        }
-                    	    	        currentNode = currentNode.getParent();
                     	    	    
 
                     	    }
@@ -1043,14 +1383,56 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop5;
+                    	    break loop8;
                         }
                     } while (true);
 
-                    match(input,16,FOLLOW_16_in_ruleMethode868); 
+                    match(input,18,FOLLOW_18_in_ruleBodyFunction1144); 
 
-                            createLeafNode(grammarAccess.getMethodeAccess().getSemicolonKeyword_1_1_2(), null); 
+                            createLeafNode(grammarAccess.getBodyFunctionAccess().getRightCurlyBracketKeyword_2_1_3(), null); 
                         
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:626:6: ( (lv_function_8_0= ruleSpecialFunction ) )
+                    {
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:626:6: ( (lv_function_8_0= ruleSpecialFunction ) )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:627:1: (lv_function_8_0= ruleSpecialFunction )
+                    {
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:627:1: (lv_function_8_0= ruleSpecialFunction )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:628:3: lv_function_8_0= ruleSpecialFunction
+                    {
+                     
+                    	        currentNode=createCompositeNode(grammarAccess.getBodyFunctionAccess().getFunctionSpecialFunctionParserRuleCall_2_2_0(), currentNode); 
+                    	    
+                    pushFollow(FOLLOW_ruleSpecialFunction_in_ruleBodyFunction1172);
+                    lv_function_8_0=ruleSpecialFunction();
+                    _fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = factory.create(grammarAccess.getBodyFunctionRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	        }
+                    	        try {
+                    	       		add(
+                    	       			current, 
+                    	       			"function",
+                    	        		lv_function_8_0, 
+                    	        		"SpecialFunction", 
+                    	        		currentNode);
+                    	        } catch (ValueConverterException vce) {
+                    				handleValueConverterException(vce);
+                    	        }
+                    	        currentNode = currentNode.getParent();
+                    	    
+
+                    }
+
 
                     }
 
@@ -1060,6 +1442,10 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
+            match(input,11,FOLLOW_11_in_ruleBodyFunction1183); 
+
+                    createLeafNode(grammarAccess.getBodyFunctionAccess().getSemicolonKeyword_3(), null); 
+                
 
             }
 
@@ -1079,28 +1465,28 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleMethode
+    // $ANTLR end ruleBodyFunction
 
 
-    // $ANTLR start entryRuleZuweisung
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:521:1: entryRuleZuweisung returns [EObject current=null] : iv_ruleZuweisung= ruleZuweisung EOF ;
-    public final EObject entryRuleZuweisung() throws RecognitionException {
+    // $ANTLR start entryRuleSpecialFunction
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:662:1: entryRuleSpecialFunction returns [EObject current=null] : iv_ruleSpecialFunction= ruleSpecialFunction EOF ;
+    public final EObject entryRuleSpecialFunction() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleZuweisung = null;
+        EObject iv_ruleSpecialFunction = null;
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:522:2: (iv_ruleZuweisung= ruleZuweisung EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:523:2: iv_ruleZuweisung= ruleZuweisung EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:663:2: (iv_ruleSpecialFunction= ruleSpecialFunction EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:664:2: iv_ruleSpecialFunction= ruleSpecialFunction EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getZuweisungRule(), currentNode); 
-            pushFollow(FOLLOW_ruleZuweisung_in_entryRuleZuweisung906);
-            iv_ruleZuweisung=ruleZuweisung();
+             currentNode = createCompositeNode(grammarAccess.getSpecialFunctionRule(), currentNode); 
+            pushFollow(FOLLOW_ruleSpecialFunction_in_entryRuleSpecialFunction1219);
+            iv_ruleSpecialFunction=ruleSpecialFunction();
             _fsp--;
 
-             current =iv_ruleZuweisung; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleZuweisung916); 
+             current =iv_ruleSpecialFunction; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSpecialFunction1229); 
 
             }
 
@@ -1114,39 +1500,41 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleZuweisung
+    // $ANTLR end entryRuleSpecialFunction
 
 
-    // $ANTLR start ruleZuweisung
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:530:1: ruleZuweisung returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) ( '=>' ( RULE_ID | RULE_STRING )* )? ) ;
-    public final EObject ruleZuweisung() throws RecognitionException {
+    // $ANTLR start ruleSpecialFunction
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:671:1: ruleSpecialFunction returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')' ) ;
+    public final EObject ruleSpecialFunction() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
+        Token lv_parameters_2_0=null;
+        Token lv_parameters_4_0=null;
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:535:6: ( ( ( (lv_name_0_0= RULE_ID ) ) ( '=>' ( RULE_ID | RULE_STRING )* )? ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:536:1: ( ( (lv_name_0_0= RULE_ID ) ) ( '=>' ( RULE_ID | RULE_STRING )* )? )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:676:6: ( ( ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')' ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:677:1: ( ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')' )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:536:1: ( ( (lv_name_0_0= RULE_ID ) ) ( '=>' ( RULE_ID | RULE_STRING )* )? )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:536:2: ( (lv_name_0_0= RULE_ID ) ) ( '=>' ( RULE_ID | RULE_STRING )* )?
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:677:1: ( ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:677:2: ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')'
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:536:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:537:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:677:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:678:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:537:1: (lv_name_0_0= RULE_ID )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:538:3: lv_name_0_0= RULE_ID
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:678:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:679:3: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleZuweisung958); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction1271); 
 
-            			createLeafNode(grammarAccess.getZuweisungAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
+            			createLeafNode(grammarAccess.getSpecialFunctionAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
             		
 
             	        if (current==null) {
-            	            current = factory.create(grammarAccess.getZuweisungRule().getType().getClassifier());
+            	            current = factory.create(grammarAccess.getSpecialFunctionRule().getType().getClassifier());
             	            associateNodeWithAstElement(currentNode, current);
             	        }
             	        try {
@@ -1166,68 +1554,108 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:560:2: ( '=>' ( RULE_ID | RULE_STRING )* )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            match(input,13,FOLLOW_13_in_ruleSpecialFunction1286); 
 
-            if ( (LA8_0==18) ) {
-                alt8=1;
-            }
-            switch (alt8) {
-                case 1 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:560:4: '=>' ( RULE_ID | RULE_STRING )*
-                    {
-                    match(input,18,FOLLOW_18_in_ruleZuweisung974); 
+                    createLeafNode(grammarAccess.getSpecialFunctionAccess().getLeftParenthesisKeyword_1(), null); 
+                
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:705:1: ( (lv_parameters_2_0= RULE_STRING ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:706:1: (lv_parameters_2_0= RULE_STRING )
+            {
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:706:1: (lv_parameters_2_0= RULE_STRING )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:707:3: lv_parameters_2_0= RULE_STRING
+            {
+            lv_parameters_2_0=(Token)input.LT(1);
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSpecialFunction1303); 
 
-                            createLeafNode(grammarAccess.getZuweisungAccess().getEqualsSignGreaterThanSignKeyword_1_0(), null); 
-                        
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:564:1: ( RULE_ID | RULE_STRING )*
-                    loop7:
-                    do {
-                        int alt7=3;
-                        int LA7_0 = input.LA(1);
+            			createLeafNode(grammarAccess.getSpecialFunctionAccess().getParametersSTRINGTerminalRuleCall_2_0(), "parameters"); 
+            		
 
-                        if ( (LA7_0==RULE_ID) ) {
-                            alt7=1;
-                        }
-                        else if ( (LA7_0==RULE_STRING) ) {
-                            alt7=2;
-                        }
-
-
-                        switch (alt7) {
-                    	case 1 :
-                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:564:2: RULE_ID
-                    	    {
-                    	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleZuweisung984); 
-                    	     
-                    	        createLeafNode(grammarAccess.getZuweisungAccess().getIDTerminalRuleCall_1_1_0(), null); 
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 2 :
-                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:569:6: RULE_STRING
-                    	    {
-                    	    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleZuweisung998); 
-                    	     
-                    	        createLeafNode(grammarAccess.getZuweisungAccess().getSTRINGTerminalRuleCall_1_1_1(), null); 
-                    	        
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop7;
-                        }
-                    } while (true);
-
-
-                    }
-                    break;
+            	        if (current==null) {
+            	            current = factory.create(grammarAccess.getSpecialFunctionRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode, current);
+            	        }
+            	        try {
+            	       		add(
+            	       			current, 
+            	       			"parameters",
+            	        		lv_parameters_2_0, 
+            	        		"STRING", 
+            	        		lastConsumedNode);
+            	        } catch (ValueConverterException vce) {
+            				handleValueConverterException(vce);
+            	        }
+            	    
 
             }
 
+
+            }
+
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:729:2: ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )*
+            loop10:
+            do {
+                int alt10=2;
+                int LA10_0 = input.LA(1);
+
+                if ( (LA10_0==12) ) {
+                    alt10=1;
+                }
+
+
+                switch (alt10) {
+            	case 1 :
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:729:4: ',' ( (lv_parameters_4_0= RULE_STRING ) )
+            	    {
+            	    match(input,12,FOLLOW_12_in_ruleSpecialFunction1319); 
+
+            	            createLeafNode(grammarAccess.getSpecialFunctionAccess().getCommaKeyword_3_0(), null); 
+            	        
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:733:1: ( (lv_parameters_4_0= RULE_STRING ) )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:734:1: (lv_parameters_4_0= RULE_STRING )
+            	    {
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:734:1: (lv_parameters_4_0= RULE_STRING )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:735:3: lv_parameters_4_0= RULE_STRING
+            	    {
+            	    lv_parameters_4_0=(Token)input.LT(1);
+            	    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSpecialFunction1336); 
+
+            	    			createLeafNode(grammarAccess.getSpecialFunctionAccess().getParametersSTRINGTerminalRuleCall_3_1_0(), "parameters"); 
+            	    		
+
+            	    	        if (current==null) {
+            	    	            current = factory.create(grammarAccess.getSpecialFunctionRule().getType().getClassifier());
+            	    	            associateNodeWithAstElement(currentNode, current);
+            	    	        }
+            	    	        try {
+            	    	       		add(
+            	    	       			current, 
+            	    	       			"parameters",
+            	    	        		lv_parameters_4_0, 
+            	    	        		"STRING", 
+            	    	        		lastConsumedNode);
+            	    	        } catch (ValueConverterException vce) {
+            	    				handleValueConverterException(vce);
+            	    	        }
+            	    	    
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop10;
+                }
+            } while (true);
+
+            match(input,14,FOLLOW_14_in_ruleSpecialFunction1353); 
+
+                    createLeafNode(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_4(), null); 
+                
 
             }
 
@@ -1247,28 +1675,28 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleZuweisung
+    // $ANTLR end ruleSpecialFunction
 
 
-    // $ANTLR start entryRulePromiseType
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:581:1: entryRulePromiseType returns [EObject current=null] : iv_rulePromiseType= rulePromiseType EOF ;
-    public final EObject entryRulePromiseType() throws RecognitionException {
+    // $ANTLR start entryRuleBundlePromiseType
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:769:1: entryRuleBundlePromiseType returns [EObject current=null] : iv_ruleBundlePromiseType= ruleBundlePromiseType EOF ;
+    public final EObject entryRuleBundlePromiseType() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_rulePromiseType = null;
+        EObject iv_ruleBundlePromiseType = null;
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:582:2: (iv_rulePromiseType= rulePromiseType EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:583:2: iv_rulePromiseType= rulePromiseType EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:770:2: (iv_ruleBundlePromiseType= ruleBundlePromiseType EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:771:2: iv_ruleBundlePromiseType= ruleBundlePromiseType EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getPromiseTypeRule(), currentNode); 
-            pushFollow(FOLLOW_rulePromiseType_in_entryRulePromiseType1037);
-            iv_rulePromiseType=rulePromiseType();
+             currentNode = createCompositeNode(grammarAccess.getBundlePromiseTypeRule(), currentNode); 
+            pushFollow(FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType1389);
+            iv_ruleBundlePromiseType=ruleBundlePromiseType();
             _fsp--;
 
-             current =iv_rulePromiseType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePromiseType1047); 
+             current =iv_ruleBundlePromiseType; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBundlePromiseType1399); 
 
             }
 
@@ -1282,621 +1710,49 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRulePromiseType
+    // $ANTLR end entryRuleBundlePromiseType
 
 
-    // $ANTLR start rulePromiseType
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:590:1: rulePromiseType returns [EObject current=null] : ( ( (lv_name_0_1= 'access' | lv_name_0_2= 'classes' | lv_name_0_3= 'commands' | lv_name_0_4= 'databases' | lv_name_0_5= 'environments' | lv_name_0_6= 'files' | lv_name_0_7= 'inferences' | lv_name_0_8= 'interfaces' | lv_name_0_9= 'measurements' | lv_name_0_10= 'methods' | lv_name_0_11= 'occurrences' | lv_name_0_12= 'outputs' | lv_name_0_13= 'packages' | lv_name_0_14= 'processes' | lv_name_0_15= 'reports' | lv_name_0_16= 'roles' | lv_name_0_17= 'services' | lv_name_0_18= 'storage' | lv_name_0_19= 'topics' | lv_name_0_20= 'vars' ) ) ) ;
-    public final EObject rulePromiseType() throws RecognitionException {
+    // $ANTLR start ruleBundlePromiseType
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:778:1: ruleBundlePromiseType returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    public final EObject ruleBundlePromiseType() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_0_1=null;
-        Token lv_name_0_2=null;
-        Token lv_name_0_3=null;
-        Token lv_name_0_4=null;
-        Token lv_name_0_5=null;
-        Token lv_name_0_6=null;
-        Token lv_name_0_7=null;
-        Token lv_name_0_8=null;
-        Token lv_name_0_9=null;
-        Token lv_name_0_10=null;
-        Token lv_name_0_11=null;
-        Token lv_name_0_12=null;
-        Token lv_name_0_13=null;
-        Token lv_name_0_14=null;
-        Token lv_name_0_15=null;
-        Token lv_name_0_16=null;
-        Token lv_name_0_17=null;
-        Token lv_name_0_18=null;
-        Token lv_name_0_19=null;
-        Token lv_name_0_20=null;
+        Token lv_name_0_0=null;
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:595:6: ( ( ( (lv_name_0_1= 'access' | lv_name_0_2= 'classes' | lv_name_0_3= 'commands' | lv_name_0_4= 'databases' | lv_name_0_5= 'environments' | lv_name_0_6= 'files' | lv_name_0_7= 'inferences' | lv_name_0_8= 'interfaces' | lv_name_0_9= 'measurements' | lv_name_0_10= 'methods' | lv_name_0_11= 'occurrences' | lv_name_0_12= 'outputs' | lv_name_0_13= 'packages' | lv_name_0_14= 'processes' | lv_name_0_15= 'reports' | lv_name_0_16= 'roles' | lv_name_0_17= 'services' | lv_name_0_18= 'storage' | lv_name_0_19= 'topics' | lv_name_0_20= 'vars' ) ) ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:596:1: ( ( (lv_name_0_1= 'access' | lv_name_0_2= 'classes' | lv_name_0_3= 'commands' | lv_name_0_4= 'databases' | lv_name_0_5= 'environments' | lv_name_0_6= 'files' | lv_name_0_7= 'inferences' | lv_name_0_8= 'interfaces' | lv_name_0_9= 'measurements' | lv_name_0_10= 'methods' | lv_name_0_11= 'occurrences' | lv_name_0_12= 'outputs' | lv_name_0_13= 'packages' | lv_name_0_14= 'processes' | lv_name_0_15= 'reports' | lv_name_0_16= 'roles' | lv_name_0_17= 'services' | lv_name_0_18= 'storage' | lv_name_0_19= 'topics' | lv_name_0_20= 'vars' ) ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:783:6: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:784:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:596:1: ( ( (lv_name_0_1= 'access' | lv_name_0_2= 'classes' | lv_name_0_3= 'commands' | lv_name_0_4= 'databases' | lv_name_0_5= 'environments' | lv_name_0_6= 'files' | lv_name_0_7= 'inferences' | lv_name_0_8= 'interfaces' | lv_name_0_9= 'measurements' | lv_name_0_10= 'methods' | lv_name_0_11= 'occurrences' | lv_name_0_12= 'outputs' | lv_name_0_13= 'packages' | lv_name_0_14= 'processes' | lv_name_0_15= 'reports' | lv_name_0_16= 'roles' | lv_name_0_17= 'services' | lv_name_0_18= 'storage' | lv_name_0_19= 'topics' | lv_name_0_20= 'vars' ) ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:597:1: ( (lv_name_0_1= 'access' | lv_name_0_2= 'classes' | lv_name_0_3= 'commands' | lv_name_0_4= 'databases' | lv_name_0_5= 'environments' | lv_name_0_6= 'files' | lv_name_0_7= 'inferences' | lv_name_0_8= 'interfaces' | lv_name_0_9= 'measurements' | lv_name_0_10= 'methods' | lv_name_0_11= 'occurrences' | lv_name_0_12= 'outputs' | lv_name_0_13= 'packages' | lv_name_0_14= 'processes' | lv_name_0_15= 'reports' | lv_name_0_16= 'roles' | lv_name_0_17= 'services' | lv_name_0_18= 'storage' | lv_name_0_19= 'topics' | lv_name_0_20= 'vars' ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:784:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:785:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:597:1: ( (lv_name_0_1= 'access' | lv_name_0_2= 'classes' | lv_name_0_3= 'commands' | lv_name_0_4= 'databases' | lv_name_0_5= 'environments' | lv_name_0_6= 'files' | lv_name_0_7= 'inferences' | lv_name_0_8= 'interfaces' | lv_name_0_9= 'measurements' | lv_name_0_10= 'methods' | lv_name_0_11= 'occurrences' | lv_name_0_12= 'outputs' | lv_name_0_13= 'packages' | lv_name_0_14= 'processes' | lv_name_0_15= 'reports' | lv_name_0_16= 'roles' | lv_name_0_17= 'services' | lv_name_0_18= 'storage' | lv_name_0_19= 'topics' | lv_name_0_20= 'vars' ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:598:1: (lv_name_0_1= 'access' | lv_name_0_2= 'classes' | lv_name_0_3= 'commands' | lv_name_0_4= 'databases' | lv_name_0_5= 'environments' | lv_name_0_6= 'files' | lv_name_0_7= 'inferences' | lv_name_0_8= 'interfaces' | lv_name_0_9= 'measurements' | lv_name_0_10= 'methods' | lv_name_0_11= 'occurrences' | lv_name_0_12= 'outputs' | lv_name_0_13= 'packages' | lv_name_0_14= 'processes' | lv_name_0_15= 'reports' | lv_name_0_16= 'roles' | lv_name_0_17= 'services' | lv_name_0_18= 'storage' | lv_name_0_19= 'topics' | lv_name_0_20= 'vars' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:785:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:786:3: lv_name_0_0= RULE_ID
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:598:1: (lv_name_0_1= 'access' | lv_name_0_2= 'classes' | lv_name_0_3= 'commands' | lv_name_0_4= 'databases' | lv_name_0_5= 'environments' | lv_name_0_6= 'files' | lv_name_0_7= 'inferences' | lv_name_0_8= 'interfaces' | lv_name_0_9= 'measurements' | lv_name_0_10= 'methods' | lv_name_0_11= 'occurrences' | lv_name_0_12= 'outputs' | lv_name_0_13= 'packages' | lv_name_0_14= 'processes' | lv_name_0_15= 'reports' | lv_name_0_16= 'roles' | lv_name_0_17= 'services' | lv_name_0_18= 'storage' | lv_name_0_19= 'topics' | lv_name_0_20= 'vars' )
-            int alt9=20;
-            switch ( input.LA(1) ) {
-            case 19:
-                {
-                alt9=1;
-                }
-                break;
-            case 20:
-                {
-                alt9=2;
-                }
-                break;
-            case 21:
-                {
-                alt9=3;
-                }
-                break;
-            case 22:
-                {
-                alt9=4;
-                }
-                break;
-            case 23:
-                {
-                alt9=5;
-                }
-                break;
-            case 24:
-                {
-                alt9=6;
-                }
-                break;
-            case 25:
-                {
-                alt9=7;
-                }
-                break;
-            case 26:
-                {
-                alt9=8;
-                }
-                break;
-            case 27:
-                {
-                alt9=9;
-                }
-                break;
-            case 28:
-                {
-                alt9=10;
-                }
-                break;
-            case 29:
-                {
-                alt9=11;
-                }
-                break;
-            case 30:
-                {
-                alt9=12;
-                }
-                break;
-            case 31:
-                {
-                alt9=13;
-                }
-                break;
-            case 32:
-                {
-                alt9=14;
-                }
-                break;
-            case 33:
-                {
-                alt9=15;
-                }
-                break;
-            case 34:
-                {
-                alt9=16;
-                }
-                break;
-            case 35:
-                {
-                alt9=17;
-                }
-                break;
-            case 36:
-                {
-                alt9=18;
-                }
-                break;
-            case 37:
-                {
-                alt9=19;
-                }
-                break;
-            case 38:
-                {
-                alt9=20;
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("598:1: (lv_name_0_1= 'access' | lv_name_0_2= 'classes' | lv_name_0_3= 'commands' | lv_name_0_4= 'databases' | lv_name_0_5= 'environments' | lv_name_0_6= 'files' | lv_name_0_7= 'inferences' | lv_name_0_8= 'interfaces' | lv_name_0_9= 'measurements' | lv_name_0_10= 'methods' | lv_name_0_11= 'occurrences' | lv_name_0_12= 'outputs' | lv_name_0_13= 'packages' | lv_name_0_14= 'processes' | lv_name_0_15= 'reports' | lv_name_0_16= 'roles' | lv_name_0_17= 'services' | lv_name_0_18= 'storage' | lv_name_0_19= 'topics' | lv_name_0_20= 'vars' )", 9, 0, input);
-
-                throw nvae;
-            }
-
-            switch (alt9) {
-                case 1 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:599:3: lv_name_0_1= 'access'
-                    {
-                    lv_name_0_1=(Token)input.LT(1);
-                    match(input,19,FOLLOW_19_in_rulePromiseType1091); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameAccessKeyword_0_0(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_1, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 2 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:617:8: lv_name_0_2= 'classes'
-                    {
-                    lv_name_0_2=(Token)input.LT(1);
-                    match(input,20,FOLLOW_20_in_rulePromiseType1120); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameClassesKeyword_0_1(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_2, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 3 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:635:8: lv_name_0_3= 'commands'
-                    {
-                    lv_name_0_3=(Token)input.LT(1);
-                    match(input,21,FOLLOW_21_in_rulePromiseType1149); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameCommandsKeyword_0_2(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_3, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 4 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:653:8: lv_name_0_4= 'databases'
-                    {
-                    lv_name_0_4=(Token)input.LT(1);
-                    match(input,22,FOLLOW_22_in_rulePromiseType1178); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameDatabasesKeyword_0_3(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_4, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 5 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:671:8: lv_name_0_5= 'environments'
-                    {
-                    lv_name_0_5=(Token)input.LT(1);
-                    match(input,23,FOLLOW_23_in_rulePromiseType1207); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameEnvironmentsKeyword_0_4(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_5, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 6 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:689:8: lv_name_0_6= 'files'
-                    {
-                    lv_name_0_6=(Token)input.LT(1);
-                    match(input,24,FOLLOW_24_in_rulePromiseType1236); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameFilesKeyword_0_5(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_6, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 7 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:707:8: lv_name_0_7= 'inferences'
-                    {
-                    lv_name_0_7=(Token)input.LT(1);
-                    match(input,25,FOLLOW_25_in_rulePromiseType1265); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameInferencesKeyword_0_6(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_7, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 8 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:725:8: lv_name_0_8= 'interfaces'
-                    {
-                    lv_name_0_8=(Token)input.LT(1);
-                    match(input,26,FOLLOW_26_in_rulePromiseType1294); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameInterfacesKeyword_0_7(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_8, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 9 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:743:8: lv_name_0_9= 'measurements'
-                    {
-                    lv_name_0_9=(Token)input.LT(1);
-                    match(input,27,FOLLOW_27_in_rulePromiseType1323); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameMeasurementsKeyword_0_8(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_9, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 10 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:761:8: lv_name_0_10= 'methods'
-                    {
-                    lv_name_0_10=(Token)input.LT(1);
-                    match(input,28,FOLLOW_28_in_rulePromiseType1352); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameMethodsKeyword_0_9(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_10, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 11 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:779:8: lv_name_0_11= 'occurrences'
-                    {
-                    lv_name_0_11=(Token)input.LT(1);
-                    match(input,29,FOLLOW_29_in_rulePromiseType1381); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameOccurrencesKeyword_0_10(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_11, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 12 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:797:8: lv_name_0_12= 'outputs'
-                    {
-                    lv_name_0_12=(Token)input.LT(1);
-                    match(input,30,FOLLOW_30_in_rulePromiseType1410); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameOutputsKeyword_0_11(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_12, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 13 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:815:8: lv_name_0_13= 'packages'
-                    {
-                    lv_name_0_13=(Token)input.LT(1);
-                    match(input,31,FOLLOW_31_in_rulePromiseType1439); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNamePackagesKeyword_0_12(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_13, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 14 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:833:8: lv_name_0_14= 'processes'
-                    {
-                    lv_name_0_14=(Token)input.LT(1);
-                    match(input,32,FOLLOW_32_in_rulePromiseType1468); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameProcessesKeyword_0_13(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_14, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 15 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:851:8: lv_name_0_15= 'reports'
-                    {
-                    lv_name_0_15=(Token)input.LT(1);
-                    match(input,33,FOLLOW_33_in_rulePromiseType1497); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameReportsKeyword_0_14(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_15, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 16 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:869:8: lv_name_0_16= 'roles'
-                    {
-                    lv_name_0_16=(Token)input.LT(1);
-                    match(input,34,FOLLOW_34_in_rulePromiseType1526); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameRolesKeyword_0_15(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_16, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 17 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:887:8: lv_name_0_17= 'services'
-                    {
-                    lv_name_0_17=(Token)input.LT(1);
-                    match(input,35,FOLLOW_35_in_rulePromiseType1555); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameServicesKeyword_0_16(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_17, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 18 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:905:8: lv_name_0_18= 'storage'
-                    {
-                    lv_name_0_18=(Token)input.LT(1);
-                    match(input,36,FOLLOW_36_in_rulePromiseType1584); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameStorageKeyword_0_17(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_18, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 19 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:923:8: lv_name_0_19= 'topics'
-                    {
-                    lv_name_0_19=(Token)input.LT(1);
-                    match(input,37,FOLLOW_37_in_rulePromiseType1613); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameTopicsKeyword_0_18(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_19, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 20 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:941:8: lv_name_0_20= 'vars'
-                    {
-                    lv_name_0_20=(Token)input.LT(1);
-                    match(input,38,FOLLOW_38_in_rulePromiseType1642); 
-
-                            createLeafNode(grammarAccess.getPromiseTypeAccess().getNameVarsKeyword_0_19(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getPromiseTypeRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_20, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-
-            }
-
+            lv_name_0_0=(Token)input.LT(1);
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundlePromiseType1440); 
+
+            			createLeafNode(grammarAccess.getBundlePromiseTypeAccess().getNameIDTerminalRuleCall_0(), "name"); 
+            		
+
+            	        if (current==null) {
+            	            current = factory.create(grammarAccess.getBundlePromiseTypeRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode, current);
+            	        }
+            	        try {
+            	       		set(
+            	       			current, 
+            	       			"name",
+            	        		lv_name_0_0, 
+            	        		"ID", 
+            	        		lastConsumedNode);
+            	        } catch (ValueConverterException vce) {
+            				handleValueConverterException(vce);
+            	        }
+            	    
 
             }
 
@@ -1919,28 +1775,28 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end rulePromiseType
+    // $ANTLR end ruleBundlePromiseType
 
 
-    // $ANTLR start entryRuleComponent
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:970:1: entryRuleComponent returns [EObject current=null] : iv_ruleComponent= ruleComponent EOF ;
-    public final EObject entryRuleComponent() throws RecognitionException {
+    // $ANTLR start entryRuleBodyPromiseType
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:816:1: entryRuleBodyPromiseType returns [EObject current=null] : iv_ruleBodyPromiseType= ruleBodyPromiseType EOF ;
+    public final EObject entryRuleBodyPromiseType() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleComponent = null;
+        EObject iv_ruleBodyPromiseType = null;
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:971:2: (iv_ruleComponent= ruleComponent EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:972:2: iv_ruleComponent= ruleComponent EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:817:2: (iv_ruleBodyPromiseType= ruleBodyPromiseType EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:818:2: iv_ruleBodyPromiseType= ruleBodyPromiseType EOF
             {
-             currentNode = createCompositeNode(grammarAccess.getComponentRule(), currentNode); 
-            pushFollow(FOLLOW_ruleComponent_in_entryRuleComponent1693);
-            iv_ruleComponent=ruleComponent();
+             currentNode = createCompositeNode(grammarAccess.getBodyPromiseTypeRule(), currentNode); 
+            pushFollow(FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType1480);
+            iv_ruleBodyPromiseType=ruleBodyPromiseType();
             _fsp--;
 
-             current =iv_ruleComponent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComponent1703); 
+             current =iv_ruleBodyPromiseType; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyPromiseType1490); 
 
             }
 
@@ -1954,273 +1810,49 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end entryRuleComponent
+    // $ANTLR end entryRuleBodyPromiseType
 
 
-    // $ANTLR start ruleComponent
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:979:1: ruleComponent returns [EObject current=null] : ( ( (lv_name_0_1= 'common' | lv_name_0_2= 'agent' | lv_name_0_3= 'server' | lv_name_0_4= 'monitor' | lv_name_0_5= 'runagent' | lv_name_0_6= 'executor' | lv_name_0_7= 'knowledge' | lv_name_0_8= 'reporter' ) ) ) ;
-    public final EObject ruleComponent() throws RecognitionException {
+    // $ANTLR start ruleBodyPromiseType
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:825:1: ruleBodyPromiseType returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    public final EObject ruleBodyPromiseType() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_0_1=null;
-        Token lv_name_0_2=null;
-        Token lv_name_0_3=null;
-        Token lv_name_0_4=null;
-        Token lv_name_0_5=null;
-        Token lv_name_0_6=null;
-        Token lv_name_0_7=null;
-        Token lv_name_0_8=null;
+        Token lv_name_0_0=null;
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:984:6: ( ( ( (lv_name_0_1= 'common' | lv_name_0_2= 'agent' | lv_name_0_3= 'server' | lv_name_0_4= 'monitor' | lv_name_0_5= 'runagent' | lv_name_0_6= 'executor' | lv_name_0_7= 'knowledge' | lv_name_0_8= 'reporter' ) ) ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:985:1: ( ( (lv_name_0_1= 'common' | lv_name_0_2= 'agent' | lv_name_0_3= 'server' | lv_name_0_4= 'monitor' | lv_name_0_5= 'runagent' | lv_name_0_6= 'executor' | lv_name_0_7= 'knowledge' | lv_name_0_8= 'reporter' ) ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:830:6: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:831:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:985:1: ( ( (lv_name_0_1= 'common' | lv_name_0_2= 'agent' | lv_name_0_3= 'server' | lv_name_0_4= 'monitor' | lv_name_0_5= 'runagent' | lv_name_0_6= 'executor' | lv_name_0_7= 'knowledge' | lv_name_0_8= 'reporter' ) ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:986:1: ( (lv_name_0_1= 'common' | lv_name_0_2= 'agent' | lv_name_0_3= 'server' | lv_name_0_4= 'monitor' | lv_name_0_5= 'runagent' | lv_name_0_6= 'executor' | lv_name_0_7= 'knowledge' | lv_name_0_8= 'reporter' ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:831:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:832:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:986:1: ( (lv_name_0_1= 'common' | lv_name_0_2= 'agent' | lv_name_0_3= 'server' | lv_name_0_4= 'monitor' | lv_name_0_5= 'runagent' | lv_name_0_6= 'executor' | lv_name_0_7= 'knowledge' | lv_name_0_8= 'reporter' ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:987:1: (lv_name_0_1= 'common' | lv_name_0_2= 'agent' | lv_name_0_3= 'server' | lv_name_0_4= 'monitor' | lv_name_0_5= 'runagent' | lv_name_0_6= 'executor' | lv_name_0_7= 'knowledge' | lv_name_0_8= 'reporter' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:832:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:833:3: lv_name_0_0= RULE_ID
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:987:1: (lv_name_0_1= 'common' | lv_name_0_2= 'agent' | lv_name_0_3= 'server' | lv_name_0_4= 'monitor' | lv_name_0_5= 'runagent' | lv_name_0_6= 'executor' | lv_name_0_7= 'knowledge' | lv_name_0_8= 'reporter' )
-            int alt10=8;
-            switch ( input.LA(1) ) {
-            case 39:
-                {
-                alt10=1;
-                }
-                break;
-            case 40:
-                {
-                alt10=2;
-                }
-                break;
-            case 41:
-                {
-                alt10=3;
-                }
-                break;
-            case 42:
-                {
-                alt10=4;
-                }
-                break;
-            case 43:
-                {
-                alt10=5;
-                }
-                break;
-            case 44:
-                {
-                alt10=6;
-                }
-                break;
-            case 45:
-                {
-                alt10=7;
-                }
-                break;
-            case 46:
-                {
-                alt10=8;
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("987:1: (lv_name_0_1= 'common' | lv_name_0_2= 'agent' | lv_name_0_3= 'server' | lv_name_0_4= 'monitor' | lv_name_0_5= 'runagent' | lv_name_0_6= 'executor' | lv_name_0_7= 'knowledge' | lv_name_0_8= 'reporter' )", 10, 0, input);
+            lv_name_0_0=(Token)input.LT(1);
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyPromiseType1531); 
 
-                throw nvae;
-            }
+            			createLeafNode(grammarAccess.getBodyPromiseTypeAccess().getNameIDTerminalRuleCall_0(), "name"); 
+            		
 
-            switch (alt10) {
-                case 1 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:988:3: lv_name_0_1= 'common'
-                    {
-                    lv_name_0_1=(Token)input.LT(1);
-                    match(input,39,FOLLOW_39_in_ruleComponent1747); 
-
-                            createLeafNode(grammarAccess.getComponentAccess().getNameCommonKeyword_0_0(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getComponentRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_1, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 2 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:1006:8: lv_name_0_2= 'agent'
-                    {
-                    lv_name_0_2=(Token)input.LT(1);
-                    match(input,40,FOLLOW_40_in_ruleComponent1776); 
-
-                            createLeafNode(grammarAccess.getComponentAccess().getNameAgentKeyword_0_1(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getComponentRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_2, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 3 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:1024:8: lv_name_0_3= 'server'
-                    {
-                    lv_name_0_3=(Token)input.LT(1);
-                    match(input,41,FOLLOW_41_in_ruleComponent1805); 
-
-                            createLeafNode(grammarAccess.getComponentAccess().getNameServerKeyword_0_2(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getComponentRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_3, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 4 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:1042:8: lv_name_0_4= 'monitor'
-                    {
-                    lv_name_0_4=(Token)input.LT(1);
-                    match(input,42,FOLLOW_42_in_ruleComponent1834); 
-
-                            createLeafNode(grammarAccess.getComponentAccess().getNameMonitorKeyword_0_3(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getComponentRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_4, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 5 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:1060:8: lv_name_0_5= 'runagent'
-                    {
-                    lv_name_0_5=(Token)input.LT(1);
-                    match(input,43,FOLLOW_43_in_ruleComponent1863); 
-
-                            createLeafNode(grammarAccess.getComponentAccess().getNameRunagentKeyword_0_4(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getComponentRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_5, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 6 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:1078:8: lv_name_0_6= 'executor'
-                    {
-                    lv_name_0_6=(Token)input.LT(1);
-                    match(input,44,FOLLOW_44_in_ruleComponent1892); 
-
-                            createLeafNode(grammarAccess.getComponentAccess().getNameExecutorKeyword_0_5(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getComponentRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_6, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 7 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:1096:8: lv_name_0_7= 'knowledge'
-                    {
-                    lv_name_0_7=(Token)input.LT(1);
-                    match(input,45,FOLLOW_45_in_ruleComponent1921); 
-
-                            createLeafNode(grammarAccess.getComponentAccess().getNameKnowledgeKeyword_0_6(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getComponentRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_7, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-                case 8 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:1114:8: lv_name_0_8= 'reporter'
-                    {
-                    lv_name_0_8=(Token)input.LT(1);
-                    match(input,46,FOLLOW_46_in_ruleComponent1950); 
-
-                            createLeafNode(grammarAccess.getComponentAccess().getNameReporterKeyword_0_7(), "name"); 
-                        
-
-                    	        if (current==null) {
-                    	            current = factory.create(grammarAccess.getComponentRule().getType().getClassifier());
-                    	            associateNodeWithAstElement(currentNode, current);
-                    	        }
-                    	        
-                    	        try {
-                    	       		set(current, "name", lv_name_0_8, null, lastConsumedNode);
-                    	        } catch (ValueConverterException vce) {
-                    				handleValueConverterException(vce);
-                    	        }
-                    	    
-
-                    }
-                    break;
-
-            }
-
+            	        if (current==null) {
+            	            current = factory.create(grammarAccess.getBodyPromiseTypeRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode, current);
+            	        }
+            	        try {
+            	       		set(
+            	       			current, 
+            	       			"name",
+            	        		lv_name_0_0, 
+            	        		"ID", 
+            	        		lastConsumedNode);
+            	        } catch (ValueConverterException vce) {
+            				handleValueConverterException(vce);
+            	        }
+            	    
 
             }
 
@@ -2243,83 +1875,281 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end ruleComponent
+    // $ANTLR end ruleBodyPromiseType
+
+
+    // $ANTLR start entryRuleBundleComponent
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:863:1: entryRuleBundleComponent returns [EObject current=null] : iv_ruleBundleComponent= ruleBundleComponent EOF ;
+    public final EObject entryRuleBundleComponent() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleBundleComponent = null;
+
+
+        try {
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:864:2: (iv_ruleBundleComponent= ruleBundleComponent EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:865:2: iv_ruleBundleComponent= ruleBundleComponent EOF
+            {
+             currentNode = createCompositeNode(grammarAccess.getBundleComponentRule(), currentNode); 
+            pushFollow(FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent1571);
+            iv_ruleBundleComponent=ruleBundleComponent();
+            _fsp--;
+
+             current =iv_ruleBundleComponent; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBundleComponent1581); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end entryRuleBundleComponent
+
+
+    // $ANTLR start ruleBundleComponent
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:872:1: ruleBundleComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    public final EObject ruleBundleComponent() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_name_0_0=null;
+
+         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+            
+        try {
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:877:6: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:878:1: ( (lv_name_0_0= RULE_ID ) )
+            {
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:878:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:879:1: (lv_name_0_0= RULE_ID )
+            {
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:879:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:880:3: lv_name_0_0= RULE_ID
+            {
+            lv_name_0_0=(Token)input.LT(1);
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundleComponent1622); 
+
+            			createLeafNode(grammarAccess.getBundleComponentAccess().getNameIDTerminalRuleCall_0(), "name"); 
+            		
+
+            	        if (current==null) {
+            	            current = factory.create(grammarAccess.getBundleComponentRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode, current);
+            	        }
+            	        try {
+            	       		set(
+            	       			current, 
+            	       			"name",
+            	        		lv_name_0_0, 
+            	        		"ID", 
+            	        		lastConsumedNode);
+            	        } catch (ValueConverterException vce) {
+            				handleValueConverterException(vce);
+            	        }
+            	    
+
+            }
+
+
+            }
+
+
+            }
+
+             resetLookahead(); 
+                	lastConsumedNode = currentNode;
+                
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end ruleBundleComponent
+
+
+    // $ANTLR start entryRuleBodyComponent
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:910:1: entryRuleBodyComponent returns [EObject current=null] : iv_ruleBodyComponent= ruleBodyComponent EOF ;
+    public final EObject entryRuleBodyComponent() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleBodyComponent = null;
+
+
+        try {
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:911:2: (iv_ruleBodyComponent= ruleBodyComponent EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:912:2: iv_ruleBodyComponent= ruleBodyComponent EOF
+            {
+             currentNode = createCompositeNode(grammarAccess.getBodyComponentRule(), currentNode); 
+            pushFollow(FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent1662);
+            iv_ruleBodyComponent=ruleBodyComponent();
+            _fsp--;
+
+             current =iv_ruleBodyComponent; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyComponent1672); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end entryRuleBodyComponent
+
+
+    // $ANTLR start ruleBodyComponent
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:919:1: ruleBodyComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    public final EObject ruleBodyComponent() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_name_0_0=null;
+
+         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+            
+        try {
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:924:6: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:925:1: ( (lv_name_0_0= RULE_ID ) )
+            {
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:925:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:926:1: (lv_name_0_0= RULE_ID )
+            {
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:926:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:927:3: lv_name_0_0= RULE_ID
+            {
+            lv_name_0_0=(Token)input.LT(1);
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyComponent1713); 
+
+            			createLeafNode(grammarAccess.getBodyComponentAccess().getNameIDTerminalRuleCall_0(), "name"); 
+            		
+
+            	        if (current==null) {
+            	            current = factory.create(grammarAccess.getBodyComponentRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode, current);
+            	        }
+            	        try {
+            	       		set(
+            	       			current, 
+            	       			"name",
+            	        		lv_name_0_0, 
+            	        		"ID", 
+            	        		lastConsumedNode);
+            	        } catch (ValueConverterException vce) {
+            				handleValueConverterException(vce);
+            	        }
+            	    
+
+            }
+
+
+            }
+
+
+            }
+
+             resetLookahead(); 
+                	lastConsumedNode = currentNode;
+                
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end ruleBodyComponent
 
 
  
 
     public static final BitSet FOLLOW_ruleCfModel_in_entryRuleCfModel75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCfModel85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractElement_in_ruleCfModel130 = new BitSet(new long[]{0x0000000000004402L});
-    public static final BitSet FOLLOW_ruleAbstractElement_in_entryRuleAbstractElement166 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAbstractElement176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePart_in_ruleAbstractElement222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePart_in_entryRulePart256 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePart266 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundle_in_rulePart313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBody_in_rulePart340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundle_in_entryRuleBundle375 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBundle385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_10_in_ruleBundle420 = new BitSet(new long[]{0x00007F8000000000L});
-    public static final BitSet FOLLOW_ruleComponent_in_ruleBundle441 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBundle458 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_ruleBundle473 = new BitSet(new long[]{0x0000007FFFF82000L});
-    public static final BitSet FOLLOW_rulePromiseType_in_ruleBundle495 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleBundle505 = new BitSet(new long[]{0x0000007FFFF82020L});
-    public static final BitSet FOLLOW_ruleMethode_in_ruleBundle526 = new BitSet(new long[]{0x0000007FFFF82020L});
-    public static final BitSet FOLLOW_13_in_ruleBundle539 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBody_in_entryRuleBody575 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBody585 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_ruleBody620 = new BitSet(new long[]{0x00007F8000000000L});
-    public static final BitSet FOLLOW_ruleComponent_in_ruleBody641 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleBody659 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_ruleBody682 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleBody692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethode_in_entryRuleMethode728 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMethode738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMethode780 = new BitSet(new long[]{0x0000000000010010L});
-    public static final BitSet FOLLOW_16_in_ruleMethode796 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleZuweisung_in_ruleMethode824 = new BitSet(new long[]{0x0000000000030000L});
-    public static final BitSet FOLLOW_17_in_ruleMethode835 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleZuweisung_in_ruleMethode856 = new BitSet(new long[]{0x0000000000030000L});
-    public static final BitSet FOLLOW_16_in_ruleMethode868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleZuweisung_in_entryRuleZuweisung906 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleZuweisung916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleZuweisung958 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_18_in_ruleZuweisung974 = new BitSet(new long[]{0x0000000000000032L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleZuweisung984 = new BitSet(new long[]{0x0000000000000032L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleZuweisung998 = new BitSet(new long[]{0x0000000000000032L});
-    public static final BitSet FOLLOW_rulePromiseType_in_entryRulePromiseType1037 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePromiseType1047 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rulePromiseType1091 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rulePromiseType1120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rulePromiseType1149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rulePromiseType1178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rulePromiseType1207 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rulePromiseType1236 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rulePromiseType1265 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rulePromiseType1294 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rulePromiseType1323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rulePromiseType1352 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rulePromiseType1381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rulePromiseType1410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rulePromiseType1439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rulePromiseType1468 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rulePromiseType1497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rulePromiseType1526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rulePromiseType1555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rulePromiseType1584 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rulePromiseType1613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rulePromiseType1642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponent_in_entryRuleComponent1693 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComponent1703 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleComponent1747 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleComponent1776 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_ruleComponent1805 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleComponent1834 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleComponent1863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_ruleComponent1892 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_ruleComponent1921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_ruleComponent1950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractElement_in_ruleCfModel130 = new BitSet(new long[]{0x0000000000088002L});
+    public static final BitSet FOLLOW_rulePLACEHOLDER_in_entryRulePLACEHOLDER167 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePLACEHOLDER178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_rulePLACEHOLDER218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePLACEHOLDER244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rulePLACEHOLDER270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_10_in_rulePLACEHOLDER294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rulePLACEHOLDER313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rulePLACEHOLDER332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rulePLACEHOLDER351 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rulePLACEHOLDER370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractElement_in_entryRuleAbstractElement410 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAbstractElement420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePart_in_ruleAbstractElement466 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePart_in_entryRulePart500 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePart510 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundle_in_rulePart557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBody_in_rulePart584 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundle_in_entryRuleBundle619 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBundle629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_ruleBundle664 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleBundleComponent_in_ruleBundle685 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBundle702 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleBundle717 = new BitSet(new long[]{0x0000000000040020L});
+    public static final BitSet FOLLOW_ruleBundlePromiseType_in_ruleBundle739 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleBundle749 = new BitSet(new long[]{0x0000000000047C70L});
+    public static final BitSet FOLLOW_rulePLACEHOLDER_in_ruleBundle759 = new BitSet(new long[]{0x0000000000047C70L});
+    public static final BitSet FOLLOW_18_in_ruleBundle765 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBody_in_entryRuleBody801 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBody811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleBody846 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleBodyComponent_in_ruleBody867 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBody884 = new BitSet(new long[]{0x0000000000017C70L});
+    public static final BitSet FOLLOW_rulePLACEHOLDER_in_ruleBody899 = new BitSet(new long[]{0x0000000000017C70L});
+    public static final BitSet FOLLOW_16_in_ruleBody903 = new BitSet(new long[]{0x0000000000040020L});
+    public static final BitSet FOLLOW_ruleBodyFunction_in_ruleBody924 = new BitSet(new long[]{0x0000000000040020L});
+    public static final BitSet FOLLOW_18_in_ruleBody935 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyFunction_in_entryRuleBodyFunction971 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBodyFunction981 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyPromiseType_in_ruleBodyFunction1027 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_10_in_ruleBodyFunction1037 = new BitSet(new long[]{0x0000000000010060L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction1055 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_16_in_ruleBodyFunction1077 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction1094 = new BitSet(new long[]{0x0000000000041000L});
+    public static final BitSet FOLLOW_12_in_ruleBodyFunction1110 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction1127 = new BitSet(new long[]{0x0000000000041000L});
+    public static final BitSet FOLLOW_18_in_ruleBodyFunction1144 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_ruleSpecialFunction_in_ruleBodyFunction1172 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_ruleBodyFunction1183 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSpecialFunction_in_entryRuleSpecialFunction1219 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSpecialFunction1229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction1271 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_ruleSpecialFunction1286 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSpecialFunction1303 = new BitSet(new long[]{0x0000000000005000L});
+    public static final BitSet FOLLOW_12_in_ruleSpecialFunction1319 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSpecialFunction1336 = new BitSet(new long[]{0x0000000000005000L});
+    public static final BitSet FOLLOW_14_in_ruleSpecialFunction1353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType1389 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBundlePromiseType1399 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBundlePromiseType1440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType1480 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBodyPromiseType1490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyPromiseType1531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent1571 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBundleComponent1581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBundleComponent1622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent1662 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBodyComponent1672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyComponent1713 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -19,12 +19,15 @@ Require-Bundle: org.eclipse.xtext,
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.eclipse.xtext,
- org.eclipse.xtext.services,
+ org.eclipse.xtext.cfeditor,
+ org.eclipse.xtext.cfeditor.impl,
+ org.eclipse.xtext.cfeditor.util,
+ org.eclipse.xtext.definitions,
  org.eclipse.xtext.parseTreeConstruction,
  org.eclipse.xtext.parser.antlr,
  org.eclipse.xtext.parser.antlr.internal,
- org.eclipse.xtext.validation,
- org.eclipse.xtext.cfeditor,
- org.eclipse.xtext.cfeditor.impl,
- org.eclipse.xtext.cfeditor.util
+ org.eclipse.xtext.services,
+ org.eclipse.xtext.validation
 Bundle-Vendor: KIT/SCC
+Bundle-ClassPath: lib/jdom.jar,
+ .

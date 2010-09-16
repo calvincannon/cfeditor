@@ -4,30 +4,43 @@
 package org.eclipse.xtext.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.xtext.highlighting.CfeditorHighlightingCalculator;
+import org.eclipse.xtext.highlighting.CfeditorHighlightingConfiguration;
+import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration;
+import org.eclipse.xtext.ui.editor.syntaxcoloring.ISemanticHighlightingCalculator;
 import org.eclipse.xtext.ui.wizard.IProjectCreator;
 
 /**
  * Use this class to register components to be used within the IDE.
+ * 
+ * @author Andreas Bender
+ * 
  */
-public class CfeditorUiModule extends
-		org.eclipse.xtext.ui.AbstractCfeditorUiModule {
+public class CfeditorUiModule extends org.eclipse.xtext.ui.AbstractCfeditorUiModule {
+
+	/**
+	 * Constructor for the ui module.
+	 * 
+	 * @param plugin
+	 */
 	public CfeditorUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
 	}
 
-//	public Class<? extends ISemanticHighlightingCalculator> bindSemanticHighlightingCalculator() {
-//		return CfeditorHighlightingCalculator.class;
-//	}
-//
-//	public Class<? extends IHighlightingConfiguration> bindSemanticConfig() {
-//		return CfeditorHighlightingConfiguration.class;
-//	}
-	
+	public Class<? extends ISemanticHighlightingCalculator> bindSemanticHighlightingCalculator() {
+		return CfeditorHighlightingCalculator.class;
+	}
+
+	public Class<? extends IHighlightingConfiguration> bindSemanticConfig() {
+		return CfeditorHighlightingConfiguration.class;
+	}
+
+	/**
+	 * Declares the new Cfeditor project creator class.
+	 */
 	@Override
 	public Class<? extends IProjectCreator> bindIProjectCreator() {
 		return org.eclipse.xtext.ui.wizard.CfeditorNewProjectCreator.class;
 	}
-	
-	
 
 }

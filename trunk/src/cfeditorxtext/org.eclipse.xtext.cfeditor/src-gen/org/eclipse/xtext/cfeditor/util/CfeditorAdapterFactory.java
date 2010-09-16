@@ -104,24 +104,34 @@ public class CfeditorAdapterFactory extends AdapterFactoryImpl
         return createBodyAdapter();
       }
       @Override
-      public Adapter caseMethode(Methode object)
+      public Adapter caseBodyFunction(BodyFunction object)
       {
-        return createMethodeAdapter();
+        return createBodyFunctionAdapter();
       }
       @Override
-      public Adapter caseZuweisung(Zuweisung object)
+      public Adapter caseSpecialFunction(SpecialFunction object)
       {
-        return createZuweisungAdapter();
+        return createSpecialFunctionAdapter();
       }
       @Override
-      public Adapter casePromiseType(PromiseType object)
+      public Adapter caseBundlePromiseType(BundlePromiseType object)
       {
-        return createPromiseTypeAdapter();
+        return createBundlePromiseTypeAdapter();
       }
       @Override
-      public Adapter caseComponent(Component object)
+      public Adapter caseBodyPromiseType(BodyPromiseType object)
       {
-        return createComponentAdapter();
+        return createBodyPromiseTypeAdapter();
+      }
+      @Override
+      public Adapter caseBundleComponent(BundleComponent object)
+      {
+        return createBundleComponentAdapter();
+      }
+      @Override
+      public Adapter caseBodyComponent(BodyComponent object)
+      {
+        return createBodyComponentAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -221,61 +231,91 @@ public class CfeditorAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.cfeditor.Methode <em>Methode</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.cfeditor.BodyFunction <em>Body Function</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipse.xtext.cfeditor.Methode
+   * @see org.eclipse.xtext.cfeditor.BodyFunction
    * @generated
    */
-  public Adapter createMethodeAdapter()
+  public Adapter createBodyFunctionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.cfeditor.Zuweisung <em>Zuweisung</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.cfeditor.SpecialFunction <em>Special Function</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipse.xtext.cfeditor.Zuweisung
+   * @see org.eclipse.xtext.cfeditor.SpecialFunction
    * @generated
    */
-  public Adapter createZuweisungAdapter()
+  public Adapter createSpecialFunctionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.cfeditor.PromiseType <em>Promise Type</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.cfeditor.BundlePromiseType <em>Bundle Promise Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipse.xtext.cfeditor.PromiseType
+   * @see org.eclipse.xtext.cfeditor.BundlePromiseType
    * @generated
    */
-  public Adapter createPromiseTypeAdapter()
+  public Adapter createBundlePromiseTypeAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.cfeditor.Component <em>Component</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.cfeditor.BodyPromiseType <em>Body Promise Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipse.xtext.cfeditor.Component
+   * @see org.eclipse.xtext.cfeditor.BodyPromiseType
    * @generated
    */
-  public Adapter createComponentAdapter()
+  public Adapter createBodyPromiseTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.cfeditor.BundleComponent <em>Bundle Component</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipse.xtext.cfeditor.BundleComponent
+   * @generated
+   */
+  public Adapter createBundleComponentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipse.xtext.cfeditor.BodyComponent <em>Body Component</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipse.xtext.cfeditor.BodyComponent
+   * @generated
+   */
+  public Adapter createBodyComponentAdapter()
   {
     return null;
   }

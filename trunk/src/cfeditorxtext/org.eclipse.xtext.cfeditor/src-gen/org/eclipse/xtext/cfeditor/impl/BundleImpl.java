@@ -22,9 +22,9 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.eclipse.xtext.cfeditor.Bundle;
+import org.eclipse.xtext.cfeditor.BundleComponent;
+import org.eclipse.xtext.cfeditor.BundlePromiseType;
 import org.eclipse.xtext.cfeditor.CfeditorPackage;
-import org.eclipse.xtext.cfeditor.Methode;
-import org.eclipse.xtext.cfeditor.PromiseType;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,9 +33,8 @@ import org.eclipse.xtext.cfeditor.PromiseType;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipse.xtext.cfeditor.impl.BundleImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.xtext.cfeditor.impl.BundleImpl#getComponent <em>Component</em>}</li>
  *   <li>{@link org.eclipse.xtext.cfeditor.impl.BundleImpl#getPromiseType <em>Promise Type</em>}</li>
- *   <li>{@link org.eclipse.xtext.cfeditor.impl.BundleImpl#getMethods <em>Methods</em>}</li>
  * </ul>
  * </p>
  *
@@ -44,24 +43,14 @@ import org.eclipse.xtext.cfeditor.PromiseType;
 public class BundleImpl extends PartImpl implements Bundle
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getComponent() <em>Component</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getComponent()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected BundleComponent component;
 
   /**
    * The cached value of the '{@link #getPromiseType() <em>Promise Type</em>}' containment reference list.
@@ -71,17 +60,7 @@ public class BundleImpl extends PartImpl implements Bundle
    * @generated
    * @ordered
    */
-  protected EList<PromiseType> promiseType;
-
-  /**
-   * The cached value of the '{@link #getMethods() <em>Methods</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getMethods()
-   * @generated
-   * @ordered
-   */
-  protected EList<Methode> methods;
+  protected EList<BundlePromiseType> promiseType;
 
   /**
    * <!-- begin-user-doc -->
@@ -109,9 +88,9 @@ public class BundleImpl extends PartImpl implements Bundle
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public BundleComponent getComponent()
   {
-    return name;
+    return component;
   }
 
   /**
@@ -119,12 +98,16 @@ public class BundleImpl extends PartImpl implements Bundle
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public NotificationChain basicSetComponent(BundleComponent newComponent, NotificationChain msgs)
   {
-    String oldName = name;
-    name = newName;
+    BundleComponent oldComponent = component;
+    component = newComponent;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CfeditorPackage.BUNDLE__NAME, oldName, name));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CfeditorPackage.BUNDLE__COMPONENT, oldComponent, newComponent);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -132,27 +115,34 @@ public class BundleImpl extends PartImpl implements Bundle
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<PromiseType> getPromiseType()
+  public void setComponent(BundleComponent newComponent)
+  {
+    if (newComponent != component)
+    {
+      NotificationChain msgs = null;
+      if (component != null)
+        msgs = ((InternalEObject)component).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CfeditorPackage.BUNDLE__COMPONENT, null, msgs);
+      if (newComponent != null)
+        msgs = ((InternalEObject)newComponent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CfeditorPackage.BUNDLE__COMPONENT, null, msgs);
+      msgs = basicSetComponent(newComponent, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CfeditorPackage.BUNDLE__COMPONENT, newComponent, newComponent));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<BundlePromiseType> getPromiseType()
   {
     if (promiseType == null)
     {
-      promiseType = new EObjectContainmentEList<PromiseType>(PromiseType.class, this, CfeditorPackage.BUNDLE__PROMISE_TYPE);
+      promiseType = new EObjectContainmentEList<BundlePromiseType>(BundlePromiseType.class, this, CfeditorPackage.BUNDLE__PROMISE_TYPE);
     }
     return promiseType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Methode> getMethods()
-  {
-    if (methods == null)
-    {
-      methods = new EObjectContainmentEList<Methode>(Methode.class, this, CfeditorPackage.BUNDLE__METHODS);
-    }
-    return methods;
   }
 
   /**
@@ -165,10 +155,10 @@ public class BundleImpl extends PartImpl implements Bundle
   {
     switch (featureID)
     {
+      case CfeditorPackage.BUNDLE__COMPONENT:
+        return basicSetComponent(null, msgs);
       case CfeditorPackage.BUNDLE__PROMISE_TYPE:
         return ((InternalEList<?>)getPromiseType()).basicRemove(otherEnd, msgs);
-      case CfeditorPackage.BUNDLE__METHODS:
-        return ((InternalEList<?>)getMethods()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -183,12 +173,10 @@ public class BundleImpl extends PartImpl implements Bundle
   {
     switch (featureID)
     {
-      case CfeditorPackage.BUNDLE__NAME:
-        return getName();
+      case CfeditorPackage.BUNDLE__COMPONENT:
+        return getComponent();
       case CfeditorPackage.BUNDLE__PROMISE_TYPE:
         return getPromiseType();
-      case CfeditorPackage.BUNDLE__METHODS:
-        return getMethods();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -204,16 +192,12 @@ public class BundleImpl extends PartImpl implements Bundle
   {
     switch (featureID)
     {
-      case CfeditorPackage.BUNDLE__NAME:
-        setName((String)newValue);
+      case CfeditorPackage.BUNDLE__COMPONENT:
+        setComponent((BundleComponent)newValue);
         return;
       case CfeditorPackage.BUNDLE__PROMISE_TYPE:
         getPromiseType().clear();
-        getPromiseType().addAll((Collection<? extends PromiseType>)newValue);
-        return;
-      case CfeditorPackage.BUNDLE__METHODS:
-        getMethods().clear();
-        getMethods().addAll((Collection<? extends Methode>)newValue);
+        getPromiseType().addAll((Collection<? extends BundlePromiseType>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -229,14 +213,11 @@ public class BundleImpl extends PartImpl implements Bundle
   {
     switch (featureID)
     {
-      case CfeditorPackage.BUNDLE__NAME:
-        setName(NAME_EDEFAULT);
+      case CfeditorPackage.BUNDLE__COMPONENT:
+        setComponent((BundleComponent)null);
         return;
       case CfeditorPackage.BUNDLE__PROMISE_TYPE:
         getPromiseType().clear();
-        return;
-      case CfeditorPackage.BUNDLE__METHODS:
-        getMethods().clear();
         return;
     }
     super.eUnset(featureID);
@@ -252,31 +233,12 @@ public class BundleImpl extends PartImpl implements Bundle
   {
     switch (featureID)
     {
-      case CfeditorPackage.BUNDLE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case CfeditorPackage.BUNDLE__COMPONENT:
+        return component != null;
       case CfeditorPackage.BUNDLE__PROMISE_TYPE:
         return promiseType != null && !promiseType.isEmpty();
-      case CfeditorPackage.BUNDLE__METHODS:
-        return methods != null && !methods.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //BundleImpl

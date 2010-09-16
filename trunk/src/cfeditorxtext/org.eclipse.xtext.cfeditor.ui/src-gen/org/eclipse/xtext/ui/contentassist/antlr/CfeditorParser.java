@@ -37,32 +37,36 @@ public class CfeditorParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getPLACEHOLDERAccess().getAlternatives(), "rule__PLACEHOLDER__Alternatives");
 					put(grammarAccess.getPartAccess().getAlternatives(), "rule__Part__Alternatives");
-					put(grammarAccess.getMethodeAccess().getAlternatives_1(), "rule__Methode__Alternatives_1");
-					put(grammarAccess.getZuweisungAccess().getAlternatives_1_1(), "rule__Zuweisung__Alternatives_1_1");
-					put(grammarAccess.getPromiseTypeAccess().getNameAlternatives_0(), "rule__PromiseType__NameAlternatives_0");
-					put(grammarAccess.getComponentAccess().getNameAlternatives_0(), "rule__Component__NameAlternatives_0");
+					put(grammarAccess.getBodyFunctionAccess().getAlternatives_2(), "rule__BodyFunction__Alternatives_2");
 					put(grammarAccess.getBundleAccess().getGroup(), "rule__Bundle__Group__0");
 					put(grammarAccess.getBundleAccess().getGroup_4(), "rule__Bundle__Group_4__0");
 					put(grammarAccess.getBodyAccess().getGroup(), "rule__Body__Group__0");
-					put(grammarAccess.getMethodeAccess().getGroup(), "rule__Methode__Group__0");
-					put(grammarAccess.getMethodeAccess().getGroup_1_1(), "rule__Methode__Group_1_1__0");
-					put(grammarAccess.getMethodeAccess().getGroup_1_1_1(), "rule__Methode__Group_1_1_1__0");
-					put(grammarAccess.getZuweisungAccess().getGroup(), "rule__Zuweisung__Group__0");
-					put(grammarAccess.getZuweisungAccess().getGroup_1(), "rule__Zuweisung__Group_1__0");
+					put(grammarAccess.getBodyFunctionAccess().getGroup(), "rule__BodyFunction__Group__0");
+					put(grammarAccess.getBodyFunctionAccess().getGroup_2_1(), "rule__BodyFunction__Group_2_1__0");
+					put(grammarAccess.getBodyFunctionAccess().getGroup_2_1_2(), "rule__BodyFunction__Group_2_1_2__0");
+					put(grammarAccess.getSpecialFunctionAccess().getGroup(), "rule__SpecialFunction__Group__0");
+					put(grammarAccess.getSpecialFunctionAccess().getGroup_3(), "rule__SpecialFunction__Group_3__0");
 					put(grammarAccess.getCfModelAccess().getElementsAssignment(), "rule__CfModel__ElementsAssignment");
 					put(grammarAccess.getBundleAccess().getComponentAssignment_1(), "rule__Bundle__ComponentAssignment_1");
 					put(grammarAccess.getBundleAccess().getNameAssignment_2(), "rule__Bundle__NameAssignment_2");
 					put(grammarAccess.getBundleAccess().getPromiseTypeAssignment_4_0(), "rule__Bundle__PromiseTypeAssignment_4_0");
-					put(grammarAccess.getBundleAccess().getMethodsAssignment_4_2(), "rule__Bundle__MethodsAssignment_4_2");
 					put(grammarAccess.getBodyAccess().getComponentAssignment_1(), "rule__Body__ComponentAssignment_1");
-					put(grammarAccess.getBodyAccess().getPromiseTypeAssignment_2(), "rule__Body__PromiseTypeAssignment_2");
-					put(grammarAccess.getMethodeAccess().getNameAssignment_0(), "rule__Methode__NameAssignment_0");
-					put(grammarAccess.getMethodeAccess().getZuweisungAssignment_1_1_0(), "rule__Methode__ZuweisungAssignment_1_1_0");
-					put(grammarAccess.getMethodeAccess().getZuweisungAssignment_1_1_1_1(), "rule__Methode__ZuweisungAssignment_1_1_1_1");
-					put(grammarAccess.getZuweisungAccess().getNameAssignment_0(), "rule__Zuweisung__NameAssignment_0");
-					put(grammarAccess.getPromiseTypeAccess().getNameAssignment(), "rule__PromiseType__NameAssignment");
-					put(grammarAccess.getComponentAccess().getNameAssignment(), "rule__Component__NameAssignment");
+					put(grammarAccess.getBodyAccess().getNameAssignment_2(), "rule__Body__NameAssignment_2");
+					put(grammarAccess.getBodyAccess().getPromiseTypeAssignment_5(), "rule__Body__PromiseTypeAssignment_5");
+					put(grammarAccess.getBodyFunctionAccess().getNameAssignment_0(), "rule__BodyFunction__NameAssignment_0");
+					put(grammarAccess.getBodyFunctionAccess().getValuesAssignment_2_0(), "rule__BodyFunction__ValuesAssignment_2_0");
+					put(grammarAccess.getBodyFunctionAccess().getValuesAssignment_2_1_1(), "rule__BodyFunction__ValuesAssignment_2_1_1");
+					put(grammarAccess.getBodyFunctionAccess().getValuesAssignment_2_1_2_1(), "rule__BodyFunction__ValuesAssignment_2_1_2_1");
+					put(grammarAccess.getBodyFunctionAccess().getFunctionAssignment_2_2(), "rule__BodyFunction__FunctionAssignment_2_2");
+					put(grammarAccess.getSpecialFunctionAccess().getNameAssignment_0(), "rule__SpecialFunction__NameAssignment_0");
+					put(grammarAccess.getSpecialFunctionAccess().getParametersAssignment_2(), "rule__SpecialFunction__ParametersAssignment_2");
+					put(grammarAccess.getSpecialFunctionAccess().getParametersAssignment_3_1(), "rule__SpecialFunction__ParametersAssignment_3_1");
+					put(grammarAccess.getBundlePromiseTypeAccess().getNameAssignment(), "rule__BundlePromiseType__NameAssignment");
+					put(grammarAccess.getBodyPromiseTypeAccess().getNameAssignment(), "rule__BodyPromiseType__NameAssignment");
+					put(grammarAccess.getBundleComponentAccess().getNameAssignment(), "rule__BundleComponent__NameAssignment");
+					put(grammarAccess.getBodyComponentAccess().getNameAssignment(), "rule__BodyComponent__NameAssignment");
 				}
 			};
 		}

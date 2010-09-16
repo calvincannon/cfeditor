@@ -3,9 +3,22 @@
  */
 package org.eclipse.xtext;
 
+import org.eclipse.xtext.parser.conversion.CfTerminalConverters;
+
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
+ * 
+ * @author Andreas Bender
+ * 
  */
 public class CfeditorRuntimeModule extends org.eclipse.xtext.AbstractCfeditorRuntimeModule {
+
+	/**
+	 * Binds the customized value converter.
+	 */
+	@Override
+	public Class<? extends org.eclipse.xtext.conversion.IValueConverterService> bindIValueConverterService() {
+		return CfTerminalConverters.class;
+	}
 
 }
