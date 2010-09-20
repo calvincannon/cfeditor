@@ -14,47 +14,49 @@ public class CfFunctionValidator {
 		String errorString = null;
 
 		String[] functionAttributes = defProvider.getBodyPromiseTypes().get(functionName);
-		String functionType = functionAttributes[0];
-		String typeRange = functionAttributes[1];
+		
+		if (null != functionAttributes && !values.isEmpty()) {
+			String functionType = functionAttributes[0];
+			String typeRange = functionAttributes[1];
 
-		try {
-			typeEnum = CfFunctionType.valueOf(functionType);
-			String customMessage;
-			switch (typeEnum) {
-			case STRING:
-				if (values.size() > 1) {
-					errorString = "Too many arguments";
-				} else if (null != (customMessage = checkSTRING(values.get(0), typeRange))) {
-					errorString = customMessage;
+			try {
+				typeEnum = CfFunctionType.valueOf(functionType);
+				String customMessage;
+				switch (typeEnum) {
+				case STRING:
+					if (values.size() > 1) {
+						errorString = "Too many arguments";
+					} else if (null != (customMessage = checkSTRING(values.get(0), typeRange))) {
+						errorString = customMessage;
+					}
+					break;
+				case INT:
+					if (values.size() > 1) {
+						errorString = "Too many arguments";
+					} else if (null != (customMessage = checkINT(values.get(0), typeRange))) {
+						errorString = customMessage;
+					}
+					break;
+				case SLIST:
+					break;
+				case IRANGE:
+					break;
+				case OPTION:
+					if (values.size() > 1) {
+						errorString = "Too many arguments";
+					} else if (null != (customMessage = checkOPTION(values.get(0), typeRange))) {
+						errorString = customMessage;
+					}
+					break;
 				}
-				break;
-			case INT:
-				if (values.size() > 1) {
-					errorString = "Too many arguments";
-				} else if (null != (customMessage = checkINT(values.get(0), typeRange))) {
-					errorString = customMessage;
-				}
-				break;
-			case SLIST:
-				break;
-			case IRANGE:
-				break;
-			case OPTION:
-				if (values.size() > 1) {
-					errorString = "Too many arguments";
-				} else if (null != (customMessage = checkOPTION(values.get(0), typeRange))) {
-					errorString = customMessage;
-				}
-				break;
+			} catch (IllegalArgumentException e) {
+
+			} catch (NullPointerException e) {
+
+			} catch (SecurityException e) {
+				e.printStackTrace();
 			}
-		} catch (IllegalArgumentException e) {
-
-		} catch (NullPointerException e) {
-
-		} catch (SecurityException e) {
-			e.printStackTrace();
 		}
-
 		return errorString;
 	}
 
@@ -85,7 +87,8 @@ public class CfFunctionValidator {
 			if (null != range) {
 				String[] bounds = range.split(",", 2);
 				long low = Long.parseLong(bounds[0]);
-				long high = Long.parseLong(bounds[1]);//TODO long or int ("0..9999..." or " ")
+				long high = Long.parseLong(bounds[1]);// TODO long or int
+														// ("0..9999..." or " ")
 
 				if (intValue < low || intValue > high) {
 					return "Parameter is out of allowed range";
@@ -97,8 +100,8 @@ public class CfFunctionValidator {
 		return null;
 	}
 
-	public String checkOPTION(String value, String range) {
-		String[] options = range.split(",");
+	public String checkOPTION(String value, String strOptions) {
+		String[] options = strOptions.split(",");
 		for (String option : options) {
 			if (option.equals(value)) {
 				return null;
@@ -116,13 +119,14 @@ public class CfFunctionValidator {
 		return null;
 	}
 
-//	private Boolean checkValues(EList<String> values, String range, Method method) throws IllegalArgumentException,
-//			IllegalAccessException, InvocationTargetException {
-//		for (String value : values) {
-//			if (!(Boolean) method.invoke(this, value, range)) {
-//				return false;
-//			}
-//		}
-//		return true;
-//	}
+	// private Boolean checkValues(EList<String> values, String range, Method
+	// method) throws IllegalArgumentException,
+	// IllegalAccessException, InvocationTargetException {
+	// for (String value : values) {
+	// if (!(Boolean) method.invoke(this, value, range)) {
+	// return false;
+	// }
+	// }
+	// return true;
+	// }
 }

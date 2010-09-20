@@ -11,10 +11,12 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.text.contentassist.ICompletionProposal;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.cfeditor.Body;
+import org.eclipse.xtext.cfeditor.BodyFunction;
 import org.eclipse.xtext.cfeditor.Bundle;
 import org.eclipse.xtext.definitions.CfDefinitionProvider;
 import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext;
 import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor;
+import org.eclipse.xtext.validation.CfFunctionType;
 
 /**
  * Customized content assistant.
@@ -35,8 +37,8 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 	 * @param context
 	 * @param acceptor
 	 */
-	public void completeBody_PromiseType(final EObject model, final Assignment assignment, final ContentAssistContext context,
-			final ICompletionProposalAcceptor acceptor) {
+	public void completeBody_PromiseType(final EObject model, final Assignment assignment,
+			final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
 
 		// super.completeBody_PromiseType(model, assignment, context, acceptor);
 		final CfDefinitionProvider defProvider = CfDefinitionProvider.getInstance();
@@ -98,5 +100,32 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 			completionProposal = createCompletionProposal(component, context);
 			acceptor.accept(completionProposal);
 		}
-	}//TODO dublicated code
+	}// TODO dublicated code
+
+	public void completeBodyFunction_Values(EObject model, Assignment assignment, ContentAssistContext context,
+			ICompletionProposalAcceptor acceptor) {
+
+		BodyFunction function = (BodyFunction) model;
+
+		CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
+		String[] functionAttributes = cfDefProvider.getBodyPromiseTypes().get(function.getName().getName());
+
+		if (null != functionAttributes) {
+			String functionType = functionAttributes[0];
+			String typeRange = functionAttributes[1];
+
+			CfFunctionType typeEnum = CfFunctionType.valueOf(functionType);
+
+			if (typeEnum.equals(CfFunctionType.OPTION)) {
+
+				ICompletionProposal completionProposal;
+				String[] options = typeRange.split(",");
+
+				for (String option : options) {
+					completionProposal = createCompletionProposal('"'+option+'"', context);
+					acceptor.accept(completionProposal);
+				}
+			}
+		}
+	}
 }
