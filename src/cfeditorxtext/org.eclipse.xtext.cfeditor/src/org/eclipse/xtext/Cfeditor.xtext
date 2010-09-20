@@ -7,7 +7,7 @@ CfModel:
 	(elements+=AbstractElement)*;
 
 terminal ID:
-	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
+	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;//TODO delete '^'?
 
 terminal INT returns ecore::EInt:
 	('0'..'9')+;
