@@ -25,7 +25,7 @@ import org.eclipse.xtext.parsetree.NodeUtil;
 public class CfeditorJavaValidator extends AbstractCfeditorJavaValidator {
 
 	private CfFunctionValidator functionValidator;
-	
+
 	/**
 	 * Checks if promise type in bundle block is allowed with bundle component.
 	 * 
@@ -76,28 +76,37 @@ public class CfeditorJavaValidator extends AbstractCfeditorJavaValidator {
 	public void checkBodyFunctionValues(BodyFunction function) {
 		String name = function.getName().getName();
 		EList<String> values = function.getValues();
-		functionValidator=new CfFunctionValidator();
-		
-		String errorString=functionValidator.checkBodyFunction(name, values);
-		if(null!=errorString){
-			error(errorString,
-					CfeditorPackage.BODY_FUNCTION__NAME);
+		functionValidator = new CfFunctionValidator();
+		Boolean isList = function.isList();
+		EList<String> variables = null;
+
+		CompositeNode node = NodeUtil.getNode(function);
+		EObject eObj = NodeUtil.findASTParentElement(node);
+		if (eObj instanceof Body) {
+			Body body = (Body) eObj;
+			variables = body.getVariables();
 		}
-//		CfDefinitionProvider defProvider = CfDefinitionProvider.getInstance();
-//		
-//		
-//		if (defProvider.getBodyPromiseTypes().get(name).equals("int")) {
-//			for (String value : values) {
-//				try {
-//					Integer.parseInt(value);
-//				} catch (NumberFormatException e) {
-//					error("Parameters of promise type \"" + name + "\" have to be \"int\"",
-//							CfeditorPackage.BODY_FUNCTION__NAME);
-//				}
-//			}
-//		}
-		
-		
+
+		String errorString = functionValidator.checkBodyFunction(name, values, isList, variables);
+		if (null != errorString) {
+			warning(errorString, CfeditorPackage.BODY_FUNCTION__NAME);
+		}
+		// CfDefinitionProvider defProvider =
+		// CfDefinitionProvider.getInstance();
+		//
+		//
+		// if (defProvider.getBodyPromiseTypes().get(name).equals("int")) {
+		// for (String value : values) {
+		// try {
+		// Integer.parseInt(value);
+		// } catch (NumberFormatException e) {
+		// error("Parameters of promise type \"" + name +
+		// "\" have to be \"int\"",
+		// CfeditorPackage.BODY_FUNCTION__NAME);
+		// }
+		// }
+		// }
+
 	}
 
 	// @Check

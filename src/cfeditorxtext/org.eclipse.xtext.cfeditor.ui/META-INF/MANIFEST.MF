@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.eclipse.xtext.cfeditor.ui
 Bundle-Vendor: KIT/SCC
-Bundle-Version: 0.1.0
+Bundle-Version: 0.1.1
 Bundle-SymbolicName: org.eclipse.xtext.cfeditor.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext.cfeditor;visibility:=reexport,

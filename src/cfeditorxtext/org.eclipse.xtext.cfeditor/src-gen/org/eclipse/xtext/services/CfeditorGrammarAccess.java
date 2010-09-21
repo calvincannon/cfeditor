@@ -116,20 +116,21 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cComponentBundleComponentParserRuleCall_1_0 = (RuleCall)cComponentAssignment_1.eContents().get(0);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Assignment cPromiseTypeAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
-		private final RuleCall cPromiseTypeBundlePromiseTypeParserRuleCall_4_0_0 = (RuleCall)cPromiseTypeAssignment_4_0.eContents().get(0);
-		private final Keyword cColonKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final RuleCall cPLACEHOLDERParserRuleCall_4_2 = (RuleCall)cGroup_4.eContents().get(2);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final RuleCall cPLACEHOLDERParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Assignment cPromiseTypeAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
+		private final RuleCall cPromiseTypeBundlePromiseTypeParserRuleCall_5_0_0 = (RuleCall)cPromiseTypeAssignment_5_0.eContents().get(0);
+		private final Keyword cColonKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
+		private final RuleCall cPLACEHOLDERParserRuleCall_5_2 = (RuleCall)cGroup_5.eContents().get(2);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Bundle:
-		//	"bundle" component=BundleComponent name=ID "{" (promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
+		//	"bundle" component=BundleComponent name=ID PLACEHOLDER* "{" (promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
 		//	/ *(methods+=Methode)* * / "}";
 		public ParserRule getRule() { return rule; }
 
-		//"bundle" component=BundleComponent name=ID "{" (promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
+		//"bundle" component=BundleComponent name=ID PLACEHOLDER* "{" (promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
 		/// *(methods+=Methode)* * / "}"
 		public Group getGroup() { return cGroup; }
 
@@ -148,26 +149,29 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
+		//PLACEHOLDER*
+		public RuleCall getPLACEHOLDERParserRuleCall_3() { return cPLACEHOLDERParserRuleCall_3; }
+
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
 		//(promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup_5() { return cGroup_5; }
 
 		//promiseType+=BundlePromiseType
-		public Assignment getPromiseTypeAssignment_4_0() { return cPromiseTypeAssignment_4_0; }
+		public Assignment getPromiseTypeAssignment_5_0() { return cPromiseTypeAssignment_5_0; }
 
 		//BundlePromiseType
-		public RuleCall getPromiseTypeBundlePromiseTypeParserRuleCall_4_0_0() { return cPromiseTypeBundlePromiseTypeParserRuleCall_4_0_0; }
+		public RuleCall getPromiseTypeBundlePromiseTypeParserRuleCall_5_0_0() { return cPromiseTypeBundlePromiseTypeParserRuleCall_5_0_0; }
 
 		//":"
-		public Keyword getColonKeyword_4_1() { return cColonKeyword_4_1; }
+		public Keyword getColonKeyword_5_1() { return cColonKeyword_5_1; }
 
 		//PLACEHOLDER*
-		public RuleCall getPLACEHOLDERParserRuleCall_4_2() { return cPLACEHOLDERParserRuleCall_4_2; }
+		public RuleCall getPLACEHOLDERParserRuleCall_5_2() { return cPLACEHOLDERParserRuleCall_5_2; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class BodyElements extends AbstractParserRuleElementFinder {
@@ -178,7 +182,15 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cComponentBodyComponentParserRuleCall_1_0 = (RuleCall)cComponentAssignment_1.eContents().get(0);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final RuleCall cPLACEHOLDERParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cVariablesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cVariablesIDTerminalRuleCall_3_1_0 = (RuleCall)cVariablesAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final Keyword cCommaKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
+		private final Assignment cVariablesAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cVariablesIDTerminalRuleCall_3_2_1_0 = (RuleCall)cVariablesAssignment_3_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cPromiseTypeAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cPromiseTypeBodyFunctionParserRuleCall_5_0 = (RuleCall)cPromiseTypeAssignment_5.eContents().get(0);
@@ -186,10 +198,11 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		
 		////BodyPromiseType '=>' (values+=STRING | '{' values+=STRING
 		//Body:
-		//	"body" component=BodyComponent name=ID PLACEHOLDER* "{" promiseType+=BodyFunction* "}";
+		//	"body" component=BodyComponent name=ID ("(" variables+=ID ("," variables+=ID)* ")")? "{" promiseType+=BodyFunction*
+		//	"}";
 		public ParserRule getRule() { return rule; }
 
-		//"body" component=BodyComponent name=ID PLACEHOLDER* "{" promiseType+=BodyFunction* "}"
+		//"body" component=BodyComponent name=ID ("(" variables+=ID ("," variables+=ID)* ")")? "{" promiseType+=BodyFunction* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"body"
@@ -207,8 +220,32 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//PLACEHOLDER*
-		public RuleCall getPLACEHOLDERParserRuleCall_3() { return cPLACEHOLDERParserRuleCall_3; }
+		//("(" variables+=ID ("," variables+=ID)* ")")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
+
+		//variables+=ID
+		public Assignment getVariablesAssignment_3_1() { return cVariablesAssignment_3_1; }
+
+		//ID
+		public RuleCall getVariablesIDTerminalRuleCall_3_1_0() { return cVariablesIDTerminalRuleCall_3_1_0; }
+
+		//("," variables+=ID)*
+		public Group getGroup_3_2() { return cGroup_3_2; }
+
+		//","
+		public Keyword getCommaKeyword_3_2_0() { return cCommaKeyword_3_2_0; }
+
+		//variables+=ID
+		public Assignment getVariablesAssignment_3_2_1() { return cVariablesAssignment_3_2_1; }
+
+		//ID
+		public RuleCall getVariablesIDTerminalRuleCall_3_2_1_0() { return cVariablesIDTerminalRuleCall_3_2_1_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_3_3() { return cRightParenthesisKeyword_3_3; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
@@ -233,7 +270,8 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValuesAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
 		private final RuleCall cValuesSTRINGTerminalRuleCall_2_0_0 = (RuleCall)cValuesAssignment_2_0.eContents().get(0);
 		private final Group cGroup_2_1 = (Group)cAlternatives_2.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cListAssignment_2_1_0 = (Assignment)cGroup_2_1.eContents().get(0);
+		private final Keyword cListLeftCurlyBracketKeyword_2_1_0_0 = (Keyword)cListAssignment_2_1_0.eContents().get(0);
 		private final Assignment cValuesAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
 		private final RuleCall cValuesSTRINGTerminalRuleCall_2_1_1_0 = (RuleCall)cValuesAssignment_2_1_1.eContents().get(0);
 		private final Group cGroup_2_1_2 = (Group)cGroup_2_1.eContents().get(2);
@@ -247,12 +285,12 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		
 		////	(',' values+=STRING)* '}') ';'
 		//BodyFunction:
-		//	name=BodyPromiseType "=>" (values+=STRING | "{" values+=STRING ("," values+=STRING)* "}" | function+=SpecialFunction)
-		//	";";
+		//	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
+		//	function+=SpecialFunction) ";";
 		public ParserRule getRule() { return rule; }
 
-		//name=BodyPromiseType "=>" (values+=STRING | "{" values+=STRING ("," values+=STRING)* "}" | function+=SpecialFunction)
-		//";"
+		//name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
+		//function+=SpecialFunction) ";"
 		public Group getGroup() { return cGroup; }
 
 		//name=BodyPromiseType
@@ -264,7 +302,7 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		//"=>"
 		public Keyword getEqualsSignGreaterThanSignKeyword_1() { return cEqualsSignGreaterThanSignKeyword_1; }
 
-		//values+=STRING | "{" values+=STRING ("," values+=STRING)* "}" | function+=SpecialFunction
+		//values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" | function+=SpecialFunction
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
 		//values+=STRING
@@ -273,11 +311,14 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getValuesSTRINGTerminalRuleCall_2_0_0() { return cValuesSTRINGTerminalRuleCall_2_0_0; }
 
-		//"{" values+=STRING ("," values+=STRING)* "}"
+		//List?="{" values+=STRING ("," values+=STRING)* "}"
 		public Group getGroup_2_1() { return cGroup_2_1; }
 
+		//List?="{"
+		public Assignment getListAssignment_2_1_0() { return cListAssignment_2_1_0; }
+
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2_1_0() { return cLeftCurlyBracketKeyword_2_1_0; }
+		public Keyword getListLeftCurlyBracketKeyword_2_1_0_0() { return cListLeftCurlyBracketKeyword_2_1_0_0; }
 
 		//values+=STRING
 		public Assignment getValuesAssignment_2_1_1() { return cValuesAssignment_2_1_1; }
@@ -537,6 +578,7 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getCfModelAccess().getRule();
 	}
 
+	////TODO delete '^'?
 	//terminal ID:
 	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
 	public TerminalRule getIDRule() {
@@ -611,7 +653,7 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Bundle:
-	//	"bundle" component=BundleComponent name=ID "{" (promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
+	//	"bundle" component=BundleComponent name=ID PLACEHOLDER* "{" (promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
 	//	/ *(methods+=Methode)* * / "}";
 	public BundleElements getBundleAccess() {
 		return (pBundle != null) ? pBundle : (pBundle = new BundleElements());
@@ -623,7 +665,8 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 
 	////BodyPromiseType '=>' (values+=STRING | '{' values+=STRING
 	//Body:
-	//	"body" component=BodyComponent name=ID PLACEHOLDER* "{" promiseType+=BodyFunction* "}";
+	//	"body" component=BodyComponent name=ID ("(" variables+=ID ("," variables+=ID)* ")")? "{" promiseType+=BodyFunction*
+	//	"}";
 	public BodyElements getBodyAccess() {
 		return (pBody != null) ? pBody : (pBody = new BodyElements());
 	}
@@ -634,8 +677,8 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 
 	////	(',' values+=STRING)* '}') ';'
 	//BodyFunction:
-	//	name=BodyPromiseType "=>" (values+=STRING | "{" values+=STRING ("," values+=STRING)* "}" | function+=SpecialFunction)
-	//	";";
+	//	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
+	//	function+=SpecialFunction) ";";
 	public BodyFunctionElements getBodyFunctionAccess() {
 		return (pBodyFunction != null) ? pBodyFunction : (pBodyFunction = new BodyFunctionElements());
 	}

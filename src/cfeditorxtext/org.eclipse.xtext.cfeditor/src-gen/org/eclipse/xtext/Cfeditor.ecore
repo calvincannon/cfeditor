@@ -20,6 +20,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Body" eSuperTypes="#//Part">
     <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="#//BodyComponent"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="variables" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="promiseType" upperBound="-1"
         eType="#//BodyFunction" containment="true"/>
   </eClassifiers>
@@ -28,6 +30,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="List" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="function" upperBound="-1"
         eType="#//SpecialFunction" containment="true"/>
   </eClassifiers>

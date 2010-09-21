@@ -280,9 +280,19 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getBody_Variables()
+  {
+    return (EAttribute)bodyEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getBody_PromiseType()
   {
-    return (EReference)bodyEClass.getEStructuralFeatures().get(1);
+    return (EReference)bodyEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -320,9 +330,19 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getBodyFunction_List()
+  {
+    return (EAttribute)bodyFunctionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getBodyFunction_Function()
   {
-    return (EReference)bodyFunctionEClass.getEStructuralFeatures().get(2);
+    return (EReference)bodyFunctionEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -479,11 +499,13 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
 
     bodyEClass = createEClass(BODY);
     createEReference(bodyEClass, BODY__COMPONENT);
+    createEAttribute(bodyEClass, BODY__VARIABLES);
     createEReference(bodyEClass, BODY__PROMISE_TYPE);
 
     bodyFunctionEClass = createEClass(BODY_FUNCTION);
     createEReference(bodyFunctionEClass, BODY_FUNCTION__NAME);
     createEAttribute(bodyFunctionEClass, BODY_FUNCTION__VALUES);
+    createEAttribute(bodyFunctionEClass, BODY_FUNCTION__LIST);
     createEReference(bodyFunctionEClass, BODY_FUNCTION__FUNCTION);
 
     specialFunctionEClass = createEClass(SPECIAL_FUNCTION);
@@ -551,11 +573,13 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
 
     initEClass(bodyEClass, Body.class, "Body", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBody_Component(), this.getBodyComponent(), null, "component", null, 0, 1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBody_Variables(), ecorePackage.getEString(), "variables", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBody_PromiseType(), this.getBodyFunction(), null, "promiseType", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(bodyFunctionEClass, BodyFunction.class, "BodyFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBodyFunction_Name(), this.getBodyPromiseType(), null, "name", null, 0, 1, BodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getBodyFunction_Values(), ecorePackage.getEString(), "values", null, 0, -1, BodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBodyFunction_List(), ecorePackage.getEBoolean(), "List", null, 0, 1, BodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBodyFunction_Function(), this.getSpecialFunction(), null, "function", null, 0, -1, BodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(specialFunctionEClass, SpecialFunction.class, "SpecialFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.eclipse.xtext.cfeditor.BodyFunction#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.xtext.cfeditor.BodyFunction#getValues <em>Values</em>}</li>
+ *   <li>{@link org.eclipse.xtext.cfeditor.BodyFunction#isList <em>List</em>}</li>
  *   <li>{@link org.eclipse.xtext.cfeditor.BodyFunction#getFunction <em>Function</em>}</li>
  * </ul>
  * </p>
@@ -71,6 +72,32 @@ public interface BodyFunction extends EObject
    * @generated
    */
   EList<String> getValues();
+
+  /**
+   * Returns the value of the '<em><b>List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>List</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>List</em>' attribute.
+   * @see #setList(boolean)
+   * @see org.eclipse.xtext.cfeditor.CfeditorPackage#getBodyFunction_List()
+   * @model
+   * @generated
+   */
+  boolean isList();
+
+  /**
+   * Sets the value of the '{@link org.eclipse.xtext.cfeditor.BodyFunction#isList <em>List</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>List</em>' attribute.
+   * @see #isList()
+   * @generated
+   */
+  void setList(boolean value);
 
   /**
    * Returns the value of the '<em><b>Function</b></em>' containment reference list.

@@ -41,8 +41,10 @@ public class CfeditorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPartAccess().getAlternatives(), "rule__Part__Alternatives");
 					put(grammarAccess.getBodyFunctionAccess().getAlternatives_2(), "rule__BodyFunction__Alternatives_2");
 					put(grammarAccess.getBundleAccess().getGroup(), "rule__Bundle__Group__0");
-					put(grammarAccess.getBundleAccess().getGroup_4(), "rule__Bundle__Group_4__0");
+					put(grammarAccess.getBundleAccess().getGroup_5(), "rule__Bundle__Group_5__0");
 					put(grammarAccess.getBodyAccess().getGroup(), "rule__Body__Group__0");
+					put(grammarAccess.getBodyAccess().getGroup_3(), "rule__Body__Group_3__0");
+					put(grammarAccess.getBodyAccess().getGroup_3_2(), "rule__Body__Group_3_2__0");
 					put(grammarAccess.getBodyFunctionAccess().getGroup(), "rule__BodyFunction__Group__0");
 					put(grammarAccess.getBodyFunctionAccess().getGroup_2_1(), "rule__BodyFunction__Group_2_1__0");
 					put(grammarAccess.getBodyFunctionAccess().getGroup_2_1_2(), "rule__BodyFunction__Group_2_1_2__0");
@@ -51,12 +53,15 @@ public class CfeditorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCfModelAccess().getElementsAssignment(), "rule__CfModel__ElementsAssignment");
 					put(grammarAccess.getBundleAccess().getComponentAssignment_1(), "rule__Bundle__ComponentAssignment_1");
 					put(grammarAccess.getBundleAccess().getNameAssignment_2(), "rule__Bundle__NameAssignment_2");
-					put(grammarAccess.getBundleAccess().getPromiseTypeAssignment_4_0(), "rule__Bundle__PromiseTypeAssignment_4_0");
+					put(grammarAccess.getBundleAccess().getPromiseTypeAssignment_5_0(), "rule__Bundle__PromiseTypeAssignment_5_0");
 					put(grammarAccess.getBodyAccess().getComponentAssignment_1(), "rule__Body__ComponentAssignment_1");
 					put(grammarAccess.getBodyAccess().getNameAssignment_2(), "rule__Body__NameAssignment_2");
+					put(grammarAccess.getBodyAccess().getVariablesAssignment_3_1(), "rule__Body__VariablesAssignment_3_1");
+					put(grammarAccess.getBodyAccess().getVariablesAssignment_3_2_1(), "rule__Body__VariablesAssignment_3_2_1");
 					put(grammarAccess.getBodyAccess().getPromiseTypeAssignment_5(), "rule__Body__PromiseTypeAssignment_5");
 					put(grammarAccess.getBodyFunctionAccess().getNameAssignment_0(), "rule__BodyFunction__NameAssignment_0");
 					put(grammarAccess.getBodyFunctionAccess().getValuesAssignment_2_0(), "rule__BodyFunction__ValuesAssignment_2_0");
+					put(grammarAccess.getBodyFunctionAccess().getListAssignment_2_1_0(), "rule__BodyFunction__ListAssignment_2_1_0");
 					put(grammarAccess.getBodyFunctionAccess().getValuesAssignment_2_1_1(), "rule__BodyFunction__ValuesAssignment_2_1_1");
 					put(grammarAccess.getBodyFunctionAccess().getValuesAssignment_2_1_2_1(), "rule__BodyFunction__ValuesAssignment_2_1_2_1");
 					put(grammarAccess.getBodyFunctionAccess().getFunctionAssignment_2_2(), "rule__BodyFunction__FunctionAssignment_2_2");

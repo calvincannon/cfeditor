@@ -1,8 +1,5 @@
 package org.eclipse.xtext.validation;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtext.definitions.CfDefinitionProvider;
 
@@ -10,11 +7,11 @@ public class CfFunctionValidator {
 	private CfDefinitionProvider defProvider = CfDefinitionProvider.getInstance();
 	private CfFunctionType typeEnum;
 
-	public String checkBodyFunction(String functionName, EList<String> values) {
+	public String checkBodyFunction(String functionName, EList<String> values, Boolean isList, EList<String> variables) {
 		String errorString = null;
 
 		String[] functionAttributes = defProvider.getBodyPromiseTypes().get(functionName);
-		
+
 		if (null != functionAttributes && !values.isEmpty()) {
 			String functionType = functionAttributes[0];
 			String typeRange = functionAttributes[1];
@@ -24,26 +21,44 @@ public class CfFunctionValidator {
 				String customMessage;
 				switch (typeEnum) {
 				case STRING:
-					if (values.size() > 1) {
-						errorString = "Too many arguments";
+					if (isList) {
+						errorString = "List \"{...}\" not allowed";
+					} else if (isVariable(values.get(0))) {
+						if (!isInVariables(values.get(0), variables)) {
+							errorString = "Variable not defined";
+						}
 					} else if (null != (customMessage = checkSTRING(values.get(0), typeRange))) {
 						errorString = customMessage;
 					}
 					break;
 				case INT:
-					if (values.size() > 1) {
-						errorString = "Too many arguments";
+					if (isList) {
+						errorString = "List \"{...}\" not allowed";
+					} else if (isVariable(values.get(0))) {
+						if (!isInVariables(values.get(0), variables)) {
+							errorString = "Variable not defined";
+						}
 					} else if (null != (customMessage = checkINT(values.get(0), typeRange))) {
 						errorString = customMessage;
 					}
 					break;
 				case SLIST:
+					if (!isList) {
+						errorString = "List \"{...}\" expected";
+					}
 					break;
 				case IRANGE:
+					if (isList) {
+						errorString = "List \"{...}\" not allowed";
+					}
 					break;
 				case OPTION:
-					if (values.size() > 1) {
-						errorString = "Too many arguments";
+					if (isList) {
+						errorString = "List \"{...}\" not allowed";
+					} else if (isVariable(values.get(0))) {
+						if (!isInVariables(values.get(0), variables)) {
+							errorString = "Variable not defined";
+						}
 					} else if (null != (customMessage = checkOPTION(values.get(0), typeRange))) {
 						errorString = customMessage;
 					}
@@ -82,7 +97,7 @@ public class CfFunctionValidator {
 
 	public String checkINT(String value, String range) {
 		try {
-			int intValue = Integer.parseInt(value);
+			long intValue = Long.parseLong(value);
 
 			if (null != range) {
 				String[] bounds = range.split(",", 2);
@@ -129,4 +144,26 @@ public class CfFunctionValidator {
 	// }
 	// return true;
 	// }
+	public Boolean isVariable(String value) {
+		return value.matches("\\$\\(.*\\)");
+	}
+
+	public String getVariableFromString(String value) {
+		String variable = value.substring(2, value.length() - 1);
+		return variable;
+	}
+
+	public Boolean isInVariables(String value, EList<String> variables) {
+		if (null != variables) {
+			value = getVariableFromString(value);
+			
+			for (String variable : variables) {
+				if (variable.equals(value)) {
+					return true;
+				}
+			}
+		}
+
+		return false;
+	}
 }
