@@ -1,8 +1,8 @@
 package org.eclipse.xtext.parser.antlr.internal; 
 
 import java.io.InputStream;
-import org.eclipse.xtext.*;
-import org.eclipse.xtext.parser.*;
+
+import org.eclipse.xtext.parser.IAstFactory;
 import org.eclipse.xtext.parser.impl.*;
 import org.eclipse.xtext.parsetree.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -17,6 +17,10 @@ import org.eclipse.xtext.services.CfeditorGrammarAccess;
 
 
 import org.antlr.runtime.*;
+
+import edu.kit.scc.cfeditor.*;
+import edu.kit.scc.cfeditor.parser.*;
+
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;

@@ -31,7 +31,7 @@ public class CfeditorStandaloneSetupGenerated implements ISetup {
 	}
 	
 	public Injector createInjector() {
-		return Guice.createInjector(new org.eclipse.xtext.CfeditorRuntimeModule());
+		return Guice.createInjector(new edu.kit.scc.cfeditor.CfeditorRuntimeModule());
 	}
 	
 	public void register(Injector injector) {

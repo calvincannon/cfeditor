@@ -7,7 +7,17 @@ package org.eclipse.xtext.services;
 import com.google.inject.Singleton;
 import com.google.inject.Inject;
 
-import org.eclipse.xtext.*;
+import edu.kit.scc.cfeditor.*;
+
+import org.eclipse.xtext.Alternatives;
+import org.eclipse.xtext.Assignment;
+import org.eclipse.xtext.Grammar;
+import org.eclipse.xtext.GrammarUtil;
+import org.eclipse.xtext.Group;
+import org.eclipse.xtext.Keyword;
+import org.eclipse.xtext.ParserRule;
+import org.eclipse.xtext.RuleCall;
+import org.eclipse.xtext.TerminalRule;
 import org.eclipse.xtext.service.GrammarProvider;
 import org.eclipse.xtext.service.AbstractElementFinder.*;
 

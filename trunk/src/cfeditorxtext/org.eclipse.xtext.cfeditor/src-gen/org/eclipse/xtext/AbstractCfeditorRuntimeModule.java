@@ -80,13 +80,13 @@ public abstract class AbstractCfeditorRuntimeModule extends DefaultRuntimeModule
 	}
 
 	// contributed by org.eclipse.xtext.generator.validation.JavaValidatorFragment
-	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends org.eclipse.xtext.validation.CfeditorJavaValidator> bindCfeditorJavaValidator() {
-		return org.eclipse.xtext.validation.CfeditorJavaValidator.class;
+	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends edu.kit.scc.cfeditor.validation.CfeditorJavaValidator> bindCfeditorJavaValidator() {
+		return edu.kit.scc.cfeditor.validation.CfeditorJavaValidator.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.scoping.AbstractScopingFragment
 	public Class<? extends org.eclipse.xtext.scoping.IScopeProvider> bindIScopeProvider() {
-		return org.eclipse.xtext.scoping.CfeditorScopeProvider.class;
+		return edu.kit.scc.cfeditor.scoping.CfeditorScopeProvider.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.scoping.AbstractScopingFragment
@@ -126,7 +126,7 @@ public abstract class AbstractCfeditorRuntimeModule extends DefaultRuntimeModule
 
 	// contributed by org.eclipse.xtext.generator.formatting.FormatterFragment
 	public Class<? extends org.eclipse.xtext.formatting.IFormatter> bindIFormatter() {
-		return org.eclipse.xtext.formatting.CfeditorFormatter.class;
+		return edu.kit.scc.cfeditor.formatting.CfeditorFormatter.class;
 	}
 
 }

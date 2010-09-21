@@ -75,32 +75,32 @@ public abstract class AbstractCfeditorUiModule extends DefaultUiModule {
 
 	// contributed by org.eclipse.xtext.ui.generator.labeling.LabelProviderFragment
 	public Class<? extends org.eclipse.jface.viewers.ILabelProvider> bindILabelProvider() {
-		return org.eclipse.xtext.ui.labeling.CfeditorLabelProvider.class;
+		return edu.kit.scc.cfeditor.ui.labeling.CfeditorLabelProvider.class;
 	}
 
 	// contributed by org.eclipse.xtext.ui.generator.labeling.LabelProviderFragment
 	public void configureResourceUIServiceLabelProvider(com.google.inject.Binder binder) {
-		binder.bind(org.eclipse.jface.viewers.ILabelProvider.class).annotatedWith(org.eclipse.xtext.ui.resource.ResourceServiceDescriptionLabelProvider.class).to(org.eclipse.xtext.ui.labeling.CfeditorDescriptionLabelProvider.class);
+		binder.bind(org.eclipse.jface.viewers.ILabelProvider.class).annotatedWith(org.eclipse.xtext.ui.resource.ResourceServiceDescriptionLabelProvider.class).to(edu.kit.scc.cfeditor.ui.labeling.CfeditorDescriptionLabelProvider.class);
 	}
 
 	// contributed by org.eclipse.xtext.ui.generator.outline.TransformerFragment
 	public Class<? extends org.eclipse.xtext.ui.editor.outline.transformer.ISemanticModelTransformer> bindISemanticModelTransformer() {
-		return org.eclipse.xtext.ui.outline.CfeditorTransformer.class;
+		return edu.kit.scc.cfeditor.ui.outline.CfeditorTransformer.class;
 	}
 
 	// contributed by org.eclipse.xtext.ui.generator.outline.OutlineNodeAdapterFactoryFragment
 	public Class<? extends org.eclipse.xtext.ui.editor.outline.actions.IContentOutlineNodeAdapterFactory> bindIContentOutlineNodeAdapterFactory() {
-		return org.eclipse.xtext.ui.outline.CfeditorOutlineNodeAdapterFactory.class;
+		return edu.kit.scc.cfeditor.ui.outline.CfeditorOutlineNodeAdapterFactory.class;
 	}
 
 	// contributed by org.eclipse.xtext.ui.generator.quickfix.QuickfixProviderFragment
 	public Class<? extends org.eclipse.xtext.ui.editor.quickfix.IssueResolutionProvider> bindIssueResolutionProvider() {
-		return org.eclipse.xtext.ui.quickfix.CfeditorQuickfixProvider.class;
+		return edu.kit.scc.cfeditor.ui.quickfix.CfeditorQuickfixProvider.class;
 	}
 
 	// contributed by org.eclipse.xtext.ui.generator.contentAssist.JavaBasedContentAssistFragment
 	public Class<? extends org.eclipse.xtext.ui.editor.contentassist.IContentProposalProvider> bindIContentProposalProvider() {
-		return org.eclipse.xtext.ui.contentassist.CfeditorProposalProvider.class;
+		return edu.kit.scc.cfeditor.ui.contentassist.CfeditorProposalProvider.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.parser.antlr.XtextAntlrUiGeneratorFragment
