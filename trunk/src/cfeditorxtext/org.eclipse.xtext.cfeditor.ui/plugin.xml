@@ -199,7 +199,7 @@
       </category>
       <wizard
             category="cfeditor.category.wizards"
-            class="org.eclipse.xtext.ui.wizard.NewCfFileWizard"
+            class="edu.kit.scc.cfeditor.wizard.NewCfFileWizard"
             icon="icons/cffile.gif"
             id="org.eclipse.xtext.ui.wizard.NewCfFileWizard"
             name="Cf File"
@@ -209,8 +209,8 @@
    <extension
          point="org.eclipse.ui.perspectives">
       <perspective
-            class="org.eclipse.xtext.ui.perspectives.CfPerspective"
-            icon="icons/iconpers.gif"
+            class="edu.kit.scc.cfeditor.perspectives.CfPerspective"
+            icon="icons/CfeditorPerspective.png"
             id="cfeditor.perspective"
             name="Cfeditor">
       </perspective>
