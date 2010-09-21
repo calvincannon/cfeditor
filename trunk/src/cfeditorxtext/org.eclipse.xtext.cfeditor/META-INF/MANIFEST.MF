@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: org.eclipse.xtext.cfeditor
+Bundle-Name: edu.kit.scc.cfeditor
 Bundle-Version: 0.1.1
 Bundle-SymbolicName: edu.kit.scc.cfeditor;singleton:=true
 Bundle-ActivationPolicy: lazy
