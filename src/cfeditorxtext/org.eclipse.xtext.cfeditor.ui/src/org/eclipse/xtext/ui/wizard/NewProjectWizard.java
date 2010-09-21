@@ -151,7 +151,7 @@ public class NewProjectWizard extends Wizard implements INewWizard, IExecutableE
 		mainPage = new WizardNewProjectCreationPage("Cfeditor Project Wizard");
 		mainPage.setTitle("Create a Cfeditor Project");
 		mainPage.setDescription("Enter a project name.");
-		mainPage.setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("org.eclipse.xtext.cfeditor.ui", "icons/logo-blau.png"));
+		mainPage.setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("org.eclipse.xtext.cfeditor.ui", "icons/NewCfProjectWizard.png"));
 		addPage(mainPage);
 	}
 

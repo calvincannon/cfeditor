@@ -343,7 +343,15 @@ ruleBundle returns [EObject current=null]
 	    }
 
 )
-)(rulePLACEHOLDER)*	'{' 
+)(
+    { 
+        currentNode=createCompositeNode(grammarAccess.getBundleAccess().getPLACEHOLDERParserRuleCall_3(), currentNode); 
+    }
+rulePLACEHOLDER
+    { 
+        currentNode = currentNode.getParent();
+    }
+)*	'{' 
     {
         createLeafNode(grammarAccess.getBundleAccess().getLeftCurlyBracketKeyword_4(), null); 
     }
@@ -375,7 +383,15 @@ ruleBundle returns [EObject current=null]
     {
         createLeafNode(grammarAccess.getBundleAccess().getColonKeyword_5_1(), null); 
     }
-(rulePLACEHOLDER)*)*	'}' 
+(
+    { 
+        currentNode=createCompositeNode(grammarAccess.getBundleAccess().getPLACEHOLDERParserRuleCall_5_2(), currentNode); 
+    }
+rulePLACEHOLDER
+    { 
+        currentNode = currentNode.getParent();
+    }
+)*)*	'}' 
     {
         createLeafNode(grammarAccess.getBundleAccess().getRightCurlyBracketKeyword_6(), null); 
     }
