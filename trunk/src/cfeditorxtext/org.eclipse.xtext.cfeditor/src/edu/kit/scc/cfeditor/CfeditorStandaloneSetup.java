@@ -1,7 +1,6 @@
 
 package edu.kit.scc.cfeditor;
 
-import org.eclipse.xtext.CfeditorStandaloneSetupGenerated;
 
 /**
  * Initialization support for running Xtext languages 

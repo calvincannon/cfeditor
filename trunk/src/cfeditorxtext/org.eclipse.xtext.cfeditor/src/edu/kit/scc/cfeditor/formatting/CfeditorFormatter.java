@@ -17,7 +17,7 @@ public class CfeditorFormatter extends AbstractDeclarativeFormatter {
 	
 	@Override
 	protected void configureFormatting(FormattingConfig c) {
-		org.eclipse.xtext.services.CfeditorGrammarAccess f = (org.eclipse.xtext.services.CfeditorGrammarAccess) getGrammarAccess();
+		edu.kit.scc.cfeditor.services.CfeditorGrammarAccess f = (edu.kit.scc.cfeditor.services.CfeditorGrammarAccess) getGrammarAccess();
 
 		c.setLinewrap(0, 1, 2).before(f.getSL_COMMENTRule());
 

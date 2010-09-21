@@ -11,7 +11,7 @@ import edu.kit.scc.cfeditor.parser.conversion.CfTerminalConverters;
  * @author Andreas Bender
  * 
  */
-public class CfeditorRuntimeModule extends org.eclipse.xtext.AbstractCfeditorRuntimeModule {
+public class CfeditorRuntimeModule extends edu.kit.scc.cfeditor.AbstractCfeditorRuntimeModule {
 
 	/**
 	 * Binds the customized value converter.

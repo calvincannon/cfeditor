@@ -1,12 +1,12 @@
-module org.eclipse.xtext.Cfeditor
+module edu.kit.scc.cfeditor.Cfeditor
 
 import org.eclipse.emf.mwe.utils.*
 import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
-var grammarURI = "classpath:/org/eclipse/xtext/Cfeditor.xtext"
+var grammarURI = "classpath:/edu/kit/scc/cfeditor/Cfeditor.xtext"
 var file.extensions = "cf"
-var projectName = "org.eclipse.xtext.cfeditor"
+var projectName = "edu.kit.scc.cfeditor"
 var runtimeProject = "../${projectName}"
 
 Workflow {

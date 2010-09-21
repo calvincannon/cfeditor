@@ -17,7 +17,7 @@ import edu.kit.scc.cfeditor.ui.highlighting.CfeditorHighlightingConfiguration;
  * @author Andreas Bender
  * 
  */
-public class CfeditorUiModule extends org.eclipse.xtext.ui.AbstractCfeditorUiModule {
+public class CfeditorUiModule extends edu.kit.scc.cfeditor.ui.AbstractCfeditorUiModule {
 
 	/**
 	 * Constructor for the ui module.
