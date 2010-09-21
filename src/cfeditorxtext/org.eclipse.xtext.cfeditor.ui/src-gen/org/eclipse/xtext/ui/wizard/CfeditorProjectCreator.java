@@ -16,6 +16,8 @@ import org.eclipse.xtext.ui.wizard.AbstractPluginProjectCreator;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 
+import edu.kit.scc.cfeditor.ui.wizard.CfeditorProjectInfo;
+
 public class CfeditorProjectCreator extends AbstractPluginProjectCreator {
 
 	protected static final String DSL_GENERATOR_PROJECT_NAME = "org.eclipse.xtext.cfeditor.generator";

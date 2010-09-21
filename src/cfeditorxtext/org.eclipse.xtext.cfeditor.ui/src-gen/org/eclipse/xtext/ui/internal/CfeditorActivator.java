@@ -52,7 +52,7 @@ public class CfeditorActivator extends AbstractUIPlugin {
 	protected Module getRuntimeModule(String grammar) {
 		
 		if ("org.eclipse.xtext.Cfeditor".equals(grammar)) {
-		  return new org.eclipse.xtext.CfeditorRuntimeModule();
+		  return new edu.kit.scc.cfeditor.CfeditorRuntimeModule();
 		}
 		
 		throw new IllegalArgumentException(grammar);
@@ -60,7 +60,7 @@ public class CfeditorActivator extends AbstractUIPlugin {
 	protected Module getUiModule(String grammar) {
 		
 		if ("org.eclipse.xtext.Cfeditor".equals(grammar)) {
-		  return new org.eclipse.xtext.ui.CfeditorUiModule(this);
+		  return new edu.kit.scc.cfeditor.ui.CfeditorUiModule(this);
 		}
 		
 		throw new IllegalArgumentException(grammar);

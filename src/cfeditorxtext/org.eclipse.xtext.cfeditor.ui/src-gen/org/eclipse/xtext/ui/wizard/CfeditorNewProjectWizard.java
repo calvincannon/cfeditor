@@ -32,7 +32,7 @@ public class CfeditorNewProjectWizard extends XtextNewProjectWizard {
 	 */
 	@Override
 	protected IProjectInfo getProjectInfo() {
-		org.eclipse.xtext.ui.wizard.CfeditorProjectInfo projectInfo = new org.eclipse.xtext.ui.wizard.CfeditorProjectInfo();
+		edu.kit.scc.cfeditor.ui.wizard.CfeditorProjectInfo projectInfo = new edu.kit.scc.cfeditor.ui.wizard.CfeditorProjectInfo();
 		projectInfo.setProjectName(mainPage.getProjectName());
 		return projectInfo;
 	}
