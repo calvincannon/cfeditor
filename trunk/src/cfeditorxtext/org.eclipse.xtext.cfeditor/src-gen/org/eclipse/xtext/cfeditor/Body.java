@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.eclipse.xtext.cfeditor.Body#getComponent <em>Component</em>}</li>
+ *   <li>{@link org.eclipse.xtext.cfeditor.Body#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.eclipse.xtext.cfeditor.Body#getPromiseType <em>Promise Type</em>}</li>
  * </ul>
  * </p>
@@ -52,6 +53,22 @@ public interface Body extends Part
    * @generated
    */
   void setComponent(BodyComponent value);
+
+  /**
+   * Returns the value of the '<em><b>Variables</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Variables</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Variables</em>' attribute list.
+   * @see org.eclipse.xtext.cfeditor.CfeditorPackage#getBody_Variables()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getVariables();
 
   /**
    * Returns the value of the '<em><b>Promise Type</b></em>' containment reference list.

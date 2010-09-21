@@ -210,13 +210,22 @@ public interface CfeditorPackage extends EPackage
   int BODY__COMPONENT = PART_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Variables</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY__VARIABLES = PART_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Promise Type</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BODY__PROMISE_TYPE = PART_FEATURE_COUNT + 1;
+  int BODY__PROMISE_TYPE = PART_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Body</em>' class.
@@ -225,7 +234,7 @@ public interface CfeditorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY_FEATURE_COUNT = PART_FEATURE_COUNT + 2;
+  int BODY_FEATURE_COUNT = PART_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.eclipse.xtext.cfeditor.impl.BodyFunctionImpl <em>Body Function</em>}' class.
@@ -256,13 +265,22 @@ public interface CfeditorPackage extends EPackage
   int BODY_FUNCTION__VALUES = 1;
 
   /**
+   * The feature id for the '<em><b>List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_FUNCTION__LIST = 2;
+
+  /**
    * The feature id for the '<em><b>Function</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BODY_FUNCTION__FUNCTION = 2;
+  int BODY_FUNCTION__FUNCTION = 3;
 
   /**
    * The number of structural features of the '<em>Body Function</em>' class.
@@ -271,7 +289,7 @@ public interface CfeditorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY_FUNCTION_FEATURE_COUNT = 3;
+  int BODY_FUNCTION_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.eclipse.xtext.cfeditor.impl.SpecialFunctionImpl <em>Special Function</em>}' class.
@@ -529,6 +547,17 @@ public interface CfeditorPackage extends EPackage
   EReference getBody_Component();
 
   /**
+   * Returns the meta object for the attribute list '{@link org.eclipse.xtext.cfeditor.Body#getVariables <em>Variables</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Variables</em>'.
+   * @see org.eclipse.xtext.cfeditor.Body#getVariables()
+   * @see #getBody()
+   * @generated
+   */
+  EAttribute getBody_Variables();
+
+  /**
    * Returns the meta object for the containment reference list '{@link org.eclipse.xtext.cfeditor.Body#getPromiseType <em>Promise Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -570,6 +599,17 @@ public interface CfeditorPackage extends EPackage
    * @generated
    */
   EAttribute getBodyFunction_Values();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipse.xtext.cfeditor.BodyFunction#isList <em>List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>List</em>'.
+   * @see org.eclipse.xtext.cfeditor.BodyFunction#isList()
+   * @see #getBodyFunction()
+   * @generated
+   */
+  EAttribute getBodyFunction_List();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.eclipse.xtext.cfeditor.BodyFunction#getFunction <em>Function</em>}'.
@@ -812,6 +852,14 @@ public interface CfeditorPackage extends EPackage
     EReference BODY__COMPONENT = eINSTANCE.getBody_Component();
 
     /**
+     * The meta object literal for the '<em><b>Variables</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BODY__VARIABLES = eINSTANCE.getBody_Variables();
+
+    /**
      * The meta object literal for the '<em><b>Promise Type</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -844,6 +892,14 @@ public interface CfeditorPackage extends EPackage
      * @generated
      */
     EAttribute BODY_FUNCTION__VALUES = eINSTANCE.getBodyFunction_Values();
+
+    /**
+     * The meta object literal for the '<em><b>List</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BODY_FUNCTION__LIST = eINSTANCE.getBodyFunction_List();
 
     /**
      * The meta object literal for the '<em><b>Function</b></em>' containment reference list feature.

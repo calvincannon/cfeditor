@@ -42,14 +42,14 @@ Part:
 	(Bundle | Body);
 
 Bundle:
-	'bundle' component=BundleComponent name=ID '{' (promiseType+=BundlePromiseType ':' (PLACEHOLDER)*
+	'bundle' component=BundleComponent name=ID (PLACEHOLDER)* '{' (promiseType+=BundlePromiseType ':' (PLACEHOLDER)*
 	/*(methods+=Methode)* */)* '}';
 
 Body:
-	'body' component=BodyComponent name=ID (PLACEHOLDER)* '{' (promiseType+=BodyFunction)* '}'; //BodyPromiseType '=>' (values+=STRING | '{' values+=STRING
+	'body' component=BodyComponent name=ID ('('variables+=ID (',' variables+=ID)*')')? '{' (promiseType+=BodyFunction)* '}'; //BodyPromiseType '=>' (values+=STRING | '{' values+=STRING
 //	(',' values+=STRING)* '}') ';'
 BodyFunction:
-	name=BodyPromiseType '=>' (values+=STRING | '{' values+=STRING
+	name=BodyPromiseType '=>' (values+=STRING | List?='{' values+=STRING
 	(',' values+=STRING)* '}' | function+=SpecialFunction) ';';
 
 SpecialFunction:

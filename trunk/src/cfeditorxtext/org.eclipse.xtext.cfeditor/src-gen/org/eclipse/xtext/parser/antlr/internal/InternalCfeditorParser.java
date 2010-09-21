@@ -658,24 +658,24 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBundle
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:288:1: ruleBundle returns [EObject current=null] : ( 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}' ) ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:288:1: ruleBundle returns [EObject current=null] : ( 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( ( (lv_promiseType_5_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}' ) ;
     public final EObject ruleBundle() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_2_0=null;
         EObject lv_component_1_0 = null;
 
-        EObject lv_promiseType_4_0 = null;
+        EObject lv_promiseType_5_0 = null;
 
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:293:6: ( ( 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}' ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:294:1: ( 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:293:6: ( ( 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( ( (lv_promiseType_5_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}' ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:294:1: ( 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( ( (lv_promiseType_5_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}' )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:294:1: ( 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}' )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:294:3: 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) '{' ( ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}'
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:294:1: ( 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( ( (lv_promiseType_5_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:294:3: 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( ( (lv_promiseType_5_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )* '}'
             {
             match(input,15,FOLLOW_15_in_ruleBundle664); 
 
@@ -750,36 +750,64 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,16,FOLLOW_16_in_ruleBundle717); 
-
-                    createLeafNode(grammarAccess.getBundleAccess().getLeftCurlyBracketKeyword_3(), null); 
-                
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:350:1: ( ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )*
-            loop5:
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:346:2: ( rulePLACEHOLDER )*
+            loop4:
             do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( (LA5_0==RULE_ID) ) {
-                    alt5=1;
+                if ( ((LA4_0>=RULE_ANY_OTHER && LA4_0<=RULE_STRING)||(LA4_0>=10 && LA4_0<=14)) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt5) {
+                switch (alt4) {
             	case 1 :
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:350:2: ( (lv_promiseType_4_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )*
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:346:3: rulePLACEHOLDER
             	    {
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:350:2: ( (lv_promiseType_4_0= ruleBundlePromiseType ) )
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:351:1: (lv_promiseType_4_0= ruleBundlePromiseType )
+            	    pushFollow(FOLLOW_rulePLACEHOLDER_in_ruleBundle717);
+            	    rulePLACEHOLDER();
+            	    _fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop4;
+                }
+            } while (true);
+
+            match(input,16,FOLLOW_16_in_ruleBundle721); 
+
+                    createLeafNode(grammarAccess.getBundleAccess().getLeftCurlyBracketKeyword_4(), null); 
+                
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:350:1: ( ( (lv_promiseType_5_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )* )*
+            loop6:
+            do {
+                int alt6=2;
+                int LA6_0 = input.LA(1);
+
+                if ( (LA6_0==RULE_ID) ) {
+                    alt6=1;
+                }
+
+
+                switch (alt6) {
+            	case 1 :
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:350:2: ( (lv_promiseType_5_0= ruleBundlePromiseType ) ) ':' ( rulePLACEHOLDER )*
             	    {
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:351:1: (lv_promiseType_4_0= ruleBundlePromiseType )
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:352:3: lv_promiseType_4_0= ruleBundlePromiseType
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:350:2: ( (lv_promiseType_5_0= ruleBundlePromiseType ) )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:351:1: (lv_promiseType_5_0= ruleBundlePromiseType )
+            	    {
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:351:1: (lv_promiseType_5_0= ruleBundlePromiseType )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:352:3: lv_promiseType_5_0= ruleBundlePromiseType
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getBundleAccess().getPromiseTypeBundlePromiseTypeParserRuleCall_4_0_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getBundleAccess().getPromiseTypeBundlePromiseTypeParserRuleCall_5_0_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_ruleBundlePromiseType_in_ruleBundle739);
-            	    lv_promiseType_4_0=ruleBundlePromiseType();
+            	    pushFollow(FOLLOW_ruleBundlePromiseType_in_ruleBundle743);
+            	    lv_promiseType_5_0=ruleBundlePromiseType();
             	    _fsp--;
 
 
@@ -791,7 +819,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             	    	       		add(
             	    	       			current, 
             	    	       			"promiseType",
-            	    	        		lv_promiseType_4_0, 
+            	    	        		lv_promiseType_5_0, 
             	    	        		"BundlePromiseType", 
             	    	        		currentNode);
             	    	        } catch (ValueConverterException vce) {
@@ -805,35 +833,35 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    match(input,17,FOLLOW_17_in_ruleBundle749); 
+            	    match(input,17,FOLLOW_17_in_ruleBundle753); 
 
-            	            createLeafNode(grammarAccess.getBundleAccess().getColonKeyword_4_1(), null); 
+            	            createLeafNode(grammarAccess.getBundleAccess().getColonKeyword_5_1(), null); 
             	        
             	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:378:1: ( rulePLACEHOLDER )*
-            	    loop4:
+            	    loop5:
             	    do {
-            	        int alt4=2;
-            	        int LA4_0 = input.LA(1);
+            	        int alt5=2;
+            	        int LA5_0 = input.LA(1);
 
-            	        if ( (LA4_0==RULE_ID) ) {
-            	            int LA4_2 = input.LA(2);
+            	        if ( (LA5_0==RULE_ID) ) {
+            	            int LA5_2 = input.LA(2);
 
-            	            if ( ((LA4_2>=RULE_ANY_OTHER && LA4_2<=RULE_STRING)||(LA4_2>=10 && LA4_2<=14)||LA4_2==18) ) {
-            	                alt4=1;
+            	            if ( ((LA5_2>=RULE_ANY_OTHER && LA5_2<=RULE_STRING)||(LA5_2>=10 && LA5_2<=14)||LA5_2==18) ) {
+            	                alt5=1;
             	            }
 
 
             	        }
-            	        else if ( (LA4_0==RULE_ANY_OTHER||LA4_0==RULE_STRING||(LA4_0>=10 && LA4_0<=14)) ) {
-            	            alt4=1;
+            	        else if ( (LA5_0==RULE_ANY_OTHER||LA5_0==RULE_STRING||(LA5_0>=10 && LA5_0<=14)) ) {
+            	            alt5=1;
             	        }
 
 
-            	        switch (alt4) {
+            	        switch (alt5) {
             	    	case 1 :
             	    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:378:2: rulePLACEHOLDER
             	    	    {
-            	    	    pushFollow(FOLLOW_rulePLACEHOLDER_in_ruleBundle759);
+            	    	    pushFollow(FOLLOW_rulePLACEHOLDER_in_ruleBundle763);
             	    	    rulePLACEHOLDER();
             	    	    _fsp--;
 
@@ -842,7 +870,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             	    	    break;
 
             	    	default :
-            	    	    break loop4;
+            	    	    break loop5;
             	        }
             	    } while (true);
 
@@ -851,13 +879,13 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop5;
+            	    break loop6;
                 }
             } while (true);
 
-            match(input,18,FOLLOW_18_in_ruleBundle765); 
+            match(input,18,FOLLOW_18_in_ruleBundle769); 
 
-                    createLeafNode(grammarAccess.getBundleAccess().getRightCurlyBracketKeyword_5(), null); 
+                    createLeafNode(grammarAccess.getBundleAccess().getRightCurlyBracketKeyword_6(), null); 
                 
 
             }
@@ -894,12 +922,12 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:392:2: iv_ruleBody= ruleBody EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBodyRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBody_in_entryRuleBody801);
+            pushFollow(FOLLOW_ruleBody_in_entryRuleBody805);
             iv_ruleBody=ruleBody();
             _fsp--;
 
              current =iv_ruleBody; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBody811); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBody815); 
 
             }
 
@@ -917,26 +945,28 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBody
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:399:1: ruleBody returns [EObject current=null] : ( 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( (lv_promiseType_5_0= ruleBodyFunction ) )* '}' ) ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:399:1: ruleBody returns [EObject current=null] : ( 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( '(' ( (lv_variables_4_0= RULE_ID ) ) ( ',' ( (lv_variables_6_0= RULE_ID ) ) )* ')' )? '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* '}' ) ;
     public final EObject ruleBody() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_2_0=null;
+        Token lv_variables_4_0=null;
+        Token lv_variables_6_0=null;
         EObject lv_component_1_0 = null;
 
-        EObject lv_promiseType_5_0 = null;
+        EObject lv_promiseType_9_0 = null;
 
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:404:6: ( ( 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( (lv_promiseType_5_0= ruleBodyFunction ) )* '}' ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:405:1: ( 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( (lv_promiseType_5_0= ruleBodyFunction ) )* '}' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:404:6: ( ( 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( '(' ( (lv_variables_4_0= RULE_ID ) ) ( ',' ( (lv_variables_6_0= RULE_ID ) ) )* ')' )? '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* '}' ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:405:1: ( 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( '(' ( (lv_variables_4_0= RULE_ID ) ) ( ',' ( (lv_variables_6_0= RULE_ID ) ) )* ')' )? '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* '}' )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:405:1: ( 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( (lv_promiseType_5_0= ruleBodyFunction ) )* '}' )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:405:3: 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( rulePLACEHOLDER )* '{' ( (lv_promiseType_5_0= ruleBodyFunction ) )* '}'
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:405:1: ( 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( '(' ( (lv_variables_4_0= RULE_ID ) ) ( ',' ( (lv_variables_6_0= RULE_ID ) ) )* ')' )? '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* '}' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:405:3: 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) ( '(' ( (lv_variables_4_0= RULE_ID ) ) ( ',' ( (lv_variables_6_0= RULE_ID ) ) )* ')' )? '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* '}'
             {
-            match(input,19,FOLLOW_19_in_ruleBody846); 
+            match(input,19,FOLLOW_19_in_ruleBody850); 
 
                     createLeafNode(grammarAccess.getBodyAccess().getBodyKeyword_0(), null); 
                 
@@ -949,7 +979,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
              
             	        currentNode=createCompositeNode(grammarAccess.getBodyAccess().getComponentBodyComponentParserRuleCall_1_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleBodyComponent_in_ruleBody867);
+            pushFollow(FOLLOW_ruleBodyComponent_in_ruleBody871);
             lv_component_1_0=ruleBodyComponent();
             _fsp--;
 
@@ -983,7 +1013,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:435:3: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBody884); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBody888); 
 
             			createLeafNode(grammarAccess.getBodyAccess().getNameIDTerminalRuleCall_2_0(), "name"); 
             		
@@ -1009,61 +1039,152 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:457:2: ( rulePLACEHOLDER )*
-            loop6:
-            do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:457:2: ( '(' ( (lv_variables_4_0= RULE_ID ) ) ( ',' ( (lv_variables_6_0= RULE_ID ) ) )* ')' )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-                if ( ((LA6_0>=RULE_ANY_OTHER && LA6_0<=RULE_STRING)||(LA6_0>=10 && LA6_0<=14)) ) {
-                    alt6=1;
-                }
+            if ( (LA8_0==13) ) {
+                alt8=1;
+            }
+            switch (alt8) {
+                case 1 :
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:457:4: '(' ( (lv_variables_4_0= RULE_ID ) ) ( ',' ( (lv_variables_6_0= RULE_ID ) ) )* ')'
+                    {
+                    match(input,13,FOLLOW_13_in_ruleBody904); 
+
+                            createLeafNode(grammarAccess.getBodyAccess().getLeftParenthesisKeyword_3_0(), null); 
+                        
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:461:1: ( (lv_variables_4_0= RULE_ID ) )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:462:1: (lv_variables_4_0= RULE_ID )
+                    {
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:462:1: (lv_variables_4_0= RULE_ID )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:463:3: lv_variables_4_0= RULE_ID
+                    {
+                    lv_variables_4_0=(Token)input.LT(1);
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBody921); 
+
+                    			createLeafNode(grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_1_0(), "variables"); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = factory.create(grammarAccess.getBodyRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode, current);
+                    	        }
+                    	        try {
+                    	       		add(
+                    	       			current, 
+                    	       			"variables",
+                    	        		lv_variables_4_0, 
+                    	        		"ID", 
+                    	        		lastConsumedNode);
+                    	        } catch (ValueConverterException vce) {
+                    				handleValueConverterException(vce);
+                    	        }
+                    	    
+
+                    }
 
 
-                switch (alt6) {
-            	case 1 :
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:457:3: rulePLACEHOLDER
-            	    {
-            	    pushFollow(FOLLOW_rulePLACEHOLDER_in_ruleBody899);
-            	    rulePLACEHOLDER();
-            	    _fsp--;
+                    }
+
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:485:2: ( ',' ( (lv_variables_6_0= RULE_ID ) ) )*
+                    loop7:
+                    do {
+                        int alt7=2;
+                        int LA7_0 = input.LA(1);
+
+                        if ( (LA7_0==12) ) {
+                            alt7=1;
+                        }
 
 
-            	    }
-            	    break;
+                        switch (alt7) {
+                    	case 1 :
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:485:4: ',' ( (lv_variables_6_0= RULE_ID ) )
+                    	    {
+                    	    match(input,12,FOLLOW_12_in_ruleBody937); 
 
-            	default :
-            	    break loop6;
-                }
-            } while (true);
+                    	            createLeafNode(grammarAccess.getBodyAccess().getCommaKeyword_3_2_0(), null); 
+                    	        
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:489:1: ( (lv_variables_6_0= RULE_ID ) )
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:490:1: (lv_variables_6_0= RULE_ID )
+                    	    {
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:490:1: (lv_variables_6_0= RULE_ID )
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:491:3: lv_variables_6_0= RULE_ID
+                    	    {
+                    	    lv_variables_6_0=(Token)input.LT(1);
+                    	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBody954); 
 
-            match(input,16,FOLLOW_16_in_ruleBody903); 
+                    	    			createLeafNode(grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_2_1_0(), "variables"); 
+                    	    		
+
+                    	    	        if (current==null) {
+                    	    	            current = factory.create(grammarAccess.getBodyRule().getType().getClassifier());
+                    	    	            associateNodeWithAstElement(currentNode, current);
+                    	    	        }
+                    	    	        try {
+                    	    	       		add(
+                    	    	       			current, 
+                    	    	       			"variables",
+                    	    	        		lv_variables_6_0, 
+                    	    	        		"ID", 
+                    	    	        		lastConsumedNode);
+                    	    	        } catch (ValueConverterException vce) {
+                    	    				handleValueConverterException(vce);
+                    	    	        }
+                    	    	    
+
+                    	    }
+
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop7;
+                        }
+                    } while (true);
+
+                    match(input,14,FOLLOW_14_in_ruleBody971); 
+
+                            createLeafNode(grammarAccess.getBodyAccess().getRightParenthesisKeyword_3_3(), null); 
+                        
+
+                    }
+                    break;
+
+            }
+
+            match(input,16,FOLLOW_16_in_ruleBody983); 
 
                     createLeafNode(grammarAccess.getBodyAccess().getLeftCurlyBracketKeyword_4(), null); 
                 
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:461:1: ( (lv_promiseType_5_0= ruleBodyFunction ) )*
-            loop7:
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:521:1: ( (lv_promiseType_9_0= ruleBodyFunction ) )*
+            loop9:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA7_0==RULE_ID) ) {
-                    alt7=1;
+                if ( (LA9_0==RULE_ID) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt9) {
             	case 1 :
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:462:1: (lv_promiseType_5_0= ruleBodyFunction )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:522:1: (lv_promiseType_9_0= ruleBodyFunction )
             	    {
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:462:1: (lv_promiseType_5_0= ruleBodyFunction )
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:463:3: lv_promiseType_5_0= ruleBodyFunction
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:522:1: (lv_promiseType_9_0= ruleBodyFunction )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:523:3: lv_promiseType_9_0= ruleBodyFunction
             	    {
             	     
             	    	        currentNode=createCompositeNode(grammarAccess.getBodyAccess().getPromiseTypeBodyFunctionParserRuleCall_5_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_ruleBodyFunction_in_ruleBody924);
-            	    lv_promiseType_5_0=ruleBodyFunction();
+            	    pushFollow(FOLLOW_ruleBodyFunction_in_ruleBody1004);
+            	    lv_promiseType_9_0=ruleBodyFunction();
             	    _fsp--;
 
 
@@ -1075,7 +1196,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             	    	       		add(
             	    	       			current, 
             	    	       			"promiseType",
-            	    	        		lv_promiseType_5_0, 
+            	    	        		lv_promiseType_9_0, 
             	    	        		"BodyFunction", 
             	    	        		currentNode);
             	    	        } catch (ValueConverterException vce) {
@@ -1091,11 +1212,11 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop9;
                 }
             } while (true);
 
-            match(input,18,FOLLOW_18_in_ruleBody935); 
+            match(input,18,FOLLOW_18_in_ruleBody1015); 
 
                     createLeafNode(grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_6(), null); 
                 
@@ -1122,7 +1243,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleBodyFunction
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:497:1: entryRuleBodyFunction returns [EObject current=null] : iv_ruleBodyFunction= ruleBodyFunction EOF ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:557:1: entryRuleBodyFunction returns [EObject current=null] : iv_ruleBodyFunction= ruleBodyFunction EOF ;
     public final EObject entryRuleBodyFunction() throws RecognitionException {
         EObject current = null;
 
@@ -1130,16 +1251,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:498:2: (iv_ruleBodyFunction= ruleBodyFunction EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:499:2: iv_ruleBodyFunction= ruleBodyFunction EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:558:2: (iv_ruleBodyFunction= ruleBodyFunction EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:559:2: iv_ruleBodyFunction= ruleBodyFunction EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBodyFunctionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBodyFunction_in_entryRuleBodyFunction971);
+            pushFollow(FOLLOW_ruleBodyFunction_in_entryRuleBodyFunction1051);
             iv_ruleBodyFunction=ruleBodyFunction();
             _fsp--;
 
              current =iv_ruleBodyFunction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyFunction981); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyFunction1061); 
 
             }
 
@@ -1157,11 +1278,12 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBodyFunction
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:506:1: ruleBodyFunction returns [EObject current=null] : ( ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';' ) ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:566:1: ruleBodyFunction returns [EObject current=null] : ( ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';' ) ;
     public final EObject ruleBodyFunction() throws RecognitionException {
         EObject current = null;
 
         Token lv_values_2_0=null;
+        Token lv_List_3_0=null;
         Token lv_values_4_0=null;
         Token lv_values_6_0=null;
         EObject lv_name_0_0 = null;
@@ -1172,22 +1294,22 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:511:6: ( ( ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';' ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:512:1: ( ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:571:6: ( ( ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';' ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:572:1: ( ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';' )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:512:1: ( ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';' )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:512:2: ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';'
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:572:1: ( ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:572:2: ( (lv_name_0_0= ruleBodyPromiseType ) ) '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) ) ';'
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:512:2: ( (lv_name_0_0= ruleBodyPromiseType ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:513:1: (lv_name_0_0= ruleBodyPromiseType )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:572:2: ( (lv_name_0_0= ruleBodyPromiseType ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:573:1: (lv_name_0_0= ruleBodyPromiseType )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:513:1: (lv_name_0_0= ruleBodyPromiseType )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:514:3: lv_name_0_0= ruleBodyPromiseType
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:573:1: (lv_name_0_0= ruleBodyPromiseType )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:574:3: lv_name_0_0= ruleBodyPromiseType
             {
              
             	        currentNode=createCompositeNode(grammarAccess.getBodyFunctionAccess().getNameBodyPromiseTypeParserRuleCall_0_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleBodyPromiseType_in_ruleBodyFunction1027);
+            pushFollow(FOLLOW_ruleBodyPromiseType_in_ruleBodyFunction1107);
             lv_name_0_0=ruleBodyPromiseType();
             _fsp--;
 
@@ -1214,47 +1336,47 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,10,FOLLOW_10_in_ruleBodyFunction1037); 
+            match(input,10,FOLLOW_10_in_ruleBodyFunction1117); 
 
                     createLeafNode(grammarAccess.getBodyFunctionAccess().getEqualsSignGreaterThanSignKeyword_1(), null); 
                 
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:540:1: ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) )
-            int alt9=3;
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:600:1: ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) )
+            int alt11=3;
             switch ( input.LA(1) ) {
             case RULE_STRING:
                 {
-                alt9=1;
+                alt11=1;
                 }
                 break;
             case 16:
                 {
-                alt9=2;
+                alt11=2;
                 }
                 break;
             case RULE_ID:
                 {
-                alt9=3;
+                alt11=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("540:1: ( ( (lv_values_2_0= RULE_STRING ) ) | ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) )", 9, 0, input);
+                    new NoViableAltException("600:1: ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) )", 11, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt9) {
+            switch (alt11) {
                 case 1 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:540:2: ( (lv_values_2_0= RULE_STRING ) )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:600:2: ( (lv_values_2_0= RULE_STRING ) )
                     {
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:540:2: ( (lv_values_2_0= RULE_STRING ) )
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:541:1: (lv_values_2_0= RULE_STRING )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:600:2: ( (lv_values_2_0= RULE_STRING ) )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:601:1: (lv_values_2_0= RULE_STRING )
                     {
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:541:1: (lv_values_2_0= RULE_STRING )
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:542:3: lv_values_2_0= RULE_STRING
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:601:1: (lv_values_2_0= RULE_STRING )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:602:3: lv_values_2_0= RULE_STRING
                     {
                     lv_values_2_0=(Token)input.LT(1);
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction1055); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction1135); 
 
                     			createLeafNode(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_0_0(), "values"); 
                     		
@@ -1284,23 +1406,48 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:565:6: ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:625:6: ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' )
                     {
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:565:6: ( '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' )
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:565:8: '{' ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}'
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:625:6: ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}' )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:625:7: ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) ( ',' ( (lv_values_6_0= RULE_STRING ) ) )* '}'
                     {
-                    match(input,16,FOLLOW_16_in_ruleBodyFunction1077); 
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:625:7: ( (lv_List_3_0= '{' ) )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:626:1: (lv_List_3_0= '{' )
+                    {
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:626:1: (lv_List_3_0= '{' )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:627:3: lv_List_3_0= '{'
+                    {
+                    lv_List_3_0=(Token)input.LT(1);
+                    match(input,16,FOLLOW_16_in_ruleBodyFunction1165); 
 
-                            createLeafNode(grammarAccess.getBodyFunctionAccess().getLeftCurlyBracketKeyword_2_1_0(), null); 
+                            createLeafNode(grammarAccess.getBodyFunctionAccess().getListLeftCurlyBracketKeyword_2_1_0_0(), "List"); 
                         
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:569:1: ( (lv_values_4_0= RULE_STRING ) )
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:570:1: (lv_values_4_0= RULE_STRING )
+
+                    	        if (current==null) {
+                    	            current = factory.create(grammarAccess.getBodyFunctionRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode, current);
+                    	        }
+                    	        
+                    	        try {
+                    	       		set(current, "List", true, "{", lastConsumedNode);
+                    	        } catch (ValueConverterException vce) {
+                    				handleValueConverterException(vce);
+                    	        }
+                    	    
+
+                    }
+
+
+                    }
+
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:646:2: ( (lv_values_4_0= RULE_STRING ) )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:647:1: (lv_values_4_0= RULE_STRING )
                     {
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:570:1: (lv_values_4_0= RULE_STRING )
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:571:3: lv_values_4_0= RULE_STRING
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:647:1: (lv_values_4_0= RULE_STRING )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:648:3: lv_values_4_0= RULE_STRING
                     {
                     lv_values_4_0=(Token)input.LT(1);
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction1094); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction1195); 
 
                     			createLeafNode(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_1_0(), "values"); 
                     		
@@ -1326,33 +1473,33 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:593:2: ( ',' ( (lv_values_6_0= RULE_STRING ) ) )*
-                    loop8:
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:670:2: ( ',' ( (lv_values_6_0= RULE_STRING ) ) )*
+                    loop10:
                     do {
-                        int alt8=2;
-                        int LA8_0 = input.LA(1);
+                        int alt10=2;
+                        int LA10_0 = input.LA(1);
 
-                        if ( (LA8_0==12) ) {
-                            alt8=1;
+                        if ( (LA10_0==12) ) {
+                            alt10=1;
                         }
 
 
-                        switch (alt8) {
+                        switch (alt10) {
                     	case 1 :
-                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:593:4: ',' ( (lv_values_6_0= RULE_STRING ) )
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:670:4: ',' ( (lv_values_6_0= RULE_STRING ) )
                     	    {
-                    	    match(input,12,FOLLOW_12_in_ruleBodyFunction1110); 
+                    	    match(input,12,FOLLOW_12_in_ruleBodyFunction1211); 
 
                     	            createLeafNode(grammarAccess.getBodyFunctionAccess().getCommaKeyword_2_1_2_0(), null); 
                     	        
-                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:597:1: ( (lv_values_6_0= RULE_STRING ) )
-                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:598:1: (lv_values_6_0= RULE_STRING )
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:674:1: ( (lv_values_6_0= RULE_STRING ) )
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:675:1: (lv_values_6_0= RULE_STRING )
                     	    {
-                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:598:1: (lv_values_6_0= RULE_STRING )
-                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:599:3: lv_values_6_0= RULE_STRING
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:675:1: (lv_values_6_0= RULE_STRING )
+                    	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:676:3: lv_values_6_0= RULE_STRING
                     	    {
                     	    lv_values_6_0=(Token)input.LT(1);
-                    	    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction1127); 
+                    	    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction1228); 
 
                     	    			createLeafNode(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_2_1_0(), "values"); 
                     	    		
@@ -1383,11 +1530,11 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop8;
+                    	    break loop10;
                         }
                     } while (true);
 
-                    match(input,18,FOLLOW_18_in_ruleBodyFunction1144); 
+                    match(input,18,FOLLOW_18_in_ruleBodyFunction1245); 
 
                             createLeafNode(grammarAccess.getBodyFunctionAccess().getRightCurlyBracketKeyword_2_1_3(), null); 
                         
@@ -1398,18 +1545,18 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:626:6: ( (lv_function_8_0= ruleSpecialFunction ) )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:703:6: ( (lv_function_8_0= ruleSpecialFunction ) )
                     {
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:626:6: ( (lv_function_8_0= ruleSpecialFunction ) )
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:627:1: (lv_function_8_0= ruleSpecialFunction )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:703:6: ( (lv_function_8_0= ruleSpecialFunction ) )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:704:1: (lv_function_8_0= ruleSpecialFunction )
                     {
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:627:1: (lv_function_8_0= ruleSpecialFunction )
-                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:628:3: lv_function_8_0= ruleSpecialFunction
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:704:1: (lv_function_8_0= ruleSpecialFunction )
+                    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:705:3: lv_function_8_0= ruleSpecialFunction
                     {
                      
                     	        currentNode=createCompositeNode(grammarAccess.getBodyFunctionAccess().getFunctionSpecialFunctionParserRuleCall_2_2_0(), currentNode); 
                     	    
-                    pushFollow(FOLLOW_ruleSpecialFunction_in_ruleBodyFunction1172);
+                    pushFollow(FOLLOW_ruleSpecialFunction_in_ruleBodyFunction1273);
                     lv_function_8_0=ruleSpecialFunction();
                     _fsp--;
 
@@ -1442,7 +1589,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,11,FOLLOW_11_in_ruleBodyFunction1183); 
+            match(input,11,FOLLOW_11_in_ruleBodyFunction1284); 
 
                     createLeafNode(grammarAccess.getBodyFunctionAccess().getSemicolonKeyword_3(), null); 
                 
@@ -1469,7 +1616,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleSpecialFunction
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:662:1: entryRuleSpecialFunction returns [EObject current=null] : iv_ruleSpecialFunction= ruleSpecialFunction EOF ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:739:1: entryRuleSpecialFunction returns [EObject current=null] : iv_ruleSpecialFunction= ruleSpecialFunction EOF ;
     public final EObject entryRuleSpecialFunction() throws RecognitionException {
         EObject current = null;
 
@@ -1477,16 +1624,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:663:2: (iv_ruleSpecialFunction= ruleSpecialFunction EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:664:2: iv_ruleSpecialFunction= ruleSpecialFunction EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:740:2: (iv_ruleSpecialFunction= ruleSpecialFunction EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:741:2: iv_ruleSpecialFunction= ruleSpecialFunction EOF
             {
              currentNode = createCompositeNode(grammarAccess.getSpecialFunctionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleSpecialFunction_in_entryRuleSpecialFunction1219);
+            pushFollow(FOLLOW_ruleSpecialFunction_in_entryRuleSpecialFunction1320);
             iv_ruleSpecialFunction=ruleSpecialFunction();
             _fsp--;
 
              current =iv_ruleSpecialFunction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSpecialFunction1229); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSpecialFunction1330); 
 
             }
 
@@ -1504,7 +1651,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleSpecialFunction
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:671:1: ruleSpecialFunction returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')' ) ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:748:1: ruleSpecialFunction returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')' ) ;
     public final EObject ruleSpecialFunction() throws RecognitionException {
         EObject current = null;
 
@@ -1515,20 +1662,20 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:676:6: ( ( ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')' ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:677:1: ( ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:753:6: ( ( ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')' ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:754:1: ( ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')' )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:677:1: ( ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')' )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:677:2: ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')'
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:754:1: ( ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')' )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:754:2: ( (lv_name_0_0= RULE_ID ) ) '(' ( (lv_parameters_2_0= RULE_STRING ) ) ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )* ')'
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:677:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:678:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:754:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:755:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:678:1: (lv_name_0_0= RULE_ID )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:679:3: lv_name_0_0= RULE_ID
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:755:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:756:3: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction1271); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction1372); 
 
             			createLeafNode(grammarAccess.getSpecialFunctionAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
             		
@@ -1554,18 +1701,18 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,13,FOLLOW_13_in_ruleSpecialFunction1286); 
+            match(input,13,FOLLOW_13_in_ruleSpecialFunction1387); 
 
                     createLeafNode(grammarAccess.getSpecialFunctionAccess().getLeftParenthesisKeyword_1(), null); 
                 
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:705:1: ( (lv_parameters_2_0= RULE_STRING ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:706:1: (lv_parameters_2_0= RULE_STRING )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:782:1: ( (lv_parameters_2_0= RULE_STRING ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:783:1: (lv_parameters_2_0= RULE_STRING )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:706:1: (lv_parameters_2_0= RULE_STRING )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:707:3: lv_parameters_2_0= RULE_STRING
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:783:1: (lv_parameters_2_0= RULE_STRING )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:784:3: lv_parameters_2_0= RULE_STRING
             {
             lv_parameters_2_0=(Token)input.LT(1);
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSpecialFunction1303); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSpecialFunction1404); 
 
             			createLeafNode(grammarAccess.getSpecialFunctionAccess().getParametersSTRINGTerminalRuleCall_2_0(), "parameters"); 
             		
@@ -1591,33 +1738,33 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:729:2: ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )*
-            loop10:
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:806:2: ( ',' ( (lv_parameters_4_0= RULE_STRING ) ) )*
+            loop12:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-                if ( (LA10_0==12) ) {
-                    alt10=1;
+                if ( (LA12_0==12) ) {
+                    alt12=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt12) {
             	case 1 :
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:729:4: ',' ( (lv_parameters_4_0= RULE_STRING ) )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:806:4: ',' ( (lv_parameters_4_0= RULE_STRING ) )
             	    {
-            	    match(input,12,FOLLOW_12_in_ruleSpecialFunction1319); 
+            	    match(input,12,FOLLOW_12_in_ruleSpecialFunction1420); 
 
             	            createLeafNode(grammarAccess.getSpecialFunctionAccess().getCommaKeyword_3_0(), null); 
             	        
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:733:1: ( (lv_parameters_4_0= RULE_STRING ) )
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:734:1: (lv_parameters_4_0= RULE_STRING )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:810:1: ( (lv_parameters_4_0= RULE_STRING ) )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:811:1: (lv_parameters_4_0= RULE_STRING )
             	    {
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:734:1: (lv_parameters_4_0= RULE_STRING )
-            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:735:3: lv_parameters_4_0= RULE_STRING
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:811:1: (lv_parameters_4_0= RULE_STRING )
+            	    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:812:3: lv_parameters_4_0= RULE_STRING
             	    {
             	    lv_parameters_4_0=(Token)input.LT(1);
-            	    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSpecialFunction1336); 
+            	    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSpecialFunction1437); 
 
             	    			createLeafNode(grammarAccess.getSpecialFunctionAccess().getParametersSTRINGTerminalRuleCall_3_1_0(), "parameters"); 
             	    		
@@ -1648,11 +1795,11 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop12;
                 }
             } while (true);
 
-            match(input,14,FOLLOW_14_in_ruleSpecialFunction1353); 
+            match(input,14,FOLLOW_14_in_ruleSpecialFunction1454); 
 
                     createLeafNode(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_4(), null); 
                 
@@ -1679,7 +1826,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleBundlePromiseType
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:769:1: entryRuleBundlePromiseType returns [EObject current=null] : iv_ruleBundlePromiseType= ruleBundlePromiseType EOF ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:846:1: entryRuleBundlePromiseType returns [EObject current=null] : iv_ruleBundlePromiseType= ruleBundlePromiseType EOF ;
     public final EObject entryRuleBundlePromiseType() throws RecognitionException {
         EObject current = null;
 
@@ -1687,16 +1834,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:770:2: (iv_ruleBundlePromiseType= ruleBundlePromiseType EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:771:2: iv_ruleBundlePromiseType= ruleBundlePromiseType EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:847:2: (iv_ruleBundlePromiseType= ruleBundlePromiseType EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:848:2: iv_ruleBundlePromiseType= ruleBundlePromiseType EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBundlePromiseTypeRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType1389);
+            pushFollow(FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType1490);
             iv_ruleBundlePromiseType=ruleBundlePromiseType();
             _fsp--;
 
              current =iv_ruleBundlePromiseType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBundlePromiseType1399); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBundlePromiseType1500); 
 
             }
 
@@ -1714,7 +1861,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBundlePromiseType
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:778:1: ruleBundlePromiseType returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:855:1: ruleBundlePromiseType returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleBundlePromiseType() throws RecognitionException {
         EObject current = null;
 
@@ -1723,17 +1870,17 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:783:6: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:784:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:860:6: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:861:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:784:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:785:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:861:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:862:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:785:1: (lv_name_0_0= RULE_ID )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:786:3: lv_name_0_0= RULE_ID
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:862:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:863:3: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundlePromiseType1440); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundlePromiseType1541); 
 
             			createLeafNode(grammarAccess.getBundlePromiseTypeAccess().getNameIDTerminalRuleCall_0(), "name"); 
             		
@@ -1779,7 +1926,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleBodyPromiseType
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:816:1: entryRuleBodyPromiseType returns [EObject current=null] : iv_ruleBodyPromiseType= ruleBodyPromiseType EOF ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:893:1: entryRuleBodyPromiseType returns [EObject current=null] : iv_ruleBodyPromiseType= ruleBodyPromiseType EOF ;
     public final EObject entryRuleBodyPromiseType() throws RecognitionException {
         EObject current = null;
 
@@ -1787,16 +1934,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:817:2: (iv_ruleBodyPromiseType= ruleBodyPromiseType EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:818:2: iv_ruleBodyPromiseType= ruleBodyPromiseType EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:894:2: (iv_ruleBodyPromiseType= ruleBodyPromiseType EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:895:2: iv_ruleBodyPromiseType= ruleBodyPromiseType EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBodyPromiseTypeRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType1480);
+            pushFollow(FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType1581);
             iv_ruleBodyPromiseType=ruleBodyPromiseType();
             _fsp--;
 
              current =iv_ruleBodyPromiseType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyPromiseType1490); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyPromiseType1591); 
 
             }
 
@@ -1814,7 +1961,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBodyPromiseType
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:825:1: ruleBodyPromiseType returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:902:1: ruleBodyPromiseType returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleBodyPromiseType() throws RecognitionException {
         EObject current = null;
 
@@ -1823,17 +1970,17 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:830:6: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:831:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:907:6: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:908:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:831:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:832:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:908:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:909:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:832:1: (lv_name_0_0= RULE_ID )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:833:3: lv_name_0_0= RULE_ID
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:909:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:910:3: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyPromiseType1531); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyPromiseType1632); 
 
             			createLeafNode(grammarAccess.getBodyPromiseTypeAccess().getNameIDTerminalRuleCall_0(), "name"); 
             		
@@ -1879,7 +2026,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleBundleComponent
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:863:1: entryRuleBundleComponent returns [EObject current=null] : iv_ruleBundleComponent= ruleBundleComponent EOF ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:940:1: entryRuleBundleComponent returns [EObject current=null] : iv_ruleBundleComponent= ruleBundleComponent EOF ;
     public final EObject entryRuleBundleComponent() throws RecognitionException {
         EObject current = null;
 
@@ -1887,16 +2034,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:864:2: (iv_ruleBundleComponent= ruleBundleComponent EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:865:2: iv_ruleBundleComponent= ruleBundleComponent EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:941:2: (iv_ruleBundleComponent= ruleBundleComponent EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:942:2: iv_ruleBundleComponent= ruleBundleComponent EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBundleComponentRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent1571);
+            pushFollow(FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent1672);
             iv_ruleBundleComponent=ruleBundleComponent();
             _fsp--;
 
              current =iv_ruleBundleComponent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBundleComponent1581); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBundleComponent1682); 
 
             }
 
@@ -1914,7 +2061,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBundleComponent
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:872:1: ruleBundleComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:949:1: ruleBundleComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleBundleComponent() throws RecognitionException {
         EObject current = null;
 
@@ -1923,17 +2070,17 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:877:6: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:878:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:954:6: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:955:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:878:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:879:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:955:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:956:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:879:1: (lv_name_0_0= RULE_ID )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:880:3: lv_name_0_0= RULE_ID
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:956:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:957:3: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundleComponent1622); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundleComponent1723); 
 
             			createLeafNode(grammarAccess.getBundleComponentAccess().getNameIDTerminalRuleCall_0(), "name"); 
             		
@@ -1979,7 +2126,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleBodyComponent
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:910:1: entryRuleBodyComponent returns [EObject current=null] : iv_ruleBodyComponent= ruleBodyComponent EOF ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:987:1: entryRuleBodyComponent returns [EObject current=null] : iv_ruleBodyComponent= ruleBodyComponent EOF ;
     public final EObject entryRuleBodyComponent() throws RecognitionException {
         EObject current = null;
 
@@ -1987,16 +2134,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:911:2: (iv_ruleBodyComponent= ruleBodyComponent EOF )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:912:2: iv_ruleBodyComponent= ruleBodyComponent EOF
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:988:2: (iv_ruleBodyComponent= ruleBodyComponent EOF )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:989:2: iv_ruleBodyComponent= ruleBodyComponent EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBodyComponentRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent1662);
+            pushFollow(FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent1763);
             iv_ruleBodyComponent=ruleBodyComponent();
             _fsp--;
 
              current =iv_ruleBodyComponent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyComponent1672); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyComponent1773); 
 
             }
 
@@ -2014,7 +2161,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBodyComponent
-    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:919:1: ruleBodyComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:996:1: ruleBodyComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleBodyComponent() throws RecognitionException {
         EObject current = null;
 
@@ -2023,17 +2170,17 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:924:6: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:925:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:1001:6: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:1002:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:925:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:926:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:1002:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:1003:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:926:1: (lv_name_0_0= RULE_ID )
-            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:927:3: lv_name_0_0= RULE_ID
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:1003:1: (lv_name_0_0= RULE_ID )
+            // ../org.eclipse.xtext.cfeditor/src-gen/org/eclipse/xtext/parser/antlr/internal/InternalCfeditor.g:1004:3: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyComponent1713); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyComponent1814); 
 
             			createLeafNode(grammarAccess.getBodyComponentAccess().getNameIDTerminalRuleCall_0(), "name"); 
             		
@@ -2104,52 +2251,57 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleBundle629 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_15_in_ruleBundle664 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_ruleBundleComponent_in_ruleBundle685 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBundle702 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleBundle717 = new BitSet(new long[]{0x0000000000040020L});
-    public static final BitSet FOLLOW_ruleBundlePromiseType_in_ruleBundle739 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleBundle749 = new BitSet(new long[]{0x0000000000047C70L});
-    public static final BitSet FOLLOW_rulePLACEHOLDER_in_ruleBundle759 = new BitSet(new long[]{0x0000000000047C70L});
-    public static final BitSet FOLLOW_18_in_ruleBundle765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBody_in_entryRuleBody801 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBody811 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleBody846 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleBodyComponent_in_ruleBody867 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBody884 = new BitSet(new long[]{0x0000000000017C70L});
-    public static final BitSet FOLLOW_rulePLACEHOLDER_in_ruleBody899 = new BitSet(new long[]{0x0000000000017C70L});
-    public static final BitSet FOLLOW_16_in_ruleBody903 = new BitSet(new long[]{0x0000000000040020L});
-    public static final BitSet FOLLOW_ruleBodyFunction_in_ruleBody924 = new BitSet(new long[]{0x0000000000040020L});
-    public static final BitSet FOLLOW_18_in_ruleBody935 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyFunction_in_entryRuleBodyFunction971 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBodyFunction981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyPromiseType_in_ruleBodyFunction1027 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_10_in_ruleBodyFunction1037 = new BitSet(new long[]{0x0000000000010060L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction1055 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_16_in_ruleBodyFunction1077 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction1094 = new BitSet(new long[]{0x0000000000041000L});
-    public static final BitSet FOLLOW_12_in_ruleBodyFunction1110 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction1127 = new BitSet(new long[]{0x0000000000041000L});
-    public static final BitSet FOLLOW_18_in_ruleBodyFunction1144 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ruleSpecialFunction_in_ruleBodyFunction1172 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_ruleBodyFunction1183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSpecialFunction_in_entryRuleSpecialFunction1219 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSpecialFunction1229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction1271 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleSpecialFunction1286 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSpecialFunction1303 = new BitSet(new long[]{0x0000000000005000L});
-    public static final BitSet FOLLOW_12_in_ruleSpecialFunction1319 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSpecialFunction1336 = new BitSet(new long[]{0x0000000000005000L});
-    public static final BitSet FOLLOW_14_in_ruleSpecialFunction1353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType1389 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBundlePromiseType1399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBundlePromiseType1440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType1480 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBodyPromiseType1490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyPromiseType1531 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent1571 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBundleComponent1581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBundleComponent1622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent1662 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBodyComponent1672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyComponent1713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBundle702 = new BitSet(new long[]{0x0000000000017C70L});
+    public static final BitSet FOLLOW_rulePLACEHOLDER_in_ruleBundle717 = new BitSet(new long[]{0x0000000000017C70L});
+    public static final BitSet FOLLOW_16_in_ruleBundle721 = new BitSet(new long[]{0x0000000000040020L});
+    public static final BitSet FOLLOW_ruleBundlePromiseType_in_ruleBundle743 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_ruleBundle753 = new BitSet(new long[]{0x0000000000047C70L});
+    public static final BitSet FOLLOW_rulePLACEHOLDER_in_ruleBundle763 = new BitSet(new long[]{0x0000000000047C70L});
+    public static final BitSet FOLLOW_18_in_ruleBundle769 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBody_in_entryRuleBody805 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBody815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleBody850 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleBodyComponent_in_ruleBody871 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBody888 = new BitSet(new long[]{0x0000000000012000L});
+    public static final BitSet FOLLOW_13_in_ruleBody904 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBody921 = new BitSet(new long[]{0x0000000000005000L});
+    public static final BitSet FOLLOW_12_in_ruleBody937 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBody954 = new BitSet(new long[]{0x0000000000005000L});
+    public static final BitSet FOLLOW_14_in_ruleBody971 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleBody983 = new BitSet(new long[]{0x0000000000040020L});
+    public static final BitSet FOLLOW_ruleBodyFunction_in_ruleBody1004 = new BitSet(new long[]{0x0000000000040020L});
+    public static final BitSet FOLLOW_18_in_ruleBody1015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyFunction_in_entryRuleBodyFunction1051 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBodyFunction1061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyPromiseType_in_ruleBodyFunction1107 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_10_in_ruleBodyFunction1117 = new BitSet(new long[]{0x0000000000010060L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction1135 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_16_in_ruleBodyFunction1165 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction1195 = new BitSet(new long[]{0x0000000000041000L});
+    public static final BitSet FOLLOW_12_in_ruleBodyFunction1211 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction1228 = new BitSet(new long[]{0x0000000000041000L});
+    public static final BitSet FOLLOW_18_in_ruleBodyFunction1245 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_ruleSpecialFunction_in_ruleBodyFunction1273 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_ruleBodyFunction1284 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSpecialFunction_in_entryRuleSpecialFunction1320 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSpecialFunction1330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction1372 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_ruleSpecialFunction1387 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSpecialFunction1404 = new BitSet(new long[]{0x0000000000005000L});
+    public static final BitSet FOLLOW_12_in_ruleSpecialFunction1420 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSpecialFunction1437 = new BitSet(new long[]{0x0000000000005000L});
+    public static final BitSet FOLLOW_14_in_ruleSpecialFunction1454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType1490 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBundlePromiseType1500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBundlePromiseType1541 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType1581 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBodyPromiseType1591 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyPromiseType1632 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent1672 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBundleComponent1682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBundleComponent1723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent1763 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBodyComponent1773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyComponent1814 = new BitSet(new long[]{0x0000000000000002L});
 
 }

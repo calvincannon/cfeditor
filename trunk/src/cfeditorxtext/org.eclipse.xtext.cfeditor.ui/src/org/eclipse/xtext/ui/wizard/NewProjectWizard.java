@@ -14,6 +14,7 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.dialogs.WizardNewProjectCreationPage;
+import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.ui.wizards.newresource.BasicNewProjectResourceWizard;
 import org.eclipse.xtext.ui.util.FileOpener;
 
@@ -150,6 +151,7 @@ public class NewProjectWizard extends Wizard implements INewWizard, IExecutableE
 		mainPage = new WizardNewProjectCreationPage("Cfeditor Project Wizard");
 		mainPage.setTitle("Create a Cfeditor Project");
 		mainPage.setDescription("Enter a project name.");
+		mainPage.setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("org.eclipse.xtext.cfeditor.ui", "icons/logo-blau.png"));
 		addPage(mainPage);
 	}
 

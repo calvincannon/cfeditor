@@ -22,11 +22,13 @@
     </genClasses>
     <genClasses ecoreClass="Cfeditor.ecore#//Body">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//Body/component"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//Body/variables"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//Body/promiseType"/>
     </genClasses>
     <genClasses ecoreClass="Cfeditor.ecore#//BodyFunction">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//BodyFunction/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//BodyFunction/values"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//BodyFunction/List"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//BodyFunction/function"/>
     </genClasses>
     <genClasses ecoreClass="Cfeditor.ecore#//SpecialFunction">

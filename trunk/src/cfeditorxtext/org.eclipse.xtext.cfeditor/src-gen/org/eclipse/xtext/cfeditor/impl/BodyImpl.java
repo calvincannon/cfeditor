@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -34,6 +35,7 @@ import org.eclipse.xtext.cfeditor.CfeditorPackage;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipse.xtext.cfeditor.impl.BodyImpl#getComponent <em>Component</em>}</li>
+ *   <li>{@link org.eclipse.xtext.cfeditor.impl.BodyImpl#getVariables <em>Variables</em>}</li>
  *   <li>{@link org.eclipse.xtext.cfeditor.impl.BodyImpl#getPromiseType <em>Promise Type</em>}</li>
  * </ul>
  * </p>
@@ -51,6 +53,16 @@ public class BodyImpl extends PartImpl implements Body
    * @ordered
    */
   protected BodyComponent component;
+
+  /**
+   * The cached value of the '{@link #getVariables() <em>Variables</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getVariables()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> variables;
 
   /**
    * The cached value of the '{@link #getPromiseType() <em>Promise Type</em>}' containment reference list.
@@ -136,6 +148,20 @@ public class BodyImpl extends PartImpl implements Body
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<String> getVariables()
+  {
+    if (variables == null)
+    {
+      variables = new EDataTypeEList<String>(String.class, this, CfeditorPackage.BODY__VARIABLES);
+    }
+    return variables;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<BodyFunction> getPromiseType()
   {
     if (promiseType == null)
@@ -175,6 +201,8 @@ public class BodyImpl extends PartImpl implements Body
     {
       case CfeditorPackage.BODY__COMPONENT:
         return getComponent();
+      case CfeditorPackage.BODY__VARIABLES:
+        return getVariables();
       case CfeditorPackage.BODY__PROMISE_TYPE:
         return getPromiseType();
     }
@@ -194,6 +222,10 @@ public class BodyImpl extends PartImpl implements Body
     {
       case CfeditorPackage.BODY__COMPONENT:
         setComponent((BodyComponent)newValue);
+        return;
+      case CfeditorPackage.BODY__VARIABLES:
+        getVariables().clear();
+        getVariables().addAll((Collection<? extends String>)newValue);
         return;
       case CfeditorPackage.BODY__PROMISE_TYPE:
         getPromiseType().clear();
@@ -216,6 +248,9 @@ public class BodyImpl extends PartImpl implements Body
       case CfeditorPackage.BODY__COMPONENT:
         setComponent((BodyComponent)null);
         return;
+      case CfeditorPackage.BODY__VARIABLES:
+        getVariables().clear();
+        return;
       case CfeditorPackage.BODY__PROMISE_TYPE:
         getPromiseType().clear();
         return;
@@ -235,10 +270,29 @@ public class BodyImpl extends PartImpl implements Body
     {
       case CfeditorPackage.BODY__COMPONENT:
         return component != null;
+      case CfeditorPackage.BODY__VARIABLES:
+        return variables != null && !variables.isEmpty();
       case CfeditorPackage.BODY__PROMISE_TYPE:
         return promiseType != null && !promiseType.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (variables: ");
+    result.append(variables);
+    result.append(')');
+    return result.toString();
   }
 
 } //BodyImpl

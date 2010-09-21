@@ -343,16 +343,16 @@ ruleBundle returns [EObject current=null]
 	    }
 
 )
-)	'{' 
+)(rulePLACEHOLDER)*	'{' 
     {
-        createLeafNode(grammarAccess.getBundleAccess().getLeftCurlyBracketKeyword_3(), null); 
+        createLeafNode(grammarAccess.getBundleAccess().getLeftCurlyBracketKeyword_4(), null); 
     }
 ((
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getBundleAccess().getPromiseTypeBundlePromiseTypeParserRuleCall_4_0_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getBundleAccess().getPromiseTypeBundlePromiseTypeParserRuleCall_5_0_0(), currentNode); 
 	    }
-		lv_promiseType_4_0=ruleBundlePromiseType		{
+		lv_promiseType_5_0=ruleBundlePromiseType		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getBundleRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -361,7 +361,7 @@ ruleBundle returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"promiseType",
-	        		lv_promiseType_4_0, 
+	        		lv_promiseType_5_0, 
 	        		"BundlePromiseType", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -373,11 +373,11 @@ ruleBundle returns [EObject current=null]
 )
 )	':' 
     {
-        createLeafNode(grammarAccess.getBundleAccess().getColonKeyword_4_1(), null); 
+        createLeafNode(grammarAccess.getBundleAccess().getColonKeyword_5_1(), null); 
     }
 (rulePLACEHOLDER)*)*	'}' 
     {
-        createLeafNode(grammarAccess.getBundleAccess().getRightCurlyBracketKeyword_5(), null); 
+        createLeafNode(grammarAccess.getBundleAccess().getRightCurlyBracketKeyword_6(), null); 
     }
 )
 ;
@@ -454,7 +454,67 @@ ruleBody returns [EObject current=null]
 	    }
 
 )
-)(rulePLACEHOLDER)*	'{' 
+)(	'(' 
+    {
+        createLeafNode(grammarAccess.getBodyAccess().getLeftParenthesisKeyword_3_0(), null); 
+    }
+(
+(
+		lv_variables_4_0=RULE_ID
+		{
+			createLeafNode(grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_1_0(), "variables"); 
+		}
+		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getBodyRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+	        try {
+	       		add(
+	       			$current, 
+	       			"variables",
+	        		lv_variables_4_0, 
+	        		"ID", 
+	        		lastConsumedNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	    }
+
+)
+)(	',' 
+    {
+        createLeafNode(grammarAccess.getBodyAccess().getCommaKeyword_3_2_0(), null); 
+    }
+(
+(
+		lv_variables_6_0=RULE_ID
+		{
+			createLeafNode(grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_2_1_0(), "variables"); 
+		}
+		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getBodyRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+	        try {
+	       		add(
+	       			$current, 
+	       			"variables",
+	        		lv_variables_6_0, 
+	        		"ID", 
+	        		lastConsumedNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	    }
+
+)
+))*	')' 
+    {
+        createLeafNode(grammarAccess.getBodyAccess().getRightParenthesisKeyword_3_3(), null); 
+    }
+)?	'{' 
     {
         createLeafNode(grammarAccess.getBodyAccess().getLeftCurlyBracketKeyword_4(), null); 
     }
@@ -463,7 +523,7 @@ ruleBody returns [EObject current=null]
 		{ 
 	        currentNode=createCompositeNode(grammarAccess.getBodyAccess().getPromiseTypeBodyFunctionParserRuleCall_5_0(), currentNode); 
 	    }
-		lv_promiseType_5_0=ruleBodyFunction		{
+		lv_promiseType_9_0=ruleBodyFunction		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getBodyRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -472,7 +532,7 @@ ruleBody returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"promiseType",
-	        		lv_promiseType_5_0, 
+	        		lv_promiseType_9_0, 
 	        		"BodyFunction", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -562,11 +622,28 @@ ruleBodyFunction returns [EObject current=null]
 
 )
 )
-    |(	'{' 
-    {
-        createLeafNode(grammarAccess.getBodyFunctionAccess().getLeftCurlyBracketKeyword_2_1_0(), null); 
-    }
+    |((
 (
+		lv_List_3_0=	'{' 
+    {
+        createLeafNode(grammarAccess.getBodyFunctionAccess().getListLeftCurlyBracketKeyword_2_1_0_0(), "List"); 
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getBodyFunctionRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+	        
+	        try {
+	       		set($current, "List", true, "{", lastConsumedNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	    }
+
+)
+)(
 (
 		lv_values_4_0=RULE_STRING
 		{

@@ -37,6 +37,7 @@ import org.eclipse.xtext.cfeditor.SpecialFunction;
  * <ul>
  *   <li>{@link org.eclipse.xtext.cfeditor.impl.BodyFunctionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.xtext.cfeditor.impl.BodyFunctionImpl#getValues <em>Values</em>}</li>
+ *   <li>{@link org.eclipse.xtext.cfeditor.impl.BodyFunctionImpl#isList <em>List</em>}</li>
  *   <li>{@link org.eclipse.xtext.cfeditor.impl.BodyFunctionImpl#getFunction <em>Function</em>}</li>
  * </ul>
  * </p>
@@ -64,6 +65,26 @@ public class BodyFunctionImpl extends MinimalEObjectImpl.Container implements Bo
    * @ordered
    */
   protected EList<String> values;
+
+  /**
+   * The default value of the '{@link #isList() <em>List</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isList()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean LIST_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isList() <em>List</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isList()
+   * @generated
+   * @ordered
+   */
+  protected boolean list = LIST_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getFunction() <em>Function</em>}' containment reference list.
@@ -163,6 +184,29 @@ public class BodyFunctionImpl extends MinimalEObjectImpl.Container implements Bo
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isList()
+  {
+    return list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setList(boolean newList)
+  {
+    boolean oldList = list;
+    list = newList;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CfeditorPackage.BODY_FUNCTION__LIST, oldList, list));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<SpecialFunction> getFunction()
   {
     if (function == null)
@@ -204,6 +248,8 @@ public class BodyFunctionImpl extends MinimalEObjectImpl.Container implements Bo
         return getName();
       case CfeditorPackage.BODY_FUNCTION__VALUES:
         return getValues();
+      case CfeditorPackage.BODY_FUNCTION__LIST:
+        return isList();
       case CfeditorPackage.BODY_FUNCTION__FUNCTION:
         return getFunction();
     }
@@ -227,6 +273,9 @@ public class BodyFunctionImpl extends MinimalEObjectImpl.Container implements Bo
       case CfeditorPackage.BODY_FUNCTION__VALUES:
         getValues().clear();
         getValues().addAll((Collection<? extends String>)newValue);
+        return;
+      case CfeditorPackage.BODY_FUNCTION__LIST:
+        setList((Boolean)newValue);
         return;
       case CfeditorPackage.BODY_FUNCTION__FUNCTION:
         getFunction().clear();
@@ -252,6 +301,9 @@ public class BodyFunctionImpl extends MinimalEObjectImpl.Container implements Bo
       case CfeditorPackage.BODY_FUNCTION__VALUES:
         getValues().clear();
         return;
+      case CfeditorPackage.BODY_FUNCTION__LIST:
+        setList(LIST_EDEFAULT);
+        return;
       case CfeditorPackage.BODY_FUNCTION__FUNCTION:
         getFunction().clear();
         return;
@@ -273,6 +325,8 @@ public class BodyFunctionImpl extends MinimalEObjectImpl.Container implements Bo
         return name != null;
       case CfeditorPackage.BODY_FUNCTION__VALUES:
         return values != null && !values.isEmpty();
+      case CfeditorPackage.BODY_FUNCTION__LIST:
+        return list != LIST_EDEFAULT;
       case CfeditorPackage.BODY_FUNCTION__FUNCTION:
         return function != null && !function.isEmpty();
     }
@@ -292,6 +346,8 @@ public class BodyFunctionImpl extends MinimalEObjectImpl.Container implements Bo
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (values: ");
     result.append(values);
+    result.append(", List: ");
+    result.append(list);
     result.append(')');
     return result.toString();
   }

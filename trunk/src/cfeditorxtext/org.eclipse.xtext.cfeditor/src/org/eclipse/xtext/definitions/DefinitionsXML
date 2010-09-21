@@ -55,7 +55,7 @@
     <promisetype name="stime_range" type="IRANGE" range="0,2147483647" />
     <promisetype name="check_root" type="OPTION" range="true,false,yes,no,on,off" />
     <promisetype name="package_arch_regex" type="STRING" range="" />
-    <promisetype name="include_end_delimiter" type="OPTION" range="true, false,yes,no,on,off" />
+    <promisetype name="include_end_delimiter" type="OPTION" range="true,false,yes,no,on,off" />
     <promisetype name="ctime" type="IRANGE" range="0,2147483647" />
     <promisetype name="acl_method" type="OPTION" range="append,overwrite" />
     <promisetype name="preview" type="OPTION" range="true,false,yes,no,on,off" />
@@ -63,7 +63,7 @@
     <promisetype name="owners" type="SLIST" range="[a-zA-Z0-9_$.-]+" />
     <promisetype name="select_start" type="STRING" range="" />
     <promisetype name="type_check" type="OPTION" range="true,false,yes,no,on,off" />
-    <promisetype name="rxdirs" type="OPTION" range="true, false,yes,no,on,off" />
+    <promisetype name="rxdirs" type="OPTION" range="true,false,yes,no,on,off" />
     <promisetype name="cancel_repaired" type="SLIST" range="[a-zA-Z0-9_$()\[\].]+" />
     <promisetype name="env_addresses" type="SLIST" range="" />
     <promisetype name="delete_if_contains_from_list" type="SLIST" range="" />
@@ -72,13 +72,13 @@
     <promisetype name="acl_type" type="OPTION" range="generic,posix,ntfs" />
     <promisetype name="empty_file_before_editing" type="OPTION" range="true,false,yes,no,on,off" />
     <promisetype name="link_type" type="OPTION" range="symlink,hardlink,relative,absolute,none" />
-    <promisetype name="extend_fields" type="OPTION" range="true, false,yes,no,on,off" />
+    <promisetype name="extend_fields" type="OPTION" range="true,false,yes,no,on,off" />
     <promisetype name="log_repaired" type="STRING" range="stdout|udp_syslog|(&quot;?[a-zA-Z]:\\.*)|(/.*)" />
     <promisetype name="package_name_regex" type="STRING" range="" />
     <promisetype name="copylink_patterns" type="SLIST" range="" />
     <promisetype name="db_server_type" type="OPTION" range="postgres,mysql" />
     <promisetype name="number_of_lines" type="INT" range="0,99999999999" />
-    <promisetype name="allow_blank_fields" type="OPTION" range="true, false,yes,no,on,off" />
+    <promisetype name="allow_blank_fields" type="OPTION" range="true,false,yes,no,on,off" />
     <promisetype name="package_list_arch_regex" type="STRING" range="" />
     <promisetype name="ipv4_netmask" type="STRING" range="[0-9.]+/[0-4]+" />
     <promisetype name="service_autostart_policy" type="OPTION" range="none,boot_time,on_demand" />
@@ -124,14 +124,14 @@
     <promisetype name="package_patch_list_command" type="STRING" range="&quot;?(([a-zA-Z]:\\.*)|(/.*))" />
     <promisetype name="package_patch_version_regex" type="STRING" range="" />
     <promisetype name="log_string" type="STRING" range="" />
-    <promisetype name="include_start_delimiter" type="OPTION" range="true, false,yes,no,on,off" />
+    <promisetype name="include_start_delimiter" type="OPTION" range="true,false,yes,no,on,off" />
     <promisetype name="recognize_join" type="OPTION" range="true,false,yes,no,on,off" />
     <promisetype name="package_delete_command" type="STRING" range="&quot;?(([a-zA-Z]:\\.*)|(/.*))" />
     <promisetype name="package_noverify_returncode" type="INT" range="-99999999999,9999999999" />
     <promisetype name="disable_mode" type="STRING" range="[0-7augorwxst,+-]+" />
     <promisetype name="servers" type="SLIST" range="[A-Za-z0-9_.:-]+" />
     <promisetype name="acl_directory_inherit" type="OPTION" range="nochange,parent,specify,clear" />
-    <promisetype name="disable" type="OPTION" range="true, false,yes,no,on,off" />
+    <promisetype name="disable" type="OPTION" range="true,false,yes,no,on,off" />
     <promisetype name="package_name_convention" type="STRING" range="" />
     <promisetype name="ppid" type="IRANGE" range="0,99999999999" />
     <promisetype name="select_line_number" type="INT" range="0,99999999999" />
