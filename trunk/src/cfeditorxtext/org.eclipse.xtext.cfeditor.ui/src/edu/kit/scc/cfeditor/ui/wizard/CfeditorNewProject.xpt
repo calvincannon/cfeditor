@@ -1,4 +1,4 @@
-«IMPORT org::eclipse::xtext::ui::wizard»
+«IMPORT edu::kit::scc:cfeditor::ui::wizard»
 
 «DEFINE main FOR CfeditorProjectInfo»
 «EXPAND model FOR this»
