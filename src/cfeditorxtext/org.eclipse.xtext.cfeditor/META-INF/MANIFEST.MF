@@ -21,13 +21,12 @@ Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: edu.kit.scc.cfeditor,
  edu.kit.scc.cfeditor.definitions,
  edu.kit.scc.cfeditor.validation,
- org.eclipse.xtext.cfeditor,
- org.eclipse.xtext.cfeditor.impl,
- org.eclipse.xtext.cfeditor.util,
- org.eclipse.xtext.parseTreeConstruction,
- org.eclipse.xtext.parser.antlr,
- org.eclipse.xtext.parser.antlr.internal,
- org.eclipse.xtext.services
+ edu.kit.scc.cfeditor.services,
+ edu.kit.scc.cfeditor.cfeditor,
+ edu.kit.scc.cfeditor.cfeditor.impl,
+ edu.kit.scc.cfeditor.cfeditor.util,
+ edu.kit.scc.cfeditor.parseTreeConstruction,
+ edu.kit.scc.cfeditor.parser.antlr,
+ edu.kit.scc.cfeditor.parser.antlr.internal
 Bundle-Vendor: KIT/SCC
-Bundle-ClassPath: lib/jdom.jar,
- .
+Bundle-ClassPath: lib/jdom.jar,.

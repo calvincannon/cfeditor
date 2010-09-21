@@ -10,13 +10,12 @@ import java.util.LinkedList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.text.contentassist.ICompletionProposal;
 import org.eclipse.xtext.Assignment;
-import org.eclipse.xtext.cfeditor.Body;
-import org.eclipse.xtext.cfeditor.BodyFunction;
-import org.eclipse.xtext.cfeditor.Bundle;
-import org.eclipse.xtext.ui.contentassist.AbstractCfeditorProposalProvider;
 import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext;
 import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor;
 
+import edu.kit.scc.cfeditor.cfeditor.Body;
+import edu.kit.scc.cfeditor.cfeditor.BodyFunction;
+import edu.kit.scc.cfeditor.cfeditor.Bundle;
 import edu.kit.scc.cfeditor.definitions.CfDefinitionProvider;
 import edu.kit.scc.cfeditor.validation.CfFunctionType;
 

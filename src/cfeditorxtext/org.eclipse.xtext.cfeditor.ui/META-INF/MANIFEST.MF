@@ -20,5 +20,5 @@ Require-Bundle: edu.kit.scc.cfeditor;visibility:=reexport,
  com.google.collect
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.eclipse.xtext.ui.contentassist.antlr
+Export-Package: edu.kit.scc.cfeditor.ui.contentassist.antlr
 Bundle-Activator: org.eclipse.xtext.ui.internal.CfeditorActivator

@@ -5,9 +5,9 @@
 
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
-       uri = "http://www.eclipse.org/xtext/Cfeditor" 
-       class = "org.eclipse.xtext.cfeditor.CfeditorPackage"
-       genModel = "org/eclipse/xtext/Cfeditor.genmodel" /> 
+       uri = "http://www.kit.edu/scc/cfeditor/Cfeditor" 
+       class = "edu.kit.scc.cfeditor.cfeditor.CfeditorPackage"
+       genModel = "edu/kit/scc/cfeditor/Cfeditor.genmodel" /> 
 	
   </extension>
 

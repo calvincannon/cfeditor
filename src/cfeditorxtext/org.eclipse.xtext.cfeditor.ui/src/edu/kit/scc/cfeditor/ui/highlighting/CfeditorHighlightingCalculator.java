@@ -1,10 +1,6 @@
 package edu.kit.scc.cfeditor.ui.highlighting;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.xtext.cfeditor.BodyComponent;
-import org.eclipse.xtext.cfeditor.BodyPromiseType;
-import org.eclipse.xtext.cfeditor.BundleComponent;
-import org.eclipse.xtext.cfeditor.BundlePromiseType;
 import org.eclipse.xtext.parsetree.AbstractNode;
 import org.eclipse.xtext.parsetree.CompositeNode;
 import org.eclipse.xtext.parsetree.LeafNode;
@@ -13,6 +9,11 @@ import org.eclipse.xtext.parsetree.NodeUtil;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightedPositionAcceptor;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.ISemanticHighlightingCalculator;
+
+import edu.kit.scc.cfeditor.cfeditor.BodyComponent;
+import edu.kit.scc.cfeditor.cfeditor.BodyPromiseType;
+import edu.kit.scc.cfeditor.cfeditor.BundleComponent;
+import edu.kit.scc.cfeditor.cfeditor.BundlePromiseType;
 
 /**
  * Semantic highlighting calculator. Computes highlighting rules based on the

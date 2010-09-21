@@ -5,17 +5,16 @@ import java.util.LinkedList;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.xtext.cfeditor.Body;
-import org.eclipse.xtext.cfeditor.BodyFunction;
-import org.eclipse.xtext.cfeditor.BodyPromiseType;
-import org.eclipse.xtext.cfeditor.Bundle;
-import org.eclipse.xtext.cfeditor.BundlePromiseType;
-import org.eclipse.xtext.cfeditor.CfeditorPackage;
 import org.eclipse.xtext.parsetree.CompositeNode;
 import org.eclipse.xtext.parsetree.NodeUtil;
-import org.eclipse.xtext.validation.AbstractCfeditorJavaValidator;
 import org.eclipse.xtext.validation.Check;
 
+import edu.kit.scc.cfeditor.cfeditor.Body;
+import edu.kit.scc.cfeditor.cfeditor.BodyFunction;
+import edu.kit.scc.cfeditor.cfeditor.BodyPromiseType;
+import edu.kit.scc.cfeditor.cfeditor.Bundle;
+import edu.kit.scc.cfeditor.cfeditor.BundlePromiseType;
+import edu.kit.scc.cfeditor.cfeditor.CfeditorPackage;
 import edu.kit.scc.cfeditor.definitions.CfDefinitionProvider;
 
 /**
