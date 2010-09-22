@@ -102,7 +102,7 @@ public class CfeditorNewProjectCreator extends AbstractProjectCreator {
 		execCtx.registerMetaModel(new JavaBeansMetaModel());
 
 		XpandFacade facade = XpandFacade.create(execCtx);
-		facade.evaluate("org::eclipse::xtext::ui::wizard::CfeditorNewProject::main", getProjectInfo());
+		facade.evaluate("edu::kit::scc::cfeditor::ui::wizard::CfeditorNewProject::main", getProjectInfo());
 
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
