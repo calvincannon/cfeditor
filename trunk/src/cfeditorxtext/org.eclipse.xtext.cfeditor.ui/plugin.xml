@@ -188,7 +188,7 @@
             category="cfeditor.category.wizards"
             class="edu.kit.scc.cfeditor.ui.CfeditorExecutableExtensionFactory:edu.kit.scc.cfeditor.ui.wizard.NewProjectWizard"
             finalPerspective="cfeditor.perspective"
-            icon="icons/editor.gif"
+            icon="icons/Cfeditor.png"
             id="org.eclipse.xtext.ui.wizard.CfeditorNewProjectWizard"
             name="Cfeditor Project"
             project="true">
@@ -209,8 +209,8 @@
    <extension
          point="org.eclipse.ui.perspectives">
       <perspective
-            class="edu.kit.scc.cfeditor.perspectives.CfPerspective"
-            icon="icons/CfeditorPerspective.png"
+            class="edu.kit.scc.cfeditor.ui.perspectives.CfPerspective"
+            icon="icons/CfeditorPerspectiveVerlauf.png"
             id="cfeditor.perspective"
             name="Cfeditor">
       </perspective>
