@@ -146,7 +146,7 @@ public class CfFunctionValidator {
 	// return true;
 	// }
 	public Boolean isVariable(String value) {
-		return value.matches("\\$\\(.*\\)");
+		return value.matches("\\$\\(.*\\)")||value.matches("\\$\\{.*\\}");
 	}
 
 	public String getVariableFromString(String value) {
