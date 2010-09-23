@@ -43,6 +43,17 @@ public class CfFunctionValidator {
 						errorString = customMessage;
 					}
 					break;
+				case REAL:
+					if (isList) {
+						errorString = "List \"{...}\" not allowed";
+					} else if (isVariable(values.get(0))) {
+						if (!isInVariables(values.get(0), variables)) {
+							errorString = "Variable not defined";
+						}
+					} else if (null != (customMessage = checkREAL(values.get(0), typeRange))) {
+						errorString = customMessage;
+					}
+					break;	
 				case SLIST:
 					if (!isList) {
 						errorString = "List \"{...}\" expected";
@@ -100,11 +111,10 @@ public class CfFunctionValidator {
 		try {
 			long intValue = Long.parseLong(value);
 
-			if (null != range) {
+			if (!range.isEmpty()) {
 				String[] bounds = range.split(",", 2);
 				long low = Long.parseLong(bounds[0]);
-				long high = Long.parseLong(bounds[1]);// TODO long or int
-														// ("0..9999..." or " ")
+				long high = Long.parseLong(bounds[1]);
 
 				if (intValue < low || intValue > high) {
 					return "Parameter is out of allowed range";
@@ -112,6 +122,25 @@ public class CfFunctionValidator {
 			}
 		} catch (NumberFormatException e) {
 			return "Parameter has to be int";
+		}
+		return null;
+	}
+	
+	public String checkREAL(String value, String range) {
+		try {
+			double doubleValue = Double.parseDouble(value);
+
+			if (!range.isEmpty()) {
+				String[] bounds = range.split(",", 2);
+				double low = Double.parseDouble(bounds[0]);
+				double high = Double.parseDouble(bounds[1]);
+
+				if (doubleValue < low || doubleValue > high) {
+					return "Parameter is out of allowed range";
+				}
+			}
+		} catch (NumberFormatException e) {
+			return "Parameter has to be a real number";
 		}
 		return null;
 	}
