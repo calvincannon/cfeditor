@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<part>
+<part xmlns="http://www.kit.edu/scc/Cfeditor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kit.edu/scc/Cfeditor Definitions.xsd">
   <body>
     <component name="package_method" promisetypes="package_add_command package_arch_regex package_changes package_delete_command package_delete_convention package_file_repositories package_installed_regex package_list_arch_regex package_list_command package_list_name_regex package_list_update_command package_list_update_ifelapsed package_list_version_regex package_name_convention package_name_regex package_noverify_regex package_noverify_returncode package_patch_arch_regex package_patch_command package_patch_installed_regex package_patch_list_command package_patch_name_regex package_patch_version_regex package_update_command package_verify_command package_version_regex package_multiline_start" />
     <component name="perms" promisetypes="bsdflags groups mode owners rxdirs" />
@@ -269,27 +269,27 @@
     <component name="server" promisetypes="vars classes reports access roles" />
     <component name="edit_line" promisetypes="vars classes reports delete_lines insert_lines" />
     <component name="agent" promisetypes="vars classes reports commands databases environments files interfaces methods outputs packages processes services storage" />
-    <promisetype name="vars" type="int" />
-    <promisetype name="classes" type="int" />
-    <promisetype name="reports" type="int" />
-    <promisetype name="topics" type="int" />
-    <promisetype name="occurrences" type="int" />
-    <promisetype name="inferences" type="int" />
-    <promisetype name="measurements" type="int" />
-    <promisetype name="access" type="int" />
-    <promisetype name="roles" type="int" />
-    <promisetype name="delete_lines" type="int" />
-    <promisetype name="insert_lines" type="int" />
-    <promisetype name="commands" type="int" />
-    <promisetype name="databases" type="int" />
-    <promisetype name="environments" type="int" />
-    <promisetype name="files" type="int" />
-    <promisetype name="interfaces" type="int" />
-    <promisetype name="methods" type="int" />
-    <promisetype name="outputs" type="int" />
-    <promisetype name="packages" type="int" />
-    <promisetype name="processes" type="int" />
-    <promisetype name="services" type="int" />
-    <promisetype name="storage" type="int" />
+    <promisetype name="vars" type="INT" />
+    <promisetype name="classes" type="INT" />
+    <promisetype name="reports" type="INT" />
+    <promisetype name="topics" type="INT" />
+    <promisetype name="occurrences" type="INT" />
+    <promisetype name="inferences" type="INT" />
+    <promisetype name="measurements" type="INT" />
+    <promisetype name="access" type="INT" />
+    <promisetype name="roles" type="INT" />
+    <promisetype name="delete_lines" type="INT" />
+    <promisetype name="insert_lines" type="INT" />
+    <promisetype name="commands" type="INT" />
+    <promisetype name="databases" type="INT" />
+    <promisetype name="environments" type="INT" />
+    <promisetype name="files" type="INT" />
+    <promisetype name="interfaces" type="INT" />
+    <promisetype name="methods" type="INT" />
+    <promisetype name="outputs" type="INT" />
+    <promisetype name="packages" type="INT" />
+    <promisetype name="processes" type="INT" />
+    <promisetype name="services" type="INT" />
+    <promisetype name="storage" type="INT" />
   </bundle>
 </part>

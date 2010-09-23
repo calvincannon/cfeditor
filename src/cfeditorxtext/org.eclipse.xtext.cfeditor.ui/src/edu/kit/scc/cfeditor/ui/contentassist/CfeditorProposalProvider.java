@@ -48,12 +48,13 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 		final Body body = (Body) model;
 		final LinkedList<String> promiseTypeList = promiseMap.get(body.getComponent().getName());
 		ICompletionProposal completionProposal;
-
-		// ArrayList<String> promiseTypeList =
-		// defProvider.getDefinitions("BodyPromiseTypes");
-		for (String promiseType : promiseTypeList) {
-			completionProposal = createCompletionProposal(promiseType, context);
-			acceptor.accept(completionProposal);
+		if (null != promiseTypeList) {
+			// ArrayList<String> promiseTypeList =
+			// defProvider.getDefinitions("BodyPromiseTypes");
+			for (String promiseType : promiseTypeList) {
+				completionProposal = createCompletionProposal(promiseType, context);
+				acceptor.accept(completionProposal);
+			}
 		}
 		// proposal = getValueConverter().toString(proposal, "ID");
 
@@ -123,7 +124,7 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 				String[] options = typeRange.split(",");
 
 				for (String option : options) {
-					completionProposal = createCompletionProposal('"'+option+'"', context);
+					completionProposal = createCompletionProposal('"' + option + '"', context);
 					acceptor.accept(completionProposal);
 				}
 			}

@@ -14,6 +14,7 @@ import java.util.StringTokenizer;
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.JDOMException;
+import org.jdom.Namespace;
 import org.jdom.input.SAXBuilder;
 
 /**
@@ -62,6 +63,8 @@ public final class CfDefinitionProvider {
 	 */
 	private CfDefinitionProvider() {
 	}
+	
+	private Namespace nsCfeditor=Namespace.getNamespace("http://www.kit.edu/scc/Cfeditor");
 
 	/**
 	 * Returns a list of the definition strings in a given file.
@@ -186,11 +189,12 @@ public final class CfDefinitionProvider {
 			LinkedList<String> linkedList;
 			final SAXBuilder builder = new SAXBuilder();
 			try {
-				final Document doc = builder.build(this.getClass().getResourceAsStream("DefinitionsXML"));
-				final AbstractList<Element> list = (AbstractList<Element>) doc.getRootElement().getChild("body")
-						.getChildren("component");
+				final Document doc = builder.build(this.getClass().getResourceAsStream("Definitions.xml"));
+				final AbstractList<Element> list = (AbstractList<Element>) doc.getRootElement().getChild("body",nsCfeditor)
+						.getChildren("component",nsCfeditor);
 				String componentName;
 				StringTokenizer tokenizer;
+			
 				for (Element component : list) {
 					componentName = component.getAttributeValue("name");
 					tokenizer = new StringTokenizer(component.getAttributeValue("promisetypes"));
@@ -220,9 +224,9 @@ public final class CfDefinitionProvider {
 		SAXBuilder builder = new SAXBuilder();
 
 		try {
-			Document doc = builder.build(this.getClass().getResourceAsStream("DefinitionsXML"));
-			AbstractList<Element> list = (AbstractList<Element>) doc.getRootElement().getChild("body")
-					.getChildren("promisetype");
+			Document doc = builder.build(this.getClass().getResourceAsStream("Definitions.xml"));
+			AbstractList<Element> list = (AbstractList<Element>) doc.getRootElement().getChild("body",nsCfeditor)
+					.getChildren("promisetype",nsCfeditor);
 			for (Element promiseType : list) {
 				promiseTypes.put(promiseType.getAttributeValue("name"),
 						new String[] { promiseType.getAttributeValue("type"), promiseType.getAttributeValue("range") });
