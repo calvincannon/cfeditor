@@ -2,6 +2,7 @@ package edu.kit.scc.cfeditor.ui.wizard;
 
 import java.util.List;
 
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
@@ -39,10 +40,12 @@ public class CfeditorNewProjectCreator extends AbstractProjectCreator {
 
 	/**
 	 * root folder which contains the cf file, which is opened after project
-	 * creation (important!)
+	 * creation (important if method "getModelFile" in class "AbstractProjectCreator" is used)
 	 */
 	protected static final String SRC_ROOT = "inputs";
 	// protected static final String SRC_GEN_ROOT = "src-genb";
+	
+	protected static final String MAIN_FILE = "inputs/promises.cf";
 
 	/**
 	 * list of all folders which are initially created
@@ -162,5 +165,10 @@ public class CfeditorNewProjectCreator extends AbstractProjectCreator {
 	// subMonitor.done();
 	// }
 	// }
+
+	protected IFile getModelFile(IProject project) throws CoreException {
+		IFile mainFile = project.getFile(MAIN_FILE);
+		return mainFile;
+	}
 
 }
