@@ -28,8 +28,9 @@ public class NewCfFileWizardPage extends WizardNewFileCreationPage {
 	public NewCfFileWizardPage(final IStructuredSelection selection) {
 		super("NewCfFileWizardPage", selection);
 		setTitle("Cf File");
-		setDescription("Creates a new Cf File");
+		setDescription("Create a new Cf File");
 		setFileExtension("cf");
+		setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("edu.kit.scc.cfeditor.ui", "icons/CfeditorWizard.png"));
 	}
 
 	/**

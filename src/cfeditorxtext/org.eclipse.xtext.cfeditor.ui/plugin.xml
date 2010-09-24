@@ -210,7 +210,7 @@
          point="org.eclipse.ui.perspectives">
       <perspective
             class="edu.kit.scc.cfeditor.ui.perspectives.CfPerspective"
-            icon="icons/CfeditorPerspectiveVerlauf.png"
+            icon="icons/Cfeditor.png"
             id="cfeditor.perspective"
             name="Cfeditor">
       </perspective>
