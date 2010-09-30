@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Cfeditor Core
-Bundle-Version: 0.1.2
+Bundle-Version: 0.1.2.2
 Bundle-SymbolicName: edu.kit.scc.cfeditor;singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
