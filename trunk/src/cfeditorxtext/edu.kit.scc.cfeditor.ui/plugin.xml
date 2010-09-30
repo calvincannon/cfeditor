@@ -280,6 +280,16 @@
     </enablement>
  </commonWizard>
 </extension>
+
+<extension point="org.eclipse.ui.intro.configExtension">
+    <configExtension
+         configId="org.eclipse.ui.intro.universalConfig" 
+         content="intro/overview.xml"/>  
+
+
+
+
+</extension>
    
 
 </plugin>

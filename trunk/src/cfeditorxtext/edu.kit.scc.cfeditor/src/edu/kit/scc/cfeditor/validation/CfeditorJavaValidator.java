@@ -10,6 +10,7 @@ import org.eclipse.xtext.parsetree.NodeUtil;
 import org.eclipse.xtext.validation.Check;
 
 import edu.kit.scc.cfeditor.cfeditor.Body;
+import edu.kit.scc.cfeditor.cfeditor.BodyClass;
 import edu.kit.scc.cfeditor.cfeditor.BodyFunction;
 import edu.kit.scc.cfeditor.cfeditor.BodyPromiseType;
 import edu.kit.scc.cfeditor.cfeditor.Bundle;
@@ -60,6 +61,12 @@ public class CfeditorJavaValidator extends AbstractCfeditorJavaValidator {
 	public void checkPromiseTypes(BodyPromiseType ptype) {
 		CompositeNode node = NodeUtil.getNode(ptype);
 		EObject eObj = NodeUtil.findASTParentElement(node.getParent());
+		
+		if (eObj instanceof BodyClass) {
+			node = NodeUtil.getNode(eObj);
+			eObj = NodeUtil.findASTParentElement(node);
+		}
+		
 		if (eObj instanceof Body) {
 			Body body = (Body) eObj;
 			CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
@@ -74,6 +81,11 @@ public class CfeditorJavaValidator extends AbstractCfeditorJavaValidator {
 		}
 	}
 
+	/**
+	 * Checks if the value of a BodyFunction is valid.
+	 * 
+	 * @param function
+	 */
 	@Check
 	public void checkBodyFunctionValues(BodyFunction function) {
 		String name = function.getName().getName();
@@ -84,11 +96,17 @@ public class CfeditorJavaValidator extends AbstractCfeditorJavaValidator {
 
 		CompositeNode node = NodeUtil.getNode(function);
 		EObject eObj = NodeUtil.findASTParentElement(node);
+		
+		if (eObj instanceof BodyClass) {
+			node = NodeUtil.getNode(eObj);
+			eObj = NodeUtil.findASTParentElement(node);
+		}
+		
 		if (eObj instanceof Body) {
 			Body body = (Body) eObj;
 			variables = body.getVariables();
 		}
-
+ //TODO BodyClass
 		String errorString = functionValidator.checkBodyFunction(name, values, isList, variables);
 		if (null != errorString) {
 			warning(errorString, CfeditorPackage.BODY_FUNCTION__NAME);

@@ -45,5 +45,7 @@ edit_line#classes
 edit_line#reports
 edit_line#delete_lines
 edit_line#insert_lines
+edit_line#replace_patterns
+edit_line#field_edits
 edit_xml
 usebundle

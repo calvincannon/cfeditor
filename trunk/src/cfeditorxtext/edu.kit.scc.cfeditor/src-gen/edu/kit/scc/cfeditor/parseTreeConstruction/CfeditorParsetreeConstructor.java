@@ -42,6 +42,7 @@ protected class ThisRootNode extends RootToken {
 			case 8: return new BodyPromiseType_NameAssignment(this, this, 8, inst);
 			case 9: return new BundleComponent_NameAssignment(this, this, 9, inst);
 			case 10: return new BodyComponent_NameAssignment(this, this, 10, inst);
+			case 11: return new BodyClass_Group(this, this, 11, inst);
 			default: return null;
 		}	
 	}	
@@ -102,6 +103,8 @@ protected class CfModel_ElementsAssignment extends AssignmentToken  {
 }
 
 /************ end Rule CfModel ****************/
+
+
 
 
 
@@ -269,13 +272,13 @@ protected class Part_BodyParserRuleCall_1 extends RuleCallToken {
 /************ begin Rule Bundle ****************
  *
  * Bundle:
- * 	"bundle" component=BundleComponent name=ID PLACEHOLDER* "{" (promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
- * 	/ *(methods+=Methode)* * / "}";
+ * 	"bundle" component=BundleComponent name=ID PLACEHOLDERB* "{" (promiseType+=BundlePromiseType ":" (PLACEHOLDERB | "{"
+ * 	"@" PLACEHOLDERB* "}")*)* "}";
  *
  **/
 
-// "bundle" component=BundleComponent name=ID PLACEHOLDER* "{" (promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
-// / *(methods+=Methode)* * / "}"
+// "bundle" component=BundleComponent name=ID PLACEHOLDERB* "{" (promiseType+=BundlePromiseType ":" (PLACEHOLDERB | "{" "@"
+// PLACEHOLDERB* "}")*)* "}"
 protected class Bundle_Group extends GroupToken {
 	
 	public Bundle_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -427,7 +430,7 @@ protected class Bundle_LeftCurlyBracketKeyword_4 extends KeywordToken  {
 
 }
 
-// (promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
+// (promiseType+=BundlePromiseType ":" (PLACEHOLDERB | "{" "@" PLACEHOLDERB* "}")*)*
 protected class Bundle_Group_5 extends GroupToken {
 	
 	public Bundle_Group_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -551,11 +554,12 @@ protected class Bundle_RightCurlyBracketKeyword_6 extends KeywordToken  {
  * //BodyPromiseType '=>' (values+=STRING | '{' values+=STRING
  * Body:
  * 	"body" component=BodyComponent name=ID ("(" variables+=ID ("," variables+=ID)* ")")? "{" promiseType+=BodyFunction*
- * 	"}";
+ * 	classes+=BodyClass* "}";
  *
  **/
 
-// "body" component=BodyComponent name=ID ("(" variables+=ID ("," variables+=ID)* ")")? "{" promiseType+=BodyFunction* "}"
+// "body" component=BodyComponent name=ID ("(" variables+=ID ("," variables+=ID)* ")")? "{" promiseType+=BodyFunction*
+// classes+=BodyClass* "}"
 protected class Body_Group extends GroupToken {
 	
 	public Body_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -570,7 +574,7 @@ protected class Body_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Body_RightCurlyBracketKeyword_6(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Body_RightCurlyBracketKeyword_7(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -937,23 +941,72 @@ protected class Body_PromiseTypeAssignment_5 extends AssignmentToken  {
 	}	
 }
 
-// "}"
-protected class Body_RightCurlyBracketKeyword_6 extends KeywordToken  {
+// classes+=BodyClass*
+protected class Body_ClassesAssignment_6 extends AssignmentToken  {
 	
-	public Body_RightCurlyBracketKeyword_6(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Body_ClassesAssignment_6(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_6();
+	public Assignment getGrammarElement() {
+		return grammarAccess.getBodyAccess().getClassesAssignment_6();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Body_PromiseTypeAssignment_5(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new Body_LeftCurlyBracketKeyword_4(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new BodyClass_Group(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("classes",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("classes");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getBodyClassRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getBodyAccess().getClassesBodyClassParserRuleCall_6_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new Body_ClassesAssignment_6(lastRuleCallOrigin, next, actIndex, consumed);
+			case 1: return new Body_PromiseTypeAssignment_5(lastRuleCallOrigin, next, actIndex, consumed);
+			case 2: return new Body_LeftCurlyBracketKeyword_4(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return null;
+		}	
+	}	
+}
+
+// "}"
+protected class Body_RightCurlyBracketKeyword_7 extends KeywordToken  {
+	
+	public Body_RightCurlyBracketKeyword_7(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_7();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Body_ClassesAssignment_6(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new Body_PromiseTypeAssignment_5(lastRuleCallOrigin, this, 1, inst);
+			case 2: return new Body_LeftCurlyBracketKeyword_4(lastRuleCallOrigin, this, 2, inst);
 			default: return null;
 		}	
 	}
@@ -967,14 +1020,15 @@ protected class Body_RightCurlyBracketKeyword_6 extends KeywordToken  {
 /************ begin Rule BodyFunction ****************
  *
  * //	(',' values+=STRING)* '}') ';'
+ * //TODO {@....}
  * BodyFunction:
  * 	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
- * 	function+=SpecialFunction) ";";
+ * 	function+=SpecialFunction | "{" "@" PLACEHOLDERB* "}") ";";
  *
  **/
 
 // name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
-// function+=SpecialFunction) ";"
+// function+=SpecialFunction | "{" "@" PLACEHOLDERB* "}") ";"
 protected class BodyFunction_Group extends GroupToken {
 	
 	public BodyFunction_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1070,7 +1124,8 @@ protected class BodyFunction_EqualsSignGreaterThanSignKeyword_1 extends KeywordT
 
 }
 
-// values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" | function+=SpecialFunction
+// values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" | function+=SpecialFunction | "{" "@" PLACEHOLDERB*
+// "}"
 protected class BodyFunction_Alternatives_2 extends AlternativesToken {
 
 	public BodyFunction_Alternatives_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1088,6 +1143,7 @@ protected class BodyFunction_Alternatives_2 extends AlternativesToken {
 			case 0: return new BodyFunction_ValuesAssignment_2_0(lastRuleCallOrigin, this, 0, inst);
 			case 1: return new BodyFunction_Group_2_1(lastRuleCallOrigin, this, 1, inst);
 			case 2: return new BodyFunction_FunctionAssignment_2_2(lastRuleCallOrigin, this, 2, inst);
+			case 3: return new BodyFunction_Group_2_3(lastRuleCallOrigin, this, 3, inst);
 			default: return null;
 		}	
 	}
@@ -1368,6 +1424,95 @@ protected class BodyFunction_FunctionAssignment_2_2 extends AssignmentToken  {
 	}	
 }
 
+// "{" "@" PLACEHOLDERB* "}"
+protected class BodyFunction_Group_2_3 extends GroupToken {
+	
+	public BodyFunction_Group_2_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Group getGrammarElement() {
+		return grammarAccess.getBodyFunctionAccess().getGroup_2_3();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new BodyFunction_RightCurlyBracketKeyword_2_3_3(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// "{"
+protected class BodyFunction_LeftCurlyBracketKeyword_2_3_0 extends KeywordToken  {
+	
+	public BodyFunction_LeftCurlyBracketKeyword_2_3_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getBodyFunctionAccess().getLeftCurlyBracketKeyword_2_3_0();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new BodyFunction_EqualsSignGreaterThanSignKeyword_1(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// "@"
+protected class BodyFunction_CommercialAtKeyword_2_3_1 extends KeywordToken  {
+	
+	public BodyFunction_CommercialAtKeyword_2_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getBodyFunctionAccess().getCommercialAtKeyword_2_3_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new BodyFunction_LeftCurlyBracketKeyword_2_3_0(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// "}"
+protected class BodyFunction_RightCurlyBracketKeyword_2_3_3 extends KeywordToken  {
+	
+	public BodyFunction_RightCurlyBracketKeyword_2_3_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getBodyFunctionAccess().getRightCurlyBracketKeyword_2_3_3();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new BodyFunction_CommercialAtKeyword_2_3_1(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+
 
 // ";"
 protected class BodyFunction_SemicolonKeyword_3 extends KeywordToken  {
@@ -1397,12 +1542,15 @@ protected class BodyFunction_SemicolonKeyword_3 extends KeywordToken  {
 
 /************ begin Rule SpecialFunction ****************
  *
+ * //TODO
  * SpecialFunction:
- * 	name=ID "(" parameters+=STRING ("," parameters+=STRING)* ")";
+ * 	name=ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+ * 	/ *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")";
  *
  **/
 
-// name=ID "(" parameters+=STRING ("," parameters+=STRING)* ")"
+// name=ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+// / *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")"
 protected class SpecialFunction_Group extends GroupToken {
 	
 	public SpecialFunction_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1417,7 +1565,7 @@ protected class SpecialFunction_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new SpecialFunction_RightParenthesisKeyword_4(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new SpecialFunction_RightParenthesisKeyword_3(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -1486,137 +1634,93 @@ protected class SpecialFunction_LeftParenthesisKeyword_1 extends KeywordToken  {
 
 }
 
-// parameters+=STRING
-protected class SpecialFunction_ParametersAssignment_2 extends AssignmentToken  {
-	
-	public SpecialFunction_ParametersAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+// (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+protected class SpecialFunction_Alternatives_2 extends AlternativesToken {
+
+	public SpecialFunction_Alternatives_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getSpecialFunctionAccess().getParametersAssignment_2();
+	public Alternatives getGrammarElement() {
+		return grammarAccess.getSpecialFunctionAccess().getAlternatives_2();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new SpecialFunction_LeftParenthesisKeyword_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new SpecialFunction_FuncAssignment_2_7(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// func+=SpecialFunction
+protected class SpecialFunction_FuncAssignment_2_7 extends AssignmentToken  {
+	
+	public SpecialFunction_FuncAssignment_2_7(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getSpecialFunctionAccess().getFuncAssignment_2_7();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new SpecialFunction_Group(this, this, 0, inst);
 			default: return null;
 		}	
 	}
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("parameters",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("parameters");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getSpecialFunctionAccess().getParametersSTRINGTerminalRuleCall_2_0(), value, null)) {
-			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getSpecialFunctionAccess().getParametersSTRINGTerminalRuleCall_2_0();
-			return obj;
+		if((value = eObjectConsumer.getConsumable("func",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("func");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getSpecialFunctionRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getSpecialFunctionAccess().getFuncSpecialFunctionParserRuleCall_2_7_0(); 
+				consumed = obj;
+				return param;
+			}
 		}
 		return null;
 	}
 
-}
-
-// ("," parameters+=STRING)*
-protected class SpecialFunction_Group_3 extends GroupToken {
-	
-	public SpecialFunction_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getSpecialFunctionAccess().getGroup_3();
-	}
-
     @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
-			case 0: return new SpecialFunction_ParametersAssignment_3_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new SpecialFunction_Alternatives_2(lastRuleCallOrigin, next, actIndex, consumed);
+			case 1: return new SpecialFunction_LeftParenthesisKeyword_1(lastRuleCallOrigin, next, actIndex, consumed);
 			default: return null;
 		}	
-	}
-
+	}	
 }
 
-// ","
-protected class SpecialFunction_CommaKeyword_3_0 extends KeywordToken  {
+
+// / *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")"
+protected class SpecialFunction_RightParenthesisKeyword_3 extends KeywordToken  {
 	
-	public SpecialFunction_CommaKeyword_3_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public SpecialFunction_RightParenthesisKeyword_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getSpecialFunctionAccess().getCommaKeyword_3_0();
+		return grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_3();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new SpecialFunction_Group_3(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new SpecialFunction_ParametersAssignment_2(lastRuleCallOrigin, this, 1, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// parameters+=STRING
-protected class SpecialFunction_ParametersAssignment_3_1 extends AssignmentToken  {
-	
-	public SpecialFunction_ParametersAssignment_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getSpecialFunctionAccess().getParametersAssignment_3_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new SpecialFunction_CommaKeyword_3_0(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("parameters",false)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("parameters");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getSpecialFunctionAccess().getParametersSTRINGTerminalRuleCall_3_1_0(), value, null)) {
-			type = AssignmentType.TERMINAL_RULE_CALL;
-			element = grammarAccess.getSpecialFunctionAccess().getParametersSTRINGTerminalRuleCall_3_1_0();
-			return obj;
-		}
-		return null;
-	}
-
-}
-
-
-// ")"
-protected class SpecialFunction_RightParenthesisKeyword_4 extends KeywordToken  {
-	
-	public SpecialFunction_RightParenthesisKeyword_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_4();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new SpecialFunction_Group_3(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new SpecialFunction_ParametersAssignment_2(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new SpecialFunction_Alternatives_2(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new SpecialFunction_LeftParenthesisKeyword_1(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -1629,11 +1733,7 @@ protected class SpecialFunction_RightParenthesisKeyword_4 extends KeywordToken  
 
 /************ begin Rule BundlePromiseType ****************
  *
- * / *Methode:
- * name=STRING (';'|zuweisung+=Zuweisung (','zuweisung+=Zuweisung)*';');
- * 
- * Zuweisung:
- * name=ID ('=>' (ID|STRING)* )?;* /BundlePromiseType:
+ * BundlePromiseType:
  * 	name=ID;
  *
  **/
@@ -1678,10 +1778,7 @@ protected class BundlePromiseType_NameAssignment extends AssignmentToken  {
 
 /************ begin Rule BodyPromiseType ****************
  *
- * / *BundlePromiseType:
- * 	name=('access' | 'classes' | 'commands' | 'databases' | 'environments' | 'files' | 'inferences' | 'interfaces' |
- * 	'measurements' | 'methods' | 'occurrences' | 'outputs' | 'packages' | 'processes' | 'reports' | 'roles' | 'services' |
- * 	'storage' | 'topics' | 'vars');* /BodyPromiseType:
+ * BodyPromiseType:
  * 	name=ID;
  *
  **/
@@ -1726,53 +1823,12 @@ protected class BodyPromiseType_NameAssignment extends AssignmentToken  {
 
 /************ begin Rule BundleComponent ****************
  *
- * / *BodyPromiseType:
- * 	name=('aces' | 'acl_directory_inherit' | 'acl_method' | 'acl_type' | 'action_policy' | 'allow_blank_fields' |
- * 	'associates' | 'atime' | 'audit' | 'background' | 'backward_relationship' | 'before_after' | 'bsdflags' |
- * 	'cancel_kept' | 'cancel_notkept' | 'cancel_repaired' | 'chdir' | 'check_foreign' | 'check_root' | 'chroot' |
- * 	'collapse_destination_dir' | 'command' | 'compare' | 'copy_backup' | 'copy_patterns' | 'copy_size' |
- * 	'copylink_patterns' | 'ctime' | 'db_server_connection_db' | 'db_server_host' | 'db_server_owner' |
- * 	'db_server_password' | 'db_server_type' | 'delete_if_contains_from_list' | 'delete_if_match_from_list' |
- * 	'delete_if_not_contains_from_list' | 'delete_if_not_match_from_list' | 'delete_if_not_startwith_from_list' |
- * 	'delete_if_startwith_from_list' | 'depth' | 'dirlinks' | 'disable' | 'disable_mode' | 'disable_suffix' | 'edit_backup'
- * 	| 'edit_fstab' | 'empty_file_before_editing' | 'encrypt' | 'env_addresses' | 'env_baseline' | 'env_cpus' | 'env_disk'
- * 	| 'env_memory' | 'env_name' | 'env_network' | 'env_spec_file' | 'exclude_dirs' | 'exec_group' | 'exec_owner' |
- * 	'exec_program' | 'exec_regex' | 'exec_timeout' | 'expireafter' | 'extend_fields' | 'extraction_regex' |
- * 	'field_operation' | 'field_separator' | 'field_value' | 'file_result' | 'file_to_print' | 'file_types' | 'findertype'
- * 	| 'first_last' | 'force_ipv4' | 'force_update' | 'forward_relationship' | 'freespace' | 'groups' | 'hash' |
- * 	'ifelapsed' | 'in_range_define' | 'include_basedir' | 'include_dirs' | 'include_end_delimiter' |
- * 	'include_start_delimiter' | 'inference' | 'insert_if_contains_from_list' | 'insert_if_match_from_list' |
- * 	'insert_if_not_contains_from_list' | 'insert_if_not_match_from_list' | 'insert_if_not_startwith_from_list' |
- * 	'insert_if_startwith_from_list' | 'ipv4_address' | 'ipv4_netmask' | 'ipv6_address' | 'issymlinkto' | 'leaf_name' |
- * 	'link_children' | 'link_type' | 'linkcopy_patterns' | 'log_failed' | 'log_kept' | 'log_level' | 'log_priority' |
- * 	'log_repaired' | 'log_string' | 'match_range' | 'max_file_size' | 'measurement_class' | 'mode' | 'mount_options' |
- * 	'mount_server' | 'mount_source' | 'mount_type' | 'mtime' | 'newname' | 'no_output' | 'number_of_lines' | 'occurrences'
- * 	| 'out_of_range_define' | 'owners' | 'package_add_command' | 'package_arch_regex' | 'package_changes' |
- * 	'package_delete_command' | 'package_delete_convention' | 'package_file_repositories' | 'package_installed_regex' |
- * 	'package_list_arch_regex' | 'package_list_command' | 'package_list_name_regex' | 'package_list_update_command' |
- * 	'package_list_update_ifelapsed' | 'package_list_version_regex' | 'package_multiline_start' | 'package_name_convention'
- * 	| 'package_name_regex' | 'package_noverify_regex' | 'package_noverify_returncode' | 'package_patch_arch_regex' |
- * 	'package_patch_command' | 'package_patch_installed_regex' | 'package_patch_list_command' | 'package_patch_name_regex'
- * 	| 'package_patch_version_regex' | 'package_update_command' | 'package_verify_command' | 'package_version_regex' |
- * 	'path_name' | 'persist_time' | 'pgid' | 'pid' | 'portnumber' | 'post_assoc_pattern' | 'ppid' | 'pre_assoc_pattern' |
- * 	'preserve' | 'preview' | 'priority' | 'process_owner' | 'process_result' | 'promise_kept' | 'promise_repaired' |
- * 	'purge' | 'recognize_join' | 'repair_denied' | 'repair_failed' | 'repair_timeout' | 'replace_value' | 'report_changes'
- * 	| 'report_diffs' | 'report_level' | 'rmdeadlinks' | 'rmdirs' | 'rotate' | 'rsize' | 'rxdirs' | 'scan_arrivals' |
- * 	'search_bsdflags' | 'search_groups' | 'search_mode' | 'search_owners' | 'search_size' | 'select_end' | 'select_field'
- * 	| 'select_line_matching' | 'select_line_number' | 'select_start' | 'sensible_count' |
- * 	'sensible_size' | 'servers' | 'service_args' | 'service_autostart_policy' | 'service_dependence_chain' |
- * 	'service_type' | 'source' | 'specify_inherit_aces' | 'status' | 'stealth' | 'stime_range' | 'threads' | 'timeout' |
- * 	'timer_policy' | 'track_growing_file' | 'traverse_links' | 'trustkey' | 'ttime_range' | 'tty' | 'type_check' | 'umask'
- * 	| 'unmount' | 'update_hashes' | 'useshell' | 'value_kept' | 'value_notkept' | 'value_repaired' | 'value_separator' |
- * 	'verify' | 'vsize' | 'when_linking_children' | 'when_no_source' | 'xdev');* ///TODO
  * BundleComponent:
- * 	name= / *('common' | 'agent' | 'server' | 'monitor' | 'runagent' | 'executor' | 'knowledge' | 'reporter' | 'edit_line' |
- * 	'edit_xml' | 'usebundle')* /ID;
+ * 	name=ID;
  *
  **/
 
-// name= / *('common' | 'agent' | 'server' | 'monitor' | 'runagent' | 'executor' | 'knowledge' | 'reporter' | 'edit_line' |
-// 	'edit_xml' | 'usebundle')* /ID
+// name=ID
 protected class BundleComponent_NameAssignment extends AssignmentToken  {
 	
 	public BundleComponent_NameAssignment(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1812,27 +1868,12 @@ protected class BundleComponent_NameAssignment extends AssignmentToken  {
 
 /************ begin Rule BodyComponent ****************
  *
- * //common
- * / *
- * CompoundBody:
- * 	name=('action' | 'classes' | 'contain' | 'database_server' | 'environment_interface' | 'environment_resources' | 'acl' |
- * 	'changes' | 'copy_from' | 'delete' | 'depth_search' | 'edit_defaults' | 'file_select' | 'link_from' | 'perms' |
- * 	'rename' | 'select_region' | 'delete_select' | 'insert_select' | 'location' | 'edit_field' | 'replace_with' | 'tcp_ip'
- * 	| 'package_method' | 'process_count' | 'process_select' | 'service_method' | 'mount' | 'volume' | 'association' |
- * 	'infer' | 'match_value');* /BodyComponent:
- * 	name= / *('printfile' | 'action' | 'transaction' | 'classes' | 'contain' | 'database_server' | 'environment_interface' |
- * 	'environment_resources' | 'acl' | 'changes' | 'copy_from' | 'delete' | 'depth_search' | 'edit_defaults' |
- * 	'file_select' | 'link_from' | 'perms' | 'rename' | 'select_region' | 'delete_select' | 'insert_select' | 'location' |
- * 	'match_value' | 'edit_field' | 'replace_with' | 'tcp_ip' | 'package_method' | 'process_count' | 'process_select' |
- * 	'service_method' | 'mount' | 'volume' | 'association' | 'infer' | 'common')* /ID;
+ * BodyComponent:
+ * 	name=ID;
  *
  **/
 
-// name= / *('printfile' | 'action' | 'transaction' | 'classes' | 'contain' | 'database_server' | 'environment_interface' |
-// 	'environment_resources' | 'acl' | 'changes' | 'copy_from' | 'delete' | 'depth_search' | 'edit_defaults' |
-// 	'file_select' | 'link_from' | 'perms' | 'rename' | 'select_region' | 'delete_select' | 'insert_select' | 'location' |
-// 	'match_value' | 'edit_field' | 'replace_with' | 'tcp_ip' | 'package_method' | 'process_count' | 'process_select' |
-// 	'service_method' | 'mount' | 'volume' | 'association' | 'infer' | 'common')* /ID
+// name=ID
 protected class BodyComponent_NameAssignment extends AssignmentToken  {
 	
 	public BodyComponent_NameAssignment(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1868,5 +1909,148 @@ protected class BodyComponent_NameAssignment extends AssignmentToken  {
 }
 
 /************ end Rule BodyComponent ****************/
+
+
+/************ begin Rule BodyClass ****************
+ *
+ * BodyClass:
+ * 	name=ID_EXCL "::" promiseType+=BodyFunction*;
+ *
+ **/
+
+// name=ID_EXCL "::" promiseType+=BodyFunction*
+protected class BodyClass_Group extends GroupToken {
+	
+	public BodyClass_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Group getGrammarElement() {
+		return grammarAccess.getBodyClassAccess().getGroup();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new BodyClass_PromiseTypeAssignment_2(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new BodyClass_ColonColonKeyword_1(lastRuleCallOrigin, this, 1, inst);
+			default: return null;
+		}	
+	}
+
+    @Override
+	public IEObjectConsumer tryConsume() {
+		if(getEObject().eClass() != grammarAccess.getBodyClassRule().getType().getClassifier())
+			return null;
+		return eObjectConsumer;
+	}
+
+}
+
+// name=ID_EXCL
+protected class BodyClass_NameAssignment_0 extends AssignmentToken  {
+	
+	public BodyClass_NameAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getBodyClassAccess().getNameAssignment_0();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index, inst);
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getBodyClassAccess().getNameID_EXCLParserRuleCall_0_0(), value, null)) {
+			type = AssignmentType.DATATYPE_RULE_CALL;
+			element = grammarAccess.getBodyClassAccess().getNameID_EXCLParserRuleCall_0_0();
+			return obj;
+		}
+		return null;
+	}
+
+}
+
+// "::"
+protected class BodyClass_ColonColonKeyword_1 extends KeywordToken  {
+	
+	public BodyClass_ColonColonKeyword_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getBodyClassAccess().getColonColonKeyword_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new BodyClass_NameAssignment_0(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// promiseType+=BodyFunction*
+protected class BodyClass_PromiseTypeAssignment_2 extends AssignmentToken  {
+	
+	public BodyClass_PromiseTypeAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getBodyClassAccess().getPromiseTypeAssignment_2();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new BodyFunction_Group(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("promiseType",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("promiseType");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getBodyFunctionRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getBodyClassAccess().getPromiseTypeBodyFunctionParserRuleCall_2_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new BodyClass_PromiseTypeAssignment_2(lastRuleCallOrigin, next, actIndex, consumed);
+			case 1: return new BodyClass_ColonColonKeyword_1(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return null;
+		}	
+	}	
+}
+
+
+/************ end Rule BodyClass ****************/
 
 }

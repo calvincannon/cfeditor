@@ -126,6 +126,15 @@ public interface CfeditorFactory extends EFactory
   BodyComponent createBodyComponent();
 
   /**
+   * Returns a new object of class '<em>Body Class</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Class</em>'.
+   * @generated
+   */
+  BodyClass createBodyClass();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -6,8 +6,9 @@
  */
 package edu.kit.scc.cfeditor.cfeditor.impl;
 
+import edu.kit.scc.cfeditor.cfeditor.BodyClass;
+import edu.kit.scc.cfeditor.cfeditor.BodyFunction;
 import edu.kit.scc.cfeditor.cfeditor.CfeditorPackage;
-import edu.kit.scc.cfeditor.cfeditor.SpecialFunction;
 
 import java.util.Collection;
 
@@ -27,19 +28,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Special Function</b></em>'.
+ * An implementation of the model object '<em><b>Body Class</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link edu.kit.scc.cfeditor.cfeditor.impl.SpecialFunctionImpl#getName <em>Name</em>}</li>
- *   <li>{@link edu.kit.scc.cfeditor.cfeditor.impl.SpecialFunctionImpl#getFunc <em>Func</em>}</li>
+ *   <li>{@link edu.kit.scc.cfeditor.cfeditor.impl.BodyClassImpl#getName <em>Name</em>}</li>
+ *   <li>{@link edu.kit.scc.cfeditor.cfeditor.impl.BodyClassImpl#getPromiseType <em>Promise Type</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements SpecialFunction
+public class BodyClassImpl extends MinimalEObjectImpl.Container implements BodyClass
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -62,21 +63,21 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getFunc() <em>Func</em>}' containment reference list.
+   * The cached value of the '{@link #getPromiseType() <em>Promise Type</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFunc()
+   * @see #getPromiseType()
    * @generated
    * @ordered
    */
-  protected EList<SpecialFunction> func;
+  protected EList<BodyFunction> promiseType;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SpecialFunctionImpl()
+  protected BodyClassImpl()
   {
     super();
   }
@@ -89,7 +90,7 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-    return CfeditorPackage.Literals.SPECIAL_FUNCTION;
+    return CfeditorPackage.Literals.BODY_CLASS;
   }
 
   /**
@@ -112,7 +113,7 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CfeditorPackage.SPECIAL_FUNCTION__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, CfeditorPackage.BODY_CLASS__NAME, oldName, name));
   }
 
   /**
@@ -120,13 +121,13 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SpecialFunction> getFunc()
+  public EList<BodyFunction> getPromiseType()
   {
-    if (func == null)
+    if (promiseType == null)
     {
-      func = new EObjectContainmentEList<SpecialFunction>(SpecialFunction.class, this, CfeditorPackage.SPECIAL_FUNCTION__FUNC);
+      promiseType = new EObjectContainmentEList<BodyFunction>(BodyFunction.class, this, CfeditorPackage.BODY_CLASS__PROMISE_TYPE);
     }
-    return func;
+    return promiseType;
   }
 
   /**
@@ -139,8 +140,8 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfeditorPackage.SPECIAL_FUNCTION__FUNC:
-        return ((InternalEList<?>)getFunc()).basicRemove(otherEnd, msgs);
+      case CfeditorPackage.BODY_CLASS__PROMISE_TYPE:
+        return ((InternalEList<?>)getPromiseType()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -155,10 +156,10 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfeditorPackage.SPECIAL_FUNCTION__NAME:
+      case CfeditorPackage.BODY_CLASS__NAME:
         return getName();
-      case CfeditorPackage.SPECIAL_FUNCTION__FUNC:
-        return getFunc();
+      case CfeditorPackage.BODY_CLASS__PROMISE_TYPE:
+        return getPromiseType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -174,12 +175,12 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfeditorPackage.SPECIAL_FUNCTION__NAME:
+      case CfeditorPackage.BODY_CLASS__NAME:
         setName((String)newValue);
         return;
-      case CfeditorPackage.SPECIAL_FUNCTION__FUNC:
-        getFunc().clear();
-        getFunc().addAll((Collection<? extends SpecialFunction>)newValue);
+      case CfeditorPackage.BODY_CLASS__PROMISE_TYPE:
+        getPromiseType().clear();
+        getPromiseType().addAll((Collection<? extends BodyFunction>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -195,11 +196,11 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfeditorPackage.SPECIAL_FUNCTION__NAME:
+      case CfeditorPackage.BODY_CLASS__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case CfeditorPackage.SPECIAL_FUNCTION__FUNC:
-        getFunc().clear();
+      case CfeditorPackage.BODY_CLASS__PROMISE_TYPE:
+        getPromiseType().clear();
         return;
     }
     super.eUnset(featureID);
@@ -215,10 +216,10 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfeditorPackage.SPECIAL_FUNCTION__NAME:
+      case CfeditorPackage.BODY_CLASS__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case CfeditorPackage.SPECIAL_FUNCTION__FUNC:
-        return func != null && !func.isEmpty();
+      case CfeditorPackage.BODY_CLASS__PROMISE_TYPE:
+        return promiseType != null && !promiseType.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -240,4 +241,4 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
     return result.toString();
   }
 
-} //SpecialFunctionImpl
+} //BodyClassImpl

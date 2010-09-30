@@ -1,5 +1,4 @@
-package edu.kit.scc.cfeditor.definitions;
-//package org.eclipse.xtext.definitions;
+//package edu.kit.scc.cfeditor.definitions;
 //
 //import java.io.File;
 //import java.io.FileOutputStream;
@@ -75,7 +74,7 @@ package edu.kit.scc.cfeditor.definitions;
 //			}
 //
 //			root.addContent(new Element("bundle"));
-//			HashMap<String, LinkedList<String>> bundleFunctions = defProvider.getBundleTypes();
+//			HashMap<String, LinkedList<String>> bundleFunctions = defProvider.getBundleTypesINIT();
 //			LinkedList<String> typeList = new LinkedList<String>();
 //			for (String key : bundleFunctions.keySet()) {
 //				String attString = "";

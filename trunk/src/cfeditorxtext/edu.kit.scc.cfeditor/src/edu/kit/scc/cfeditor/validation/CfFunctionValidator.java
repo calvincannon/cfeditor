@@ -1,13 +1,32 @@
 package edu.kit.scc.cfeditor.validation;
 
+import java.util.LinkedList;
+
 import org.eclipse.emf.common.util.EList;
 
 import edu.kit.scc.cfeditor.definitions.CfDefinitionProvider;
 
+/**
+ * A validation class, which is responsible for validating BodyFunctions and
+ * their values.
+ * 
+ * @author Andreas Bender
+ * 
+ */
 public class CfFunctionValidator {
 	private CfDefinitionProvider defProvider = CfDefinitionProvider.getInstance();
 	private CfFunctionType typeEnum;
 
+	/**
+	 * Main method for BodyFunction validation. Returns an error message or null
+	 * if the function is valid.
+	 * 
+	 * @param functionName
+	 * @param values
+	 * @param isList
+	 * @param variables
+	 * @return error message string or null
+	 */
 	public String checkBodyFunction(String functionName, EList<String> values, Boolean isList, EList<String> variables) {
 		String errorString = null;
 
@@ -53,7 +72,7 @@ public class CfFunctionValidator {
 					} else if (null != (customMessage = checkREAL(values.get(0), typeRange))) {
 						errorString = customMessage;
 					}
-					break;	
+					break;
 				case SLIST:
 					if (!isList) {
 						errorString = "List \"{...}\" expected";
@@ -107,6 +126,13 @@ public class CfFunctionValidator {
 	// return true;
 	// }
 
+	/**
+	 * Validates values with data type INT.
+	 * 
+	 * @param value
+	 * @param range
+	 * @return error message string or null
+	 */
 	public String checkINT(String value, String range) {
 		try {
 			long intValue = Long.parseLong(value);
@@ -125,7 +151,14 @@ public class CfFunctionValidator {
 		}
 		return null;
 	}
-	
+
+	/**
+	 * Validates values with data type REAL.
+	 * 
+	 * @param value
+	 * @param range
+	 * @return error message string or null
+	 */
 	public String checkREAL(String value, String range) {
 		try {
 			double doubleValue = Double.parseDouble(value);
@@ -145,6 +178,13 @@ public class CfFunctionValidator {
 		return null;
 	}
 
+	/**
+	 * Validates values with data type OPTION.
+	 * 
+	 * @param value
+	 * @param strOptions
+	 * @return error message string or null
+	 */
 	public String checkOPTION(String value, String strOptions) {
 		String[] options = strOptions.split(",");
 		for (String option : options) {
@@ -155,6 +195,13 @@ public class CfFunctionValidator {
 		return "Parameter is no valid option";
 	}
 
+	/**
+	 * Validates values with data type STRING.
+	 * 
+	 * @param value
+	 * @param pattern
+	 * @return error message string or null
+	 */
 	public String checkSTRING(String value, String pattern) {
 		if (!pattern.isEmpty()) {
 			if (!value.matches(pattern)) {
@@ -174,26 +221,66 @@ public class CfFunctionValidator {
 	// }
 	// return true;
 	// }
+
+	/**
+	 * Checks if a string contains a variable.
+	 * 
+	 * @param value
+	 * @return true if string contains a variable
+	 */
 	public Boolean isVariable(String value) {
-		return value.matches("\\$\\(.*\\)")||value.matches("\\$\\{.*\\}");
+		return value.matches(".*\\$\\(.*\\).*") || value.matches(".*\\$\\{.*\\}.*");
 	}
 
+	/**
+	 * Returns the variable out of a string.
+	 * 
+	 * @param value
+	 * @return the variable without quotes
+	 */
 	public String getVariableFromString(String value) {
 		String variable = value.substring(2, value.length() - 1);
 		return variable;
 	}
 
-	public Boolean isInVariables(String value, EList<String> variables) {
-		if (null != variables) {
-			value = getVariableFromString(value);
-			
-			for (String variable : variables) {
-				if (variable.equals(value)) {
-					return true;
-				}
-			}
+	/**
+	 * Returns the list of variables out of a string.
+	 * 
+	 * @param value
+	 * @return the list of variables
+	 */
+	public LinkedList<String> getVariablesFromString(String value) {
+		String var = null;
+		LinkedList<String> list = new LinkedList<String>();
+
+		while (value.matches(".*\\$\\(.*\\).*")) {
+			var = value.substring(value.indexOf("$(") + 2, value.indexOf(')'));
+			value = value.substring(0, value.indexOf("$(")) + value.substring(value.indexOf(')') + 1);
+			list.add(var);
+		}
+		while (value.matches(".*\\$\\{.*\\}.*")) {
+			var = value.substring(value.indexOf("${") + 2, value.indexOf('}'));
+			value = value.substring(0, value.indexOf("${")) + value.substring(value.indexOf('}') + 1);
+			list.add(var);
 		}
 
+		return list;
+	}
+
+	/**
+	 * Checks if the variables in a string are in the declared list of variables.
+	 * 
+	 * @param value
+	 * @param variables
+	 * @return true if variable are in the declared variable list.
+	 */
+	public Boolean isInVariables(String value, EList<String> variables) {
+		if (null != variables) {
+			LinkedList<String> list = getVariablesFromString(value);
+			if (variables.containsAll(list)) {
+				return true;
+			}
+		}
 		return false;
 	}
 }

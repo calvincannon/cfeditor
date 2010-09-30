@@ -2,10 +2,7 @@ package edu.kit.scc.cfeditor.ui.wizard;
 
 import java.io.InputStream;
 
-import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.jface.text.source.ImageUtilities;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 

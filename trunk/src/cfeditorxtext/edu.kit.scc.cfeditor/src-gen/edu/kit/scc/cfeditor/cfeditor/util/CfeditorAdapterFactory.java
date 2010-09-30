@@ -134,6 +134,11 @@ public class CfeditorAdapterFactory extends AdapterFactoryImpl
         return createBodyComponentAdapter();
       }
       @Override
+      public Adapter caseBodyClass(BodyClass object)
+      {
+        return createBodyClassAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -316,6 +321,21 @@ public class CfeditorAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBodyComponentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link edu.kit.scc.cfeditor.cfeditor.BodyClass <em>Body Class</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.kit.scc.cfeditor.cfeditor.BodyClass
+   * @generated
+   */
+  public Adapter createBodyClassAdapter()
   {
     return null;
   }

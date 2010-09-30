@@ -63,8 +63,8 @@ public final class CfDefinitionProvider {
 	 */
 	private CfDefinitionProvider() {
 	}
-	
-	private Namespace nsCfeditor=Namespace.getNamespace("http://www.kit.edu/scc/Cfeditor");
+
+	private Namespace nsCfeditor = Namespace.getNamespace("http://www.kit.edu/scc/Cfeditor");
 
 	/**
 	 * Returns a list of the definition strings in a given file.
@@ -111,6 +111,47 @@ public final class CfDefinitionProvider {
 	 */
 	public HashMap<String, LinkedList<String>> getBundleTypes() {
 		if (null == bundleTypes) {
+			bundleTypes = new HashMap<String, LinkedList<String>>();
+			LinkedList<String> linkedList;
+			final SAXBuilder builder = new SAXBuilder();
+			try {
+				final Document doc = builder.build(this.getClass().getResourceAsStream("Definitions.xml"));
+				final AbstractList<Element> list = (AbstractList<Element>) doc.getRootElement()
+						.getChild("bundle", nsCfeditor).getChildren("component", nsCfeditor);
+				String componentName;
+				StringTokenizer tokenizer;
+
+				for (Element component : list) {
+					componentName = component.getAttributeValue("name");
+					tokenizer = new StringTokenizer(component.getAttributeValue("promisetypes"));
+
+					while (tokenizer.hasMoreTokens()) {
+						if (bundleTypes.containsKey(componentName)) {
+							bundleTypes.get(componentName).add(tokenizer.nextToken());
+						} else {
+							linkedList = new LinkedList<String>();
+							linkedList.add(tokenizer.nextToken());
+							bundleTypes.put(componentName, linkedList);
+						}
+					}
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			} catch (JDOMException e) {
+				e.printStackTrace();
+			}
+		}
+		return bundleTypes;
+	}
+
+	/**
+	 * Returns a HashMap containing the mapping of bundle components to allowed
+	 * promise types.
+	 * 
+	 * @return the component - promise types map
+	 */
+	public HashMap<String, LinkedList<String>> getBundleTypesINIT() {
+		if (null == bundleTypes) {
 
 			bundleTypes = new HashMap<String, LinkedList<String>>();
 			LinkedList<String> linkedList;
@@ -131,9 +172,6 @@ public final class CfDefinitionProvider {
 							bundleTypes.put(values[0], linkedList);
 						}
 					}
-					// bundleTypes.get(key);
-					// if (!currentLine.trim().isEmpty())
-					// definitionList.add(currentLine.trim());
 				}
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
@@ -190,11 +228,11 @@ public final class CfDefinitionProvider {
 			final SAXBuilder builder = new SAXBuilder();
 			try {
 				final Document doc = builder.build(this.getClass().getResourceAsStream("Definitions.xml"));
-				final AbstractList<Element> list = (AbstractList<Element>) doc.getRootElement().getChild("body",nsCfeditor)
-						.getChildren("component",nsCfeditor);
+				final AbstractList<Element> list = (AbstractList<Element>) doc.getRootElement()
+						.getChild("body", nsCfeditor).getChildren("component", nsCfeditor);
 				String componentName;
 				StringTokenizer tokenizer;
-			
+
 				for (Element component : list) {
 					componentName = component.getAttributeValue("name");
 					tokenizer = new StringTokenizer(component.getAttributeValue("promisetypes"));
@@ -218,6 +256,11 @@ public final class CfDefinitionProvider {
 		return bodyFunctions;
 	}
 
+	/**
+	 * Returns a mapping between promise type names and their type and range.
+	 * 
+	 * @return the promise types
+	 */
 	public HashMap<String, String[]> getBodyPromiseTypes() {
 		// if (null == bodyFunctions)
 		HashMap<String, String[]> promiseTypes = new HashMap<String, String[]>();
@@ -225,8 +268,8 @@ public final class CfDefinitionProvider {
 
 		try {
 			Document doc = builder.build(this.getClass().getResourceAsStream("Definitions.xml"));
-			AbstractList<Element> list = (AbstractList<Element>) doc.getRootElement().getChild("body",nsCfeditor)
-					.getChildren("promisetype",nsCfeditor);
+			AbstractList<Element> list = (AbstractList<Element>) doc.getRootElement().getChild("body", nsCfeditor)
+					.getChildren("promisetype", nsCfeditor);
 			for (Element promiseType : list) {
 				promiseTypes.put(promiseType.getAttributeValue("name"),
 						new String[] { promiseType.getAttributeValue("type"), promiseType.getAttributeValue("range") });
@@ -241,6 +284,11 @@ public final class CfDefinitionProvider {
 		return promiseTypes;
 	}
 
+	/**
+	 * Returns a mapping between promise type names and their type and range.
+	 * 
+	 * @return the promise types
+	 */
 	public HashMap<String, String[]> getBodyPromiseTypesINIT() {
 		if (null == bodyTypes) {
 			bodyTypes = new HashMap<String, String[]>();
@@ -253,13 +301,13 @@ public final class CfDefinitionProvider {
 					String[] values = currentLine.split("#", 3);
 
 					bodyTypes.put(values[0], new String[] { values[1], values[2] });
-					
+
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
-		
+
 		return bodyTypes;
 	}
 
