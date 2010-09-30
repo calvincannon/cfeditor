@@ -32,6 +32,27 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getElementsAbstractElementParserRuleCall_0() { return cElementsAbstractElementParserRuleCall_0; }
 	}
 
+	public class ID_EXCLElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ID_EXCL");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cExclamationMarkKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		
+		////TODO separate ID with '!' ???
+		//ID_EXCL returns ecore::EString:
+		//	"!"? ID;
+		public ParserRule getRule() { return rule; }
+
+		//"!"? ID
+		public Group getGroup() { return cGroup; }
+
+		//"!"?
+		public Keyword getExclamationMarkKeyword_0() { return cExclamationMarkKeyword_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
+	}
+
 	public class PLACEHOLDERElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PLACEHOLDER");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -43,8 +64,64 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
 		private final Keyword cLeftParenthesisKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
 		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
+		private final Keyword cLeftCurlyBracketKeyword_8 = (Keyword)cAlternatives.eContents().get(8);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cAlternatives.eContents().get(9);
+		private final Keyword cCommercialAtKeyword_10 = (Keyword)cAlternatives.eContents().get(10);
 		
 		//PLACEHOLDER returns ecore::EString:
+		//	ANY_OTHER | ID | STRING | "=>" | ";" | "," | "(" | ")" | "{" | "}" | "@";
+		public ParserRule getRule() { return rule; }
+
+		//ANY_OTHER | ID | STRING | "=>" | ";" | "," | "(" | ")" | "{" | "}" | "@"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//ANY_OTHER
+		public RuleCall getANY_OTHERTerminalRuleCall_0() { return cANY_OTHERTerminalRuleCall_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
+
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_2() { return cSTRINGTerminalRuleCall_2; }
+
+		//"=>"
+		public Keyword getEqualsSignGreaterThanSignKeyword_3() { return cEqualsSignGreaterThanSignKeyword_3; }
+
+		//";"
+		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
+
+		//","
+		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_6() { return cLeftParenthesisKeyword_6; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_7() { return cRightParenthesisKeyword_7; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_8() { return cLeftCurlyBracketKeyword_8; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+
+		//"@"
+		public Keyword getCommercialAtKeyword_10() { return cCommercialAtKeyword_10; }
+	}
+
+	public class PLACEHOLDERBElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PLACEHOLDERB");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cANY_OTHERTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cSTRINGTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final Keyword cEqualsSignGreaterThanSignKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		private final Keyword cSemicolonKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
+		private final Keyword cCommaKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
+		private final Keyword cLeftParenthesisKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
+		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
+		
+		//PLACEHOLDERB returns ecore::EString:
 		//	ANY_OTHER | ID | STRING | "=>" | ";" | "," | "(" | ")";
 		public ParserRule getRule() { return rule; }
 
@@ -116,22 +193,28 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cComponentBundleComponentParserRuleCall_1_0 = (RuleCall)cComponentAssignment_1.eContents().get(0);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final RuleCall cPLACEHOLDERParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final RuleCall cPLACEHOLDERBParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Assignment cPromiseTypeAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
 		private final RuleCall cPromiseTypeBundlePromiseTypeParserRuleCall_5_0_0 = (RuleCall)cPromiseTypeAssignment_5_0.eContents().get(0);
 		private final Keyword cColonKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
-		private final RuleCall cPLACEHOLDERParserRuleCall_5_2 = (RuleCall)cGroup_5.eContents().get(2);
+		private final Alternatives cAlternatives_5_2 = (Alternatives)cGroup_5.eContents().get(2);
+		private final RuleCall cPLACEHOLDERBParserRuleCall_5_2_0 = (RuleCall)cAlternatives_5_2.eContents().get(0);
+		private final Group cGroup_5_2_1 = (Group)cAlternatives_5_2.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_5_2_1_0 = (Keyword)cGroup_5_2_1.eContents().get(0);
+		private final Keyword cCommercialAtKeyword_5_2_1_1 = (Keyword)cGroup_5_2_1.eContents().get(1);
+		private final RuleCall cPLACEHOLDERBParserRuleCall_5_2_1_2 = (RuleCall)cGroup_5_2_1.eContents().get(2);
+		private final Keyword cRightCurlyBracketKeyword_5_2_1_3 = (Keyword)cGroup_5_2_1.eContents().get(3);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Bundle:
-		//	"bundle" component=BundleComponent name=ID PLACEHOLDER* "{" (promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
-		//	/ *(methods+=Methode)* * / "}";
+		//	"bundle" component=BundleComponent name=ID PLACEHOLDERB* "{" (promiseType+=BundlePromiseType ":" (PLACEHOLDERB | "{"
+		//	"@" PLACEHOLDERB* "}")*)* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"bundle" component=BundleComponent name=ID PLACEHOLDER* "{" (promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
-		/// *(methods+=Methode)* * / "}"
+		//"bundle" component=BundleComponent name=ID PLACEHOLDERB* "{" (promiseType+=BundlePromiseType ":" (PLACEHOLDERB | "{" "@"
+		//PLACEHOLDERB* "}")*)* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"bundle"
@@ -149,13 +232,13 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//PLACEHOLDER*
-		public RuleCall getPLACEHOLDERParserRuleCall_3() { return cPLACEHOLDERParserRuleCall_3; }
+		//PLACEHOLDERB*
+		public RuleCall getPLACEHOLDERBParserRuleCall_3() { return cPLACEHOLDERBParserRuleCall_3; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
-		//(promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
+		//(promiseType+=BundlePromiseType ":" (PLACEHOLDERB | "{" "@" PLACEHOLDERB* "}")*)*
 		public Group getGroup_5() { return cGroup_5; }
 
 		//promiseType+=BundlePromiseType
@@ -167,8 +250,26 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_5_1() { return cColonKeyword_5_1; }
 
-		//PLACEHOLDER*
-		public RuleCall getPLACEHOLDERParserRuleCall_5_2() { return cPLACEHOLDERParserRuleCall_5_2; }
+		//(PLACEHOLDERB | "{" "@" PLACEHOLDERB* "}")*
+		public Alternatives getAlternatives_5_2() { return cAlternatives_5_2; }
+
+		//PLACEHOLDERB
+		public RuleCall getPLACEHOLDERBParserRuleCall_5_2_0() { return cPLACEHOLDERBParserRuleCall_5_2_0; }
+
+		//"{" "@" PLACEHOLDERB* "}"
+		public Group getGroup_5_2_1() { return cGroup_5_2_1; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_5_2_1_0() { return cLeftCurlyBracketKeyword_5_2_1_0; }
+
+		//"@"
+		public Keyword getCommercialAtKeyword_5_2_1_1() { return cCommercialAtKeyword_5_2_1_1; }
+
+		//PLACEHOLDERB*
+		public RuleCall getPLACEHOLDERBParserRuleCall_5_2_1_2() { return cPLACEHOLDERBParserRuleCall_5_2_1_2; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_5_2_1_3() { return cRightCurlyBracketKeyword_5_2_1_3; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -194,15 +295,18 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cPromiseTypeAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cPromiseTypeBodyFunctionParserRuleCall_5_0 = (RuleCall)cPromiseTypeAssignment_5.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cClassesAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cClassesBodyClassParserRuleCall_6_0 = (RuleCall)cClassesAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		////BodyPromiseType '=>' (values+=STRING | '{' values+=STRING
 		//Body:
 		//	"body" component=BodyComponent name=ID ("(" variables+=ID ("," variables+=ID)* ")")? "{" promiseType+=BodyFunction*
-		//	"}";
+		//	classes+=BodyClass* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"body" component=BodyComponent name=ID ("(" variables+=ID ("," variables+=ID)* ")")? "{" promiseType+=BodyFunction* "}"
+		//"body" component=BodyComponent name=ID ("(" variables+=ID ("," variables+=ID)* ")")? "{" promiseType+=BodyFunction*
+		//classes+=BodyClass* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"body"
@@ -256,8 +360,14 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		//BodyFunction
 		public RuleCall getPromiseTypeBodyFunctionParserRuleCall_5_0() { return cPromiseTypeBodyFunctionParserRuleCall_5_0; }
 
+		//classes+=BodyClass*
+		public Assignment getClassesAssignment_6() { return cClassesAssignment_6; }
+
+		//BodyClass
+		public RuleCall getClassesBodyClassParserRuleCall_6_0() { return cClassesBodyClassParserRuleCall_6_0; }
+
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class BodyFunctionElements extends AbstractParserRuleElementFinder {
@@ -281,16 +391,22 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_2_1_3 = (Keyword)cGroup_2_1.eContents().get(3);
 		private final Assignment cFunctionAssignment_2_2 = (Assignment)cAlternatives_2.eContents().get(2);
 		private final RuleCall cFunctionSpecialFunctionParserRuleCall_2_2_0 = (RuleCall)cFunctionAssignment_2_2.eContents().get(0);
+		private final Group cGroup_2_3 = (Group)cAlternatives_2.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_2_3_0 = (Keyword)cGroup_2_3.eContents().get(0);
+		private final Keyword cCommercialAtKeyword_2_3_1 = (Keyword)cGroup_2_3.eContents().get(1);
+		private final RuleCall cPLACEHOLDERBParserRuleCall_2_3_2 = (RuleCall)cGroup_2_3.eContents().get(2);
+		private final Keyword cRightCurlyBracketKeyword_2_3_3 = (Keyword)cGroup_2_3.eContents().get(3);
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		////	(',' values+=STRING)* '}') ';'
+		////TODO {@....}
 		//BodyFunction:
 		//	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
-		//	function+=SpecialFunction) ";";
+		//	function+=SpecialFunction | "{" "@" PLACEHOLDERB* "}") ";";
 		public ParserRule getRule() { return rule; }
 
 		//name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
-		//function+=SpecialFunction) ";"
+		//function+=SpecialFunction | "{" "@" PLACEHOLDERB* "}") ";"
 		public Group getGroup() { return cGroup; }
 
 		//name=BodyPromiseType
@@ -302,7 +418,8 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		//"=>"
 		public Keyword getEqualsSignGreaterThanSignKeyword_1() { return cEqualsSignGreaterThanSignKeyword_1; }
 
-		//values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" | function+=SpecialFunction
+		//values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" | function+=SpecialFunction | "{" "@" PLACEHOLDERB*
+		//"}"
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
 		//values+=STRING
@@ -347,6 +464,21 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		//SpecialFunction
 		public RuleCall getFunctionSpecialFunctionParserRuleCall_2_2_0() { return cFunctionSpecialFunctionParserRuleCall_2_2_0; }
 
+		//"{" "@" PLACEHOLDERB* "}"
+		public Group getGroup_2_3() { return cGroup_2_3; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2_3_0() { return cLeftCurlyBracketKeyword_2_3_0; }
+
+		//"@"
+		public Keyword getCommercialAtKeyword_2_3_1() { return cCommercialAtKeyword_2_3_1; }
+
+		//PLACEHOLDERB*
+		public RuleCall getPLACEHOLDERBParserRuleCall_2_3_2() { return cPLACEHOLDERBParserRuleCall_2_3_2; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_2_3_3() { return cRightCurlyBracketKeyword_2_3_3; }
+
 		//";"
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
@@ -357,19 +489,32 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cParametersAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cParametersSTRINGTerminalRuleCall_2_0 = (RuleCall)cParametersAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cParametersAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cParametersSTRINGTerminalRuleCall_3_1_0 = (RuleCall)cParametersAssignment_3_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final RuleCall cANY_OTHERTerminalRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_2_1 = (RuleCall)cAlternatives_2.eContents().get(1);
+		private final RuleCall cSTRINGTerminalRuleCall_2_2 = (RuleCall)cAlternatives_2.eContents().get(2);
+		private final RuleCall cINTTerminalRuleCall_2_3 = (RuleCall)cAlternatives_2.eContents().get(3);
+		private final Keyword cCommaKeyword_2_4 = (Keyword)cAlternatives_2.eContents().get(4);
+		private final Group cGroup_2_5 = (Group)cAlternatives_2.eContents().get(5);
+		private final Keyword cDollarSignLeftParenthesisKeyword_2_5_0 = (Keyword)cGroup_2_5.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_2_5_1 = (RuleCall)cGroup_2_5.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_2_5_2 = (Keyword)cGroup_2_5.eContents().get(2);
+		private final Group cGroup_2_6 = (Group)cAlternatives_2.eContents().get(6);
+		private final Keyword cDollarSignLeftCurlyBracketKeyword_2_6_0 = (Keyword)cGroup_2_6.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_2_6_1 = (RuleCall)cGroup_2_6.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_2_6_2 = (Keyword)cGroup_2_6.eContents().get(2);
+		private final Assignment cFuncAssignment_2_7 = (Assignment)cAlternatives_2.eContents().get(7);
+		private final RuleCall cFuncSpecialFunctionParserRuleCall_2_7_0 = (RuleCall)cFuncAssignment_2_7.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
+		////TODO
 		//SpecialFunction:
-		//	name=ID "(" parameters+=STRING ("," parameters+=STRING)* ")";
+		//	name=ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+		//	/ *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")";
 		public ParserRule getRule() { return rule; }
 
-		//name=ID "(" parameters+=STRING ("," parameters+=STRING)* ")"
+		//name=ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+		/// *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")"
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -381,26 +526,56 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 
-		//parameters+=STRING
-		public Assignment getParametersAssignment_2() { return cParametersAssignment_2; }
+		//(ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+
+		//ANY_OTHER
+		public RuleCall getANY_OTHERTerminalRuleCall_2_0() { return cANY_OTHERTerminalRuleCall_2_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_2_1() { return cIDTerminalRuleCall_2_1; }
 
 		//STRING
-		public RuleCall getParametersSTRINGTerminalRuleCall_2_0() { return cParametersSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getSTRINGTerminalRuleCall_2_2() { return cSTRINGTerminalRuleCall_2_2; }
 
-		//("," parameters+=STRING)*
-		public Group getGroup_3() { return cGroup_3; }
+		//INT
+		public RuleCall getINTTerminalRuleCall_2_3() { return cINTTerminalRuleCall_2_3; }
 
 		//","
-		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+		public Keyword getCommaKeyword_2_4() { return cCommaKeyword_2_4; }
 
-		//parameters+=STRING
-		public Assignment getParametersAssignment_3_1() { return cParametersAssignment_3_1; }
+		//"$(" ID ")"
+		public Group getGroup_2_5() { return cGroup_2_5; }
 
-		//STRING
-		public RuleCall getParametersSTRINGTerminalRuleCall_3_1_0() { return cParametersSTRINGTerminalRuleCall_3_1_0; }
+		//"$("
+		public Keyword getDollarSignLeftParenthesisKeyword_2_5_0() { return cDollarSignLeftParenthesisKeyword_2_5_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_2_5_1() { return cIDTerminalRuleCall_2_5_1; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
+		public Keyword getRightParenthesisKeyword_2_5_2() { return cRightParenthesisKeyword_2_5_2; }
+
+		//"${" ID "}"
+		public Group getGroup_2_6() { return cGroup_2_6; }
+
+		//"${"
+		public Keyword getDollarSignLeftCurlyBracketKeyword_2_6_0() { return cDollarSignLeftCurlyBracketKeyword_2_6_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_2_6_1() { return cIDTerminalRuleCall_2_6_1; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_2_6_2() { return cRightCurlyBracketKeyword_2_6_2; }
+
+		//func+=SpecialFunction
+		public Assignment getFuncAssignment_2_7() { return cFuncAssignment_2_7; }
+
+		//SpecialFunction
+		public RuleCall getFuncSpecialFunctionParserRuleCall_2_7_0() { return cFuncSpecialFunctionParserRuleCall_2_7_0; }
+
+		/// *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")"
+		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
 	}
 
 	public class BundlePromiseTypeElements extends AbstractParserRuleElementFinder {
@@ -408,11 +583,7 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
 		
-		/// *Methode:
-		//name=STRING (';'|zuweisung+=Zuweisung (','zuweisung+=Zuweisung)*';');
-		//
-		//Zuweisung:
-		//name=ID ('=>' (ID|STRING)* )?;* /BundlePromiseType:
+		//BundlePromiseType:
 		//	name=ID;
 		public ParserRule getRule() { return rule; }
 
@@ -428,10 +599,7 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
 		
-		/// *BundlePromiseType:
-		//	name=('access' | 'classes' | 'commands' | 'databases' | 'environments' | 'files' | 'inferences' | 'interfaces' |
-		//	'measurements' | 'methods' | 'occurrences' | 'outputs' | 'packages' | 'processes' | 'reports' | 'roles' | 'services' |
-		//	'storage' | 'topics' | 'vars');* /BodyPromiseType:
+		//BodyPromiseType:
 		//	name=ID;
 		public ParserRule getRule() { return rule; }
 
@@ -447,56 +615,14 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
 		
-		/// *BodyPromiseType:
-		//	name=('aces' | 'acl_directory_inherit' | 'acl_method' | 'acl_type' | 'action_policy' | 'allow_blank_fields' |
-		//	'associates' | 'atime' | 'audit' | 'background' | 'backward_relationship' | 'before_after' | 'bsdflags' |
-		//	'cancel_kept' | 'cancel_notkept' | 'cancel_repaired' | 'chdir' | 'check_foreign' | 'check_root' | 'chroot' |
-		//	'collapse_destination_dir' | 'command' | 'compare' | 'copy_backup' | 'copy_patterns' | 'copy_size' |
-		//	'copylink_patterns' | 'ctime' | 'db_server_connection_db' | 'db_server_host' | 'db_server_owner' |
-		//	'db_server_password' | 'db_server_type' | 'delete_if_contains_from_list' | 'delete_if_match_from_list' |
-		//	'delete_if_not_contains_from_list' | 'delete_if_not_match_from_list' | 'delete_if_not_startwith_from_list' |
-		//	'delete_if_startwith_from_list' | 'depth' | 'dirlinks' | 'disable' | 'disable_mode' | 'disable_suffix' | 'edit_backup'
-		//	| 'edit_fstab' | 'empty_file_before_editing' | 'encrypt' | 'env_addresses' | 'env_baseline' | 'env_cpus' | 'env_disk'
-		//	| 'env_memory' | 'env_name' | 'env_network' | 'env_spec_file' | 'exclude_dirs' | 'exec_group' | 'exec_owner' |
-		//	'exec_program' | 'exec_regex' | 'exec_timeout' | 'expireafter' | 'extend_fields' | 'extraction_regex' |
-		//	'field_operation' | 'field_separator' | 'field_value' | 'file_result' | 'file_to_print' | 'file_types' | 'findertype'
-		//	| 'first_last' | 'force_ipv4' | 'force_update' | 'forward_relationship' | 'freespace' | 'groups' | 'hash' |
-		//	'ifelapsed' | 'in_range_define' | 'include_basedir' | 'include_dirs' | 'include_end_delimiter' |
-		//	'include_start_delimiter' | 'inference' | 'insert_if_contains_from_list' | 'insert_if_match_from_list' |
-		//	'insert_if_not_contains_from_list' | 'insert_if_not_match_from_list' | 'insert_if_not_startwith_from_list' |
-		//	'insert_if_startwith_from_list' | 'ipv4_address' | 'ipv4_netmask' | 'ipv6_address' | 'issymlinkto' | 'leaf_name' |
-		//	'link_children' | 'link_type' | 'linkcopy_patterns' | 'log_failed' | 'log_kept' | 'log_level' | 'log_priority' |
-		//	'log_repaired' | 'log_string' | 'match_range' | 'max_file_size' | 'measurement_class' | 'mode' | 'mount_options' |
-		//	'mount_server' | 'mount_source' | 'mount_type' | 'mtime' | 'newname' | 'no_output' | 'number_of_lines' | 'occurrences'
-		//	| 'out_of_range_define' | 'owners' | 'package_add_command' | 'package_arch_regex' | 'package_changes' |
-		//	'package_delete_command' | 'package_delete_convention' | 'package_file_repositories' | 'package_installed_regex' |
-		//	'package_list_arch_regex' | 'package_list_command' | 'package_list_name_regex' | 'package_list_update_command' |
-		//	'package_list_update_ifelapsed' | 'package_list_version_regex' | 'package_multiline_start' | 'package_name_convention'
-		//	| 'package_name_regex' | 'package_noverify_regex' | 'package_noverify_returncode' | 'package_patch_arch_regex' |
-		//	'package_patch_command' | 'package_patch_installed_regex' | 'package_patch_list_command' | 'package_patch_name_regex'
-		//	| 'package_patch_version_regex' | 'package_update_command' | 'package_verify_command' | 'package_version_regex' |
-		//	'path_name' | 'persist_time' | 'pgid' | 'pid' | 'portnumber' | 'post_assoc_pattern' | 'ppid' | 'pre_assoc_pattern' |
-		//	'preserve' | 'preview' | 'priority' | 'process_owner' | 'process_result' | 'promise_kept' | 'promise_repaired' |
-		//	'purge' | 'recognize_join' | 'repair_denied' | 'repair_failed' | 'repair_timeout' | 'replace_value' | 'report_changes'
-		//	| 'report_diffs' | 'report_level' | 'rmdeadlinks' | 'rmdirs' | 'rotate' | 'rsize' | 'rxdirs' | 'scan_arrivals' |
-		//	'search_bsdflags' | 'search_groups' | 'search_mode' | 'search_owners' | 'search_size' | 'select_end' | 'select_field'
-		//	| 'select_line_matching' | 'select_line_number' | 'select_start' | 'sensible_count' |
-		//	'sensible_size' | 'servers' | 'service_args' | 'service_autostart_policy' | 'service_dependence_chain' |
-		//	'service_type' | 'source' | 'specify_inherit_aces' | 'status' | 'stealth' | 'stime_range' | 'threads' | 'timeout' |
-		//	'timer_policy' | 'track_growing_file' | 'traverse_links' | 'trustkey' | 'ttime_range' | 'tty' | 'type_check' | 'umask'
-		//	| 'unmount' | 'update_hashes' | 'useshell' | 'value_kept' | 'value_notkept' | 'value_repaired' | 'value_separator' |
-		//	'verify' | 'vsize' | 'when_linking_children' | 'when_no_source' | 'xdev');* ///TODO
 		//BundleComponent:
-		//	name= / *('common' | 'agent' | 'server' | 'monitor' | 'runagent' | 'executor' | 'knowledge' | 'reporter' | 'edit_line' |
-		//	'edit_xml' | 'usebundle')* /ID;
+		//	name=ID;
 		public ParserRule getRule() { return rule; }
 
-		//name= / *('common' | 'agent' | 'server' | 'monitor' | 'runagent' | 'executor' | 'knowledge' | 'reporter' | 'edit_line' |
-		//	'edit_xml' | 'usebundle')* /ID
+		//name=ID
 		public Assignment getNameAssignment() { return cNameAssignment; }
 
-		/// *('common' | 'agent' | 'server' | 'monitor' | 'runagent' | 'executor' | 'knowledge' | 'reporter' | 'edit_line' |
-		//	'edit_xml' | 'usebundle')* /ID
+		//ID
 		public RuleCall getNameIDTerminalRuleCall_0() { return cNameIDTerminalRuleCall_0; }
 	}
 
@@ -505,34 +631,47 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
 		
-		////common
-		/// *
-		//CompoundBody:
-		//	name=('action' | 'classes' | 'contain' | 'database_server' | 'environment_interface' | 'environment_resources' | 'acl' |
-		//	'changes' | 'copy_from' | 'delete' | 'depth_search' | 'edit_defaults' | 'file_select' | 'link_from' | 'perms' |
-		//	'rename' | 'select_region' | 'delete_select' | 'insert_select' | 'location' | 'edit_field' | 'replace_with' | 'tcp_ip'
-		//	| 'package_method' | 'process_count' | 'process_select' | 'service_method' | 'mount' | 'volume' | 'association' |
-		//	'infer' | 'match_value');* /BodyComponent:
-		//	name= / *('printfile' | 'action' | 'transaction' | 'classes' | 'contain' | 'database_server' | 'environment_interface' |
-		//	'environment_resources' | 'acl' | 'changes' | 'copy_from' | 'delete' | 'depth_search' | 'edit_defaults' |
-		//	'file_select' | 'link_from' | 'perms' | 'rename' | 'select_region' | 'delete_select' | 'insert_select' | 'location' |
-		//	'match_value' | 'edit_field' | 'replace_with' | 'tcp_ip' | 'package_method' | 'process_count' | 'process_select' |
-		//	'service_method' | 'mount' | 'volume' | 'association' | 'infer' | 'common')* /ID;
+		//BodyComponent:
+		//	name=ID;
 		public ParserRule getRule() { return rule; }
 
-		//name= / *('printfile' | 'action' | 'transaction' | 'classes' | 'contain' | 'database_server' | 'environment_interface' |
-		//	'environment_resources' | 'acl' | 'changes' | 'copy_from' | 'delete' | 'depth_search' | 'edit_defaults' |
-		//	'file_select' | 'link_from' | 'perms' | 'rename' | 'select_region' | 'delete_select' | 'insert_select' | 'location' |
-		//	'match_value' | 'edit_field' | 'replace_with' | 'tcp_ip' | 'package_method' | 'process_count' | 'process_select' |
-		//	'service_method' | 'mount' | 'volume' | 'association' | 'infer' | 'common')* /ID
+		//name=ID
 		public Assignment getNameAssignment() { return cNameAssignment; }
 
-		/// *('printfile' | 'action' | 'transaction' | 'classes' | 'contain' | 'database_server' | 'environment_interface' |
-		//	'environment_resources' | 'acl' | 'changes' | 'copy_from' | 'delete' | 'depth_search' | 'edit_defaults' |
-		//	'file_select' | 'link_from' | 'perms' | 'rename' | 'select_region' | 'delete_select' | 'insert_select' | 'location' |
-		//	'match_value' | 'edit_field' | 'replace_with' | 'tcp_ip' | 'package_method' | 'process_count' | 'process_select' |
-		//	'service_method' | 'mount' | 'volume' | 'association' | 'infer' | 'common')* /ID
+		//ID
 		public RuleCall getNameIDTerminalRuleCall_0() { return cNameIDTerminalRuleCall_0; }
+	}
+
+	public class BodyClassElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BodyClass");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameID_EXCLParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Keyword cColonColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cPromiseTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cPromiseTypeBodyFunctionParserRuleCall_2_0 = (RuleCall)cPromiseTypeAssignment_2.eContents().get(0);
+		
+		//BodyClass:
+		//	name=ID_EXCL "::" promiseType+=BodyFunction*;
+		public ParserRule getRule() { return rule; }
+
+		//name=ID_EXCL "::" promiseType+=BodyFunction*
+		public Group getGroup() { return cGroup; }
+
+		//name=ID_EXCL
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//ID_EXCL
+		public RuleCall getNameID_EXCLParserRuleCall_0_0() { return cNameID_EXCLParserRuleCall_0_0; }
+
+		//"::"
+		public Keyword getColonColonKeyword_1() { return cColonColonKeyword_1; }
+
+		//promiseType+=BodyFunction*
+		public Assignment getPromiseTypeAssignment_2() { return cPromiseTypeAssignment_2; }
+
+		//BodyFunction
+		public RuleCall getPromiseTypeBodyFunctionParserRuleCall_2_0() { return cPromiseTypeBodyFunctionParserRuleCall_2_0; }
 	}
 	
 	
@@ -543,7 +682,9 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 	private TerminalRule tSL_COMMENT;
 	private TerminalRule tWS;
 	private TerminalRule tANY_OTHER;
+	private ID_EXCLElements pID_EXCL;
 	private PLACEHOLDERElements pPLACEHOLDER;
+	private PLACEHOLDERBElements pPLACEHOLDERB;
 	private AbstractElementElements pAbstractElement;
 	private PartElements pPart;
 	private BundleElements pBundle;
@@ -554,6 +695,7 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 	private BodyPromiseTypeElements pBodyPromiseType;
 	private BundleComponentElements pBundleComponent;
 	private BodyComponentElements pBodyComponent;
+	private BodyClassElements pBodyClass;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -578,9 +720,8 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getCfModelAccess().getRule();
 	}
 
-	////TODO delete '^'?
 	//terminal ID:
-	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
+	//	("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
 	public TerminalRule getIDRule() {
 		return (tID != null) ? tID : (tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ID"));
 	} 
@@ -594,16 +735,12 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 	////terminal STRING:
 	////	'"' ('\\' ('b' | 't' | 'n' | 'f' | 'r' | '"' | "'" | '\\' ) | !('\\' | '"'))* '"' |
 	////	"'" ('\\' ('b' | 't' | 'n' | 'f' | 'r' | '"' | "'" | '\\' ) | !('\\' | "'"))* "'";
-	////terminal STRING:
-	////'"'('\\"'|!('"'))*'"';
-	////TODO works but not fine when \" occurs
 	//terminal STRING:
 	//	"\"" (!("\\" | "\"") | "\\" .)* "\"" | "\'" (!("\\" | "\'") | "\\" .)* "\'";
 	public TerminalRule getSTRINGRule() {
 		return (tSTRING != null) ? tSTRING : (tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "STRING"));
 	} 
 
-	////terminal STRING: '"'->'"'|"'"->"'"; //without escaping
 	//terminal SL_COMMENT:
 	//	"#" !("\n" | "\r")* ("\r"? "\n")?;
 	public TerminalRule getSL_COMMENTRule() {
@@ -622,14 +759,35 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		return (tANY_OTHER != null) ? tANY_OTHER : (tANY_OTHER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ANY_OTHER"));
 	} 
 
+	////TODO separate ID with '!' ???
+	//ID_EXCL returns ecore::EString:
+	//	"!"? ID;
+	public ID_EXCLElements getID_EXCLAccess() {
+		return (pID_EXCL != null) ? pID_EXCL : (pID_EXCL = new ID_EXCLElements());
+	}
+	
+	public ParserRule getID_EXCLRule() {
+		return getID_EXCLAccess().getRule();
+	}
+
 	//PLACEHOLDER returns ecore::EString:
-	//	ANY_OTHER | ID | STRING | "=>" | ";" | "," | "(" | ")";
+	//	ANY_OTHER | ID | STRING | "=>" | ";" | "," | "(" | ")" | "{" | "}" | "@";
 	public PLACEHOLDERElements getPLACEHOLDERAccess() {
 		return (pPLACEHOLDER != null) ? pPLACEHOLDER : (pPLACEHOLDER = new PLACEHOLDERElements());
 	}
 	
 	public ParserRule getPLACEHOLDERRule() {
 		return getPLACEHOLDERAccess().getRule();
+	}
+
+	//PLACEHOLDERB returns ecore::EString:
+	//	ANY_OTHER | ID | STRING | "=>" | ";" | "," | "(" | ")";
+	public PLACEHOLDERBElements getPLACEHOLDERBAccess() {
+		return (pPLACEHOLDERB != null) ? pPLACEHOLDERB : (pPLACEHOLDERB = new PLACEHOLDERBElements());
+	}
+	
+	public ParserRule getPLACEHOLDERBRule() {
+		return getPLACEHOLDERBAccess().getRule();
 	}
 
 	//AbstractElement:
@@ -653,8 +811,8 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Bundle:
-	//	"bundle" component=BundleComponent name=ID PLACEHOLDER* "{" (promiseType+=BundlePromiseType ":" PLACEHOLDER*)*
-	//	/ *(methods+=Methode)* * / "}";
+	//	"bundle" component=BundleComponent name=ID PLACEHOLDERB* "{" (promiseType+=BundlePromiseType ":" (PLACEHOLDERB | "{"
+	//	"@" PLACEHOLDERB* "}")*)* "}";
 	public BundleElements getBundleAccess() {
 		return (pBundle != null) ? pBundle : (pBundle = new BundleElements());
 	}
@@ -666,7 +824,7 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 	////BodyPromiseType '=>' (values+=STRING | '{' values+=STRING
 	//Body:
 	//	"body" component=BodyComponent name=ID ("(" variables+=ID ("," variables+=ID)* ")")? "{" promiseType+=BodyFunction*
-	//	"}";
+	//	classes+=BodyClass* "}";
 	public BodyElements getBodyAccess() {
 		return (pBody != null) ? pBody : (pBody = new BodyElements());
 	}
@@ -676,9 +834,10 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	////	(',' values+=STRING)* '}') ';'
+	////TODO {@....}
 	//BodyFunction:
 	//	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
-	//	function+=SpecialFunction) ";";
+	//	function+=SpecialFunction | "{" "@" PLACEHOLDERB* "}") ";";
 	public BodyFunctionElements getBodyFunctionAccess() {
 		return (pBodyFunction != null) ? pBodyFunction : (pBodyFunction = new BodyFunctionElements());
 	}
@@ -687,8 +846,10 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getBodyFunctionAccess().getRule();
 	}
 
+	////TODO
 	//SpecialFunction:
-	//	name=ID "(" parameters+=STRING ("," parameters+=STRING)* ")";
+	//	name=ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+	//	/ *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")";
 	public SpecialFunctionElements getSpecialFunctionAccess() {
 		return (pSpecialFunction != null) ? pSpecialFunction : (pSpecialFunction = new SpecialFunctionElements());
 	}
@@ -697,11 +858,7 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getSpecialFunctionAccess().getRule();
 	}
 
-	/// *Methode:
-	//name=STRING (';'|zuweisung+=Zuweisung (','zuweisung+=Zuweisung)*';');
-	//
-	//Zuweisung:
-	//name=ID ('=>' (ID|STRING)* )?;* /BundlePromiseType:
+	//BundlePromiseType:
 	//	name=ID;
 	public BundlePromiseTypeElements getBundlePromiseTypeAccess() {
 		return (pBundlePromiseType != null) ? pBundlePromiseType : (pBundlePromiseType = new BundlePromiseTypeElements());
@@ -711,10 +868,7 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getBundlePromiseTypeAccess().getRule();
 	}
 
-	/// *BundlePromiseType:
-	//	name=('access' | 'classes' | 'commands' | 'databases' | 'environments' | 'files' | 'inferences' | 'interfaces' |
-	//	'measurements' | 'methods' | 'occurrences' | 'outputs' | 'packages' | 'processes' | 'reports' | 'roles' | 'services' |
-	//	'storage' | 'topics' | 'vars');* /BodyPromiseType:
+	//BodyPromiseType:
 	//	name=ID;
 	public BodyPromiseTypeElements getBodyPromiseTypeAccess() {
 		return (pBodyPromiseType != null) ? pBodyPromiseType : (pBodyPromiseType = new BodyPromiseTypeElements());
@@ -724,48 +878,8 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getBodyPromiseTypeAccess().getRule();
 	}
 
-	/// *BodyPromiseType:
-	//	name=('aces' | 'acl_directory_inherit' | 'acl_method' | 'acl_type' | 'action_policy' | 'allow_blank_fields' |
-	//	'associates' | 'atime' | 'audit' | 'background' | 'backward_relationship' | 'before_after' | 'bsdflags' |
-	//	'cancel_kept' | 'cancel_notkept' | 'cancel_repaired' | 'chdir' | 'check_foreign' | 'check_root' | 'chroot' |
-	//	'collapse_destination_dir' | 'command' | 'compare' | 'copy_backup' | 'copy_patterns' | 'copy_size' |
-	//	'copylink_patterns' | 'ctime' | 'db_server_connection_db' | 'db_server_host' | 'db_server_owner' |
-	//	'db_server_password' | 'db_server_type' | 'delete_if_contains_from_list' | 'delete_if_match_from_list' |
-	//	'delete_if_not_contains_from_list' | 'delete_if_not_match_from_list' | 'delete_if_not_startwith_from_list' |
-	//	'delete_if_startwith_from_list' | 'depth' | 'dirlinks' | 'disable' | 'disable_mode' | 'disable_suffix' | 'edit_backup'
-	//	| 'edit_fstab' | 'empty_file_before_editing' | 'encrypt' | 'env_addresses' | 'env_baseline' | 'env_cpus' | 'env_disk'
-	//	| 'env_memory' | 'env_name' | 'env_network' | 'env_spec_file' | 'exclude_dirs' | 'exec_group' | 'exec_owner' |
-	//	'exec_program' | 'exec_regex' | 'exec_timeout' | 'expireafter' | 'extend_fields' | 'extraction_regex' |
-	//	'field_operation' | 'field_separator' | 'field_value' | 'file_result' | 'file_to_print' | 'file_types' | 'findertype'
-	//	| 'first_last' | 'force_ipv4' | 'force_update' | 'forward_relationship' | 'freespace' | 'groups' | 'hash' |
-	//	'ifelapsed' | 'in_range_define' | 'include_basedir' | 'include_dirs' | 'include_end_delimiter' |
-	//	'include_start_delimiter' | 'inference' | 'insert_if_contains_from_list' | 'insert_if_match_from_list' |
-	//	'insert_if_not_contains_from_list' | 'insert_if_not_match_from_list' | 'insert_if_not_startwith_from_list' |
-	//	'insert_if_startwith_from_list' | 'ipv4_address' | 'ipv4_netmask' | 'ipv6_address' | 'issymlinkto' | 'leaf_name' |
-	//	'link_children' | 'link_type' | 'linkcopy_patterns' | 'log_failed' | 'log_kept' | 'log_level' | 'log_priority' |
-	//	'log_repaired' | 'log_string' | 'match_range' | 'max_file_size' | 'measurement_class' | 'mode' | 'mount_options' |
-	//	'mount_server' | 'mount_source' | 'mount_type' | 'mtime' | 'newname' | 'no_output' | 'number_of_lines' | 'occurrences'
-	//	| 'out_of_range_define' | 'owners' | 'package_add_command' | 'package_arch_regex' | 'package_changes' |
-	//	'package_delete_command' | 'package_delete_convention' | 'package_file_repositories' | 'package_installed_regex' |
-	//	'package_list_arch_regex' | 'package_list_command' | 'package_list_name_regex' | 'package_list_update_command' |
-	//	'package_list_update_ifelapsed' | 'package_list_version_regex' | 'package_multiline_start' | 'package_name_convention'
-	//	| 'package_name_regex' | 'package_noverify_regex' | 'package_noverify_returncode' | 'package_patch_arch_regex' |
-	//	'package_patch_command' | 'package_patch_installed_regex' | 'package_patch_list_command' | 'package_patch_name_regex'
-	//	| 'package_patch_version_regex' | 'package_update_command' | 'package_verify_command' | 'package_version_regex' |
-	//	'path_name' | 'persist_time' | 'pgid' | 'pid' | 'portnumber' | 'post_assoc_pattern' | 'ppid' | 'pre_assoc_pattern' |
-	//	'preserve' | 'preview' | 'priority' | 'process_owner' | 'process_result' | 'promise_kept' | 'promise_repaired' |
-	//	'purge' | 'recognize_join' | 'repair_denied' | 'repair_failed' | 'repair_timeout' | 'replace_value' | 'report_changes'
-	//	| 'report_diffs' | 'report_level' | 'rmdeadlinks' | 'rmdirs' | 'rotate' | 'rsize' | 'rxdirs' | 'scan_arrivals' |
-	//	'search_bsdflags' | 'search_groups' | 'search_mode' | 'search_owners' | 'search_size' | 'select_end' | 'select_field'
-	//	| 'select_line_matching' | 'select_line_number' | 'select_start' | 'sensible_count' |
-	//	'sensible_size' | 'servers' | 'service_args' | 'service_autostart_policy' | 'service_dependence_chain' |
-	//	'service_type' | 'source' | 'specify_inherit_aces' | 'status' | 'stealth' | 'stime_range' | 'threads' | 'timeout' |
-	//	'timer_policy' | 'track_growing_file' | 'traverse_links' | 'trustkey' | 'ttime_range' | 'tty' | 'type_check' | 'umask'
-	//	| 'unmount' | 'update_hashes' | 'useshell' | 'value_kept' | 'value_notkept' | 'value_repaired' | 'value_separator' |
-	//	'verify' | 'vsize' | 'when_linking_children' | 'when_no_source' | 'xdev');* ///TODO
 	//BundleComponent:
-	//	name= / *('common' | 'agent' | 'server' | 'monitor' | 'runagent' | 'executor' | 'knowledge' | 'reporter' | 'edit_line' |
-	//	'edit_xml' | 'usebundle')* /ID;
+	//	name=ID;
 	public BundleComponentElements getBundleComponentAccess() {
 		return (pBundleComponent != null) ? pBundleComponent : (pBundleComponent = new BundleComponentElements());
 	}
@@ -774,24 +888,23 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getBundleComponentAccess().getRule();
 	}
 
-	////common
-	/// *
-	//CompoundBody:
-	//	name=('action' | 'classes' | 'contain' | 'database_server' | 'environment_interface' | 'environment_resources' | 'acl' |
-	//	'changes' | 'copy_from' | 'delete' | 'depth_search' | 'edit_defaults' | 'file_select' | 'link_from' | 'perms' |
-	//	'rename' | 'select_region' | 'delete_select' | 'insert_select' | 'location' | 'edit_field' | 'replace_with' | 'tcp_ip'
-	//	| 'package_method' | 'process_count' | 'process_select' | 'service_method' | 'mount' | 'volume' | 'association' |
-	//	'infer' | 'match_value');* /BodyComponent:
-	//	name= / *('printfile' | 'action' | 'transaction' | 'classes' | 'contain' | 'database_server' | 'environment_interface' |
-	//	'environment_resources' | 'acl' | 'changes' | 'copy_from' | 'delete' | 'depth_search' | 'edit_defaults' |
-	//	'file_select' | 'link_from' | 'perms' | 'rename' | 'select_region' | 'delete_select' | 'insert_select' | 'location' |
-	//	'match_value' | 'edit_field' | 'replace_with' | 'tcp_ip' | 'package_method' | 'process_count' | 'process_select' |
-	//	'service_method' | 'mount' | 'volume' | 'association' | 'infer' | 'common')* /ID;
+	//BodyComponent:
+	//	name=ID;
 	public BodyComponentElements getBodyComponentAccess() {
 		return (pBodyComponent != null) ? pBodyComponent : (pBodyComponent = new BodyComponentElements());
 	}
 	
 	public ParserRule getBodyComponentRule() {
 		return getBodyComponentAccess().getRule();
+	}
+
+	//BodyClass:
+	//	name=ID_EXCL "::" promiseType+=BodyFunction*;
+	public BodyClassElements getBodyClassAccess() {
+		return (pBodyClass != null) ? pBodyClass : (pBodyClass = new BodyClassElements());
+	}
+	
+	public ParserRule getBodyClassRule() {
+		return getBodyClassAccess().getRule();
 	}
 }

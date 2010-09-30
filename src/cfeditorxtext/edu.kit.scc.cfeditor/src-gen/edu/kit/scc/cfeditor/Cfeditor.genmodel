@@ -24,6 +24,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//Body/component"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//Body/variables"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//Body/promiseType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//Body/classes"/>
     </genClasses>
     <genClasses ecoreClass="Cfeditor.ecore#//BodyFunction">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//BodyFunction/name"/>
@@ -33,7 +34,7 @@
     </genClasses>
     <genClasses ecoreClass="Cfeditor.ecore#//SpecialFunction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//SpecialFunction/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//SpecialFunction/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//SpecialFunction/func"/>
     </genClasses>
     <genClasses ecoreClass="Cfeditor.ecore#//BundlePromiseType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//BundlePromiseType/name"/>
@@ -46,6 +47,10 @@
     </genClasses>
     <genClasses ecoreClass="Cfeditor.ecore#//BodyComponent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//BodyComponent/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfeditor.ecore#//BodyClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//BodyClass/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//BodyClass/promiseType"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

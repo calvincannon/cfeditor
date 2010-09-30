@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link edu.kit.scc.cfeditor.cfeditor.Body#getComponent <em>Component</em>}</li>
  *   <li>{@link edu.kit.scc.cfeditor.cfeditor.Body#getVariables <em>Variables</em>}</li>
  *   <li>{@link edu.kit.scc.cfeditor.cfeditor.Body#getPromiseType <em>Promise Type</em>}</li>
+ *   <li>{@link edu.kit.scc.cfeditor.cfeditor.Body#getClasses <em>Classes</em>}</li>
  * </ul>
  * </p>
  *
@@ -85,5 +86,21 @@ public interface Body extends Part
    * @generated
    */
   EList<BodyFunction> getPromiseType();
+
+  /**
+   * Returns the value of the '<em><b>Classes</b></em>' containment reference list.
+   * The list contents are of type {@link edu.kit.scc.cfeditor.cfeditor.BodyClass}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Classes</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Classes</em>' containment reference list.
+   * @see edu.kit.scc.cfeditor.cfeditor.CfeditorPackage#getBody_Classes()
+   * @model containment="true"
+   * @generated
+   */
+  EList<BodyClass> getClasses();
 
 } // Body

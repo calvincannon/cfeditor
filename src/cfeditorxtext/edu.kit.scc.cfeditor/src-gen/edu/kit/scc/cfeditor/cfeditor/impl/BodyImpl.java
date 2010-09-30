@@ -7,6 +7,7 @@
 package edu.kit.scc.cfeditor.cfeditor.impl;
 
 import edu.kit.scc.cfeditor.cfeditor.Body;
+import edu.kit.scc.cfeditor.cfeditor.BodyClass;
 import edu.kit.scc.cfeditor.cfeditor.BodyComponent;
 import edu.kit.scc.cfeditor.cfeditor.BodyFunction;
 import edu.kit.scc.cfeditor.cfeditor.CfeditorPackage;
@@ -37,6 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.scc.cfeditor.cfeditor.impl.BodyImpl#getComponent <em>Component</em>}</li>
  *   <li>{@link edu.kit.scc.cfeditor.cfeditor.impl.BodyImpl#getVariables <em>Variables</em>}</li>
  *   <li>{@link edu.kit.scc.cfeditor.cfeditor.impl.BodyImpl#getPromiseType <em>Promise Type</em>}</li>
+ *   <li>{@link edu.kit.scc.cfeditor.cfeditor.impl.BodyImpl#getClasses <em>Classes</em>}</li>
  * </ul>
  * </p>
  *
@@ -73,6 +75,16 @@ public class BodyImpl extends PartImpl implements Body
    * @ordered
    */
   protected EList<BodyFunction> promiseType;
+
+  /**
+   * The cached value of the '{@link #getClasses() <em>Classes</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getClasses()
+   * @generated
+   * @ordered
+   */
+  protected EList<BodyClass> classes;
 
   /**
    * <!-- begin-user-doc -->
@@ -176,6 +188,20 @@ public class BodyImpl extends PartImpl implements Body
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<BodyClass> getClasses()
+  {
+    if (classes == null)
+    {
+      classes = new EObjectContainmentEList<BodyClass>(BodyClass.class, this, CfeditorPackage.BODY__CLASSES);
+    }
+    return classes;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -185,6 +211,8 @@ public class BodyImpl extends PartImpl implements Body
         return basicSetComponent(null, msgs);
       case CfeditorPackage.BODY__PROMISE_TYPE:
         return ((InternalEList<?>)getPromiseType()).basicRemove(otherEnd, msgs);
+      case CfeditorPackage.BODY__CLASSES:
+        return ((InternalEList<?>)getClasses()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -205,6 +233,8 @@ public class BodyImpl extends PartImpl implements Body
         return getVariables();
       case CfeditorPackage.BODY__PROMISE_TYPE:
         return getPromiseType();
+      case CfeditorPackage.BODY__CLASSES:
+        return getClasses();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -231,6 +261,10 @@ public class BodyImpl extends PartImpl implements Body
         getPromiseType().clear();
         getPromiseType().addAll((Collection<? extends BodyFunction>)newValue);
         return;
+      case CfeditorPackage.BODY__CLASSES:
+        getClasses().clear();
+        getClasses().addAll((Collection<? extends BodyClass>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -254,6 +288,9 @@ public class BodyImpl extends PartImpl implements Body
       case CfeditorPackage.BODY__PROMISE_TYPE:
         getPromiseType().clear();
         return;
+      case CfeditorPackage.BODY__CLASSES:
+        getClasses().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -274,6 +311,8 @@ public class BodyImpl extends PartImpl implements Body
         return variables != null && !variables.isEmpty();
       case CfeditorPackage.BODY__PROMISE_TYPE:
         return promiseType != null && !promiseType.isEmpty();
+      case CfeditorPackage.BODY__CLASSES:
+        return classes != null && !classes.isEmpty();
     }
     return super.eIsSet(featureID);
   }

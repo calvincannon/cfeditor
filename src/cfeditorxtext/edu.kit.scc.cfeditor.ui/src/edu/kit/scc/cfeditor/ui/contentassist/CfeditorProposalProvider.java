@@ -10,12 +10,18 @@ import java.util.LinkedList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.text.contentassist.ICompletionProposal;
 import org.eclipse.xtext.Assignment;
+import org.eclipse.xtext.parsetree.AbstractNode;
+import org.eclipse.xtext.parsetree.CompositeNode;
+import org.eclipse.xtext.parsetree.LeafNode;
+import org.eclipse.xtext.parsetree.NodeAdapter;
+import org.eclipse.xtext.parsetree.NodeUtil;
 import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext;
 import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor;
 
 import edu.kit.scc.cfeditor.cfeditor.Body;
 import edu.kit.scc.cfeditor.cfeditor.BodyFunction;
 import edu.kit.scc.cfeditor.cfeditor.Bundle;
+import edu.kit.scc.cfeditor.cfeditor.CfModel;
 import edu.kit.scc.cfeditor.definitions.CfDefinitionProvider;
 import edu.kit.scc.cfeditor.validation.CfFunctionType;
 
@@ -41,19 +47,20 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 	public void completeBody_PromiseType(final EObject model, final Assignment assignment,
 			final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
 
-		// super.completeBody_PromiseType(model, assignment, context, acceptor);
 		final CfDefinitionProvider defProvider = CfDefinitionProvider.getInstance();
 		final HashMap<String, LinkedList<String>> promiseMap = defProvider.getBodyFunctions();
+		
+		// TODO CfModel bei Class/PromiseType
 
-		final Body body = (Body) model;
-		final LinkedList<String> promiseTypeList = promiseMap.get(body.getComponent().getName());
-		ICompletionProposal completionProposal;
-		if (null != promiseTypeList) {
-			// ArrayList<String> promiseTypeList =
-			// defProvider.getDefinitions("BodyPromiseTypes");
-			for (String promiseType : promiseTypeList) {
-				completionProposal = createCompletionProposal(promiseType, context);
-				acceptor.accept(completionProposal);
+		if (model.eClass().getName().equals("Body")) {
+			final Body body = (Body) model;
+			final LinkedList<String> promiseTypeList = promiseMap.get(body.getComponent().getName());
+			ICompletionProposal completionProposal;
+			if (null != promiseTypeList) {
+				for (String promiseType : promiseTypeList) {
+					completionProposal = createCompletionProposal(promiseType, context);
+					acceptor.accept(completionProposal);
+				}
 			}
 		}
 		// proposal = getValueConverter().toString(proposal, "ID");
@@ -129,5 +136,16 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 				}
 			}
 		}
+	}
+
+	public void completeBodyClass_PromiseType(EObject model, Assignment assignment, ContentAssistContext context,
+			ICompletionProposalAcceptor acceptor) {
+
+		CompositeNode node = NodeUtil.getNode(model);
+		EObject eObj = NodeUtil.findASTParentElement(node);
+
+		Body body = (Body) eObj;
+
+		completeBody_PromiseType(body, assignment, context, acceptor);
 	}
 }

@@ -79,6 +79,7 @@ public class CfeditorFactoryImpl extends EFactoryImpl implements CfeditorFactory
       case CfeditorPackage.BODY_PROMISE_TYPE: return createBodyPromiseType();
       case CfeditorPackage.BUNDLE_COMPONENT: return createBundleComponent();
       case CfeditorPackage.BODY_COMPONENT: return createBodyComponent();
+      case CfeditorPackage.BODY_CLASS: return createBodyClass();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -203,6 +204,17 @@ public class CfeditorFactoryImpl extends EFactoryImpl implements CfeditorFactory
   {
     BodyComponentImpl bodyComponent = new BodyComponentImpl();
     return bodyComponent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BodyClass createBodyClass()
+  {
+    BodyClassImpl bodyClass = new BodyClassImpl();
+    return bodyClass;
   }
 
   /**

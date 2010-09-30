@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Cfeditor UI
 Bundle-Vendor: KIT/SCC
-Bundle-Version: 0.1.1.9
+Bundle-Version: 0.1.2
 Bundle-SymbolicName: edu.kit.scc.cfeditor.ui;singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: edu.kit.scc.cfeditor;visibility:=reexport,

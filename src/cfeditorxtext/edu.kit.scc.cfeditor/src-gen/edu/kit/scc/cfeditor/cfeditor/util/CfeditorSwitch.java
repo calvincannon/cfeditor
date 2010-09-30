@@ -178,6 +178,13 @@ public class CfeditorSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case CfeditorPackage.BODY_CLASS:
+      {
+        BodyClass bodyClass = (BodyClass)theEObject;
+        T result = caseBodyClass(bodyClass);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -354,6 +361,22 @@ public class CfeditorSwitch<T>
    * @generated
    */
   public T caseBodyComponent(BodyComponent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Body Class</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Body Class</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBodyClass(BodyClass object)
   {
     return null;
   }

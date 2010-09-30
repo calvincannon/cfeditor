@@ -8,6 +8,7 @@ package edu.kit.scc.cfeditor.cfeditor.impl;
 
 import edu.kit.scc.cfeditor.cfeditor.AbstractElement;
 import edu.kit.scc.cfeditor.cfeditor.Body;
+import edu.kit.scc.cfeditor.cfeditor.BodyClass;
 import edu.kit.scc.cfeditor.cfeditor.BodyComponent;
 import edu.kit.scc.cfeditor.cfeditor.BodyFunction;
 import edu.kit.scc.cfeditor.cfeditor.BodyPromiseType;
@@ -111,6 +112,13 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
    * @generated
    */
   private EClass bodyComponentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass bodyClassEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -300,6 +308,16 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getBody_Classes()
+  {
+    return (EReference)bodyEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getBodyFunction()
   {
     return bodyFunctionEClass;
@@ -370,9 +388,9 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getSpecialFunction_Parameters()
+  public EReference getSpecialFunction_Func()
   {
-    return (EAttribute)specialFunctionEClass.getEStructuralFeatures().get(1);
+    return (EReference)specialFunctionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -460,6 +478,36 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getBodyClass()
+  {
+    return bodyClassEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBodyClass_Name()
+  {
+    return (EAttribute)bodyClassEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBodyClass_PromiseType()
+  {
+    return (EReference)bodyClassEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public CfeditorFactory getCfeditorFactory()
   {
     return (CfeditorFactory)getEFactoryInstance();
@@ -501,6 +549,7 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
     createEReference(bodyEClass, BODY__COMPONENT);
     createEAttribute(bodyEClass, BODY__VARIABLES);
     createEReference(bodyEClass, BODY__PROMISE_TYPE);
+    createEReference(bodyEClass, BODY__CLASSES);
 
     bodyFunctionEClass = createEClass(BODY_FUNCTION);
     createEReference(bodyFunctionEClass, BODY_FUNCTION__NAME);
@@ -510,7 +559,7 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
 
     specialFunctionEClass = createEClass(SPECIAL_FUNCTION);
     createEAttribute(specialFunctionEClass, SPECIAL_FUNCTION__NAME);
-    createEAttribute(specialFunctionEClass, SPECIAL_FUNCTION__PARAMETERS);
+    createEReference(specialFunctionEClass, SPECIAL_FUNCTION__FUNC);
 
     bundlePromiseTypeEClass = createEClass(BUNDLE_PROMISE_TYPE);
     createEAttribute(bundlePromiseTypeEClass, BUNDLE_PROMISE_TYPE__NAME);
@@ -523,6 +572,10 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
 
     bodyComponentEClass = createEClass(BODY_COMPONENT);
     createEAttribute(bodyComponentEClass, BODY_COMPONENT__NAME);
+
+    bodyClassEClass = createEClass(BODY_CLASS);
+    createEAttribute(bodyClassEClass, BODY_CLASS__NAME);
+    createEReference(bodyClassEClass, BODY_CLASS__PROMISE_TYPE);
   }
 
   /**
@@ -575,6 +628,7 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
     initEReference(getBody_Component(), this.getBodyComponent(), null, "component", null, 0, 1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getBody_Variables(), ecorePackage.getEString(), "variables", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBody_PromiseType(), this.getBodyFunction(), null, "promiseType", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBody_Classes(), this.getBodyClass(), null, "classes", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(bodyFunctionEClass, BodyFunction.class, "BodyFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBodyFunction_Name(), this.getBodyPromiseType(), null, "name", null, 0, 1, BodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -584,7 +638,7 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
 
     initEClass(specialFunctionEClass, SpecialFunction.class, "SpecialFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSpecialFunction_Name(), ecorePackage.getEString(), "name", null, 0, 1, SpecialFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getSpecialFunction_Parameters(), ecorePackage.getEString(), "parameters", null, 0, -1, SpecialFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSpecialFunction_Func(), this.getSpecialFunction(), null, "func", null, 0, -1, SpecialFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(bundlePromiseTypeEClass, BundlePromiseType.class, "BundlePromiseType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBundlePromiseType_Name(), ecorePackage.getEString(), "name", null, 0, 1, BundlePromiseType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -597,6 +651,10 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
 
     initEClass(bodyComponentEClass, BodyComponent.class, "BodyComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBodyComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, BodyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(bodyClassEClass, BodyClass.class, "BodyClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBodyClass_Name(), ecorePackage.getEString(), "name", null, 0, 1, BodyClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBodyClass_PromiseType(), this.getBodyFunction(), null, "promiseType", null, 0, -1, BodyClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);
