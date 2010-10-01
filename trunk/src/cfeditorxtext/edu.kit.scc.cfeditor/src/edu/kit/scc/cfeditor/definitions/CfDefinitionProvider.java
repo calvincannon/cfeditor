@@ -116,8 +116,11 @@ public final class CfDefinitionProvider {
 			final SAXBuilder builder = new SAXBuilder();
 			try {
 				final Document doc = builder.build(this.getClass().getResourceAsStream("Definitions.xml"));
+
+				@SuppressWarnings("unchecked")
 				final AbstractList<Element> list = (AbstractList<Element>) doc.getRootElement()
 						.getChild("bundle", nsCfeditor).getChildren("component", nsCfeditor);
+
 				String componentName;
 				StringTokenizer tokenizer;
 
@@ -162,8 +165,7 @@ public final class CfDefinitionProvider {
 						"BundleTypes")));
 				while ((currentLine = bufferedReader.readLine()) != null) {
 					values = currentLine.split("#", 2);
-					if (values.length == 2) { // TODO components without defined
-												// promise types are ignored
+					if (values.length == 2) { // TODO components without defined promise types are ignored
 						if (bundleTypes.containsKey(values[0])) {
 							bundleTypes.get(values[0]).add(values[1]);
 						} else {
@@ -228,8 +230,11 @@ public final class CfDefinitionProvider {
 			final SAXBuilder builder = new SAXBuilder();
 			try {
 				final Document doc = builder.build(this.getClass().getResourceAsStream("Definitions.xml"));
+
+				@SuppressWarnings("unchecked")
 				final AbstractList<Element> list = (AbstractList<Element>) doc.getRootElement()
 						.getChild("body", nsCfeditor).getChildren("component", nsCfeditor);
+
 				String componentName;
 				StringTokenizer tokenizer;
 
@@ -268,8 +273,11 @@ public final class CfDefinitionProvider {
 
 		try {
 			Document doc = builder.build(this.getClass().getResourceAsStream("Definitions.xml"));
+
+			@SuppressWarnings("unchecked")
 			AbstractList<Element> list = (AbstractList<Element>) doc.getRootElement().getChild("body", nsCfeditor)
 					.getChildren("promisetype", nsCfeditor);
+
 			for (Element promiseType : list) {
 				promiseTypes.put(promiseType.getAttributeValue("name"),
 						new String[] { promiseType.getAttributeValue("type"), promiseType.getAttributeValue("range") });

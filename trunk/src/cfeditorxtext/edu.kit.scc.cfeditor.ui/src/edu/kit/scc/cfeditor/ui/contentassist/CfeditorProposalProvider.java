@@ -10,10 +10,7 @@ import java.util.LinkedList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.text.contentassist.ICompletionProposal;
 import org.eclipse.xtext.Assignment;
-import org.eclipse.xtext.parsetree.AbstractNode;
 import org.eclipse.xtext.parsetree.CompositeNode;
-import org.eclipse.xtext.parsetree.LeafNode;
-import org.eclipse.xtext.parsetree.NodeAdapter;
 import org.eclipse.xtext.parsetree.NodeUtil;
 import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext;
 import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor;
@@ -21,7 +18,6 @@ import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor;
 import edu.kit.scc.cfeditor.cfeditor.Body;
 import edu.kit.scc.cfeditor.cfeditor.BodyFunction;
 import edu.kit.scc.cfeditor.cfeditor.Bundle;
-import edu.kit.scc.cfeditor.cfeditor.CfModel;
 import edu.kit.scc.cfeditor.definitions.CfDefinitionProvider;
 import edu.kit.scc.cfeditor.validation.CfFunctionType;
 
@@ -70,6 +66,14 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 		// acceptor.accept(completionProposal);
 	}
 
+	/**
+	 * Provides content assist for promise types in bundle block.
+	 * 
+	 * @param model 
+	 * @param assignment 
+	 * @param context 
+	 * @param acceptor 
+	 */
 	public void completeBundle_PromiseType(EObject model, final Assignment assignment, ContentAssistContext context,
 			ICompletionProposalAcceptor acceptor) {
 		// super.completeBundle_PromiseType(model, assignment, context,
@@ -87,6 +91,14 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 		}
 	}
 
+	/**
+	 * Provides content assist for bundle components.
+	 * 
+	 * @param model 
+	 * @param assignment 
+	 * @param context 
+	 * @param acceptor 
+	 */
 	public void completeBundle_Component(EObject model, Assignment assignment, ContentAssistContext context,
 			ICompletionProposalAcceptor acceptor) {
 		CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
@@ -99,6 +111,14 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 		}
 	}
 
+	/**
+	 * Provides content assist for body components.
+	 * 
+	 * @param model 
+	 * @param assignment 
+	 * @param context 
+	 * @param acceptor 
+	 */
 	public void completeBody_Component(EObject model, Assignment assignment, ContentAssistContext context,
 			ICompletionProposalAcceptor acceptor) {
 		CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
@@ -109,8 +129,16 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 			completionProposal = createCompletionProposal(component, context);
 			acceptor.accept(completionProposal);
 		}
-	}// TODO dublicated code
+	}// TODO dublicated code?
 
+	/**
+	 * Provides content assist for body function values for example OPTION type values.
+	 * 
+	 * @param model 
+	 * @param assignment 
+	 * @param context 
+	 * @param acceptor 
+	 */
 	public void completeBodyFunction_Values(EObject model, Assignment assignment, ContentAssistContext context,
 			ICompletionProposalAcceptor acceptor) {
 
@@ -138,6 +166,14 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 		}
 	}
 
+	/**
+	 * Provides content assist for promise types which are in a body class.
+	 * 
+	 * @param model 
+	 * @param assignment 
+	 * @param context 
+	 * @param acceptor 
+	 */
 	public void completeBodyClass_PromiseType(EObject model, Assignment assignment, ContentAssistContext context,
 			ICompletionProposalAcceptor acceptor) {
 

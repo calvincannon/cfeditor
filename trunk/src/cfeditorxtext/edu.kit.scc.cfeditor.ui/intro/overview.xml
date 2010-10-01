@@ -5,7 +5,7 @@
 			<link label="Cfeditor"
 				url="http://code.google.com/a/eclipselabs.org/p/cfeditor/" id="cfeditor-overview"
 				style-id="content-link">
-				<text>Learn more about Cfeditor.</text>
+				<text>Learn more about Cfeditor</text>
 			</link>
 		</group>
 	</extensionContent>
