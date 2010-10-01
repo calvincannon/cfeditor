@@ -14,7 +14,7 @@ import edu.kit.scc.cfeditor.definitions.CfDefinitionProvider;
  * 
  */
 public class CfFunctionValidator {
-	private CfDefinitionProvider defProvider = CfDefinitionProvider.getInstance();
+	private final CfDefinitionProvider defProvider = CfDefinitionProvider.getInstance();
 	private CfFunctionType typeEnum;
 
 	/**
@@ -106,26 +106,6 @@ public class CfFunctionValidator {
 		return errorString;
 	}
 
-	// public Boolean checkINT(String value, String range) {
-	// try {
-	// int intValue = Integer.parseInt(value);
-	//
-	// if (null != range) {
-	// String[] bounds = range.split(",", 2);
-	// int low = Integer.parseInt(bounds[0]);
-	// int high = Integer.parseInt(bounds[1]);
-	//
-	// if (intValue < low || intValue > high) {
-	// return false;
-	// }
-	// }
-	//
-	// } catch (NumberFormatException e) {
-	// return false;
-	// }
-	// return true;
-	// }
-
 	/**
 	 * Validates values with data type INT.
 	 * 
@@ -203,24 +183,11 @@ public class CfFunctionValidator {
 	 * @return error message string or null
 	 */
 	public String checkSTRING(String value, String pattern) {
-		if (!pattern.isEmpty()) {
-			if (!value.matches(pattern)) {
-				return "Parameter does not match pattern: " + pattern;
-			}
+		if (!pattern.isEmpty() && !value.matches(pattern)) {
+			return "Parameter does not match pattern: " + pattern;
 		}
 		return null;
 	}
-
-	// private Boolean checkValues(EList<String> values, String range, Method
-	// method) throws IllegalArgumentException,
-	// IllegalAccessException, InvocationTargetException {
-	// for (String value : values) {
-	// if (!(Boolean) method.invoke(this, value, range)) {
-	// return false;
-	// }
-	// }
-	// return true;
-	// }
 
 	/**
 	 * Checks if a string contains a variable.
@@ -239,8 +206,7 @@ public class CfFunctionValidator {
 	 * @return the variable without quotes
 	 */
 	public String getVariableFromString(String value) {
-		String variable = value.substring(2, value.length() - 1);
-		return variable;
+		return value.substring(2, value.length() - 1);
 	}
 
 	/**
@@ -268,7 +234,8 @@ public class CfFunctionValidator {
 	}
 
 	/**
-	 * Checks if the variables in a string are in the declared list of variables.
+	 * Checks if the variables in a string are in the declared list of
+	 * variables.
 	 * 
 	 * @param value
 	 * @param variables
