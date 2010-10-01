@@ -11,6 +11,9 @@
 //import org.jdom.output.Format;
 //import org.jdom.output.XMLOutputter;
 //
+///**
+// * Helper class to fill the Definitions.xml with values from text files.
+// */
 //public class xmledit {
 //
 //	/**

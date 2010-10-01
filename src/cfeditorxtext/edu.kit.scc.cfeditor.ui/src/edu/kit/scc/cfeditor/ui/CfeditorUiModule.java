@@ -28,10 +28,20 @@ public class CfeditorUiModule extends edu.kit.scc.cfeditor.ui.AbstractCfeditorUi
 		super(plugin);
 	}
 
+	/**
+	 * Binds the semantic highlighting calculator class.
+	 * 
+	 * @return the highlighting calculator class
+	 */
 	public Class<? extends ISemanticHighlightingCalculator> bindSemanticHighlightingCalculator() {
 		return CfeditorHighlightingCalculator.class;
 	}
 
+	/**
+	 * Binds the highlighting configuration class.
+	 * 
+	 * @return the highlighting configuration class
+	 */
 	public Class<? extends IHighlightingConfiguration> bindSemanticConfig() {
 		return CfeditorHighlightingConfiguration.class;
 	}
