@@ -34,9 +34,9 @@ public class NewProjectWizard extends Wizard implements INewWizard, IExecutableE
 	/**
 	 * the configuration element
 	 */
-	private IConfigurationElement _configurationElement;
+	private IConfigurationElement configurationElement;
 
-	private static final Logger logger = Logger.getLogger(XtextNewProjectWizard.class);
+	private static final Logger LOGGER = Logger.getLogger(XtextNewProjectWizard.class);
 
 	protected IStructuredSelection selection;
 
@@ -83,13 +83,13 @@ public class NewProjectWizard extends Wizard implements INewWizard, IExecutableE
 		} catch (InterruptedException e) {
 			return false;
 		} catch (InvocationTargetException e) {
-			logger.error(e.getMessage(), e);
+			LOGGER.error(e.getMessage(), e);
 			Throwable realException = e.getTargetException();
 			MessageDialog.openError(getShell(), "Error", realException.getMessage());
 			return false;
 		}
 
-		BasicNewProjectResourceWizard.updatePerspective(_configurationElement);
+		BasicNewProjectResourceWizard.updatePerspective(configurationElement);
 		return true;
 	}
 
@@ -106,9 +106,9 @@ public class NewProjectWizard extends Wizard implements INewWizard, IExecutableE
 			fileOpener.selectAndReveal(creator.getResult());
 			fileOpener.openFileToEdit(getShell(), creator.getResult());
 		} catch (final InvocationTargetException e) {
-			logger.error(e.getMessage(), e);
+			LOGGER.error(e.getMessage(), e);
 		} catch (final InterruptedException e) {
-			logger.error(e.getMessage(), e);
+			LOGGER.error(e.getMessage(), e);
 		}
 	}
 
@@ -168,6 +168,6 @@ public class NewProjectWizard extends Wizard implements INewWizard, IExecutableE
 	 */
 	public void setInitializationData(IConfigurationElement config, String propertyName, Object data)
 			throws CoreException {
-		_configurationElement = config;
+		configurationElement = config;
 	}
 }

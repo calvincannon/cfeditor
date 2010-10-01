@@ -36,7 +36,6 @@ public class CfeditorHighlightingConfiguration extends DefaultHighlightingConfig
 		acceptor.acceptDefaultHighlighting(NUMBER_ID, "Number", numberTextStyle());
 		acceptor.acceptDefaultHighlighting(DEFAULT_ID, "Default", defaultTextStyle());
 		acceptor.acceptDefaultHighlighting(INVALID_TOKEN_ID, "Invalid Symbol", errorTextStyle());
-//TODO ergänzen?
 	}
 
 	/**
