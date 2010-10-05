@@ -1,0 +1,14 @@
+#summary Release notes
+
+= Release =
+|| nr || from || till || duration ||
+|| 0.1. || 01.07.2010 || 01.10.2010 || 3 months ||
+
+= Details =
+== Analysis Summary ==
+cfeditor  will be Eclipse plugin based on the xText.
+== Design summary ==
+The "standart" xText functionality will be used to create the cfeditor base functions.
+== Implementation summary == 
+the following features are implemented:
+ * 
