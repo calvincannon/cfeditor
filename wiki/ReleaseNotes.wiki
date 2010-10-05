@@ -1,8 +1,9 @@
 #summary Release notes
 
-= Release =
-|| nr || from || till || duration ||
-|| 0.1. || 01.07.2010 || 01.10.2010 || 3 months ||
+= Release 0.1 =
+ * from 01.07.2010
+ * till 01.10.2010
+ * duration 3 months
 
 = Details =
 == Analysis Summary ==
