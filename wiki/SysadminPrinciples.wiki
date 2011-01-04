@@ -2,13 +2,13 @@
 
 = Introduction =
 
-There are different types of IT systems. They are differ not only by the software, but also by using the hardware (consider as two *dimensions*: *hardware*, *software*). Some popular examples includes: 
+There are different types of IT systems. They are differ not only by the software, but also by using the hardware (consider as two _dimensions: hardware, software_). Some popular examples includes: 
  * Transaction Processing Systems ("TPS") are designed to process routine transactions efficiently and accurately.
  * Management Information Systems ("MIS") is mainly concerned with internal sources of information.
  * Knowledge Management Systems	("KMS") exist to help businesses create and share information.
  * Office Automation Systems are systems that try to improve the productivity of employees who need to process data and information.
 
-From another perspective, there are embedded and distributed systems with different approaches for the administration for such systems. In common words, it depends on the *mediator* between the system administrator(s) and _system under administration_. All approaches we will group as:
+From another perspective, there are embedded and distributed systems with different approaches for the administration for such systems. In common words, it depends on the *mediator* between the _system administrator(s)_ and _system under administration_. All approaches we will group as:
  * _directive administration_ or hand-made 
  * _management_ or half-automatically done
  * _self-management_ or automatically done
