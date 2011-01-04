@@ -17,6 +17,6 @@ First type is about the system administration activity into the hardware dimensi
 
 Second approach - automatics is done half-automatically and about scripting into the software dimension, producing some procedures to provides automatisms for the system. It can be considered as the first step into the robotics and includes elements of  _regulation and organisation_ for the System administration tasks.
 
-Third approach is about the fully automated environment (robot) with self-manages procedures. Such an IT systems widely use the concept of Autonomic Computing. It can be difficult to construct the robot from the half-automatically system, but relatively easy to improve the hand-made till the half-automatically.
+Third approach is about the fully automated environment (robot) with self-manages procedures. Such an IT systems widely use the concept of Autonomic Computing. It can be difficult to construct the robot from the half-automatically system. But relatively easy to improve the hand-made till the half-automatically which means add the management procedures into the System administration activities by organizing and declare regulation procedures and policies.
 
 = System grow =
