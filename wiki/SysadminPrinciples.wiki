@@ -1,0 +1,22 @@
+#summary Some (theoretical) notes concerning the Information Technology and Communication  System Administration subject. @author: Dulov Oleg
+
+= Introduction =
+
+There are different types of IT systems. They are differ not only by the software, but also by using the hardware (consider as two dimensions: hardware, software). Some popular examples includes: 
+ * Transaction Processing Systems ("TPS") are designed to process routine transactions efficiently and accurately.
+ * Management Information Systems ("MIS") is mainly concerned with internal sources of information.
+ * Knowledge Management Systems	("KMS") exist to help businesses create and share information.
+ * Office Automation Systems are systems that try to improve the productivity of employees who need to process data and information.
+
+There are different approaches for the administration for such systems. In common words, it depends on the mediator between the system administrator(s) and system under administration. All approaches we will group as:
+ * _directive administration_ or hand-made 
+ * _management_ or half-automatically done
+ * _self-management_ or automatically done
+
+First type is about the system administration activity into the hardware dimension (cabling, machines or component maintenance, and so on) and the "old-styled" administration into the software dimension. As the system is growing, the software administration with manually approach is mostly change into the half-automatically. 
+
+Second approach - automatics is done half-automatically and about scripting into the software dimension, producing some procedures to provides automatisms for the system. It can be considered as the first step into the robotics.
+
+Third approach is about the fully automated environment (robot) with self-manages procedures. Such an IT systems widely use the concept of Autonomic Computing. It can be difficult to construct the robot from the half-automatically system, but relatively easy to improve the hand-made till the half-automatically.
+
+= System grow =
