@@ -2,9 +2,7 @@
 
 = Introduction =
 
-Information and Communication Technology is a wide-area discipline with range of tasks. Some activities are related into the Software Engineering. The ICT systems administration includes the Software Engineering and can be considered as the System Engineering activities.
-
-There are different types of ICT systems. They are differ not only by the software, but also by using the hardware (consider as two _dimensions: hardware, software_). Some popular examples includes: 
+Information and Communication Technology is a wide-area discipline with range of tasks. Some activities are related into the Software Engineering. The ICT systems administration includes the Software Engineering and can be considered as the System Engineering activities. There are different types of ICT systems. They are differ not only by the software, but also by using the hardware (consider as two _dimensions: hardware, software_). Some popular examples includes: 
  * Transaction Processing Systems ("TPS") are designed to process routine transactions efficiently and accurately.
  * Management Information Systems ("MIS") is mainly concerned with internal sources of information.
  * Knowledge Management Systems	("KMS") exist to help businesses create and share information.
