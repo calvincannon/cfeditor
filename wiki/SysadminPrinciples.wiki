@@ -15,7 +15,7 @@ There are different approaches for the administration for such systems. In commo
 
 First type is about the system administration activity into the hardware dimension (cabling, machines or component maintenance, and so on) and the "old-styled" administration into the software dimension. As the system is growing, the software administration with manually approach is mostly change into the half-automatically. 
 
-Second approach - automatics is done half-automatically and about scripting into the software dimension, producing some procedures to provides automatisms for the system. It can be considered as the first step into the robotics.
+Second approach - automatics is done half-automatically and about scripting into the software dimension, producing some procedures to provides automatisms for the system. It can be considered as the first step into the robotics and includes elements of  _regulation and organisation_ for the System administration tasks.
 
 Third approach is about the fully automated environment (robot) with self-manages procedures. Such an IT systems widely use the concept of Autonomic Computing. It can be difficult to construct the robot from the half-automatically system, but relatively easy to improve the hand-made till the half-automatically.
 
