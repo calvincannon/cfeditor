@@ -9,7 +9,7 @@ Information and Communication Technology is a wide-area discipline with range of
  * Office Automation Systems are systems that try to improve the productivity of employees who need to process data and information.
 
 From another perspective, there are embedded and distributed systems with different approaches for the administration for such systems. In common words, it depends on the *mediator* between the _system administrator(s)_ and _system under administration_. All approaches we will group as:
- * _directive administration_ or hand-made 
+ * _direct administration_ or hand-made 
  * _management_ or half-automatically done
  * _self-management_ or automatically done
 
