@@ -13,7 +13,7 @@ From another perspective, there are embedded and distributed systems with differ
  * _management_ or half-automatically done
  * _self-management_ or automatically done
 
-First type is about the system administration activity into the hardware dimension (cabling, machines or component maintenance, and so on) and the "old-styled" administration into the software dimension. As the system is growing, the software administration with manually approach is mostly change into the half-automatically. 
+First type is about the system administration activity into the hardware dimension (cabling, machines or component maintenance, and so on) and the "old-styled" administration into the software dimension. As the system is growing, the software administration with manually approach is changing into the half-automatically. 
 
 Second approach - automatics is done half-automatically and about scripting into the software dimension, producing some procedures to provides automatisms for the system. It can be considered as the first step into the robotics and includes elements of  _regulation and organisation_ for the System administration tasks.
 
