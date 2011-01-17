@@ -32,25 +32,40 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getElementsAbstractElementParserRuleCall_0() { return cElementsAbstractElementParserRuleCall_0; }
 	}
 
-	public class ID_EXCLElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ID_EXCL");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cExclamationMarkKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+	public class CLASS_IDElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CLASS_ID");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
+		private final Keyword cVerticalLineKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		private final Keyword cExclamationMarkKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
+		private final Keyword cFullStopKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
 		
-		////TODO separate ID with '!' ???
-		//ID_EXCL returns ecore::EString:
-		//	"!"? ID;
+		//CLASS_ID returns ecore::EString:
+		//	(ID | "(" | ")" | "|" | "!" | ".")+;
 		public ParserRule getRule() { return rule; }
 
-		//"!"? ID
-		public Group getGroup() { return cGroup; }
-
-		//"!"?
-		public Keyword getExclamationMarkKeyword_0() { return cExclamationMarkKeyword_0; }
+		//(ID | "(" | ")" | "|" | "!" | ".")+
+		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//ID
-		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
+
+		//"|"
+		public Keyword getVerticalLineKeyword_3() { return cVerticalLineKeyword_3; }
+
+		//"!"
+		public Keyword getExclamationMarkKeyword_4() { return cExclamationMarkKeyword_4; }
+
+		//"."
+		public Keyword getFullStopKeyword_5() { return cFullStopKeyword_5; }
 	}
 
 	public class PLACEHOLDERElements extends AbstractParserRuleElementFinder {
@@ -399,7 +414,6 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		////	(',' values+=STRING)* '}') ';'
-		////TODO {@....}
 		//BodyFunction:
 		//	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
 		//	function+=SpecialFunction | "{" "@" PLACEHOLDERB* "}") ";";
@@ -646,23 +660,23 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BodyClass");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameID_EXCLParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final RuleCall cNameCLASS_IDParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cColonColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cPromiseTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cPromiseTypeBodyFunctionParserRuleCall_2_0 = (RuleCall)cPromiseTypeAssignment_2.eContents().get(0);
 		
 		//BodyClass:
-		//	name=ID_EXCL "::" promiseType+=BodyFunction*;
+		//	name=CLASS_ID "::" promiseType+=BodyFunction*;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID_EXCL "::" promiseType+=BodyFunction*
+		//name=CLASS_ID "::" promiseType+=BodyFunction*
 		public Group getGroup() { return cGroup; }
 
-		//name=ID_EXCL
+		//name=CLASS_ID
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//ID_EXCL
-		public RuleCall getNameID_EXCLParserRuleCall_0_0() { return cNameID_EXCLParserRuleCall_0_0; }
+		//CLASS_ID
+		public RuleCall getNameCLASS_IDParserRuleCall_0_0() { return cNameCLASS_IDParserRuleCall_0_0; }
 
 		//"::"
 		public Keyword getColonColonKeyword_1() { return cColonColonKeyword_1; }
@@ -682,7 +696,7 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 	private TerminalRule tSL_COMMENT;
 	private TerminalRule tWS;
 	private TerminalRule tANY_OTHER;
-	private ID_EXCLElements pID_EXCL;
+	private CLASS_IDElements pCLASS_ID;
 	private PLACEHOLDERElements pPLACEHOLDER;
 	private PLACEHOLDERBElements pPLACEHOLDERB;
 	private AbstractElementElements pAbstractElement;
@@ -720,6 +734,7 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getCfModelAccess().getRule();
 	}
 
+	////'!'
 	//terminal ID:
 	//	("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
 	public TerminalRule getIDRule() {
@@ -759,15 +774,14 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		return (tANY_OTHER != null) ? tANY_OTHER : (tANY_OTHER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ANY_OTHER"));
 	} 
 
-	////TODO separate ID with '!' ???
-	//ID_EXCL returns ecore::EString:
-	//	"!"? ID;
-	public ID_EXCLElements getID_EXCLAccess() {
-		return (pID_EXCL != null) ? pID_EXCL : (pID_EXCL = new ID_EXCLElements());
+	//CLASS_ID returns ecore::EString:
+	//	(ID | "(" | ")" | "|" | "!" | ".")+;
+	public CLASS_IDElements getCLASS_IDAccess() {
+		return (pCLASS_ID != null) ? pCLASS_ID : (pCLASS_ID = new CLASS_IDElements());
 	}
 	
-	public ParserRule getID_EXCLRule() {
-		return getID_EXCLAccess().getRule();
+	public ParserRule getCLASS_IDRule() {
+		return getCLASS_IDAccess().getRule();
 	}
 
 	//PLACEHOLDER returns ecore::EString:
@@ -834,7 +848,6 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	////	(',' values+=STRING)* '}') ';'
-	////TODO {@....}
 	//BodyFunction:
 	//	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
 	//	function+=SpecialFunction | "{" "@" PLACEHOLDERB* "}") ";";
@@ -899,7 +912,7 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//BodyClass:
-	//	name=ID_EXCL "::" promiseType+=BodyFunction*;
+	//	name=CLASS_ID "::" promiseType+=BodyFunction*;
 	public BodyClassElements getBodyClassAccess() {
 		return (pBodyClass != null) ? pBodyClass : (pBodyClass = new BodyClassElements());
 	}

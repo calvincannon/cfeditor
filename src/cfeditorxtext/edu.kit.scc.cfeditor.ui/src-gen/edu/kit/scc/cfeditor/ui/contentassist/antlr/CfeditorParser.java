@@ -37,13 +37,13 @@ public class CfeditorParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getCLASS_IDAccess().getAlternatives(), "rule__CLASS_ID__Alternatives");
 					put(grammarAccess.getPLACEHOLDERAccess().getAlternatives(), "rule__PLACEHOLDER__Alternatives");
 					put(grammarAccess.getPLACEHOLDERBAccess().getAlternatives(), "rule__PLACEHOLDERB__Alternatives");
 					put(grammarAccess.getPartAccess().getAlternatives(), "rule__Part__Alternatives");
 					put(grammarAccess.getBundleAccess().getAlternatives_5_2(), "rule__Bundle__Alternatives_5_2");
 					put(grammarAccess.getBodyFunctionAccess().getAlternatives_2(), "rule__BodyFunction__Alternatives_2");
 					put(grammarAccess.getSpecialFunctionAccess().getAlternatives_2(), "rule__SpecialFunction__Alternatives_2");
-					put(grammarAccess.getID_EXCLAccess().getGroup(), "rule__ID_EXCL__Group__0");
 					put(grammarAccess.getBundleAccess().getGroup(), "rule__Bundle__Group__0");
 					put(grammarAccess.getBundleAccess().getGroup_5(), "rule__Bundle__Group_5__0");
 					put(grammarAccess.getBundleAccess().getGroup_5_2_1(), "rule__Bundle__Group_5_2_1__0");

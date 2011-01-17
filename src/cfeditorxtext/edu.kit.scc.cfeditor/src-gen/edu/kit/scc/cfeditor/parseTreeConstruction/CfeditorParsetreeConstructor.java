@@ -1020,7 +1020,6 @@ protected class Body_RightCurlyBracketKeyword_7 extends KeywordToken  {
 /************ begin Rule BodyFunction ****************
  *
  * //	(',' values+=STRING)* '}') ';'
- * //TODO {@....}
  * BodyFunction:
  * 	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
  * 	function+=SpecialFunction | "{" "@" PLACEHOLDERB* "}") ";";
@@ -1914,11 +1913,11 @@ protected class BodyComponent_NameAssignment extends AssignmentToken  {
 /************ begin Rule BodyClass ****************
  *
  * BodyClass:
- * 	name=ID_EXCL "::" promiseType+=BodyFunction*;
+ * 	name=CLASS_ID "::" promiseType+=BodyFunction*;
  *
  **/
 
-// name=ID_EXCL "::" promiseType+=BodyFunction*
+// name=CLASS_ID "::" promiseType+=BodyFunction*
 protected class BodyClass_Group extends GroupToken {
 	
 	public BodyClass_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1948,7 +1947,7 @@ protected class BodyClass_Group extends GroupToken {
 
 }
 
-// name=ID_EXCL
+// name=CLASS_ID
 protected class BodyClass_NameAssignment_0 extends AssignmentToken  {
 	
 	public BodyClass_NameAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1971,9 +1970,9 @@ protected class BodyClass_NameAssignment_0 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("name",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("name");
-		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getBodyClassAccess().getNameID_EXCLParserRuleCall_0_0(), value, null)) {
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getBodyClassAccess().getNameCLASS_IDParserRuleCall_0_0(), value, null)) {
 			type = AssignmentType.DATATYPE_RULE_CALL;
-			element = grammarAccess.getBodyClassAccess().getNameID_EXCLParserRuleCall_0_0();
+			element = grammarAccess.getBodyClassAccess().getNameCLASS_IDParserRuleCall_0_0();
 			return obj;
 		}
 		return null;
