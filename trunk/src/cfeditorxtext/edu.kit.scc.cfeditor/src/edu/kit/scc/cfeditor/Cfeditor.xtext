@@ -5,9 +5,9 @@ generate cfeditor "http://www.kit.edu/scc/cfeditor/Cfeditor"
 
 CfModel:
 	(elements+=AbstractElement)*;
-
+	
 terminal ID:
-	('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
+	('a'..'z' | 'A'..'Z' | '_' ) ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*; //'!'
 
 terminal INT returns ecore::EInt:
 	('0'..'9')+;
@@ -28,8 +28,9 @@ terminal WS:
 terminal ANY_OTHER:
 	.;
 
-ID_EXCL:
-	'!'? ID; //TODO separate ID with '!' ???
+CLASS_ID:
+(ID|'('|')'|'|'|'!'|'.')+;
+
 PLACEHOLDER:
 	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')' | '{' | '}' | '@');
 
@@ -48,17 +49,18 @@ Bundle:
 	'}';
 
 Body:
-	'body' component=BodyComponent name=ID ('(' variables+=ID (',' variables+=ID)* ')')? '{' (promiseType+=BodyFunction)* 
+	'body' component=BodyComponent name=ID ('(' variables+=ID (',' variables+=ID)* ')')? '{' (promiseType+=BodyFunction)*
 	(classes+=BodyClass)*
 	'}'; //BodyPromiseType '=>' (values+=STRING | '{' values+=STRING
 //	(',' values+=STRING)* '}') ';'
 BodyFunction:
 	name=BodyPromiseType '=>' (values+=STRING | List?='{' values+=STRING
-	(',' values+=STRING)* '}' | function+=SpecialFunction | '{' '@' (PLACEHOLDERB)* '}') ';'; //TODO {@....}
+	(',' values+=STRING)* '}' | function+=SpecialFunction | '{' '@' (PLACEHOLDERB)* '}') ';';
 SpecialFunction:
 	name=ID '(' (ANY_OTHER | ID | STRING | INT | ',' | '$(' ID ')' | '${' ID '}' | func+=SpecialFunction)*
 	/*(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* */
 	')'; //TODO
+
 BundlePromiseType:
 	name=ID;
 
@@ -72,4 +74,4 @@ BodyComponent:
 	name=ID;
 
 BodyClass:
-	name=ID_EXCL '::' (promiseType+=BodyFunction)*;
+	name=CLASS_ID '::' (promiseType+=BodyFunction)*;

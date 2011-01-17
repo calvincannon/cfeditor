@@ -240,6 +240,12 @@
                relationship="bottom"
                relative="org.eclipse.ui.editorss">
          </view>
+         <view
+               id="edu.kit.scc.cfeditor.ui.views.ClassView"
+               minimized="false"
+               relationship="bottom"
+               relative="org.eclipse.ui.views.ContentOutline">
+         </view>
       </perspectiveExtension>
    </extension>
    
@@ -289,6 +295,21 @@
 
 
 
+</extension>
+<extension
+      point="org.eclipse.ui.views">
+   <view
+         category="edu.kit.scc.cfeditor.ui.views.category.cfeditor"
+         class="edu.kit.scc.cfeditor.ui.views.ClassViewPart"
+         icon="icons/outline_co.gif"
+         id="edu.kit.scc.cfeditor.ui.views.ClassView"
+         name="Class View"
+         restorable="true">
+   </view>
+   <category
+         id="edu.kit.scc.cfeditor.ui.views.category.cfeditor"
+         name="Cfeditor">
+   </category>
 </extension>
    
 
