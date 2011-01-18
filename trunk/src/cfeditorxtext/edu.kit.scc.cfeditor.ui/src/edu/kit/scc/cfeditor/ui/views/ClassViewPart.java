@@ -43,12 +43,6 @@ public class ClassViewPart extends ViewPart {
 	private ClassTreeBuilder treeBuilder;
 
 	/**
-	 * Default constructor (empty).
-	 */
-	public ClassViewPart() {
-	}
-
-	/**
 	 * Creates the graphical tree elements and handles user interactions (double
 	 * click event).
 	 */
@@ -68,7 +62,6 @@ public class ClassViewPart extends ViewPart {
 			 * corresponding file in editor and jumps to the position of the
 			 * selected body function.
 			 */
-			@Override
 			public void doubleClick(DoubleClickEvent event) {
 				if (event.getSelection() instanceof ISelection) {
 					IStructuredSelection selection = (IStructuredSelection) event.getSelection();
@@ -116,38 +109,30 @@ public class ClassViewPart extends ViewPart {
 		super.init(site);
 
 		partListener = new IPartListener2() {
-			@Override
 			public void partVisible(IWorkbenchPartReference partRef) {
 			}
 
-			@Override
 			public void partOpened(IWorkbenchPartReference partRef) {
 			}
 
-			@Override
 			public void partInputChanged(IWorkbenchPartReference partRef) {
 			}
 
-			@Override
 			public void partHidden(IWorkbenchPartReference partRef) {
 			}
 
-			@Override
 			public void partDeactivated(IWorkbenchPartReference partRef) {
 			}
 
-			@Override
 			public void partClosed(IWorkbenchPartReference partRef) {
 			}
 
-			@Override
 			public void partBroughtToTop(IWorkbenchPartReference partRef) {
 			}
 
 			/**
 			 * Actualizes the tree if current active project has changed.
 			 */
-			@Override
 			public void partActivated(IWorkbenchPartReference partRef) {
 				IProject oldActiveProject = activeProject;
 				IEditorPart editorPart = null;

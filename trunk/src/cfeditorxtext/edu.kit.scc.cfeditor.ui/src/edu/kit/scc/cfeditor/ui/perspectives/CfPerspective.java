@@ -11,7 +11,6 @@ import org.eclipse.ui.IPerspectiveFactory;
  */
 public class CfPerspective implements IPerspectiveFactory {
 
-	// @Override
 	/**
 	 * Creates initial layout.
 	 * 

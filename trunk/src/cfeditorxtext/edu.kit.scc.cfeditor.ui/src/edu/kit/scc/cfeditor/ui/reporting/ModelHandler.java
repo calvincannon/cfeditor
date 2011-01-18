@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
  * @author Andreas Bender
  * 
  */
-public abstract class ModelHandler {
+public class ModelHandler {
 	
 	/**
 	 * Returns a map of file URIs (as Strings) and corresponding resource

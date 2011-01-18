@@ -21,7 +21,7 @@ import edu.kit.scc.cfeditor.cfeditor.CfModel;
 public class CfModelHandler extends ModelHandler {
 
 	/**
-	 * Returns a map of body class objects sorted by name which are contained in
+	 * Returns a map of body class objects grouped by name which are contained in
 	 * the given file list.
 	 * 
 	 * Design of the hash map:
