@@ -17,12 +17,6 @@ import org.eclipse.core.runtime.CoreException;
 public class FileHandler {
 
 	/**
-	 * Default Constructor (empty).
-	 */
-	public FileHandler() {
-	}
-
-	/**
 	 * Returns the list of URIs (as Strings) of all files in an eclipse project
 	 * which have the given file extension.
 	 * 
@@ -72,7 +66,7 @@ public class FileHandler {
 				}
 			}
 		}
-		// TODO Probiere Filter Methoden!!!
+		
 		return uriList;
 	}
 }

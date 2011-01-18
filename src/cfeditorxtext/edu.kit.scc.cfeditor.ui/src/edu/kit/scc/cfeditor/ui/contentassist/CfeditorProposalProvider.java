@@ -3,6 +3,7 @@ package edu.kit.scc.cfeditor.ui.contentassist;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.text.contentassist.ICompletionProposal;
@@ -29,6 +30,8 @@ import edu.kit.scc.cfeditor.validation.CfFunctionType;
  */
 public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 
+	private CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
+
 	/**
 	 * Provides content assist for promise types in body block.
 	 * 
@@ -40,27 +43,20 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 	public void completeBody_PromiseType(final EObject model, final Assignment assignment,
 			final ContentAssistContext context, final ICompletionProposalAcceptor acceptor) {
 
-		final CfDefinitionProvider defProvider = CfDefinitionProvider.getInstance();
-		final HashMap<String, LinkedList<String>> promiseMap = defProvider.getBodyFunctions();
+		final HashMap<String, LinkedList<String>> promiseMap = cfDefProvider.getBodyFunctions();
 
 		// TODO CfModel bei Class/PromiseType
 
-		if (model.eClass().getName().equals("Body")) {
+		if (model.eClass().getName().equals("Body")) { // use instanceof or
+														// try/catch?
 			final Body body = (Body) model;
 			final LinkedList<String> promiseTypeList = promiseMap.get(body.getComponent().getName());
-			ICompletionProposal completionProposal;
+
 			if (null != promiseTypeList) {
-				for (String promiseType : promiseTypeList) {
-					completionProposal = createCompletionProposal(promiseType, context);
-					acceptor.accept(completionProposal);
-				}
+				createProposalAndAcceptList(promiseTypeList, context, acceptor);
 			}
 		}
 		// proposal = getValueConverter().toString(proposal, "ID");
-
-		// completionProposal = createCompletionProposal(proposal, context);
-
-		// acceptor.accept(completionProposal);
 	}
 
 	/**
@@ -73,18 +69,14 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 	 */
 	public void completeBundle_PromiseType(EObject model, final Assignment assignment, ContentAssistContext context,
 			ICompletionProposalAcceptor acceptor) {
-		// super.completeBundle_PromiseType(model, assignment, context,
-		// acceptor);
 
-		final CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
 		HashMap<String, LinkedList<String>> promiseMap = cfDefProvider.getBundleTypes();
 
 		Bundle bundle = (Bundle) model;
 		LinkedList<String> promiseTypeList = promiseMap.get(bundle.getComponent().getName());
-		ICompletionProposal completionProposal;
-		for (String promiseType : promiseTypeList) {
-			completionProposal = createCompletionProposal(promiseType, context);
-			acceptor.accept(completionProposal);
+
+		if (null != promiseTypeList) {
+			createProposalAndAcceptList(promiseTypeList, context, acceptor);
 		}
 	}
 
@@ -98,14 +90,10 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 	 */
 	public void completeBundle_Component(EObject model, Assignment assignment, ContentAssistContext context,
 			ICompletionProposalAcceptor acceptor) {
-		CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
+
 		ArrayList<String> componentList = cfDefProvider.getDefinitions("BundleComponents");
 
-		ICompletionProposal completionProposal;
-		for (String component : componentList) {
-			completionProposal = createCompletionProposal(component, context);
-			acceptor.accept(completionProposal);
-		}
+		createProposalAndAcceptList(componentList, context, acceptor);
 	}
 
 	/**
@@ -118,15 +106,11 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 	 */
 	public void completeBody_Component(EObject model, Assignment assignment, ContentAssistContext context,
 			ICompletionProposalAcceptor acceptor) {
-		CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
+
 		ArrayList<String> componentList = cfDefProvider.getDefinitions("BodyComponents");
 
-		ICompletionProposal completionProposal;
-		for (String component : componentList) {
-			completionProposal = createCompletionProposal(component, context);
-			acceptor.accept(completionProposal);
-		}
-	}// TODO duplicated code?
+		createProposalAndAcceptList(componentList, context, acceptor);
+	}
 
 	/**
 	 * Provides content assist for body function values for example OPTION type
@@ -139,12 +123,10 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 	 */
 	public void completeBodyFunction_Values(EObject model, Assignment assignment, ContentAssistContext context,
 			ICompletionProposalAcceptor acceptor) {
-		
-		try {
 
+		try {
 			BodyFunction function = (BodyFunction) model;
 
-			CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
 			String[] functionAttributes = cfDefProvider.getBodyPromiseTypes().get(function.getName().getName());
 
 			if (null != functionAttributes) {
@@ -165,7 +147,7 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 				}
 			}
 		} catch (ClassCastException e) {
-			//ignore
+			// ignore
 		}
 	}
 
@@ -183,8 +165,19 @@ public class CfeditorProposalProvider extends AbstractCfeditorProposalProvider {
 		CompositeNode node = NodeUtil.getNode(model);
 		EObject eObj = NodeUtil.findASTParentElement(node);
 
-		Body body = (Body) eObj;
+		Body body = (Body) eObj; // FIXME surround with try/catch
+									// ClassCastException or if(instanceof)?
 
 		completeBody_PromiseType(body, assignment, context, acceptor);
+	}
+
+	private void createProposalAndAcceptList(List<String> wordList, ContentAssistContext context,
+			ICompletionProposalAcceptor acceptor) {
+
+		ICompletionProposal completionProposal;
+		for (String label : wordList) {
+			completionProposal = createCompletionProposal(label, context);
+			acceptor.accept(completionProposal);
+		}
 	}
 }

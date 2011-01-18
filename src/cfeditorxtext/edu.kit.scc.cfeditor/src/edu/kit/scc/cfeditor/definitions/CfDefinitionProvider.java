@@ -73,7 +73,7 @@ public final class CfDefinitionProvider {
 	 *            the name of the definition file
 	 * @return list of definition strings
 	 */
-	public ArrayList<String> getDefinitions(final String fileName) {
+	public ArrayList<String> getDefinitions(final String fileName) { //TODO use LinkedList?
 		definitionList = new ArrayList<String>();
 
 		try {
