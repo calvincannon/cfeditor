@@ -30,7 +30,7 @@ public class ClassTreeBuilder {
 	 * @return array of the first level tree nodes
 	 */
 	public TreeNode[] getTreeNodes(IProject activeProject) {
-		ArrayList<TreeNode> arrayList = new ArrayList<TreeNode>();
+		ArrayList<TreeNode> nodeList = new ArrayList<TreeNode>();
 
 		FileHandler fileHandler = new FileHandler();
 		LinkedList<String> uriList = fileHandler.getFileURIs(activeProject, "cf");
@@ -38,7 +38,8 @@ public class ClassTreeBuilder {
 		CfModelHandler cfModelHandler = new CfModelHandler();
 
 		CompositeNode node;
-		for (Entry<String, HashMap<String, EObject>> classList : cfModelHandler.getSortedBodyClasses(uriList).entrySet()) {
+		for (Entry<String, HashMap<String, EObject>> classList : cfModelHandler.getSortedBodyClasses(uriList)
+				.entrySet()) {
 
 			TreeNode classNode = new TreeNode(classList.getKey());
 
@@ -53,10 +54,12 @@ public class ClassTreeBuilder {
 					children.add(functionNode);
 				}
 			}
-			classNode.setChildren(children.toArray(new TreeNode[1]));
-			arrayList.add(classNode);
+			if (children.size() != 0) {
+				classNode.setChildren(children.toArray(new TreeNode[1]));
+			}
+			nodeList.add(classNode);
 		}
 
-		return arrayList.toArray(new TreeNode[1]);
+		return nodeList.toArray(new TreeNode[1]);
 	}
 }
