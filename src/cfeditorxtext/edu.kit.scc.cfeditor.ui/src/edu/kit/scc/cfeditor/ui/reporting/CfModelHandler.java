@@ -23,17 +23,21 @@ public class CfModelHandler extends ModelHandler {
 	/**
 	 * Returns a map of body class objects grouped by name which are contained in
 	 * the given file list.
-	 * 
+	 * <p>
 	 * Design of the hash map:
-	 * 
-	 * String : String -> EObject
-	 * 
-	 * "classA" : file URI (String) of body class object 1 with name "classA" -> body class object 1
-	 *            file URI (String) of body class object 2 with name "classA" -> body class object 2	
+	 * </p>
+	 * <p>
+	 * String : String -> EObject<br>
+	 * (class name: URI -> class object)
+	 * </p>
+	 * <p>
+	 * "classA" : file URI (String) of body class object 1 with name "classA" -> body class object 1<br>
+	 *            file URI (String) of body class object 2 with name "classA" -> body class object 2<br>	
 	 *            ...
-	 *                    
+	 * </p>
+	 * <p>                   
 	 * "classB" : ...
-	 * 
+	 * </p>
 	 * ...
 	 * 
 	 * @param uriList
