@@ -16,6 +16,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.IPartListener2;
+import org.eclipse.ui.IPropertyListener;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.PartInitException;
@@ -37,7 +38,9 @@ import edu.kit.scc.cfeditor.ui.reporting.ClassTreeBuilder;
  */
 public class ClassViewPart extends ViewPart {
 	private IProject activeProject;
+
 	private IPartListener2 partListener;
+	private IPropertyListener propertyListener;
 
 	private TreeViewer treeViewer;
 	private ClassTreeBuilder treeBuilder;
@@ -105,7 +108,7 @@ public class ClassViewPart extends ViewPart {
 	 * @throws PartInitException
 	 */
 	@Override
-	public void init(IViewSite site) throws PartInitException {
+	public void init(final IViewSite site) throws PartInitException {
 		super.init(site);
 
 		partListener = new IPartListener2() {
@@ -134,7 +137,6 @@ public class ClassViewPart extends ViewPart {
 			 * Actualizes the tree if current active project has changed.
 			 */
 			public void partActivated(IWorkbenchPartReference partRef) {
-				IProject oldActiveProject = activeProject;
 				IEditorPart editorPart = null;
 				try {
 					editorPart = partRef.getPage().getActiveEditor();
@@ -142,22 +144,33 @@ public class ClassViewPart extends ViewPart {
 					// ignore
 				}
 				if (editorPart != null) {
+					editorPart.addPropertyListener(propertyListener);// TODO !
+
+					refreshView(editorPart, false);
+				}
+			}
+		};
+		site.getWorkbenchWindow().getPartService().addPartListener(partListener);
+
+		propertyListener = new IPropertyListener() {
+			/**
+			 * Checks if active editor input has been saved and refreshes view if necessary.
+			 */
+			public void propertyChanged(Object source, int propId) {
+				if (propId == IEditorPart.PROP_DIRTY) {
+					IEditorPart editorPart = null;
 					try {
-						IFileEditorInput input = (IFileEditorInput) editorPart.getEditorInput();
-						IFile file = input.getFile();
-						activeProject = file.getProject();
-						if (null == oldActiveProject || !oldActiveProject.equals(activeProject)) {
-							if (treeViewer != null) {
-								treeViewer.setInput(treeBuilder.getTreeNodes(activeProject));
-							}
+						editorPart = site.getWorkbenchWindow().getActivePage().getActiveEditor();
+
+						if (editorPart != null) {
+							refreshView(editorPart, true);
 						}
-					} catch (ClassCastException e) {
+					} catch (NullPointerException e) {
 						// ignore
 					}
 				}
 			}
 		};
-		site.getWorkbenchWindow().getPartService().addPartListener(partListener);
 	}
 
 	/**
@@ -166,5 +179,26 @@ public class ClassViewPart extends ViewPart {
 	public void dispose() {
 		super.dispose();
 		this.getSite().getWorkbenchWindow().getPartService().removePartListener(partListener);
+	}
+
+	/**
+	 * Refreshes the body class tree if active project has changed or forceRefresh flag is true.
+	 */
+	private void refreshView(IEditorPart editorPart, boolean forceRefresh) {
+		IProject oldActiveProject = activeProject;
+
+		try {
+			IFileEditorInput input = (IFileEditorInput) editorPart.getEditorInput();
+			IFile file = input.getFile();
+			activeProject = file.getProject();
+
+			if (forceRefresh || null == oldActiveProject || !oldActiveProject.equals(activeProject)) {
+				if (treeViewer != null) {
+					treeViewer.setInput(treeBuilder.getTreeNodes(activeProject));
+				}
+			}
+		} catch (ClassCastException e) {
+			// ignore
+		}
 	}
 }
