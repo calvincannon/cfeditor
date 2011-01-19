@@ -2061,61 +2061,47 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleSpecialFunction
-    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:897:1: ruleSpecialFunction returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) '(' ( RULE_ANY_OTHER | RULE_ID | RULE_STRING | RULE_INT | ',' | ( '$(' RULE_ID ')' ) | ( '${' RULE_ID '}' ) | ( (lv_func_13_0= ruleSpecialFunction ) ) )* ')' ) ;
+    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:897:1: ruleSpecialFunction returns [EObject current=null] : ( () RULE_ID '(' ( RULE_ANY_OTHER | RULE_ID | RULE_STRING | RULE_INT | ',' | ( '$(' RULE_ID ')' ) | ( '${' RULE_ID '}' ) | ( (lv_func_14_0= ruleSpecialFunction ) ) )* ')' ) ;
     public final EObject ruleSpecialFunction() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_0_0=null;
-        EObject lv_func_13_0 = null;
+        EObject lv_func_14_0 = null;
 
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:902:6: ( ( ( (lv_name_0_0= RULE_ID ) ) '(' ( RULE_ANY_OTHER | RULE_ID | RULE_STRING | RULE_INT | ',' | ( '$(' RULE_ID ')' ) | ( '${' RULE_ID '}' ) | ( (lv_func_13_0= ruleSpecialFunction ) ) )* ')' ) )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:903:1: ( ( (lv_name_0_0= RULE_ID ) ) '(' ( RULE_ANY_OTHER | RULE_ID | RULE_STRING | RULE_INT | ',' | ( '$(' RULE_ID ')' ) | ( '${' RULE_ID '}' ) | ( (lv_func_13_0= ruleSpecialFunction ) ) )* ')' )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:902:6: ( ( () RULE_ID '(' ( RULE_ANY_OTHER | RULE_ID | RULE_STRING | RULE_INT | ',' | ( '$(' RULE_ID ')' ) | ( '${' RULE_ID '}' ) | ( (lv_func_14_0= ruleSpecialFunction ) ) )* ')' ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:903:1: ( () RULE_ID '(' ( RULE_ANY_OTHER | RULE_ID | RULE_STRING | RULE_INT | ',' | ( '$(' RULE_ID ')' ) | ( '${' RULE_ID '}' ) | ( (lv_func_14_0= ruleSpecialFunction ) ) )* ')' )
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:903:1: ( ( (lv_name_0_0= RULE_ID ) ) '(' ( RULE_ANY_OTHER | RULE_ID | RULE_STRING | RULE_INT | ',' | ( '$(' RULE_ID ')' ) | ( '${' RULE_ID '}' ) | ( (lv_func_13_0= ruleSpecialFunction ) ) )* ')' )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:903:2: ( (lv_name_0_0= RULE_ID ) ) '(' ( RULE_ANY_OTHER | RULE_ID | RULE_STRING | RULE_INT | ',' | ( '$(' RULE_ID ')' ) | ( '${' RULE_ID '}' ) | ( (lv_func_13_0= ruleSpecialFunction ) ) )* ')'
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:903:1: ( () RULE_ID '(' ( RULE_ANY_OTHER | RULE_ID | RULE_STRING | RULE_INT | ',' | ( '$(' RULE_ID ')' ) | ( '${' RULE_ID '}' ) | ( (lv_func_14_0= ruleSpecialFunction ) ) )* ')' )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:903:2: () RULE_ID '(' ( RULE_ANY_OTHER | RULE_ID | RULE_STRING | RULE_INT | ',' | ( '$(' RULE_ID ')' ) | ( '${' RULE_ID '}' ) | ( (lv_func_14_0= ruleSpecialFunction ) ) )* ')'
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:903:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:904:1: (lv_name_0_0= RULE_ID )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:903:2: ()
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:904:5: 
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:904:1: (lv_name_0_0= RULE_ID )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:905:3: lv_name_0_0= RULE_ID
-            {
-            lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction1729); 
-
-            			createLeafNode(grammarAccess.getSpecialFunctionAccess().getNameIDTerminalRuleCall_0_0(), "name"); 
-            		
-
-            	        if (current==null) {
-            	            current = factory.create(grammarAccess.getSpecialFunctionRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
-            	        }
-            	        try {
-            	       		set(
-            	       			current, 
-            	       			"name",
-            	        		lv_name_0_0, 
-            	        		"ID", 
-            	        		lastConsumedNode);
-            	        } catch (ValueConverterException vce) {
-            				handleValueConverterException(vce);
-            	        }
-            	    
-
-            }
-
-
-            }
-
-            match(input,10,FOLLOW_10_in_ruleSpecialFunction1744); 
-
-                    createLeafNode(grammarAccess.getSpecialFunctionAccess().getLeftParenthesisKeyword_1(), null); 
+             
+                    temp=factory.create(grammarAccess.getSpecialFunctionAccess().getSpecialFunctionAction_0().getType().getClassifier());
+                    current = temp; 
+                    temp = null;
+                    CompositeNode newNode = createCompositeNode(grammarAccess.getSpecialFunctionAccess().getSpecialFunctionAction_0(), currentNode.getParent());
+                newNode.getChildren().add(currentNode);
+                moveLookaheadInfo(currentNode, newNode);
+                currentNode = newNode; 
+                    associateNodeWithAstElement(currentNode, current); 
                 
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:931:1: ( RULE_ANY_OTHER | RULE_ID | RULE_STRING | RULE_INT | ',' | ( '$(' RULE_ID ')' ) | ( '${' RULE_ID '}' ) | ( (lv_func_13_0= ruleSpecialFunction ) ) )*
+
+            }
+
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction1730); 
+             
+                createLeafNode(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_1(), null); 
+                
+            match(input,10,FOLLOW_10_in_ruleSpecialFunction1739); 
+
+                    createLeafNode(grammarAccess.getSpecialFunctionAccess().getLeftParenthesisKeyword_2(), null); 
+                
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:922:1: ( RULE_ANY_OTHER | RULE_ID | RULE_STRING | RULE_INT | ',' | ( '$(' RULE_ID ')' ) | ( '${' RULE_ID '}' ) | ( (lv_func_14_0= ruleSpecialFunction ) ) )*
             loop16:
             do {
                 int alt16=9;
@@ -2169,72 +2155,72 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
                 switch (alt16) {
             	case 1 :
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:931:2: RULE_ANY_OTHER
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:922:2: RULE_ANY_OTHER
             	    {
-            	    match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_ruleSpecialFunction1754); 
+            	    match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_ruleSpecialFunction1749); 
             	     
-            	        createLeafNode(grammarAccess.getSpecialFunctionAccess().getANY_OTHERTerminalRuleCall_2_0(), null); 
+            	        createLeafNode(grammarAccess.getSpecialFunctionAccess().getANY_OTHERTerminalRuleCall_3_0(), null); 
             	        
 
             	    }
             	    break;
             	case 2 :
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:936:6: RULE_ID
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:927:6: RULE_ID
             	    {
-            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction1768); 
+            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction1763); 
             	     
-            	        createLeafNode(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_1(), null); 
+            	        createLeafNode(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_3_1(), null); 
             	        
 
             	    }
             	    break;
             	case 3 :
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:941:6: RULE_STRING
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:932:6: RULE_STRING
             	    {
-            	    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSpecialFunction1782); 
+            	    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSpecialFunction1777); 
             	     
-            	        createLeafNode(grammarAccess.getSpecialFunctionAccess().getSTRINGTerminalRuleCall_2_2(), null); 
+            	        createLeafNode(grammarAccess.getSpecialFunctionAccess().getSTRINGTerminalRuleCall_3_2(), null); 
             	        
 
             	    }
             	    break;
             	case 4 :
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:946:6: RULE_INT
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:937:6: RULE_INT
             	    {
-            	    match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleSpecialFunction1796); 
+            	    match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleSpecialFunction1791); 
             	     
-            	        createLeafNode(grammarAccess.getSpecialFunctionAccess().getINTTerminalRuleCall_2_3(), null); 
+            	        createLeafNode(grammarAccess.getSpecialFunctionAccess().getINTTerminalRuleCall_3_3(), null); 
             	        
 
             	    }
             	    break;
             	case 5 :
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:951:7: ','
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:942:7: ','
             	    {
-            	    match(input,17,FOLLOW_17_in_ruleSpecialFunction1811); 
+            	    match(input,17,FOLLOW_17_in_ruleSpecialFunction1806); 
 
-            	            createLeafNode(grammarAccess.getSpecialFunctionAccess().getCommaKeyword_2_4(), null); 
+            	            createLeafNode(grammarAccess.getSpecialFunctionAccess().getCommaKeyword_3_4(), null); 
             	        
 
             	    }
             	    break;
             	case 6 :
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:956:6: ( '$(' RULE_ID ')' )
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:947:6: ( '$(' RULE_ID ')' )
             	    {
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:956:6: ( '$(' RULE_ID ')' )
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:956:8: '$(' RULE_ID ')'
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:947:6: ( '$(' RULE_ID ')' )
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:947:8: '$(' RULE_ID ')'
             	    {
-            	    match(input,24,FOLLOW_24_in_ruleSpecialFunction1828); 
+            	    match(input,24,FOLLOW_24_in_ruleSpecialFunction1823); 
 
-            	            createLeafNode(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftParenthesisKeyword_2_5_0(), null); 
+            	            createLeafNode(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftParenthesisKeyword_3_5_0(), null); 
             	        
-            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction1837); 
+            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction1832); 
             	     
-            	        createLeafNode(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_5_1(), null); 
+            	        createLeafNode(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_3_5_1(), null); 
             	        
-            	    match(input,11,FOLLOW_11_in_ruleSpecialFunction1846); 
+            	    match(input,11,FOLLOW_11_in_ruleSpecialFunction1841); 
 
-            	            createLeafNode(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_2_5_2(), null); 
+            	            createLeafNode(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_3_5_2(), null); 
             	        
 
             	    }
@@ -2243,22 +2229,22 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 7 :
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:969:6: ( '${' RULE_ID '}' )
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:960:6: ( '${' RULE_ID '}' )
             	    {
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:969:6: ( '${' RULE_ID '}' )
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:969:8: '${' RULE_ID '}'
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:960:6: ( '${' RULE_ID '}' )
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:960:8: '${' RULE_ID '}'
             	    {
-            	    match(input,25,FOLLOW_25_in_ruleSpecialFunction1864); 
+            	    match(input,25,FOLLOW_25_in_ruleSpecialFunction1859); 
 
-            	            createLeafNode(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftCurlyBracketKeyword_2_6_0(), null); 
+            	            createLeafNode(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftCurlyBracketKeyword_3_6_0(), null); 
             	        
-            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction1873); 
+            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction1868); 
             	     
-            	        createLeafNode(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_6_1(), null); 
+            	        createLeafNode(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_3_6_1(), null); 
             	        
-            	    match(input,22,FOLLOW_22_in_ruleSpecialFunction1882); 
+            	    match(input,22,FOLLOW_22_in_ruleSpecialFunction1877); 
 
-            	            createLeafNode(grammarAccess.getSpecialFunctionAccess().getRightCurlyBracketKeyword_2_6_2(), null); 
+            	            createLeafNode(grammarAccess.getSpecialFunctionAccess().getRightCurlyBracketKeyword_3_6_2(), null); 
             	        
 
             	    }
@@ -2267,19 +2253,19 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 8 :
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:982:6: ( (lv_func_13_0= ruleSpecialFunction ) )
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:973:6: ( (lv_func_14_0= ruleSpecialFunction ) )
             	    {
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:982:6: ( (lv_func_13_0= ruleSpecialFunction ) )
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:983:1: (lv_func_13_0= ruleSpecialFunction )
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:973:6: ( (lv_func_14_0= ruleSpecialFunction ) )
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:974:1: (lv_func_14_0= ruleSpecialFunction )
             	    {
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:983:1: (lv_func_13_0= ruleSpecialFunction )
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:984:3: lv_func_13_0= ruleSpecialFunction
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:974:1: (lv_func_14_0= ruleSpecialFunction )
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:975:3: lv_func_14_0= ruleSpecialFunction
             	    {
             	     
-            	    	        currentNode=createCompositeNode(grammarAccess.getSpecialFunctionAccess().getFuncSpecialFunctionParserRuleCall_2_7_0(), currentNode); 
+            	    	        currentNode=createCompositeNode(grammarAccess.getSpecialFunctionAccess().getFuncSpecialFunctionParserRuleCall_3_7_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_ruleSpecialFunction_in_ruleSpecialFunction1910);
-            	    lv_func_13_0=ruleSpecialFunction();
+            	    pushFollow(FOLLOW_ruleSpecialFunction_in_ruleSpecialFunction1905);
+            	    lv_func_14_0=ruleSpecialFunction();
             	    _fsp--;
 
 
@@ -2291,7 +2277,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
             	    	       		add(
             	    	       			current, 
             	    	       			"func",
-            	    	        		lv_func_13_0, 
+            	    	        		lv_func_14_0, 
             	    	        		"SpecialFunction", 
             	    	        		currentNode);
             	    	        } catch (ValueConverterException vce) {
@@ -2314,9 +2300,9 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            match(input,11,FOLLOW_11_in_ruleSpecialFunction1922); 
+            match(input,11,FOLLOW_11_in_ruleSpecialFunction1917); 
 
-                    createLeafNode(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_3(), null); 
+                    createLeafNode(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_4(), null); 
                 
 
             }
@@ -2341,7 +2327,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleBundlePromiseType
-    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1018:1: entryRuleBundlePromiseType returns [EObject current=null] : iv_ruleBundlePromiseType= ruleBundlePromiseType EOF ;
+    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1009:1: entryRuleBundlePromiseType returns [EObject current=null] : iv_ruleBundlePromiseType= ruleBundlePromiseType EOF ;
     public final EObject entryRuleBundlePromiseType() throws RecognitionException {
         EObject current = null;
 
@@ -2349,16 +2335,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1019:2: (iv_ruleBundlePromiseType= ruleBundlePromiseType EOF )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1020:2: iv_ruleBundlePromiseType= ruleBundlePromiseType EOF
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1010:2: (iv_ruleBundlePromiseType= ruleBundlePromiseType EOF )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1011:2: iv_ruleBundlePromiseType= ruleBundlePromiseType EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBundlePromiseTypeRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType1958);
+            pushFollow(FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType1953);
             iv_ruleBundlePromiseType=ruleBundlePromiseType();
             _fsp--;
 
              current =iv_ruleBundlePromiseType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBundlePromiseType1968); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBundlePromiseType1963); 
 
             }
 
@@ -2376,7 +2362,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBundlePromiseType
-    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1027:1: ruleBundlePromiseType returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1018:1: ruleBundlePromiseType returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleBundlePromiseType() throws RecognitionException {
         EObject current = null;
 
@@ -2385,17 +2371,17 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1032:6: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1033:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1023:6: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1024:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1033:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1034:1: (lv_name_0_0= RULE_ID )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1024:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1025:1: (lv_name_0_0= RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1034:1: (lv_name_0_0= RULE_ID )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1035:3: lv_name_0_0= RULE_ID
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1025:1: (lv_name_0_0= RULE_ID )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1026:3: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundlePromiseType2009); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundlePromiseType2004); 
 
             			createLeafNode(grammarAccess.getBundlePromiseTypeAccess().getNameIDTerminalRuleCall_0(), "name"); 
             		
@@ -2441,7 +2427,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleBodyPromiseType
-    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1065:1: entryRuleBodyPromiseType returns [EObject current=null] : iv_ruleBodyPromiseType= ruleBodyPromiseType EOF ;
+    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1056:1: entryRuleBodyPromiseType returns [EObject current=null] : iv_ruleBodyPromiseType= ruleBodyPromiseType EOF ;
     public final EObject entryRuleBodyPromiseType() throws RecognitionException {
         EObject current = null;
 
@@ -2449,16 +2435,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1066:2: (iv_ruleBodyPromiseType= ruleBodyPromiseType EOF )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1067:2: iv_ruleBodyPromiseType= ruleBodyPromiseType EOF
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1057:2: (iv_ruleBodyPromiseType= ruleBodyPromiseType EOF )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1058:2: iv_ruleBodyPromiseType= ruleBodyPromiseType EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBodyPromiseTypeRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType2049);
+            pushFollow(FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType2044);
             iv_ruleBodyPromiseType=ruleBodyPromiseType();
             _fsp--;
 
              current =iv_ruleBodyPromiseType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyPromiseType2059); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyPromiseType2054); 
 
             }
 
@@ -2476,7 +2462,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBodyPromiseType
-    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1074:1: ruleBodyPromiseType returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1065:1: ruleBodyPromiseType returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleBodyPromiseType() throws RecognitionException {
         EObject current = null;
 
@@ -2485,17 +2471,17 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1079:6: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1080:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1070:6: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1071:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1080:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1081:1: (lv_name_0_0= RULE_ID )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1071:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1072:1: (lv_name_0_0= RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1081:1: (lv_name_0_0= RULE_ID )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1082:3: lv_name_0_0= RULE_ID
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1072:1: (lv_name_0_0= RULE_ID )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1073:3: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyPromiseType2100); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyPromiseType2095); 
 
             			createLeafNode(grammarAccess.getBodyPromiseTypeAccess().getNameIDTerminalRuleCall_0(), "name"); 
             		
@@ -2541,7 +2527,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleBundleComponent
-    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1112:1: entryRuleBundleComponent returns [EObject current=null] : iv_ruleBundleComponent= ruleBundleComponent EOF ;
+    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1103:1: entryRuleBundleComponent returns [EObject current=null] : iv_ruleBundleComponent= ruleBundleComponent EOF ;
     public final EObject entryRuleBundleComponent() throws RecognitionException {
         EObject current = null;
 
@@ -2549,16 +2535,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1113:2: (iv_ruleBundleComponent= ruleBundleComponent EOF )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1114:2: iv_ruleBundleComponent= ruleBundleComponent EOF
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1104:2: (iv_ruleBundleComponent= ruleBundleComponent EOF )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1105:2: iv_ruleBundleComponent= ruleBundleComponent EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBundleComponentRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent2140);
+            pushFollow(FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent2135);
             iv_ruleBundleComponent=ruleBundleComponent();
             _fsp--;
 
              current =iv_ruleBundleComponent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBundleComponent2150); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBundleComponent2145); 
 
             }
 
@@ -2576,7 +2562,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBundleComponent
-    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1121:1: ruleBundleComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1112:1: ruleBundleComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleBundleComponent() throws RecognitionException {
         EObject current = null;
 
@@ -2585,17 +2571,17 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1126:6: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1127:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1117:6: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1118:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1127:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1128:1: (lv_name_0_0= RULE_ID )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1118:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1119:1: (lv_name_0_0= RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1128:1: (lv_name_0_0= RULE_ID )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1129:3: lv_name_0_0= RULE_ID
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1119:1: (lv_name_0_0= RULE_ID )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1120:3: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundleComponent2191); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundleComponent2186); 
 
             			createLeafNode(grammarAccess.getBundleComponentAccess().getNameIDTerminalRuleCall_0(), "name"); 
             		
@@ -2641,7 +2627,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleBodyComponent
-    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1159:1: entryRuleBodyComponent returns [EObject current=null] : iv_ruleBodyComponent= ruleBodyComponent EOF ;
+    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1150:1: entryRuleBodyComponent returns [EObject current=null] : iv_ruleBodyComponent= ruleBodyComponent EOF ;
     public final EObject entryRuleBodyComponent() throws RecognitionException {
         EObject current = null;
 
@@ -2649,16 +2635,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1160:2: (iv_ruleBodyComponent= ruleBodyComponent EOF )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1161:2: iv_ruleBodyComponent= ruleBodyComponent EOF
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1151:2: (iv_ruleBodyComponent= ruleBodyComponent EOF )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1152:2: iv_ruleBodyComponent= ruleBodyComponent EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBodyComponentRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent2231);
+            pushFollow(FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent2226);
             iv_ruleBodyComponent=ruleBodyComponent();
             _fsp--;
 
              current =iv_ruleBodyComponent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyComponent2241); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyComponent2236); 
 
             }
 
@@ -2676,7 +2662,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBodyComponent
-    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1168:1: ruleBodyComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1159:1: ruleBodyComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleBodyComponent() throws RecognitionException {
         EObject current = null;
 
@@ -2685,17 +2671,17 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1173:6: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1174:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1164:6: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1165:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1174:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1175:1: (lv_name_0_0= RULE_ID )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1165:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1166:1: (lv_name_0_0= RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1175:1: (lv_name_0_0= RULE_ID )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1176:3: lv_name_0_0= RULE_ID
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1166:1: (lv_name_0_0= RULE_ID )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1167:3: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyComponent2282); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyComponent2277); 
 
             			createLeafNode(grammarAccess.getBodyComponentAccess().getNameIDTerminalRuleCall_0(), "name"); 
             		
@@ -2741,7 +2727,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleBodyClass
-    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1206:1: entryRuleBodyClass returns [EObject current=null] : iv_ruleBodyClass= ruleBodyClass EOF ;
+    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1197:1: entryRuleBodyClass returns [EObject current=null] : iv_ruleBodyClass= ruleBodyClass EOF ;
     public final EObject entryRuleBodyClass() throws RecognitionException {
         EObject current = null;
 
@@ -2749,16 +2735,16 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1207:2: (iv_ruleBodyClass= ruleBodyClass EOF )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1208:2: iv_ruleBodyClass= ruleBodyClass EOF
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1198:2: (iv_ruleBodyClass= ruleBodyClass EOF )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1199:2: iv_ruleBodyClass= ruleBodyClass EOF
             {
              currentNode = createCompositeNode(grammarAccess.getBodyClassRule(), currentNode); 
-            pushFollow(FOLLOW_ruleBodyClass_in_entryRuleBodyClass2322);
+            pushFollow(FOLLOW_ruleBodyClass_in_entryRuleBodyClass2317);
             iv_ruleBodyClass=ruleBodyClass();
             _fsp--;
 
              current =iv_ruleBodyClass; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyClass2332); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyClass2327); 
 
             }
 
@@ -2776,7 +2762,7 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleBodyClass
-    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1215:1: ruleBodyClass returns [EObject current=null] : ( ( (lv_name_0_0= ruleCLASS_ID ) ) '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* ) ;
+    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1206:1: ruleBodyClass returns [EObject current=null] : ( ( (lv_name_0_0= ruleCLASS_ID ) ) '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* ) ;
     public final EObject ruleBodyClass() throws RecognitionException {
         EObject current = null;
 
@@ -2788,22 +2774,22 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1220:6: ( ( ( (lv_name_0_0= ruleCLASS_ID ) ) '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* ) )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1221:1: ( ( (lv_name_0_0= ruleCLASS_ID ) ) '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1211:6: ( ( ( (lv_name_0_0= ruleCLASS_ID ) ) '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1212:1: ( ( (lv_name_0_0= ruleCLASS_ID ) ) '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* )
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1221:1: ( ( (lv_name_0_0= ruleCLASS_ID ) ) '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1221:2: ( (lv_name_0_0= ruleCLASS_ID ) ) '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )*
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1212:1: ( ( (lv_name_0_0= ruleCLASS_ID ) ) '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1212:2: ( (lv_name_0_0= ruleCLASS_ID ) ) '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )*
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1221:2: ( (lv_name_0_0= ruleCLASS_ID ) )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1222:1: (lv_name_0_0= ruleCLASS_ID )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1212:2: ( (lv_name_0_0= ruleCLASS_ID ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1213:1: (lv_name_0_0= ruleCLASS_ID )
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1222:1: (lv_name_0_0= ruleCLASS_ID )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1223:3: lv_name_0_0= ruleCLASS_ID
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1213:1: (lv_name_0_0= ruleCLASS_ID )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1214:3: lv_name_0_0= ruleCLASS_ID
             {
              
             	        currentNode=createCompositeNode(grammarAccess.getBodyClassAccess().getNameCLASS_IDParserRuleCall_0_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleCLASS_ID_in_ruleBodyClass2378);
+            pushFollow(FOLLOW_ruleCLASS_ID_in_ruleBodyClass2373);
             lv_name_0_0=ruleCLASS_ID();
             _fsp--;
 
@@ -2830,11 +2816,11 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,26,FOLLOW_26_in_ruleBodyClass2388); 
+            match(input,26,FOLLOW_26_in_ruleBodyClass2383); 
 
                     createLeafNode(grammarAccess.getBodyClassAccess().getColonColonKeyword_1(), null); 
                 
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1249:1: ( (lv_promiseType_2_0= ruleBodyFunction ) )*
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1240:1: ( (lv_promiseType_2_0= ruleBodyFunction ) )*
             loop17:
             do {
                 int alt17=2;
@@ -2853,15 +2839,15 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
 
                 switch (alt17) {
             	case 1 :
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1250:1: (lv_promiseType_2_0= ruleBodyFunction )
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1241:1: (lv_promiseType_2_0= ruleBodyFunction )
             	    {
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1250:1: (lv_promiseType_2_0= ruleBodyFunction )
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1251:3: lv_promiseType_2_0= ruleBodyFunction
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1241:1: (lv_promiseType_2_0= ruleBodyFunction )
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1242:3: lv_promiseType_2_0= ruleBodyFunction
             	    {
             	     
             	    	        currentNode=createCompositeNode(grammarAccess.getBodyClassAccess().getPromiseTypeBodyFunctionParserRuleCall_2_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_ruleBodyFunction_in_ruleBodyClass2409);
+            	    pushFollow(FOLLOW_ruleBodyFunction_in_ruleBodyClass2404);
             	    lv_promiseType_2_0=ruleBodyFunction();
             	    _fsp--;
 
@@ -2993,37 +2979,37 @@ public class InternalCfeditorParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_16_in_ruleBodyFunction1641 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSpecialFunction_in_entryRuleSpecialFunction1677 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSpecialFunction1687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction1729 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_10_in_ruleSpecialFunction1744 = new BitSet(new long[]{0x00000000030208F0L});
-    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_ruleSpecialFunction1754 = new BitSet(new long[]{0x00000000030208F0L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction1768 = new BitSet(new long[]{0x00000000030208F0L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSpecialFunction1782 = new BitSet(new long[]{0x00000000030208F0L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleSpecialFunction1796 = new BitSet(new long[]{0x00000000030208F0L});
-    public static final BitSet FOLLOW_17_in_ruleSpecialFunction1811 = new BitSet(new long[]{0x00000000030208F0L});
-    public static final BitSet FOLLOW_24_in_ruleSpecialFunction1828 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction1837 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_11_in_ruleSpecialFunction1846 = new BitSet(new long[]{0x00000000030208F0L});
-    public static final BitSet FOLLOW_25_in_ruleSpecialFunction1864 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction1873 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_ruleSpecialFunction1882 = new BitSet(new long[]{0x00000000030208F0L});
-    public static final BitSet FOLLOW_ruleSpecialFunction_in_ruleSpecialFunction1910 = new BitSet(new long[]{0x00000000030208F0L});
-    public static final BitSet FOLLOW_11_in_ruleSpecialFunction1922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType1958 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBundlePromiseType1968 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBundlePromiseType2009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType2049 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBodyPromiseType2059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyPromiseType2100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent2140 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBundleComponent2150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBundleComponent2191 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent2231 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBodyComponent2241 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyComponent2282 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyClass_in_entryRuleBodyClass2322 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBodyClass2332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleBodyClass2378 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleBodyClass2388 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleBodyFunction_in_ruleBodyClass2409 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction1730 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_10_in_ruleSpecialFunction1739 = new BitSet(new long[]{0x00000000030208F0L});
+    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_ruleSpecialFunction1749 = new BitSet(new long[]{0x00000000030208F0L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction1763 = new BitSet(new long[]{0x00000000030208F0L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSpecialFunction1777 = new BitSet(new long[]{0x00000000030208F0L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleSpecialFunction1791 = new BitSet(new long[]{0x00000000030208F0L});
+    public static final BitSet FOLLOW_17_in_ruleSpecialFunction1806 = new BitSet(new long[]{0x00000000030208F0L});
+    public static final BitSet FOLLOW_24_in_ruleSpecialFunction1823 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction1832 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_11_in_ruleSpecialFunction1841 = new BitSet(new long[]{0x00000000030208F0L});
+    public static final BitSet FOLLOW_25_in_ruleSpecialFunction1859 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction1868 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleSpecialFunction1877 = new BitSet(new long[]{0x00000000030208F0L});
+    public static final BitSet FOLLOW_ruleSpecialFunction_in_ruleSpecialFunction1905 = new BitSet(new long[]{0x00000000030208F0L});
+    public static final BitSet FOLLOW_11_in_ruleSpecialFunction1917 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType1953 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBundlePromiseType1963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBundlePromiseType2004 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType2044 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBodyPromiseType2054 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyPromiseType2095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent2135 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBundleComponent2145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBundleComponent2186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent2226 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBodyComponent2236 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyComponent2277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyClass_in_entryRuleBodyClass2317 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBodyClass2327 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleBodyClass2373 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_ruleBodyClass2383 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_ruleBodyFunction_in_ruleBodyClass2404 = new BitSet(new long[]{0x0000000000000012L});
 
 }

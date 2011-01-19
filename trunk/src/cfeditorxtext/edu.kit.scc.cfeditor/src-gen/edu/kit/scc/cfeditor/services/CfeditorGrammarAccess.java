@@ -500,96 +500,96 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 	public class SpecialFunctionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SpecialFunction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final RuleCall cANY_OTHERTerminalRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_2_1 = (RuleCall)cAlternatives_2.eContents().get(1);
-		private final RuleCall cSTRINGTerminalRuleCall_2_2 = (RuleCall)cAlternatives_2.eContents().get(2);
-		private final RuleCall cINTTerminalRuleCall_2_3 = (RuleCall)cAlternatives_2.eContents().get(3);
-		private final Keyword cCommaKeyword_2_4 = (Keyword)cAlternatives_2.eContents().get(4);
-		private final Group cGroup_2_5 = (Group)cAlternatives_2.eContents().get(5);
-		private final Keyword cDollarSignLeftParenthesisKeyword_2_5_0 = (Keyword)cGroup_2_5.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_2_5_1 = (RuleCall)cGroup_2_5.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_2_5_2 = (Keyword)cGroup_2_5.eContents().get(2);
-		private final Group cGroup_2_6 = (Group)cAlternatives_2.eContents().get(6);
-		private final Keyword cDollarSignLeftCurlyBracketKeyword_2_6_0 = (Keyword)cGroup_2_6.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_2_6_1 = (RuleCall)cGroup_2_6.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_2_6_2 = (Keyword)cGroup_2_6.eContents().get(2);
-		private final Assignment cFuncAssignment_2_7 = (Assignment)cAlternatives_2.eContents().get(7);
-		private final RuleCall cFuncSpecialFunctionParserRuleCall_2_7_0 = (RuleCall)cFuncAssignment_2_7.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Action cSpecialFunctionAction_0 = (Action)cGroup.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
+		private final RuleCall cANY_OTHERTerminalRuleCall_3_0 = (RuleCall)cAlternatives_3.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_3_1 = (RuleCall)cAlternatives_3.eContents().get(1);
+		private final RuleCall cSTRINGTerminalRuleCall_3_2 = (RuleCall)cAlternatives_3.eContents().get(2);
+		private final RuleCall cINTTerminalRuleCall_3_3 = (RuleCall)cAlternatives_3.eContents().get(3);
+		private final Keyword cCommaKeyword_3_4 = (Keyword)cAlternatives_3.eContents().get(4);
+		private final Group cGroup_3_5 = (Group)cAlternatives_3.eContents().get(5);
+		private final Keyword cDollarSignLeftParenthesisKeyword_3_5_0 = (Keyword)cGroup_3_5.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_3_5_1 = (RuleCall)cGroup_3_5.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_3_5_2 = (Keyword)cGroup_3_5.eContents().get(2);
+		private final Group cGroup_3_6 = (Group)cAlternatives_3.eContents().get(6);
+		private final Keyword cDollarSignLeftCurlyBracketKeyword_3_6_0 = (Keyword)cGroup_3_6.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_3_6_1 = (RuleCall)cGroup_3_6.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_3_6_2 = (Keyword)cGroup_3_6.eContents().get(2);
+		private final Assignment cFuncAssignment_3_7 = (Assignment)cAlternatives_3.eContents().get(7);
+		private final RuleCall cFuncSpecialFunctionParserRuleCall_3_7_0 = (RuleCall)cFuncAssignment_3_7.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		////TODO
+		////TODO !
 		//SpecialFunction:
-		//	name=ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+		//	{SpecialFunction} ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
 		//	/ *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")";
 		public ParserRule getRule() { return rule; }
 
-		//name=ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+		//{SpecialFunction} ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
 		/// *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")"
 		public Group getGroup() { return cGroup; }
 
-		//name=ID
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		//{SpecialFunction}
+		public Action getSpecialFunctionAction_0() { return cSpecialFunctionAction_0; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
 
 		//"("
-		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
+		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
 
 		//(ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
-		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 
 		//ANY_OTHER
-		public RuleCall getANY_OTHERTerminalRuleCall_2_0() { return cANY_OTHERTerminalRuleCall_2_0; }
+		public RuleCall getANY_OTHERTerminalRuleCall_3_0() { return cANY_OTHERTerminalRuleCall_3_0; }
 
 		//ID
-		public RuleCall getIDTerminalRuleCall_2_1() { return cIDTerminalRuleCall_2_1; }
+		public RuleCall getIDTerminalRuleCall_3_1() { return cIDTerminalRuleCall_3_1; }
 
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_2_2() { return cSTRINGTerminalRuleCall_2_2; }
+		public RuleCall getSTRINGTerminalRuleCall_3_2() { return cSTRINGTerminalRuleCall_3_2; }
 
 		//INT
-		public RuleCall getINTTerminalRuleCall_2_3() { return cINTTerminalRuleCall_2_3; }
+		public RuleCall getINTTerminalRuleCall_3_3() { return cINTTerminalRuleCall_3_3; }
 
 		//","
-		public Keyword getCommaKeyword_2_4() { return cCommaKeyword_2_4; }
+		public Keyword getCommaKeyword_3_4() { return cCommaKeyword_3_4; }
 
 		//"$(" ID ")"
-		public Group getGroup_2_5() { return cGroup_2_5; }
+		public Group getGroup_3_5() { return cGroup_3_5; }
 
 		//"$("
-		public Keyword getDollarSignLeftParenthesisKeyword_2_5_0() { return cDollarSignLeftParenthesisKeyword_2_5_0; }
+		public Keyword getDollarSignLeftParenthesisKeyword_3_5_0() { return cDollarSignLeftParenthesisKeyword_3_5_0; }
 
 		//ID
-		public RuleCall getIDTerminalRuleCall_2_5_1() { return cIDTerminalRuleCall_2_5_1; }
+		public RuleCall getIDTerminalRuleCall_3_5_1() { return cIDTerminalRuleCall_3_5_1; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_2_5_2() { return cRightParenthesisKeyword_2_5_2; }
+		public Keyword getRightParenthesisKeyword_3_5_2() { return cRightParenthesisKeyword_3_5_2; }
 
 		//"${" ID "}"
-		public Group getGroup_2_6() { return cGroup_2_6; }
+		public Group getGroup_3_6() { return cGroup_3_6; }
 
 		//"${"
-		public Keyword getDollarSignLeftCurlyBracketKeyword_2_6_0() { return cDollarSignLeftCurlyBracketKeyword_2_6_0; }
+		public Keyword getDollarSignLeftCurlyBracketKeyword_3_6_0() { return cDollarSignLeftCurlyBracketKeyword_3_6_0; }
 
 		//ID
-		public RuleCall getIDTerminalRuleCall_2_6_1() { return cIDTerminalRuleCall_2_6_1; }
+		public RuleCall getIDTerminalRuleCall_3_6_1() { return cIDTerminalRuleCall_3_6_1; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_2_6_2() { return cRightCurlyBracketKeyword_2_6_2; }
+		public Keyword getRightCurlyBracketKeyword_3_6_2() { return cRightCurlyBracketKeyword_3_6_2; }
 
 		//func+=SpecialFunction
-		public Assignment getFuncAssignment_2_7() { return cFuncAssignment_2_7; }
+		public Assignment getFuncAssignment_3_7() { return cFuncAssignment_3_7; }
 
 		//SpecialFunction
-		public RuleCall getFuncSpecialFunctionParserRuleCall_2_7_0() { return cFuncSpecialFunctionParserRuleCall_2_7_0; }
+		public RuleCall getFuncSpecialFunctionParserRuleCall_3_7_0() { return cFuncSpecialFunctionParserRuleCall_3_7_0; }
 
 		/// *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")"
-		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 	}
 
 	public class BundlePromiseTypeElements extends AbstractParserRuleElementFinder {
@@ -859,9 +859,9 @@ public class CfeditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getBodyFunctionAccess().getRule();
 	}
 
-	////TODO
+	////TODO !
 	//SpecialFunction:
-	//	name=ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+	//	{SpecialFunction} ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
 	//	/ *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")";
 	public SpecialFunctionElements getSpecialFunctionAccess() {
 		return (pSpecialFunction != null) ? pSpecialFunction : (pSpecialFunction = new SpecialFunctionElements());

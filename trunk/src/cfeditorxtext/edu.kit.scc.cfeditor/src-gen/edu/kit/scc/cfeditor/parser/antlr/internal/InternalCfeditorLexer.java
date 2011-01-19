@@ -359,8 +359,8 @@ public class InternalCfeditorLexer extends Lexer {
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1280:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1280:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1271:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1271:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -372,7 +372,7 @@ public class InternalCfeditorLexer extends Lexer {
                 recover(mse);    throw mse;
             }
 
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1280:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1271:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
@@ -420,10 +420,10 @@ public class InternalCfeditorLexer extends Lexer {
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1282:10: ( ( '0' .. '9' )+ )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1282:12: ( '0' .. '9' )+
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1273:10: ( ( '0' .. '9' )+ )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1273:12: ( '0' .. '9' )+
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1282:12: ( '0' .. '9' )+
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1273:12: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -437,7 +437,7 @@ public class InternalCfeditorLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1282:13: '0' .. '9'
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1273:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -467,10 +467,10 @@ public class InternalCfeditorLexer extends Lexer {
     public final void mRULE_STRING() throws RecognitionException {
         try {
             int _type = RULE_STRING;
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1284:13: ( ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' ) )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1284:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1275:13: ( ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' ) )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1275:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1284:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1275:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -482,16 +482,16 @@ public class InternalCfeditorLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("1284:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )", 5, 0, input);
+                    new NoViableAltException("1275:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )", 5, 0, input);
 
                 throw nvae;
             }
             switch (alt5) {
                 case 1 :
-                    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1284:16: '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"'
+                    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1275:16: '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"'
                     {
                     match('\"'); 
-                    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1284:20: (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )*
+                    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1275:20: (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )*
                     loop3:
                     do {
                         int alt3=3;
@@ -507,7 +507,7 @@ public class InternalCfeditorLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1284:21: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1275:21: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -523,7 +523,7 @@ public class InternalCfeditorLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1284:35: '\\\\' .
+                    	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1275:35: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -541,10 +541,10 @@ public class InternalCfeditorLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1284:48: '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\''
+                    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1275:48: '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\''
                     {
                     match('\''); 
-                    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1284:53: (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )*
+                    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1275:53: (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )*
                     loop4:
                     do {
                         int alt4=3;
@@ -560,7 +560,7 @@ public class InternalCfeditorLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1284:54: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1275:54: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -576,7 +576,7 @@ public class InternalCfeditorLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1284:69: '\\\\' .
+                    	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1275:69: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -610,11 +610,11 @@ public class InternalCfeditorLexer extends Lexer {
     public final void mRULE_SL_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_SL_COMMENT;
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1286:17: ( '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1286:19: '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1277:17: ( '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1277:19: '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match('#'); 
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1286:23: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1277:23: (~ ( ( '\\n' | '\\r' ) ) )*
             loop6:
             do {
                 int alt6=2;
@@ -627,7 +627,7 @@ public class InternalCfeditorLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1286:23: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1277:23: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFE') ) {
             	        input.consume();
@@ -648,7 +648,7 @@ public class InternalCfeditorLexer extends Lexer {
                 }
             } while (true);
 
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1286:39: ( ( '\\r' )? '\\n' )?
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1277:39: ( ( '\\r' )? '\\n' )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -657,9 +657,9 @@ public class InternalCfeditorLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1286:40: ( '\\r' )? '\\n'
+                    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1277:40: ( '\\r' )? '\\n'
                     {
-                    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1286:40: ( '\\r' )?
+                    // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1277:40: ( '\\r' )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -668,7 +668,7 @@ public class InternalCfeditorLexer extends Lexer {
                     }
                     switch (alt7) {
                         case 1 :
-                            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1286:40: '\\r'
+                            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1277:40: '\\r'
                             {
                             match('\r'); 
 
@@ -698,10 +698,10 @@ public class InternalCfeditorLexer extends Lexer {
     public final void mRULE_WS() throws RecognitionException {
         try {
             int _type = RULE_WS;
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1288:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1288:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1279:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1279:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1288:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1279:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt9=0;
             loop9:
             do {
@@ -754,8 +754,8 @@ public class InternalCfeditorLexer extends Lexer {
     public final void mRULE_ANY_OTHER() throws RecognitionException {
         try {
             int _type = RULE_ANY_OTHER;
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1290:16: ( . )
-            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1290:18: .
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1281:16: ( . )
+            // ../edu.kit.scc.cfeditor/src-gen/edu/kit/scc/cfeditor/parser/antlr/internal/InternalCfeditor.g:1281:18: .
             {
             matchAny(); 
 

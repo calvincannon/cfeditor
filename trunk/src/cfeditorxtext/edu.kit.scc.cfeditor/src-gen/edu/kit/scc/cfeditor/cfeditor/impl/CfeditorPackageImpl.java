@@ -378,19 +378,9 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getSpecialFunction_Name()
-  {
-    return (EAttribute)specialFunctionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getSpecialFunction_Func()
   {
-    return (EReference)specialFunctionEClass.getEStructuralFeatures().get(1);
+    return (EReference)specialFunctionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -558,7 +548,6 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
     createEReference(bodyFunctionEClass, BODY_FUNCTION__FUNCTION);
 
     specialFunctionEClass = createEClass(SPECIAL_FUNCTION);
-    createEAttribute(specialFunctionEClass, SPECIAL_FUNCTION__NAME);
     createEReference(specialFunctionEClass, SPECIAL_FUNCTION__FUNC);
 
     bundlePromiseTypeEClass = createEClass(BUNDLE_PROMISE_TYPE);
@@ -637,7 +626,6 @@ public class CfeditorPackageImpl extends EPackageImpl implements CfeditorPackage
     initEReference(getBodyFunction_Function(), this.getSpecialFunction(), null, "function", null, 0, -1, BodyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(specialFunctionEClass, SpecialFunction.class, "SpecialFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSpecialFunction_Name(), ecorePackage.getEString(), "name", null, 0, 1, SpecialFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSpecialFunction_Func(), this.getSpecialFunction(), null, "func", null, 0, -1, SpecialFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(bundlePromiseTypeEClass, BundlePromiseType.class, "BundlePromiseType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

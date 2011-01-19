@@ -11,7 +11,6 @@ import edu.kit.scc.cfeditor.cfeditor.SpecialFunction;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -19,7 +18,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -32,7 +30,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link edu.kit.scc.cfeditor.cfeditor.impl.SpecialFunctionImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.scc.cfeditor.cfeditor.impl.SpecialFunctionImpl#getFunc <em>Func</em>}</li>
  * </ul>
  * </p>
@@ -41,26 +38,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements SpecialFunction
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getFunc() <em>Func</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -90,29 +67,6 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   protected EClass eStaticClass()
   {
     return CfeditorPackage.Literals.SPECIAL_FUNCTION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CfeditorPackage.SPECIAL_FUNCTION__NAME, oldName, name));
   }
 
   /**
@@ -155,8 +109,6 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfeditorPackage.SPECIAL_FUNCTION__NAME:
-        return getName();
       case CfeditorPackage.SPECIAL_FUNCTION__FUNC:
         return getFunc();
     }
@@ -174,9 +126,6 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfeditorPackage.SPECIAL_FUNCTION__NAME:
-        setName((String)newValue);
-        return;
       case CfeditorPackage.SPECIAL_FUNCTION__FUNC:
         getFunc().clear();
         getFunc().addAll((Collection<? extends SpecialFunction>)newValue);
@@ -195,9 +144,6 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfeditorPackage.SPECIAL_FUNCTION__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case CfeditorPackage.SPECIAL_FUNCTION__FUNC:
         getFunc().clear();
         return;
@@ -215,29 +161,10 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfeditorPackage.SPECIAL_FUNCTION__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case CfeditorPackage.SPECIAL_FUNCTION__FUNC:
         return func != null && !func.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //SpecialFunctionImpl

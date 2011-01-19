@@ -25,22 +25,22 @@ T24 : '$(' ;
 T25 : '${' ;
 T26 : '::' ;
 
-// $ANTLR src "../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g" 2842
+// $ANTLR src "../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g" 2860
 RULE_ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
-// $ANTLR src "../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g" 2844
+// $ANTLR src "../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g" 2862
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g" 2846
+// $ANTLR src "../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g" 2864
 RULE_STRING : ('"' (~(('\\'|'"'))|'\\' .)* '"'|'\'' (~(('\\'|'\''))|'\\' .)* '\'');
 
-// $ANTLR src "../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g" 2848
+// $ANTLR src "../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g" 2866
 RULE_SL_COMMENT : '#' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g" 2850
+// $ANTLR src "../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g" 2868
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g" 2852
+// $ANTLR src "../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g" 2870
 RULE_ANY_OTHER : .;
 
 

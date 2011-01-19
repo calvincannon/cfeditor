@@ -311,22 +311,13 @@ public interface CfeditorPackage extends EPackage
   int SPECIAL_FUNCTION = 6;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SPECIAL_FUNCTION__NAME = 0;
-
-  /**
    * The feature id for the '<em><b>Func</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SPECIAL_FUNCTION__FUNC = 1;
+  int SPECIAL_FUNCTION__FUNC = 0;
 
   /**
    * The number of structural features of the '<em>Special Function</em>' class.
@@ -335,7 +326,7 @@ public interface CfeditorPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPECIAL_FUNCTION_FEATURE_COUNT = 2;
+  int SPECIAL_FUNCTION_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link edu.kit.scc.cfeditor.cfeditor.impl.BundlePromiseTypeImpl <em>Bundle Promise Type</em>}' class.
@@ -690,17 +681,6 @@ public interface CfeditorPackage extends EPackage
   EClass getSpecialFunction();
 
   /**
-   * Returns the meta object for the attribute '{@link edu.kit.scc.cfeditor.cfeditor.SpecialFunction#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see edu.kit.scc.cfeditor.cfeditor.SpecialFunction#getName()
-   * @see #getSpecialFunction()
-   * @generated
-   */
-  EAttribute getSpecialFunction_Name();
-
-  /**
    * Returns the meta object for the containment reference list '{@link edu.kit.scc.cfeditor.cfeditor.SpecialFunction#getFunc <em>Func</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1015,14 +995,6 @@ public interface CfeditorPackage extends EPackage
      * @generated
      */
     EClass SPECIAL_FUNCTION = eINSTANCE.getSpecialFunction();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SPECIAL_FUNCTION__NAME = eINSTANCE.getSpecialFunction_Name();
 
     /**
      * The meta object literal for the '<em><b>Func</b></em>' containment reference list feature.

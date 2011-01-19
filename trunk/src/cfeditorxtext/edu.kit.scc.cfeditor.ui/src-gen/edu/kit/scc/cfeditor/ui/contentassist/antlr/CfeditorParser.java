@@ -43,7 +43,7 @@ public class CfeditorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPartAccess().getAlternatives(), "rule__Part__Alternatives");
 					put(grammarAccess.getBundleAccess().getAlternatives_5_2(), "rule__Bundle__Alternatives_5_2");
 					put(grammarAccess.getBodyFunctionAccess().getAlternatives_2(), "rule__BodyFunction__Alternatives_2");
-					put(grammarAccess.getSpecialFunctionAccess().getAlternatives_2(), "rule__SpecialFunction__Alternatives_2");
+					put(grammarAccess.getSpecialFunctionAccess().getAlternatives_3(), "rule__SpecialFunction__Alternatives_3");
 					put(grammarAccess.getBundleAccess().getGroup(), "rule__Bundle__Group__0");
 					put(grammarAccess.getBundleAccess().getGroup_5(), "rule__Bundle__Group_5__0");
 					put(grammarAccess.getBundleAccess().getGroup_5_2_1(), "rule__Bundle__Group_5_2_1__0");
@@ -55,8 +55,8 @@ public class CfeditorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBodyFunctionAccess().getGroup_2_1_2(), "rule__BodyFunction__Group_2_1_2__0");
 					put(grammarAccess.getBodyFunctionAccess().getGroup_2_3(), "rule__BodyFunction__Group_2_3__0");
 					put(grammarAccess.getSpecialFunctionAccess().getGroup(), "rule__SpecialFunction__Group__0");
-					put(grammarAccess.getSpecialFunctionAccess().getGroup_2_5(), "rule__SpecialFunction__Group_2_5__0");
-					put(grammarAccess.getSpecialFunctionAccess().getGroup_2_6(), "rule__SpecialFunction__Group_2_6__0");
+					put(grammarAccess.getSpecialFunctionAccess().getGroup_3_5(), "rule__SpecialFunction__Group_3_5__0");
+					put(grammarAccess.getSpecialFunctionAccess().getGroup_3_6(), "rule__SpecialFunction__Group_3_6__0");
 					put(grammarAccess.getBodyClassAccess().getGroup(), "rule__BodyClass__Group__0");
 					put(grammarAccess.getCfModelAccess().getElementsAssignment(), "rule__CfModel__ElementsAssignment");
 					put(grammarAccess.getBundleAccess().getComponentAssignment_1(), "rule__Bundle__ComponentAssignment_1");
@@ -74,8 +74,7 @@ public class CfeditorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBodyFunctionAccess().getValuesAssignment_2_1_1(), "rule__BodyFunction__ValuesAssignment_2_1_1");
 					put(grammarAccess.getBodyFunctionAccess().getValuesAssignment_2_1_2_1(), "rule__BodyFunction__ValuesAssignment_2_1_2_1");
 					put(grammarAccess.getBodyFunctionAccess().getFunctionAssignment_2_2(), "rule__BodyFunction__FunctionAssignment_2_2");
-					put(grammarAccess.getSpecialFunctionAccess().getNameAssignment_0(), "rule__SpecialFunction__NameAssignment_0");
-					put(grammarAccess.getSpecialFunctionAccess().getFuncAssignment_2_7(), "rule__SpecialFunction__FuncAssignment_2_7");
+					put(grammarAccess.getSpecialFunctionAccess().getFuncAssignment_3_7(), "rule__SpecialFunction__FuncAssignment_3_7");
 					put(grammarAccess.getBundlePromiseTypeAccess().getNameAssignment(), "rule__BundlePromiseType__NameAssignment");
 					put(grammarAccess.getBodyPromiseTypeAccess().getNameAssignment(), "rule__BodyPromiseType__NameAssignment");
 					put(grammarAccess.getBundleComponentAccess().getNameAssignment(), "rule__BundleComponent__NameAssignment");
