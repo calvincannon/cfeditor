@@ -6,42 +6,42 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="edu.kit.scc.cfeditor.ui.CfeditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+            class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
             extensions="cf"
-            id="edu.kit.scc.cfeditor.Cfeditor"
-            name="Cfeditor Editor">
+            id="edu.kit.scc.cfeditor.cfengine.CfengineEditor"
+            name="CfengineEditor Editor">
         </editor>
     </extension>
     <extension
         point="org.eclipse.ui.handlers">
         <handler
-            class="edu.kit.scc.cfeditor.ui.CfeditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+            class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
             commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
             <activeWhen>
                 <reference
-                    definitionId="edu.kit.scc.cfeditor.Cfeditor.Editor.opened">
+                    definitionId="edu.kit.scc.cfeditor.cfengine.CfengineEditor.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
         <handler
-            class="edu.kit.scc.cfeditor.ui.CfeditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
-            commandId="edu.kit.scc.cfeditor.Cfeditor.validate">
+            class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+            commandId="edu.kit.scc.cfeditor.cfengine.CfengineEditor.validate">
          <activeWhen>
             <reference
-                    definitionId="edu.kit.scc.cfeditor.Cfeditor.Editor.opened">
+                    definitionId="edu.kit.scc.cfeditor.cfengine.CfengineEditor.Editor.opened">
             </reference>
          </activeWhen>
       </handler>
     </extension>
     <extension point="org.eclipse.core.expressions.definitions">
-        <definition id="edu.kit.scc.cfeditor.Cfeditor.Editor.opened">
+        <definition id="edu.kit.scc.cfeditor.cfengine.CfengineEditor.Editor.opened">
             <and>
                 <reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
                 <with variable="activeEditor">
                     <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="edu.kit.scc.cfeditor.Cfeditor" 
+                        value="edu.kit.scc.cfeditor.cfengine.CfengineEditor" 
                         forcePluginActivation="true"/>
                 </with>        
             </and>
@@ -50,37 +50,37 @@
     <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            class="edu.kit.scc.cfeditor.ui.CfeditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="edu.kit.scc.cfeditor.Cfeditor"
-            name="Cfeditor">
-            <keywordReference id="edu.kit.scc.cfeditor.ui.keyword_Cfeditor"/>
+            class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="edu.kit.scc.cfeditor.cfengine.CfengineEditor"
+            name="CfengineEditor">
+            <keywordReference id="edu.kit.scc.cfeditor.cfengine.ui.keyword_CfengineEditor"/>
         </page>
         <page
-            category="edu.kit.scc.cfeditor.Cfeditor"
-            class="edu.kit.scc.cfeditor.ui.CfeditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
-            id="edu.kit.scc.cfeditor.Cfeditor.coloring"
+            category="edu.kit.scc.cfeditor.cfengine.CfengineEditor"
+            class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+            id="edu.kit.scc.cfeditor.cfengine.CfengineEditor.coloring"
             name="Syntax Coloring">
-            <keywordReference id="edu.kit.scc.cfeditor.ui.keyword_Cfeditor"/>
+            <keywordReference id="edu.kit.scc.cfeditor.cfengine.ui.keyword_CfengineEditor"/>
         </page>
         <page
-            category="edu.kit.scc.cfeditor.Cfeditor"
-            class="edu.kit.scc.cfeditor.ui.CfeditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
-            id="edu.kit.scc.cfeditor.Cfeditor.templates"
+            category="edu.kit.scc.cfeditor.cfengine.CfengineEditor"
+            class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+            id="edu.kit.scc.cfeditor.cfengine.CfengineEditor.templates"
             name="Templates">
-            <keywordReference id="edu.kit.scc.cfeditor.ui.keyword_Cfeditor"/>
+            <keywordReference id="edu.kit.scc.cfeditor.cfengine.ui.keyword_CfengineEditor"/>
         </page>
     </extension>
     <extension
         point="org.eclipse.ui.keywords">
         <keyword
-            id="edu.kit.scc.cfeditor.ui.keyword_Cfeditor"
-            label="Cfeditor"/>
+            id="edu.kit.scc.cfeditor.cfengine.ui.keyword_CfengineEditor"
+            label="CfengineEditor"/>
     </extension>
     <extension
          point="org.eclipse.ui.commands">
       <command
             description="Trigger expensive validation"
-            id="edu.kit.scc.cfeditor.Cfeditor.validate"
+            id="edu.kit.scc.cfeditor.cfengine.CfengineEditor.validate"
             name="Validate">
       </command>
     </extension>
@@ -88,12 +88,12 @@
         <menuContribution
             locationURI="popup:#TextEditorContext?after=group.edit">
              <command
-                 commandId="edu.kit.scc.cfeditor.Cfeditor.validate"
+                 commandId="edu.kit.scc.cfeditor.cfengine.CfengineEditor.validate"
                  style="push"
                  tooltip="Trigger expensive validation">
             <visibleWhen checkEnabled="false">
                 <reference
-                    definitionId="edu.kit.scc.cfeditor.Cfeditor.Editor.opened">
+                    definitionId="edu.kit.scc.cfeditor.cfengine.CfengineEditor.Editor.opened">
                 </reference>
             </visibleWhen>
          </command>  
@@ -103,7 +103,7 @@
 		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
 			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
 				<visibleWhen checkEnabled="false">
-                	<reference definitionId="edu.kit.scc.cfeditor.Cfeditor.Editor.opened">
+                	<reference definitionId="edu.kit.scc.cfeditor.cfengine.CfengineEditor.Editor.opened">
                 	</reference>
             	</visibleWhen>
 			</command>
@@ -111,11 +111,11 @@
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 	    <handler
-            class="edu.kit.scc.cfeditor.ui.CfeditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+            class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
             commandId="org.eclipse.xtext.ui.editor.FindReferences">
             <activeWhen>
                 <reference
-                    definitionId="edu.kit.scc.cfeditor.Cfeditor.Editor.opened">
+                    definitionId="edu.kit.scc.cfeditor.cfengine.CfengineEditor.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
@@ -126,13 +126,13 @@
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
-			class="edu.kit.scc.cfeditor.ui.CfeditorExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
 			type="cf">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
         <resourceServiceProvider
-            class="edu.kit.scc.cfeditor.ui.CfeditorExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+            class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
             uriExtension="cf">
         </resourceServiceProvider>
     </extension>
@@ -144,11 +144,11 @@
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler 
-			class="edu.kit.scc.cfeditor.ui.CfeditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
 			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
 			<activeWhen>
 				<reference
-					definitionId="edu.kit.scc.cfeditor.Cfeditor.Editor.opened">
+					definitionId="edu.kit.scc.cfeditor.cfengine.CfengineEditor.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -168,7 +168,7 @@
 				style="push"
 				tooltip="Open Quick Outline">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="edu.kit.scc.cfeditor.Cfeditor.Editor.opened"/>
+					<reference definitionId="edu.kit.scc.cfeditor.cfengine.CfengineEditor.Editor.opened"/>
 				</visibleWhen>
 			</command>
 		</menuContribution>
@@ -177,7 +177,7 @@
    <extension
          point="org.eclipse.ui.ide.markerResolution">
       <markerResolutionGenerator
-            class="edu.kit.scc.cfeditor.ui.CfeditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator">
+            class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator">
       </markerResolutionGenerator>
    </extension>
 
@@ -185,10 +185,10 @@
          point="org.eclipse.ui.newWizards">
       <wizard
             category="org.eclipse.xtext.projectwiz"
-            class="edu.kit.scc.cfeditor.ui.CfeditorExecutableExtensionFactory:edu.kit.scc.cfeditor.ui.wizard.CfeditorNewProjectWizard"
+            class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:edu.kit.scc.cfeditor.cfengine.ui.wizard.CfengineEditorNewProjectWizard"
             icon="icons/editor.gif"
-            id="edu.kit.scc.cfeditor.ui.wizard.CfeditorNewProjectWizard"
-            name="Cfeditor Project"
+            id="edu.kit.scc.cfeditor.cfengine.ui.wizard.CfengineEditorNewProjectWizard"
+            name="CfengineEditor Project"
             project="true">
       </wizard>
    </extension>

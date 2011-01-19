@@ -1,11 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Cfeditor UI
+Bundle-Name: Cfeditor Cfengine extension ui
 Bundle-Vendor: KIT/SCC
 Bundle-Version: 0.1.3.3
-Bundle-SymbolicName: edu.kit.scc.cfeditor.ui;singleton:=true
+Bundle-SymbolicName: edu.kit.scc.cfeditor.cfengine.ui;singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: edu.kit.scc.cfeditor;visibility:=reexport,
+Require-Bundle: edu.kit.scc.cfeditor.cfengine;visibility:=reexport,
  org.eclipse.xtext.ui,
  org.eclipse.ui.editors,
  org.eclipse.ui.ide,
@@ -20,5 +20,5 @@ Require-Bundle: edu.kit.scc.cfeditor;visibility:=reexport,
  com.google.collect
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: edu.kit.scc.cfeditor.ui.contentassist.antlr
-Bundle-Activator: edu.kit.scc.cfeditor.ui.internal.CfeditorActivator
+Export-Package: edu.kit.scc.cfeditor.cfengine.ui.contentassist.antlr
+Bundle-Activator: edu.kit.scc.cfeditor.cfengine.ui.internal.CfengineEditorActivator
