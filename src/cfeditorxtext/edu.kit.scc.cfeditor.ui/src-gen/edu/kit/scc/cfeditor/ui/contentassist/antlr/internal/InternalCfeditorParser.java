@@ -1695,11 +1695,11 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
                 {
                 int LA7_2 = input.LA(2);
 
-                if ( (LA7_2==RULE_STRING) ) {
-                    alt7=2;
-                }
-                else if ( (LA7_2==22) ) {
+                if ( (LA7_2==22) ) {
                     alt7=4;
+                }
+                else if ( (LA7_2==RULE_STRING) ) {
+                    alt7=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -1835,14 +1835,14 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
     // $ANTLR end rule__BodyFunction__Alternatives_2
 
 
-    // $ANTLR start rule__SpecialFunction__Alternatives_2
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:665:1: rule__SpecialFunction__Alternatives_2 : ( ( RULE_ANY_OTHER ) | ( RULE_ID ) | ( RULE_STRING ) | ( RULE_INT ) | ( ',' ) | ( ( rule__SpecialFunction__Group_2_5__0 ) ) | ( ( rule__SpecialFunction__Group_2_6__0 ) ) | ( ( rule__SpecialFunction__FuncAssignment_2_7 ) ) );
-    public final void rule__SpecialFunction__Alternatives_2() throws RecognitionException {
+    // $ANTLR start rule__SpecialFunction__Alternatives_3
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:665:1: rule__SpecialFunction__Alternatives_3 : ( ( RULE_ANY_OTHER ) | ( RULE_ID ) | ( RULE_STRING ) | ( RULE_INT ) | ( ',' ) | ( ( rule__SpecialFunction__Group_3_5__0 ) ) | ( ( rule__SpecialFunction__Group_3_6__0 ) ) | ( ( rule__SpecialFunction__FuncAssignment_3_7 ) ) );
+    public final void rule__SpecialFunction__Alternatives_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:669:1: ( ( RULE_ANY_OTHER ) | ( RULE_ID ) | ( RULE_STRING ) | ( RULE_INT ) | ( ',' ) | ( ( rule__SpecialFunction__Group_2_5__0 ) ) | ( ( rule__SpecialFunction__Group_2_6__0 ) ) | ( ( rule__SpecialFunction__FuncAssignment_2_7 ) ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:669:1: ( ( RULE_ANY_OTHER ) | ( RULE_ID ) | ( RULE_STRING ) | ( RULE_INT ) | ( ',' ) | ( ( rule__SpecialFunction__Group_3_5__0 ) ) | ( ( rule__SpecialFunction__Group_3_6__0 ) ) | ( ( rule__SpecialFunction__FuncAssignment_3_7 ) ) )
             int alt8=8;
             switch ( input.LA(1) ) {
             case RULE_ANY_OTHER:
@@ -1862,7 +1862,7 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("665:1: rule__SpecialFunction__Alternatives_2 : ( ( RULE_ANY_OTHER ) | ( RULE_ID ) | ( RULE_STRING ) | ( RULE_INT ) | ( ',' ) | ( ( rule__SpecialFunction__Group_2_5__0 ) ) | ( ( rule__SpecialFunction__Group_2_6__0 ) ) | ( ( rule__SpecialFunction__FuncAssignment_2_7 ) ) );", 8, 2, input);
+                        new NoViableAltException("665:1: rule__SpecialFunction__Alternatives_3 : ( ( RULE_ANY_OTHER ) | ( RULE_ID ) | ( RULE_STRING ) | ( RULE_INT ) | ( ',' ) | ( ( rule__SpecialFunction__Group_3_5__0 ) ) | ( ( rule__SpecialFunction__Group_3_6__0 ) ) | ( ( rule__SpecialFunction__FuncAssignment_3_7 ) ) );", 8, 2, input);
 
                     throw nvae;
                 }
@@ -1895,7 +1895,7 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("665:1: rule__SpecialFunction__Alternatives_2 : ( ( RULE_ANY_OTHER ) | ( RULE_ID ) | ( RULE_STRING ) | ( RULE_INT ) | ( ',' ) | ( ( rule__SpecialFunction__Group_2_5__0 ) ) | ( ( rule__SpecialFunction__Group_2_6__0 ) ) | ( ( rule__SpecialFunction__FuncAssignment_2_7 ) ) );", 8, 0, input);
+                    new NoViableAltException("665:1: rule__SpecialFunction__Alternatives_3 : ( ( RULE_ANY_OTHER ) | ( RULE_ID ) | ( RULE_STRING ) | ( RULE_INT ) | ( ',' ) | ( ( rule__SpecialFunction__Group_3_5__0 ) ) | ( ( rule__SpecialFunction__Group_3_6__0 ) ) | ( ( rule__SpecialFunction__FuncAssignment_3_7 ) ) );", 8, 0, input);
 
                 throw nvae;
             }
@@ -1907,9 +1907,9 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
                     // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:670:1: ( RULE_ANY_OTHER )
                     // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:671:1: RULE_ANY_OTHER
                     {
-                     before(grammarAccess.getSpecialFunctionAccess().getANY_OTHERTerminalRuleCall_2_0()); 
-                    match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_rule__SpecialFunction__Alternatives_21414); 
-                     after(grammarAccess.getSpecialFunctionAccess().getANY_OTHERTerminalRuleCall_2_0()); 
+                     before(grammarAccess.getSpecialFunctionAccess().getANY_OTHERTerminalRuleCall_3_0()); 
+                    match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_rule__SpecialFunction__Alternatives_31414); 
+                     after(grammarAccess.getSpecialFunctionAccess().getANY_OTHERTerminalRuleCall_3_0()); 
 
                     }
 
@@ -1922,9 +1922,9 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
                     // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:676:6: ( RULE_ID )
                     // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:677:1: RULE_ID
                     {
-                     before(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_1()); 
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__Alternatives_21431); 
-                     after(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_1()); 
+                     before(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_3_1()); 
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__Alternatives_31431); 
+                     after(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_3_1()); 
 
                     }
 
@@ -1937,9 +1937,9 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
                     // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:682:6: ( RULE_STRING )
                     // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:683:1: RULE_STRING
                     {
-                     before(grammarAccess.getSpecialFunctionAccess().getSTRINGTerminalRuleCall_2_2()); 
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SpecialFunction__Alternatives_21448); 
-                     after(grammarAccess.getSpecialFunctionAccess().getSTRINGTerminalRuleCall_2_2()); 
+                     before(grammarAccess.getSpecialFunctionAccess().getSTRINGTerminalRuleCall_3_2()); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SpecialFunction__Alternatives_31448); 
+                     after(grammarAccess.getSpecialFunctionAccess().getSTRINGTerminalRuleCall_3_2()); 
 
                     }
 
@@ -1952,9 +1952,9 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
                     // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:688:6: ( RULE_INT )
                     // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:689:1: RULE_INT
                     {
-                     before(grammarAccess.getSpecialFunctionAccess().getINTTerminalRuleCall_2_3()); 
-                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__SpecialFunction__Alternatives_21465); 
-                     after(grammarAccess.getSpecialFunctionAccess().getINTTerminalRuleCall_2_3()); 
+                     before(grammarAccess.getSpecialFunctionAccess().getINTTerminalRuleCall_3_3()); 
+                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__SpecialFunction__Alternatives_31465); 
+                     after(grammarAccess.getSpecialFunctionAccess().getINTTerminalRuleCall_3_3()); 
 
                     }
 
@@ -1967,9 +1967,9 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
                     // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:694:6: ( ',' )
                     // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:695:1: ','
                     {
-                     before(grammarAccess.getSpecialFunctionAccess().getCommaKeyword_2_4()); 
-                    match(input,17,FOLLOW_17_in_rule__SpecialFunction__Alternatives_21483); 
-                     after(grammarAccess.getSpecialFunctionAccess().getCommaKeyword_2_4()); 
+                     before(grammarAccess.getSpecialFunctionAccess().getCommaKeyword_3_4()); 
+                    match(input,17,FOLLOW_17_in_rule__SpecialFunction__Alternatives_31483); 
+                     after(grammarAccess.getSpecialFunctionAccess().getCommaKeyword_3_4()); 
 
                     }
 
@@ -1977,23 +1977,23 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 6 :
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:702:6: ( ( rule__SpecialFunction__Group_2_5__0 ) )
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:702:6: ( ( rule__SpecialFunction__Group_3_5__0 ) )
                     {
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:702:6: ( ( rule__SpecialFunction__Group_2_5__0 ) )
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:703:1: ( rule__SpecialFunction__Group_2_5__0 )
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:702:6: ( ( rule__SpecialFunction__Group_3_5__0 ) )
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:703:1: ( rule__SpecialFunction__Group_3_5__0 )
                     {
-                     before(grammarAccess.getSpecialFunctionAccess().getGroup_2_5()); 
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:704:1: ( rule__SpecialFunction__Group_2_5__0 )
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:704:2: rule__SpecialFunction__Group_2_5__0
+                     before(grammarAccess.getSpecialFunctionAccess().getGroup_3_5()); 
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:704:1: ( rule__SpecialFunction__Group_3_5__0 )
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:704:2: rule__SpecialFunction__Group_3_5__0
                     {
-                    pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__0_in_rule__SpecialFunction__Alternatives_21502);
-                    rule__SpecialFunction__Group_2_5__0();
+                    pushFollow(FOLLOW_rule__SpecialFunction__Group_3_5__0_in_rule__SpecialFunction__Alternatives_31502);
+                    rule__SpecialFunction__Group_3_5__0();
                     _fsp--;
 
 
                     }
 
-                     after(grammarAccess.getSpecialFunctionAccess().getGroup_2_5()); 
+                     after(grammarAccess.getSpecialFunctionAccess().getGroup_3_5()); 
 
                     }
 
@@ -2001,23 +2001,23 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 7 :
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:708:6: ( ( rule__SpecialFunction__Group_2_6__0 ) )
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:708:6: ( ( rule__SpecialFunction__Group_3_6__0 ) )
                     {
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:708:6: ( ( rule__SpecialFunction__Group_2_6__0 ) )
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:709:1: ( rule__SpecialFunction__Group_2_6__0 )
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:708:6: ( ( rule__SpecialFunction__Group_3_6__0 ) )
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:709:1: ( rule__SpecialFunction__Group_3_6__0 )
                     {
-                     before(grammarAccess.getSpecialFunctionAccess().getGroup_2_6()); 
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:710:1: ( rule__SpecialFunction__Group_2_6__0 )
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:710:2: rule__SpecialFunction__Group_2_6__0
+                     before(grammarAccess.getSpecialFunctionAccess().getGroup_3_6()); 
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:710:1: ( rule__SpecialFunction__Group_3_6__0 )
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:710:2: rule__SpecialFunction__Group_3_6__0
                     {
-                    pushFollow(FOLLOW_rule__SpecialFunction__Group_2_6__0_in_rule__SpecialFunction__Alternatives_21520);
-                    rule__SpecialFunction__Group_2_6__0();
+                    pushFollow(FOLLOW_rule__SpecialFunction__Group_3_6__0_in_rule__SpecialFunction__Alternatives_31520);
+                    rule__SpecialFunction__Group_3_6__0();
                     _fsp--;
 
 
                     }
 
-                     after(grammarAccess.getSpecialFunctionAccess().getGroup_2_6()); 
+                     after(grammarAccess.getSpecialFunctionAccess().getGroup_3_6()); 
 
                     }
 
@@ -2025,23 +2025,23 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 8 :
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:714:6: ( ( rule__SpecialFunction__FuncAssignment_2_7 ) )
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:714:6: ( ( rule__SpecialFunction__FuncAssignment_3_7 ) )
                     {
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:714:6: ( ( rule__SpecialFunction__FuncAssignment_2_7 ) )
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:715:1: ( rule__SpecialFunction__FuncAssignment_2_7 )
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:714:6: ( ( rule__SpecialFunction__FuncAssignment_3_7 ) )
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:715:1: ( rule__SpecialFunction__FuncAssignment_3_7 )
                     {
-                     before(grammarAccess.getSpecialFunctionAccess().getFuncAssignment_2_7()); 
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:716:1: ( rule__SpecialFunction__FuncAssignment_2_7 )
-                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:716:2: rule__SpecialFunction__FuncAssignment_2_7
+                     before(grammarAccess.getSpecialFunctionAccess().getFuncAssignment_3_7()); 
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:716:1: ( rule__SpecialFunction__FuncAssignment_3_7 )
+                    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:716:2: rule__SpecialFunction__FuncAssignment_3_7
                     {
-                    pushFollow(FOLLOW_rule__SpecialFunction__FuncAssignment_2_7_in_rule__SpecialFunction__Alternatives_21538);
-                    rule__SpecialFunction__FuncAssignment_2_7();
+                    pushFollow(FOLLOW_rule__SpecialFunction__FuncAssignment_3_7_in_rule__SpecialFunction__Alternatives_31538);
+                    rule__SpecialFunction__FuncAssignment_3_7();
                     _fsp--;
 
 
                     }
 
-                     after(grammarAccess.getSpecialFunctionAccess().getFuncAssignment_2_7()); 
+                     after(grammarAccess.getSpecialFunctionAccess().getFuncAssignment_3_7()); 
 
                     }
 
@@ -2062,7 +2062,7 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__SpecialFunction__Alternatives_2
+    // $ANTLR end rule__SpecialFunction__Alternatives_3
 
 
     // $ANTLR start rule__Bundle__Group__0
@@ -5514,40 +5514,31 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SpecialFunction__Group__0__Impl
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2071:1: rule__SpecialFunction__Group__0__Impl : ( ( rule__SpecialFunction__NameAssignment_0 ) ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2071:1: rule__SpecialFunction__Group__0__Impl : ( () ) ;
     public final void rule__SpecialFunction__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2075:1: ( ( ( rule__SpecialFunction__NameAssignment_0 ) ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2076:1: ( ( rule__SpecialFunction__NameAssignment_0 ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2075:1: ( ( () ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2076:1: ( () )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2076:1: ( ( rule__SpecialFunction__NameAssignment_0 ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2077:1: ( rule__SpecialFunction__NameAssignment_0 )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2076:1: ( () )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2077:1: ()
             {
-             before(grammarAccess.getSpecialFunctionAccess().getNameAssignment_0()); 
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2078:1: ( rule__SpecialFunction__NameAssignment_0 )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2078:2: rule__SpecialFunction__NameAssignment_0
+             before(grammarAccess.getSpecialFunctionAccess().getSpecialFunctionAction_0()); 
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2078:1: ()
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2080:1: 
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__NameAssignment_0_in_rule__SpecialFunction__Group__0__Impl4226);
-            rule__SpecialFunction__NameAssignment_0();
-            _fsp--;
-
-
             }
 
-             after(grammarAccess.getSpecialFunctionAccess().getNameAssignment_0()); 
+             after(grammarAccess.getSpecialFunctionAccess().getSpecialFunctionAction_0()); 
 
             }
 
 
             }
 
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
         }
         finally {
 
@@ -5560,20 +5551,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SpecialFunction__Group__1
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2088:1: rule__SpecialFunction__Group__1 : rule__SpecialFunction__Group__1__Impl rule__SpecialFunction__Group__2 ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2090:1: rule__SpecialFunction__Group__1 : rule__SpecialFunction__Group__1__Impl rule__SpecialFunction__Group__2 ;
     public final void rule__SpecialFunction__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2092:1: ( rule__SpecialFunction__Group__1__Impl rule__SpecialFunction__Group__2 )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2093:2: rule__SpecialFunction__Group__1__Impl rule__SpecialFunction__Group__2
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2094:1: ( rule__SpecialFunction__Group__1__Impl rule__SpecialFunction__Group__2 )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2095:2: rule__SpecialFunction__Group__1__Impl rule__SpecialFunction__Group__2
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group__1__Impl_in_rule__SpecialFunction__Group__14256);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__1__Impl_in_rule__SpecialFunction__Group__14257);
             rule__SpecialFunction__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__SpecialFunction__Group__2_in_rule__SpecialFunction__Group__14259);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__2_in_rule__SpecialFunction__Group__14260);
             rule__SpecialFunction__Group__2();
             _fsp--;
 
@@ -5596,21 +5587,21 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SpecialFunction__Group__1__Impl
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2100:1: rule__SpecialFunction__Group__1__Impl : ( '(' ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2102:1: rule__SpecialFunction__Group__1__Impl : ( RULE_ID ) ;
     public final void rule__SpecialFunction__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2104:1: ( ( '(' ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2105:1: ( '(' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2106:1: ( ( RULE_ID ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2107:1: ( RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2105:1: ( '(' )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2106:1: '('
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2107:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2108:1: RULE_ID
             {
-             before(grammarAccess.getSpecialFunctionAccess().getLeftParenthesisKeyword_1()); 
-            match(input,10,FOLLOW_10_in_rule__SpecialFunction__Group__1__Impl4287); 
-             after(grammarAccess.getSpecialFunctionAccess().getLeftParenthesisKeyword_1()); 
+             before(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__Group__1__Impl4287); 
+             after(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_1()); 
 
             }
 
@@ -5642,11 +5633,11 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
             // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2123:1: ( rule__SpecialFunction__Group__2__Impl rule__SpecialFunction__Group__3 )
             // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2124:2: rule__SpecialFunction__Group__2__Impl rule__SpecialFunction__Group__3
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group__2__Impl_in_rule__SpecialFunction__Group__24318);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__2__Impl_in_rule__SpecialFunction__Group__24316);
             rule__SpecialFunction__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__SpecialFunction__Group__3_in_rule__SpecialFunction__Group__24321);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__3_in_rule__SpecialFunction__Group__24319);
             rule__SpecialFunction__Group__3();
             _fsp--;
 
@@ -5669,48 +5660,21 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SpecialFunction__Group__2__Impl
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2131:1: rule__SpecialFunction__Group__2__Impl : ( ( rule__SpecialFunction__Alternatives_2 )* ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2131:1: rule__SpecialFunction__Group__2__Impl : ( '(' ) ;
     public final void rule__SpecialFunction__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2135:1: ( ( ( rule__SpecialFunction__Alternatives_2 )* ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2136:1: ( ( rule__SpecialFunction__Alternatives_2 )* )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2135:1: ( ( '(' ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2136:1: ( '(' )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2136:1: ( ( rule__SpecialFunction__Alternatives_2 )* )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2137:1: ( rule__SpecialFunction__Alternatives_2 )*
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2136:1: ( '(' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2137:1: '('
             {
-             before(grammarAccess.getSpecialFunctionAccess().getAlternatives_2()); 
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2138:1: ( rule__SpecialFunction__Alternatives_2 )*
-            loop19:
-            do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
-
-                if ( ((LA19_0>=RULE_ID && LA19_0<=RULE_INT)||LA19_0==17||(LA19_0>=24 && LA19_0<=25)) ) {
-                    alt19=1;
-                }
-
-
-                switch (alt19) {
-            	case 1 :
-            	    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2138:2: rule__SpecialFunction__Alternatives_2
-            	    {
-            	    pushFollow(FOLLOW_rule__SpecialFunction__Alternatives_2_in_rule__SpecialFunction__Group__2__Impl4348);
-            	    rule__SpecialFunction__Alternatives_2();
-            	    _fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop19;
-                }
-            } while (true);
-
-             after(grammarAccess.getSpecialFunctionAccess().getAlternatives_2()); 
+             before(grammarAccess.getSpecialFunctionAccess().getLeftParenthesisKeyword_2()); 
+            match(input,10,FOLLOW_10_in_rule__SpecialFunction__Group__2__Impl4347); 
+             after(grammarAccess.getSpecialFunctionAccess().getLeftParenthesisKeyword_2()); 
 
             }
 
@@ -5733,17 +5697,21 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SpecialFunction__Group__3
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2148:1: rule__SpecialFunction__Group__3 : rule__SpecialFunction__Group__3__Impl ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2150:1: rule__SpecialFunction__Group__3 : rule__SpecialFunction__Group__3__Impl rule__SpecialFunction__Group__4 ;
     public final void rule__SpecialFunction__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2152:1: ( rule__SpecialFunction__Group__3__Impl )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2153:2: rule__SpecialFunction__Group__3__Impl
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2154:1: ( rule__SpecialFunction__Group__3__Impl rule__SpecialFunction__Group__4 )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2155:2: rule__SpecialFunction__Group__3__Impl rule__SpecialFunction__Group__4
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group__3__Impl_in_rule__SpecialFunction__Group__34379);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__3__Impl_in_rule__SpecialFunction__Group__34378);
             rule__SpecialFunction__Group__3__Impl();
+            _fsp--;
+
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__4_in_rule__SpecialFunction__Group__34381);
+            rule__SpecialFunction__Group__4();
             _fsp--;
 
 
@@ -5765,21 +5733,48 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__SpecialFunction__Group__3__Impl
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2159:1: rule__SpecialFunction__Group__3__Impl : ( ')' ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2162:1: rule__SpecialFunction__Group__3__Impl : ( ( rule__SpecialFunction__Alternatives_3 )* ) ;
     public final void rule__SpecialFunction__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2163:1: ( ( ')' ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2164:1: ( ')' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2166:1: ( ( ( rule__SpecialFunction__Alternatives_3 )* ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2167:1: ( ( rule__SpecialFunction__Alternatives_3 )* )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2164:1: ( ')' )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2165:1: ')'
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2167:1: ( ( rule__SpecialFunction__Alternatives_3 )* )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2168:1: ( rule__SpecialFunction__Alternatives_3 )*
             {
-             before(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_3()); 
-            match(input,11,FOLLOW_11_in_rule__SpecialFunction__Group__3__Impl4407); 
-             after(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_3()); 
+             before(grammarAccess.getSpecialFunctionAccess().getAlternatives_3()); 
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2169:1: ( rule__SpecialFunction__Alternatives_3 )*
+            loop19:
+            do {
+                int alt19=2;
+                int LA19_0 = input.LA(1);
+
+                if ( ((LA19_0>=RULE_ID && LA19_0<=RULE_INT)||LA19_0==17||(LA19_0>=24 && LA19_0<=25)) ) {
+                    alt19=1;
+                }
+
+
+                switch (alt19) {
+            	case 1 :
+            	    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2169:2: rule__SpecialFunction__Alternatives_3
+            	    {
+            	    pushFollow(FOLLOW_rule__SpecialFunction__Alternatives_3_in_rule__SpecialFunction__Group__3__Impl4408);
+            	    rule__SpecialFunction__Alternatives_3();
+            	    _fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop19;
+                }
+            } while (true);
+
+             after(grammarAccess.getSpecialFunctionAccess().getAlternatives_3()); 
 
             }
 
@@ -5801,22 +5796,18 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
     // $ANTLR end rule__SpecialFunction__Group__3__Impl
 
 
-    // $ANTLR start rule__SpecialFunction__Group_2_5__0
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2186:1: rule__SpecialFunction__Group_2_5__0 : rule__SpecialFunction__Group_2_5__0__Impl rule__SpecialFunction__Group_2_5__1 ;
-    public final void rule__SpecialFunction__Group_2_5__0() throws RecognitionException {
+    // $ANTLR start rule__SpecialFunction__Group__4
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2179:1: rule__SpecialFunction__Group__4 : rule__SpecialFunction__Group__4__Impl ;
+    public final void rule__SpecialFunction__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2190:1: ( rule__SpecialFunction__Group_2_5__0__Impl rule__SpecialFunction__Group_2_5__1 )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2191:2: rule__SpecialFunction__Group_2_5__0__Impl rule__SpecialFunction__Group_2_5__1
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2183:1: ( rule__SpecialFunction__Group__4__Impl )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2184:2: rule__SpecialFunction__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__0__Impl_in_rule__SpecialFunction__Group_2_5__04446);
-            rule__SpecialFunction__Group_2_5__0__Impl();
-            _fsp--;
-
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__1_in_rule__SpecialFunction__Group_2_5__04449);
-            rule__SpecialFunction__Group_2_5__1();
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__4__Impl_in_rule__SpecialFunction__Group__44439);
+            rule__SpecialFunction__Group__4__Impl();
             _fsp--;
 
 
@@ -5834,25 +5825,25 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__SpecialFunction__Group_2_5__0
+    // $ANTLR end rule__SpecialFunction__Group__4
 
 
-    // $ANTLR start rule__SpecialFunction__Group_2_5__0__Impl
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2198:1: rule__SpecialFunction__Group_2_5__0__Impl : ( '$(' ) ;
-    public final void rule__SpecialFunction__Group_2_5__0__Impl() throws RecognitionException {
+    // $ANTLR start rule__SpecialFunction__Group__4__Impl
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2190:1: rule__SpecialFunction__Group__4__Impl : ( ')' ) ;
+    public final void rule__SpecialFunction__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2202:1: ( ( '$(' ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2203:1: ( '$(' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2194:1: ( ( ')' ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2195:1: ( ')' )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2203:1: ( '$(' )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2204:1: '$('
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2195:1: ( ')' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2196:1: ')'
             {
-             before(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftParenthesisKeyword_2_5_0()); 
-            match(input,24,FOLLOW_24_in_rule__SpecialFunction__Group_2_5__0__Impl4477); 
-             after(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftParenthesisKeyword_2_5_0()); 
+             before(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_4()); 
+            match(input,11,FOLLOW_11_in_rule__SpecialFunction__Group__4__Impl4467); 
+             after(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_4()); 
 
             }
 
@@ -5871,94 +5862,25 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__SpecialFunction__Group_2_5__0__Impl
+    // $ANTLR end rule__SpecialFunction__Group__4__Impl
 
 
-    // $ANTLR start rule__SpecialFunction__Group_2_5__1
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2217:1: rule__SpecialFunction__Group_2_5__1 : rule__SpecialFunction__Group_2_5__1__Impl rule__SpecialFunction__Group_2_5__2 ;
-    public final void rule__SpecialFunction__Group_2_5__1() throws RecognitionException {
+    // $ANTLR start rule__SpecialFunction__Group_3_5__0
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2219:1: rule__SpecialFunction__Group_3_5__0 : rule__SpecialFunction__Group_3_5__0__Impl rule__SpecialFunction__Group_3_5__1 ;
+    public final void rule__SpecialFunction__Group_3_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2221:1: ( rule__SpecialFunction__Group_2_5__1__Impl rule__SpecialFunction__Group_2_5__2 )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2222:2: rule__SpecialFunction__Group_2_5__1__Impl rule__SpecialFunction__Group_2_5__2
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2223:1: ( rule__SpecialFunction__Group_3_5__0__Impl rule__SpecialFunction__Group_3_5__1 )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2224:2: rule__SpecialFunction__Group_3_5__0__Impl rule__SpecialFunction__Group_3_5__1
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__1__Impl_in_rule__SpecialFunction__Group_2_5__14508);
-            rule__SpecialFunction__Group_2_5__1__Impl();
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_3_5__0__Impl_in_rule__SpecialFunction__Group_3_5__04508);
+            rule__SpecialFunction__Group_3_5__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__2_in_rule__SpecialFunction__Group_2_5__14511);
-            rule__SpecialFunction__Group_2_5__2();
-            _fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__SpecialFunction__Group_2_5__1
-
-
-    // $ANTLR start rule__SpecialFunction__Group_2_5__1__Impl
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2229:1: rule__SpecialFunction__Group_2_5__1__Impl : ( RULE_ID ) ;
-    public final void rule__SpecialFunction__Group_2_5__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2233:1: ( ( RULE_ID ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2234:1: ( RULE_ID )
-            {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2234:1: ( RULE_ID )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2235:1: RULE_ID
-            {
-             before(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_5_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_2_5__1__Impl4538); 
-             after(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_5_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__SpecialFunction__Group_2_5__1__Impl
-
-
-    // $ANTLR start rule__SpecialFunction__Group_2_5__2
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2246:1: rule__SpecialFunction__Group_2_5__2 : rule__SpecialFunction__Group_2_5__2__Impl ;
-    public final void rule__SpecialFunction__Group_2_5__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2250:1: ( rule__SpecialFunction__Group_2_5__2__Impl )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2251:2: rule__SpecialFunction__Group_2_5__2__Impl
-            {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__2__Impl_in_rule__SpecialFunction__Group_2_5__24567);
-            rule__SpecialFunction__Group_2_5__2__Impl();
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_3_5__1_in_rule__SpecialFunction__Group_3_5__04511);
+            rule__SpecialFunction__Group_3_5__1();
             _fsp--;
 
 
@@ -5976,25 +5898,25 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__SpecialFunction__Group_2_5__2
+    // $ANTLR end rule__SpecialFunction__Group_3_5__0
 
 
-    // $ANTLR start rule__SpecialFunction__Group_2_5__2__Impl
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2257:1: rule__SpecialFunction__Group_2_5__2__Impl : ( ')' ) ;
-    public final void rule__SpecialFunction__Group_2_5__2__Impl() throws RecognitionException {
+    // $ANTLR start rule__SpecialFunction__Group_3_5__0__Impl
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2231:1: rule__SpecialFunction__Group_3_5__0__Impl : ( '$(' ) ;
+    public final void rule__SpecialFunction__Group_3_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2261:1: ( ( ')' ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2262:1: ( ')' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2235:1: ( ( '$(' ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2236:1: ( '$(' )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2262:1: ( ')' )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2263:1: ')'
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2236:1: ( '$(' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2237:1: '$('
             {
-             before(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_2_5_2()); 
-            match(input,11,FOLLOW_11_in_rule__SpecialFunction__Group_2_5__2__Impl4595); 
-             after(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_2_5_2()); 
+             before(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftParenthesisKeyword_3_5_0()); 
+            match(input,24,FOLLOW_24_in_rule__SpecialFunction__Group_3_5__0__Impl4539); 
+             after(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftParenthesisKeyword_3_5_0()); 
 
             }
 
@@ -6013,98 +5935,25 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__SpecialFunction__Group_2_5__2__Impl
+    // $ANTLR end rule__SpecialFunction__Group_3_5__0__Impl
 
 
-    // $ANTLR start rule__SpecialFunction__Group_2_6__0
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2282:1: rule__SpecialFunction__Group_2_6__0 : rule__SpecialFunction__Group_2_6__0__Impl rule__SpecialFunction__Group_2_6__1 ;
-    public final void rule__SpecialFunction__Group_2_6__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2286:1: ( rule__SpecialFunction__Group_2_6__0__Impl rule__SpecialFunction__Group_2_6__1 )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2287:2: rule__SpecialFunction__Group_2_6__0__Impl rule__SpecialFunction__Group_2_6__1
-            {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_6__0__Impl_in_rule__SpecialFunction__Group_2_6__04632);
-            rule__SpecialFunction__Group_2_6__0__Impl();
-            _fsp--;
-
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_6__1_in_rule__SpecialFunction__Group_2_6__04635);
-            rule__SpecialFunction__Group_2_6__1();
-            _fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__SpecialFunction__Group_2_6__0
-
-
-    // $ANTLR start rule__SpecialFunction__Group_2_6__0__Impl
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2294:1: rule__SpecialFunction__Group_2_6__0__Impl : ( '${' ) ;
-    public final void rule__SpecialFunction__Group_2_6__0__Impl() throws RecognitionException {
+    // $ANTLR start rule__SpecialFunction__Group_3_5__1
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2250:1: rule__SpecialFunction__Group_3_5__1 : rule__SpecialFunction__Group_3_5__1__Impl rule__SpecialFunction__Group_3_5__2 ;
+    public final void rule__SpecialFunction__Group_3_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2298:1: ( ( '${' ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2299:1: ( '${' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2254:1: ( rule__SpecialFunction__Group_3_5__1__Impl rule__SpecialFunction__Group_3_5__2 )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2255:2: rule__SpecialFunction__Group_3_5__1__Impl rule__SpecialFunction__Group_3_5__2
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2299:1: ( '${' )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2300:1: '${'
-            {
-             before(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftCurlyBracketKeyword_2_6_0()); 
-            match(input,25,FOLLOW_25_in_rule__SpecialFunction__Group_2_6__0__Impl4663); 
-             after(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftCurlyBracketKeyword_2_6_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__SpecialFunction__Group_2_6__0__Impl
-
-
-    // $ANTLR start rule__SpecialFunction__Group_2_6__1
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2313:1: rule__SpecialFunction__Group_2_6__1 : rule__SpecialFunction__Group_2_6__1__Impl rule__SpecialFunction__Group_2_6__2 ;
-    public final void rule__SpecialFunction__Group_2_6__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2317:1: ( rule__SpecialFunction__Group_2_6__1__Impl rule__SpecialFunction__Group_2_6__2 )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2318:2: rule__SpecialFunction__Group_2_6__1__Impl rule__SpecialFunction__Group_2_6__2
-            {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_6__1__Impl_in_rule__SpecialFunction__Group_2_6__14694);
-            rule__SpecialFunction__Group_2_6__1__Impl();
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_3_5__1__Impl_in_rule__SpecialFunction__Group_3_5__14570);
+            rule__SpecialFunction__Group_3_5__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_6__2_in_rule__SpecialFunction__Group_2_6__14697);
-            rule__SpecialFunction__Group_2_6__2();
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_3_5__2_in_rule__SpecialFunction__Group_3_5__14573);
+            rule__SpecialFunction__Group_3_5__2();
             _fsp--;
 
 
@@ -6122,25 +5971,25 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__SpecialFunction__Group_2_6__1
+    // $ANTLR end rule__SpecialFunction__Group_3_5__1
 
 
-    // $ANTLR start rule__SpecialFunction__Group_2_6__1__Impl
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2325:1: rule__SpecialFunction__Group_2_6__1__Impl : ( RULE_ID ) ;
-    public final void rule__SpecialFunction__Group_2_6__1__Impl() throws RecognitionException {
+    // $ANTLR start rule__SpecialFunction__Group_3_5__1__Impl
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2262:1: rule__SpecialFunction__Group_3_5__1__Impl : ( RULE_ID ) ;
+    public final void rule__SpecialFunction__Group_3_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2329:1: ( ( RULE_ID ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2330:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2266:1: ( ( RULE_ID ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2267:1: ( RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2330:1: ( RULE_ID )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2331:1: RULE_ID
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2267:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2268:1: RULE_ID
             {
-             before(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_6_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_2_6__1__Impl4724); 
-             after(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_6_1()); 
+             before(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_3_5_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_3_5__1__Impl4600); 
+             after(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_3_5_1()); 
 
             }
 
@@ -6159,21 +6008,21 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__SpecialFunction__Group_2_6__1__Impl
+    // $ANTLR end rule__SpecialFunction__Group_3_5__1__Impl
 
 
-    // $ANTLR start rule__SpecialFunction__Group_2_6__2
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2342:1: rule__SpecialFunction__Group_2_6__2 : rule__SpecialFunction__Group_2_6__2__Impl ;
-    public final void rule__SpecialFunction__Group_2_6__2() throws RecognitionException {
+    // $ANTLR start rule__SpecialFunction__Group_3_5__2
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2279:1: rule__SpecialFunction__Group_3_5__2 : rule__SpecialFunction__Group_3_5__2__Impl ;
+    public final void rule__SpecialFunction__Group_3_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2346:1: ( rule__SpecialFunction__Group_2_6__2__Impl )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2347:2: rule__SpecialFunction__Group_2_6__2__Impl
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2283:1: ( rule__SpecialFunction__Group_3_5__2__Impl )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2284:2: rule__SpecialFunction__Group_3_5__2__Impl
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_6__2__Impl_in_rule__SpecialFunction__Group_2_6__24753);
-            rule__SpecialFunction__Group_2_6__2__Impl();
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_3_5__2__Impl_in_rule__SpecialFunction__Group_3_5__24629);
+            rule__SpecialFunction__Group_3_5__2__Impl();
             _fsp--;
 
 
@@ -6191,25 +6040,25 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__SpecialFunction__Group_2_6__2
+    // $ANTLR end rule__SpecialFunction__Group_3_5__2
 
 
-    // $ANTLR start rule__SpecialFunction__Group_2_6__2__Impl
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2353:1: rule__SpecialFunction__Group_2_6__2__Impl : ( '}' ) ;
-    public final void rule__SpecialFunction__Group_2_6__2__Impl() throws RecognitionException {
+    // $ANTLR start rule__SpecialFunction__Group_3_5__2__Impl
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2290:1: rule__SpecialFunction__Group_3_5__2__Impl : ( ')' ) ;
+    public final void rule__SpecialFunction__Group_3_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2357:1: ( ( '}' ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2358:1: ( '}' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2294:1: ( ( ')' ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2295:1: ( ')' )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2358:1: ( '}' )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2359:1: '}'
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2295:1: ( ')' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2296:1: ')'
             {
-             before(grammarAccess.getSpecialFunctionAccess().getRightCurlyBracketKeyword_2_6_2()); 
-            match(input,20,FOLLOW_20_in_rule__SpecialFunction__Group_2_6__2__Impl4781); 
-             after(grammarAccess.getSpecialFunctionAccess().getRightCurlyBracketKeyword_2_6_2()); 
+             before(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_3_5_2()); 
+            match(input,11,FOLLOW_11_in_rule__SpecialFunction__Group_3_5__2__Impl4657); 
+             after(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_3_5_2()); 
 
             }
 
@@ -6228,24 +6077,239 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__SpecialFunction__Group_2_6__2__Impl
+    // $ANTLR end rule__SpecialFunction__Group_3_5__2__Impl
+
+
+    // $ANTLR start rule__SpecialFunction__Group_3_6__0
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2315:1: rule__SpecialFunction__Group_3_6__0 : rule__SpecialFunction__Group_3_6__0__Impl rule__SpecialFunction__Group_3_6__1 ;
+    public final void rule__SpecialFunction__Group_3_6__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2319:1: ( rule__SpecialFunction__Group_3_6__0__Impl rule__SpecialFunction__Group_3_6__1 )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2320:2: rule__SpecialFunction__Group_3_6__0__Impl rule__SpecialFunction__Group_3_6__1
+            {
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_3_6__0__Impl_in_rule__SpecialFunction__Group_3_6__04694);
+            rule__SpecialFunction__Group_3_6__0__Impl();
+            _fsp--;
+
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_3_6__1_in_rule__SpecialFunction__Group_3_6__04697);
+            rule__SpecialFunction__Group_3_6__1();
+            _fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__SpecialFunction__Group_3_6__0
+
+
+    // $ANTLR start rule__SpecialFunction__Group_3_6__0__Impl
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2327:1: rule__SpecialFunction__Group_3_6__0__Impl : ( '${' ) ;
+    public final void rule__SpecialFunction__Group_3_6__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2331:1: ( ( '${' ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2332:1: ( '${' )
+            {
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2332:1: ( '${' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2333:1: '${'
+            {
+             before(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftCurlyBracketKeyword_3_6_0()); 
+            match(input,25,FOLLOW_25_in_rule__SpecialFunction__Group_3_6__0__Impl4725); 
+             after(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftCurlyBracketKeyword_3_6_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__SpecialFunction__Group_3_6__0__Impl
+
+
+    // $ANTLR start rule__SpecialFunction__Group_3_6__1
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2346:1: rule__SpecialFunction__Group_3_6__1 : rule__SpecialFunction__Group_3_6__1__Impl rule__SpecialFunction__Group_3_6__2 ;
+    public final void rule__SpecialFunction__Group_3_6__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2350:1: ( rule__SpecialFunction__Group_3_6__1__Impl rule__SpecialFunction__Group_3_6__2 )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2351:2: rule__SpecialFunction__Group_3_6__1__Impl rule__SpecialFunction__Group_3_6__2
+            {
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_3_6__1__Impl_in_rule__SpecialFunction__Group_3_6__14756);
+            rule__SpecialFunction__Group_3_6__1__Impl();
+            _fsp--;
+
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_3_6__2_in_rule__SpecialFunction__Group_3_6__14759);
+            rule__SpecialFunction__Group_3_6__2();
+            _fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__SpecialFunction__Group_3_6__1
+
+
+    // $ANTLR start rule__SpecialFunction__Group_3_6__1__Impl
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2358:1: rule__SpecialFunction__Group_3_6__1__Impl : ( RULE_ID ) ;
+    public final void rule__SpecialFunction__Group_3_6__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2362:1: ( ( RULE_ID ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2363:1: ( RULE_ID )
+            {
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2363:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2364:1: RULE_ID
+            {
+             before(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_3_6_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_3_6__1__Impl4786); 
+             after(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_3_6_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__SpecialFunction__Group_3_6__1__Impl
+
+
+    // $ANTLR start rule__SpecialFunction__Group_3_6__2
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2375:1: rule__SpecialFunction__Group_3_6__2 : rule__SpecialFunction__Group_3_6__2__Impl ;
+    public final void rule__SpecialFunction__Group_3_6__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2379:1: ( rule__SpecialFunction__Group_3_6__2__Impl )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2380:2: rule__SpecialFunction__Group_3_6__2__Impl
+            {
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_3_6__2__Impl_in_rule__SpecialFunction__Group_3_6__24815);
+            rule__SpecialFunction__Group_3_6__2__Impl();
+            _fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__SpecialFunction__Group_3_6__2
+
+
+    // $ANTLR start rule__SpecialFunction__Group_3_6__2__Impl
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2386:1: rule__SpecialFunction__Group_3_6__2__Impl : ( '}' ) ;
+    public final void rule__SpecialFunction__Group_3_6__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2390:1: ( ( '}' ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2391:1: ( '}' )
+            {
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2391:1: ( '}' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2392:1: '}'
+            {
+             before(grammarAccess.getSpecialFunctionAccess().getRightCurlyBracketKeyword_3_6_2()); 
+            match(input,20,FOLLOW_20_in_rule__SpecialFunction__Group_3_6__2__Impl4843); 
+             after(grammarAccess.getSpecialFunctionAccess().getRightCurlyBracketKeyword_3_6_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__SpecialFunction__Group_3_6__2__Impl
 
 
     // $ANTLR start rule__BodyClass__Group__0
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2378:1: rule__BodyClass__Group__0 : rule__BodyClass__Group__0__Impl rule__BodyClass__Group__1 ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2411:1: rule__BodyClass__Group__0 : rule__BodyClass__Group__0__Impl rule__BodyClass__Group__1 ;
     public final void rule__BodyClass__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2382:1: ( rule__BodyClass__Group__0__Impl rule__BodyClass__Group__1 )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2383:2: rule__BodyClass__Group__0__Impl rule__BodyClass__Group__1
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2415:1: ( rule__BodyClass__Group__0__Impl rule__BodyClass__Group__1 )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2416:2: rule__BodyClass__Group__0__Impl rule__BodyClass__Group__1
             {
-            pushFollow(FOLLOW_rule__BodyClass__Group__0__Impl_in_rule__BodyClass__Group__04818);
+            pushFollow(FOLLOW_rule__BodyClass__Group__0__Impl_in_rule__BodyClass__Group__04880);
             rule__BodyClass__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BodyClass__Group__1_in_rule__BodyClass__Group__04821);
+            pushFollow(FOLLOW_rule__BodyClass__Group__1_in_rule__BodyClass__Group__04883);
             rule__BodyClass__Group__1();
             _fsp--;
 
@@ -6268,23 +6332,23 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyClass__Group__0__Impl
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2390:1: rule__BodyClass__Group__0__Impl : ( ( rule__BodyClass__NameAssignment_0 ) ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2423:1: rule__BodyClass__Group__0__Impl : ( ( rule__BodyClass__NameAssignment_0 ) ) ;
     public final void rule__BodyClass__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2394:1: ( ( ( rule__BodyClass__NameAssignment_0 ) ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2395:1: ( ( rule__BodyClass__NameAssignment_0 ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2427:1: ( ( ( rule__BodyClass__NameAssignment_0 ) ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2428:1: ( ( rule__BodyClass__NameAssignment_0 ) )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2395:1: ( ( rule__BodyClass__NameAssignment_0 ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2396:1: ( rule__BodyClass__NameAssignment_0 )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2428:1: ( ( rule__BodyClass__NameAssignment_0 ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2429:1: ( rule__BodyClass__NameAssignment_0 )
             {
              before(grammarAccess.getBodyClassAccess().getNameAssignment_0()); 
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2397:1: ( rule__BodyClass__NameAssignment_0 )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2397:2: rule__BodyClass__NameAssignment_0
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2430:1: ( rule__BodyClass__NameAssignment_0 )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2430:2: rule__BodyClass__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__BodyClass__NameAssignment_0_in_rule__BodyClass__Group__0__Impl4848);
+            pushFollow(FOLLOW_rule__BodyClass__NameAssignment_0_in_rule__BodyClass__Group__0__Impl4910);
             rule__BodyClass__NameAssignment_0();
             _fsp--;
 
@@ -6314,20 +6378,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyClass__Group__1
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2407:1: rule__BodyClass__Group__1 : rule__BodyClass__Group__1__Impl rule__BodyClass__Group__2 ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2440:1: rule__BodyClass__Group__1 : rule__BodyClass__Group__1__Impl rule__BodyClass__Group__2 ;
     public final void rule__BodyClass__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2411:1: ( rule__BodyClass__Group__1__Impl rule__BodyClass__Group__2 )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2412:2: rule__BodyClass__Group__1__Impl rule__BodyClass__Group__2
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2444:1: ( rule__BodyClass__Group__1__Impl rule__BodyClass__Group__2 )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2445:2: rule__BodyClass__Group__1__Impl rule__BodyClass__Group__2
             {
-            pushFollow(FOLLOW_rule__BodyClass__Group__1__Impl_in_rule__BodyClass__Group__14878);
+            pushFollow(FOLLOW_rule__BodyClass__Group__1__Impl_in_rule__BodyClass__Group__14940);
             rule__BodyClass__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BodyClass__Group__2_in_rule__BodyClass__Group__14881);
+            pushFollow(FOLLOW_rule__BodyClass__Group__2_in_rule__BodyClass__Group__14943);
             rule__BodyClass__Group__2();
             _fsp--;
 
@@ -6350,20 +6414,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyClass__Group__1__Impl
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2419:1: rule__BodyClass__Group__1__Impl : ( '::' ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2452:1: rule__BodyClass__Group__1__Impl : ( '::' ) ;
     public final void rule__BodyClass__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2423:1: ( ( '::' ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2424:1: ( '::' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2456:1: ( ( '::' ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2457:1: ( '::' )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2424:1: ( '::' )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2425:1: '::'
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2457:1: ( '::' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2458:1: '::'
             {
              before(grammarAccess.getBodyClassAccess().getColonColonKeyword_1()); 
-            match(input,26,FOLLOW_26_in_rule__BodyClass__Group__1__Impl4909); 
+            match(input,26,FOLLOW_26_in_rule__BodyClass__Group__1__Impl4971); 
              after(grammarAccess.getBodyClassAccess().getColonColonKeyword_1()); 
 
             }
@@ -6387,16 +6451,16 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyClass__Group__2
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2438:1: rule__BodyClass__Group__2 : rule__BodyClass__Group__2__Impl ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2471:1: rule__BodyClass__Group__2 : rule__BodyClass__Group__2__Impl ;
     public final void rule__BodyClass__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2442:1: ( rule__BodyClass__Group__2__Impl )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2443:2: rule__BodyClass__Group__2__Impl
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2475:1: ( rule__BodyClass__Group__2__Impl )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2476:2: rule__BodyClass__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__BodyClass__Group__2__Impl_in_rule__BodyClass__Group__24940);
+            pushFollow(FOLLOW_rule__BodyClass__Group__2__Impl_in_rule__BodyClass__Group__25002);
             rule__BodyClass__Group__2__Impl();
             _fsp--;
 
@@ -6419,20 +6483,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyClass__Group__2__Impl
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2449:1: rule__BodyClass__Group__2__Impl : ( ( rule__BodyClass__PromiseTypeAssignment_2 )* ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2482:1: rule__BodyClass__Group__2__Impl : ( ( rule__BodyClass__PromiseTypeAssignment_2 )* ) ;
     public final void rule__BodyClass__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2453:1: ( ( ( rule__BodyClass__PromiseTypeAssignment_2 )* ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2454:1: ( ( rule__BodyClass__PromiseTypeAssignment_2 )* )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2486:1: ( ( ( rule__BodyClass__PromiseTypeAssignment_2 )* ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2487:1: ( ( rule__BodyClass__PromiseTypeAssignment_2 )* )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2454:1: ( ( rule__BodyClass__PromiseTypeAssignment_2 )* )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2455:1: ( rule__BodyClass__PromiseTypeAssignment_2 )*
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2487:1: ( ( rule__BodyClass__PromiseTypeAssignment_2 )* )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2488:1: ( rule__BodyClass__PromiseTypeAssignment_2 )*
             {
              before(grammarAccess.getBodyClassAccess().getPromiseTypeAssignment_2()); 
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2456:1: ( rule__BodyClass__PromiseTypeAssignment_2 )*
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2489:1: ( rule__BodyClass__PromiseTypeAssignment_2 )*
             loop20:
             do {
                 int alt20=2;
@@ -6451,9 +6515,9 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
                 switch (alt20) {
             	case 1 :
-            	    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2456:2: rule__BodyClass__PromiseTypeAssignment_2
+            	    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2489:2: rule__BodyClass__PromiseTypeAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__BodyClass__PromiseTypeAssignment_2_in_rule__BodyClass__Group__2__Impl4967);
+            	    pushFollow(FOLLOW_rule__BodyClass__PromiseTypeAssignment_2_in_rule__BodyClass__Group__2__Impl5029);
             	    rule__BodyClass__PromiseTypeAssignment_2();
             	    _fsp--;
 
@@ -6489,20 +6553,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__CfModel__ElementsAssignment
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2473:1: rule__CfModel__ElementsAssignment : ( ruleAbstractElement ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2506:1: rule__CfModel__ElementsAssignment : ( ruleAbstractElement ) ;
     public final void rule__CfModel__ElementsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2477:1: ( ( ruleAbstractElement ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2478:1: ( ruleAbstractElement )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2510:1: ( ( ruleAbstractElement ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2511:1: ( ruleAbstractElement )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2478:1: ( ruleAbstractElement )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2479:1: ruleAbstractElement
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2511:1: ( ruleAbstractElement )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2512:1: ruleAbstractElement
             {
              before(grammarAccess.getCfModelAccess().getElementsAbstractElementParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleAbstractElement_in_rule__CfModel__ElementsAssignment5009);
+            pushFollow(FOLLOW_ruleAbstractElement_in_rule__CfModel__ElementsAssignment5071);
             ruleAbstractElement();
             _fsp--;
 
@@ -6529,20 +6593,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Bundle__ComponentAssignment_1
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2488:1: rule__Bundle__ComponentAssignment_1 : ( ruleBundleComponent ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2521:1: rule__Bundle__ComponentAssignment_1 : ( ruleBundleComponent ) ;
     public final void rule__Bundle__ComponentAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2492:1: ( ( ruleBundleComponent ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2493:1: ( ruleBundleComponent )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2525:1: ( ( ruleBundleComponent ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2526:1: ( ruleBundleComponent )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2493:1: ( ruleBundleComponent )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2494:1: ruleBundleComponent
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2526:1: ( ruleBundleComponent )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2527:1: ruleBundleComponent
             {
              before(grammarAccess.getBundleAccess().getComponentBundleComponentParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleBundleComponent_in_rule__Bundle__ComponentAssignment_15040);
+            pushFollow(FOLLOW_ruleBundleComponent_in_rule__Bundle__ComponentAssignment_15102);
             ruleBundleComponent();
             _fsp--;
 
@@ -6569,20 +6633,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Bundle__NameAssignment_2
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2503:1: rule__Bundle__NameAssignment_2 : ( RULE_ID ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2536:1: rule__Bundle__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Bundle__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2507:1: ( ( RULE_ID ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2508:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2540:1: ( ( RULE_ID ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2541:1: ( RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2508:1: ( RULE_ID )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2509:1: RULE_ID
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2541:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2542:1: RULE_ID
             {
              before(grammarAccess.getBundleAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Bundle__NameAssignment_25071); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Bundle__NameAssignment_25133); 
              after(grammarAccess.getBundleAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -6606,20 +6670,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Bundle__PromiseTypeAssignment_5_0
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2518:1: rule__Bundle__PromiseTypeAssignment_5_0 : ( ruleBundlePromiseType ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2551:1: rule__Bundle__PromiseTypeAssignment_5_0 : ( ruleBundlePromiseType ) ;
     public final void rule__Bundle__PromiseTypeAssignment_5_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2522:1: ( ( ruleBundlePromiseType ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2523:1: ( ruleBundlePromiseType )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2555:1: ( ( ruleBundlePromiseType ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2556:1: ( ruleBundlePromiseType )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2523:1: ( ruleBundlePromiseType )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2524:1: ruleBundlePromiseType
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2556:1: ( ruleBundlePromiseType )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2557:1: ruleBundlePromiseType
             {
              before(grammarAccess.getBundleAccess().getPromiseTypeBundlePromiseTypeParserRuleCall_5_0_0()); 
-            pushFollow(FOLLOW_ruleBundlePromiseType_in_rule__Bundle__PromiseTypeAssignment_5_05102);
+            pushFollow(FOLLOW_ruleBundlePromiseType_in_rule__Bundle__PromiseTypeAssignment_5_05164);
             ruleBundlePromiseType();
             _fsp--;
 
@@ -6646,20 +6710,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Body__ComponentAssignment_1
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2533:1: rule__Body__ComponentAssignment_1 : ( ruleBodyComponent ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2566:1: rule__Body__ComponentAssignment_1 : ( ruleBodyComponent ) ;
     public final void rule__Body__ComponentAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2537:1: ( ( ruleBodyComponent ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2538:1: ( ruleBodyComponent )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2570:1: ( ( ruleBodyComponent ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2571:1: ( ruleBodyComponent )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2538:1: ( ruleBodyComponent )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2539:1: ruleBodyComponent
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2571:1: ( ruleBodyComponent )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2572:1: ruleBodyComponent
             {
              before(grammarAccess.getBodyAccess().getComponentBodyComponentParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleBodyComponent_in_rule__Body__ComponentAssignment_15133);
+            pushFollow(FOLLOW_ruleBodyComponent_in_rule__Body__ComponentAssignment_15195);
             ruleBodyComponent();
             _fsp--;
 
@@ -6686,20 +6750,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Body__NameAssignment_2
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2548:1: rule__Body__NameAssignment_2 : ( RULE_ID ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2581:1: rule__Body__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Body__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2552:1: ( ( RULE_ID ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2553:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2585:1: ( ( RULE_ID ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2586:1: ( RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2553:1: ( RULE_ID )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2554:1: RULE_ID
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2586:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2587:1: RULE_ID
             {
              before(grammarAccess.getBodyAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Body__NameAssignment_25164); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Body__NameAssignment_25226); 
              after(grammarAccess.getBodyAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -6723,20 +6787,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Body__VariablesAssignment_3_1
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2563:1: rule__Body__VariablesAssignment_3_1 : ( RULE_ID ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2596:1: rule__Body__VariablesAssignment_3_1 : ( RULE_ID ) ;
     public final void rule__Body__VariablesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2567:1: ( ( RULE_ID ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2568:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2600:1: ( ( RULE_ID ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2601:1: ( RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2568:1: ( RULE_ID )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2569:1: RULE_ID
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2601:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2602:1: RULE_ID
             {
              before(grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_15195); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_15257); 
              after(grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_1_0()); 
 
             }
@@ -6760,20 +6824,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Body__VariablesAssignment_3_2_1
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2578:1: rule__Body__VariablesAssignment_3_2_1 : ( RULE_ID ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2611:1: rule__Body__VariablesAssignment_3_2_1 : ( RULE_ID ) ;
     public final void rule__Body__VariablesAssignment_3_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2582:1: ( ( RULE_ID ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2583:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2615:1: ( ( RULE_ID ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2616:1: ( RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2583:1: ( RULE_ID )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2584:1: RULE_ID
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2616:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2617:1: RULE_ID
             {
              before(grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_2_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_2_15226); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_2_15288); 
              after(grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_2_1_0()); 
 
             }
@@ -6797,20 +6861,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Body__PromiseTypeAssignment_5
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2593:1: rule__Body__PromiseTypeAssignment_5 : ( ruleBodyFunction ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2626:1: rule__Body__PromiseTypeAssignment_5 : ( ruleBodyFunction ) ;
     public final void rule__Body__PromiseTypeAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2597:1: ( ( ruleBodyFunction ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2598:1: ( ruleBodyFunction )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2630:1: ( ( ruleBodyFunction ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2631:1: ( ruleBodyFunction )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2598:1: ( ruleBodyFunction )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2599:1: ruleBodyFunction
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2631:1: ( ruleBodyFunction )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2632:1: ruleBodyFunction
             {
              before(grammarAccess.getBodyAccess().getPromiseTypeBodyFunctionParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleBodyFunction_in_rule__Body__PromiseTypeAssignment_55257);
+            pushFollow(FOLLOW_ruleBodyFunction_in_rule__Body__PromiseTypeAssignment_55319);
             ruleBodyFunction();
             _fsp--;
 
@@ -6837,20 +6901,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__Body__ClassesAssignment_6
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2608:1: rule__Body__ClassesAssignment_6 : ( ruleBodyClass ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2641:1: rule__Body__ClassesAssignment_6 : ( ruleBodyClass ) ;
     public final void rule__Body__ClassesAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2612:1: ( ( ruleBodyClass ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2613:1: ( ruleBodyClass )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2645:1: ( ( ruleBodyClass ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2646:1: ( ruleBodyClass )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2613:1: ( ruleBodyClass )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2614:1: ruleBodyClass
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2646:1: ( ruleBodyClass )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2647:1: ruleBodyClass
             {
              before(grammarAccess.getBodyAccess().getClassesBodyClassParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleBodyClass_in_rule__Body__ClassesAssignment_65288);
+            pushFollow(FOLLOW_ruleBodyClass_in_rule__Body__ClassesAssignment_65350);
             ruleBodyClass();
             _fsp--;
 
@@ -6877,20 +6941,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyFunction__NameAssignment_0
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2623:1: rule__BodyFunction__NameAssignment_0 : ( ruleBodyPromiseType ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2656:1: rule__BodyFunction__NameAssignment_0 : ( ruleBodyPromiseType ) ;
     public final void rule__BodyFunction__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2627:1: ( ( ruleBodyPromiseType ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2628:1: ( ruleBodyPromiseType )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2660:1: ( ( ruleBodyPromiseType ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2661:1: ( ruleBodyPromiseType )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2628:1: ( ruleBodyPromiseType )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2629:1: ruleBodyPromiseType
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2661:1: ( ruleBodyPromiseType )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2662:1: ruleBodyPromiseType
             {
              before(grammarAccess.getBodyFunctionAccess().getNameBodyPromiseTypeParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleBodyPromiseType_in_rule__BodyFunction__NameAssignment_05319);
+            pushFollow(FOLLOW_ruleBodyPromiseType_in_rule__BodyFunction__NameAssignment_05381);
             ruleBodyPromiseType();
             _fsp--;
 
@@ -6917,20 +6981,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyFunction__ValuesAssignment_2_0
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2638:1: rule__BodyFunction__ValuesAssignment_2_0 : ( RULE_STRING ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2671:1: rule__BodyFunction__ValuesAssignment_2_0 : ( RULE_STRING ) ;
     public final void rule__BodyFunction__ValuesAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2642:1: ( ( RULE_STRING ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2643:1: ( RULE_STRING )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2675:1: ( ( RULE_STRING ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2676:1: ( RULE_STRING )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2643:1: ( RULE_STRING )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2644:1: RULE_STRING
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2676:1: ( RULE_STRING )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2677:1: RULE_STRING
             {
              before(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_05350); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_05412); 
              after(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_0_0()); 
 
             }
@@ -6954,24 +7018,24 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyFunction__ListAssignment_2_1_0
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2653:1: rule__BodyFunction__ListAssignment_2_1_0 : ( ( '{' ) ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2686:1: rule__BodyFunction__ListAssignment_2_1_0 : ( ( '{' ) ) ;
     public final void rule__BodyFunction__ListAssignment_2_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2657:1: ( ( ( '{' ) ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2658:1: ( ( '{' ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2690:1: ( ( ( '{' ) ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2691:1: ( ( '{' ) )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2658:1: ( ( '{' ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2659:1: ( '{' )
-            {
-             before(grammarAccess.getBodyFunctionAccess().getListLeftCurlyBracketKeyword_2_1_0_0()); 
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2660:1: ( '{' )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2661:1: '{'
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2691:1: ( ( '{' ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2692:1: ( '{' )
             {
              before(grammarAccess.getBodyFunctionAccess().getListLeftCurlyBracketKeyword_2_1_0_0()); 
-            match(input,19,FOLLOW_19_in_rule__BodyFunction__ListAssignment_2_1_05386); 
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2693:1: ( '{' )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2694:1: '{'
+            {
+             before(grammarAccess.getBodyFunctionAccess().getListLeftCurlyBracketKeyword_2_1_0_0()); 
+            match(input,19,FOLLOW_19_in_rule__BodyFunction__ListAssignment_2_1_05448); 
              after(grammarAccess.getBodyFunctionAccess().getListLeftCurlyBracketKeyword_2_1_0_0()); 
 
             }
@@ -6999,20 +7063,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyFunction__ValuesAssignment_2_1_1
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2676:1: rule__BodyFunction__ValuesAssignment_2_1_1 : ( RULE_STRING ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2709:1: rule__BodyFunction__ValuesAssignment_2_1_1 : ( RULE_STRING ) ;
     public final void rule__BodyFunction__ValuesAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2680:1: ( ( RULE_STRING ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2681:1: ( RULE_STRING )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2713:1: ( ( RULE_STRING ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2714:1: ( RULE_STRING )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2681:1: ( RULE_STRING )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2682:1: RULE_STRING
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2714:1: ( RULE_STRING )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2715:1: RULE_STRING
             {
              before(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_15425); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_15487); 
              after(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_1_0()); 
 
             }
@@ -7036,20 +7100,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyFunction__ValuesAssignment_2_1_2_1
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2691:1: rule__BodyFunction__ValuesAssignment_2_1_2_1 : ( RULE_STRING ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2724:1: rule__BodyFunction__ValuesAssignment_2_1_2_1 : ( RULE_STRING ) ;
     public final void rule__BodyFunction__ValuesAssignment_2_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2695:1: ( ( RULE_STRING ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2696:1: ( RULE_STRING )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2728:1: ( ( RULE_STRING ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2729:1: ( RULE_STRING )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2696:1: ( RULE_STRING )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2697:1: RULE_STRING
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2729:1: ( RULE_STRING )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2730:1: RULE_STRING
             {
              before(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_2_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_2_15456); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_2_15518); 
              after(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_2_1_0()); 
 
             }
@@ -7073,20 +7137,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyFunction__FunctionAssignment_2_2
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2706:1: rule__BodyFunction__FunctionAssignment_2_2 : ( ruleSpecialFunction ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2739:1: rule__BodyFunction__FunctionAssignment_2_2 : ( ruleSpecialFunction ) ;
     public final void rule__BodyFunction__FunctionAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2710:1: ( ( ruleSpecialFunction ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2711:1: ( ruleSpecialFunction )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2743:1: ( ( ruleSpecialFunction ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2744:1: ( ruleSpecialFunction )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2711:1: ( ruleSpecialFunction )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2712:1: ruleSpecialFunction
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2744:1: ( ruleSpecialFunction )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2745:1: ruleSpecialFunction
             {
              before(grammarAccess.getBodyFunctionAccess().getFunctionSpecialFunctionParserRuleCall_2_2_0()); 
-            pushFollow(FOLLOW_ruleSpecialFunction_in_rule__BodyFunction__FunctionAssignment_2_25487);
+            pushFollow(FOLLOW_ruleSpecialFunction_in_rule__BodyFunction__FunctionAssignment_2_25549);
             ruleSpecialFunction();
             _fsp--;
 
@@ -7112,62 +7176,25 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
     // $ANTLR end rule__BodyFunction__FunctionAssignment_2_2
 
 
-    // $ANTLR start rule__SpecialFunction__NameAssignment_0
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2721:1: rule__SpecialFunction__NameAssignment_0 : ( RULE_ID ) ;
-    public final void rule__SpecialFunction__NameAssignment_0() throws RecognitionException {
+    // $ANTLR start rule__SpecialFunction__FuncAssignment_3_7
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2754:1: rule__SpecialFunction__FuncAssignment_3_7 : ( ruleSpecialFunction ) ;
+    public final void rule__SpecialFunction__FuncAssignment_3_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2725:1: ( ( RULE_ID ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2726:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2758:1: ( ( ruleSpecialFunction ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2759:1: ( ruleSpecialFunction )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2726:1: ( RULE_ID )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2727:1: RULE_ID
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2759:1: ( ruleSpecialFunction )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2760:1: ruleSpecialFunction
             {
-             before(grammarAccess.getSpecialFunctionAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__NameAssignment_05518); 
-             after(grammarAccess.getSpecialFunctionAccess().getNameIDTerminalRuleCall_0_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__SpecialFunction__NameAssignment_0
-
-
-    // $ANTLR start rule__SpecialFunction__FuncAssignment_2_7
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2736:1: rule__SpecialFunction__FuncAssignment_2_7 : ( ruleSpecialFunction ) ;
-    public final void rule__SpecialFunction__FuncAssignment_2_7() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2740:1: ( ( ruleSpecialFunction ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2741:1: ( ruleSpecialFunction )
-            {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2741:1: ( ruleSpecialFunction )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2742:1: ruleSpecialFunction
-            {
-             before(grammarAccess.getSpecialFunctionAccess().getFuncSpecialFunctionParserRuleCall_2_7_0()); 
-            pushFollow(FOLLOW_ruleSpecialFunction_in_rule__SpecialFunction__FuncAssignment_2_75549);
+             before(grammarAccess.getSpecialFunctionAccess().getFuncSpecialFunctionParserRuleCall_3_7_0()); 
+            pushFollow(FOLLOW_ruleSpecialFunction_in_rule__SpecialFunction__FuncAssignment_3_75580);
             ruleSpecialFunction();
             _fsp--;
 
-             after(grammarAccess.getSpecialFunctionAccess().getFuncSpecialFunctionParserRuleCall_2_7_0()); 
+             after(grammarAccess.getSpecialFunctionAccess().getFuncSpecialFunctionParserRuleCall_3_7_0()); 
 
             }
 
@@ -7186,24 +7213,24 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end rule__SpecialFunction__FuncAssignment_2_7
+    // $ANTLR end rule__SpecialFunction__FuncAssignment_3_7
 
 
     // $ANTLR start rule__BundlePromiseType__NameAssignment
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2751:1: rule__BundlePromiseType__NameAssignment : ( RULE_ID ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2769:1: rule__BundlePromiseType__NameAssignment : ( RULE_ID ) ;
     public final void rule__BundlePromiseType__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2755:1: ( ( RULE_ID ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2756:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2773:1: ( ( RULE_ID ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2774:1: ( RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2756:1: ( RULE_ID )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2757:1: RULE_ID
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2774:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2775:1: RULE_ID
             {
              before(grammarAccess.getBundlePromiseTypeAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BundlePromiseType__NameAssignment5580); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BundlePromiseType__NameAssignment5611); 
              after(grammarAccess.getBundlePromiseTypeAccess().getNameIDTerminalRuleCall_0()); 
 
             }
@@ -7227,20 +7254,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyPromiseType__NameAssignment
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2766:1: rule__BodyPromiseType__NameAssignment : ( RULE_ID ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2784:1: rule__BodyPromiseType__NameAssignment : ( RULE_ID ) ;
     public final void rule__BodyPromiseType__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2770:1: ( ( RULE_ID ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2771:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2788:1: ( ( RULE_ID ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2789:1: ( RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2771:1: ( RULE_ID )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2772:1: RULE_ID
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2789:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2790:1: RULE_ID
             {
              before(grammarAccess.getBodyPromiseTypeAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BodyPromiseType__NameAssignment5611); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BodyPromiseType__NameAssignment5642); 
              after(grammarAccess.getBodyPromiseTypeAccess().getNameIDTerminalRuleCall_0()); 
 
             }
@@ -7264,20 +7291,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BundleComponent__NameAssignment
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2781:1: rule__BundleComponent__NameAssignment : ( RULE_ID ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2799:1: rule__BundleComponent__NameAssignment : ( RULE_ID ) ;
     public final void rule__BundleComponent__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2785:1: ( ( RULE_ID ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2786:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2803:1: ( ( RULE_ID ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2804:1: ( RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2786:1: ( RULE_ID )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2787:1: RULE_ID
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2804:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2805:1: RULE_ID
             {
              before(grammarAccess.getBundleComponentAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BundleComponent__NameAssignment5642); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BundleComponent__NameAssignment5673); 
              after(grammarAccess.getBundleComponentAccess().getNameIDTerminalRuleCall_0()); 
 
             }
@@ -7301,20 +7328,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyComponent__NameAssignment
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2796:1: rule__BodyComponent__NameAssignment : ( RULE_ID ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2814:1: rule__BodyComponent__NameAssignment : ( RULE_ID ) ;
     public final void rule__BodyComponent__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2800:1: ( ( RULE_ID ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2801:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2818:1: ( ( RULE_ID ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2819:1: ( RULE_ID )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2801:1: ( RULE_ID )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2802:1: RULE_ID
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2819:1: ( RULE_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2820:1: RULE_ID
             {
              before(grammarAccess.getBodyComponentAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BodyComponent__NameAssignment5673); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BodyComponent__NameAssignment5704); 
              after(grammarAccess.getBodyComponentAccess().getNameIDTerminalRuleCall_0()); 
 
             }
@@ -7338,20 +7365,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyClass__NameAssignment_0
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2811:1: rule__BodyClass__NameAssignment_0 : ( ruleCLASS_ID ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2829:1: rule__BodyClass__NameAssignment_0 : ( ruleCLASS_ID ) ;
     public final void rule__BodyClass__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2815:1: ( ( ruleCLASS_ID ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2816:1: ( ruleCLASS_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2833:1: ( ( ruleCLASS_ID ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2834:1: ( ruleCLASS_ID )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2816:1: ( ruleCLASS_ID )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2817:1: ruleCLASS_ID
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2834:1: ( ruleCLASS_ID )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2835:1: ruleCLASS_ID
             {
              before(grammarAccess.getBodyClassAccess().getNameCLASS_IDParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__BodyClass__NameAssignment_05704);
+            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__BodyClass__NameAssignment_05735);
             ruleCLASS_ID();
             _fsp--;
 
@@ -7378,20 +7405,20 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start rule__BodyClass__PromiseTypeAssignment_2
-    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2826:1: rule__BodyClass__PromiseTypeAssignment_2 : ( ruleBodyFunction ) ;
+    // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2844:1: rule__BodyClass__PromiseTypeAssignment_2 : ( ruleBodyFunction ) ;
     public final void rule__BodyClass__PromiseTypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2830:1: ( ( ruleBodyFunction ) )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2831:1: ( ruleBodyFunction )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2848:1: ( ( ruleBodyFunction ) )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2849:1: ( ruleBodyFunction )
             {
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2831:1: ( ruleBodyFunction )
-            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2832:1: ruleBodyFunction
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2849:1: ( ruleBodyFunction )
+            // ../edu.kit.scc.cfeditor.ui/src-gen/edu/kit/scc/cfeditor/ui/contentassist/antlr/internal/InternalCfeditor.g:2850:1: ruleBodyFunction
             {
              before(grammarAccess.getBodyClassAccess().getPromiseTypeBodyFunctionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleBodyFunction_in_rule__BodyClass__PromiseTypeAssignment_25735);
+            pushFollow(FOLLOW_ruleBodyFunction_in_rule__BodyClass__PromiseTypeAssignment_25766);
             ruleBodyFunction();
             _fsp--;
 
@@ -7484,14 +7511,14 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__0_in_rule__BodyFunction__Alternatives_21345 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__BodyFunction__FunctionAssignment_2_2_in_rule__BodyFunction__Alternatives_21363 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__0_in_rule__BodyFunction__Alternatives_21381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_rule__SpecialFunction__Alternatives_21414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__Alternatives_21431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SpecialFunction__Alternatives_21448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__SpecialFunction__Alternatives_21465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__SpecialFunction__Alternatives_21483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__0_in_rule__SpecialFunction__Alternatives_21502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_6__0_in_rule__SpecialFunction__Alternatives_21520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__FuncAssignment_2_7_in_rule__SpecialFunction__Alternatives_21538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_rule__SpecialFunction__Alternatives_31414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__Alternatives_31431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SpecialFunction__Alternatives_31448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__SpecialFunction__Alternatives_31465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__SpecialFunction__Alternatives_31483 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_3_5__0_in_rule__SpecialFunction__Alternatives_31502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_3_6__0_in_rule__SpecialFunction__Alternatives_31520 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__FuncAssignment_3_7_in_rule__SpecialFunction__Alternatives_31538 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Bundle__Group__0__Impl_in_rule__Bundle__Group__01569 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_rule__Bundle__Group__1_in_rule__Bundle__Group__01572 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_18_in_rule__Bundle__Group__0__Impl1600 = new BitSet(new long[]{0x0000000000000002L});
@@ -7608,64 +7635,65 @@ public class InternalCfeditorParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rulePLACEHOLDERB_in_rule__BodyFunction__Group_2_3__2__Impl4098 = new BitSet(new long[]{0x0000000000038C72L});
     public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__3__Impl_in_rule__BodyFunction__Group_2_3__34129 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_20_in_rule__BodyFunction__Group_2_3__3__Impl4157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group__0__Impl_in_rule__SpecialFunction__Group__04196 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__0__Impl_in_rule__SpecialFunction__Group__04196 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_rule__SpecialFunction__Group__1_in_rule__SpecialFunction__Group__04199 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__NameAssignment_0_in_rule__SpecialFunction__Group__0__Impl4226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group__1__Impl_in_rule__SpecialFunction__Group__14256 = new BitSet(new long[]{0x00000000030208F0L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group__2_in_rule__SpecialFunction__Group__14259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_10_in_rule__SpecialFunction__Group__1__Impl4287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group__2__Impl_in_rule__SpecialFunction__Group__24318 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group__3_in_rule__SpecialFunction__Group__24321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Alternatives_2_in_rule__SpecialFunction__Group__2__Impl4348 = new BitSet(new long[]{0x00000000030200F2L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group__3__Impl_in_rule__SpecialFunction__Group__34379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__SpecialFunction__Group__3__Impl4407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__0__Impl_in_rule__SpecialFunction__Group_2_5__04446 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__1_in_rule__SpecialFunction__Group_2_5__04449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__SpecialFunction__Group_2_5__0__Impl4477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__1__Impl_in_rule__SpecialFunction__Group_2_5__14508 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__2_in_rule__SpecialFunction__Group_2_5__14511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_2_5__1__Impl4538 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__2__Impl_in_rule__SpecialFunction__Group_2_5__24567 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__SpecialFunction__Group_2_5__2__Impl4595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_6__0__Impl_in_rule__SpecialFunction__Group_2_6__04632 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_6__1_in_rule__SpecialFunction__Group_2_6__04635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__SpecialFunction__Group_2_6__0__Impl4663 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_6__1__Impl_in_rule__SpecialFunction__Group_2_6__14694 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_6__2_in_rule__SpecialFunction__Group_2_6__14697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_2_6__1__Impl4724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_6__2__Impl_in_rule__SpecialFunction__Group_2_6__24753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__SpecialFunction__Group_2_6__2__Impl4781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyClass__Group__0__Impl_in_rule__BodyClass__Group__04818 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__BodyClass__Group__1_in_rule__BodyClass__Group__04821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyClass__NameAssignment_0_in_rule__BodyClass__Group__0__Impl4848 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyClass__Group__1__Impl_in_rule__BodyClass__Group__14878 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__BodyClass__Group__2_in_rule__BodyClass__Group__14881 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__BodyClass__Group__1__Impl4909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyClass__Group__2__Impl_in_rule__BodyClass__Group__24940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyClass__PromiseTypeAssignment_2_in_rule__BodyClass__Group__2__Impl4967 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleAbstractElement_in_rule__CfModel__ElementsAssignment5009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundleComponent_in_rule__Bundle__ComponentAssignment_15040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Bundle__NameAssignment_25071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundlePromiseType_in_rule__Bundle__PromiseTypeAssignment_5_05102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyComponent_in_rule__Body__ComponentAssignment_15133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Body__NameAssignment_25164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_15195 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_2_15226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyFunction_in_rule__Body__PromiseTypeAssignment_55257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyClass_in_rule__Body__ClassesAssignment_65288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyPromiseType_in_rule__BodyFunction__NameAssignment_05319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_05350 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__BodyFunction__ListAssignment_2_1_05386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_15425 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_2_15456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSpecialFunction_in_rule__BodyFunction__FunctionAssignment_2_25487 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__NameAssignment_05518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSpecialFunction_in_rule__SpecialFunction__FuncAssignment_2_75549 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__BundlePromiseType__NameAssignment5580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__BodyPromiseType__NameAssignment5611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__BundleComponent__NameAssignment5642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__BodyComponent__NameAssignment5673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__BodyClass__NameAssignment_05704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyFunction_in_rule__BodyClass__PromiseTypeAssignment_25735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__1__Impl_in_rule__SpecialFunction__Group__14257 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__2_in_rule__SpecialFunction__Group__14260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__Group__1__Impl4287 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__2__Impl_in_rule__SpecialFunction__Group__24316 = new BitSet(new long[]{0x00000000030208F0L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__3_in_rule__SpecialFunction__Group__24319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_10_in_rule__SpecialFunction__Group__2__Impl4347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__3__Impl_in_rule__SpecialFunction__Group__34378 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__4_in_rule__SpecialFunction__Group__34381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Alternatives_3_in_rule__SpecialFunction__Group__3__Impl4408 = new BitSet(new long[]{0x00000000030200F2L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__4__Impl_in_rule__SpecialFunction__Group__44439 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__SpecialFunction__Group__4__Impl4467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_3_5__0__Impl_in_rule__SpecialFunction__Group_3_5__04508 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_3_5__1_in_rule__SpecialFunction__Group_3_5__04511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__SpecialFunction__Group_3_5__0__Impl4539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_3_5__1__Impl_in_rule__SpecialFunction__Group_3_5__14570 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_3_5__2_in_rule__SpecialFunction__Group_3_5__14573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_3_5__1__Impl4600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_3_5__2__Impl_in_rule__SpecialFunction__Group_3_5__24629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__SpecialFunction__Group_3_5__2__Impl4657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_3_6__0__Impl_in_rule__SpecialFunction__Group_3_6__04694 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_3_6__1_in_rule__SpecialFunction__Group_3_6__04697 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__SpecialFunction__Group_3_6__0__Impl4725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_3_6__1__Impl_in_rule__SpecialFunction__Group_3_6__14756 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_3_6__2_in_rule__SpecialFunction__Group_3_6__14759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_3_6__1__Impl4786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_3_6__2__Impl_in_rule__SpecialFunction__Group_3_6__24815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__SpecialFunction__Group_3_6__2__Impl4843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyClass__Group__0__Impl_in_rule__BodyClass__Group__04880 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__BodyClass__Group__1_in_rule__BodyClass__Group__04883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyClass__NameAssignment_0_in_rule__BodyClass__Group__0__Impl4910 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyClass__Group__1__Impl_in_rule__BodyClass__Group__14940 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__BodyClass__Group__2_in_rule__BodyClass__Group__14943 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__BodyClass__Group__1__Impl4971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyClass__Group__2__Impl_in_rule__BodyClass__Group__25002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyClass__PromiseTypeAssignment_2_in_rule__BodyClass__Group__2__Impl5029 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_ruleAbstractElement_in_rule__CfModel__ElementsAssignment5071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundleComponent_in_rule__Bundle__ComponentAssignment_15102 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Bundle__NameAssignment_25133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundlePromiseType_in_rule__Bundle__PromiseTypeAssignment_5_05164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyComponent_in_rule__Body__ComponentAssignment_15195 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Body__NameAssignment_25226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_15257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_2_15288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyFunction_in_rule__Body__PromiseTypeAssignment_55319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyClass_in_rule__Body__ClassesAssignment_65350 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyPromiseType_in_rule__BodyFunction__NameAssignment_05381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_05412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__BodyFunction__ListAssignment_2_1_05448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_15487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_2_15518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSpecialFunction_in_rule__BodyFunction__FunctionAssignment_2_25549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSpecialFunction_in_rule__SpecialFunction__FuncAssignment_3_75580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__BundlePromiseType__NameAssignment5611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__BodyPromiseType__NameAssignment5642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__BundleComponent__NameAssignment5673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__BodyComponent__NameAssignment5704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__BodyClass__NameAssignment_05735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyFunction_in_rule__BodyClass__PromiseTypeAssignment_25766 = new BitSet(new long[]{0x0000000000000002L});
 
 }

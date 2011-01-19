@@ -53,13 +53,15 @@ Body:
 	(classes+=BodyClass)*
 	'}'; //BodyPromiseType '=>' (values+=STRING | '{' values+=STRING
 //	(',' values+=STRING)* '}') ';'
+
 BodyFunction:
 	name=BodyPromiseType '=>' (values+=STRING | List?='{' values+=STRING
 	(',' values+=STRING)* '}' | function+=SpecialFunction | '{' '@' (PLACEHOLDERB)* '}') ';';
+	
 SpecialFunction:
-	name=ID '(' (ANY_OTHER | ID | STRING | INT | ',' | '$(' ID ')' | '${' ID '}' | func+=SpecialFunction)*
+	{SpecialFunction}ID '(' (ANY_OTHER | ID | STRING | INT | ',' | '$(' ID ')' | '${' ID '}' | func+=SpecialFunction)*
 	/*(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* */
-	')'; //TODO
+	')';
 
 BundlePromiseType:
 	name=ID;

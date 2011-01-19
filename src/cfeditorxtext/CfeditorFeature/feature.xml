@@ -2,7 +2,7 @@
 <feature
       id="edu.kit.scc.cfeditor.feature"
       label="Cfeditor"
-      version="0.1.3.2"
+      version="0.1.3.3"
       provider-name="KIT/SCC">
 
    <description url="http://code.google.com/a/eclipselabs.org/p/cfeditor/">
@@ -113,14 +113,14 @@ This Agreement is governed by the laws of the State of New York and the intellec
          id="edu.kit.scc.cfeditor"
          download-size="0"
          install-size="0"
-         version="0.1.3.2"
+         version="0.1.3.3"
          unpack="false"/>
 
    <plugin
          id="edu.kit.scc.cfeditor.ui"
          download-size="0"
          install-size="0"
-         version="0.1.3.2"
+         version="0.1.3.3"
          unpack="false"/>
 
 </feature>

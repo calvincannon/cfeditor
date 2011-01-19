@@ -33,7 +33,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//BodyFunction/function"/>
     </genClasses>
     <genClasses ecoreClass="Cfeditor.ecore#//SpecialFunction">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfeditor.ecore#//SpecialFunction/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfeditor.ecore#//SpecialFunction/func"/>
     </genClasses>
     <genClasses ecoreClass="Cfeditor.ecore#//BundlePromiseType">
