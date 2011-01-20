@@ -78,7 +78,7 @@ public class ClassViewPart extends ViewPart {
 
 							try {
 								ITextEditor cfEditor = (ITextEditor) IDE.openEditor(PlatformUI.getWorkbench()
-										.getActiveWorkbenchWindow().getActivePage(), uri, "org.eclipse.xtext.Cfeditor",
+										.getActiveWorkbenchWindow().getActivePage(), uri, "edu.kit.scc.cfeditor.cfengine.editor",
 										true);
 								cfEditor.selectAndReveal(functionElement.getOffset(), 0);
 							} catch (PartInitException e) {

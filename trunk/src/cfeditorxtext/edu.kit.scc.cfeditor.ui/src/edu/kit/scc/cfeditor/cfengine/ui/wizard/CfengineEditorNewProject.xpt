@@ -1,4 +1,4 @@
-«IMPORT edu::kit::scc::cfeditor::cfengine::ui::wizard» «REM»refactoring edited 19.01.2011«ENDREM»
+«IMPORT edu::kit::scc::cfeditor::cfengine::ui::wizard» 
 
 «DEFINE main FOR CfengineEditorProjectInfo»
 «EXPAND model FOR this»
