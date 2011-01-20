@@ -11,8 +11,8 @@
               default="true"
               extensions="cf"
               icon="icons/cffile.gif"
-              id="org.eclipse.xtext.Cfeditor"
-              name="Cfeditor Editor">
+              id="edu.kit.scc.cfeditor.cfengine.editor"
+              name="Cfengine Editor">
         </editor>
     </extension>
     <extension
@@ -22,27 +22,27 @@
             commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
             <activeWhen>
                 <reference
-                    definitionId="org.eclipse.xtext.Cfeditor.Editor.opened">
+                    definitionId="edu.kit.scc.cfeditor.cfengine.editor.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
         <handler
             class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
-            commandId="org.eclipse.xtext.Cfeditor.validate">
+            commandId="edu.kit.scc.cfeditor.cfengine.editor.validate">
          <activeWhen>
             <reference
-                    definitionId="org.eclipse.xtext.Cfeditor.Editor.opened">
+                    definitionId="edu.kit.scc.cfeditor.cfengine.editor.Editor.opened">
             </reference>
          </activeWhen>
       </handler>
     </extension>
     <extension point="org.eclipse.core.expressions.definitions">
-        <definition id="org.eclipse.xtext.Cfeditor.Editor.opened">
+        <definition id="edu.kit.scc.cfeditor.cfengine.editor.Editor.opened">
             <and>
                 <reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
                 <with variable="activeEditor">
                     <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="org.eclipse.xtext.Cfeditor" 
+                        value="edu.kit.scc.cfeditor.cfengine.editor" 
                         forcePluginActivation="true"/>
                 </with>        
             </and>
@@ -52,36 +52,38 @@
             point="org.eclipse.ui.preferencePages">
         <page
             class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="org.eclipse.xtext.Cfeditor"
-            name="Cfeditor">
-            <keywordReference id="org.eclipse.xtext.ui.keyword_Cfeditor"/>
+            id="edu.kit.scc.cfeditor.cfengine.ui.page.cfengineeditor"
+            name="Cfengine Editor">
+            <keywordReference
+                  id="edu.kit.scc.cfeditor.cfengine.ui.keyword_cfengine">
+            </keywordReference>
         </page>
         <page
-            category="org.eclipse.xtext.Cfeditor"
+            category="edu.kit.scc.cfeditor.cfengine.ui.page.cfengineeditor"
             class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
-            id="org.eclipse.xtext.Cfeditor.coloring"
+            id="edu.kit.scc.cfeditor.cfengine.ui.page.coloring"
             name="Syntax Coloring">
-            <keywordReference id="org.eclipse.xtext.ui.keyword_Cfeditor"/>
+            <keywordReference id="edu.kit.scc.cfeditor.cfengine.ui.keyword_cfengine"/>
         </page>
         <page
-            category="org.eclipse.xtext.Cfeditor"
+            category="edu.kit.scc.cfeditor.cfengine.ui.page.cfengineeditor"
             class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
-            id="org.eclipse.xtext.Cfeditor.templates"
+            id="edu.kit.scc.cfeditor.cfengine.ui.page.templates"
             name="Templates">
-            <keywordReference id="org.eclipse.xtext.ui.keyword_Cfeditor"/>
+            <keywordReference id="edu.kit.scc.cfeditor.cfengine.ui.keyword_cfengine"/>
         </page>
     </extension>
     <extension
         point="org.eclipse.ui.keywords">
         <keyword
-            id="org.eclipse.xtext.ui.keyword_Cfeditor"
-            label="Cfeditor"/>
+            id="edu.kit.scc.cfeditor.cfengine.ui.keyword_cfengine"
+            label="Cfengine"/>
     </extension>
     <extension
          point="org.eclipse.ui.commands">
       <command
             description="Trigger expensive validation"
-            id="org.eclipse.xtext.Cfeditor.validate"
+            id="edu.kit.scc.cfeditor.cfengine.editor.validate"
             name="Validate">
       </command>
     </extension>
@@ -116,7 +118,7 @@
             commandId="org.eclipse.xtext.ui.editor.FindReferences">
             <activeWhen>
                 <reference
-                    definitionId="org.eclipse.xtext.Cfeditor.Editor.opened">
+                    definitionId="edu.kit.scc.cfeditor.cfengine.editor.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
@@ -149,7 +151,7 @@
 			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
 			<activeWhen>
 				<reference
-					definitionId="org.eclipse.xtext.Cfeditor.Editor.opened">
+					definitionId="edu.kit.scc.cfeditor.cfengine.editor.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -169,7 +171,7 @@
 				style="push"
 				tooltip="Open Quick Outline">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="org.eclipse.xtext.Cfeditor.Editor.opened"/>
+					<reference definitionId="edu.kit.scc.cfeditor.cfengine.editor.Editor.opened"/>
 				</visibleWhen>
 			</command>
 		</menuContribution>
@@ -189,7 +191,7 @@
             class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:edu.kit.scc.cfeditor.cfengine.ui.wizard.NewProjectWizard"
             finalPerspective="cfeditor.perspective"
             icon="icons/Cfeditor.png"
-            id="org.eclipse.xtext.ui.wizard.CfeditorNewProjectWizard"
+            id="edu.kit.scc.cfeditor.cfengine.ui.wizard.CfengineEditorNewProjectWizard"
             name="Cfeditor Project"
             project="true">
       </wizard>
@@ -201,7 +203,7 @@
             category="cfeditor.category.wizards"
             class="edu.kit.scc.cfeditor.cfengine.ui.wizard.NewCfFileWizard"
             icon="icons/cffile.gif"
-            id="org.eclipse.xtext.ui.wizard.NewCfFileWizard"
+            id="edu.kit.scc.cfeditor.cfengine.ui.wizard.NewCfFileWizard"
             name="Cf File"
             project="false">
       </wizard>
@@ -241,7 +243,7 @@
                relative="org.eclipse.ui.editorss">
          </view>
          <view
-               id="edu.kit.scc.cfeditor.ui.views.ClassView"
+               id="edu.kit.scc.cfeditor.cfengine.ui.views.ClassView"
                minimized="false"
                relationship="bottom"
                relative="org.eclipse.ui.views.ContentOutline">
@@ -253,7 +255,7 @@
   point="org.eclipse.ui.navigator.navigatorContent">
  <commonWizard
             type="new"
-            wizardId="org.eclipse.xtext.ui.wizard.NewCfFileWizard">
+            wizardId="edu.kit.scc.cfeditor.cfengine.ui.wizard.NewCfFileWizard">
   <enablement>
    <or>
     <adapt type="org.eclipse.core.resources.IFolder" />
@@ -267,7 +269,7 @@
  </commonWizard>
  <commonWizard
        type="new"
-       wizardId="org.eclipse.xtext.ui.wizard.CfeditorNewProjectWizard">
+       wizardId="edu.kit.scc.cfeditor.cfengine.ui.wizard.CfengineEditorNewProjectWizard">
     <enablement>
        <or>
           <adapt
@@ -299,15 +301,15 @@
 <extension
       point="org.eclipse.ui.views">
    <view
-         category="edu.kit.scc.cfeditor.ui.views.category.cfeditor"
+         category="edu.kit.scc.cfeditor.cfengine.ui.views.category.cfeditor"
          class="edu.kit.scc.cfeditor.cfengine.ui.views.ClassViewPart"
          icon="icons/outline_co.gif"
-         id="edu.kit.scc.cfeditor.ui.views.ClassView"
+         id="edu.kit.scc.cfeditor.cfengine.ui.views.ClassView"
          name="Class View"
          restorable="true">
    </view>
    <category
-         id="edu.kit.scc.cfeditor.ui.views.category.cfeditor"
+         id="edu.kit.scc.cfeditor.cfengine.ui.views.category.cfeditor"
          name="Cfeditor">
    </category>
 </extension>

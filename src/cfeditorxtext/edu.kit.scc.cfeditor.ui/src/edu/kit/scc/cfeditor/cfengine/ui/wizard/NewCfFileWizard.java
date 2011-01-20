@@ -46,7 +46,7 @@ public class NewCfFileWizard extends Wizard implements INewWizard {
 		if (file != null) {
 			final IWorkbenchPage page = workbench.getActiveWorkbenchWindow().getActivePage();
 			try {
-				IDE.openEditor(page, file, "org.eclipse.xtext.Cfeditor");
+				IDE.openEditor(page, file, "edu.kit.scc.cfeditor.cfengine.editor");
 			} catch (PartInitException e) {
 				e.printStackTrace();
 			}
