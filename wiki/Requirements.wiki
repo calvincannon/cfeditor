@@ -3,10 +3,8 @@
 = Releases =
 || Release || Release Date ||
 || r.0.1 || 01.10.2010 ||
-|| r.0.2 || 01.01.2011 ||
-|| r.0.3 || 01.04.2011 ||
-|| r.0.4 || 01.10.2011 ||
-|| r.0.5 || 01.01.2012 ||
+|| r.0.2 || 01.04.2011 ||
+|| r.0.3 || 01.10.2011 ||
 || ... || ... || 
 || r.1.0 || do not defined yet ||
 
@@ -20,9 +18,8 @@
 || r.0.1 || files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf ||✔|| 
 || r.0.2 || classes declarations in grammatic ||✔|| 
 || r.0.2 || classes in outline window  ||✔|| 
-|| r.0.3 || Semantic connection between cf3 promises and cf3 classes ||  || 
-|| r.0.3 || Semantic connections between cf3 classes and hostlabel (ip or name) ||  || 
-|| r.0.3 || Common interface for a) and b) ||  || 
+|| r.0.2 || Semantic connection between cf3 promises and cf3 classes ||  || 
+|| r.0.2 || Semantic connections between cf3 classes and hostlabel (ip or name) ||  || 
 || r.0.3 || Templates for Services ||  || 
 || r.0.3 || Semantic-based CMDB promises templates ||  || 
 || ... || ... || ... || 
