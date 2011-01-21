@@ -18,6 +18,8 @@
 || r.0.1 || files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf ||✔|| 
 || r.0.2 || classes declarations in grammatic ||✔|| 
 || r.0.2 || classes in outline window  ||✔|| 
+|| r.0.2 || Code refactoring: interfaces for different projects types  || || 
+|| r.0.2 || Templates for different project types  || || 
 || r.0.3 || Templates for Services ||  || 
 || r.0.3 || Semantic-based CMDB promises templates ||  || 
 || ... || ... || ... || 
