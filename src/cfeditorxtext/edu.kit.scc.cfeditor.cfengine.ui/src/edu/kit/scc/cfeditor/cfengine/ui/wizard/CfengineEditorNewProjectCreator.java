@@ -21,7 +21,7 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 
 /**
- * Project creator for new Cfeditor projects. Defines all settings for the
+ * Project creator for new CfengineEditor projects. Defines all settings for the
  * project.
  * 
  * @author Andreas Bender
@@ -105,7 +105,7 @@ public class CfengineEditorNewProjectCreator extends AbstractProjectCreator {
 		execCtx.registerMetaModel(new JavaBeansMetaModel());
 
 		XpandFacade facade = XpandFacade.create(execCtx);
-		facade.evaluate("edu::kit::scc::cfeditor::cfengine::ui::wizard::CfengineEditorNewProject::main", getProjectInfo()); //refactoring edited 19.01.2011
+		facade.evaluate("edu::kit::scc::cfeditor::cfengine::ui::wizard::CfengineEditorNewProject::main", getProjectInfo());
 
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}

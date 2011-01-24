@@ -165,7 +165,7 @@ public final class CfDefinitionProvider {
 						"BundleTypes")));
 				while ((currentLine = bufferedReader.readLine()) != null) {
 					values = currentLine.split("#", 2);
-					if (values.length == 2) { // TODO components without defined promise types are ignored
+					if (values.length == 2) { // components without defined promise types are ignored
 						if (bundleTypes.containsKey(values[0])) {
 							bundleTypes.get(values[0]).add(values[1]);
 						} else {

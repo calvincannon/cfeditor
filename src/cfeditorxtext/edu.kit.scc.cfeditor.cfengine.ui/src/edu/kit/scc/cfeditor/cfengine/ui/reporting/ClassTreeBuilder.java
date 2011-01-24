@@ -35,7 +35,7 @@ public class ClassTreeBuilder {
 		FileHandler fileHandler = new FileHandler();
 		LinkedList<String> uriList = fileHandler.getFileURIs(activeProject, "cf");
 
-		CfModelHandler cfModelHandler = new CfModelHandler();
+		CfengineEditorModelHandler cfModelHandler = new CfengineEditorModelHandler();
 
 		CompositeNode node;
 		for (Entry<String, HashMap<String, EObject>> classList : cfModelHandler.getSortedBodyClasses(uriList)

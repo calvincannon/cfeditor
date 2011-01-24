@@ -4,9 +4,9 @@ import org.eclipse.emf.mwe.utils.*
 import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
-var grammarURI = "classpath:/edu/kit/scc/cfeditor/cfengine/CfengineEditor.xtext" //refactoring edited 19.01.2011
+var grammarURI = "classpath:/edu/kit/scc/cfeditor/cfengine/CfengineEditor.xtext"
 var file.extensions = "cf"
-var projectName = "edu.kit.scc.cfeditor.cfengine" //refactoring edited 19.01.2011
+var projectName = "edu.kit.scc.cfeditor.cfengine"
 var runtimeProject = "../${projectName}"
 
 Workflow {

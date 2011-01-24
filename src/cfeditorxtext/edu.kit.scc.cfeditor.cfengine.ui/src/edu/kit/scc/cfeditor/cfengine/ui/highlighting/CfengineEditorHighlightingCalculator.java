@@ -2,9 +2,6 @@ package edu.kit.scc.cfeditor.cfengine.ui.highlighting;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.parsetree.AbstractNode;
-import org.eclipse.xtext.parsetree.CompositeNode;
-import org.eclipse.xtext.parsetree.LeafNode;
-import org.eclipse.xtext.parsetree.NodeAdapter;
 import org.eclipse.xtext.parsetree.NodeUtil;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightedPositionAcceptor;
@@ -53,30 +50,30 @@ public class CfengineEditorHighlightingCalculator implements ISemanticHighlighti
 		}
 	}
 
-	/**
-	 * Returns the node of the first feature of an EObject. TODO is currently not used
-	 * 
-	 * @param semantic
-	 * @param feature
-	 * @return the feature node
-	 */
-	public LeafNode getFirstFeatureNode(final EObject semantic, final String feature) {
-		final NodeAdapter adapter = NodeUtil.getNodeAdapter(semantic);
-		if (adapter != null) {
-			final CompositeNode node = adapter.getParserNode();
-			if (node != null) {
-				if (feature == null) {
-					return null;
-				}
-				for (AbstractNode child : node.getChildren()) {
-					if (child instanceof LeafNode) {
-						if (feature.equals(((LeafNode) child).getFeature())) {
-							return (LeafNode) child;
-						}
-					}
-				}
-			}
-		}
-		return null;
-	}
+//	/**
+//	 * Returns the node of the first feature of an EObject. 
+//	 * 
+//	 * @param semantic
+//	 * @param feature
+//	 * @return the feature node
+//	 */
+//	public LeafNode getFirstFeatureNode(final EObject semantic, final String feature) {
+//		final NodeAdapter adapter = NodeUtil.getNodeAdapter(semantic);
+//		if (adapter != null) {
+//			final CompositeNode node = adapter.getParserNode();
+//			if (node != null) {
+//				if (feature == null) {
+//					return null;
+//				}
+//				for (AbstractNode child : node.getChildren()) {
+//					if (child instanceof LeafNode) {
+//						if (feature.equals(((LeafNode) child).getFeature())) {
+//							return (LeafNode) child;
+//						}
+//					}
+//				}
+//			}
+//		}
+//		return null;
+//	}
 }

@@ -17,7 +17,7 @@ import edu.kit.scc.cfeditor.cfengine.cfengine.Body;
 import edu.kit.scc.cfeditor.cfengine.cfengine.BodyFunction;
 import edu.kit.scc.cfeditor.cfengine.cfengine.Bundle;
 import edu.kit.scc.cfeditor.cfengine.definitions.CfDefinitionProvider;
-import edu.kit.scc.cfeditor.cfengine.validation.CfFunctionType;
+import edu.kit.scc.cfeditor.cfengine.validation.CfengineEditorFunctionType;
 
 /**
  * Customized content assistant.
@@ -133,9 +133,9 @@ public class CfengineEditorProposalProvider extends AbstractCfengineEditorPropos
 				String functionType = functionAttributes[0];
 				String typeRange = functionAttributes[1];
 
-				CfFunctionType typeEnum = CfFunctionType.valueOf(functionType);
+				CfengineEditorFunctionType typeEnum = CfengineEditorFunctionType.valueOf(functionType);
 
-				if (typeEnum.equals(CfFunctionType.OPTION)) {
+				if (typeEnum.equals(CfengineEditorFunctionType.OPTION)) {
 
 					ICompletionProposal completionProposal;
 					String[] options = typeRange.split(",");
@@ -165,10 +165,10 @@ public class CfengineEditorProposalProvider extends AbstractCfengineEditorPropos
 		CompositeNode node = NodeUtil.getNode(model);
 		EObject eObj = NodeUtil.findASTParentElement(node);
 
-		Body body = (Body) eObj; // FIXME surround with try/catch
-									// ClassCastException or if(instanceof)?
-
-		completeBody_PromiseType(body, assignment, context, acceptor);
+		if (eObj instanceof Body) {
+			Body body = (Body) eObj;
+			completeBody_PromiseType(body, assignment, context, acceptor);
+		}
 	}
 
 	private void createProposalAndAcceptList(List<String> wordList, ContentAssistContext context,

@@ -24,7 +24,7 @@ import org.eclipse.xtext.ui.wizard.XtextNewProjectWizard;
 import com.google.inject.Inject;
 
 /**
- * Wizard for a new Cfeditor project.
+ * Wizard for a new CfengineEditor project.
  * 
  * @author Andreas Bender
  *
@@ -58,11 +58,11 @@ public class NewProjectWizard extends Wizard implements INewWizard, IExecutableE
 	public NewProjectWizard(IProjectCreator creator) {
 		this.creator = creator;
 		setNeedsProgressMonitor(true);
-		setWindowTitle("New Cfeditor Project");
+		setWindowTitle("New Cfengine Project");
 	}
 
 	/**
-	 * Creates the project and updates the perspective (sets current perspective to Cfeditor perspective).
+	 * Creates the project and updates the perspective (sets current perspective to CfengineEditor perspective).
 	 */
 	@Override
 	public boolean performFinish() {
@@ -151,10 +151,10 @@ public class NewProjectWizard extends Wizard implements INewWizard, IExecutableE
 	 * version of this class will add a default new project page to the wizard.
 	 */
 	public void addPages() {
-		mainPage = new WizardNewProjectCreationPage("Cfeditor Project Wizard");
-		mainPage.setTitle("Create a Cfeditor Project");
+		mainPage = new WizardNewProjectCreationPage("Cfengine Project Wizard");
+		mainPage.setTitle("Create a Cfengine Project");
 		mainPage.setDescription("Enter a project name.");
-		mainPage.setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("edu.kit.scc.cfeditor.cfengine.ui", "icons/CfeditorWizard.png")); //refactoring edited 19.01.2011
+		mainPage.setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("edu.kit.scc.cfeditor.cfengine.ui", "icons/CfeditorWizard.png"));
 		addPage(mainPage);
 	}
 

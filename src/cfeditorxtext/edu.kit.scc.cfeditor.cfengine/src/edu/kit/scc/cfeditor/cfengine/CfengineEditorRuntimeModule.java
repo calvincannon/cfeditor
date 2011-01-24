@@ -3,7 +3,7 @@
  */
 package edu.kit.scc.cfeditor.cfengine;
 
-import edu.kit.scc.cfeditor.cfengine.parser.conversion.CfTerminalConverters;
+import edu.kit.scc.cfeditor.cfengine.parser.conversion.CfengineEditorTerminalConverters;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -18,7 +18,7 @@ public class CfengineEditorRuntimeModule extends AbstractCfengineEditorRuntimeMo
 	 */
 	@Override
 	public Class<? extends org.eclipse.xtext.conversion.IValueConverterService> bindIValueConverterService() {
-		return CfTerminalConverters.class;
+		return CfengineEditorTerminalConverters.class;
 	}
 
 }

@@ -46,5 +46,12 @@
     </enablement>
  </commonWizard>
 </extension>
+    <extension
+          point="org.eclipse.ui.views">
+       <category
+             id="edu.kit.scc.cfeditor.ui.views.category.cfeditor"
+             name="Cfeditor">
+       </category>
+    </extension>
 
 </plugin>
