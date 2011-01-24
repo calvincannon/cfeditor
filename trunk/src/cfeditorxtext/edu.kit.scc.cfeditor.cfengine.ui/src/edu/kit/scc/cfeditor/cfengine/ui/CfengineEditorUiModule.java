@@ -47,7 +47,7 @@ public class CfengineEditorUiModule extends AbstractCfengineEditorUiModule {
 	}
 
 	/**
-	 * Declares the new Cfeditor project creator class.
+	 * Declares the new CfengineEditor project creator class.
 	 */
 	@Override
 	public Class<? extends IProjectCreator> bindIProjectCreator() {

@@ -91,12 +91,12 @@
         <menuContribution
             locationURI="popup:#TextEditorContext?after=group.edit">
              <command
-                 commandId="org.eclipse.xtext.Cfeditor.validate"
+                 commandId="edu.kit.scc.cfeditor.cfengine.editor.validate"
                  style="push"
                  tooltip="Trigger expensive validation">
             <visibleWhen checkEnabled="false">
                 <reference
-                    definitionId="org.eclipse.xtext.Cfeditor.Editor.opened">
+                    definitionId="edu.kit.scc.cfeditor.cfengine.editor.Editor.opened">
                 </reference>
             </visibleWhen>
          </command>  
@@ -106,7 +106,7 @@
 		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
 			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
 				<visibleWhen checkEnabled="false">
-                	<reference definitionId="org.eclipse.xtext.Cfeditor.Editor.opened">
+                	<reference definitionId="edu.kit.scc.cfeditor.cfengine.editor.Editor.opened">
                 	</reference>
             	</visibleWhen>
 			</command>
@@ -187,20 +187,16 @@
    <extension
          point="org.eclipse.ui.newWizards">
       <wizard
-            category="cfeditor.category.wizards"
+            category="edu.kit.scc.cfeditor.ui.wizard.category.cfeditor"
             class="edu.kit.scc.cfeditor.cfengine.ui.CfengineEditorExecutableExtensionFactory:edu.kit.scc.cfeditor.cfengine.ui.wizard.NewProjectWizard"
-            finalPerspective="cfeditor.perspective"
+            finalPerspective="edu.kit.scc.cfeditor.cfengine.ui.perspectives.cfengine"
             icon="icons/Cfeditor.png"
             id="edu.kit.scc.cfeditor.cfengine.ui.wizard.CfengineEditorNewProjectWizard"
-            name="Cfeditor Project"
+            name="Cfengine Project"
             project="true">
       </wizard>
-      <category
-            id="cfeditor.category.wizards"
-            name="Cfeditor">
-      </category>
       <wizard
-            category="cfeditor.category.wizards"
+            category="edu.kit.scc.cfeditor.ui.wizard.category.cfeditor"
             class="edu.kit.scc.cfeditor.cfengine.ui.wizard.NewCfFileWizard"
             icon="icons/cffile.gif"
             id="edu.kit.scc.cfeditor.cfengine.ui.wizard.NewCfFileWizard"
@@ -211,16 +207,16 @@
    <extension
          point="org.eclipse.ui.perspectives">
       <perspective
-            class="edu.kit.scc.cfeditor.cfengine.ui.perspectives.CfPerspective"
+            class="edu.kit.scc.cfeditor.cfengine.ui.perspectives.CfengineEditorPerspective"
             icon="icons/Cfeditor.png"
-            id="cfeditor.perspective"
-            name="Cfeditor">
+            id="edu.kit.scc.cfeditor.cfengine.ui.perspectives.cfengine"
+            name="Cfengine">
       </perspective>
    </extension>
    <extension
          point="org.eclipse.ui.perspectiveExtensions">
       <perspectiveExtension
-            targetID="cfeditor.perspective">
+            targetID="edu.kit.scc.cfeditor.cfengine.ui.perspectives.cfengine">
          <view
                id="org.eclipse.ui.navigator.ProjectExplorer"
                minimized="false"
@@ -289,29 +285,16 @@
  </commonWizard>
 </extension>
 
-<extension point="org.eclipse.ui.intro.configExtension">
-    <configExtension
-         configId="org.eclipse.ui.intro.universalConfig" 
-         content="intro/overview.xml"/>  
-
-
-
-
-</extension>
 <extension
       point="org.eclipse.ui.views">
    <view
-         category="edu.kit.scc.cfeditor.cfengine.ui.views.category.cfeditor"
+         category="edu.kit.scc.cfeditor.ui.views.category.cfeditor"
          class="edu.kit.scc.cfeditor.cfengine.ui.views.ClassViewPart"
          icon="icons/outline_co.gif"
          id="edu.kit.scc.cfeditor.cfengine.ui.views.ClassView"
          name="Class View"
          restorable="true">
    </view>
-   <category
-         id="edu.kit.scc.cfeditor.cfengine.ui.views.category.cfeditor"
-         name="Cfeditor">
-   </category>
 </extension>
    
 

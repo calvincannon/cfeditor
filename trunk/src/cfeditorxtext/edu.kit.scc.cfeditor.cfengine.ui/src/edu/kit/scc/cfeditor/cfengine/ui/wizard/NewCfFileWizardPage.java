@@ -27,7 +27,7 @@ public class NewCfFileWizardPage extends WizardNewFileCreationPage {
 		setTitle("Cf File");
 		setDescription("Create a new Cf File");
 		setFileExtension("cf");
-		setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("edu.kit.scc.cfeditor.cfengine.ui", "icons/CfeditorWizard.png"));//refactoring edited 19.01.2011
+		setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("edu.kit.scc.cfeditor.cfengine.ui", "icons/CfeditorWizard.png"));
 	}
 
 	/**

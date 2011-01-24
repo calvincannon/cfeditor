@@ -27,7 +27,7 @@ import edu.kit.scc.cfeditor.cfengine.definitions.CfDefinitionProvider;
  */
 public class CfengineEditorJavaValidator extends AbstractCfengineEditorJavaValidator {
 
-	private CfFunctionValidator functionValidator;
+	private CfengineEditorFunctionValidator functionValidator;
 
 	/**
 	 * Checks if promise type in bundle block is allowed with bundle component.
@@ -90,7 +90,7 @@ public class CfengineEditorJavaValidator extends AbstractCfengineEditorJavaValid
 	public void checkBodyFunctionValues(BodyFunction function) {
 		String name = function.getName().getName();
 		EList<String> values = function.getValues();
-		functionValidator = new CfFunctionValidator();
+		functionValidator = new CfengineEditorFunctionValidator();
 		Boolean isList = function.isList();
 		EList<String> variables = null;
 

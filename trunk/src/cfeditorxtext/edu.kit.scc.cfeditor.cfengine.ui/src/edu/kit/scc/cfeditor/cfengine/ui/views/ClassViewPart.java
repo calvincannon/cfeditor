@@ -78,8 +78,8 @@ public class ClassViewPart extends ViewPart {
 
 							try {
 								ITextEditor cfEditor = (ITextEditor) IDE.openEditor(PlatformUI.getWorkbench()
-										.getActiveWorkbenchWindow().getActivePage(), uri, "edu.kit.scc.cfeditor.cfengine.editor",
-										true);
+										.getActiveWorkbenchWindow().getActivePage(), uri,
+										"edu.kit.scc.cfeditor.cfengine.editor", true);
 								cfEditor.selectAndReveal(functionElement.getOffset(), 0);
 							} catch (PartInitException e) {
 								// ignore
@@ -111,6 +111,27 @@ public class ClassViewPart extends ViewPart {
 	public void init(final IViewSite site) throws PartInitException {
 		super.init(site);
 
+		propertyListener = new IPropertyListener() {
+			/**
+			 * Checks if active editor input has been saved and refreshes view
+			 * if necessary.
+			 */
+			public void propertyChanged(Object source, int propId) {
+				if (propId == IEditorPart.PROP_DIRTY) {
+					IEditorPart editorPart = null;
+					try {
+						editorPart = site.getWorkbenchWindow().getActivePage().getActiveEditor();
+
+						if (editorPart != null) {
+							refreshView(editorPart, true);
+						}
+					} catch (NullPointerException e) {
+						// ignore
+					}
+				}
+			}
+		};
+
 		partListener = new IPartListener2() {
 			public void partVisible(IWorkbenchPartReference partRef) {
 			}
@@ -140,37 +161,18 @@ public class ClassViewPart extends ViewPart {
 				IEditorPart editorPart = null;
 				try {
 					editorPart = partRef.getPage().getActiveEditor();
+
+					if (editorPart != null) {
+						editorPart.addPropertyListener(propertyListener);// TODO !
+
+						refreshView(editorPart, false);
+					}
 				} catch (NullPointerException e) {
 					// ignore
-				}
-				if (editorPart != null) {
-					editorPart.addPropertyListener(propertyListener);// TODO !
-
-					refreshView(editorPart, false);
 				}
 			}
 		};
 		site.getWorkbenchWindow().getPartService().addPartListener(partListener);
-
-		propertyListener = new IPropertyListener() {
-			/**
-			 * Checks if active editor input has been saved and refreshes view if necessary.
-			 */
-			public void propertyChanged(Object source, int propId) {
-				if (propId == IEditorPart.PROP_DIRTY) {
-					IEditorPart editorPart = null;
-					try {
-						editorPart = site.getWorkbenchWindow().getActivePage().getActiveEditor();
-
-						if (editorPart != null) {
-							refreshView(editorPart, true);
-						}
-					} catch (NullPointerException e) {
-						// ignore
-					}
-				}
-			}
-		};
 	}
 
 	/**
@@ -182,7 +184,8 @@ public class ClassViewPart extends ViewPart {
 	}
 
 	/**
-	 * Refreshes the body class tree if active project has changed or forceRefresh flag is true.
+	 * Refreshes the body class tree if active project has changed or
+	 * forceRefresh flag is true.
 	 */
 	private void refreshView(IEditorPart editorPart, boolean forceRefresh) {
 		IProject oldActiveProject = activeProject;
