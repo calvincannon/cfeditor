@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Cfeditor Cfengine extension core
+Bundle-Name: Cfeditor Cfengine Extension Core
 Bundle-Version: 0.1.4
 Bundle-SymbolicName: edu.kit.scc.cfeditor.cfengine;singleton:=true
 Bundle-ActivationPolicy: lazy
