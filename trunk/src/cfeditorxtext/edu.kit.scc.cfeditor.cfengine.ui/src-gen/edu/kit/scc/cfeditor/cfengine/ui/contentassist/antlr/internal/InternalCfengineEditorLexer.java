@@ -14,9 +14,8 @@ import java.util.ArrayList;
 public class InternalCfengineEditorLexer extends Lexer {
     public static final int RULE_ID=4;
     public static final int RULE_ANY_OTHER=5;
-    public static final int T26=26;
     public static final int T25=25;
-    public static final int Tokens=27;
+    public static final int Tokens=26;
     public static final int T24=24;
     public static final int EOF=-1;
     public static final int RULE_SL_COMMENT=8;
@@ -47,10 +46,11 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT10() throws RecognitionException {
         try {
             int _type = T10;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:10:5: ( '(' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:10:7: '('
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:10:5: ( '=>' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:10:7: '=>'
             {
-            match('('); 
+            match("=>"); 
+
 
             }
 
@@ -65,10 +65,10 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT11() throws RecognitionException {
         try {
             int _type = T11;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:11:5: ( ')' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:11:7: ')'
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:11:5: ( ';' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:11:7: ';'
             {
-            match(')'); 
+            match(';'); 
 
             }
 
@@ -83,10 +83,10 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT12() throws RecognitionException {
         try {
             int _type = T12;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:12:5: ( '|' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:12:7: '|'
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:12:5: ( ',' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:12:7: ','
             {
-            match('|'); 
+            match(','); 
 
             }
 
@@ -101,10 +101,10 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT13() throws RecognitionException {
         try {
             int _type = T13;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:13:5: ( '!' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:13:7: '!'
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:13:5: ( '(' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:13:7: '('
             {
-            match('!'); 
+            match('('); 
 
             }
 
@@ -119,10 +119,10 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT14() throws RecognitionException {
         try {
             int _type = T14;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:14:5: ( '.' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:14:7: '.'
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:14:5: ( ')' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:14:7: ')'
             {
-            match('.'); 
+            match(')'); 
 
             }
 
@@ -137,11 +137,10 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT15() throws RecognitionException {
         try {
             int _type = T15;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:15:5: ( '=>' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:15:7: '=>'
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:15:5: ( '.' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:15:7: '.'
             {
-            match("=>"); 
-
+            match('.'); 
 
             }
 
@@ -156,10 +155,10 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT16() throws RecognitionException {
         try {
             int _type = T16;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:16:5: ( ';' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:16:7: ';'
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:16:5: ( '!' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:16:7: '!'
             {
-            match(';'); 
+            match('!'); 
 
             }
 
@@ -174,10 +173,11 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT17() throws RecognitionException {
         try {
             int _type = T17;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:17:5: ( ',' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:17:7: ','
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:17:5: ( 'bundle' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:17:7: 'bundle'
             {
-            match(','); 
+            match("bundle"); 
+
 
             }
 
@@ -192,11 +192,10 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT18() throws RecognitionException {
         try {
             int _type = T18;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:18:5: ( 'bundle' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:18:7: 'bundle'
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:18:5: ( '{' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:18:7: '{'
             {
-            match("bundle"); 
-
+            match('{'); 
 
             }
 
@@ -211,10 +210,10 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT19() throws RecognitionException {
         try {
             int _type = T19;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:19:5: ( '{' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:19:7: '{'
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:19:5: ( '}' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:19:7: '}'
             {
-            match('{'); 
+            match('}'); 
 
             }
 
@@ -229,10 +228,10 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT20() throws RecognitionException {
         try {
             int _type = T20;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:20:5: ( '}' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:20:7: '}'
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:20:5: ( ':' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:20:7: ':'
             {
-            match('}'); 
+            match(':'); 
 
             }
 
@@ -247,10 +246,11 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT21() throws RecognitionException {
         try {
             int _type = T21;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:21:5: ( ':' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:21:7: ':'
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:21:5: ( '::' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:21:7: '::'
             {
-            match(':'); 
+            match("::"); 
+
 
             }
 
@@ -265,10 +265,11 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT22() throws RecognitionException {
         try {
             int _type = T22;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:22:5: ( '@' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:22:7: '@'
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:22:5: ( 'body' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:22:7: 'body'
             {
-            match('@'); 
+            match("body"); 
+
 
             }
 
@@ -283,11 +284,10 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mT23() throws RecognitionException {
         try {
             int _type = T23;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:23:5: ( 'body' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:23:7: 'body'
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:23:5: ( '@' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:23:7: '@'
             {
-            match("body"); 
-
+            match('@'); 
 
             }
 
@@ -336,31 +336,12 @@ public class InternalCfengineEditorLexer extends Lexer {
     }
     // $ANTLR end T25
 
-    // $ANTLR start T26
-    public final void mT26() throws RecognitionException {
-        try {
-            int _type = T26;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:26:5: ( '::' )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:26:7: '::'
-            {
-            match("::"); 
-
-
-            }
-
-            this.type = _type;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end T26
-
     // $ANTLR start RULE_ID
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2860:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2860:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4288:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4288:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -372,7 +353,7 @@ public class InternalCfengineEditorLexer extends Lexer {
                 recover(mse);    throw mse;
             }
 
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2860:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4288:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
@@ -420,10 +401,10 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2862:10: ( ( '0' .. '9' )+ )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2862:12: ( '0' .. '9' )+
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4290:10: ( ( '0' .. '9' )+ )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4290:12: ( '0' .. '9' )+
             {
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2862:12: ( '0' .. '9' )+
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4290:12: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -437,7 +418,7 @@ public class InternalCfengineEditorLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2862:13: '0' .. '9'
+            	    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4290:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -467,10 +448,10 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mRULE_STRING() throws RecognitionException {
         try {
             int _type = RULE_STRING;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2864:13: ( ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' ) )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2864:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4292:13: ( ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' ) )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4292:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )
             {
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2864:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4292:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -482,16 +463,16 @@ public class InternalCfengineEditorLexer extends Lexer {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("2864:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )", 5, 0, input);
+                    new NoViableAltException("4292:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )", 5, 0, input);
 
                 throw nvae;
             }
             switch (alt5) {
                 case 1 :
-                    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2864:16: '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"'
+                    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4292:16: '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"'
                     {
                     match('\"'); 
-                    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2864:20: (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )*
+                    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4292:20: (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )*
                     loop3:
                     do {
                         int alt3=3;
@@ -507,7 +488,7 @@ public class InternalCfengineEditorLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2864:21: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4292:21: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -523,7 +504,7 @@ public class InternalCfengineEditorLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2864:35: '\\\\' .
+                    	    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4292:35: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -541,10 +522,10 @@ public class InternalCfengineEditorLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2864:48: '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\''
+                    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4292:48: '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\''
                     {
                     match('\''); 
-                    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2864:53: (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )*
+                    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4292:53: (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )*
                     loop4:
                     do {
                         int alt4=3;
@@ -560,7 +541,7 @@ public class InternalCfengineEditorLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2864:54: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4292:54: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFE') ) {
                     	        input.consume();
@@ -576,7 +557,7 @@ public class InternalCfengineEditorLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2864:69: '\\\\' .
+                    	    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4292:69: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -610,11 +591,11 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mRULE_SL_COMMENT() throws RecognitionException {
         try {
             int _type = RULE_SL_COMMENT;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2866:17: ( '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2866:19: '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4294:17: ( '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4294:19: '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match('#'); 
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2866:23: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4294:23: (~ ( ( '\\n' | '\\r' ) ) )*
             loop6:
             do {
                 int alt6=2;
@@ -627,7 +608,7 @@ public class InternalCfengineEditorLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2866:23: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4294:23: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFE') ) {
             	        input.consume();
@@ -648,7 +629,7 @@ public class InternalCfengineEditorLexer extends Lexer {
                 }
             } while (true);
 
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2866:39: ( ( '\\r' )? '\\n' )?
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4294:39: ( ( '\\r' )? '\\n' )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -657,9 +638,9 @@ public class InternalCfengineEditorLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2866:40: ( '\\r' )? '\\n'
+                    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4294:40: ( '\\r' )? '\\n'
                     {
-                    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2866:40: ( '\\r' )?
+                    // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4294:40: ( '\\r' )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -668,7 +649,7 @@ public class InternalCfengineEditorLexer extends Lexer {
                     }
                     switch (alt7) {
                         case 1 :
-                            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2866:40: '\\r'
+                            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4294:40: '\\r'
                             {
                             match('\r'); 
 
@@ -698,10 +679,10 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mRULE_WS() throws RecognitionException {
         try {
             int _type = RULE_WS;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2868:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2868:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4296:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4296:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2868:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4296:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt9=0;
             loop9:
             do {
@@ -754,8 +735,8 @@ public class InternalCfengineEditorLexer extends Lexer {
     public final void mRULE_ANY_OTHER() throws RecognitionException {
         try {
             int _type = RULE_ANY_OTHER;
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2870:16: ( . )
-            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:2870:18: .
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4298:16: ( . )
+            // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:4298:18: .
             {
             matchAny(); 
 
@@ -769,174 +750,171 @@ public class InternalCfengineEditorLexer extends Lexer {
     // $ANTLR end RULE_ANY_OTHER
 
     public void mTokens() throws RecognitionException {
-        // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:8: ( T10 | T11 | T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | T26 | RULE_ID | RULE_INT | RULE_STRING | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt10=23;
+        // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:8: ( T10 | T11 | T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | RULE_ID | RULE_INT | RULE_STRING | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt10=22;
         int LA10_0 = input.LA(1);
 
-        if ( (LA10_0=='(') ) {
-            alt10=1;
-        }
-        else if ( (LA10_0==')') ) {
-            alt10=2;
-        }
-        else if ( (LA10_0=='|') ) {
-            alt10=3;
-        }
-        else if ( (LA10_0=='!') ) {
-            alt10=4;
-        }
-        else if ( (LA10_0=='.') ) {
-            alt10=5;
-        }
-        else if ( (LA10_0=='=') ) {
-            int LA10_6 = input.LA(2);
+        if ( (LA10_0=='=') ) {
+            int LA10_1 = input.LA(2);
 
-            if ( (LA10_6=='>') ) {
-                alt10=6;
+            if ( (LA10_1=='>') ) {
+                alt10=1;
             }
             else {
-                alt10=23;}
+                alt10=22;}
         }
         else if ( (LA10_0==';') ) {
-            alt10=7;
+            alt10=2;
         }
         else if ( (LA10_0==',') ) {
-            alt10=8;
+            alt10=3;
+        }
+        else if ( (LA10_0=='(') ) {
+            alt10=4;
+        }
+        else if ( (LA10_0==')') ) {
+            alt10=5;
+        }
+        else if ( (LA10_0=='.') ) {
+            alt10=6;
+        }
+        else if ( (LA10_0=='!') ) {
+            alt10=7;
         }
         else if ( (LA10_0=='b') ) {
             switch ( input.LA(2) ) {
             case 'u':
                 {
-                int LA10_30 = input.LA(3);
+                int LA10_28 = input.LA(3);
 
-                if ( (LA10_30=='n') ) {
-                    int LA10_44 = input.LA(4);
+                if ( (LA10_28=='n') ) {
+                    int LA10_42 = input.LA(4);
 
-                    if ( (LA10_44=='d') ) {
-                        int LA10_46 = input.LA(5);
+                    if ( (LA10_42=='d') ) {
+                        int LA10_44 = input.LA(5);
 
-                        if ( (LA10_46=='l') ) {
-                            int LA10_48 = input.LA(6);
+                        if ( (LA10_44=='l') ) {
+                            int LA10_46 = input.LA(6);
 
-                            if ( (LA10_48=='e') ) {
-                                int LA10_50 = input.LA(7);
+                            if ( (LA10_46=='e') ) {
+                                int LA10_48 = input.LA(7);
 
-                                if ( ((LA10_50>='0' && LA10_50<='9')||(LA10_50>='A' && LA10_50<='Z')||LA10_50=='_'||(LA10_50>='a' && LA10_50<='z')) ) {
-                                    alt10=18;
+                                if ( ((LA10_48>='0' && LA10_48<='9')||(LA10_48>='A' && LA10_48<='Z')||LA10_48=='_'||(LA10_48>='a' && LA10_48<='z')) ) {
+                                    alt10=17;
                                 }
                                 else {
-                                    alt10=9;}
+                                    alt10=8;}
                             }
                             else {
-                                alt10=18;}
+                                alt10=17;}
                         }
                         else {
-                            alt10=18;}
+                            alt10=17;}
                     }
                     else {
-                        alt10=18;}
+                        alt10=17;}
                 }
                 else {
-                    alt10=18;}
+                    alt10=17;}
                 }
                 break;
             case 'o':
                 {
-                int LA10_31 = input.LA(3);
+                int LA10_29 = input.LA(3);
 
-                if ( (LA10_31=='d') ) {
-                    int LA10_45 = input.LA(4);
+                if ( (LA10_29=='d') ) {
+                    int LA10_43 = input.LA(4);
 
-                    if ( (LA10_45=='y') ) {
-                        int LA10_47 = input.LA(5);
+                    if ( (LA10_43=='y') ) {
+                        int LA10_45 = input.LA(5);
 
-                        if ( ((LA10_47>='0' && LA10_47<='9')||(LA10_47>='A' && LA10_47<='Z')||LA10_47=='_'||(LA10_47>='a' && LA10_47<='z')) ) {
-                            alt10=18;
+                        if ( ((LA10_45>='0' && LA10_45<='9')||(LA10_45>='A' && LA10_45<='Z')||LA10_45=='_'||(LA10_45>='a' && LA10_45<='z')) ) {
+                            alt10=17;
                         }
                         else {
-                            alt10=14;}
+                            alt10=13;}
                     }
                     else {
-                        alt10=18;}
+                        alt10=17;}
                 }
                 else {
-                    alt10=18;}
+                    alt10=17;}
                 }
                 break;
             default:
-                alt10=18;}
+                alt10=17;}
 
         }
         else if ( (LA10_0=='{') ) {
-            alt10=10;
+            alt10=9;
         }
         else if ( (LA10_0=='}') ) {
-            alt10=11;
+            alt10=10;
         }
         else if ( (LA10_0==':') ) {
-            int LA10_12 = input.LA(2);
+            int LA10_11 = input.LA(2);
 
-            if ( (LA10_12==':') ) {
-                alt10=17;
+            if ( (LA10_11==':') ) {
+                alt10=12;
             }
             else {
-                alt10=12;}
+                alt10=11;}
         }
         else if ( (LA10_0=='@') ) {
-            alt10=13;
+            alt10=14;
         }
         else if ( (LA10_0=='$') ) {
             switch ( input.LA(2) ) {
-            case '{':
-                {
-                alt10=16;
-                }
-                break;
             case '(':
                 {
                 alt10=15;
                 }
                 break;
+            case '{':
+                {
+                alt10=16;
+                }
+                break;
             default:
-                alt10=23;}
+                alt10=22;}
 
         }
         else if ( ((LA10_0>='A' && LA10_0<='Z')||LA10_0=='_'||LA10_0=='a'||(LA10_0>='c' && LA10_0<='z')) ) {
-            alt10=18;
+            alt10=17;
         }
         else if ( ((LA10_0>='0' && LA10_0<='9')) ) {
-            alt10=19;
+            alt10=18;
         }
         else if ( (LA10_0=='\"') ) {
+            int LA10_16 = input.LA(2);
+
+            if ( ((LA10_16>='\u0000' && LA10_16<='\uFFFE')) ) {
+                alt10=19;
+            }
+            else {
+                alt10=22;}
+        }
+        else if ( (LA10_0=='\'') ) {
             int LA10_17 = input.LA(2);
 
             if ( ((LA10_17>='\u0000' && LA10_17<='\uFFFE')) ) {
-                alt10=20;
+                alt10=19;
             }
             else {
-                alt10=23;}
-        }
-        else if ( (LA10_0=='\'') ) {
-            int LA10_18 = input.LA(2);
-
-            if ( ((LA10_18>='\u0000' && LA10_18<='\uFFFE')) ) {
-                alt10=20;
-            }
-            else {
-                alt10=23;}
+                alt10=22;}
         }
         else if ( (LA10_0=='#') ) {
-            alt10=21;
+            alt10=20;
         }
         else if ( ((LA10_0>='\t' && LA10_0<='\n')||LA10_0=='\r'||LA10_0==' ') ) {
-            alt10=22;
+            alt10=21;
         }
-        else if ( ((LA10_0>='\u0000' && LA10_0<='\b')||(LA10_0>='\u000B' && LA10_0<='\f')||(LA10_0>='\u000E' && LA10_0<='\u001F')||(LA10_0>='%' && LA10_0<='&')||(LA10_0>='*' && LA10_0<='+')||LA10_0=='-'||LA10_0=='/'||LA10_0=='<'||(LA10_0>='>' && LA10_0<='?')||(LA10_0>='[' && LA10_0<='^')||LA10_0=='`'||(LA10_0>='~' && LA10_0<='\uFFFE')) ) {
-            alt10=23;
+        else if ( ((LA10_0>='\u0000' && LA10_0<='\b')||(LA10_0>='\u000B' && LA10_0<='\f')||(LA10_0>='\u000E' && LA10_0<='\u001F')||(LA10_0>='%' && LA10_0<='&')||(LA10_0>='*' && LA10_0<='+')||LA10_0=='-'||LA10_0=='/'||LA10_0=='<'||(LA10_0>='>' && LA10_0<='?')||(LA10_0>='[' && LA10_0<='^')||LA10_0=='`'||LA10_0=='|'||(LA10_0>='~' && LA10_0<='\uFFFE')) ) {
+            alt10=22;
         }
         else {
             NoViableAltException nvae =
-                new NoViableAltException("1:1: Tokens : ( T10 | T11 | T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | T26 | RULE_ID | RULE_INT | RULE_STRING | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );", 10, 0, input);
+                new NoViableAltException("1:1: Tokens : ( T10 | T11 | T12 | T13 | T14 | T15 | T16 | T17 | T18 | T19 | T20 | T21 | T22 | T23 | T24 | T25 | RULE_ID | RULE_INT | RULE_STRING | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );", 10, 0, input);
 
             throw nvae;
         }
@@ -1054,49 +1032,42 @@ public class InternalCfengineEditorLexer extends Lexer {
                 }
                 break;
             case 17 :
-                // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:74: T26
-                {
-                mT26(); 
-
-                }
-                break;
-            case 18 :
-                // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:78: RULE_ID
+                // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:74: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 19 :
-                // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:86: RULE_INT
+            case 18 :
+                // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:82: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 20 :
-                // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:95: RULE_STRING
+            case 19 :
+                // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:91: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 21 :
-                // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:107: RULE_SL_COMMENT
+            case 20 :
+                // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:103: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 22 :
-                // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:123: RULE_WS
+            case 21 :
+                // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:119: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 23 :
-                // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:131: RULE_ANY_OTHER
+            case 22 :
+                // ../edu.kit.scc.cfeditor.cfengine.ui/src-gen/edu/kit/scc/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengineEditor.g:1:127: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 

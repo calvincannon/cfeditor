@@ -71,7 +71,7 @@ public class CfengineEditorNewProjectCreator extends AbstractProjectCreator {
 	 * @return folder name
 	 */
 	protected String getModelFolderName() {
-		return SRC_ROOT;// TODO
+		return SRC_ROOT;
 	}
 
 	/**

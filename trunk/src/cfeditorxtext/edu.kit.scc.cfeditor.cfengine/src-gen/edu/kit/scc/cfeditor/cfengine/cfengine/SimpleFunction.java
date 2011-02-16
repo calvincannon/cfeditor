@@ -12,22 +12,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Special Function</b></em>'.
+ * A representation of the model object '<em><b>Simple Function</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.SpecialFunction#getId <em>Id</em>}</li>
- *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.SpecialFunction#getFunc <em>Func</em>}</li>
+ *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction#getId <em>Id</em>}</li>
+ *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
  *
- * @see edu.kit.scc.cfeditor.cfengine.cfengine.CfenginePackage#getSpecialFunction()
+ * @see edu.kit.scc.cfeditor.cfengine.cfengine.CfenginePackage#getSimpleFunction()
  * @model
  * @generated
  */
-public interface SpecialFunction extends EObject
+public interface SimpleFunction extends EObject
 {
   /**
    * Returns the value of the '<em><b>Id</b></em>' attribute.
@@ -39,14 +39,14 @@ public interface SpecialFunction extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Id</em>' attribute.
    * @see #setId(String)
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.CfenginePackage#getSpecialFunction_Id()
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.CfenginePackage#getSimpleFunction_Id()
    * @model
    * @generated
    */
   String getId();
 
   /**
-   * Sets the value of the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.SpecialFunction#getId <em>Id</em>}' attribute.
+   * Sets the value of the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction#getId <em>Id</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Id</em>' attribute.
@@ -56,19 +56,19 @@ public interface SpecialFunction extends EObject
   void setId(String value);
 
   /**
-   * Returns the value of the '<em><b>Func</b></em>' containment reference list.
-   * The list contents are of type {@link edu.kit.scc.cfeditor.cfengine.cfengine.SpecialFunction}.
+   * Returns the value of the '<em><b>Values</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Func</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Values</em>' attribute list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Func</em>' containment reference list.
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.CfenginePackage#getSpecialFunction_Func()
-   * @model containment="true"
+   * @return the value of the '<em>Values</em>' attribute list.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.CfenginePackage#getSimpleFunction_Values()
+   * @model unique="false"
    * @generated
    */
-  EList<SpecialFunction> getFunc();
+  EList<String> getValues();
 
-} // SpecialFunction
+} // SimpleFunction

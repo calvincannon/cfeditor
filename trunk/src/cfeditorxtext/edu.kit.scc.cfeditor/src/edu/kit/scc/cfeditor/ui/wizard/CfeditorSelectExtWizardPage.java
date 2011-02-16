@@ -9,17 +9,19 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
+import edu.kit.scc.cfeditor.ui.internal.CfeditorActivator;
+
 public class CfeditorSelectExtWizardPage extends WizardPage implements Listener {
 
 	private Button btCfengine;
-	private Button btPuppet;
+	private Button btOther;
 //	private Button btDummy;
 
 	protected CfeditorSelectExtWizardPage(String pageName) {
 		super(pageName);
 		setTitle("Create a Cfeditor Project");
 		setDescription("Select a Configuration Management Engine.");
-		setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("edu.kit.scc.cfeditor","icons/CfeditorWizard.png"));
+		setImageDescriptor(CfeditorActivator.getImageDescriptor("icons/CfeditorWizard.png"));
 	}
 
 	@Override
@@ -38,14 +40,14 @@ public class CfeditorSelectExtWizardPage extends WizardPage implements Listener 
 		btCfengine.setText("Cfengine Project");
 		btCfengine.addListener(SWT.Selection, this);
 		
-		btPuppet = new Button(composite, SWT.RADIO);
-		btPuppet.setText("Puppet Project");
-		btPuppet.addListener(SWT.Selection, this);
-		btPuppet.setEnabled(false);
-//		
+		btOther = new Button(composite, SWT.RADIO);
+		btOther.setText("Other Project");
+		btOther.addListener(SWT.Selection, this);
+		
 //		btDummy = new Button(composite, SWT.RADIO);
 //		btDummy.setText("Dummy Project");
 //		btDummy.addListener(SWT.Selection, this);
+		
 //		btDummy.setEnabled(false);
 
 		setControl(composite);
@@ -57,8 +59,8 @@ public class CfeditorSelectExtWizardPage extends WizardPage implements Listener 
 
 		if (btCfengine.getSelection()) {
 			cfWizard.setSelectedEngine(CMEngine.CFENGINE);
-		} else if (btPuppet.getSelection()) {
-			cfWizard.setSelectedEngine(CMEngine.PUPPET);
+		} else if (btOther.getSelection()) {
+			cfWizard.setSelectedEngine(CMEngine.OTHER);
 //		} else if (btDummy.getSelection()) {
 //			cfWizard.setSelectedEngine(CMEngine.DUMMY);
 		}

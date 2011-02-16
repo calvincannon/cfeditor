@@ -63,6 +63,42 @@ public interface CfengineFactory extends EFactory
   Bundle createBundle();
 
   /**
+   * Returns a new object of class '<em>Bundle Promise Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bundle Promise Type</em>'.
+   * @generated
+   */
+  BundlePromiseType createBundlePromiseType();
+
+  /**
+   * Returns a new object of class '<em>Bundle Class</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bundle Class</em>'.
+   * @generated
+   */
+  BundleClass createBundleClass();
+
+  /**
+   * Returns a new object of class '<em>Bundle Promise</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bundle Promise</em>'.
+   * @generated
+   */
+  BundlePromise createBundlePromise();
+
+  /**
+   * Returns a new object of class '<em>Promise Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Promise Value</em>'.
+   * @generated
+   */
+  PromiseValue createPromiseValue();
+
+  /**
    * Returns a new object of class '<em>Body</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -70,6 +106,15 @@ public interface CfengineFactory extends EFactory
    * @generated
    */
   Body createBody();
+
+  /**
+   * Returns a new object of class '<em>Body Class</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Class</em>'.
+   * @generated
+   */
+  BodyClass createBodyClass();
 
   /**
    * Returns a new object of class '<em>Body Function</em>'.
@@ -81,6 +126,15 @@ public interface CfengineFactory extends EFactory
   BodyFunction createBodyFunction();
 
   /**
+   * Returns a new object of class '<em>Simple Function</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Simple Function</em>'.
+   * @generated
+   */
+  SimpleFunction createSimpleFunction();
+
+  /**
    * Returns a new object of class '<em>Special Function</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -88,15 +142,6 @@ public interface CfengineFactory extends EFactory
    * @generated
    */
   SpecialFunction createSpecialFunction();
-
-  /**
-   * Returns a new object of class '<em>Bundle Promise Type</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Bundle Promise Type</em>'.
-   * @generated
-   */
-  BundlePromiseType createBundlePromiseType();
 
   /**
    * Returns a new object of class '<em>Body Promise Type</em>'.
@@ -124,15 +169,6 @@ public interface CfengineFactory extends EFactory
    * @generated
    */
   BodyComponent createBodyComponent();
-
-  /**
-   * Returns a new object of class '<em>Body Class</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Body Class</em>'.
-   * @generated
-   */
-  BodyClass createBodyClass();
 
   /**
    * Returns the package supported by this factory.

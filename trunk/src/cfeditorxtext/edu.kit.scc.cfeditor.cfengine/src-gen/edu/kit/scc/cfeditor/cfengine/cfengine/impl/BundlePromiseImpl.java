@@ -6,8 +6,9 @@
  */
 package edu.kit.scc.cfeditor.cfengine.cfengine.impl;
 
+import edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromise;
 import edu.kit.scc.cfeditor.cfengine.cfengine.CfenginePackage;
-import edu.kit.scc.cfeditor.cfengine.cfengine.SpecialFunction;
+import edu.kit.scc.cfeditor.cfengine.cfengine.PromiseValue;
 
 import java.util.Collection;
 
@@ -27,56 +28,56 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Special Function</b></em>'.
+ * An implementation of the model object '<em><b>Bundle Promise</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.SpecialFunctionImpl#getId <em>Id</em>}</li>
- *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.SpecialFunctionImpl#getFunc <em>Func</em>}</li>
+ *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseImpl#getName <em>Name</em>}</li>
+ *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseImpl#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements SpecialFunction
+public class BundlePromiseImpl extends MinimalEObjectImpl.Container implements BundlePromise
 {
   /**
-   * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getId()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String ID_EDEFAULT = null;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getId()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected String id = ID_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getFunc() <em>Func</em>}' containment reference list.
+   * The cached value of the '{@link #getValues() <em>Values</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFunc()
+   * @see #getValues()
    * @generated
    * @ordered
    */
-  protected EList<SpecialFunction> func;
+  protected EList<PromiseValue> values;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SpecialFunctionImpl()
+  protected BundlePromiseImpl()
   {
     super();
   }
@@ -89,7 +90,7 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-    return CfenginePackage.Literals.SPECIAL_FUNCTION;
+    return CfenginePackage.Literals.BUNDLE_PROMISE;
   }
 
   /**
@@ -97,9 +98,9 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getId()
+  public String getName()
   {
-    return id;
+    return name;
   }
 
   /**
@@ -107,12 +108,12 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setId(String newId)
+  public void setName(String newName)
   {
-    String oldId = id;
-    id = newId;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CfenginePackage.SPECIAL_FUNCTION__ID, oldId, id));
+      eNotify(new ENotificationImpl(this, Notification.SET, CfenginePackage.BUNDLE_PROMISE__NAME, oldName, name));
   }
 
   /**
@@ -120,13 +121,13 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SpecialFunction> getFunc()
+  public EList<PromiseValue> getValues()
   {
-    if (func == null)
+    if (values == null)
     {
-      func = new EObjectContainmentEList<SpecialFunction>(SpecialFunction.class, this, CfenginePackage.SPECIAL_FUNCTION__FUNC);
+      values = new EObjectContainmentEList<PromiseValue>(PromiseValue.class, this, CfenginePackage.BUNDLE_PROMISE__VALUES);
     }
-    return func;
+    return values;
   }
 
   /**
@@ -139,8 +140,8 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfenginePackage.SPECIAL_FUNCTION__FUNC:
-        return ((InternalEList<?>)getFunc()).basicRemove(otherEnd, msgs);
+      case CfenginePackage.BUNDLE_PROMISE__VALUES:
+        return ((InternalEList<?>)getValues()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -155,10 +156,10 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfenginePackage.SPECIAL_FUNCTION__ID:
-        return getId();
-      case CfenginePackage.SPECIAL_FUNCTION__FUNC:
-        return getFunc();
+      case CfenginePackage.BUNDLE_PROMISE__NAME:
+        return getName();
+      case CfenginePackage.BUNDLE_PROMISE__VALUES:
+        return getValues();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -174,12 +175,12 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfenginePackage.SPECIAL_FUNCTION__ID:
-        setId((String)newValue);
+      case CfenginePackage.BUNDLE_PROMISE__NAME:
+        setName((String)newValue);
         return;
-      case CfenginePackage.SPECIAL_FUNCTION__FUNC:
-        getFunc().clear();
-        getFunc().addAll((Collection<? extends SpecialFunction>)newValue);
+      case CfenginePackage.BUNDLE_PROMISE__VALUES:
+        getValues().clear();
+        getValues().addAll((Collection<? extends PromiseValue>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -195,11 +196,11 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfenginePackage.SPECIAL_FUNCTION__ID:
-        setId(ID_EDEFAULT);
+      case CfenginePackage.BUNDLE_PROMISE__NAME:
+        setName(NAME_EDEFAULT);
         return;
-      case CfenginePackage.SPECIAL_FUNCTION__FUNC:
-        getFunc().clear();
+      case CfenginePackage.BUNDLE_PROMISE__VALUES:
+        getValues().clear();
         return;
     }
     super.eUnset(featureID);
@@ -215,10 +216,10 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfenginePackage.SPECIAL_FUNCTION__ID:
-        return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-      case CfenginePackage.SPECIAL_FUNCTION__FUNC:
-        return func != null && !func.isEmpty();
+      case CfenginePackage.BUNDLE_PROMISE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case CfenginePackage.BUNDLE_PROMISE__VALUES:
+        return values != null && !values.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -234,10 +235,10 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (id: ");
-    result.append(id);
+    result.append(" (name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }
 
-} //SpecialFunctionImpl
+} //BundlePromiseImpl

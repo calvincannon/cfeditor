@@ -99,9 +99,34 @@ public class CfengineAdapterFactory extends AdapterFactoryImpl
         return createBundleAdapter();
       }
       @Override
+      public Adapter caseBundlePromiseType(BundlePromiseType object)
+      {
+        return createBundlePromiseTypeAdapter();
+      }
+      @Override
+      public Adapter caseBundleClass(BundleClass object)
+      {
+        return createBundleClassAdapter();
+      }
+      @Override
+      public Adapter caseBundlePromise(BundlePromise object)
+      {
+        return createBundlePromiseAdapter();
+      }
+      @Override
+      public Adapter casePromiseValue(PromiseValue object)
+      {
+        return createPromiseValueAdapter();
+      }
+      @Override
       public Adapter caseBody(Body object)
       {
         return createBodyAdapter();
+      }
+      @Override
+      public Adapter caseBodyClass(BodyClass object)
+      {
+        return createBodyClassAdapter();
       }
       @Override
       public Adapter caseBodyFunction(BodyFunction object)
@@ -109,14 +134,14 @@ public class CfengineAdapterFactory extends AdapterFactoryImpl
         return createBodyFunctionAdapter();
       }
       @Override
+      public Adapter caseSimpleFunction(SimpleFunction object)
+      {
+        return createSimpleFunctionAdapter();
+      }
+      @Override
       public Adapter caseSpecialFunction(SpecialFunction object)
       {
         return createSpecialFunctionAdapter();
-      }
-      @Override
-      public Adapter caseBundlePromiseType(BundlePromiseType object)
-      {
-        return createBundlePromiseTypeAdapter();
       }
       @Override
       public Adapter caseBodyPromiseType(BodyPromiseType object)
@@ -132,11 +157,6 @@ public class CfengineAdapterFactory extends AdapterFactoryImpl
       public Adapter caseBodyComponent(BodyComponent object)
       {
         return createBodyComponentAdapter();
-      }
-      @Override
-      public Adapter caseBodyClass(BodyClass object)
-      {
-        return createBodyClassAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -221,6 +241,66 @@ public class CfengineAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType <em>Bundle Promise Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType
+   * @generated
+   */
+  public Adapter createBundlePromiseTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundleClass <em>Bundle Class</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundleClass
+   * @generated
+   */
+  public Adapter createBundleClassAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromise <em>Bundle Promise</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromise
+   * @generated
+   */
+  public Adapter createBundlePromiseAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.PromiseValue <em>Promise Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.PromiseValue
+   * @generated
+   */
+  public Adapter createPromiseValueAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.Body <em>Body</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -231,6 +311,21 @@ public class CfengineAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBodyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass <em>Body Class</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass
+   * @generated
+   */
+  public Adapter createBodyClassAdapter()
   {
     return null;
   }
@@ -251,6 +346,21 @@ public class CfengineAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction <em>Simple Function</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction
+   * @generated
+   */
+  public Adapter createSimpleFunctionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.SpecialFunction <em>Special Function</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -261,21 +371,6 @@ public class CfengineAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSpecialFunctionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType <em>Bundle Promise Type</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType
-   * @generated
-   */
-  public Adapter createBundlePromiseTypeAdapter()
   {
     return null;
   }
@@ -321,21 +416,6 @@ public class CfengineAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBodyComponentAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass <em>Body Class</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass
-   * @generated
-   */
-  public Adapter createBodyClassAdapter()
   {
     return null;
   }
