@@ -127,12 +127,47 @@ public class CfengineSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case CfenginePackage.BUNDLE_PROMISE_TYPE:
+      {
+        BundlePromiseType bundlePromiseType = (BundlePromiseType)theEObject;
+        T result = caseBundlePromiseType(bundlePromiseType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CfenginePackage.BUNDLE_CLASS:
+      {
+        BundleClass bundleClass = (BundleClass)theEObject;
+        T result = caseBundleClass(bundleClass);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CfenginePackage.BUNDLE_PROMISE:
+      {
+        BundlePromise bundlePromise = (BundlePromise)theEObject;
+        T result = caseBundlePromise(bundlePromise);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CfenginePackage.PROMISE_VALUE:
+      {
+        PromiseValue promiseValue = (PromiseValue)theEObject;
+        T result = casePromiseValue(promiseValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case CfenginePackage.BODY:
       {
         Body body = (Body)theEObject;
         T result = caseBody(body);
         if (result == null) result = casePart(body);
         if (result == null) result = caseAbstractElement(body);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CfenginePackage.BODY_CLASS:
+      {
+        BodyClass bodyClass = (BodyClass)theEObject;
+        T result = caseBodyClass(bodyClass);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -143,17 +178,17 @@ public class CfengineSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case CfenginePackage.SIMPLE_FUNCTION:
+      {
+        SimpleFunction simpleFunction = (SimpleFunction)theEObject;
+        T result = caseSimpleFunction(simpleFunction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case CfenginePackage.SPECIAL_FUNCTION:
       {
         SpecialFunction specialFunction = (SpecialFunction)theEObject;
         T result = caseSpecialFunction(specialFunction);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CfenginePackage.BUNDLE_PROMISE_TYPE:
-      {
-        BundlePromiseType bundlePromiseType = (BundlePromiseType)theEObject;
-        T result = caseBundlePromiseType(bundlePromiseType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -175,13 +210,6 @@ public class CfengineSwitch<T>
       {
         BodyComponent bodyComponent = (BodyComponent)theEObject;
         T result = caseBodyComponent(bodyComponent);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CfenginePackage.BODY_CLASS:
-      {
-        BodyClass bodyClass = (BodyClass)theEObject;
-        T result = caseBodyClass(bodyClass);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -254,6 +282,70 @@ public class CfengineSwitch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Bundle Promise Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Bundle Promise Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBundlePromiseType(BundlePromiseType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Bundle Class</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Bundle Class</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBundleClass(BundleClass object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Bundle Promise</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Bundle Promise</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBundlePromise(BundlePromise object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Promise Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Promise Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePromiseValue(PromiseValue object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Body</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -265,6 +357,22 @@ public class CfengineSwitch<T>
    * @generated
    */
   public T caseBody(Body object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Body Class</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Body Class</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBodyClass(BodyClass object)
   {
     return null;
   }
@@ -286,6 +394,22 @@ public class CfengineSwitch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Simple Function</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Simple Function</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSimpleFunction(SimpleFunction object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Special Function</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -297,22 +421,6 @@ public class CfengineSwitch<T>
    * @generated
    */
   public T caseSpecialFunction(SpecialFunction object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Bundle Promise Type</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Bundle Promise Type</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBundlePromiseType(BundlePromiseType object)
   {
     return null;
   }
@@ -361,22 +469,6 @@ public class CfengineSwitch<T>
    * @generated
    */
   public T caseBodyComponent(BodyComponent object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Body Class</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Body Class</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseBodyClass(BodyClass object)
   {
     return null;
   }

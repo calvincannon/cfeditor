@@ -5,10 +5,9 @@ generate cfengine "http://www.kit.edu/scc/cfeditor/cfengine/CfengineEditor"
 
 CfModel:
 	(elements+=AbstractElement)*;
-	
-terminal ID:
-	('a'..'z' | 'A'..'Z' | '_' ) ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*; //'!'
 
+terminal ID:
+	('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*; //'!'
 terminal INT returns ecore::EInt:
 	('0'..'9')+;
 
@@ -29,11 +28,10 @@ terminal ANY_OTHER:
 	.;
 
 CLASS_ID:
-(ID|'('|')'|'|'|'!'|'.')+;
-
-PLACEHOLDER:
-	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')' | '{' | '}' | '@');
-
+	ID | (ID '.' ID) | '!' CLASS_ID | '(' CLASS_ID ')';
+	//(ID | '(' | ')' | '|' | '!' | '.')+;
+//PLACEHOLDER:
+//	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')' | '{' | '}' | '@');
 PLACEHOLDERB:
 	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')');
 
@@ -44,27 +42,44 @@ Part:
 	(Bundle | Body);
 
 Bundle:
-	'bundle' component=BundleComponent name=ID (PLACEHOLDERB)* '{' (promiseType+=BundlePromiseType ':' ((PLACEHOLDERB) |
-	'{' '@' (PLACEHOLDERB)* '}')*)*
-	'}';
+	'bundle' component=BundleComponent name=ID (PLACEHOLDERB)* '{' (promiseType+=BundlePromiseType)* '}';
 
+BundlePromiseType:
+	name=ID ':' (promises+=BundlePromise)* (classes+=BundleClass)*;
+
+BundleClass:
+	name=CLASS_ID '::' (promises+=BundlePromise)+; //TODO + or * ?
+BundlePromise:
+	name=STRING (values+=PromiseValue (',' values+=PromiseValue)*)* ';';
+
+PromiseValue:
+	keyword=ID '=>' ((values+=STRING | functions+=SimpleFunction) |( '{' (values+=STRING | functions+=SimpleFunction)
+	(',' (values+=STRING | functions+=SimpleFunction))* '}'));
+	//	| '{''@' '(' ID ')' '}'); TODO?
+
+//(promiseType+=BundlePromiseType ':' ((PLACEHOLDERB) |
+//	'{' '@' (PLACEHOLDERB)* '}')*)*
+//	'}';
 Body:
 	'body' component=BodyComponent name=ID ('(' variables+=ID (',' variables+=ID)* ')')? '{' (promiseType+=BodyFunction)*
 	(classes+=BodyClass)*
 	'}'; //BodyPromiseType '=>' (values+=STRING | '{' values+=STRING
 //	(',' values+=STRING)* '}') ';'
+BodyClass:
+	name=CLASS_ID '::' (promiseType+=BodyFunction)*;
 
 BodyFunction:
 	name=BodyPromiseType '=>' (values+=STRING | List?='{' values+=STRING
-	(',' values+=STRING)* '}' | function+=SpecialFunction | '{' '@' (PLACEHOLDERB)* '}') ';';
+	(',' values+=STRING)* '}' | function+=SpecialFunction | '{' '@' '(' ID ')' '}') ';';
+	//	(',' values+=STRING)* '}' | function+=SpecialFunction | '{' '@' (PLACEHOLDERB)* '}') ';';
+	
+SimpleFunction:
+id=ID '(' values+=STRING (','values+=STRING)* ')';
 	
 SpecialFunction:
-	{SpecialFunction}ID '(' (ANY_OTHER | ID | STRING | INT | ',' | '$(' ID ')' | '${' ID '}' | func+=SpecialFunction)*
+	id=ID '(' (ANY_OTHER | ID | STRING | INT | ',' | '$(' ID ')' | '${' ID '}' | func+=SpecialFunction)*
 	/*(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* */
 	')';
-
-BundlePromiseType:
-	name=ID;
 
 BodyPromiseType:
 	name=ID;
@@ -74,6 +89,3 @@ BundleComponent:
 
 BodyComponent:
 	name=ID;
-
-BodyClass:
-	name=CLASS_ID '::' (promiseType+=BodyFunction)*;

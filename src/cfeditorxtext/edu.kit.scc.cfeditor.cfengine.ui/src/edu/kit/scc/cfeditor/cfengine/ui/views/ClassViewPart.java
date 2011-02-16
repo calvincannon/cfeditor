@@ -163,7 +163,8 @@ public class ClassViewPart extends ViewPart {
 					editorPart = partRef.getPage().getActiveEditor();
 
 					if (editorPart != null) {
-						editorPart.addPropertyListener(propertyListener);// TODO !
+						editorPart.addPropertyListener(propertyListener);// TODO
+																			// !
 
 						refreshView(editorPart, false);
 					}
@@ -189,15 +190,17 @@ public class ClassViewPart extends ViewPart {
 	 */
 	private void refreshView(IEditorPart editorPart, boolean forceRefresh) {
 		IProject oldActiveProject = activeProject;
-
+		
 		try {
 			IFileEditorInput input = (IFileEditorInput) editorPart.getEditorInput();
 			IFile file = input.getFile();
 			activeProject = file.getProject();
-
+			
 			if (forceRefresh || null == oldActiveProject || !oldActiveProject.equals(activeProject)) {
 				if (treeViewer != null) {
-					treeViewer.setInput(treeBuilder.getTreeNodes(activeProject));
+					TreeNode[] treeNodes = treeBuilder.getTreeNodes(activeProject);
+					
+					treeViewer.setInput(treeNodes);
 				}
 			}
 		} catch (ClassCastException e) {

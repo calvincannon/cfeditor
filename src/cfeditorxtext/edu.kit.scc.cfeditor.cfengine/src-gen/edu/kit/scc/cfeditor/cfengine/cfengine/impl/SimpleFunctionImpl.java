@@ -7,39 +7,36 @@
 package edu.kit.scc.cfeditor.cfengine.cfengine.impl;
 
 import edu.kit.scc.cfeditor.cfengine.cfengine.CfenginePackage;
-import edu.kit.scc.cfeditor.cfengine.cfengine.SpecialFunction;
+import edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Special Function</b></em>'.
+ * An implementation of the model object '<em><b>Simple Function</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.SpecialFunctionImpl#getId <em>Id</em>}</li>
- *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.SpecialFunctionImpl#getFunc <em>Func</em>}</li>
+ *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.SimpleFunctionImpl#getId <em>Id</em>}</li>
+ *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.SimpleFunctionImpl#getValues <em>Values</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements SpecialFunction
+public class SimpleFunctionImpl extends MinimalEObjectImpl.Container implements SimpleFunction
 {
   /**
    * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -62,21 +59,21 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   protected String id = ID_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getFunc() <em>Func</em>}' containment reference list.
+   * The cached value of the '{@link #getValues() <em>Values</em>}' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFunc()
+   * @see #getValues()
    * @generated
    * @ordered
    */
-  protected EList<SpecialFunction> func;
+  protected EList<String> values;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SpecialFunctionImpl()
+  protected SimpleFunctionImpl()
   {
     super();
   }
@@ -89,7 +86,7 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-    return CfenginePackage.Literals.SPECIAL_FUNCTION;
+    return CfenginePackage.Literals.SIMPLE_FUNCTION;
   }
 
   /**
@@ -112,7 +109,7 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
     String oldId = id;
     id = newId;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CfenginePackage.SPECIAL_FUNCTION__ID, oldId, id));
+      eNotify(new ENotificationImpl(this, Notification.SET, CfenginePackage.SIMPLE_FUNCTION__ID, oldId, id));
   }
 
   /**
@@ -120,29 +117,13 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SpecialFunction> getFunc()
+  public EList<String> getValues()
   {
-    if (func == null)
+    if (values == null)
     {
-      func = new EObjectContainmentEList<SpecialFunction>(SpecialFunction.class, this, CfenginePackage.SPECIAL_FUNCTION__FUNC);
+      values = new EDataTypeEList<String>(String.class, this, CfenginePackage.SIMPLE_FUNCTION__VALUES);
     }
-    return func;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case CfenginePackage.SPECIAL_FUNCTION__FUNC:
-        return ((InternalEList<?>)getFunc()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    return values;
   }
 
   /**
@@ -155,10 +136,10 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfenginePackage.SPECIAL_FUNCTION__ID:
+      case CfenginePackage.SIMPLE_FUNCTION__ID:
         return getId();
-      case CfenginePackage.SPECIAL_FUNCTION__FUNC:
-        return getFunc();
+      case CfenginePackage.SIMPLE_FUNCTION__VALUES:
+        return getValues();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -174,12 +155,12 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfenginePackage.SPECIAL_FUNCTION__ID:
+      case CfenginePackage.SIMPLE_FUNCTION__ID:
         setId((String)newValue);
         return;
-      case CfenginePackage.SPECIAL_FUNCTION__FUNC:
-        getFunc().clear();
-        getFunc().addAll((Collection<? extends SpecialFunction>)newValue);
+      case CfenginePackage.SIMPLE_FUNCTION__VALUES:
+        getValues().clear();
+        getValues().addAll((Collection<? extends String>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -195,11 +176,11 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfenginePackage.SPECIAL_FUNCTION__ID:
+      case CfenginePackage.SIMPLE_FUNCTION__ID:
         setId(ID_EDEFAULT);
         return;
-      case CfenginePackage.SPECIAL_FUNCTION__FUNC:
-        getFunc().clear();
+      case CfenginePackage.SIMPLE_FUNCTION__VALUES:
+        getValues().clear();
         return;
     }
     super.eUnset(featureID);
@@ -215,10 +196,10 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case CfenginePackage.SPECIAL_FUNCTION__ID:
+      case CfenginePackage.SIMPLE_FUNCTION__ID:
         return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-      case CfenginePackage.SPECIAL_FUNCTION__FUNC:
-        return func != null && !func.isEmpty();
+      case CfenginePackage.SIMPLE_FUNCTION__VALUES:
+        return values != null && !values.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -236,8 +217,10 @@ public class SpecialFunctionImpl extends MinimalEObjectImpl.Container implements
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (id: ");
     result.append(id);
+    result.append(", values: ");
+    result.append(values);
     result.append(')');
     return result.toString();
   }
 
-} //SpecialFunctionImpl
+} //SimpleFunctionImpl

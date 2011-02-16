@@ -182,6 +182,172 @@ public interface CfenginePackage extends EPackage
   int BUNDLE_FEATURE_COUNT = PART_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseTypeImpl <em>Bundle Promise Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseTypeImpl
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundlePromiseType()
+   * @generated
+   */
+  int BUNDLE_PROMISE_TYPE = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUNDLE_PROMISE_TYPE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Promises</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUNDLE_PROMISE_TYPE__PROMISES = 1;
+
+  /**
+   * The feature id for the '<em><b>Classes</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUNDLE_PROMISE_TYPE__CLASSES = 2;
+
+  /**
+   * The number of structural features of the '<em>Bundle Promise Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUNDLE_PROMISE_TYPE_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundleClassImpl <em>Bundle Class</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundleClassImpl
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundleClass()
+   * @generated
+   */
+  int BUNDLE_CLASS = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUNDLE_CLASS__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Promises</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUNDLE_CLASS__PROMISES = 1;
+
+  /**
+   * The number of structural features of the '<em>Bundle Class</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUNDLE_CLASS_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseImpl <em>Bundle Promise</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseImpl
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundlePromise()
+   * @generated
+   */
+  int BUNDLE_PROMISE = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUNDLE_PROMISE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Values</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUNDLE_PROMISE__VALUES = 1;
+
+  /**
+   * The number of structural features of the '<em>Bundle Promise</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUNDLE_PROMISE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.PromiseValueImpl <em>Promise Value</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.PromiseValueImpl
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getPromiseValue()
+   * @generated
+   */
+  int PROMISE_VALUE = 7;
+
+  /**
+   * The feature id for the '<em><b>Keyword</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROMISE_VALUE__KEYWORD = 0;
+
+  /**
+   * The feature id for the '<em><b>Values</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROMISE_VALUE__VALUES = 1;
+
+  /**
+   * The feature id for the '<em><b>Functions</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROMISE_VALUE__FUNCTIONS = 2;
+
+  /**
+   * The number of structural features of the '<em>Promise Value</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROMISE_VALUE_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyImpl <em>Body</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -189,7 +355,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBody()
    * @generated
    */
-  int BODY = 4;
+  int BODY = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -246,6 +412,43 @@ public interface CfenginePackage extends EPackage
   int BODY_FEATURE_COUNT = PART_FEATURE_COUNT + 4;
 
   /**
+   * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyClassImpl <em>Body Class</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyClassImpl
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBodyClass()
+   * @generated
+   */
+  int BODY_CLASS = 9;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_CLASS__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Promise Type</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_CLASS__PROMISE_TYPE = 1;
+
+  /**
+   * The number of structural features of the '<em>Body Class</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY_CLASS_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyFunctionImpl <em>Body Function</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -253,7 +456,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBodyFunction()
    * @generated
    */
-  int BODY_FUNCTION = 5;
+  int BODY_FUNCTION = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -301,6 +504,43 @@ public interface CfenginePackage extends EPackage
   int BODY_FUNCTION_FEATURE_COUNT = 4;
 
   /**
+   * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.SimpleFunctionImpl <em>Simple Function</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.SimpleFunctionImpl
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getSimpleFunction()
+   * @generated
+   */
+  int SIMPLE_FUNCTION = 11;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIMPLE_FUNCTION__ID = 0;
+
+  /**
+   * The feature id for the '<em><b>Values</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIMPLE_FUNCTION__VALUES = 1;
+
+  /**
+   * The number of structural features of the '<em>Simple Function</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIMPLE_FUNCTION_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.SpecialFunctionImpl <em>Special Function</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -308,7 +548,16 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getSpecialFunction()
    * @generated
    */
-  int SPECIAL_FUNCTION = 6;
+  int SPECIAL_FUNCTION = 12;
+
+  /**
+   * The feature id for the '<em><b>Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPECIAL_FUNCTION__ID = 0;
 
   /**
    * The feature id for the '<em><b>Func</b></em>' containment reference list.
@@ -317,7 +566,7 @@ public interface CfenginePackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPECIAL_FUNCTION__FUNC = 0;
+  int SPECIAL_FUNCTION__FUNC = 1;
 
   /**
    * The number of structural features of the '<em>Special Function</em>' class.
@@ -326,35 +575,7 @@ public interface CfenginePackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPECIAL_FUNCTION_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseTypeImpl <em>Bundle Promise Type</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseTypeImpl
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundlePromiseType()
-   * @generated
-   */
-  int BUNDLE_PROMISE_TYPE = 7;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BUNDLE_PROMISE_TYPE__NAME = 0;
-
-  /**
-   * The number of structural features of the '<em>Bundle Promise Type</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BUNDLE_PROMISE_TYPE_FEATURE_COUNT = 1;
+  int SPECIAL_FUNCTION_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyPromiseTypeImpl <em>Body Promise Type</em>}' class.
@@ -364,7 +585,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBodyPromiseType()
    * @generated
    */
-  int BODY_PROMISE_TYPE = 8;
+  int BODY_PROMISE_TYPE = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -392,7 +613,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundleComponent()
    * @generated
    */
-  int BUNDLE_COMPONENT = 9;
+  int BUNDLE_COMPONENT = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -420,7 +641,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBodyComponent()
    * @generated
    */
-  int BODY_COMPONENT = 10;
+  int BODY_COMPONENT = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -439,43 +660,6 @@ public interface CfenginePackage extends EPackage
    * @ordered
    */
   int BODY_COMPONENT_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyClassImpl <em>Body Class</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyClassImpl
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBodyClass()
-   * @generated
-   */
-  int BODY_CLASS = 11;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BODY_CLASS__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Promise Type</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BODY_CLASS__PROMISE_TYPE = 1;
-
-  /**
-   * The number of structural features of the '<em>Body Class</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BODY_CLASS_FEATURE_COUNT = 2;
 
 
   /**
@@ -563,6 +747,156 @@ public interface CfenginePackage extends EPackage
   EReference getBundle_PromiseType();
 
   /**
+   * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType <em>Bundle Promise Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bundle Promise Type</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType
+   * @generated
+   */
+  EClass getBundlePromiseType();
+
+  /**
+   * Returns the meta object for the attribute '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType#getName()
+   * @see #getBundlePromiseType()
+   * @generated
+   */
+  EAttribute getBundlePromiseType_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType#getPromises <em>Promises</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Promises</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType#getPromises()
+   * @see #getBundlePromiseType()
+   * @generated
+   */
+  EReference getBundlePromiseType_Promises();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType#getClasses <em>Classes</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Classes</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType#getClasses()
+   * @see #getBundlePromiseType()
+   * @generated
+   */
+  EReference getBundlePromiseType_Classes();
+
+  /**
+   * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundleClass <em>Bundle Class</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bundle Class</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundleClass
+   * @generated
+   */
+  EClass getBundleClass();
+
+  /**
+   * Returns the meta object for the attribute '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundleClass#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundleClass#getName()
+   * @see #getBundleClass()
+   * @generated
+   */
+  EAttribute getBundleClass_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundleClass#getPromises <em>Promises</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Promises</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundleClass#getPromises()
+   * @see #getBundleClass()
+   * @generated
+   */
+  EReference getBundleClass_Promises();
+
+  /**
+   * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromise <em>Bundle Promise</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bundle Promise</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromise
+   * @generated
+   */
+  EClass getBundlePromise();
+
+  /**
+   * Returns the meta object for the attribute '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromise#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromise#getName()
+   * @see #getBundlePromise()
+   * @generated
+   */
+  EAttribute getBundlePromise_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromise#getValues <em>Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Values</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromise#getValues()
+   * @see #getBundlePromise()
+   * @generated
+   */
+  EReference getBundlePromise_Values();
+
+  /**
+   * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.PromiseValue <em>Promise Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Promise Value</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.PromiseValue
+   * @generated
+   */
+  EClass getPromiseValue();
+
+  /**
+   * Returns the meta object for the attribute '{@link edu.kit.scc.cfeditor.cfengine.cfengine.PromiseValue#getKeyword <em>Keyword</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Keyword</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.PromiseValue#getKeyword()
+   * @see #getPromiseValue()
+   * @generated
+   */
+  EAttribute getPromiseValue_Keyword();
+
+  /**
+   * Returns the meta object for the attribute list '{@link edu.kit.scc.cfeditor.cfengine.cfengine.PromiseValue#getValues <em>Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Values</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.PromiseValue#getValues()
+   * @see #getPromiseValue()
+   * @generated
+   */
+  EAttribute getPromiseValue_Values();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link edu.kit.scc.cfeditor.cfengine.cfengine.PromiseValue#getFunctions <em>Functions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Functions</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.PromiseValue#getFunctions()
+   * @see #getPromiseValue()
+   * @generated
+   */
+  EReference getPromiseValue_Functions();
+
+  /**
    * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.Body <em>Body</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -615,6 +949,38 @@ public interface CfenginePackage extends EPackage
    * @generated
    */
   EReference getBody_Classes();
+
+  /**
+   * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass <em>Body Class</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Body Class</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass
+   * @generated
+   */
+  EClass getBodyClass();
+
+  /**
+   * Returns the meta object for the attribute '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass#getName()
+   * @see #getBodyClass()
+   * @generated
+   */
+  EAttribute getBodyClass_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass#getPromiseType <em>Promise Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Promise Type</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass#getPromiseType()
+   * @see #getBodyClass()
+   * @generated
+   */
+  EReference getBodyClass_PromiseType();
 
   /**
    * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BodyFunction <em>Body Function</em>}'.
@@ -671,6 +1037,38 @@ public interface CfenginePackage extends EPackage
   EReference getBodyFunction_Function();
 
   /**
+   * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction <em>Simple Function</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Simple Function</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction
+   * @generated
+   */
+  EClass getSimpleFunction();
+
+  /**
+   * Returns the meta object for the attribute '{@link edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction#getId()
+   * @see #getSimpleFunction()
+   * @generated
+   */
+  EAttribute getSimpleFunction_Id();
+
+  /**
+   * Returns the meta object for the attribute list '{@link edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction#getValues <em>Values</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Values</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction#getValues()
+   * @see #getSimpleFunction()
+   * @generated
+   */
+  EAttribute getSimpleFunction_Values();
+
+  /**
    * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.SpecialFunction <em>Special Function</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -679,6 +1077,17 @@ public interface CfenginePackage extends EPackage
    * @generated
    */
   EClass getSpecialFunction();
+
+  /**
+   * Returns the meta object for the attribute '{@link edu.kit.scc.cfeditor.cfengine.cfengine.SpecialFunction#getId <em>Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Id</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.SpecialFunction#getId()
+   * @see #getSpecialFunction()
+   * @generated
+   */
+  EAttribute getSpecialFunction_Id();
 
   /**
    * Returns the meta object for the containment reference list '{@link edu.kit.scc.cfeditor.cfengine.cfengine.SpecialFunction#getFunc <em>Func</em>}'.
@@ -690,27 +1099,6 @@ public interface CfenginePackage extends EPackage
    * @generated
    */
   EReference getSpecialFunction_Func();
-
-  /**
-   * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType <em>Bundle Promise Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Bundle Promise Type</em>'.
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType
-   * @generated
-   */
-  EClass getBundlePromiseType();
-
-  /**
-   * Returns the meta object for the attribute '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType#getName()
-   * @see #getBundlePromiseType()
-   * @generated
-   */
-  EAttribute getBundlePromiseType_Name();
 
   /**
    * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BodyPromiseType <em>Body Promise Type</em>}'.
@@ -774,38 +1162,6 @@ public interface CfenginePackage extends EPackage
    * @generated
    */
   EAttribute getBodyComponent_Name();
-
-  /**
-   * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass <em>Body Class</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Body Class</em>'.
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass
-   * @generated
-   */
-  EClass getBodyClass();
-
-  /**
-   * Returns the meta object for the attribute '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass#getName()
-   * @see #getBodyClass()
-   * @generated
-   */
-  EAttribute getBodyClass_Name();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass#getPromiseType <em>Promise Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Promise Type</em>'.
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass#getPromiseType()
-   * @see #getBodyClass()
-   * @generated
-   */
-  EReference getBodyClass_PromiseType();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -903,6 +1259,126 @@ public interface CfenginePackage extends EPackage
     EReference BUNDLE__PROMISE_TYPE = eINSTANCE.getBundle_PromiseType();
 
     /**
+     * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseTypeImpl <em>Bundle Promise Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseTypeImpl
+     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundlePromiseType()
+     * @generated
+     */
+    EClass BUNDLE_PROMISE_TYPE = eINSTANCE.getBundlePromiseType();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUNDLE_PROMISE_TYPE__NAME = eINSTANCE.getBundlePromiseType_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Promises</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BUNDLE_PROMISE_TYPE__PROMISES = eINSTANCE.getBundlePromiseType_Promises();
+
+    /**
+     * The meta object literal for the '<em><b>Classes</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BUNDLE_PROMISE_TYPE__CLASSES = eINSTANCE.getBundlePromiseType_Classes();
+
+    /**
+     * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundleClassImpl <em>Bundle Class</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundleClassImpl
+     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundleClass()
+     * @generated
+     */
+    EClass BUNDLE_CLASS = eINSTANCE.getBundleClass();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUNDLE_CLASS__NAME = eINSTANCE.getBundleClass_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Promises</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BUNDLE_CLASS__PROMISES = eINSTANCE.getBundleClass_Promises();
+
+    /**
+     * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseImpl <em>Bundle Promise</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseImpl
+     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundlePromise()
+     * @generated
+     */
+    EClass BUNDLE_PROMISE = eINSTANCE.getBundlePromise();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUNDLE_PROMISE__NAME = eINSTANCE.getBundlePromise_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Values</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BUNDLE_PROMISE__VALUES = eINSTANCE.getBundlePromise_Values();
+
+    /**
+     * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.PromiseValueImpl <em>Promise Value</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.PromiseValueImpl
+     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getPromiseValue()
+     * @generated
+     */
+    EClass PROMISE_VALUE = eINSTANCE.getPromiseValue();
+
+    /**
+     * The meta object literal for the '<em><b>Keyword</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROMISE_VALUE__KEYWORD = eINSTANCE.getPromiseValue_Keyword();
+
+    /**
+     * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROMISE_VALUE__VALUES = eINSTANCE.getPromiseValue_Values();
+
+    /**
+     * The meta object literal for the '<em><b>Functions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROMISE_VALUE__FUNCTIONS = eINSTANCE.getPromiseValue_Functions();
+
+    /**
      * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyImpl <em>Body</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -943,6 +1419,32 @@ public interface CfenginePackage extends EPackage
      * @generated
      */
     EReference BODY__CLASSES = eINSTANCE.getBody_Classes();
+
+    /**
+     * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyClassImpl <em>Body Class</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyClassImpl
+     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBodyClass()
+     * @generated
+     */
+    EClass BODY_CLASS = eINSTANCE.getBodyClass();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BODY_CLASS__NAME = eINSTANCE.getBodyClass_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Promise Type</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BODY_CLASS__PROMISE_TYPE = eINSTANCE.getBodyClass_PromiseType();
 
     /**
      * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyFunctionImpl <em>Body Function</em>}' class.
@@ -987,6 +1489,32 @@ public interface CfenginePackage extends EPackage
     EReference BODY_FUNCTION__FUNCTION = eINSTANCE.getBodyFunction_Function();
 
     /**
+     * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.SimpleFunctionImpl <em>Simple Function</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.SimpleFunctionImpl
+     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getSimpleFunction()
+     * @generated
+     */
+    EClass SIMPLE_FUNCTION = eINSTANCE.getSimpleFunction();
+
+    /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIMPLE_FUNCTION__ID = eINSTANCE.getSimpleFunction_Id();
+
+    /**
+     * The meta object literal for the '<em><b>Values</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIMPLE_FUNCTION__VALUES = eINSTANCE.getSimpleFunction_Values();
+
+    /**
      * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.SpecialFunctionImpl <em>Special Function</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -997,30 +1525,20 @@ public interface CfenginePackage extends EPackage
     EClass SPECIAL_FUNCTION = eINSTANCE.getSpecialFunction();
 
     /**
+     * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPECIAL_FUNCTION__ID = eINSTANCE.getSpecialFunction_Id();
+
+    /**
      * The meta object literal for the '<em><b>Func</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference SPECIAL_FUNCTION__FUNC = eINSTANCE.getSpecialFunction_Func();
-
-    /**
-     * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseTypeImpl <em>Bundle Promise Type</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseTypeImpl
-     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundlePromiseType()
-     * @generated
-     */
-    EClass BUNDLE_PROMISE_TYPE = eINSTANCE.getBundlePromiseType();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BUNDLE_PROMISE_TYPE__NAME = eINSTANCE.getBundlePromiseType_Name();
 
     /**
      * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyPromiseTypeImpl <em>Body Promise Type</em>}' class.
@@ -1075,32 +1593,6 @@ public interface CfenginePackage extends EPackage
      * @generated
      */
     EAttribute BODY_COMPONENT__NAME = eINSTANCE.getBodyComponent_Name();
-
-    /**
-     * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyClassImpl <em>Body Class</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyClassImpl
-     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBodyClass()
-     * @generated
-     */
-    EClass BODY_CLASS = eINSTANCE.getBodyClass();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BODY_CLASS__NAME = eINSTANCE.getBodyClass_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Promise Type</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BODY_CLASS__PROMISE_TYPE = eINSTANCE.getBodyClass_PromiseType();
 
   }
 

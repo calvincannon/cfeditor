@@ -30,7 +30,6 @@ public class ClassLabelProvider extends ColumnLabelProvider {
 			} else {
 				return (String) ((TreeNode) element).getValue();
 			}
-
 		}
 		return null;
 	}

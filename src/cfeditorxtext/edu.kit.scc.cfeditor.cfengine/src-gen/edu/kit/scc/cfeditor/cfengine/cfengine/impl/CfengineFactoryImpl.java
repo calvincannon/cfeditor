@@ -72,14 +72,18 @@ public class CfengineFactoryImpl extends EFactoryImpl implements CfengineFactory
       case CfenginePackage.ABSTRACT_ELEMENT: return createAbstractElement();
       case CfenginePackage.PART: return createPart();
       case CfenginePackage.BUNDLE: return createBundle();
-      case CfenginePackage.BODY: return createBody();
-      case CfenginePackage.BODY_FUNCTION: return createBodyFunction();
-      case CfenginePackage.SPECIAL_FUNCTION: return createSpecialFunction();
       case CfenginePackage.BUNDLE_PROMISE_TYPE: return createBundlePromiseType();
+      case CfenginePackage.BUNDLE_CLASS: return createBundleClass();
+      case CfenginePackage.BUNDLE_PROMISE: return createBundlePromise();
+      case CfenginePackage.PROMISE_VALUE: return createPromiseValue();
+      case CfenginePackage.BODY: return createBody();
+      case CfenginePackage.BODY_CLASS: return createBodyClass();
+      case CfenginePackage.BODY_FUNCTION: return createBodyFunction();
+      case CfenginePackage.SIMPLE_FUNCTION: return createSimpleFunction();
+      case CfenginePackage.SPECIAL_FUNCTION: return createSpecialFunction();
       case CfenginePackage.BODY_PROMISE_TYPE: return createBodyPromiseType();
       case CfenginePackage.BUNDLE_COMPONENT: return createBundleComponent();
       case CfenginePackage.BODY_COMPONENT: return createBodyComponent();
-      case CfenginePackage.BODY_CLASS: return createBodyClass();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -134,10 +138,65 @@ public class CfengineFactoryImpl extends EFactoryImpl implements CfengineFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public BundlePromiseType createBundlePromiseType()
+  {
+    BundlePromiseTypeImpl bundlePromiseType = new BundlePromiseTypeImpl();
+    return bundlePromiseType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BundleClass createBundleClass()
+  {
+    BundleClassImpl bundleClass = new BundleClassImpl();
+    return bundleClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BundlePromise createBundlePromise()
+  {
+    BundlePromiseImpl bundlePromise = new BundlePromiseImpl();
+    return bundlePromise;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PromiseValue createPromiseValue()
+  {
+    PromiseValueImpl promiseValue = new PromiseValueImpl();
+    return promiseValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Body createBody()
   {
     BodyImpl body = new BodyImpl();
     return body;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BodyClass createBodyClass()
+  {
+    BodyClassImpl bodyClass = new BodyClassImpl();
+    return bodyClass;
   }
 
   /**
@@ -156,10 +215,10 @@ public class CfengineFactoryImpl extends EFactoryImpl implements CfengineFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SpecialFunction createSpecialFunction()
+  public SimpleFunction createSimpleFunction()
   {
-    SpecialFunctionImpl specialFunction = new SpecialFunctionImpl();
-    return specialFunction;
+    SimpleFunctionImpl simpleFunction = new SimpleFunctionImpl();
+    return simpleFunction;
   }
 
   /**
@@ -167,10 +226,10 @@ public class CfengineFactoryImpl extends EFactoryImpl implements CfengineFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public BundlePromiseType createBundlePromiseType()
+  public SpecialFunction createSpecialFunction()
   {
-    BundlePromiseTypeImpl bundlePromiseType = new BundlePromiseTypeImpl();
-    return bundlePromiseType;
+    SpecialFunctionImpl specialFunction = new SpecialFunctionImpl();
+    return specialFunction;
   }
 
   /**
@@ -204,17 +263,6 @@ public class CfengineFactoryImpl extends EFactoryImpl implements CfengineFactory
   {
     BodyComponentImpl bodyComponent = new BodyComponentImpl();
     return bodyComponent;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BodyClass createBodyClass()
-  {
-    BodyClassImpl bodyClass = new BodyClassImpl();
-    return bodyClass;
   }
 
   /**

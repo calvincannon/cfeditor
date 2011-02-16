@@ -37,11 +37,22 @@ public class ClassTreeBuilder {
 
 		CfengineEditorModelHandler cfModelHandler = new CfengineEditorModelHandler();
 
+		HashMap<String, String> occurrencesMap = cfModelHandler.getClassOccurrences(uriList);
+
 		CompositeNode node;
 		for (Entry<String, HashMap<String, EObject>> classList : cfModelHandler.getSortedBodyClasses(uriList)
 				.entrySet()) {
 
-			TreeNode classNode = new TreeNode(classList.getKey());
+			String className = classList.getKey();
+			String occurrences = occurrencesMap.get(className);
+
+			TreeNode classNode;
+			
+			if (occurrences != null) {
+				classNode = new TreeNode(className + " (connects: " + occurrences + ")");
+			} else {
+				classNode = new TreeNode(className);
+			}
 
 			ArrayList<TreeNode> children = new ArrayList<TreeNode>();
 
@@ -59,7 +70,10 @@ public class ClassTreeBuilder {
 			}
 			nodeList.add(classNode);
 		}
-
-		return nodeList.toArray(new TreeNode[1]);
+		if (nodeList.isEmpty()) {
+			return null;
+		} else {
+			return nodeList.toArray(new TreeNode[1]);
+		}
 	}
 }

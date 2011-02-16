@@ -1,10 +1,14 @@
 package edu.kit.scc.cfeditor.ui.internal;
 
+import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 /**
  * The activator class controls the plug-in life cycle
+ * 
+ * @author Andreas Bender
+ * 
  */
 public class CfeditorActivator extends AbstractUIPlugin {
 
@@ -45,6 +49,17 @@ public class CfeditorActivator extends AbstractUIPlugin {
 	 */
 	public static CfeditorActivator getDefault() {
 		return plugin;
+	}
+	
+	/**
+	 * Returns an image descriptor for the image file at the given
+	 * plug-in relative path
+	 *
+	 * @param path the path
+	 * @return the image descriptor
+	 */
+	public static ImageDescriptor getImageDescriptor(String path) {
+		return imageDescriptorFromPlugin(PLUGIN_ID, path);
 	}
 
 }

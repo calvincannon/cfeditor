@@ -11,7 +11,8 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.wizards.IWizardDescriptor;
 
 enum CMEngine {
-	CFENGINE, PUPPET //, DUMMY
+	CFENGINE, OTHER
+	// , DUMMY
 }
 
 public class NewCfProjectWizard extends Wizard implements INewWizard {
@@ -32,23 +33,21 @@ public class NewCfProjectWizard extends Wizard implements INewWizard {
 
 		switch (selectedEngine) {
 		case CFENGINE:
-			IWizardDescriptor descriptor = PlatformUI.getWorkbench().getNewWizardRegistry()
-					.findWizard("edu.kit.scc.cfeditor.cfengine.ui.wizard.CfengineEditorNewProjectWizard");
-
-			IWizard wizard;
 			try {
-				wizard = descriptor.createWizard();
-				WizardDialog wd = new WizardDialog(this.getShell(), wizard);
-				wd.setTitle(wizard.getWindowTitle());
-				wd.open();
+				startCfengineProjectWizard();
 			} catch (CoreException e) {
 				return false;
 			}
 			return true;
-		case PUPPET:
-			break;
-//		case DUMMY:
-//			break;
+		case OTHER:
+			try {
+				startCfengineProjectWizard();
+			} catch (CoreException e) {
+				return false;
+			}
+			return true;
+			// case DUMMY:
+			// break;
 		}
 
 		return false;
@@ -74,4 +73,14 @@ public class NewCfProjectWizard extends Wizard implements INewWizard {
 		return selectedEngine;
 	}
 
+	private void startCfengineProjectWizard() throws CoreException {
+		IWizardDescriptor descriptor = PlatformUI.getWorkbench().getNewWizardRegistry()
+				.findWizard("edu.kit.scc.cfeditor.cfengine.ui.wizard.CfengineEditorNewProjectWizard");
+
+		IWizard wizard;
+		wizard = descriptor.createWizard();
+		WizardDialog wd = new WizardDialog(this.getShell(), wizard);
+		wd.setTitle(wizard.getWindowTitle());
+		wd.open();
+	}
 }
