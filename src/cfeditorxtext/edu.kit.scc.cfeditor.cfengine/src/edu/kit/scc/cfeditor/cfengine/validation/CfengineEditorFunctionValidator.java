@@ -7,8 +7,7 @@ import org.eclipse.emf.common.util.EList;
 import edu.kit.scc.cfeditor.cfengine.definitions.CfDefinitionProvider;
 
 /**
- * A validation class, which is responsible for validating BodyFunctions and
- * their values.
+ * A validation class, which is responsible for validating BodyFunctions and their values.
  * 
  * @author Andreas Bender
  * 
@@ -18,8 +17,7 @@ public class CfengineEditorFunctionValidator {
 	private CfengineEditorFunctionType typeEnum;
 
 	/**
-	 * Main method for BodyFunction validation. Returns an error message or null
-	 * if the function is valid.
+	 * Main method for BodyFunction validation. Returns an error message or null if the function is valid.
 	 * 
 	 * @param functionName
 	 * @param values
@@ -234,8 +232,7 @@ public class CfengineEditorFunctionValidator {
 	}
 
 	/**
-	 * Checks if the variables in a string are in the declared list of
-	 * variables.
+	 * Checks if the variables in a string are in the declared list of variables.
 	 * 
 	 * @param value
 	 * @param variables

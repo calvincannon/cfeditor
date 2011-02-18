@@ -9,5 +9,5 @@ import org.eclipse.xtext.ui.wizard.DefaultProjectInfo;
  * 
  */
 public class CfengineEditorProjectInfo extends DefaultProjectInfo {
-	
+
 }

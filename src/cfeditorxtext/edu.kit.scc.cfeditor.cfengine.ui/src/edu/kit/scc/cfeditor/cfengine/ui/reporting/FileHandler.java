@@ -17,8 +17,7 @@ import org.eclipse.core.runtime.CoreException;
 public class FileHandler {
 
 	/**
-	 * Returns the list of URIs (as Strings) of all files in an eclipse project
-	 * which have the given file extension.
+	 * Returns the list of URIs (as Strings) of all files in an eclipse project which have the given file extension.
 	 * 
 	 * @param activeProject
 	 *            the project which contains the wanted files
@@ -37,8 +36,7 @@ public class FileHandler {
 	}
 
 	/**
-	 * Checks all member elements and children and returns the URI list of files
-	 * with the given extension.
+	 * Checks all member elements and children and returns the URI list of files with the given extension.
 	 * 
 	 * @param members
 	 *            project members
@@ -66,7 +64,7 @@ public class FileHandler {
 				}
 			}
 		}
-		
+
 		return uriList;
 	}
 }

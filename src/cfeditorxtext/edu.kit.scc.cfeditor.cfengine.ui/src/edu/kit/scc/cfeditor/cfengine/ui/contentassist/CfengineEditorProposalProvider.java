@@ -24,9 +24,8 @@ import edu.kit.scc.cfeditor.cfengine.validation.CfengineEditorFunctionType;
  * 
  * @author Andreas Bender
  * 
- *         see
- *         http://www.eclipse.org/Xtext/documentation/latest/xtext.html#contentAssist
- *         on how to customize content assistant
+ *         see http://www.eclipse.org/Xtext/documentation/latest/xtext.html#contentAssist on how to customize content
+ *         assistant
  */
 public class CfengineEditorProposalProvider extends AbstractCfengineEditorProposalProvider {
 
@@ -113,8 +112,7 @@ public class CfengineEditorProposalProvider extends AbstractCfengineEditorPropos
 	}
 
 	/**
-	 * Provides content assist for body function values for example OPTION type
-	 * values.
+	 * Provides content assist for body function values for example OPTION type values.
 	 * 
 	 * @param model
 	 * @param assignment

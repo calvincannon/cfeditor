@@ -7,7 +7,6 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
-import org.eclipse.ui.plugin.AbstractUIPlugin;
 
 import edu.kit.scc.cfeditor.ui.internal.CfeditorActivator;
 
@@ -15,7 +14,8 @@ public class CfeditorSelectExtWizardPage extends WizardPage implements Listener 
 
 	private Button btCfengine;
 	private Button btOther;
-//	private Button btDummy;
+
+	// private Button btDummy;
 
 	protected CfeditorSelectExtWizardPage(String pageName) {
 		super(pageName);
@@ -39,16 +39,16 @@ public class CfeditorSelectExtWizardPage extends WizardPage implements Listener 
 		btCfengine = new Button(composite, SWT.RADIO);
 		btCfengine.setText("Cfengine Project");
 		btCfengine.addListener(SWT.Selection, this);
-		
+
 		btOther = new Button(composite, SWT.RADIO);
 		btOther.setText("Other Project");
 		btOther.addListener(SWT.Selection, this);
-		
-//		btDummy = new Button(composite, SWT.RADIO);
-//		btDummy.setText("Dummy Project");
-//		btDummy.addListener(SWT.Selection, this);
-		
-//		btDummy.setEnabled(false);
+
+		// btDummy = new Button(composite, SWT.RADIO);
+		// btDummy.setText("Dummy Project");
+		// btDummy.addListener(SWT.Selection, this);
+
+		// btDummy.setEnabled(false);
 
 		setControl(composite);
 	}
@@ -61,8 +61,8 @@ public class CfeditorSelectExtWizardPage extends WizardPage implements Listener 
 			cfWizard.setSelectedEngine(CMEngine.CFENGINE);
 		} else if (btOther.getSelection()) {
 			cfWizard.setSelectedEngine(CMEngine.OTHER);
-//		} else if (btDummy.getSelection()) {
-//			cfWizard.setSelectedEngine(CMEngine.DUMMY);
+			// } else if (btDummy.getSelection()) {
+			// cfWizard.setSelectedEngine(CMEngine.DUMMY);
 		}
 		cfWizard.getContainer().updateButtons();
 	}

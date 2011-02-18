@@ -18,8 +18,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 public class ModelHandler {
 
 	/**
-	 * Returns a map of file URIs (as Strings) and corresponding resource
-	 * objects.
+	 * Returns a map of file URIs (as Strings) and corresponding resource objects.
 	 * 
 	 * @param uriList
 	 *            list of file URIs (as Strings)

@@ -19,8 +19,7 @@ import com.google.inject.Inject;
 public class CfengineEditorTerminalConverters extends DefaultTerminalConverters {
 
 	/**
-	 * Defines a custom string value converter to fix problems with escape
-	 * characters.
+	 * Defines a custom string value converter to fix problems with escape characters.
 	 * 
 	 * @author Andreas Bender
 	 * 

@@ -12,7 +12,7 @@ import org.eclipse.core.runtime.CoreException;
 public abstract class AbstractCfeditorProjectCreator {
 
 	private static final String[] FOLDER_PATHS = { "parent/child1-1/child2", "parent/child1-2/child2/child3" };
-	
+
 	public static IProject createProject(String projectName, URI location) {
 		IProject project = createBaseProject(projectName, location);
 
@@ -68,8 +68,7 @@ public abstract class AbstractCfeditorProjectCreator {
 	}
 
 	/**
-	 * Create a folder structure with a parent root, overlay, and a few child
-	 * folders.
+	 * Create a folder structure with a parent root, overlay, and a few child folders.
 	 * 
 	 * @param newProject
 	 * @param paths

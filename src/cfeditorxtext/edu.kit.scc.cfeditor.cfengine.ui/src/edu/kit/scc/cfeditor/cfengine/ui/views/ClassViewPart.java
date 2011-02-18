@@ -25,13 +25,13 @@ import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.part.ViewPart;
 import org.eclipse.ui.texteditor.ITextEditor;
 
-import edu.kit.scc.cfeditor.cfengine.ui.reporting.BodyFunctionElement;
 import edu.kit.scc.cfeditor.cfengine.ui.reporting.ClassLabelProvider;
 import edu.kit.scc.cfeditor.cfengine.ui.reporting.ClassTreeBuilder;
+import edu.kit.scc.cfeditor.cfengine.ui.reporting.EObjectSourceElement;
 
 /**
- * This class is responsible for displaying the "Class View". It creates the
- * view window and handles user interactions with the view.
+ * This class is responsible for displaying the "Class View". It creates the view window and handles user interactions
+ * with the view.
  * 
  * @author Andreas Bender
  * 
@@ -41,13 +41,13 @@ public class ClassViewPart extends ViewPart {
 
 	private IPartListener2 partListener;
 	private IPropertyListener propertyListener;
+	// private IResourceChangeListener resourceChangedListener; TODO
 
 	private TreeViewer treeViewer;
 	private ClassTreeBuilder treeBuilder;
 
 	/**
-	 * Creates the graphical tree elements and handles user interactions (double
-	 * click event).
+	 * Creates the graphical tree elements and handles user interactions (double click event).
 	 */
 	@Override
 	public void createPartControl(Composite parent) {
@@ -61,9 +61,8 @@ public class ClassViewPart extends ViewPart {
 
 		treeViewer.addDoubleClickListener(new IDoubleClickListener() {
 			/**
-			 * Handles double click event on a body function. Opens
-			 * corresponding file in editor and jumps to the position of the
-			 * selected body function.
+			 * Handles double click event on a body function. Opens corresponding file in editor and jumps to the
+			 * position of the selected body function.
 			 */
 			public void doubleClick(DoubleClickEvent event) {
 				if (event.getSelection() instanceof ISelection) {
@@ -71,18 +70,24 @@ public class ClassViewPart extends ViewPart {
 					Object domain = selection.getFirstElement();
 
 					if (domain instanceof TreeNode) {
-						if (((TreeNode) domain).getValue() instanceof BodyFunctionElement) {
-							BodyFunctionElement functionElement = (BodyFunctionElement) ((TreeNode) domain).getValue();
+						if (((TreeNode) domain).getValue() instanceof EObjectSourceElement) {
+							EObjectSourceElement sourceElement = (EObjectSourceElement) ((TreeNode) domain).getValue();
 
-							URI uri = URI.create(functionElement.getUri());
+							URI uri = URI.create(sourceElement.getUri());
 
 							try {
 								ITextEditor cfEditor = (ITextEditor) IDE.openEditor(PlatformUI.getWorkbench()
 										.getActiveWorkbenchWindow().getActivePage(), uri,
 										"edu.kit.scc.cfeditor.cfengine.editor", true);
-								cfEditor.selectAndReveal(functionElement.getOffset(), 0);
+								cfEditor.selectAndReveal(sourceElement.getOffset(), 0);
 							} catch (PartInitException e) {
 								// ignore
+							} catch (ClassCastException e) {
+								// Error: could not open text a editor - happens
+								// for example
+								// if necessary file document is deleted and
+								// "class view" tree
+								// is still used (double click)
 							}
 						}
 					}
@@ -110,11 +115,32 @@ public class ClassViewPart extends ViewPart {
 	@Override
 	public void init(final IViewSite site) throws PartInitException {
 		super.init(site);
+		// TODO
+		// resourceChangedListener = new IResourceChangeListener() {
+		//
+		// public void resourceChanged(IResourceChangeEvent event) {
+		// System.out.println("event!!!: " + event.getType() + " : " + event.getResource());
+		// if (event.getType() == IResourceChangeEvent.POST_CHANGE
+		// || event.getType() == IResourceChangeEvent.PRE_DELETE) {
+		//
+		// IEditorPart editorPart = null;
+		//
+		// try {
+		// editorPart = site.getWorkbenchWindow().getActivePage().getActiveEditor();
+		//
+		// // if (editorPart != null) {
+		// refreshView(editorPart, true);
+		// // }
+		// } catch (NullPointerException e) {
+		// // ignore
+		// }
+		// }
+		// }
+		// };
 
 		propertyListener = new IPropertyListener() {
 			/**
-			 * Checks if active editor input has been saved and refreshes view
-			 * if necessary.
+			 * Checks if active editor input has been saved and refreshes view if necessary.
 			 */
 			public void propertyChanged(Object source, int propId) {
 				if (propId == IEditorPart.PROP_DIRTY) {
@@ -163,8 +189,7 @@ public class ClassViewPart extends ViewPart {
 					editorPart = partRef.getPage().getActiveEditor();
 
 					if (editorPart != null) {
-						editorPart.addPropertyListener(propertyListener);// TODO
-																			// !
+						editorPart.addPropertyListener(propertyListener);
 
 						refreshView(editorPart, false);
 					}
@@ -173,7 +198,9 @@ public class ClassViewPart extends ViewPart {
 				}
 			}
 		};
+
 		site.getWorkbenchWindow().getPartService().addPartListener(partListener);
+		// ResourcesPlugin.getWorkspace().addResourceChangeListener(resourceChangedListener); //TODO
 	}
 
 	/**
@@ -182,29 +209,35 @@ public class ClassViewPart extends ViewPart {
 	public void dispose() {
 		super.dispose();
 		this.getSite().getWorkbenchWindow().getPartService().removePartListener(partListener);
+		// ResourcesPlugin.getWorkspace().removeResourceChangeListener(resourceChangedListener); //TODO
 	}
 
 	/**
-	 * Refreshes the body class tree if active project has changed or
-	 * forceRefresh flag is true.
+	 * Refreshes the body class tree if active project has changed or forceRefresh flag is true.
 	 */
 	private void refreshView(IEditorPart editorPart, boolean forceRefresh) {
 		IProject oldActiveProject = activeProject;
-		
-		try {
-			IFileEditorInput input = (IFileEditorInput) editorPart.getEditorInput();
-			IFile file = input.getFile();
-			activeProject = file.getProject();
-			
-			if (forceRefresh || null == oldActiveProject || !oldActiveProject.equals(activeProject)) {
-				if (treeViewer != null) {
-					TreeNode[] treeNodes = treeBuilder.getTreeNodes(activeProject);
-					
-					treeViewer.setInput(treeNodes);
-				}
+
+		if (editorPart == null) {
+			if (treeViewer != null) {
+				treeViewer.setInput(null);
 			}
-		} catch (ClassCastException e) {
-			// ignore
+		} else {
+			try {
+				IFileEditorInput input = (IFileEditorInput) editorPart.getEditorInput();
+				IFile file = input.getFile();
+				activeProject = file.getProject();
+
+				if (forceRefresh || null == oldActiveProject || !oldActiveProject.equals(activeProject)) {
+					if (treeViewer != null) {
+						TreeNode[] treeNodes = treeBuilder.getTreeNodes(activeProject);
+
+						treeViewer.setInput(treeNodes);
+					}
+				}
+			} catch (ClassCastException e) {
+				// ignore
+			}
 		}
 	}
 }

@@ -17,8 +17,7 @@ import edu.kit.scc.cfeditor.cfengine.definitions.CfDefinitionProvider;
 public class NewCfFileWizardPage extends WizardNewFileCreationPage {
 
 	/**
-	 * Constructor. Defines title and description of the wizard page and defines
-	 * the default file extension (.cf).
+	 * Constructor. Defines title and description of the wizard page and defines the default file extension (.cf).
 	 * 
 	 * @param selection
 	 */
@@ -27,7 +26,8 @@ public class NewCfFileWizardPage extends WizardNewFileCreationPage {
 		setTitle("Cf File");
 		setDescription("Create a new Cf File");
 		setFileExtension("cf");
-		setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("edu.kit.scc.cfeditor.cfengine.ui", "icons/CfeditorWizard.png"));
+		setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("edu.kit.scc.cfeditor.cfengine.ui",
+				"icons/CfeditorWizard.png"));
 	}
 
 	/**

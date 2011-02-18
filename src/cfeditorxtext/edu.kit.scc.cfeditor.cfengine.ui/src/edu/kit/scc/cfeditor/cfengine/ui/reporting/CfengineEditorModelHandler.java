@@ -12,6 +12,7 @@ import edu.kit.scc.cfeditor.cfengine.cfengine.AbstractElement;
 import edu.kit.scc.cfeditor.cfengine.cfengine.Body;
 import edu.kit.scc.cfeditor.cfengine.cfengine.BodyClass;
 import edu.kit.scc.cfeditor.cfengine.cfengine.Bundle;
+import edu.kit.scc.cfeditor.cfengine.cfengine.BundleClass;
 import edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromise;
 import edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType;
 import edu.kit.scc.cfeditor.cfengine.cfengine.CfModel;
@@ -27,37 +28,57 @@ import edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction;
 public class CfengineEditorModelHandler extends ModelHandler {
 
 	/**
-	 * Returns a map of body class objects grouped by name which are contained
-	 * in the given file list.
+	 * Returns a map of all class objects (body and bundle classes) grouped by name which are contained in the given
+	 * file list.
 	 * <p>
 	 * Design of the hash map:
 	 * </p>
 	 * <p>
-	 * String : String -> EObject<br>
-	 * (class name: URI -> class object)
+	 * String : List of {@link LocatedEObject}<br>
+	 * (class name: List of (URI -> class object))
 	 * </p>
-	 * <p>
-	 * "classA" : file URI (String) of body class object 1 with name "classA" ->
-	 * body class object 1<br>
-	 * file URI (String) of body class object 2 with name "classA" -> body class
-	 * object 2<br>
-	 * ...
-	 * </p>
-	 * <p>
-	 * "classB" : ...
-	 * </p>
-	 * ...
 	 * 
 	 * @param uriList
 	 *            list of file URIs (as Strings)
 	 * @return sorted map (see description)
 	 */
-	public HashMap<String, HashMap<String, EObject>> getSortedBodyClasses(LinkedList<String> uriList) {
+	public HashMap<String, LinkedList<LocatedEObject>> getSortedClasses(LinkedList<String> uriList) {
+		HashMap<String, EObject> resources = getResourcesMap(uriList);
+
+		HashMap<String, LinkedList<LocatedEObject>> bodyClasses = getSortedBodyClasses(resources);
+		HashMap<String, LinkedList<LocatedEObject>> bundleClasses = getSortedBundleClasses(resources);
+
+		for (String bodyClassName : bodyClasses.keySet()) {
+			if (bundleClasses.containsKey(bodyClassName)) {
+				bundleClasses.get(bodyClassName).addAll(bodyClasses.get(bodyClassName));
+			} else {
+				bundleClasses.put(bodyClassName, bodyClasses.get(bodyClassName));
+			}
+		}
+
+		return bundleClasses;
+	}
+
+	/**
+	 * Returns a map of body class objects grouped by name which are contained in the given file list.
+	 * <p>
+	 * Design of the hash map:
+	 * </p>
+	 * <p>
+	 * String : List of {@link LocatedEObject}<br>
+	 * (class name: List of (URI -> class object))
+	 * </p>
+	 * 
+	 * @param uriList
+	 *            list of file URIs (as Strings)
+	 * @return sorted map (see description)
+	 */
+	public HashMap<String, LinkedList<LocatedEObject>> getSortedBodyClasses(LinkedList<String> uriList) {
 		return getSortedBodyClasses(getResourcesMap(uriList));
 	}
 
-	private HashMap<String, HashMap<String, EObject>> getSortedBodyClasses(HashMap<String, EObject> resourcesMap) {
-		HashMap<String, HashMap<String, EObject>> bodyClassesMap = new HashMap<String, HashMap<String, EObject>>();
+	private HashMap<String, LinkedList<LocatedEObject>> getSortedBodyClasses(HashMap<String, EObject> resourcesMap) {
+		HashMap<String, LinkedList<LocatedEObject>> bodyClassesMap = new HashMap<String, LinkedList<LocatedEObject>>();
 
 		CfModel cfModel;
 
@@ -71,11 +92,12 @@ public class CfengineEditorModelHandler extends ModelHandler {
 
 					for (BodyClass bodyClass : classList) {
 						if (bodyClassesMap.containsKey(bodyClass.getName())) {
-							bodyClassesMap.get(bodyClass.getName()).put(resource.getKey(), bodyClass);
+							bodyClassesMap.get(bodyClass.getName()).add(
+									new LocatedEObject(resource.getKey(), bodyClass));
 						} else {
-							HashMap<String, EObject> tempMap = new HashMap<String, EObject>();
-							tempMap.put(resource.getKey(), bodyClass);
-							bodyClassesMap.put(bodyClass.getName(), tempMap);
+							LinkedList<LocatedEObject> tempList = new LinkedList<LocatedEObject>();
+							tempList.add(new LocatedEObject(resource.getKey(), bodyClass));
+							bodyClassesMap.put(bodyClass.getName(), tempList);
 						}
 					}
 				}
@@ -86,8 +108,59 @@ public class CfengineEditorModelHandler extends ModelHandler {
 	}
 
 	/**
-	 * Returns a map of class names and corresponding occurrences of the
-	 * classes.
+	 * Returns a map of bundle class objects grouped by name which are contained in the given file list.
+	 * <p>
+	 * Design of the hash map:
+	 * </p>
+	 * <p>
+	 * String : List of {@link LocatedEObject}<br>
+	 * (class name: List of (URI -> class object))
+	 * </p>
+	 * 
+	 * @param uriList
+	 *            list of file URIs (as Strings)
+	 * @return sorted map (see description)
+	 */
+	public HashMap<String, LinkedList<LocatedEObject>> getSortedBundleClasses(LinkedList<String> uriList) {
+		return getSortedBundleClasses(getResourcesMap(uriList));
+	}
+
+	private HashMap<String, LinkedList<LocatedEObject>> getSortedBundleClasses(HashMap<String, EObject> resourcesMap) {
+		HashMap<String, LinkedList<LocatedEObject>> bundleClassesMap = new HashMap<String, LinkedList<LocatedEObject>>();
+
+		CfModel cfModel;
+
+		for (Entry<String, EObject> resource : resourcesMap.entrySet()) {
+			cfModel = (CfModel) resource.getValue();
+			EList<AbstractElement> elements = cfModel.getElements();
+
+			for (AbstractElement abstractElement : elements) {
+				if (abstractElement instanceof Bundle) {
+
+					EList<BundlePromiseType> promiseTypes = ((Bundle) abstractElement).getPromiseType();
+					for (BundlePromiseType promiseType : promiseTypes) {
+						EList<BundleClass> classList = promiseType.getClasses();
+
+						for (BundleClass bundleClass : classList) {
+							if (bundleClassesMap.containsKey(bundleClass.getName())) {
+								bundleClassesMap.get(bundleClass.getName()).add(
+										new LocatedEObject(resource.getKey(), bundleClass));
+							} else {
+								LinkedList<LocatedEObject> tempList = new LinkedList<LocatedEObject>();
+								tempList.add(new LocatedEObject(resource.getKey(), bundleClass));
+								bundleClassesMap.put(bundleClass.getName(), tempList);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		return bundleClassesMap;
+	}
+
+	/**
+	 * Returns a map of class names and corresponding occurrences of the classes.
 	 * <p>
 	 * HashMap[ClassName][OccurrencesString]
 	 * </p>
@@ -139,8 +212,7 @@ public class CfengineEditorModelHandler extends ModelHandler {
 	}
 
 	/**
-	 * Returns all global variables which are defined in
-	 * "bundle common ... {vars: ...}".
+	 * Returns all global variables which are defined in "bundle common ... {vars: ...}".
 	 * 
 	 * @param resourcesMap
 	 *            the resources to be scanned
@@ -213,7 +285,7 @@ public class CfengineEditorModelHandler extends ModelHandler {
 
 		String keyword = promiseValue.getKeyword();
 
-		if (keyword.equals("expression") || keyword.equals("or")) {
+		if (keyword.equals("or") || keyword.equals("expression") || keyword.equals("not")) {
 			if (!promiseValue.getFunctions().isEmpty()) {
 				strBuffer.append(resolveOccurrencesFromFunctions(promiseValue.getFunctions(), variables, ","));
 			}
@@ -236,9 +308,8 @@ public class CfengineEditorModelHandler extends ModelHandler {
 				}
 				strBuffer.append(resolveOccurrencesFromValues(promiseValue.getValues(), variables, "&"));
 			}
-
-		} else if (keyword.equals("not")) {
-			// TODO implement
+		} else if (keyword.equals("dist")) {
+			strBuffer.append("dist");
 		}
 
 		return strBuffer.toString();
@@ -254,6 +325,11 @@ public class CfengineEditorModelHandler extends ModelHandler {
 					strBuffer.append(separator);
 				}
 				strBuffer.append(resolveOccurrencesFromValues(function.getValues(), variables, separator));
+			} else {
+				if (strBuffer.length() > 0) {
+					strBuffer.append(separator);
+				}
+				strBuffer.append(function.getId());
 			}
 		}
 

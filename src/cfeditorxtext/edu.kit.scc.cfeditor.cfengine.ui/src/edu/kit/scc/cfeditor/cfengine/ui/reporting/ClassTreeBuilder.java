@@ -11,8 +11,6 @@ import org.eclipse.jface.viewers.TreeNode;
 import org.eclipse.xtext.parsetree.CompositeNode;
 import org.eclipse.xtext.parsetree.NodeUtil;
 
-import edu.kit.scc.cfeditor.cfengine.cfengine.BodyFunction;
-
 /**
  * Builds the tree of classes and body function elements for the "Class View".
  * 
@@ -22,8 +20,7 @@ import edu.kit.scc.cfeditor.cfengine.cfengine.BodyFunction;
 public class ClassTreeBuilder {
 
 	/**
-	 * Returns an array of tree nodes which represent the tree of body classes
-	 * and contained body functions.
+	 * Returns an array of tree nodes which represent the tree of body classes and contained body functions.
 	 * 
 	 * @param activeProject
 	 *            the active eclipse project in workspace
@@ -40,14 +37,13 @@ public class ClassTreeBuilder {
 		HashMap<String, String> occurrencesMap = cfModelHandler.getClassOccurrences(uriList);
 
 		CompositeNode node;
-		for (Entry<String, HashMap<String, EObject>> classList : cfModelHandler.getSortedBodyClasses(uriList)
-				.entrySet()) {
+		for (Entry<String, LinkedList<LocatedEObject>> classList : cfModelHandler.getSortedClasses(uriList).entrySet()) {
 
 			String className = classList.getKey();
 			String occurrences = occurrencesMap.get(className);
 
 			TreeNode classNode;
-			
+
 			if (occurrences != null) {
 				classNode = new TreeNode(className + " (connects: " + occurrences + ")");
 			} else {
@@ -56,11 +52,13 @@ public class ClassTreeBuilder {
 
 			ArrayList<TreeNode> children = new ArrayList<TreeNode>();
 
-			for (Entry<String, EObject> classElement : classList.getValue().entrySet()) {
-				for (EObject classContentObject : classElement.getValue().eContents()) {
+			for (LocatedEObject classElement : classList.getValue()) {
+				for (EObject classContentObject : classElement.getEObject().eContents()) {
 					node = NodeUtil.getNode(classContentObject);
-					TreeNode functionNode = new TreeNode(new BodyFunctionElement(classElement.getKey(),
-							node.getOffset(), (BodyFunction) classContentObject));
+
+					TreeNode functionNode = new TreeNode(new EObjectSourceElement(classElement.getUri(),
+							node.getOffset(), classContentObject));
+
 					functionNode.setParent(classNode);
 					children.add(functionNode);
 				}

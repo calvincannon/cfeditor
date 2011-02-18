@@ -964,6 +964,31 @@ rulePromiseValue returns [EObject current=null]
     {
         createLeafNode(grammarAccess.getPromiseValueAccess().getRightCurlyBracketKeyword_2_1_3(), null); 
     }
+)
+    |(	'{' 
+    {
+        createLeafNode(grammarAccess.getPromiseValueAccess().getLeftCurlyBracketKeyword_2_2_0(), null); 
+    }
+	'@' 
+    {
+        createLeafNode(grammarAccess.getPromiseValueAccess().getCommercialAtKeyword_2_2_1(), null); 
+    }
+	'(' 
+    {
+        createLeafNode(grammarAccess.getPromiseValueAccess().getLeftParenthesisKeyword_2_2_2(), null); 
+    }
+RULE_ID
+    { 
+    createLeafNode(grammarAccess.getPromiseValueAccess().getIDTerminalRuleCall_2_2_3(), null); 
+    }
+	')' 
+    {
+        createLeafNode(grammarAccess.getPromiseValueAccess().getRightParenthesisKeyword_2_2_4(), null); 
+    }
+	'}' 
+    {
+        createLeafNode(grammarAccess.getPromiseValueAccess().getRightCurlyBracketKeyword_2_2_5(), null); 
+    }
 )))
 ;
 

@@ -375,14 +375,21 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cFunctionsAssignment_2_1_2_1_1 = (Assignment)cAlternatives_2_1_2_1.eContents().get(1);
 		private final RuleCall cFunctionsSimpleFunctionParserRuleCall_2_1_2_1_1_0 = (RuleCall)cFunctionsAssignment_2_1_2_1_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_2_1_3 = (Keyword)cGroup_2_1.eContents().get(3);
+		private final Group cGroup_2_2 = (Group)cAlternatives_2.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_2_2_0 = (Keyword)cGroup_2_2.eContents().get(0);
+		private final Keyword cCommercialAtKeyword_2_2_1 = (Keyword)cGroup_2_2.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_2_2_2 = (Keyword)cGroup_2_2.eContents().get(2);
+		private final RuleCall cIDTerminalRuleCall_2_2_3 = (RuleCall)cGroup_2_2.eContents().get(3);
+		private final Keyword cRightParenthesisKeyword_2_2_4 = (Keyword)cGroup_2_2.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_2_2_5 = (Keyword)cGroup_2_2.eContents().get(5);
 		
 		//PromiseValue:
 		//	keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) (","
-		//	(values+=STRING | functions+=SimpleFunction))* "}");
+		//	(values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}");
 		public ParserRule getRule() { return rule; }
 
 		//keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) (","
-		//(values+=STRING | functions+=SimpleFunction))* "}")
+		//(values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}")
 		public Group getGroup() { return cGroup; }
 
 		//keyword=ID
@@ -395,7 +402,7 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getEqualsSignGreaterThanSignKeyword_1() { return cEqualsSignGreaterThanSignKeyword_1; }
 
 		//(values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) ("," (values+=STRING |
-		//functions+=SimpleFunction))* "}"
+		//functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}"
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
 		//values+=STRING | functions+=SimpleFunction
@@ -457,6 +464,27 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_2_1_3() { return cRightCurlyBracketKeyword_2_1_3; }
+
+		//"{" "@" "(" ID ")" "}"
+		public Group getGroup_2_2() { return cGroup_2_2; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2_2_0() { return cLeftCurlyBracketKeyword_2_2_0; }
+
+		//"@"
+		public Keyword getCommercialAtKeyword_2_2_1() { return cCommercialAtKeyword_2_2_1; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_2_2_2() { return cLeftParenthesisKeyword_2_2_2; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_2_2_3() { return cIDTerminalRuleCall_2_2_3; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_2_2_4() { return cRightParenthesisKeyword_2_2_4; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_2_2_5() { return cRightCurlyBracketKeyword_2_2_5; }
 	}
 
 	public class BodyElements extends AbstractParserRuleElementFinder {
@@ -622,12 +650,12 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//BodyFunction:
-		//	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
-		//	function+=SpecialFunction | "{" "@" "(" ID ")" "}") ";";
+		//	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+= //TODO List? unnecessary
+		//	STRING ("," values+=STRING)* "}" | function+=SpecialFunction | "{" "@" "(" ID ")" "}") ";";
 		public ParserRule getRule() { return rule; }
 
-		//name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
-		//function+=SpecialFunction | "{" "@" "(" ID ")" "}") ";"
+		//name=BodyPromiseType "=>" (values+=STRING | List?="{" values+= //TODO List? unnecessary
+		//STRING ("," values+=STRING)* "}" | function+=SpecialFunction | "{" "@" "(" ID ")" "}") ";"
 		public Group getGroup() { return cGroup; }
 
 		//name=BodyPromiseType
@@ -639,7 +667,8 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		//"=>"
 		public Keyword getEqualsSignGreaterThanSignKeyword_1() { return cEqualsSignGreaterThanSignKeyword_1; }
 
-		//values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" | function+=SpecialFunction | "{" "@" "(" ID ")" "}"
+		//values+=STRING | List?="{" values+= //TODO List? unnecessary
+		//STRING ("," values+=STRING)* "}" | function+=SpecialFunction | "{" "@" "(" ID ")" "}"
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
 		//values+=STRING
@@ -648,7 +677,8 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getValuesSTRINGTerminalRuleCall_2_0_0() { return cValuesSTRINGTerminalRuleCall_2_0_0; }
 
-		//List?="{" values+=STRING ("," values+=STRING)* "}"
+		//List?="{" values+= //TODO List? unnecessary
+		//STRING ("," values+=STRING)* "}"
 		public Group getGroup_2_1() { return cGroup_2_1; }
 
 		//List?="{"
@@ -657,9 +687,11 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getListLeftCurlyBracketKeyword_2_1_0_0() { return cListLeftCurlyBracketKeyword_2_1_0_0; }
 
-		//values+=STRING
+		//values+= //TODO List? unnecessary
+		//STRING
 		public Assignment getValuesAssignment_2_1_1() { return cValuesAssignment_2_1_1; }
 
+		////TODO List? unnecessary
 		//STRING
 		public RuleCall getValuesSTRINGTerminalRuleCall_2_1_1_0() { return cValuesSTRINGTerminalRuleCall_2_1_1_0; }
 
@@ -1079,7 +1111,7 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 
 	//PromiseValue:
 	//	keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) (","
-	//	(values+=STRING | functions+=SimpleFunction))* "}");
+	//	(values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}");
 	public PromiseValueElements getPromiseValueAccess() {
 		return (pPromiseValue != null) ? pPromiseValue : (pPromiseValue = new PromiseValueElements());
 	}
@@ -1116,8 +1148,8 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//BodyFunction:
-	//	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
-	//	function+=SpecialFunction | "{" "@" "(" ID ")" "}") ";";
+	//	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+= //TODO List? unnecessary
+	//	STRING ("," values+=STRING)* "}" | function+=SpecialFunction | "{" "@" "(" ID ")" "}") ";";
 	public BodyFunctionElements getBodyFunctionAccess() {
 		return (pBodyFunction != null) ? pBodyFunction : (pBodyFunction = new BodyFunctionElements());
 	}
