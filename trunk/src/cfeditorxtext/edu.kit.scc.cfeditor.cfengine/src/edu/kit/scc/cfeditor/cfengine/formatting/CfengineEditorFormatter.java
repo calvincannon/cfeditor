@@ -11,12 +11,11 @@ import edu.kit.scc.cfeditor.cfengine.services.CfengineEditorGrammarAccess;
 /**
  * This class contains custom formatting description.
  * 
- * see : http://www.eclipse.org/Xtext/documentation/latest/xtext.html#formatting
- * on how and when to use it 
+ * see : http://www.eclipse.org/Xtext/documentation/latest/xtext.html#formatting on how and when to use it
  * 
  */
 public class CfengineEditorFormatter extends AbstractDeclarativeFormatter {
-	
+
 	@Override
 	protected void configureFormatting(FormattingConfig c) {
 		CfengineEditorGrammarAccess f = (CfengineEditorGrammarAccess) getGrammarAccess();

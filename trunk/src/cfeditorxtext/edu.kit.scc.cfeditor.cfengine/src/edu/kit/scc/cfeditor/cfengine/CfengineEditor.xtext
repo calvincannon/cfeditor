@@ -53,8 +53,8 @@ BundlePromise:
 	name=STRING (values+=PromiseValue (',' values+=PromiseValue)*)* ';';
 
 PromiseValue:
-	keyword=ID '=>' ((values+=STRING | functions+=SimpleFunction) |( '{' (values+=STRING | functions+=SimpleFunction)
-	(',' (values+=STRING | functions+=SimpleFunction))* '}'));
+	keyword=ID '=>' ((values+=STRING | functions+=SimpleFunction) | ('{' (values+=STRING | functions+=SimpleFunction)
+	(',' (values+=STRING | functions+=SimpleFunction))* '}') | ('{' '@' '(' ID ')' '}'));
 	//	| '{''@' '(' ID ')' '}'); TODO?
 
 //(promiseType+=BundlePromiseType ':' ((PLACEHOLDERB) |
@@ -69,13 +69,12 @@ BodyClass:
 	name=CLASS_ID '::' (promiseType+=BodyFunction)*;
 
 BodyFunction:
-	name=BodyPromiseType '=>' (values+=STRING | List?='{' values+=STRING
+	name=BodyPromiseType '=>' (values+=STRING | List?='{' values+=STRING //TODO List? unnecessary
 	(',' values+=STRING)* '}' | function+=SpecialFunction | '{' '@' '(' ID ')' '}') ';';
 	//	(',' values+=STRING)* '}' | function+=SpecialFunction | '{' '@' (PLACEHOLDERB)* '}') ';';
-	
 SimpleFunction:
-id=ID '(' values+=STRING (','values+=STRING)* ')';
-	
+	id=ID '(' values+=STRING (',' values+=STRING)* ')';
+
 SpecialFunction:
 	id=ID '(' (ANY_OTHER | ID | STRING | INT | ',' | '$(' ID ')' | '${' ID '}' | func+=SpecialFunction)*
 	/*(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* */

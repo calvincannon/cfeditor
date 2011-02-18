@@ -19,8 +19,7 @@ import edu.kit.scc.cfeditor.cfengine.cfengine.CfenginePackage;
 import edu.kit.scc.cfeditor.cfengine.definitions.CfDefinitionProvider;
 
 /**
- * Cfengine code validator. Declares syntax checks which are automatically
- * performed when code in editor is changed.
+ * Cfengine code validator. Declares syntax checks which are automatically performed when code in editor is changed.
  * 
  * @author Andreas Bender
  * 
@@ -61,12 +60,12 @@ public class CfengineEditorJavaValidator extends AbstractCfengineEditorJavaValid
 	public void checkPromiseTypes(BodyPromiseType ptype) {
 		CompositeNode node = NodeUtil.getNode(ptype);
 		EObject eObj = NodeUtil.findASTParentElement(node.getParent());
-		
+
 		if (eObj instanceof BodyClass) {
 			node = NodeUtil.getNode(eObj);
 			eObj = NodeUtil.findASTParentElement(node);
 		}
-		
+
 		if (eObj instanceof Body) {
 			Body body = (Body) eObj;
 			CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
@@ -96,12 +95,12 @@ public class CfengineEditorJavaValidator extends AbstractCfengineEditorJavaValid
 
 		CompositeNode node = NodeUtil.getNode(function);
 		EObject eObj = NodeUtil.findASTParentElement(node);
-		
+
 		if (eObj instanceof BodyClass) {
 			node = NodeUtil.getNode(eObj);
 			eObj = NodeUtil.findASTParentElement(node);
 		}
-		
+
 		if (eObj instanceof Body) {
 			Body body = (Body) eObj;
 			variables = body.getVariables();

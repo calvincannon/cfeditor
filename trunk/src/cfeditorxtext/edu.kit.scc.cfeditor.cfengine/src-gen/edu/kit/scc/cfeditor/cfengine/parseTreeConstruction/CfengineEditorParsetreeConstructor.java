@@ -1103,12 +1103,12 @@ protected class BundlePromise_SemicolonKeyword_2 extends KeywordToken  {
  *
  * PromiseValue:
  * 	keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) (","
- * 	(values+=STRING | functions+=SimpleFunction))* "}");
+ * 	(values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}");
  *
  **/
 
 // keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) (","
-// (values+=STRING | functions+=SimpleFunction))* "}")
+// (values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}")
 protected class PromiseValue_Group extends GroupToken {
 	
 	public PromiseValue_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1193,7 +1193,7 @@ protected class PromiseValue_EqualsSignGreaterThanSignKeyword_1 extends KeywordT
 }
 
 // (values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) ("," (values+=STRING |
-// functions+=SimpleFunction))* "}"
+// functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}"
 protected class PromiseValue_Alternatives_2 extends AlternativesToken {
 
 	public PromiseValue_Alternatives_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1210,6 +1210,7 @@ protected class PromiseValue_Alternatives_2 extends AlternativesToken {
 		switch(index) {
 			case 0: return new PromiseValue_Alternatives_2_0(lastRuleCallOrigin, this, 0, inst);
 			case 1: return new PromiseValue_Group_2_1(lastRuleCallOrigin, this, 1, inst);
+			case 2: return new PromiseValue_Group_2_2(lastRuleCallOrigin, this, 2, inst);
 			default: return null;
 		}	
 	}
@@ -1635,6 +1636,161 @@ protected class PromiseValue_RightCurlyBracketKeyword_2_1_3 extends KeywordToken
 		switch(index) {
 			case 0: return new PromiseValue_Group_2_1_2(lastRuleCallOrigin, this, 0, inst);
 			case 1: return new PromiseValue_Alternatives_2_1_1(lastRuleCallOrigin, this, 1, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+
+// "{" "@" "(" ID ")" "}"
+protected class PromiseValue_Group_2_2 extends GroupToken {
+	
+	public PromiseValue_Group_2_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Group getGrammarElement() {
+		return grammarAccess.getPromiseValueAccess().getGroup_2_2();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new PromiseValue_RightCurlyBracketKeyword_2_2_5(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// "{"
+protected class PromiseValue_LeftCurlyBracketKeyword_2_2_0 extends KeywordToken  {
+	
+	public PromiseValue_LeftCurlyBracketKeyword_2_2_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getPromiseValueAccess().getLeftCurlyBracketKeyword_2_2_0();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new PromiseValue_EqualsSignGreaterThanSignKeyword_1(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// "@"
+protected class PromiseValue_CommercialAtKeyword_2_2_1 extends KeywordToken  {
+	
+	public PromiseValue_CommercialAtKeyword_2_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getPromiseValueAccess().getCommercialAtKeyword_2_2_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new PromiseValue_LeftCurlyBracketKeyword_2_2_0(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// "("
+protected class PromiseValue_LeftParenthesisKeyword_2_2_2 extends KeywordToken  {
+	
+	public PromiseValue_LeftParenthesisKeyword_2_2_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getPromiseValueAccess().getLeftParenthesisKeyword_2_2_2();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new PromiseValue_CommercialAtKeyword_2_2_1(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// ID
+protected class PromiseValue_IDTerminalRuleCall_2_2_3 extends UnassignedTextToken {
+
+	public PromiseValue_IDTerminalRuleCall_2_2_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public RuleCall getGrammarElement() {
+		return grammarAccess.getPromiseValueAccess().getIDTerminalRuleCall_2_2_3();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new PromiseValue_LeftParenthesisKeyword_2_2_2(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// ")"
+protected class PromiseValue_RightParenthesisKeyword_2_2_4 extends KeywordToken  {
+	
+	public PromiseValue_RightParenthesisKeyword_2_2_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getPromiseValueAccess().getRightParenthesisKeyword_2_2_4();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new PromiseValue_IDTerminalRuleCall_2_2_3(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// "}"
+protected class PromiseValue_RightCurlyBracketKeyword_2_2_5 extends KeywordToken  {
+	
+	public PromiseValue_RightCurlyBracketKeyword_2_2_5(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getPromiseValueAccess().getRightCurlyBracketKeyword_2_2_5();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new PromiseValue_RightParenthesisKeyword_2_2_4(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -2266,13 +2422,13 @@ protected class BodyClass_PromiseTypeAssignment_2 extends AssignmentToken  {
 /************ begin Rule BodyFunction ****************
  *
  * BodyFunction:
- * 	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
- * 	function+=SpecialFunction | "{" "@" "(" ID ")" "}") ";";
+ * 	name=BodyPromiseType "=>" (values+=STRING | List?="{" values+= //TODO List? unnecessary
+ * 	STRING ("," values+=STRING)* "}" | function+=SpecialFunction | "{" "@" "(" ID ")" "}") ";";
  *
  **/
 
-// name=BodyPromiseType "=>" (values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" |
-// function+=SpecialFunction | "{" "@" "(" ID ")" "}") ";"
+// name=BodyPromiseType "=>" (values+=STRING | List?="{" values+= //TODO List? unnecessary
+// STRING ("," values+=STRING)* "}" | function+=SpecialFunction | "{" "@" "(" ID ")" "}") ";"
 protected class BodyFunction_Group extends GroupToken {
 	
 	public BodyFunction_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2368,7 +2524,8 @@ protected class BodyFunction_EqualsSignGreaterThanSignKeyword_1 extends KeywordT
 
 }
 
-// values+=STRING | List?="{" values+=STRING ("," values+=STRING)* "}" | function+=SpecialFunction | "{" "@" "(" ID ")" "}"
+// values+=STRING | List?="{" values+= //TODO List? unnecessary
+// STRING ("," values+=STRING)* "}" | function+=SpecialFunction | "{" "@" "(" ID ")" "}"
 protected class BodyFunction_Alternatives_2 extends AlternativesToken {
 
 	public BodyFunction_Alternatives_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2427,7 +2584,8 @@ protected class BodyFunction_ValuesAssignment_2_0 extends AssignmentToken  {
 
 }
 
-// List?="{" values+=STRING ("," values+=STRING)* "}"
+// List?="{" values+= //TODO List? unnecessary
+// STRING ("," values+=STRING)* "}"
 protected class BodyFunction_Group_2_1 extends GroupToken {
 	
 	public BodyFunction_Group_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2483,7 +2641,8 @@ protected class BodyFunction_ListAssignment_2_1_0 extends AssignmentToken  {
 
 }
 
-// values+=STRING
+// values+= //TODO List? unnecessary
+// STRING
 protected class BodyFunction_ValuesAssignment_2_1_1 extends AssignmentToken  {
 	
 	public BodyFunction_ValuesAssignment_2_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {

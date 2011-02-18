@@ -7,19 +7,17 @@ import org.eclipse.emf.common.util.EList;
 import edu.kit.scc.cfeditor.cfengine.definitions.CfDefinitionProvider;
 
 /**
- * A validation class, which is responsible for validating BodyFunctions and
- * their values.
+ * A validation class, which is responsible for validating BodyFunctions and their values.
  * 
  * @author Andreas Bender
  * 
  */
 public class CfFunctionValidator {
 	private final CfDefinitionProvider defProvider = CfDefinitionProvider.getInstance();
-	private CfFunctionType typeEnum;
+	private CfengineEditorFunctionType typeEnum;
 
 	/**
-	 * Main method for BodyFunction validation. Returns an error message or null
-	 * if the function is valid.
+	 * Main method for BodyFunction validation. Returns an error message or null if the function is valid.
 	 * 
 	 * @param functionName
 	 * @param values
@@ -37,7 +35,7 @@ public class CfFunctionValidator {
 			String typeRange = functionAttributes[1];
 
 			try {
-				typeEnum = CfFunctionType.valueOf(functionType);
+				typeEnum = CfengineEditorFunctionType.valueOf(functionType);
 				String customMessage;
 				switch (typeEnum) {
 				case STRING:
@@ -234,8 +232,7 @@ public class CfFunctionValidator {
 	}
 
 	/**
-	 * Checks if the variables in a string are in the declared list of
-	 * variables.
+	 * Checks if the variables in a string are in the declared list of variables.
 	 * 
 	 * @param value
 	 * @param variables

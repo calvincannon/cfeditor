@@ -58,6 +58,7 @@ public class CfengineEditorParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPromiseValueAccess().getGroup(), "rule__PromiseValue__Group__0");
 					put(grammarAccess.getPromiseValueAccess().getGroup_2_1(), "rule__PromiseValue__Group_2_1__0");
 					put(grammarAccess.getPromiseValueAccess().getGroup_2_1_2(), "rule__PromiseValue__Group_2_1_2__0");
+					put(grammarAccess.getPromiseValueAccess().getGroup_2_2(), "rule__PromiseValue__Group_2_2__0");
 					put(grammarAccess.getBodyAccess().getGroup(), "rule__Body__Group__0");
 					put(grammarAccess.getBodyAccess().getGroup_3(), "rule__Body__Group_3__0");
 					put(grammarAccess.getBodyAccess().getGroup_3_2(), "rule__Body__Group_3_2__0");

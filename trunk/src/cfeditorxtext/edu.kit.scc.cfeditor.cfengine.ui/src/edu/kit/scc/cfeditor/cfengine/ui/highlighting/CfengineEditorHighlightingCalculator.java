@@ -16,8 +16,7 @@ import edu.kit.scc.cfeditor.cfengine.cfengine.BundleComponent;
 import edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType;
 
 /**
- * Semantic highlighting calculator. Computes highlighting rules based on the
- * model elements.
+ * Semantic highlighting calculator. Computes highlighting rules based on the model elements.
  * 
  * @author Andreas Bender
  * 

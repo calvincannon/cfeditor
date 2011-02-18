@@ -27,7 +27,7 @@ import com.google.inject.Inject;
  * Wizard for a new CfengineEditor project.
  * 
  * @author Andreas Bender
- *
+ * 
  */
 public class NewProjectWizard extends Wizard implements INewWizard, IExecutableExtension {
 
@@ -137,8 +137,7 @@ public class NewProjectWizard extends Wizard implements INewWizard, IExecutableE
 	}
 
 	/**
-	 * Use this method to read the project settings from the wizard pages and
-	 * feed them into the project info class.
+	 * Use this method to read the project settings from the wizard pages and feed them into the project info class.
 	 */
 	protected IProjectInfo getProjectInfo() {
 		CfengineEditorProjectInfo projectInfo = new CfengineEditorProjectInfo();
@@ -147,24 +146,25 @@ public class NewProjectWizard extends Wizard implements INewWizard, IExecutableE
 	}
 
 	/**
-	 * Use this method to add pages to the wizard. The one-time generated
-	 * version of this class will add a default new project page to the wizard.
+	 * Use this method to add pages to the wizard. The one-time generated version of this class will add a default new
+	 * project page to the wizard.
 	 */
 	public void addPages() {
 		mainPage = new WizardNewProjectCreationPage("Cfengine Project Wizard");
 		mainPage.setTitle("Create a Cfengine Project");
 		mainPage.setDescription("Enter a project name.");
-		mainPage.setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("edu.kit.scc.cfeditor.cfengine.ui", "icons/CfeditorWizard.png"));
+		mainPage.setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("edu.kit.scc.cfeditor.cfengine.ui",
+				"icons/CfeditorWizard.png"));
 		addPage(mainPage);
 	}
 
 	/**
 	 * Sets the configuration element.
 	 * 
-	 * @param config 
-	 * @param propertyName 
-	 * @param data 
-	 * @throws CoreException 
+	 * @param config
+	 * @param propertyName
+	 * @param data
+	 * @throws CoreException
 	 */
 	public void setInitializationData(IConfigurationElement config, String propertyName, Object data)
 			throws CoreException {

@@ -21,8 +21,7 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 
 /**
- * Project creator for new CfengineEditor projects. Defines all settings for the
- * project.
+ * Project creator for new CfengineEditor projects. Defines all settings for the project.
  * 
  * @author Andreas Bender
  * 
@@ -39,12 +38,12 @@ public class CfengineEditorNewProjectCreator extends AbstractProjectCreator {
 	// "org.eclipse.xtext.cfeditor.generator";
 
 	/**
-	 * root folder which contains the cf file, which is opened after project
-	 * creation (important if method "getModelFile" in class "AbstractProjectCreator" is used)
+	 * root folder which contains the cf file, which is opened after project creation (important if method
+	 * "getModelFile" in class "AbstractProjectCreator" is used)
 	 */
 	protected static final String SRC_ROOT = "inputs";
 	// protected static final String SRC_GEN_ROOT = "src-genb";
-	
+
 	protected static final String MAIN_FILE = "inputs/promises.cf";
 
 	/**
@@ -105,7 +104,8 @@ public class CfengineEditorNewProjectCreator extends AbstractProjectCreator {
 		execCtx.registerMetaModel(new JavaBeansMetaModel());
 
 		XpandFacade facade = XpandFacade.create(execCtx);
-		facade.evaluate("edu::kit::scc::cfeditor::cfengine::ui::wizard::CfengineEditorNewProject::main", getProjectInfo());
+		facade.evaluate("edu::kit::scc::cfeditor::cfengine::ui::wizard::CfengineEditorNewProject::main",
+				getProjectInfo());
 
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
@@ -121,8 +121,7 @@ public class CfengineEditorNewProjectCreator extends AbstractProjectCreator {
 	}
 
 	/**
-	 * Configures the project factory. Sets project name and adds folders,
-	 * natures and builders to the project.
+	 * Configures the project factory. Sets project name and adds folders, natures and builders to the project.
 	 * 
 	 * @param factory
 	 * @return project factory
@@ -138,8 +137,8 @@ public class CfengineEditorNewProjectCreator extends AbstractProjectCreator {
 	}
 
 	/**
-	 * Returns list of builders which are added to the project. In this case
-	 * XtextProjectHelper is added for error markers support.
+	 * Returns list of builders which are added to the project. In this case XtextProjectHelper is added for error
+	 * markers support.
 	 * 
 	 * @return list of builders
 	 */

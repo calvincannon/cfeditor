@@ -10,14 +10,14 @@ import org.eclipse.ui.dialogs.WizardNewProjectCreationPage;
 
 public abstract class AbstractCfeditorProjectWizard extends Wizard implements INewWizard {
 
-	private static final String WIZARD_TITLE= "New Cfeditor Project";
-	
+	private static final String WIZARD_TITLE = "New Cfeditor Project";
+
 	private static final String PAGE_NAME = "Custom Plug-in Project Wizard";
-	
+
 	private WizardNewProjectCreationPage _pageOne;
-	
+
 	public AbstractCfeditorProjectWizard() {
-	    setWindowTitle(WIZARD_TITLE);
+		setWindowTitle(WIZARD_TITLE);
 	}
 
 	@Override
@@ -28,16 +28,15 @@ public abstract class AbstractCfeditorProjectWizard extends Wizard implements IN
 
 	@Override
 	public void addPages() {
-	    super.addPages();
+		super.addPages();
 
-	    _pageOne = new WizardNewProjectCreationPage(PAGE_NAME);
-	    _pageOne.setTitle("From Scratch Project");
-	    _pageOne.setDescription("Create something from scratch.");
+		_pageOne = new WizardNewProjectCreationPage(PAGE_NAME);
+		_pageOne.setTitle("From Scratch Project");
+		_pageOne.setDescription("Create something from scratch.");
 
-	    addPage(_pageOne);
+		addPage(_pageOne);
 	}
 
-	
 	@Override
 	public boolean performFinish() {
 		String name = _pageOne.getProjectName();

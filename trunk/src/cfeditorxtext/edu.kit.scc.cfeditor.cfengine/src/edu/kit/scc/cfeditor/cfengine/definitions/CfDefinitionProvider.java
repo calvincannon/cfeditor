@@ -18,8 +18,7 @@ import org.jdom.Namespace;
 import org.jdom.input.SAXBuilder;
 
 /**
- * Provides content of files containing predefined strings. This class is a
- * singleton.
+ * Provides content of files containing predefined strings. This class is a singleton.
  * 
  * @author Andreas Bender
  * 
@@ -73,7 +72,7 @@ public final class CfDefinitionProvider {
 	 *            the name of the definition file
 	 * @return list of definition strings
 	 */
-	public ArrayList<String> getDefinitions(final String fileName) { //TODO use LinkedList?
+	public ArrayList<String> getDefinitions(final String fileName) { // TODO use LinkedList?
 		definitionList = new ArrayList<String>();
 
 		try {
@@ -104,8 +103,7 @@ public final class CfDefinitionProvider {
 	}
 
 	/**
-	 * Returns a HashMap containing the mapping of bundle components to allowed
-	 * promise types.
+	 * Returns a HashMap containing the mapping of bundle components to allowed promise types.
 	 * 
 	 * @return the component - promise types map
 	 */
@@ -148,8 +146,7 @@ public final class CfDefinitionProvider {
 	}
 
 	/**
-	 * Returns a HashMap containing the mapping of bundle components to allowed
-	 * promise types.
+	 * Returns a HashMap containing the mapping of bundle components to allowed promise types.
 	 * 
 	 * @return the component - promise types map
 	 */
@@ -186,8 +183,7 @@ public final class CfDefinitionProvider {
 	}
 
 	/**
-	 * Returns a HashMap containing the mapping of body components to allowed
-	 * promise types.
+	 * Returns a HashMap containing the mapping of body components to allowed promise types.
 	 * 
 	 * @return the component - promise types map
 	 */
@@ -218,8 +214,7 @@ public final class CfDefinitionProvider {
 	}
 
 	/**
-	 * Returns a HashMap containing the mapping of body components to allowed
-	 * promise types.
+	 * Returns a HashMap containing the mapping of body components to allowed promise types.
 	 * 
 	 * @return the component - promise types map
 	 */

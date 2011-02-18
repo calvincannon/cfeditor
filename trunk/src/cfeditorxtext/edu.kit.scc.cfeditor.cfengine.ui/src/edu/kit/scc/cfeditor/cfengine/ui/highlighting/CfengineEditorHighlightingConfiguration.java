@@ -9,26 +9,27 @@ import org.eclipse.xtext.ui.editor.utils.TextStyle;
  * Provides syntax highlighting styles.
  * 
  * @author Andreas Bender
- *
+ * 
  */
 public class CfengineEditorHighlightingConfiguration extends DefaultHighlightingConfiguration {
-	
+
 	/**
 	 * name of style for promise types
 	 */
 	public static final String PROMISE_TYPE = "promiseTypeHighlighting";
 
-	//@Override
+	// @Override
 	/**
 	 * Registers the default styles for the semantic highlighting stage.
 	 * 
-	 * @param acceptor the acceptor is used to announce the various default styles. It is never <code>null</code>.
-	 * @see IHighlightingConfigurationAcceptor#acceptDefaultHighlighting(String, String, org.eclipse.xtext.ui.editor.utils.TextStyle)
+	 * @param acceptor
+	 *            the acceptor is used to announce the various default styles. It is never <code>null</code>.
+	 * @see IHighlightingConfigurationAcceptor#acceptDefaultHighlighting(String, String,
+	 *      org.eclipse.xtext.ui.editor.utils.TextStyle)
 	 */
 	public void configure(final IHighlightingConfigurationAcceptor acceptor) {
-		acceptor.acceptDefaultHighlighting(PROMISE_TYPE, "Promise type",
-				promiseType());
-		
+		acceptor.acceptDefaultHighlighting(PROMISE_TYPE, "Promise type", promiseType());
+
 		acceptor.acceptDefaultHighlighting(KEYWORD_ID, "Keyword", keywordTextStyle());
 		acceptor.acceptDefaultHighlighting(PUNCTUATION_ID, "Punctuation character", punctuationTextStyle());
 		acceptor.acceptDefaultHighlighting(COMMENT_ID, "Comment", commentTextStyle());
