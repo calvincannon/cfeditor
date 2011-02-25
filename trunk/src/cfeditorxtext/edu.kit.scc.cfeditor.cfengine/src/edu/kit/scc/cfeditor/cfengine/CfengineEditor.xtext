@@ -28,8 +28,9 @@ terminal ANY_OTHER:
 	.;
 
 CLASS_ID:
-	ID | (ID '.' ID) | '!' CLASS_ID | '(' CLASS_ID ')';
-	//(ID | '(' | ')' | '|' | '!' | '.')+;
+	ID ('.' CLASS_ID)? | '!' CLASS_ID | '(' CLASS_ID ')' ('.' CLASS_ID)?;
+
+//(ID | '(' | ')' | '|' | '!' | '.')+;
 //PLACEHOLDER:
 //	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')' | '{' | '}' | '@');
 PLACEHOLDERB:
