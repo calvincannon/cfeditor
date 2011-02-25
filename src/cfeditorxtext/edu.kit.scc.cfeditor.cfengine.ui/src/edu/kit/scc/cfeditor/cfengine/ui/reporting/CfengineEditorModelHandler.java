@@ -281,78 +281,78 @@ public class CfengineEditorModelHandler extends ModelHandler {
 	 * @return occurrence string
 	 */
 	private String getOccurrenceString(PromiseValue promiseValue, EList<BundlePromise> variables) {
-		StringBuffer strBuffer = new StringBuffer();
+		StringBuilder strBuilder = new StringBuilder();
 
 		String keyword = promiseValue.getKeyword();
 
 		if (keyword.equals("or") || keyword.equals("expression") || keyword.equals("not")) {
 			if (!promiseValue.getFunctions().isEmpty()) {
-				strBuffer.append(resolveOccurrencesFromFunctions(promiseValue.getFunctions(), variables, ","));
+				strBuilder.append(resolveOccurrencesFromFunctions(promiseValue.getFunctions(), variables, ","));
 			}
 
 			if (!promiseValue.getValues().isEmpty()) {
-				if (strBuffer.length() > 0) {
-					strBuffer.append(",");
+				if (strBuilder.length() > 0) {
+					strBuilder.append(",");
 				}
-				strBuffer.append(resolveOccurrencesFromValues(promiseValue.getValues(), variables, ","));
+				strBuilder.append(resolveOccurrencesFromValues(promiseValue.getValues(), variables, ","));
 			}
 
 		} else if (keyword.equals("and")) {
 			if (!promiseValue.getFunctions().isEmpty()) {
-				strBuffer.append(resolveOccurrencesFromFunctions(promiseValue.getFunctions(), variables, "&"));
+				strBuilder.append(resolveOccurrencesFromFunctions(promiseValue.getFunctions(), variables, "&"));
 			}
 
 			if (!promiseValue.getValues().isEmpty()) {
-				if (strBuffer.length() > 0) {
-					strBuffer.append("&");
+				if (strBuilder.length() > 0) {
+					strBuilder.append("&");
 				}
-				strBuffer.append(resolveOccurrencesFromValues(promiseValue.getValues(), variables, "&"));
+				strBuilder.append(resolveOccurrencesFromValues(promiseValue.getValues(), variables, "&"));
 			}
 		} else if (keyword.equals("dist")) {
-			strBuffer.append("dist");
+			strBuilder.append("dist");
 		}
 
-		return strBuffer.toString();
+		return strBuilder.toString();
 	}
 
 	private String resolveOccurrencesFromFunctions(EList<SimpleFunction> functions, EList<BundlePromise> variables,
 			String separator) {
-		StringBuffer strBuffer = new StringBuffer();
+		StringBuilder strBuilder = new StringBuilder();
 
 		for (SimpleFunction function : functions) {
 			if (function.getId().equals("classify") || function.getId().equals("classmatch")) {
-				if (strBuffer.length() > 0) {
-					strBuffer.append(separator);
+				if (strBuilder.length() > 0) {
+					strBuilder.append(separator);
 				}
-				strBuffer.append(resolveOccurrencesFromValues(function.getValues(), variables, separator));
+				strBuilder.append(resolveOccurrencesFromValues(function.getValues(), variables, separator));
 			} else {
-				if (strBuffer.length() > 0) {
-					strBuffer.append(separator);
+				if (strBuilder.length() > 0) {
+					strBuilder.append(separator);
 				}
-				strBuffer.append(function.getId());
+				strBuilder.append(function.getId());
 			}
 		}
 
-		return strBuffer.toString();
+		return strBuilder.toString();
 	}
 
 	private String resolveOccurrencesFromValues(EList<String> values, EList<BundlePromise> variables, String separator) {
-		StringBuffer strBuffer = new StringBuffer();
+		StringBuilder strBuilder = new StringBuilder();
 		for (String value : values) {
 			if (value.matches(".*\\$\\(.*\\).*") || value.matches(".*\\$\\{.*\\}.*")) {
 				String var = resolveVariable(value, variables);
 				if (var != null) {
-					strBuffer.append(var);
+					strBuilder.append(var);
 				}
 
 			} else {
-				strBuffer.append(value);
+				strBuilder.append(value);
 			}
-			strBuffer.append(separator);
+			strBuilder.append(separator);
 		}
-		strBuffer.deleteCharAt(strBuffer.length() - 1);
+		strBuilder.deleteCharAt(strBuilder.length() - 1);
 
-		return strBuffer.toString();
+		return strBuilder.toString();
 	}
 
 	/**

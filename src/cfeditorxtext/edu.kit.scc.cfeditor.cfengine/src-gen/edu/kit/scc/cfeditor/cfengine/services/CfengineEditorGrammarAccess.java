@@ -35,61 +35,78 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 	public class CLASS_IDElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CLASS_ID");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_0_0 = (RuleCall)cGroup_0.eContents().get(0);
+		private final Group cGroup_0_1 = (Group)cGroup_0.eContents().get(1);
+		private final Keyword cFullStopKeyword_0_1_0 = (Keyword)cGroup_0_1.eContents().get(0);
+		private final RuleCall cCLASS_IDParserRuleCall_0_1_1 = (RuleCall)cGroup_0_1.eContents().get(1);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
-		private final Keyword cFullStopKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_1_2 = (RuleCall)cGroup_1.eContents().get(2);
+		private final Keyword cExclamationMarkKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cCLASS_IDParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Keyword cExclamationMarkKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final RuleCall cCLASS_IDParserRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
-		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final RuleCall cCLASS_IDParserRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Group cGroup_2_3 = (Group)cGroup_2.eContents().get(3);
+		private final Keyword cFullStopKeyword_2_3_0 = (Keyword)cGroup_2_3.eContents().get(0);
+		private final RuleCall cCLASS_IDParserRuleCall_2_3_1 = (RuleCall)cGroup_2_3.eContents().get(1);
 		
+		////ID_EXT:
+		////	ID | '!' ID;
+		////
+		////CLASS_ID:
+		////	ID_EXT | (ID_EXT '.' CLASS_ID) | '(' CLASS_ID ')' | '!' '(' CLASS_ID ')';
 		//CLASS_ID returns ecore::EString:
-		//	ID | ID "." ID | "!" CLASS_ID | "(" CLASS_ID ")";
+		//	ID ("." CLASS_ID)? | "!" CLASS_ID | "(" CLASS_ID ")" ("." CLASS_ID)?;
 		public ParserRule getRule() { return rule; }
 
-		//ID | ID "." ID | "!" CLASS_ID | "(" CLASS_ID ")"
+		//ID ("." CLASS_ID)? | "!" CLASS_ID | "(" CLASS_ID ")" ("." CLASS_ID)?
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
-
-		//ID "." ID
-		public Group getGroup_1() { return cGroup_1; }
+		//ID ("." CLASS_ID)?
+		public Group getGroup_0() { return cGroup_0; }
 
 		//ID
-		public RuleCall getIDTerminalRuleCall_1_0() { return cIDTerminalRuleCall_1_0; }
+		public RuleCall getIDTerminalRuleCall_0_0() { return cIDTerminalRuleCall_0_0; }
+
+		//("." CLASS_ID)?
+		public Group getGroup_0_1() { return cGroup_0_1; }
 
 		//"."
-		public Keyword getFullStopKeyword_1_1() { return cFullStopKeyword_1_1; }
+		public Keyword getFullStopKeyword_0_1_0() { return cFullStopKeyword_0_1_0; }
 
-		//ID
-		public RuleCall getIDTerminalRuleCall_1_2() { return cIDTerminalRuleCall_1_2; }
+		//CLASS_ID
+		public RuleCall getCLASS_IDParserRuleCall_0_1_1() { return cCLASS_IDParserRuleCall_0_1_1; }
 
 		//"!" CLASS_ID
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_1() { return cGroup_1; }
 
 		//"!"
-		public Keyword getExclamationMarkKeyword_2_0() { return cExclamationMarkKeyword_2_0; }
+		public Keyword getExclamationMarkKeyword_1_0() { return cExclamationMarkKeyword_1_0; }
+
+		//CLASS_ID
+		public RuleCall getCLASS_IDParserRuleCall_1_1() { return cCLASS_IDParserRuleCall_1_1; }
+
+		//"(" CLASS_ID ")" ("." CLASS_ID)?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
 
 		//CLASS_ID
 		public RuleCall getCLASS_IDParserRuleCall_2_1() { return cCLASS_IDParserRuleCall_2_1; }
 
-		//"(" CLASS_ID ")"
-		public Group getGroup_3() { return cGroup_3; }
+		//")"
+		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
 
-		//"("
-		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
+		//("." CLASS_ID)?
+		public Group getGroup_2_3() { return cGroup_2_3; }
+
+		//"."
+		public Keyword getFullStopKeyword_2_3_0() { return cFullStopKeyword_2_3_0; }
 
 		//CLASS_ID
-		public RuleCall getCLASS_IDParserRuleCall_3_1() { return cCLASS_IDParserRuleCall_3_1; }
-
-		//")"
-		public Keyword getRightParenthesisKeyword_3_2() { return cRightParenthesisKeyword_3_2; }
+		public RuleCall getCLASS_IDParserRuleCall_2_3_1() { return cCLASS_IDParserRuleCall_2_3_1; }
 	}
 
 	public class PLACEHOLDERBElements extends AbstractParserRuleElementFinder {
@@ -104,6 +121,8 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftParenthesisKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
 		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
 		
+		////CLASS_ID_B:
+		////'.' CLASS_ID CLASS_ID_B|Noother;
 		////(ID | '(' | ')' | '|' | '!' | '.')+;
 		////PLACEHOLDER:
 		////	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')' | '{' | '}' | '@');
@@ -1025,8 +1044,13 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		return (tANY_OTHER != null) ? tANY_OTHER : (tANY_OTHER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ANY_OTHER"));
 	} 
 
+	////ID_EXT:
+	////	ID | '!' ID;
+	////
+	////CLASS_ID:
+	////	ID_EXT | (ID_EXT '.' CLASS_ID) | '(' CLASS_ID ')' | '!' '(' CLASS_ID ')';
 	//CLASS_ID returns ecore::EString:
-	//	ID | ID "." ID | "!" CLASS_ID | "(" CLASS_ID ")";
+	//	ID ("." CLASS_ID)? | "!" CLASS_ID | "(" CLASS_ID ")" ("." CLASS_ID)?;
 	public CLASS_IDElements getCLASS_IDAccess() {
 		return (pCLASS_ID != null) ? pCLASS_ID : (pCLASS_ID = new CLASS_IDElements());
 	}
@@ -1035,6 +1059,8 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getCLASS_IDAccess().getRule();
 	}
 
+	////CLASS_ID_B:
+	////'.' CLASS_ID CLASS_ID_B|Noother;
 	////(ID | '(' | ')' | '|' | '!' | '.')+;
 	////PLACEHOLDER:
 	////	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')' | '{' | '}' | '@');
