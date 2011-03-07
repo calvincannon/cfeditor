@@ -54,8 +54,8 @@ BundlePromise:
 	name=STRING (values+=PromiseValue (',' values+=PromiseValue)*)* ';';
 
 PromiseValue:
-	keyword=ID '=>' ((values+=STRING | functions+=SimpleFunction) | ('{' (values+=STRING | functions+=SimpleFunction)
-	(',' (values+=STRING | functions+=SimpleFunction))* '}') | ('{' '@' '(' ID ')' '}'));
+	keyword=ID '=>' ((values+=STRING | functions+=SimpleFunction|values+=ID) | ('{' (values+=STRING | functions+=SimpleFunction)
+	(',' (values+=STRING | functions+=SimpleFunction))* '}') | ('{' '@' '(' ID ')' '}')); //TODO "| ID"?
 	//	| '{''@' '(' ID ')' '}'); TODO?
 
 //(promiseType+=BundlePromiseType ':' ((PLACEHOLDERB) |

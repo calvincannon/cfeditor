@@ -51,11 +51,6 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFullStopKeyword_2_3_0 = (Keyword)cGroup_2_3.eContents().get(0);
 		private final RuleCall cCLASS_IDParserRuleCall_2_3_1 = (RuleCall)cGroup_2_3.eContents().get(1);
 		
-		////ID_EXT:
-		////	ID | '!' ID;
-		////
-		////CLASS_ID:
-		////	ID_EXT | (ID_EXT '.' CLASS_ID) | '(' CLASS_ID ')' | '!' '(' CLASS_ID ')';
 		//CLASS_ID returns ecore::EString:
 		//	ID ("." CLASS_ID)? | "!" CLASS_ID | "(" CLASS_ID ")" ("." CLASS_ID)?;
 		public ParserRule getRule() { return rule; }
@@ -121,8 +116,6 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftParenthesisKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
 		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
 		
-		////CLASS_ID_B:
-		////'.' CLASS_ID CLASS_ID_B|Noother;
 		////(ID | '(' | ')' | '|' | '!' | '.')+;
 		////PLACEHOLDER:
 		////	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')' | '{' | '}' | '@');
@@ -379,6 +372,8 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValuesSTRINGTerminalRuleCall_2_0_0_0 = (RuleCall)cValuesAssignment_2_0_0.eContents().get(0);
 		private final Assignment cFunctionsAssignment_2_0_1 = (Assignment)cAlternatives_2_0.eContents().get(1);
 		private final RuleCall cFunctionsSimpleFunctionParserRuleCall_2_0_1_0 = (RuleCall)cFunctionsAssignment_2_0_1.eContents().get(0);
+		private final Assignment cValuesAssignment_2_0_2 = (Assignment)cAlternatives_2_0.eContents().get(2);
+		private final RuleCall cValuesIDTerminalRuleCall_2_0_2_0 = (RuleCall)cValuesAssignment_2_0_2.eContents().get(0);
 		private final Group cGroup_2_1 = (Group)cAlternatives_2.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
 		private final Alternatives cAlternatives_2_1_1 = (Alternatives)cGroup_2_1.eContents().get(1);
@@ -402,13 +397,14 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_2_2_4 = (Keyword)cGroup_2_2.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_2_2_5 = (Keyword)cGroup_2_2.eContents().get(5);
 		
+		////TODO "| ID"?
 		//PromiseValue:
-		//	keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) (","
-		//	(values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}");
+		//	keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction | values+=ID) | "{" (values+=STRING |
+		//	functions+=SimpleFunction) ("," (values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}");
 		public ParserRule getRule() { return rule; }
 
-		//keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) (","
-		//(values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}")
+		//keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction | values+=ID) | "{" (values+=STRING |
+		//functions+=SimpleFunction) ("," (values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}")
 		public Group getGroup() { return cGroup; }
 
 		//keyword=ID
@@ -420,11 +416,11 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		//"=>"
 		public Keyword getEqualsSignGreaterThanSignKeyword_1() { return cEqualsSignGreaterThanSignKeyword_1; }
 
-		//(values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) ("," (values+=STRING |
-		//functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}"
+		//(values+=STRING | functions+=SimpleFunction | values+=ID) | "{" (values+=STRING | functions+=SimpleFunction) (","
+		//(values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}"
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
-		//values+=STRING | functions+=SimpleFunction
+		//values+=STRING | functions+=SimpleFunction | values+=ID
 		public Alternatives getAlternatives_2_0() { return cAlternatives_2_0; }
 
 		//values+=STRING
@@ -438,6 +434,12 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 
 		//SimpleFunction
 		public RuleCall getFunctionsSimpleFunctionParserRuleCall_2_0_1_0() { return cFunctionsSimpleFunctionParserRuleCall_2_0_1_0; }
+
+		//values+=ID
+		public Assignment getValuesAssignment_2_0_2() { return cValuesAssignment_2_0_2; }
+
+		//ID
+		public RuleCall getValuesIDTerminalRuleCall_2_0_2_0() { return cValuesIDTerminalRuleCall_2_0_2_0; }
 
 		//"{" (values+=STRING | functions+=SimpleFunction) ("," (values+=STRING | functions+=SimpleFunction))* "}"
 		public Group getGroup_2_1() { return cGroup_2_1; }
@@ -1044,11 +1046,6 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		return (tANY_OTHER != null) ? tANY_OTHER : (tANY_OTHER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ANY_OTHER"));
 	} 
 
-	////ID_EXT:
-	////	ID | '!' ID;
-	////
-	////CLASS_ID:
-	////	ID_EXT | (ID_EXT '.' CLASS_ID) | '(' CLASS_ID ')' | '!' '(' CLASS_ID ')';
 	//CLASS_ID returns ecore::EString:
 	//	ID ("." CLASS_ID)? | "!" CLASS_ID | "(" CLASS_ID ")" ("." CLASS_ID)?;
 	public CLASS_IDElements getCLASS_IDAccess() {
@@ -1059,8 +1056,6 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getCLASS_IDAccess().getRule();
 	}
 
-	////CLASS_ID_B:
-	////'.' CLASS_ID CLASS_ID_B|Noother;
 	////(ID | '(' | ')' | '|' | '!' | '.')+;
 	////PLACEHOLDER:
 	////	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')' | '{' | '}' | '@');
@@ -1135,9 +1130,10 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getBundlePromiseAccess().getRule();
 	}
 
+	////TODO "| ID"?
 	//PromiseValue:
-	//	keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) (","
-	//	(values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}");
+	//	keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction | values+=ID) | "{" (values+=STRING |
+	//	functions+=SimpleFunction) ("," (values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}");
 	public PromiseValueElements getPromiseValueAccess() {
 		return (pPromiseValue != null) ? pPromiseValue : (pPromiseValue = new PromiseValueElements());
 	}

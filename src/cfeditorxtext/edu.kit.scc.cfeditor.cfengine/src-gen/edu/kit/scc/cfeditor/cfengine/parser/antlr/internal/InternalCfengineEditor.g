@@ -866,6 +866,31 @@ rulePromiseValue returns [EObject current=null]
 	    }
 
 )
+)
+    |(
+(
+		lv_values_4_0=RULE_ID
+		{
+			createLeafNode(grammarAccess.getPromiseValueAccess().getValuesIDTerminalRuleCall_2_0_2_0(), "values"); 
+		}
+		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getPromiseValueRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+	        try {
+	       		add(
+	       			$current, 
+	       			"values",
+	        		lv_values_4_0, 
+	        		"ID", 
+	        		lastConsumedNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	    }
+
+)
 ))
     |(	'{' 
     {
@@ -873,7 +898,7 @@ rulePromiseValue returns [EObject current=null]
     }
 ((
 (
-		lv_values_5_0=RULE_STRING
+		lv_values_6_0=RULE_STRING
 		{
 			createLeafNode(grammarAccess.getPromiseValueAccess().getValuesSTRINGTerminalRuleCall_2_1_1_0_0(), "values"); 
 		}
@@ -886,7 +911,7 @@ rulePromiseValue returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"values",
-	        		lv_values_5_0, 
+	        		lv_values_6_0, 
 	        		"STRING", 
 	        		lastConsumedNode);
 	        } catch (ValueConverterException vce) {
@@ -901,7 +926,7 @@ rulePromiseValue returns [EObject current=null]
 		{ 
 	        currentNode=createCompositeNode(grammarAccess.getPromiseValueAccess().getFunctionsSimpleFunctionParserRuleCall_2_1_1_1_0(), currentNode); 
 	    }
-		lv_functions_6_0=ruleSimpleFunction		{
+		lv_functions_7_0=ruleSimpleFunction		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getPromiseValueRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -910,7 +935,7 @@ rulePromiseValue returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"functions",
-	        		lv_functions_6_0, 
+	        		lv_functions_7_0, 
 	        		"SimpleFunction", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -926,7 +951,7 @@ rulePromiseValue returns [EObject current=null]
     }
 ((
 (
-		lv_values_8_0=RULE_STRING
+		lv_values_9_0=RULE_STRING
 		{
 			createLeafNode(grammarAccess.getPromiseValueAccess().getValuesSTRINGTerminalRuleCall_2_1_2_1_0_0(), "values"); 
 		}
@@ -939,7 +964,7 @@ rulePromiseValue returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"values",
-	        		lv_values_8_0, 
+	        		lv_values_9_0, 
 	        		"STRING", 
 	        		lastConsumedNode);
 	        } catch (ValueConverterException vce) {
@@ -954,7 +979,7 @@ rulePromiseValue returns [EObject current=null]
 		{ 
 	        currentNode=createCompositeNode(grammarAccess.getPromiseValueAccess().getFunctionsSimpleFunctionParserRuleCall_2_1_2_1_1_0(), currentNode); 
 	    }
-		lv_functions_9_0=ruleSimpleFunction		{
+		lv_functions_10_0=ruleSimpleFunction		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getPromiseValueRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -963,7 +988,7 @@ rulePromiseValue returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"functions",
-	        		lv_functions_9_0, 
+	        		lv_functions_10_0, 
 	        		"SimpleFunction", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {

@@ -725,6 +725,12 @@ rule__PromiseValue__Alternatives_2_0
 { after(grammarAccess.getPromiseValueAccess().getFunctionsAssignment_2_0_1()); }
 )
 
+    |(
+{ before(grammarAccess.getPromiseValueAccess().getValuesAssignment_2_0_2()); }
+(rule__PromiseValue__ValuesAssignment_2_0_2)
+{ after(grammarAccess.getPromiseValueAccess().getValuesAssignment_2_0_2()); }
+)
+
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -4198,6 +4204,21 @@ rule__PromiseValue__FunctionsAssignment_2_0_1
 (
 { before(grammarAccess.getPromiseValueAccess().getFunctionsSimpleFunctionParserRuleCall_2_0_1_0()); }
 	ruleSimpleFunction{ after(grammarAccess.getPromiseValueAccess().getFunctionsSimpleFunctionParserRuleCall_2_0_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__PromiseValue__ValuesAssignment_2_0_2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getPromiseValueAccess().getValuesIDTerminalRuleCall_2_0_2_0()); }
+	RULE_ID{ after(grammarAccess.getPromiseValueAccess().getValuesIDTerminalRuleCall_2_0_2_0()); }
 )
 
 ;

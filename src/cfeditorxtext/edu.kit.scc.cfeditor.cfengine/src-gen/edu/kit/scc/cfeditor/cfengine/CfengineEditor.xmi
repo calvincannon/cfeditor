@@ -277,6 +277,9 @@
           <elements xsi:type="xtext:Assignment" feature="functions" operator="+=">
             <terminal xsi:type="xtext:RuleCall" rule="//@rules.19"/>
           </elements>
+          <elements xsi:type="xtext:Assignment" feature="values" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="//@rules.1"/>
+          </elements>
         </elements>
         <elements xsi:type="xtext:Group">
           <elements xsi:type="xtext:Keyword" value="{"/>

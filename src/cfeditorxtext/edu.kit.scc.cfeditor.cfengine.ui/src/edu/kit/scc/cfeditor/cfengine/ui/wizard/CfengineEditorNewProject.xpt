@@ -248,7 +248,7 @@ field_edits:
 
 insert_lines:
 
-  "$(index)=$($(v)[$(index)])",
+  "$(index)=$($(v)[$(index)])"
 
       ifvarclass => "!$(cindex[$(index)])_in_file";
 }
@@ -271,7 +271,7 @@ classes:
 
 insert_lines:
 
-  "$($(v)[$(index)])",
+  "$($(v)[$(index)])"
 
       ifvarclass => "add_$(index)";
 }
@@ -294,7 +294,7 @@ classes:
 
 insert_lines:
 
-  "$($(v)[$(index)])",
+  "$($(v)[$(index)])"
 
       ifvarclass => "add_$(index)";
 

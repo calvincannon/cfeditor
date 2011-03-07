@@ -1101,14 +1101,15 @@ protected class BundlePromise_SemicolonKeyword_2 extends KeywordToken  {
 
 /************ begin Rule PromiseValue ****************
  *
+ * //TODO "| ID"?
  * PromiseValue:
- * 	keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) (","
- * 	(values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}");
+ * 	keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction | values+=ID) | "{" (values+=STRING |
+ * 	functions+=SimpleFunction) ("," (values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}");
  *
  **/
 
-// keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) (","
-// (values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}")
+// keyword=ID "=>" ((values+=STRING | functions+=SimpleFunction | values+=ID) | "{" (values+=STRING |
+// functions+=SimpleFunction) ("," (values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}")
 protected class PromiseValue_Group extends GroupToken {
 	
 	public PromiseValue_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1192,8 +1193,8 @@ protected class PromiseValue_EqualsSignGreaterThanSignKeyword_1 extends KeywordT
 
 }
 
-// (values+=STRING | functions+=SimpleFunction) | "{" (values+=STRING | functions+=SimpleFunction) ("," (values+=STRING |
-// functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}"
+// (values+=STRING | functions+=SimpleFunction | values+=ID) | "{" (values+=STRING | functions+=SimpleFunction) (","
+// (values+=STRING | functions+=SimpleFunction))* "}" | "{" "@" "(" ID ")" "}"
 protected class PromiseValue_Alternatives_2 extends AlternativesToken {
 
 	public PromiseValue_Alternatives_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1217,7 +1218,7 @@ protected class PromiseValue_Alternatives_2 extends AlternativesToken {
 
 }
 
-// values+=STRING | functions+=SimpleFunction
+// values+=STRING | functions+=SimpleFunction | values+=ID
 protected class PromiseValue_Alternatives_2_0 extends AlternativesToken {
 
 	public PromiseValue_Alternatives_2_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1234,6 +1235,7 @@ protected class PromiseValue_Alternatives_2_0 extends AlternativesToken {
 		switch(index) {
 			case 0: return new PromiseValue_ValuesAssignment_2_0_0(lastRuleCallOrigin, this, 0, inst);
 			case 1: return new PromiseValue_FunctionsAssignment_2_0_1(lastRuleCallOrigin, this, 1, inst);
+			case 2: return new PromiseValue_ValuesAssignment_2_0_2(lastRuleCallOrigin, this, 2, inst);
 			default: return null;
 		}	
 	}
@@ -1318,6 +1320,40 @@ protected class PromiseValue_FunctionsAssignment_2_0_1 extends AssignmentToken  
 			default: return null;
 		}	
 	}	
+}
+
+// values+=ID
+protected class PromiseValue_ValuesAssignment_2_0_2 extends AssignmentToken  {
+	
+	public PromiseValue_ValuesAssignment_2_0_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getPromiseValueAccess().getValuesAssignment_2_0_2();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new PromiseValue_EqualsSignGreaterThanSignKeyword_1(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("values",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("values");
+		if(valueSerializer.isValid(obj.getEObject(), grammarAccess.getPromiseValueAccess().getValuesIDTerminalRuleCall_2_0_2_0(), value, null)) {
+			type = AssignmentType.TERMINAL_RULE_CALL;
+			element = grammarAccess.getPromiseValueAccess().getValuesIDTerminalRuleCall_2_0_2_0();
+			return obj;
+		}
+		return null;
+	}
+
 }
 
 
