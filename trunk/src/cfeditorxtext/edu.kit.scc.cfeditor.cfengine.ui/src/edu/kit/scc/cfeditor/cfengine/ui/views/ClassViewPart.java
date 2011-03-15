@@ -12,6 +12,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.TreeNode;
 import org.eclipse.jface.viewers.TreeNodeContentProvider;
 import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.jface.viewers.ViewerSorter;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IFileEditorInput;
@@ -56,6 +57,8 @@ public class ClassViewPart extends ViewPart {
 		treeViewer = new TreeViewer(parent, 0);
 		treeViewer.setContentProvider(new TreeNodeContentProvider());
 		treeViewer.setLabelProvider(new ClassLabelProvider());
+
+		treeViewer.setSorter(new ViewerSorter()); // sorts tree alphabetically
 
 		ColumnViewerToolTipSupport.enableFor(treeViewer);
 
