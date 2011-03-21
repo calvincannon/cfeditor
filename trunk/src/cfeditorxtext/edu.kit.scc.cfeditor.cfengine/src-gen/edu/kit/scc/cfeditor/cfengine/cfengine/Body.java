@@ -17,7 +17,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.Body#getComponent <em>Component</em>}</li>
- *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.Body#getVariables <em>Variables</em>}</li>
  *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.Body#getPromiseType <em>Promise Type</em>}</li>
  *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.Body#getClasses <em>Classes</em>}</li>
  * </ul>
@@ -27,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Body extends Part
+public interface Body extends AbstractElement
 {
   /**
    * Returns the value of the '<em><b>Component</b></em>' containment reference.
@@ -54,22 +53,6 @@ public interface Body extends Part
    * @generated
    */
   void setComponent(BodyComponent value);
-
-  /**
-   * Returns the value of the '<em><b>Variables</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Variables</em>' attribute list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Variables</em>' attribute list.
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.CfenginePackage#getBody_Variables()
-   * @model unique="false"
-   * @generated
-   */
-  EList<String> getVariables();
 
   /**
    * Returns the value of the '<em><b>Promise Type</b></em>' containment reference list.

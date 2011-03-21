@@ -40,7 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class BundleImpl extends PartImpl implements Bundle
+public class BundleImpl extends AbstractElementImpl implements Bundle
 {
   /**
    * The cached value of the '{@link #getComponent() <em>Component</em>}' containment reference.

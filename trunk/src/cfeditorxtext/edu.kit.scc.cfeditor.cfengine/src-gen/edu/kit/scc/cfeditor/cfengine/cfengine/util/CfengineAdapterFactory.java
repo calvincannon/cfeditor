@@ -89,11 +89,6 @@ public class CfengineAdapterFactory extends AdapterFactoryImpl
         return createAbstractElementAdapter();
       }
       @Override
-      public Adapter casePart(Part object)
-      {
-        return createPartAdapter();
-      }
-      @Override
       public Adapter caseBundle(Bundle object)
       {
         return createBundleAdapter();
@@ -206,21 +201,6 @@ public class CfengineAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAbstractElementAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.Part <em>Part</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.Part
-   * @generated
-   */
-  public Adapter createPartAdapter()
   {
     return null;
   }

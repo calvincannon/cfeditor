@@ -20,7 +20,6 @@ import edu.kit.scc.cfeditor.cfengine.cfengine.BundlePromiseType;
 import edu.kit.scc.cfeditor.cfengine.cfengine.CfModel;
 import edu.kit.scc.cfeditor.cfengine.cfengine.CfengineFactory;
 import edu.kit.scc.cfeditor.cfengine.cfengine.CfenginePackage;
-import edu.kit.scc.cfeditor.cfengine.cfengine.Part;
 import edu.kit.scc.cfeditor.cfengine.cfengine.PromiseValue;
 import edu.kit.scc.cfeditor.cfengine.cfengine.SimpleFunction;
 import edu.kit.scc.cfeditor.cfengine.cfengine.SpecialFunction;
@@ -53,13 +52,6 @@ public class CfenginePackageImpl extends EPackageImpl implements CfenginePackage
    * @generated
    */
   private EClass abstractElementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass partEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -250,9 +242,9 @@ public class CfenginePackageImpl extends EPackageImpl implements CfenginePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPart()
+  public EAttribute getAbstractElement_Name()
   {
-    return partEClass;
+    return (EAttribute)abstractElementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -260,9 +252,9 @@ public class CfenginePackageImpl extends EPackageImpl implements CfenginePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPart_Name()
+  public EAttribute getAbstractElement_Variables()
   {
-    return (EAttribute)partEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)abstractElementEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -460,19 +452,9 @@ public class CfenginePackageImpl extends EPackageImpl implements CfenginePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getBody_Variables()
-  {
-    return (EAttribute)bodyEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getBody_PromiseType()
   {
-    return (EReference)bodyEClass.getEStructuralFeatures().get(2);
+    return (EReference)bodyEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -482,7 +464,7 @@ public class CfenginePackageImpl extends EPackageImpl implements CfenginePackage
    */
   public EReference getBody_Classes()
   {
-    return (EReference)bodyEClass.getEStructuralFeatures().get(3);
+    return (EReference)bodyEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -719,9 +701,8 @@ public class CfenginePackageImpl extends EPackageImpl implements CfenginePackage
     createEReference(cfModelEClass, CF_MODEL__ELEMENTS);
 
     abstractElementEClass = createEClass(ABSTRACT_ELEMENT);
-
-    partEClass = createEClass(PART);
-    createEAttribute(partEClass, PART__NAME);
+    createEAttribute(abstractElementEClass, ABSTRACT_ELEMENT__NAME);
+    createEAttribute(abstractElementEClass, ABSTRACT_ELEMENT__VARIABLES);
 
     bundleEClass = createEClass(BUNDLE);
     createEReference(bundleEClass, BUNDLE__COMPONENT);
@@ -747,7 +728,6 @@ public class CfenginePackageImpl extends EPackageImpl implements CfenginePackage
 
     bodyEClass = createEClass(BODY);
     createEReference(bodyEClass, BODY__COMPONENT);
-    createEAttribute(bodyEClass, BODY__VARIABLES);
     createEReference(bodyEClass, BODY__PROMISE_TYPE);
     createEReference(bodyEClass, BODY__CLASSES);
 
@@ -808,18 +788,16 @@ public class CfenginePackageImpl extends EPackageImpl implements CfenginePackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    partEClass.getESuperTypes().add(this.getAbstractElement());
-    bundleEClass.getESuperTypes().add(this.getPart());
-    bodyEClass.getESuperTypes().add(this.getPart());
+    bundleEClass.getESuperTypes().add(this.getAbstractElement());
+    bodyEClass.getESuperTypes().add(this.getAbstractElement());
 
     // Initialize classes and features; add operations and parameters
     initEClass(cfModelEClass, CfModel.class, "CfModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCfModel_Elements(), this.getAbstractElement(), null, "elements", null, 0, -1, CfModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(abstractElementEClass, AbstractElement.class, "AbstractElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(partEClass, Part.class, "Part", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPart_Name(), ecorePackage.getEString(), "name", null, 0, 1, Part.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAbstractElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, AbstractElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAbstractElement_Variables(), ecorePackage.getEString(), "variables", null, 0, -1, AbstractElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(bundleEClass, Bundle.class, "Bundle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBundle_Component(), this.getBundleComponent(), null, "component", null, 0, 1, Bundle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -845,7 +823,6 @@ public class CfenginePackageImpl extends EPackageImpl implements CfenginePackage
 
     initEClass(bodyEClass, Body.class, "Body", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getBody_Component(), this.getBodyComponent(), null, "component", null, 0, 1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getBody_Variables(), ecorePackage.getEString(), "variables", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBody_PromiseType(), this.getBodyFunction(), null, "promiseType", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBody_Classes(), this.getBodyClass(), null, "classes", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
