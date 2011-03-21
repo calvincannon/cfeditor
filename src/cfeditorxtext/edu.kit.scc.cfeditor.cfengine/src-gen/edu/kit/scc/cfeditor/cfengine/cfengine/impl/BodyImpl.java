@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -36,7 +35,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyImpl#getComponent <em>Component</em>}</li>
- *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyImpl#getVariables <em>Variables</em>}</li>
  *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyImpl#getPromiseType <em>Promise Type</em>}</li>
  *   <li>{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyImpl#getClasses <em>Classes</em>}</li>
  * </ul>
@@ -44,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class BodyImpl extends PartImpl implements Body
+public class BodyImpl extends AbstractElementImpl implements Body
 {
   /**
    * The cached value of the '{@link #getComponent() <em>Component</em>}' containment reference.
@@ -55,16 +53,6 @@ public class BodyImpl extends PartImpl implements Body
    * @ordered
    */
   protected BodyComponent component;
-
-  /**
-   * The cached value of the '{@link #getVariables() <em>Variables</em>}' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVariables()
-   * @generated
-   * @ordered
-   */
-  protected EList<String> variables;
 
   /**
    * The cached value of the '{@link #getPromiseType() <em>Promise Type</em>}' containment reference list.
@@ -160,20 +148,6 @@ public class BodyImpl extends PartImpl implements Body
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getVariables()
-  {
-    if (variables == null)
-    {
-      variables = new EDataTypeEList<String>(String.class, this, CfenginePackage.BODY__VARIABLES);
-    }
-    return variables;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<BodyFunction> getPromiseType()
   {
     if (promiseType == null)
@@ -229,8 +203,6 @@ public class BodyImpl extends PartImpl implements Body
     {
       case CfenginePackage.BODY__COMPONENT:
         return getComponent();
-      case CfenginePackage.BODY__VARIABLES:
-        return getVariables();
       case CfenginePackage.BODY__PROMISE_TYPE:
         return getPromiseType();
       case CfenginePackage.BODY__CLASSES:
@@ -252,10 +224,6 @@ public class BodyImpl extends PartImpl implements Body
     {
       case CfenginePackage.BODY__COMPONENT:
         setComponent((BodyComponent)newValue);
-        return;
-      case CfenginePackage.BODY__VARIABLES:
-        getVariables().clear();
-        getVariables().addAll((Collection<? extends String>)newValue);
         return;
       case CfenginePackage.BODY__PROMISE_TYPE:
         getPromiseType().clear();
@@ -282,9 +250,6 @@ public class BodyImpl extends PartImpl implements Body
       case CfenginePackage.BODY__COMPONENT:
         setComponent((BodyComponent)null);
         return;
-      case CfenginePackage.BODY__VARIABLES:
-        getVariables().clear();
-        return;
       case CfenginePackage.BODY__PROMISE_TYPE:
         getPromiseType().clear();
         return;
@@ -307,31 +272,12 @@ public class BodyImpl extends PartImpl implements Body
     {
       case CfenginePackage.BODY__COMPONENT:
         return component != null;
-      case CfenginePackage.BODY__VARIABLES:
-        return variables != null && !variables.isEmpty();
       case CfenginePackage.BODY__PROMISE_TYPE:
         return promiseType != null && !promiseType.isEmpty();
       case CfenginePackage.BODY__CLASSES:
         return classes != null && !classes.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (variables: ");
-    result.append(variables);
-    result.append(')');
-    return result.toString();
   }
 
 } //BodyImpl

@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Bundle extends Part
+public interface Bundle extends AbstractElement
 {
   /**
    * Returns the value of the '<em><b>Component</b></em>' containment reference.

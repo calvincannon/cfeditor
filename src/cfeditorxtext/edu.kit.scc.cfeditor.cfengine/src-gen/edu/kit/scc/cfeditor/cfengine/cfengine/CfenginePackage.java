@@ -99,41 +99,31 @@ public interface CfenginePackage extends EPackage
   int ABSTRACT_ELEMENT = 1;
 
   /**
-   * The number of structural features of the '<em>Abstract Element</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ABSTRACT_ELEMENT_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.PartImpl <em>Part</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.PartImpl
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getPart()
-   * @generated
-   */
-  int PART = 2;
-
-  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PART__NAME = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
+  int ABSTRACT_ELEMENT__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Part</em>' class.
+   * The feature id for the '<em><b>Variables</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PART_FEATURE_COUNT = ABSTRACT_ELEMENT_FEATURE_COUNT + 1;
+  int ABSTRACT_ELEMENT__VARIABLES = 1;
+
+  /**
+   * The number of structural features of the '<em>Abstract Element</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ABSTRACT_ELEMENT_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundleImpl <em>Bundle</em>}' class.
@@ -143,7 +133,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundle()
    * @generated
    */
-  int BUNDLE = 3;
+  int BUNDLE = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -152,7 +142,16 @@ public interface CfenginePackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUNDLE__NAME = PART__NAME;
+  int BUNDLE__NAME = ABSTRACT_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Variables</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUNDLE__VARIABLES = ABSTRACT_ELEMENT__VARIABLES;
 
   /**
    * The feature id for the '<em><b>Component</b></em>' containment reference.
@@ -161,7 +160,7 @@ public interface CfenginePackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUNDLE__COMPONENT = PART_FEATURE_COUNT + 0;
+  int BUNDLE__COMPONENT = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Promise Type</b></em>' containment reference list.
@@ -170,7 +169,7 @@ public interface CfenginePackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUNDLE__PROMISE_TYPE = PART_FEATURE_COUNT + 1;
+  int BUNDLE__PROMISE_TYPE = ABSTRACT_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Bundle</em>' class.
@@ -179,7 +178,7 @@ public interface CfenginePackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUNDLE_FEATURE_COUNT = PART_FEATURE_COUNT + 2;
+  int BUNDLE_FEATURE_COUNT = ABSTRACT_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundlePromiseTypeImpl <em>Bundle Promise Type</em>}' class.
@@ -189,7 +188,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundlePromiseType()
    * @generated
    */
-  int BUNDLE_PROMISE_TYPE = 4;
+  int BUNDLE_PROMISE_TYPE = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -235,7 +234,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundleClass()
    * @generated
    */
-  int BUNDLE_CLASS = 5;
+  int BUNDLE_CLASS = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -272,7 +271,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundlePromise()
    * @generated
    */
-  int BUNDLE_PROMISE = 6;
+  int BUNDLE_PROMISE = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -309,7 +308,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getPromiseValue()
    * @generated
    */
-  int PROMISE_VALUE = 7;
+  int PROMISE_VALUE = 6;
 
   /**
    * The feature id for the '<em><b>Keyword</b></em>' attribute.
@@ -355,7 +354,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBody()
    * @generated
    */
-  int BODY = 8;
+  int BODY = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -364,16 +363,7 @@ public interface CfenginePackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY__NAME = PART__NAME;
-
-  /**
-   * The feature id for the '<em><b>Component</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BODY__COMPONENT = PART_FEATURE_COUNT + 0;
+  int BODY__NAME = ABSTRACT_ELEMENT__NAME;
 
   /**
    * The feature id for the '<em><b>Variables</b></em>' attribute list.
@@ -382,7 +372,16 @@ public interface CfenginePackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY__VARIABLES = PART_FEATURE_COUNT + 1;
+  int BODY__VARIABLES = ABSTRACT_ELEMENT__VARIABLES;
+
+  /**
+   * The feature id for the '<em><b>Component</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY__COMPONENT = ABSTRACT_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Promise Type</b></em>' containment reference list.
@@ -391,7 +390,7 @@ public interface CfenginePackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY__PROMISE_TYPE = PART_FEATURE_COUNT + 2;
+  int BODY__PROMISE_TYPE = ABSTRACT_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Classes</b></em>' containment reference list.
@@ -400,7 +399,7 @@ public interface CfenginePackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY__CLASSES = PART_FEATURE_COUNT + 3;
+  int BODY__CLASSES = ABSTRACT_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Body</em>' class.
@@ -409,7 +408,7 @@ public interface CfenginePackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY_FEATURE_COUNT = PART_FEATURE_COUNT + 4;
+  int BODY_FEATURE_COUNT = ABSTRACT_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BodyClassImpl <em>Body Class</em>}' class.
@@ -419,7 +418,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBodyClass()
    * @generated
    */
-  int BODY_CLASS = 9;
+  int BODY_CLASS = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -456,7 +455,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBodyFunction()
    * @generated
    */
-  int BODY_FUNCTION = 10;
+  int BODY_FUNCTION = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -511,7 +510,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getSimpleFunction()
    * @generated
    */
-  int SIMPLE_FUNCTION = 11;
+  int SIMPLE_FUNCTION = 10;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -548,7 +547,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getSpecialFunction()
    * @generated
    */
-  int SPECIAL_FUNCTION = 12;
+  int SPECIAL_FUNCTION = 11;
 
   /**
    * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -585,7 +584,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBodyPromiseType()
    * @generated
    */
-  int BODY_PROMISE_TYPE = 13;
+  int BODY_PROMISE_TYPE = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -613,7 +612,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBundleComponent()
    * @generated
    */
-  int BUNDLE_COMPONENT = 14;
+  int BUNDLE_COMPONENT = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -641,7 +640,7 @@ public interface CfenginePackage extends EPackage
    * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getBodyComponent()
    * @generated
    */
-  int BODY_COMPONENT = 15;
+  int BODY_COMPONENT = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -694,25 +693,26 @@ public interface CfenginePackage extends EPackage
   EClass getAbstractElement();
 
   /**
-   * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.Part <em>Part</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Part</em>'.
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.Part
-   * @generated
-   */
-  EClass getPart();
-
-  /**
-   * Returns the meta object for the attribute '{@link edu.kit.scc.cfeditor.cfengine.cfengine.Part#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link edu.kit.scc.cfeditor.cfengine.cfengine.AbstractElement#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.Part#getName()
-   * @see #getPart()
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.AbstractElement#getName()
+   * @see #getAbstractElement()
    * @generated
    */
-  EAttribute getPart_Name();
+  EAttribute getAbstractElement_Name();
+
+  /**
+   * Returns the meta object for the attribute list '{@link edu.kit.scc.cfeditor.cfengine.cfengine.AbstractElement#getVariables <em>Variables</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Variables</em>'.
+   * @see edu.kit.scc.cfeditor.cfengine.cfengine.AbstractElement#getVariables()
+   * @see #getAbstractElement()
+   * @generated
+   */
+  EAttribute getAbstractElement_Variables();
 
   /**
    * Returns the meta object for class '{@link edu.kit.scc.cfeditor.cfengine.cfengine.Bundle <em>Bundle</em>}'.
@@ -916,17 +916,6 @@ public interface CfenginePackage extends EPackage
    * @generated
    */
   EReference getBody_Component();
-
-  /**
-   * Returns the meta object for the attribute list '{@link edu.kit.scc.cfeditor.cfengine.cfengine.Body#getVariables <em>Variables</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Variables</em>'.
-   * @see edu.kit.scc.cfeditor.cfengine.cfengine.Body#getVariables()
-   * @see #getBody()
-   * @generated
-   */
-  EAttribute getBody_Variables();
 
   /**
    * Returns the meta object for the containment reference list '{@link edu.kit.scc.cfeditor.cfengine.cfengine.Body#getPromiseType <em>Promise Type</em>}'.
@@ -1215,22 +1204,20 @@ public interface CfenginePackage extends EPackage
     EClass ABSTRACT_ELEMENT = eINSTANCE.getAbstractElement();
 
     /**
-     * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.PartImpl <em>Part</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.PartImpl
-     * @see edu.kit.scc.cfeditor.cfengine.cfengine.impl.CfenginePackageImpl#getPart()
-     * @generated
-     */
-    EClass PART = eINSTANCE.getPart();
-
-    /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PART__NAME = eINSTANCE.getPart_Name();
+    EAttribute ABSTRACT_ELEMENT__NAME = eINSTANCE.getAbstractElement_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Variables</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ABSTRACT_ELEMENT__VARIABLES = eINSTANCE.getAbstractElement_Variables();
 
     /**
      * The meta object literal for the '{@link edu.kit.scc.cfeditor.cfengine.cfengine.impl.BundleImpl <em>Bundle</em>}' class.
@@ -1395,14 +1382,6 @@ public interface CfenginePackage extends EPackage
      * @generated
      */
     EReference BODY__COMPONENT = eINSTANCE.getBody_Component();
-
-    /**
-     * The meta object literal for the '<em><b>Variables</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BODY__VARIABLES = eINSTANCE.getBody_Variables();
 
     /**
      * The meta object literal for the '<em><b>Promise Type</b></em>' containment reference list feature.

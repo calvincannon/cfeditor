@@ -70,7 +70,6 @@ public class CfengineFactoryImpl extends EFactoryImpl implements CfengineFactory
     {
       case CfenginePackage.CF_MODEL: return createCfModel();
       case CfenginePackage.ABSTRACT_ELEMENT: return createAbstractElement();
-      case CfenginePackage.PART: return createPart();
       case CfenginePackage.BUNDLE: return createBundle();
       case CfenginePackage.BUNDLE_PROMISE_TYPE: return createBundlePromiseType();
       case CfenginePackage.BUNDLE_CLASS: return createBundleClass();
@@ -109,17 +108,6 @@ public class CfengineFactoryImpl extends EFactoryImpl implements CfengineFactory
   {
     AbstractElementImpl abstractElement = new AbstractElementImpl();
     return abstractElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Part createPart()
-  {
-    PartImpl part = new PartImpl();
-    return part;
   }
 
   /**

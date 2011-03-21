@@ -104,72 +104,18 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getCLASS_IDParserRuleCall_2_3_1() { return cCLASS_IDParserRuleCall_2_3_1; }
 	}
 
-	public class PLACEHOLDERBElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PLACEHOLDERB");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cANY_OTHERTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cSTRINGTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final Keyword cEqualsSignGreaterThanSignKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
-		private final Keyword cSemicolonKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
-		private final Keyword cCommaKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
-		private final Keyword cLeftParenthesisKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
-		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
-		
-		////(ID | '(' | ')' | '|' | '!' | '.')+;
-		////PLACEHOLDER:
-		////	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')' | '{' | '}' | '@');
-		//PLACEHOLDERB returns ecore::EString:
-		//	ANY_OTHER | ID | STRING | "=>" | ";" | "," | "(" | ")";
-		public ParserRule getRule() { return rule; }
-
-		//ANY_OTHER | ID | STRING | "=>" | ";" | "," | "(" | ")"
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//ANY_OTHER
-		public RuleCall getANY_OTHERTerminalRuleCall_0() { return cANY_OTHERTerminalRuleCall_0; }
-
-		//ID
-		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
-
-		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_2() { return cSTRINGTerminalRuleCall_2; }
-
-		//"=>"
-		public Keyword getEqualsSignGreaterThanSignKeyword_3() { return cEqualsSignGreaterThanSignKeyword_3; }
-
-		//";"
-		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
-
-		//","
-		public Keyword getCommaKeyword_5() { return cCommaKeyword_5; }
-
-		//"("
-		public Keyword getLeftParenthesisKeyword_6() { return cLeftParenthesisKeyword_6; }
-
-		//")"
-		public Keyword getRightParenthesisKeyword_7() { return cRightParenthesisKeyword_7; }
-	}
-
 	public class AbstractElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AbstractElement");
-		private final RuleCall cPartParserRuleCall = (RuleCall)rule.eContents().get(1);
-		
-		//AbstractElement:
-		//	Part;
-		public ParserRule getRule() { return rule; }
-
-		//Part
-		public RuleCall getPartParserRuleCall() { return cPartParserRuleCall; }
-	}
-
-	public class PartElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Part");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cBundleParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cBodyParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Part:
+		////(ID | '(' | ')' | '|' | '!' | '.')+;
+		////PLACEHOLDER:
+		////	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')' | '{' | '}' | '@');
+		////PLACEHOLDERB:
+		////	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')');
+		//AbstractElement:
 		//	Bundle | Body;
 		public ParserRule getRule() { return rule; }
 
@@ -191,17 +137,27 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cComponentBundleComponentParserRuleCall_1_0 = (RuleCall)cComponentAssignment_1.eContents().get(0);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final RuleCall cPLACEHOLDERBParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cVariablesAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cVariablesIDTerminalRuleCall_3_1_0 = (RuleCall)cVariablesAssignment_3_1.eContents().get(0);
+		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
+		private final Keyword cCommaKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
+		private final Assignment cVariablesAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cVariablesIDTerminalRuleCall_3_2_1_0 = (RuleCall)cVariablesAssignment_3_2_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cPromiseTypeAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cPromiseTypeBundlePromiseTypeParserRuleCall_5_0 = (RuleCall)cPromiseTypeAssignment_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Bundle:
-		//	"bundle" component=BundleComponent name=ID PLACEHOLDERB* "{" promiseType+=BundlePromiseType* "}";
+		//	"bundle" component=BundleComponent name=ID ("(" variables+=ID ("," variables+=ID)* ")")? "{"
+		//	promiseType+=BundlePromiseType* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"bundle" component=BundleComponent name=ID PLACEHOLDERB* "{" promiseType+=BundlePromiseType* "}"
+		//"bundle" component=BundleComponent name=ID ("(" variables+=ID ("," variables+=ID)* ")")? "{"
+		//promiseType+=BundlePromiseType* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"bundle"
@@ -219,8 +175,32 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//PLACEHOLDERB*
-		public RuleCall getPLACEHOLDERBParserRuleCall_3() { return cPLACEHOLDERBParserRuleCall_3; }
+		//("(" variables+=ID ("," variables+=ID)* ")")?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
+
+		//variables+=ID
+		public Assignment getVariablesAssignment_3_1() { return cVariablesAssignment_3_1; }
+
+		//ID
+		public RuleCall getVariablesIDTerminalRuleCall_3_1_0() { return cVariablesIDTerminalRuleCall_3_1_0; }
+
+		//("," variables+=ID)*
+		public Group getGroup_3_2() { return cGroup_3_2; }
+
+		//","
+		public Keyword getCommaKeyword_3_2_0() { return cCommaKeyword_3_2_0; }
+
+		//variables+=ID
+		public Assignment getVariablesAssignment_3_2_1() { return cVariablesAssignment_3_2_1; }
+
+		//ID
+		public RuleCall getVariablesIDTerminalRuleCall_3_2_1_0() { return cVariablesIDTerminalRuleCall_3_2_1_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_3_3() { return cRightParenthesisKeyword_3_3; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
@@ -322,11 +302,12 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValuesPromiseValueParserRuleCall_1_1_1_0 = (RuleCall)cValuesAssignment_1_1_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
+		////name=STRING (values+=PromiseValue (',' values+=PromiseValue)*)* ';';
 		//BundlePromise:
-		//	name=STRING (values+=PromiseValue ("," values+=PromiseValue)*)* ";";
+		//	name=STRING (values+=PromiseValue ("," values+=PromiseValue)*)? ";";
 		public ParserRule getRule() { return rule; }
 
-		//name=STRING (values+=PromiseValue ("," values+=PromiseValue)*)* ";"
+		//name=STRING (values+=PromiseValue ("," values+=PromiseValue)*)? ";"
 		public Group getGroup() { return cGroup; }
 
 		//name=STRING
@@ -335,7 +316,7 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_0_0() { return cNameSTRINGTerminalRuleCall_0_0; }
 
-		//(values+=PromiseValue ("," values+=PromiseValue)*)*
+		//(values+=PromiseValue ("," values+=PromiseValue)*)?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//values+=PromiseValue
@@ -825,26 +806,25 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cANY_OTHERTerminalRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
 		private final RuleCall cIDTerminalRuleCall_2_1 = (RuleCall)cAlternatives_2.eContents().get(1);
 		private final RuleCall cSTRINGTerminalRuleCall_2_2 = (RuleCall)cAlternatives_2.eContents().get(2);
-		private final RuleCall cINTTerminalRuleCall_2_3 = (RuleCall)cAlternatives_2.eContents().get(3);
-		private final Keyword cCommaKeyword_2_4 = (Keyword)cAlternatives_2.eContents().get(4);
+		private final Keyword cCommaKeyword_2_3 = (Keyword)cAlternatives_2.eContents().get(3);
+		private final Group cGroup_2_4 = (Group)cAlternatives_2.eContents().get(4);
+		private final Keyword cDollarSignLeftParenthesisKeyword_2_4_0 = (Keyword)cGroup_2_4.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_2_4_1 = (RuleCall)cGroup_2_4.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_2_4_2 = (Keyword)cGroup_2_4.eContents().get(2);
 		private final Group cGroup_2_5 = (Group)cAlternatives_2.eContents().get(5);
-		private final Keyword cDollarSignLeftParenthesisKeyword_2_5_0 = (Keyword)cGroup_2_5.eContents().get(0);
+		private final Keyword cDollarSignLeftCurlyBracketKeyword_2_5_0 = (Keyword)cGroup_2_5.eContents().get(0);
 		private final RuleCall cIDTerminalRuleCall_2_5_1 = (RuleCall)cGroup_2_5.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_2_5_2 = (Keyword)cGroup_2_5.eContents().get(2);
-		private final Group cGroup_2_6 = (Group)cAlternatives_2.eContents().get(6);
-		private final Keyword cDollarSignLeftCurlyBracketKeyword_2_6_0 = (Keyword)cGroup_2_6.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_2_6_1 = (RuleCall)cGroup_2_6.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_2_6_2 = (Keyword)cGroup_2_6.eContents().get(2);
-		private final Assignment cFuncAssignment_2_7 = (Assignment)cAlternatives_2.eContents().get(7);
-		private final RuleCall cFuncSpecialFunctionParserRuleCall_2_7_0 = (RuleCall)cFuncAssignment_2_7.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_2_5_2 = (Keyword)cGroup_2_5.eContents().get(2);
+		private final Assignment cFuncAssignment_2_6 = (Assignment)cAlternatives_2.eContents().get(6);
+		private final RuleCall cFuncSpecialFunctionParserRuleCall_2_6_0 = (RuleCall)cFuncAssignment_2_6.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//SpecialFunction:
-		//	id=ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+		//	id=ID "(" (ANY_OTHER | ID | STRING | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
 		//	/ *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")";
 		public ParserRule getRule() { return rule; }
 
-		//id=ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+		//id=ID "(" (ANY_OTHER | ID | STRING | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
 		/// *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")"
 		public Group getGroup() { return cGroup; }
 
@@ -857,7 +837,7 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 
-		//(ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+		//(ANY_OTHER | ID | STRING | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
 		//ANY_OTHER
@@ -869,41 +849,38 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getSTRINGTerminalRuleCall_2_2() { return cSTRINGTerminalRuleCall_2_2; }
 
-		//INT
-		public RuleCall getINTTerminalRuleCall_2_3() { return cINTTerminalRuleCall_2_3; }
-
 		//","
-		public Keyword getCommaKeyword_2_4() { return cCommaKeyword_2_4; }
+		public Keyword getCommaKeyword_2_3() { return cCommaKeyword_2_3; }
 
 		//"$(" ID ")"
-		public Group getGroup_2_5() { return cGroup_2_5; }
+		public Group getGroup_2_4() { return cGroup_2_4; }
 
 		//"$("
-		public Keyword getDollarSignLeftParenthesisKeyword_2_5_0() { return cDollarSignLeftParenthesisKeyword_2_5_0; }
+		public Keyword getDollarSignLeftParenthesisKeyword_2_4_0() { return cDollarSignLeftParenthesisKeyword_2_4_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_2_4_1() { return cIDTerminalRuleCall_2_4_1; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_2_4_2() { return cRightParenthesisKeyword_2_4_2; }
+
+		//"${" ID "}"
+		public Group getGroup_2_5() { return cGroup_2_5; }
+
+		//"${"
+		public Keyword getDollarSignLeftCurlyBracketKeyword_2_5_0() { return cDollarSignLeftCurlyBracketKeyword_2_5_0; }
 
 		//ID
 		public RuleCall getIDTerminalRuleCall_2_5_1() { return cIDTerminalRuleCall_2_5_1; }
 
-		//")"
-		public Keyword getRightParenthesisKeyword_2_5_2() { return cRightParenthesisKeyword_2_5_2; }
-
-		//"${" ID "}"
-		public Group getGroup_2_6() { return cGroup_2_6; }
-
-		//"${"
-		public Keyword getDollarSignLeftCurlyBracketKeyword_2_6_0() { return cDollarSignLeftCurlyBracketKeyword_2_6_0; }
-
-		//ID
-		public RuleCall getIDTerminalRuleCall_2_6_1() { return cIDTerminalRuleCall_2_6_1; }
-
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_2_6_2() { return cRightCurlyBracketKeyword_2_6_2; }
+		public Keyword getRightCurlyBracketKeyword_2_5_2() { return cRightCurlyBracketKeyword_2_5_2; }
 
 		//func+=SpecialFunction
-		public Assignment getFuncAssignment_2_7() { return cFuncAssignment_2_7; }
+		public Assignment getFuncAssignment_2_6() { return cFuncAssignment_2_6; }
 
 		//SpecialFunction
-		public RuleCall getFuncSpecialFunctionParserRuleCall_2_7_0() { return cFuncSpecialFunctionParserRuleCall_2_7_0; }
+		public RuleCall getFuncSpecialFunctionParserRuleCall_2_6_0() { return cFuncSpecialFunctionParserRuleCall_2_6_0; }
 
 		/// *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")"
 		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
@@ -960,15 +937,12 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private CfModelElements pCfModel;
 	private TerminalRule tID;
-	private TerminalRule tINT;
 	private TerminalRule tSTRING;
 	private TerminalRule tSL_COMMENT;
 	private TerminalRule tWS;
 	private TerminalRule tANY_OTHER;
 	private CLASS_IDElements pCLASS_ID;
-	private PLACEHOLDERBElements pPLACEHOLDERB;
 	private AbstractElementElements pAbstractElement;
-	private PartElements pPart;
 	private BundleElements pBundle;
 	private BundlePromiseTypeElements pBundlePromiseType;
 	private BundleClassElements pBundleClass;
@@ -1013,12 +987,8 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		return (tID != null) ? tID : (tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ID"));
 	} 
 
-	//terminal INT returns ecore::EInt:
-	//	"0".."9"+;
-	public TerminalRule getINTRule() {
-		return (tINT != null) ? tINT : (tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INT"));
-	} 
-
+	////terminal INT returns ecore::EInt: //omittable?
+	////	('0'..'9')+;
 	////terminal STRING:
 	////	'"' ('\\' ('b' | 't' | 'n' | 'f' | 'r' | '"' | "'" | '\\' ) | !('\\' | '"'))* '"' |
 	////	"'" ('\\' ('b' | 't' | 'n' | 'f' | 'r' | '"' | "'" | '\\' ) | !('\\' | "'"))* "'";
@@ -1059,18 +1029,10 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 	////(ID | '(' | ')' | '|' | '!' | '.')+;
 	////PLACEHOLDER:
 	////	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')' | '{' | '}' | '@');
-	//PLACEHOLDERB returns ecore::EString:
-	//	ANY_OTHER | ID | STRING | "=>" | ";" | "," | "(" | ")";
-	public PLACEHOLDERBElements getPLACEHOLDERBAccess() {
-		return (pPLACEHOLDERB != null) ? pPLACEHOLDERB : (pPLACEHOLDERB = new PLACEHOLDERBElements());
-	}
-	
-	public ParserRule getPLACEHOLDERBRule() {
-		return getPLACEHOLDERBAccess().getRule();
-	}
-
+	////PLACEHOLDERB:
+	////	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')');
 	//AbstractElement:
-	//	Part;
+	//	Bundle | Body;
 	public AbstractElementElements getAbstractElementAccess() {
 		return (pAbstractElement != null) ? pAbstractElement : (pAbstractElement = new AbstractElementElements());
 	}
@@ -1079,18 +1041,9 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getAbstractElementAccess().getRule();
 	}
 
-	//Part:
-	//	Bundle | Body;
-	public PartElements getPartAccess() {
-		return (pPart != null) ? pPart : (pPart = new PartElements());
-	}
-	
-	public ParserRule getPartRule() {
-		return getPartAccess().getRule();
-	}
-
 	//Bundle:
-	//	"bundle" component=BundleComponent name=ID PLACEHOLDERB* "{" promiseType+=BundlePromiseType* "}";
+	//	"bundle" component=BundleComponent name=ID ("(" variables+=ID ("," variables+=ID)* ")")? "{"
+	//	promiseType+=BundlePromiseType* "}";
 	public BundleElements getBundleAccess() {
 		return (pBundle != null) ? pBundle : (pBundle = new BundleElements());
 	}
@@ -1120,8 +1073,9 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 		return getBundleClassAccess().getRule();
 	}
 
+	////name=STRING (values+=PromiseValue (',' values+=PromiseValue)*)* ';';
 	//BundlePromise:
-	//	name=STRING (values+=PromiseValue ("," values+=PromiseValue)*)* ";";
+	//	name=STRING (values+=PromiseValue ("," values+=PromiseValue)*)? ";";
 	public BundlePromiseElements getBundlePromiseAccess() {
 		return (pBundlePromise != null) ? pBundlePromise : (pBundlePromise = new BundlePromiseElements());
 	}
@@ -1192,7 +1146,7 @@ public class CfengineEditorGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SpecialFunction:
-	//	id=ID "(" (ANY_OTHER | ID | STRING | INT | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
+	//	id=ID "(" (ANY_OTHER | ID | STRING | "," | "$(" ID ")" | "${" ID "}" | func+=SpecialFunction)*
 	//	/ *(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* * / ")";
 	public SpecialFunctionElements getSpecialFunctionAccess() {
 		return (pSpecialFunction != null) ? pSpecialFunction : (pSpecialFunction = new SpecialFunctionElements());

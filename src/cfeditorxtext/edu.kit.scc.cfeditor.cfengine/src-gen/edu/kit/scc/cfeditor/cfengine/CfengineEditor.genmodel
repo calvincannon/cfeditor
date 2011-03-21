@@ -12,9 +12,9 @@
     <genClasses ecoreClass="CfengineEditor.ecore#//CfModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CfengineEditor.ecore#//CfModel/elements"/>
     </genClasses>
-    <genClasses ecoreClass="CfengineEditor.ecore#//AbstractElement"/>
-    <genClasses ecoreClass="CfengineEditor.ecore#//Part">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CfengineEditor.ecore#//Part/name"/>
+    <genClasses ecoreClass="CfengineEditor.ecore#//AbstractElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CfengineEditor.ecore#//AbstractElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CfengineEditor.ecore#//AbstractElement/variables"/>
     </genClasses>
     <genClasses ecoreClass="CfengineEditor.ecore#//Bundle">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CfengineEditor.ecore#//Bundle/component"/>
@@ -40,7 +40,6 @@
     </genClasses>
     <genClasses ecoreClass="CfengineEditor.ecore#//Body">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CfengineEditor.ecore#//Body/component"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CfengineEditor.ecore#//Body/variables"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CfengineEditor.ecore#//Body/promiseType"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CfengineEditor.ecore#//Body/classes"/>
     </genClasses>

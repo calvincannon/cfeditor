@@ -8,8 +8,8 @@ CfModel:
 
 terminal ID:
 	('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*; //'!'
-terminal INT returns ecore::EInt:
-	('0'..'9')+;
+//terminal INT returns ecore::EInt: //omittable?
+//	('0'..'9')+;
 
 	//terminal STRING:
 //	'"' ('\\' ('b' | 't' | 'n' | 'f' | 'r' | '"' | "'" | '\\' ) | !('\\' | '"'))* '"' |
@@ -33,17 +33,14 @@ CLASS_ID:
 //(ID | '(' | ')' | '|' | '!' | '.')+;
 //PLACEHOLDER:
 //	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')' | '{' | '}' | '@');
-PLACEHOLDERB:
-	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')');
+//PLACEHOLDERB:
+//	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')');
 
 AbstractElement:
-	Part;
-
-Part:
 	(Bundle | Body);
 
 Bundle:
-	'bundle' component=BundleComponent name=ID (PLACEHOLDERB)* '{' (promiseType+=BundlePromiseType)* '}';
+	'bundle' component=BundleComponent name=ID ('(' variables+=ID (',' variables+=ID)* ')')? '{' (promiseType+=BundlePromiseType)* '}';
 
 BundlePromiseType:
 	name=ID ':' (promises+=BundlePromise)* (classes+=BundleClass)*;
@@ -51,7 +48,7 @@ BundlePromiseType:
 BundleClass:
 	name=CLASS_ID '::' (promises+=BundlePromise)+; //TODO + or * ?
 BundlePromise:
-	name=STRING (values+=PromiseValue (',' values+=PromiseValue)*)* ';';
+	name=STRING (values+=PromiseValue (',' values+=PromiseValue)*)? ';';//name=STRING (values+=PromiseValue (',' values+=PromiseValue)*)* ';';
 
 PromiseValue:
 	keyword=ID '=>' ((values+=STRING | functions+=SimpleFunction|values+=ID) | ('{' (values+=STRING | functions+=SimpleFunction)
@@ -77,7 +74,7 @@ SimpleFunction:
 	id=ID '(' values+=STRING (',' values+=STRING)* ')';
 
 SpecialFunction:
-	id=ID '(' (ANY_OTHER | ID | STRING | INT | ',' | '$(' ID ')' | '${' ID '}' | func+=SpecialFunction)*
+	id=ID '(' (ANY_OTHER | ID | STRING |  ',' | '$(' ID ')' | '${' ID '}' | func+=SpecialFunction)*
 	/*(INT | STRING | ID | functions+=SpecialFunction) (',' (INT | STRING | ID | functions+=SpecialFunction))* */
 	')';
 

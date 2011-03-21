@@ -110,19 +110,10 @@ public class CfengineSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CfenginePackage.PART:
-      {
-        Part part = (Part)theEObject;
-        T result = casePart(part);
-        if (result == null) result = caseAbstractElement(part);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case CfenginePackage.BUNDLE:
       {
         Bundle bundle = (Bundle)theEObject;
         T result = caseBundle(bundle);
-        if (result == null) result = casePart(bundle);
         if (result == null) result = caseAbstractElement(bundle);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -159,7 +150,6 @@ public class CfengineSwitch<T>
       {
         Body body = (Body)theEObject;
         T result = caseBody(body);
-        if (result == null) result = casePart(body);
         if (result == null) result = caseAbstractElement(body);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -245,22 +235,6 @@ public class CfengineSwitch<T>
    * @generated
    */
   public T caseAbstractElement(AbstractElement object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Part</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Part</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePart(Part object)
   {
     return null;
   }

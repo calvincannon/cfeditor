@@ -57,7 +57,6 @@ public class ClassViewPart extends ViewPart {
 		treeViewer = new TreeViewer(parent, 0);
 		treeViewer.setContentProvider(new TreeNodeContentProvider());
 		treeViewer.setLabelProvider(new ClassLabelProvider());
-
 		treeViewer.setSorter(new ViewerSorter()); // sorts tree alphabetically
 
 		ColumnViewerToolTipSupport.enableFor(treeViewer);
