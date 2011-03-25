@@ -18,8 +18,8 @@
 || r.0.1 || files: inputs/failsafe.cf, inputs/promises.cf, inputs/update.cf ||✔|| 
 || r.0.2 || classes declarations in grammatic ||✔|| 
 || r.0.2 || classes in outline window  ||✔|| 
-|| r.0.2 || Code refactoring: interfaces for different projects types  || || 
-|| r.0.2 || Templates for different project types  || || 
+|| r.0.2 || Code refactoring: interfaces for different projects types  ||✔|| 
+|| r.0.2 || Templates for different project types  |||| 
 || r.0.3 || Templates for Services ||  || 
 || r.0.3 || Semantic-based CMDB promises templates ||  || 
 || ... || ... || ... || 
@@ -33,8 +33,8 @@
 || r.0.1 || error squiggles ||✔||
 || r.0.1 || content assist ||✔||
 || r.0.1 || bracket matching ||✔||
-|| r.0.2 || Semantic connection between cf3 promises and cf3 classes ||  || 
-|| r.0.2 || Semantic connections between cf3 classes and hostlabel (ip or name) ||  || 
+|| r.0.2 || Semantic connection between cf3 promises and cf3 classes ||✔|| 
+|| r.0.2 || Semantic connections between cf3 classes and hostlabel (ip or name) ||✔|| 
 || ... || ... || ... || 
 || r.1.0 || dynamically content assistance || ||
 
@@ -43,7 +43,7 @@
 || r.0.1 || different kind of hovers ||✔||
 || r.0.1 || dynamically updated outliner ||✔||
 || r.0.1 || find/replace ||✔||
-|| r.0.2 || eclipse basic frame options || || 
+|| r.0.2 || eclipse basic frame options ||✔|| 
 
 ==interpreter==
 || *release*|| *interpreter options* || *current status* ||
