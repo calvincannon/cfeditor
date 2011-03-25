@@ -27,4 +27,7 @@ public class CfengineEditorLabelProvider extends DefaultEObjectLabelProvider {
 	 * 
 	 * String image(MyModel ele) { return "MyModel.gif"; }
 	 */
+
+	// public String image(BodyComponent ele){return "cffile.gif";}
+	// public String image(Bundle ele){return "cffile.gif";}
 }

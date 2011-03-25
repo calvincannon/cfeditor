@@ -5,28 +5,30 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 /**
- * The activator class controls the plug-in life cycle
+ * This activator class controls the plug-in life cycle
  * 
  * @author Andreas Bender
  * 
  */
 public class CfeditorActivator extends AbstractUIPlugin {
 
-	// The plug-in ID
+	/**
+	 * the plug-in id
+	 */
 	public static final String PLUGIN_ID = "edu.kit.scc.cfeditor"; //$NON-NLS-1$
 
-	// The shared instance
+	/**
+	 * the shared instance
+	 */
 	private static CfeditorActivator plugin;
 
 	/**
-	 * The constructor
+	 * Constructor.
 	 */
 	public CfeditorActivator() {
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
+	/**
 	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#start(org.osgi.framework.BundleContext)
 	 */
 	public void start(BundleContext context) throws Exception {
@@ -34,9 +36,7 @@ public class CfeditorActivator extends AbstractUIPlugin {
 		plugin = this;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
+	/**
 	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#stop(org.osgi.framework.BundleContext)
 	 */
 	public void stop(BundleContext context) throws Exception {

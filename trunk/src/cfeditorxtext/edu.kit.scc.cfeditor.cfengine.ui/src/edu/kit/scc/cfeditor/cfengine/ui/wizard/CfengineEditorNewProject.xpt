@@ -2,7 +2,6 @@
 
 «DEFINE main FOR CfengineEditorProjectInfo»
 «EXPAND model FOR this»
-«REM»«EXPAND workflow FOR this»«ENDREM»
 «ENDDEFINE»
 
 «DEFINE model FOR CfengineEditorProjectInfo»
@@ -1232,19 +1231,3 @@ expireafter => "10";
 «ENDFILE»
 
 «ENDDEFINE»
-
-
-«REM»
-«DEFINE workflow FOR CfeditorProjectInfo»
-«FILE "src/Generator.mwe2"-»
-module Generator
-
-var targetDir = "src-gen"
-var modelPath = "src/model"
-
-Workflow {
-	component = @workflow.CfeditorGenerator auto-inject {}
-}
-«ENDFILE»
-«ENDDEFINE»
-«ENDREM»

@@ -41,7 +41,7 @@ public class CfengineEditorFunctionValidator {
 				case STRING:
 					if (isList) {
 						errorString = "List \"{...}\" not allowed";
-					} else if (isVariable(values.get(0))) {
+					} else if (containsVariables(values.get(0))) {
 						if (!isInVariables(values.get(0), variables)) {
 							errorString = "Variable not defined";
 						}
@@ -52,7 +52,7 @@ public class CfengineEditorFunctionValidator {
 				case INT:
 					if (isList) {
 						errorString = "List \"{...}\" not allowed";
-					} else if (isVariable(values.get(0))) {
+					} else if (containsVariables(values.get(0))) {
 						if (!isInVariables(values.get(0), variables)) {
 							errorString = "Variable not defined";
 						}
@@ -63,7 +63,7 @@ public class CfengineEditorFunctionValidator {
 				case REAL:
 					if (isList) {
 						errorString = "List \"{...}\" not allowed";
-					} else if (isVariable(values.get(0))) {
+					} else if (containsVariables(values.get(0))) {
 						if (!isInVariables(values.get(0), variables)) {
 							errorString = "Variable not defined";
 						}
@@ -84,7 +84,7 @@ public class CfengineEditorFunctionValidator {
 				case OPTION:
 					if (isList) {
 						errorString = "List \"{...}\" not allowed";
-					} else if (isVariable(values.get(0))) {
+					} else if (containsVariables(values.get(0))) {
 						if (!isInVariables(values.get(0), variables)) {
 							errorString = "Variable not defined";
 						}
@@ -94,9 +94,11 @@ public class CfengineEditorFunctionValidator {
 					break;
 				}
 			} catch (IllegalArgumentException e) {
-
+				e.printStackTrace();
+				// FIXME? Maybe log it?
 			} catch (NullPointerException e) {
-
+				e.printStackTrace();
+				// FIXME?
 			} catch (SecurityException e) {
 				e.printStackTrace();
 			}
@@ -111,7 +113,7 @@ public class CfengineEditorFunctionValidator {
 	 * @param range
 	 * @return error message string or null
 	 */
-	public String checkINT(String value, String range) {
+	private String checkINT(String value, String range) {
 		try {
 			long intValue = Long.parseLong(value);
 
@@ -137,7 +139,7 @@ public class CfengineEditorFunctionValidator {
 	 * @param range
 	 * @return error message string or null
 	 */
-	public String checkREAL(String value, String range) {
+	private String checkREAL(String value, String range) {
 		try {
 			double doubleValue = Double.parseDouble(value);
 
@@ -163,7 +165,7 @@ public class CfengineEditorFunctionValidator {
 	 * @param strOptions
 	 * @return error message string or null
 	 */
-	public String checkOPTION(String value, String strOptions) {
+	private String checkOPTION(String value, String strOptions) {
 		String[] options = strOptions.split(",");
 		for (String option : options) {
 			if (option.equals(value)) {
@@ -180,7 +182,7 @@ public class CfengineEditorFunctionValidator {
 	 * @param pattern
 	 * @return error message string or null
 	 */
-	public String checkSTRING(String value, String pattern) {
+	private String checkSTRING(String value, String pattern) {
 		if (!pattern.isEmpty() && !value.matches(pattern)) {
 			return "Parameter does not match pattern: " + pattern;
 		}
@@ -188,23 +190,13 @@ public class CfengineEditorFunctionValidator {
 	}
 
 	/**
-	 * Checks if a string contains a variable.
+	 * Checks if a string contains at least one variable.
 	 * 
 	 * @param value
 	 * @return true if string contains a variable
 	 */
-	public Boolean isVariable(String value) {
+	private Boolean containsVariables(String value) {
 		return value.matches(".*\\$\\(.*\\).*") || value.matches(".*\\$\\{.*\\}.*");
-	}
-
-	/**
-	 * Returns the variable out of a string.
-	 * 
-	 * @param value
-	 * @return the variable without quotes
-	 */
-	public String getVariableFromString(String value) {
-		return value.substring(2, value.length() - 1);
 	}
 
 	/**
@@ -213,7 +205,7 @@ public class CfengineEditorFunctionValidator {
 	 * @param value
 	 * @return the list of variables
 	 */
-	public LinkedList<String> getVariablesFromString(String value) {
+	private LinkedList<String> getVariablesFromString(String value) {
 		String var = null;
 		LinkedList<String> list = new LinkedList<String>();
 
@@ -238,7 +230,7 @@ public class CfengineEditorFunctionValidator {
 	 * @param variables
 	 * @return true if variable are in the declared variable list.
 	 */
-	public Boolean isInVariables(String value, EList<String> variables) {
+	private Boolean isInVariables(String value, EList<String> variables) {
 		if (null != variables) {
 			LinkedList<String> list = getVariablesFromString(value);
 			if (variables.containsAll(list)) {

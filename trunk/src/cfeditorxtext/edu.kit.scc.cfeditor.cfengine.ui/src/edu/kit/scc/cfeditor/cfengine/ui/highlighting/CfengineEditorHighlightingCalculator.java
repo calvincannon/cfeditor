@@ -44,6 +44,7 @@ public class CfengineEditorHighlightingCalculator implements ISemanticHighlighti
 			if (nodeElement instanceof BodyPromiseType) {
 				acceptor.addPosition(abstractNode.getOffset(), abstractNode.getLength(),
 						CfengineEditorHighlightingConfiguration.PROMISE_TYPE);
+				
 			} else if (nodeElement instanceof BundlePromiseType) {
 				LeafNode node = getFirstFeatureNode(nodeElement, "name");
 				acceptor.addPosition(node.getOffset(), node.getLength(),
