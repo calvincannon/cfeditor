@@ -10,7 +10,7 @@ var projectName = "edu.kit.scc.cfeditor.cfengine"
 var runtimeProject = "../${projectName}"
 
 Workflow {
-    bean = StandaloneSetup {
+	bean = StandaloneSetup {
 		platformUri = "${runtimeProject}/.."
 	}
 
@@ -57,8 +57,7 @@ Workflow {
 			// java-based API for validation 
 			fragment = validation.JavaValidatorFragment {
 				composedCheck = "org.eclipse.xtext.validation.ImportUriValidator"
-				composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"
-				// registerForImportedPackages = true
+				composedCheck = "org.eclipse.xtext.validation.NamesAreUniqueValidator"// registerForImportedPackages = true
 			}
 
 			// scoping and exporting API
@@ -91,10 +90,10 @@ Workflow {
 			fragment = parser.antlr.XtextAntlrUiGeneratorFragment {}
 
 			// project wizard
-			 fragment = projectWizard.SimpleProjectWizardFragment {
-			 		generatorProjectName = "${projectName}.generator" 
-					modelFileExtension = file.extensions
-			 }
+			fragment = projectWizard.SimpleProjectWizardFragment {
+				generatorProjectName = "${projectName}.generator"
+				modelFileExtension = file.extensions
+			}
 		}
 	}
 }

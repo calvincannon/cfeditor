@@ -1,7 +1,7 @@
 package edu.kit.scc.cfeditor.cfengine.validation;
 
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -26,24 +26,24 @@ import edu.kit.scc.cfeditor.cfengine.definitions.CfDefinitionProvider;
  */
 public class CfengineEditorJavaValidator extends AbstractCfengineEditorJavaValidator {
 
-	private CfengineEditorFunctionValidator functionValidator;
-
 	/**
 	 * Checks if promise type in bundle block is allowed with bundle component.
 	 * 
-	 * @param ptype
+	 * @param pType
 	 */
 	@Check
-	public void checkPromiseTypes(BundlePromiseType ptype) {
-		CompositeNode node = NodeUtil.getNode(ptype);
+	public void checkPromiseTypes(BundlePromiseType pType) {
+		CompositeNode node = NodeUtil.getNode(pType);
 		EObject eObj = NodeUtil.findASTParentElement(node);
+
 		if (eObj instanceof Bundle) {
 			Bundle bundle = (Bundle) eObj;
 			CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
-			HashMap<String, LinkedList<String>> promiseMap = cfDefProvider.getBundleTypes();
+			Map<String, List<String>> promiseMap = cfDefProvider.getBundleTypes();
 
-			String pName = ptype.getName();
+			String pName = pType.getName();
 			String compName = bundle.getComponent().getName();
+
 			if (!promiseMap.get(compName).contains(pName)) {
 				error("Promise type \"" + pName + "\" not allowed with component \"" + compName + "\"",
 						CfenginePackage.BUNDLE_PROMISE_TYPE__NAME);
@@ -54,11 +54,11 @@ public class CfengineEditorJavaValidator extends AbstractCfengineEditorJavaValid
 	/**
 	 * Checks if promise type in bundle block is allowed with bundle component.
 	 * 
-	 * @param ptype
+	 * @param pType
 	 */
 	@Check
-	public void checkPromiseTypes(BodyPromiseType ptype) {
-		CompositeNode node = NodeUtil.getNode(ptype);
+	public void checkPromiseTypes(BodyPromiseType pType) {
+		CompositeNode node = NodeUtil.getNode(pType);
 		EObject eObj = NodeUtil.findASTParentElement(node.getParent());
 
 		if (eObj instanceof BodyClass) {
@@ -69,9 +69,9 @@ public class CfengineEditorJavaValidator extends AbstractCfengineEditorJavaValid
 		if (eObj instanceof Body) {
 			Body body = (Body) eObj;
 			CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
-			HashMap<String, LinkedList<String>> promiseMap = cfDefProvider.getBodyFunctions();
+			Map<String, List<String>> promiseMap = cfDefProvider.getBodyFunctions();
 
-			String pName = ptype.getName();
+			String pName = pType.getName();
 			String compName = body.getComponent().getName();
 			if (!promiseMap.get(compName).contains(pName)) {
 				error("Promise type \"" + pName + "\" not allowed with component \"" + compName + "\"",
@@ -87,10 +87,11 @@ public class CfengineEditorJavaValidator extends AbstractCfengineEditorJavaValid
 	 */
 	@Check
 	public void checkBodyFunctionValues(BodyFunction function) {
+		CfengineEditorFunctionValidator functionValidator = new CfengineEditorFunctionValidator();
+
 		String name = function.getName().getName();
-		EList<String> values = function.getValues();
-		functionValidator = new CfengineEditorFunctionValidator();
 		Boolean isList = function.isList();
+		EList<String> values = function.getValues();
 		EList<String> variables = null;
 
 		CompositeNode node = NodeUtil.getNode(function);
@@ -111,4 +112,21 @@ public class CfengineEditorJavaValidator extends AbstractCfengineEditorJavaValid
 			warning(errorString, CfenginePackage.BODY_FUNCTION__NAME);
 		}
 	}
+
+	// @Check
+	// public void checkBundleComponent(BundleComponent component) {
+	// CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
+	// if (!cfDefProvider.getBundleTypes().containsKey(component.getName())) {
+	// error("Unknown component type", CfenginePackage.BUNDLE__COMPONENT);
+	// }
+	// }
+	// FIXME can only be used if CfDefinitionProvider provides all components or if all components are included in
+	// definitions.xml
+	// @Check
+	// public void checkBodyComponent(BodyComponent component) {
+	// CfDefinitionProvider cfDefProvider = CfDefinitionProvider.getInstance();
+	// if (!cfDefProvider.getBodyFunctions().containsKey(component.getName())) {
+	// error("Unknown component type", CfenginePackage.BUNDLE__COMPONENT);
+	// }
+	// }
 }
