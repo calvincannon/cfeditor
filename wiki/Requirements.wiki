@@ -45,7 +45,7 @@
 || r.0.1 || dynamically updated outliner ||✔||
 || r.0.1 || find/replace ||✔||
 || r.0.2 || eclipse basic frame options ||✔|| 
-|| r.0.3 || update to the xtext & new Eclipse versions ||✔|| 
+|| r.0.3 || update to the xtext & new Eclipse versions || || 
 
 ==interpreter==
 || *release*|| *interpreter options* || *current status* ||
