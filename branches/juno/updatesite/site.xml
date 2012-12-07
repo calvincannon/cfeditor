@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.cfeditor.feature_0.0.9.jar" id="org.cfeditor.feature" version="0.0.9">
+      <category name="org.cfeditor.updatesite.category"/>
+   </feature>
+   <category-def name="org.cfeditor.updatesite.category" label="Cfeditor"/>
+</site>
