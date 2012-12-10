@@ -2,7 +2,57 @@
 <?eclipse version="3.0"?>
 
 <plugin>
-
+<!-- adding Wizards-->
+	<extension
+         	point="org.eclipse.ui.newWizards">
+	  <!-- project Wizards -->
+      	<wizard
+            category="org.cfeditor.ui.wizard.category.cfeditor"
+            class="org.cfeditor.cfengine.ui.wizard.NewProjectWizard"
+            icon="icons/Cfeditor.png"
+            id="org.cfeditor.cfengine.ui.wizard.CfengineEditorNewProjectWizard"
+            name="Cfengine Project"
+            preferredPerspectives="org.cfeditor.cfengine.ui.perspective.cfengine"
+            project="true">
+      	</wizard>
+      <!-- non project Wizards -->
+      	<wizard
+            category="org.cfeditor.ui.wizard.category.cfeditor"
+            class="org.cfeditor.cfengine.ui.wizard.NewCfFileWizard"
+            icon="icons/cffile.gif"
+            id="org.cfeditor.cfengine.ui.wizard.NewCfFileWizard"
+            name="Cf File"
+            project="false">
+      	</wizard>
+	</extension>
+	<extension  
+  			point="org.eclipse.ui.navigator.navigatorContent">
+ 		<commonWizard
+            type="new"
+            wizardId="org.cfeditor.cfengine.ui.wizard.NewCfFileWizard">
+  			<enablement>
+   			<or>
+	    		<adapt type="org.eclipse.core.resources.IFolder" />
+	       		<adapt type="org.eclipse.core.resources.IProject" /> 
+	         	<adapt type="org.eclipse.core.resources.IWorkspaceRoot" />
+	         	<adapt type="org.eclipse.core.resources.IFile" />
+   			</or>
+  			</enablement>
+ 		</commonWizard>
+ 		<commonWizard
+       		type="new"
+       		wizardId="org.cfeditor.cfengine.ui.wizard.CfengineEditorNewProjectWizard">
+    		<enablement>
+       		<or>
+	          	<adapt type="org.eclipse.core.resources.IFolder" />
+	          	<adapt type="org.eclipse.core.resources.IProject" />
+	          	<adapt type="org.eclipse.core.resources.IWorkspaceRoot" />
+	          	<adapt type="org.eclipse.core.resources.IFile" />
+       		</or>
+    		</enablement>
+ 		</commonWizard>
+	</extension>
+ <!-- /adding Wizards-->  
     <extension
             point="org.eclipse.ui.editors">
         <editor
