@@ -41,7 +41,7 @@ public class NewCfProjectWizard extends Wizard implements INewWizard {
 			return true;
 		case OTHER:
 			try {
-				startCfengineProjectWizard();
+				startOtherProjectWizard();
 			} catch (CoreException e) {
 				return false;
 			}
@@ -82,5 +82,9 @@ public class NewCfProjectWizard extends Wizard implements INewWizard {
 		WizardDialog wd = new WizardDialog(this.getShell(), wizard);
 		wd.setTitle(wizard.getWindowTitle());
 		wd.open();
+	}
+	
+	private void startOtherProjectWizard() throws CoreException {
+		System.out.println("WHHHHHHHHHHHHHHAGGGGGGGGGGGGGGG");
 	}
 }

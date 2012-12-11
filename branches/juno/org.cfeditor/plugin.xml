@@ -7,6 +7,7 @@
        </category>
     </extension>
     <extension point="org.eclipse.ui.newWizards">
+    <!-- commented the wizard for choosing between cfengine & cfeditor projects 
       <wizard
             category="org.cfeditor.ui.wizard.category.cfeditor"
             class="org.cfeditor.ui.wizard.NewCfProjectWizard"
@@ -16,6 +17,7 @@
             name="Cfeditor Project"
             project="true">
       </wizard>
+      --> 
       <category
             id="org.cfeditor.ui.wizard.category.cfeditor"
             name="Cfeditor">
