@@ -1,9 +1,0 @@
-grammar org.cfeditor.cfengine.CfEditor with org.eclipse.xtext.common.Terminals
-
-generate cfEditor "http://www.cfeditor.org/cfengine/CfEditor"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
