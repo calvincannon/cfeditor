@@ -23,14 +23,15 @@ Import-Package: org.apache.log4j,
  org.jdom.input;version="1.1.1"
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.cfeditor,
- org.cfeditor.services,
  org.cfeditor.cfengine,
  org.cfeditor.cfengine.impl,
  org.cfeditor.cfengine.util,
- org.cfeditor.serializer,
+ org.cfeditor.formatting,
+ org.cfeditor.generator,
  org.cfeditor.parser.antlr,
  org.cfeditor.parser.antlr.internal,
- org.cfeditor.validation,
  org.cfeditor.scoping,
- org.cfeditor.generator,
- org.cfeditor.formatting
+ org.cfeditor.serializer,
+ org.cfeditor.services,
+ org.cfeditor.validation,
+ org.cfeditor.validation.definitions

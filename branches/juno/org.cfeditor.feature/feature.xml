@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.cfeditor.feature"
-      label="Feature"
+      label="cfEditor"
       version="1.0.0"
       provider-name="cfeditor.org">
 

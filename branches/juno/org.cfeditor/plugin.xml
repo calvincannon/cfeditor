@@ -13,7 +13,7 @@
       </wizard>
       <category
             id="org.cfeditor.ui.wizards.category.cfeditor"
-            name="Cfeditor">
+            name="cfEditor">
       </category>
    </extension>
    <extension
@@ -54,4 +54,39 @@
        </category>
     </extension>
 
+	<extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Sample Category"
+            id="org.cfeditor.ui.menu.commands.category">
+      </category>
+      <command
+            name="Create cfEditor Project"
+            categoryId="org.cfeditor.ui.menu.commands.category"
+            id="org.cfeditor.ui.menu.commands.menuCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="org.cfeditor.ui.menu.commands.menuCommand"
+            class="org.cfeditor.wizards.NewCfProjectWizard">
+      </handler>
+   </extension>
+	<extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="cfEditor"
+               mnemonic="E"
+               id="org.cfeditor.ui.menu">
+            <command
+                  commandId="org.cfeditor.ui.menu.commands.menuCommand"
+                  mnemonic="S"
+                  id="org.cfeditor.ui.menu.commands.menuCommand">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
 </plugin>

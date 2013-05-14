@@ -13,7 +13,7 @@ import org.cfeditor.Activator;
 public class CfeditorSelectExtWizardPage extends WizardPage implements Listener {
 
 	private Button btCfengine;
-	private Button btOther;
+	private Button btPuppet;
 
 	// private Button btDummy;
 
@@ -40,9 +40,9 @@ public class CfeditorSelectExtWizardPage extends WizardPage implements Listener 
 		btCfengine.setText("Cfengine Project");
 		btCfengine.addListener(SWT.Selection, this);
 
-		btOther = new Button(composite, SWT.RADIO);
-		btOther.setText("Other Project");
-		btOther.addListener(SWT.Selection, this);
+		btPuppet = new Button(composite, SWT.RADIO);
+		btPuppet.setText("Puppet Project");
+		btPuppet.addListener(SWT.Selection, this);
 
 		// btDummy = new Button(composite, SWT.RADIO);
 		// btDummy.setText("Dummy Project");
@@ -59,8 +59,8 @@ public class CfeditorSelectExtWizardPage extends WizardPage implements Listener 
 
 		if (btCfengine.getSelection()) {
 			cfWizard.setSelectedEngine(CMEngine.CFENGINE);
-		} else if (btOther.getSelection()) {
-			cfWizard.setSelectedEngine(CMEngine.OTHER);
+		} else if (btPuppet.getSelection()) {
+			cfWizard.setSelectedEngine(CMEngine.PUPPET);
 			// } else if (btDummy.getSelection()) {
 			// cfWizard.setSelectedEngine(CMEngine.DUMMY);
 		}

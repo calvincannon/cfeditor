@@ -17,6 +17,9 @@ Require-Bundle: org.cfeditor.editors;visibility:=reexport,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.compare
 Import-Package: org.apache.log4j,
+ org.eclipse.xpand2,
+ org.eclipse.xpand2.output,
+ org.eclipse.xtend.type.impl.java,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.cfeditor.ui.quickfix,

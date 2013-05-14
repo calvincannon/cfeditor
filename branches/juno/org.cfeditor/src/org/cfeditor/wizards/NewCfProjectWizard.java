@@ -5,13 +5,21 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.IWizard;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.jface.wizard.WizardDialog;
+
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.wizards.IWizardDescriptor;
 
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.swt.widgets.Shell;
+
+
 enum CMEngine {
-	CFENGINE, OTHER
+	CFENGINE, PUPPET
 	// , DUMMY
 }
 
@@ -39,9 +47,9 @@ public class NewCfProjectWizard extends Wizard implements INewWizard {
 				return false;
 			}
 			return true;
-		case OTHER:
+		case PUPPET:
 			try {
-				startCfengineProjectWizard();
+				startPuppetProjectWizard();
 			} catch (CoreException e) {
 				return false;
 			}
@@ -75,12 +83,20 @@ public class NewCfProjectWizard extends Wizard implements INewWizard {
 
 	private void startCfengineProjectWizard() throws CoreException {
 		IWizardDescriptor descriptor = PlatformUI.getWorkbench().getNewWizardRegistry()
-				.findWizard("edu.kit.scc.cfeditor.cfengine.ui.wizard.CfengineEditorNewProjectWizard");
+				.findWizard("org.cfeditor.ui.wizard.CfengineEditorNewProjectWizard");
 
 		IWizard wizard;
 		wizard = descriptor.createWizard();
 		WizardDialog wd = new WizardDialog(this.getShell(), wizard);
 		wd.setTitle(wizard.getWindowTitle());
 		wd.open();
+	}
+	
+	private void startPuppetProjectWizard() throws CoreException {		
+		MessageBox box = new MessageBox(new Shell(),SWT.ICON_INFORMATION);
+	        box.setMessage("This part is not implemented yet.");
+	        box.open();
+	        	
+
 	}
 }
