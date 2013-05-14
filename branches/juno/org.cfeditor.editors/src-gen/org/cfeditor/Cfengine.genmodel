@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.cfeditor.editors/src-gen" editDirectory="/org.cfeditor.editors.edit/src"
+    editorDirectory="/org.cfeditor.editors.editor/src" modelPluginID="org.cfeditor.editors"
+    forceOverwrite="true" modelName="Cfengine" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.cfeditor.editors.edit"
+    editorPluginID="org.cfeditor.editors.editor" runtimeVersion="2.8">
+  <genPackages prefix="Cfengine" basePackage="org.cfeditor" disposableProviderFactory="true"
+      fileExtensions="cf" ecorePackage="Cfengine.ecore#/">
+    <genClasses ecoreClass="Cfengine.ecore#//CfModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//CfModel/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//AbstractElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//AbstractElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//AbstractElement/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//Bundle">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//Bundle/component"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//Bundle/promiseType"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//BundleComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//BundleComponent/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//BundlePromiseType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//BundlePromiseType/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//BundlePromiseType/promises"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//BundlePromiseType/classes"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//BundleClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//BundleClass/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//BundleClass/promises"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//BundlePromise">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//BundlePromise/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//BundlePromise/values"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//PromiseValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//PromiseValue/keyword"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//PromiseValue/values"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//PromiseValue/functions"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//SimpleFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//SimpleFunction/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//SimpleFunction/values"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//Body">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//Body/component"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//Body/promiseType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//Body/classes"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//BodyPromiseType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//BodyPromiseType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//BodyComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//BodyComponent/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//BodyClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//BodyClass/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//BodyClass/promiseType"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//BodyFunction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//BodyFunction/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//BodyFunction/values"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//BodyFunction/List"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//BodyFunction/function"/>
+    </genClasses>
+    <genClasses ecoreClass="Cfengine.ecore#//SpecialFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Cfengine.ecore#//SpecialFunction/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Cfengine.ecore#//SpecialFunction/func"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
