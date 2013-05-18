@@ -10,9 +10,9 @@ import org.eclipse.ui.dialogs.WizardNewProjectCreationPage;
 
 public abstract class AbstractCfeditorProjectWizard extends Wizard implements INewWizard {
 
-	private static final String WIZARD_TITLE = "New Cfeditor Project";
+	private static final String WIZARD_TITLE = CfeditorMessages.AbstractCfeditorProjectWizard_NewcfEditorProject;
 
-	private static final String PAGE_NAME = "Custom Plug-in Project Wizard";
+	private static final String PAGE_NAME = CfeditorMessages.AbstractCfeditorProjectWizard_CuswtomPlugin;
 
 	private WizardNewProjectCreationPage _pageOne;
 
@@ -31,8 +31,8 @@ public abstract class AbstractCfeditorProjectWizard extends Wizard implements IN
 		super.addPages();
 
 		_pageOne = new WizardNewProjectCreationPage(PAGE_NAME);
-		_pageOne.setTitle("From Scratch Project");
-		_pageOne.setDescription("Create something from scratch.");
+		_pageOne.setTitle(CfeditorMessages.AbstractCfeditorProjectWizard_FromScratch);
+		_pageOne.setDescription(CfeditorMessages.AbstractCfeditorProjectWizard_SomethingFromScratch);
 
 		addPage(_pageOne);
 	}
@@ -43,9 +43,10 @@ public abstract class AbstractCfeditorProjectWizard extends Wizard implements IN
 		URI location = null;
 		if (!_pageOne.useDefaults()) {
 			location = _pageOne.getLocationURI();
-			System.err.println("location: " + location.toString());
+			System.err.println(CfeditorMessages.AbstractCfeditorProjectWizard_Location + location.toString());
 		} // else location == null
 
+		//call abstract Creator
 		AbstractCfeditorProjectCreator.createProject(name, location);
 
 		return true;

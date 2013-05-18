@@ -9,6 +9,9 @@ import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 
+/*
+ * creates  the project structure
+ * */
 public abstract class AbstractCfeditorProjectCreator {
 
 	private static final String[] FOLDER_PATHS = { "parent/child1-1/child2", "parent/child1-2/child2/child3" };

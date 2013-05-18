@@ -17,6 +17,10 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 
+/*
+ *This class is instantiated from plugin.xml
+ *as navigator & ui handler 
+ * */
 
 enum CMEngine {
 	CFENGINE, PUPPET
