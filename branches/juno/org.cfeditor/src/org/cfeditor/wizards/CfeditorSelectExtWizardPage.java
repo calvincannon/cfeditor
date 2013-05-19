@@ -10,13 +10,25 @@ import org.eclipse.swt.widgets.Listener;
 
 import org.cfeditor.Activator;
 
-public class CfeditorSelectExtWizardPage extends WizardPage implements Listener {
+enum CMEngine {
+	CFENGINE, PUPPET
+	// , DUMMY
+}
 
+/*
+ * Define the WizardPages class
+ * 
+ * */
+public class CfeditorSelectExtWizardPage extends WizardPage implements Listener {
+	
+	/* 
+	 * it will be two buttons
+	 * */
 	private Button btCfengine;
 	private Button btPuppet;
-
 	// private Button btDummy;
 
+	/*Construct*/
 	protected CfeditorSelectExtWizardPage(String pageName) {
 		super(pageName);
 		setTitle("Create a Cfeditor Project");
@@ -53,6 +65,9 @@ public class CfeditorSelectExtWizardPage extends WizardPage implements Listener 
 		setControl(composite);
 	}
 
+	/*
+	 * Call Wizard
+	 * */
 	@Override
 	public void handleEvent(Event event) {
 		NewCfProjectWizard cfWizard = (NewCfProjectWizard) getWizard();

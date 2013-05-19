@@ -11,20 +11,10 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.wizards.IWizardDescriptor;
 
-
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.MessageBox;
-import org.eclipse.swt.widgets.Shell;
-
 /*
  *This class is instantiated from plugin.xml
  *as navigator & ui handler 
  * */
-
-enum CMEngine {
-	CFENGINE, PUPPET
-	// , DUMMY
-}
 
 public class NewCfProjectWizard extends Wizard implements INewWizard {
 	private CfeditorSelectExtWizardPage extensionSelectPage;
@@ -45,14 +35,14 @@ public class NewCfProjectWizard extends Wizard implements INewWizard {
 		switch (selectedEngine) {
 		case CFENGINE:
 			try {
-				openWizard("org.cfeditor.wizards.cfengine.CfengineNewProjectWizard");
+				openWizard("cfengine/CfengineNewProjectWizard");
 			} catch (CoreException e) {
 				return false;
 			}
 			return true;
 		case PUPPET:
 			try {
-				openWizard("org.cfeditor.wizards.cfengine.PuppetNewProjectWizard");
+				openWizard("org.cfeditor.wizards.puppet.PuppetNewProjectWizard");
 			} catch (CoreException e) {
 				return false;
 			}
@@ -85,34 +75,37 @@ public class NewCfProjectWizard extends Wizard implements INewWizard {
 	}
 
 	public  void openWizard(String id) throws CoreException {
-		 // First see if this is a "new wizard".
-		 IWizardDescriptor descriptor = PlatformUI.getWorkbench()
-				 .getNewWizardRegistry().findWizard(id);
+		 
+		 IWizardDescriptor descriptor;
+		
+		 	// First see if this is a "new wizard".
+		 	descriptor = PlatformUI.getWorkbench()
+				 	.getNewWizardRegistry().findWizard(id);
 		 
 		 // If not check if it is an "import wizard".
 		 if  (descriptor == null) {
-			 descriptor = PlatformUI.getWorkbench().getImportWizardRegistry()
-					 .findWizard(id);
+			 descriptor = PlatformUI.getWorkbench()
+					 .getImportWizardRegistry().findWizard(id);
 		 }
 
 		 // Or maybe an export wizard
 		 if  (descriptor == null) {
-		   descriptor = PlatformUI.getWorkbench().getExportWizardRegistry()
-				   .findWizard(id);
+			 descriptor = PlatformUI.getWorkbench()
+					 .getExportWizardRegistry().findWizard(id);
 		 }
 		 
 		 try  {
 		   // Then if we have a wizard, open it.
 		   if  (descriptor != null) {
-			   System.out.print("descriptor seems to be not null, but ....");
+			   	System.out.print("descriptor seems to be not null, but ....");
 
-		     IWizard wizard = descriptor.createWizard();
-		     WizardDialog wd = new WizardDialog(this.getShell(), wizard);
-		     wd.setTitle(wizard.getWindowTitle());
-		     wd.open();
+			     IWizard wizard = descriptor.createWizard();
+			     WizardDialog wd = new WizardDialog(this.getShell(), wizard);
+			     wd.setTitle(wizard.getWindowTitle());
+			     wd.open();
 		   }
 		 } catch  (CoreException e) {
-			 e.printStackTrace();
+			 	e.printStackTrace();
 		 }
 	}
 }

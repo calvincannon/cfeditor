@@ -3,18 +3,19 @@
 <plugin>
    <extension
          point="org.eclipse.ui.newWizards">
+      <category
+            id="cfEditor"
+            name="cfEditor">
+      </category>
       <wizard
-            category="org.cfeditor.wizards.category.cfeditor"
             class="org.cfeditor.wizards.NewCfProjectWizard"
             icon="icons/Cfeditor.png"
+            category="cfEditor"
             id="org.cfeditor.wizards.NewCfProjectWizard"
             name="Cfeditor Project"
             project="true">
       </wizard>
-      <category
-            id="org.cfeditor.ui.wizards.category.cfeditor"
-            name="cfEditor">
-      </category>
+      
    </extension>
    <extension
          point="org.eclipse.ui.intro.configExtension">

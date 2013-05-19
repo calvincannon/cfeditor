@@ -1,4 +1,4 @@
-package org.cfeditor.wizards.cfengine;
+package org.cfeditor.wizards.puppet;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.MessageBox;
