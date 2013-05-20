@@ -1,5 +1,13 @@
 package org.cfeditor.cfengine.ui.wizard;
 
+/*
+ * Simple Class for File wizard of cfengine syntax.
+ * content is reading from the /template/newFile.cf
+ * 
+ * @author: Oleg Dulov olegdulov@gmail.com
+ * 
+ * */
+
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
@@ -31,7 +39,7 @@ public class CfengineNewFileWizard extends Wizard implements INewWizard {
 	private ISelection selection;
 
 	/**
-	 * Constructor for SampleNewWizard.
+	 * Constructor for CfengineNewWizard.
 	 */
 	public CfengineNewFileWizard() {
 		super();
@@ -124,19 +132,20 @@ public class CfengineNewFileWizard extends Wizard implements INewWizard {
 	}
 	
 	/**
-	 * We will initialize file contents with a sample text.
+	 * We will initialize file contents with a file from /template.
 	 */
 
 	private InputStream openContentStream() {
-		String contents = "/template/newFile.cf";
-		
-		//return new ByteArrayInputStream(contents.getBytes());
+		String contents = "/template/newFile.cf";		
 		return this.getClass().getResourceAsStream(contents);
+		/* for string, use:
+		 * return new ByteArrayInputStream(contents.getBytes());
+		 */
 	}
 
 	private void throwCoreException(String message) throws CoreException {
 		IStatus status =
-			new Status(IStatus.ERROR, "org.cfeditor.filewizard", IStatus.OK, message, null);
+			new Status(IStatus.ERROR, "org.cfeditor.cfengine.ui.wizard", IStatus.OK, message, null);
 		throw new CoreException(status);
 	}
 
