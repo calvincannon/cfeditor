@@ -34,7 +34,7 @@ public class CfengineNewFileWizardPage extends WizardPage {
 	private ISelection selection;
 
 	/**
-	 * Constructor for SampleNewWizardPage.
+	 * Constructor for CfengineNewWizardPage.
 	 * 
 	 * @param pageName
 	 */
