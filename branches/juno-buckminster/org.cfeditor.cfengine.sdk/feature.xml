@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.cfeditor.cfengine.sdk"
-      label="Cfengine"
-      version="1.0.0.qualifier">
+      label="Cfeditor"
+      version="1.0.0.qualifier"
+      provider-name="cfeditor.org">
 
    <plugin
          id="org.cfeditor.cfengine"

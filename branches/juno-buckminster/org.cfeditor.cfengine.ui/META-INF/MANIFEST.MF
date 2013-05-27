@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.cfeditor.cfengine.ui
-Bundle-Vendor: My Company
+Bundle-Vendor: cfeditor.org
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.cfeditor.cfengine.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
@@ -17,6 +17,9 @@ Require-Bundle: org.cfeditor.cfengine;visibility:=reexport,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.compare
 Import-Package: org.apache.log4j,
+ org.eclipse.xpand2,
+ org.eclipse.xpand2.output,
+ org.eclipse.xtend.type.impl.java,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.cfeditor.cfengine.ui.quickfix,
