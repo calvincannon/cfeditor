@@ -14,11 +14,10 @@
             category="cfEditor"
             id="org.cfeditor.cfengine.ui.wizard.CfengineNewFileWizard"
             name="Cfengine Project"
-            project="false">
+            project="true">
       </wizard>
 
  </extension>
-
     <extension
             point="org.eclipse.ui.editors">
         <editor
