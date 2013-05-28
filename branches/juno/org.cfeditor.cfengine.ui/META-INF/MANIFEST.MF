@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.cfeditor.cfengine.ui
 Bundle-Vendor: cfengine.org
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.cfeditor.cfengine.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.cfeditor.cfengine;visibility:=reexport,
