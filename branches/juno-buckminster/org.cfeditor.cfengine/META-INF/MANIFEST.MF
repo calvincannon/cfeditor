@@ -90,4 +90,3 @@ Export-Package: org.cfeditor.cfengine,
  org.cfeditor.cfengine.serializer,
  org.cfeditor.cfengine.services,
  org.cfeditor.cfengine.validation
-Bundle-Activator: org.cfeditor.Activator

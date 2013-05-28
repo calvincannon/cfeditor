@@ -26,4 +26,4 @@ Export-Package: org.cfeditor.cfengine.ui.quickfix,
  org.cfeditor.cfengine.ui.contentassist,
  org.cfeditor.cfengine.ui.contentassist.antlr,
  org.cfeditor.cfengine.ui.internal
-Bundle-Activator: org.cfeditor.cfengine.ui.internal.CfengineActivator
+Bundle-Activator: org.cfeditor.cfengine.ui.Activator
