@@ -26,7 +26,7 @@ import org.eclipse.ui.dialogs.ContainerSelectionDialog;
  * OR with the extension that matches the expected one (cf).
  */
 
-public class CfengineNewFileWizardPage extends WizardPage {
+public class CfengineNewProjectWizardPage extends WizardPage {
 	private Text containerText;
 
 	private Text fileText;
@@ -38,7 +38,7 @@ public class CfengineNewFileWizardPage extends WizardPage {
 	 * 
 	 * @param pageName
 	 */
-	public CfengineNewFileWizardPage(ISelection selection) {
+	public CfengineNewProjectWizardPage(ISelection selection) {
 		super("wizardPage");
 		setTitle("Multi-page Editor File");
 		setDescription("This wizard creates a new file with *.cf extension that can be opened by a multi-page editor.");
@@ -54,8 +54,9 @@ public class CfengineNewFileWizardPage extends WizardPage {
 		container.setLayout(layout);
 		layout.numColumns = 3;
 		layout.verticalSpacing = 9;		
+		
 		Label label = new Label(container, SWT.NULL);
-		label.setText("&Container:");
+		label.setText("&Project Name:");
 
 		containerText = new Text(container, SWT.BORDER | SWT.SINGLE);
 		GridData gd = new GridData(GridData.FILL_HORIZONTAL);
@@ -73,6 +74,7 @@ public class CfengineNewFileWizardPage extends WizardPage {
 				handleBrowse();
 			}
 		});
+		/*
 		label = new Label(container, SWT.NULL);
 		label.setText("&File name:");
 
@@ -84,6 +86,7 @@ public class CfengineNewFileWizardPage extends WizardPage {
 				dialogChanged();
 			}
 		});
+*/		
 		initialize();
 		dialogChanged();
 		setControl(container);
@@ -109,7 +112,7 @@ public class CfengineNewFileWizardPage extends WizardPage {
 				containerText.setText(container.getFullPath().toString());
 			}
 		}
-		fileText.setText("new_file.cf");
+		//fileText.setText("new_file.cf");
 	}
 
 	/**
@@ -136,7 +139,7 @@ public class CfengineNewFileWizardPage extends WizardPage {
 	private void dialogChanged() {
 		IResource container = ResourcesPlugin.getWorkspace().getRoot()
 				.findMember(new Path(getContainerName()));
-		String fileName = getFileName();
+		// String fileName = getFileName();
 
 		if (getContainerName().length() == 0) {
 			updateStatus("File container must be specified");
@@ -151,6 +154,7 @@ public class CfengineNewFileWizardPage extends WizardPage {
 			updateStatus("Project must be writable");
 			return;
 		}
+		/*
 		if (fileName.length() == 0) {
 			updateStatus("File name must be specified");
 			return;
@@ -167,6 +171,7 @@ public class CfengineNewFileWizardPage extends WizardPage {
 				return;
 			}
 		}
+		*/
 		updateStatus(null);
 	}
 
@@ -179,7 +184,9 @@ public class CfengineNewFileWizardPage extends WizardPage {
 		return containerText.getText();
 	}
 
+	/*
 	public String getFileName() {
 		return fileText.getText();
 	}
+	*/
 }
