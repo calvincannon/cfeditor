@@ -10,5 +10,4 @@
        genModel = "org/cfeditor/cfengine/Cfengine.genmodel" /> 
 	
   </extension>
-
 </plugin>
