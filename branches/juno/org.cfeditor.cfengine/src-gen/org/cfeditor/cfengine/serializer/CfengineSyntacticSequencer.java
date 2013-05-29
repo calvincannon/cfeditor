@@ -87,7 +87,7 @@ public class CfengineSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Syntax:
-	 *     (ANY_OTHER | ',' | ID | STRING)*
+	 *     (ID | ANY_OTHER | ',' | STRING)*
 	 */
 	protected void emit_SpecialFunction___ANY_OTHERTerminalRuleCall_2_0_or_CommaKeyword_2_3_or_IDTerminalRuleCall_2_1_or_STRINGTerminalRuleCall_2_2__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -95,7 +95,7 @@ public class CfengineSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     ((('$(' ID ')') | ('${' ID '}')) (ANY_OTHER | ',' | ID | STRING)*)*
+	 *     ((('${' ID '}') | ('$(' ID ')')) (ID | ANY_OTHER | ',' | STRING)*)*
 	 */
 	protected void emit_SpecialFunction_______DollarSignLeftCurlyBracketKeyword_2_5_0_IDTerminalRuleCall_2_5_1_RightCurlyBracketKeyword_2_5_2___or___DollarSignLeftParenthesisKeyword_2_4_0_IDTerminalRuleCall_2_4_1_RightParenthesisKeyword_2_4_2_______ANY_OTHERTerminalRuleCall_2_0_or_CommaKeyword_2_3_or_IDTerminalRuleCall_2_1_or_STRINGTerminalRuleCall_2_2__a__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
