@@ -8,9 +8,10 @@
             name="cfEditor">
       </category>
       <wizard
-            class="org.cfeditor.cfengine.ui.wizard.CfengineNewProjectWizard"
-            icon="icons/Cfengine.png"
             category="cfEditor"
+            class="org.cfeditor.cfengine.ui.wizard.CfengineNewProjectWizard"
+            finalPerspective="org.eclipse.ui.resourcePerspective"
+            icon="icons/Cfengine.png"
             id="org.cfeditor.cfengine.ui.wizard.CfengineNewProjectWizard"
             name="Cfengine Project"
             project="true">
@@ -108,4 +109,44 @@
          </menu>
       </menuContribution>
    </extension>
+ <extension
+       point="org.eclipse.ui.navigator.viewer">
+    <viewerActionBinding
+          viewerId="org.cfeditor.cfengine">
+       <includes>
+          <actionExtension
+                pattern="org.eclipse.ui.navigator.resources.*">
+          </actionExtension>
+       </includes>
+    </viewerActionBinding>
+    <viewerContentBinding
+          viewerId="org.cfeditor.cfengine">
+       <includes>
+          <contentExtension
+                pattern="org.eclipse.ui.navigator.resourceContent">
+          </contentExtension>
+          <contentExtension
+                pattern="org.eclipse.ui.navigator.resources.filters.*">
+          </contentExtension>
+          <contentExtension
+                pattern="org.eclipse.ui.navigator.resources.linkHelper">
+          </contentExtension>
+          <contentExtension
+                pattern="org.eclipse.ui.navigator.resources.workingSets">
+          </contentExtension>
+       </includes>
+    </viewerContentBinding>
+ </extension>
+ <extension
+       point="org.eclipse.ui.perspectiveExtensions">
+    <perspectiveExtension
+          targetID="org.eclipse.ui.resourcePerspective">
+       <view
+             id="org.cfeditor.cfengine"
+             ratio="0.5"
+             relationship="stack"
+             relative="org.eclipse.ui.navigator.ProjectExplorer">
+       </view>
+    </perspectiveExtension>
+ </extension>
 </plugin>

@@ -7,66 +7,48 @@ package org.cfeditor.cfengine.ui.wizard;
  * @author: Oleg Dulov olegdulov@gmail.com
  * 
  * */
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 
+import org.eclipse.core.resources.IFolder;
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IWorkspaceRoot;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.core.runtime.*;
-import org.eclipse.jface.operation.*;
-import java.lang.reflect.InvocationTargetException;
-import org.eclipse.jface.dialogs.MessageDialog;
-import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.core.resources.*;
-import org.eclipse.core.runtime.CoreException;
-import java.io.*;
-import org.eclipse.ui.*;
-import org.eclipse.ui.ide.IDE;
-
-/**
- * This is a sample new wizard. Its role is to create a new file 
- * resource in the provided container. If the container resource
- * (a folder or a project) is selected in the workspace 
- * when the wizard is opened, it will accept it as the target
- * container. The wizard creates one file with the extension
- * "cf". If a sample multi-page editor (also available
- * as a template) is registered for the same extension, it will
- * be able to open it.
- */
+import org.eclipse.ui.dialogs.WizardNewProjectCreationPage;
+import org.apache.commons.io.FileUtils;
 
 public class CfengineNewProjectWizard extends Wizard implements INewWizard {
-	private CfengineNewProjectWizardPage page;
-	private ISelection selection;
-
-	/**
-	 * Constructor for CfengineNewWizard.
-	 */
+	private WizardNewProjectCreationPage _pageOne;
 	public CfengineNewProjectWizard() {
-		super();
-		setNeedsProgressMonitor(true);
-	}
-	
-	/**
-	 * Adding the page to the wizard.
-	 */
-
-	public void addPages() {
-		page = new CfengineNewProjectWizardPage(selection);
-		addPage(page);
+		// TODO Auto-generated constructor stub
+		setWindowTitle("Cfengine Project");
 	}
 
-	/**
-	 * This method is called when 'Finish' button is pressed in
-	 * the wizard. We will create an operation and run it
-	 * using wizard as execution context.
-	 */
+	@Override
+	public void init(IWorkbench workbench, IStructuredSelection selection) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
 	public boolean performFinish() {
-		final String containerName = page.getContainerName();
-		//final String fileName = page.getFileName();
+		
+		final String prjName = _pageOne.getProjectName();
+		
 		IRunnableWithProgress op = new IRunnableWithProgress() {
 			public void run(IProgressMonitor monitor) throws InvocationTargetException {
 				try {
-					doFinish(containerName, "", monitor);
+					doFinish(prjName, monitor);
 				} catch (CoreException e) {
 					throw new InvocationTargetException(e);
 				} finally {
@@ -83,8 +65,20 @@ public class CfengineNewProjectWizard extends Wizard implements INewWizard {
 			MessageDialog.openError(getShell(), "Error", realException.getMessage());
 			return false;
 		}
+		
 		return true;
 	}
+	
+	@Override
+	 public void addPages() {
+	 super.addPages();
+	 
+	 _pageOne = new WizardNewProjectCreationPage("Cfengine Project Wizard");
+	 _pageOne.setTitle("Cfengine Project");
+	 _pageOne.setDescription("Creating Cfengine Project");
+	 
+	 addPage(_pageOne);
+	 }
 	
 	/**
 	 * The worker method. It will find the container, create the
@@ -92,68 +86,48 @@ public class CfengineNewProjectWizard extends Wizard implements INewWizard {
 	 * the editor on the newly created file.
 	 */
 
-	private void doFinish(
-							String containerName,
-							String fileName,
-							IProgressMonitor monitor) throws CoreException {
-		// create a sample file
-		monitor.beginTask("Creating " + fileName, 2);
-		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
-		IResource resource = root.findMember(new Path(containerName));
-		if (!resource.exists() || !(resource instanceof IContainer)) {
-			throwCoreException("Container \"" + containerName + "\" does not exist.");
-		}
-		IContainer container = (IContainer) resource;
-		final IFile file = container.getFile(new Path(fileName));
-		try {
-			InputStream stream = openContentStream();
-			if (file.exists()) {
-				file.setContents(stream, true, true, monitor);
-			} else {
-				file.create(stream, true, monitor);
-			}
-			stream.close();
-		} catch (IOException e) {
-		}
-		monitor.worked(1);
-		monitor.setTaskName("Opening file for editing...");
-		getShell().getDisplay().asyncExec(new Runnable() {
-			public void run() {
-				IWorkbenchPage page =
-					PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
-				try {
-					IDE.openEditor(page, file, true);
-				} catch (PartInitException e) {
-				}
-			}
-		});
-		monitor.worked(1);
+	private void doFinish(String prjName, IProgressMonitor monitor)	throws CoreException{
+		IProgressMonitor progressMonitor = new NullProgressMonitor();
+	    IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+	    IProject project = root.getProject(prjName);
+	    try {
+	        project.create(progressMonitor);
+	        project.open(progressMonitor);
+	        IFolder firstFolder = project.getFolder("firstfolder");
+	        firstFolder.create(true, true, progressMonitor);
+	        
+	        /*
+	         * toDo: add copy folder procedure
+	        IFolder f1= project.getFolder("");	        
+	        f1.create(true, true, progressMonitor);
+	        
+	        File srcDir = new File("/template/newProject/");
+	        File destDir = new File(f1.toString());
+	        
+	        try {
+	            //
+	            // Copy source directory into destination directory
+	            // including its child directories and files. When
+	            // the destination directory is not exists it will
+	            // be created. This copy process also preserve the
+	            // date information of the file.
+	            //
+	        	FileUtils.copyDirectoryToDirectory(srcDir,destDir);
+	        	
+	        	System.out.print("COPYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY:");
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	        */
+	        
+	        /*
+	         * IFolder secondFolder = project.getFolder("secondfolder");
+	         * secondFolder.create(true, true, progressMonitor);
+	        */
+	    } catch (CoreException e) {
+	        e.printStackTrace();
+	    }
+		
 	}
-	
-	/**
-	 * We will initialize file contents with a file from /template.
-	 */
-
-	private InputStream openContentStream() {
-		String contents = "/template/newProject";		
-		return this.getClass().getResourceAsStream(contents);
-		/* for string, use:
-		 * return new ByteArrayInputStream(contents.getBytes());
-		 */
-	}
-
-	private void throwCoreException(String message) throws CoreException {
-		IStatus status =
-			new Status(IStatus.ERROR, "org.cfeditor.cfengine.ui.wizard", IStatus.OK, message, null);
-		throw new CoreException(status);
-	}
-
-	/**
-	 * We will accept the selection in the workbench to see if
-	 * we can initialize from it.
-	 * @see IWorkbenchWizard#init(IWorkbench, IStructuredSelection)
-	 */
-	public void init(IWorkbench workbench, IStructuredSelection selection) {
-		this.selection = selection;
-	}
+			
 }
