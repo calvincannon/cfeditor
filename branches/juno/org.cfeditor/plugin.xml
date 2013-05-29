@@ -13,7 +13,7 @@
             finalPerspective="org.eclipse.ui.resourcePerspective"
             icon="icons/Cfengine.png"
             id="org.cfeditor.cfengine.ui.wizard.CfengineNewProjectWizard"
-            name="New Cfengine Project"
+            name="Cfengine Project"
             project="true">
       </wizard>
             
