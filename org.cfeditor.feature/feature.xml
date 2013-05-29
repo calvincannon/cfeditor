@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.cfeditor.feature"
-      label="cfEditor.Cfengine"
+      label="cfEditor Cfengine"
       version="1.0.0.qualifier"
       provider-name="cfeditor.org">
 
