@@ -23,22 +23,139 @@ public interface CfengineFactory extends EFactory
   CfengineFactory eINSTANCE = org.cfeditor.cfengine.cfengine.impl.CfengineFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Model</em>'.
+   * Returns a new object of class '<em>Cf Model</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Model</em>'.
+   * @return a new object of class '<em>Cf Model</em>'.
    * @generated
    */
-  Model createModel();
+  CfModel createCfModel();
 
   /**
-   * Returns a new object of class '<em>Greeting</em>'.
+   * Returns a new object of class '<em>Abstract Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Greeting</em>'.
+   * @return a new object of class '<em>Abstract Element</em>'.
    * @generated
    */
-  Greeting createGreeting();
+  AbstractElement createAbstractElement();
+
+  /**
+   * Returns a new object of class '<em>Bundle</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bundle</em>'.
+   * @generated
+   */
+  Bundle createBundle();
+
+  /**
+   * Returns a new object of class '<em>Bundle Promise Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bundle Promise Type</em>'.
+   * @generated
+   */
+  BundlePromiseType createBundlePromiseType();
+
+  /**
+   * Returns a new object of class '<em>Bundle Class</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bundle Class</em>'.
+   * @generated
+   */
+  BundleClass createBundleClass();
+
+  /**
+   * Returns a new object of class '<em>Bundle Promise</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bundle Promise</em>'.
+   * @generated
+   */
+  BundlePromise createBundlePromise();
+
+  /**
+   * Returns a new object of class '<em>Promise Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Promise Value</em>'.
+   * @generated
+   */
+  PromiseValue createPromiseValue();
+
+  /**
+   * Returns a new object of class '<em>Body</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body</em>'.
+   * @generated
+   */
+  Body createBody();
+
+  /**
+   * Returns a new object of class '<em>Body Class</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Class</em>'.
+   * @generated
+   */
+  BodyClass createBodyClass();
+
+  /**
+   * Returns a new object of class '<em>Body Function</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Function</em>'.
+   * @generated
+   */
+  BodyFunction createBodyFunction();
+
+  /**
+   * Returns a new object of class '<em>Simple Function</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Simple Function</em>'.
+   * @generated
+   */
+  SimpleFunction createSimpleFunction();
+
+  /**
+   * Returns a new object of class '<em>Special Function</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Special Function</em>'.
+   * @generated
+   */
+  SpecialFunction createSpecialFunction();
+
+  /**
+   * Returns a new object of class '<em>Body Promise Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Promise Type</em>'.
+   * @generated
+   */
+  BodyPromiseType createBodyPromiseType();
+
+  /**
+   * Returns a new object of class '<em>Bundle Component</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bundle Component</em>'.
+   * @generated
+   */
+  BundleComponent createBundleComponent();
+
+  /**
+   * Returns a new object of class '<em>Body Component</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Body Component</em>'.
+   * @generated
+   */
+  BodyComponent createBodyComponent();
 
   /**
    * Returns the package supported by this factory.

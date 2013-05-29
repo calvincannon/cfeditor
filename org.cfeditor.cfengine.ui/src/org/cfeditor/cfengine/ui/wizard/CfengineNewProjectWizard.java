@@ -27,6 +27,7 @@ import org.eclipse.ui.dialogs.WizardNewProjectCreationPage;
 
 import java.io.File;
 import java.io.IOException;
+
 import org.apache.commons.io.FileUtils;
 
 public class CfengineNewProjectWizard extends Wizard implements INewWizard {
@@ -96,12 +97,13 @@ public class CfengineNewProjectWizard extends Wizard implements INewWizard {
 	        project.create(progressMonitor);
 	        project.open(progressMonitor);
 	        IFolder firstFolder = project.getFolder("firstfolder");
-	        firstFolder.create(true, true, progressMonitor);
-	        
+	        firstFolder.create(true, true, progressMonitor);	        
+
 	        /*
 	         * toDo: add copy folder procedure
-	        IFolder f1= project.getFolder("");	        
-	        f1.create(true, true, progressMonitor);
+	         */
+	        IFolder f1= project.getFolder("ttt");	        
+	        f1.create(false, true, progressMonitor);
 	        
 	        File srcDir = new File("/template/newProject/");
 	        File destDir = new File(f1.toString());
@@ -120,7 +122,7 @@ public class CfengineNewProjectWizard extends Wizard implements INewWizard {
 	        } catch (IOException e) {
 	            e.printStackTrace();
 	        }
-	        */
+	        
 	        
 	        /*
 	         * IFolder secondFolder = project.getFolder("secondfolder");

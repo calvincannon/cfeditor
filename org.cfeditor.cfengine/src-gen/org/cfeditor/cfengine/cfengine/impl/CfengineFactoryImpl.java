@@ -64,8 +64,21 @@ public class CfengineFactoryImpl extends EFactoryImpl implements CfengineFactory
   {
     switch (eClass.getClassifierID())
     {
-      case CfenginePackage.MODEL: return createModel();
-      case CfenginePackage.GREETING: return createGreeting();
+      case CfenginePackage.CF_MODEL: return createCfModel();
+      case CfenginePackage.ABSTRACT_ELEMENT: return createAbstractElement();
+      case CfenginePackage.BUNDLE: return createBundle();
+      case CfenginePackage.BUNDLE_PROMISE_TYPE: return createBundlePromiseType();
+      case CfenginePackage.BUNDLE_CLASS: return createBundleClass();
+      case CfenginePackage.BUNDLE_PROMISE: return createBundlePromise();
+      case CfenginePackage.PROMISE_VALUE: return createPromiseValue();
+      case CfenginePackage.BODY: return createBody();
+      case CfenginePackage.BODY_CLASS: return createBodyClass();
+      case CfenginePackage.BODY_FUNCTION: return createBodyFunction();
+      case CfenginePackage.SIMPLE_FUNCTION: return createSimpleFunction();
+      case CfenginePackage.SPECIAL_FUNCTION: return createSpecialFunction();
+      case CfenginePackage.BODY_PROMISE_TYPE: return createBodyPromiseType();
+      case CfenginePackage.BUNDLE_COMPONENT: return createBundleComponent();
+      case CfenginePackage.BODY_COMPONENT: return createBodyComponent();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -76,10 +89,10 @@ public class CfengineFactoryImpl extends EFactoryImpl implements CfengineFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Model createModel()
+  public CfModel createCfModel()
   {
-    ModelImpl model = new ModelImpl();
-    return model;
+    CfModelImpl cfModel = new CfModelImpl();
+    return cfModel;
   }
 
   /**
@@ -87,10 +100,153 @@ public class CfengineFactoryImpl extends EFactoryImpl implements CfengineFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Greeting createGreeting()
+  public AbstractElement createAbstractElement()
   {
-    GreetingImpl greeting = new GreetingImpl();
-    return greeting;
+    AbstractElementImpl abstractElement = new AbstractElementImpl();
+    return abstractElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Bundle createBundle()
+  {
+    BundleImpl bundle = new BundleImpl();
+    return bundle;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BundlePromiseType createBundlePromiseType()
+  {
+    BundlePromiseTypeImpl bundlePromiseType = new BundlePromiseTypeImpl();
+    return bundlePromiseType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BundleClass createBundleClass()
+  {
+    BundleClassImpl bundleClass = new BundleClassImpl();
+    return bundleClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BundlePromise createBundlePromise()
+  {
+    BundlePromiseImpl bundlePromise = new BundlePromiseImpl();
+    return bundlePromise;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PromiseValue createPromiseValue()
+  {
+    PromiseValueImpl promiseValue = new PromiseValueImpl();
+    return promiseValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Body createBody()
+  {
+    BodyImpl body = new BodyImpl();
+    return body;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BodyClass createBodyClass()
+  {
+    BodyClassImpl bodyClass = new BodyClassImpl();
+    return bodyClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BodyFunction createBodyFunction()
+  {
+    BodyFunctionImpl bodyFunction = new BodyFunctionImpl();
+    return bodyFunction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SimpleFunction createSimpleFunction()
+  {
+    SimpleFunctionImpl simpleFunction = new SimpleFunctionImpl();
+    return simpleFunction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SpecialFunction createSpecialFunction()
+  {
+    SpecialFunctionImpl specialFunction = new SpecialFunctionImpl();
+    return specialFunction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BodyPromiseType createBodyPromiseType()
+  {
+    BodyPromiseTypeImpl bodyPromiseType = new BodyPromiseTypeImpl();
+    return bodyPromiseType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BundleComponent createBundleComponent()
+  {
+    BundleComponentImpl bundleComponent = new BundleComponentImpl();
+    return bundleComponent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BodyComponent createBodyComponent()
+  {
+    BodyComponentImpl bodyComponent = new BodyComponentImpl();
+    return bodyComponent;
   }
 
   /**
