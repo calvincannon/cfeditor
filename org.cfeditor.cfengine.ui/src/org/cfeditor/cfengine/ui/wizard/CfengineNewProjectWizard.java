@@ -9,7 +9,7 @@ package org.cfeditor.cfengine.ui.wizard;
  * */
 
 import java.lang.reflect.InvocationTargetException;
-
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IWorkspaceRoot;
@@ -24,11 +24,6 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.dialogs.WizardNewProjectCreationPage;
-
-import java.io.File;
-import java.io.IOException;
-
-import org.apache.commons.io.FileUtils;
 
 public class CfengineNewProjectWizard extends Wizard implements INewWizard {
 	private WizardNewProjectCreationPage _pageOne;
@@ -89,49 +84,49 @@ public class CfengineNewProjectWizard extends Wizard implements INewWizard {
 	 * the editor on the newly created file.
 	 */
 
-	private void doFinish(String prjName, IProgressMonitor monitor)	throws CoreException{
-		IProgressMonitor progressMonitor = new NullProgressMonitor();
-	    IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+	private void doFinish(String prjName, IProgressMonitor monitor)	throws CoreException {
+        IProgressMonitor progressMonitor = new NullProgressMonitor();
+
+		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
 	    IProject project = root.getProject(prjName);
-	    try {
 	        project.create(progressMonitor);
 	        project.open(progressMonitor);
-	        IFolder firstFolder = project.getFolder("firstfolder");
-	        firstFolder.create(true, true, progressMonitor);	        
 
-	        /*
-	         * toDo: add copy folder procedure
-	         */
-	        IFolder f1= project.getFolder("ttt");	        
-	        f1.create(false, true, progressMonitor);
-	        
-	        File srcDir = new File("/template/newProject/");
-	        File destDir = new File(f1.toString());
-	        
-	        try {
-	            //
-	            // Copy source directory into destination directory
-	            // including its child directories and files. When
-	            // the destination directory is not exists it will
-	            // be created. This copy process also preserve the
-	            // date information of the file.
-	            //
-	        	FileUtils.copyDirectoryToDirectory(srcDir,destDir);
-	        	
-	        	System.out.print("COPYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY:");
-	        } catch (IOException e) {
-	            e.printStackTrace();
+        String dirPath ="/template/newProject/";
+        
+        /**
+    	 * list of all folders which are initially created
+    	 */
+        String sArray[] = new String[] { "inputs", "inputs/cflib", "inputs/tasks",
+    			"inputs/services", "repl", "repl/scripts", "repl/configs", "repl/modules", "repl/scripts/monitors",
+    			"repl/scripts/reports", "repl/scripts/services", "repl/scripts/tasks", "repl/configs/services",
+    			"repl/configs/tasks"};
+        
+        try {
+	        for (int i = 0; i < sArray.length; i++) {
+	    		System.out.println(sArray[i]);
+	    		    
+				IFolder firstFolder = project.getFolder(sArray[i]);
+		        firstFolder.create(true, true, progressMonitor);			        
 	        }
-	        
-	        
-	        /*
-	         * IFolder secondFolder = project.getFolder("secondfolder");
-	         * secondFolder.create(true, true, progressMonitor);
-	        */
-	    } catch (CoreException e) {
+		} catch (CoreException e) {
 	        e.printStackTrace();
 	    }
-		
+        
+        /*
+         * Add initial *.cf files
+         * */
+        String fArray[] = new String[] { 
+        		"inputs/promises.cf", "inputs/update.cf", "inputs/failsafe.cf", "inputs/cflib/cfengine_stdlib.cf"
+        		};
+        		
+        for (int i = 0; i < fArray.length; i++) {	    		    
+        	IFile file = project.getFile(fArray[i]);
+            
+            
+            file.create(this.getClass().getResourceAsStream(dirPath+fArray[i]), true, monitor);
+		}
+        
 	}
 			
 }
