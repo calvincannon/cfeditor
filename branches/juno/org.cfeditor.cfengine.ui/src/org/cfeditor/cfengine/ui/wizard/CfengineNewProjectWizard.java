@@ -7,8 +7,7 @@ package org.cfeditor.cfengine.ui.wizard;
  * @author: Oleg Dulov olegdulov@gmail.com
  * 
  * */
-import java.io.File;
-import java.io.IOException;
+
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.core.resources.IFolder;
@@ -25,6 +24,9 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.dialogs.WizardNewProjectCreationPage;
+
+import java.io.File;
+import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 
 public class CfengineNewProjectWizard extends Wizard implements INewWizard {
