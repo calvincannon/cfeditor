@@ -26,3 +26,5 @@ Export-Package: org.cfeditor.cfengine.ui.contentassist,
  org.cfeditor.cfengine.ui.quickfix,
  org.cfeditor.cfengine.ui.wizard
 Bundle-Activator: org.cfeditor.cfengine.ui.internal.CfengineActivator
+Bundle-ClassPath: template/,
+ .
