@@ -10,7 +10,7 @@
       <wizard
             category="cfEditor"
             class="org.cfeditor.cfengine.ui.wizard.CfengineNewProjectWizard"
-            finalPerspective="org.cfeditor.cfengine.ui.perspectives.cfengine"
+            finalPerspective="org.cfeditor.cfengine.ui.perspectives"
             icon="icons/Cfengine.png"
             id="org.cfeditor.cfengine.ui.wizard.CfengineNewProjectWizard"
             name="Cfengine Project"
@@ -114,26 +114,4 @@
        </includes>
     </viewerContentBinding>
  </extension>
-  <extension
-       point="org.eclipse.ui.perspectives">
-    <perspective
-          class="org.cfeditor.cfengine.ui.perspectives.CfenginePerspective"
-          icon="icons/Cfeditor.png"
-          id="org.cfeditor.cfengine.ui.perspectives.cfengine"
-          name="cfEngine">
-    </perspective>
- </extension>
-  <extension
-        point="org.eclipse.ui.perspectiveExtensions">
-     <perspectiveExtension
-           targetID="org.cfeditor.cfengine.ui.perspectives.cfengine">
-        <view
-              id="org.cfeditor.cfengine.ui.pview"
-              minimized="false"
-              ratio="0.25"
-              relationship="left"
-              relative="org.eclipse.ui.editorss">
-        </view>
-     </perspectiveExtension>
-  </extension>
 </plugin>

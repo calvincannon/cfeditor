@@ -392,5 +392,47 @@
             extensions="cf">
     </provider>
   </extension>
+  <extension
+        point="org.eclipse.ui.perspectives">
+     <perspective
+           class="org.cfeditor.cfengine.ui.perspectives.CfenginePerspective"
+           icon="icons/Cfeditor.png"
+           id="org.cfeditor.cfengine.ui.perspectives"
+           name="cfEngine">
+     </perspective>
+  </extension>
+  <extension
+        point="org.eclipse.ui.perspectiveExtensions">
+     <perspectiveExtension
+           targetID="org.cfeditor.cfengine.ui.perspectives">
+           <view
+               id="org.eclipse.ui.navigator.ProjectExplorer"
+               minimized="false"
+               ratio="0.2"
+               relationship="left"
+               relative="org.eclipse.ui.editorss">
+         </view>
+         <view
+               id="org.eclipse.ui.views.ContentOutline"
+               minimized="false"
+               ratio="0.75"
+               relationship="right"
+               relative="org.eclipse.ui.editorss">
+         </view>
+         <view
+               id="org.eclipse.ui.views.ProblemView"
+               minimized="false"
+               ratio="0.75"
+               relationship="bottom"
+               relative="org.eclipse.ui.editorss">
+         </view>
+         <view
+               id="edu.kit.scc.cfeditor.cfengine.ui.views.ClassView"
+               minimized="false"
+               relationship="bottom"
+               relative="org.eclipse.ui.views.ContentOutline">
+         </view>
+     </perspectiveExtension>
+  </extension>
 
 </plugin>
