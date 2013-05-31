@@ -6,7 +6,7 @@ package org.cfeditor.cfengine.formatting
 import org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter
 import org.eclipse.xtext.formatting.impl.FormattingConfig
 
-import org.cfeditor.cfengine.services.CfengineGrammarAccess;
+//import org.cfeditor.cfengine.services.CfengineGrammarAccess;
 //import com.google.inject.Inject
 
 /**
