@@ -89,9 +89,9 @@ public abstract class AbstractCfengineRuntimeModule extends DefaultRuntimeModule
 		return org.eclipse.xtext.parser.antlr.AntlrTokenDefProvider.class;
 	}
 
-	// contributed by org.eclipse.xtext.generator.validation.ValidatorFragment
-	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends org.cfeditor.cfengine.validation.CfengineValidator> bindCfengineValidator() {
-		return org.cfeditor.cfengine.validation.CfengineValidator.class;
+	// contributed by org.eclipse.xtext.generator.validation.JavaValidatorFragment
+	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends org.cfeditor.cfengine.validation.CfengineJavaValidator> bindCfengineJavaValidator() {
+		return org.cfeditor.cfengine.validation.CfengineJavaValidator.class;
 	}
 
 	// contributed by org.eclipse.xtext.generator.scoping.AbstractScopingFragment
