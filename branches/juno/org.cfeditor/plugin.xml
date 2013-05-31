@@ -10,7 +10,7 @@
       <wizard
             category="cfEditor"
             class="org.cfeditor.cfengine.ui.wizard.CfengineNewProjectWizard"
-            finalPerspective="org.eclipse.ui.resourcePerspective"
+            finalPerspective="org.cfeditor.cfengine.ui.perspectives.cfengine"
             icon="icons/Cfengine.png"
             id="org.cfeditor.cfengine.ui.wizard.CfengineNewProjectWizard"
             name="Cfengine Project"
@@ -66,13 +66,6 @@
 	    </enablement>
 	 	</commonWizard>
 	</extension>
-    <extension
-          point="org.eclipse.ui.views">
-       <category
-             id="cfEditor"
-             name="cfEditor">
-       </category>
-    </extension>
 
 	<extension
          point="org.eclipse.ui.commands">
@@ -90,24 +83,8 @@
          point="org.eclipse.ui.handlers">
       <handler
             commandId="org.cfeditor.ui.menu.commands.menuCommand"
-            class="org.cfeditor.wizards.NewCfProjectWizard">
+            class="org.cfeditor.cfengine.ui.wizard.CfengineNewProjectWizard">
       </handler>
-   </extension>
-	<extension
-         point="org.eclipse.ui.menus">
-      <menuContribution
-            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
-         <menu
-               label="cfEditor"
-               mnemonic="E"
-               id="org.cfeditor.ui.menu">
-            <command
-                  commandId="org.cfeditor.ui.menu.commands.menuCommand"
-                  mnemonic="S"
-                  id="org.cfeditor.ui.menu.commands.menuCommand">
-            </command>
-         </menu>
-      </menuContribution>
    </extension>
  <extension
        point="org.eclipse.ui.navigator.viewer">
@@ -137,16 +114,26 @@
        </includes>
     </viewerContentBinding>
  </extension>
- <extension
-       point="org.eclipse.ui.perspectiveExtensions">
-    <perspectiveExtension
-          targetID="org.eclipse.ui.resourcePerspective">
-       <view
-             id="org.cfeditor.cfengine"
-             ratio="0.5"
-             relationship="stack"
-             relative="org.eclipse.ui.navigator.ProjectExplorer">
-       </view>
-    </perspectiveExtension>
+  <extension
+       point="org.eclipse.ui.perspectives">
+    <perspective
+          class="org.cfeditor.cfengine.ui.perspectives.CfenginePerspective"
+          icon="icons/Cfeditor.png"
+          id="org.cfeditor.cfengine.ui.perspectives.cfengine"
+          name="cfEngine">
+    </perspective>
  </extension>
+  <extension
+        point="org.eclipse.ui.perspectiveExtensions">
+     <perspectiveExtension
+           targetID="org.cfeditor.cfengine.ui.perspectives.cfengine">
+        <view
+              id="org.cfeditor.cfengine.ui.pview"
+              minimized="false"
+              ratio="0.25"
+              relationship="left"
+              relative="org.eclipse.ui.editorss">
+        </view>
+     </perspectiveExtension>
+  </extension>
 </plugin>
