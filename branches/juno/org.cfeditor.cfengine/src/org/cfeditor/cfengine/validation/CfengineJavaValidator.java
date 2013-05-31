@@ -26,7 +26,7 @@ import org.cfeditor.cfengine.validation.defs.CfDefinitionProvider;
  * @author Andreas Bender
  * 
  */
-public class CfengineJavaValidator extends AbstractCfengineValidator {
+public class CfengineJavaValidator extends AbstractCfengineJavaValidator {
 
 	/**
 	 * Checks if promise type in bundle block is allowed with bundle component.
