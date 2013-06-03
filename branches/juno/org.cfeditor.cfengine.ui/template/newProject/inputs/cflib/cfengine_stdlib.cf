@@ -1889,7 +1889,7 @@ body package_method ips
   package_installed_regex => ".*(i..)"; # all reported are installed
 
   # set it to "0" to avoid caching of list during upgrade
-  package_list_update_command => "/bin/true";  # Fixme later
+  #package_list_update_command => "/bin/true";  # Fixme later
   package_list_update_ifelapsed => "240";
 
   package_add_command => "/usr/bin/pkg install --accept ";
@@ -2707,29 +2707,29 @@ classes:
 
 # Do we want to include the packages here too?
 
-processes:
-
-  start::
-
-    "$(pattern[$(service)])" ->  { "@(stakeholders[$(service)])" } ,
-
-             comment => "Verify that the service appears in the process table",
-       restart_class => "restart_$(service)";
-
-  stop::
-
-    "$(pattern[$(service)])" -> { "@(stakeholders[$(service)])" },
-
-            comment => "Verify that the service does not appear in the process",
-       process_stop => "$(stopcommand[$(service)])",
-            signals => { "term", "kill"};
-
-  commands:
-
-   "$(startcommand[$(service)])" -> { "@(stakeholders[$(service)])" },
-
-            comment => "Execute command to restart the $(service) service",
-         ifvarclass => "restart_$(service)";
+#processes:
+#
+#  start::
+#
+#    "$(pattern[$(service)])" ->  { "@(stakeholders[$(service)])" } ,
+#
+#             comment => "Verify that the service appears in the process table",
+#       restart_class => "restart_$(service)";
+#
+#  stop::
+#
+#    "$(pattern[$(service)])" -> { "@(stakeholders[$(service)])" },
+#
+#            comment => "Verify that the service does not appear in the process",
+#       process_stop => "$(stopcommand[$(service)])",
+#            signals => { "term", "kill"};
+#
+#  commands:
+#
+#   "$(startcommand[$(service)])" -> { "@(stakeholders[$(service)])" },
+#
+#            comment => "Execute command to restart the $(service) service",
+#         ifvarclass => "restart_$(service)";
 }
 
 
