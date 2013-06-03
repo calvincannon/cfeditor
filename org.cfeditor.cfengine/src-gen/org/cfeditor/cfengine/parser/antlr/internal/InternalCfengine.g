@@ -123,18 +123,25 @@ ruleCLASS_ID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken(
     { 
     newLeafNode(this_ID_0, grammarAccess.getCLASS_IDAccess().getIDTerminalRuleCall_0_0()); 
     }
-(
+((
 	kw='.' 
     {
         $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getFullStopKeyword_0_1_0()); 
+        newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getFullStopKeyword_0_1_0_0()); 
     }
 
+    |
+	kw='|' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getVerticalLineKeyword_0_1_0_1()); 
+    }
+)?
     { 
         newCompositeNode(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_0_1_1()); 
     }
-    this_CLASS_ID_2=ruleCLASS_ID    {
-		$current.merge(this_CLASS_ID_2);
+    this_CLASS_ID_3=ruleCLASS_ID    {
+		$current.merge(this_CLASS_ID_3);
     }
 
     { 
@@ -151,8 +158,8 @@ ruleCLASS_ID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken(
     { 
         newCompositeNode(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_1_1()); 
     }
-    this_CLASS_ID_4=ruleCLASS_ID    {
-		$current.merge(this_CLASS_ID_4);
+    this_CLASS_ID_5=ruleCLASS_ID    {
+		$current.merge(this_CLASS_ID_5);
     }
 
     { 
@@ -169,8 +176,8 @@ ruleCLASS_ID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken(
     { 
         newCompositeNode(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_2_1()); 
     }
-    this_CLASS_ID_6=ruleCLASS_ID    {
-		$current.merge(this_CLASS_ID_6);
+    this_CLASS_ID_7=ruleCLASS_ID    {
+		$current.merge(this_CLASS_ID_7);
     }
 
     { 
@@ -182,24 +189,55 @@ ruleCLASS_ID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken(
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getRightParenthesisKeyword_2_2()); 
     }
-(
-	kw='.' 
+)
+    |(
+	kw='!(' 
     {
         $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getFullStopKeyword_2_3_0()); 
+        newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getExclamationMarkLeftParenthesisKeyword_3_0()); 
     }
 
     { 
-        newCompositeNode(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_2_3_1()); 
+        newCompositeNode(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_3_1()); 
     }
-    this_CLASS_ID_9=ruleCLASS_ID    {
-		$current.merge(this_CLASS_ID_9);
+    this_CLASS_ID_10=ruleCLASS_ID    {
+		$current.merge(this_CLASS_ID_10);
     }
 
     { 
         afterParserOrEnumRuleCall();
     }
-)?))
+
+	kw=')' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getRightParenthesisKeyword_3_2()); 
+    }
+)
+    |(
+	kw='! (' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getExclamationMarkSpaceLeftParenthesisKeyword_4_0()); 
+    }
+
+    { 
+        newCompositeNode(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_4_1()); 
+    }
+    this_CLASS_ID_13=ruleCLASS_ID    {
+		$current.merge(this_CLASS_ID_13);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
+
+	kw=')' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getRightParenthesisKeyword_4_2()); 
+    }
+))
     ;
 
 
@@ -514,7 +552,7 @@ ruleBundleClass returns [EObject current=null]
 	    }
 
 )
-)+)
+)*)
 ;
 
 
@@ -593,7 +631,7 @@ ruleBundlePromise returns [EObject current=null]
 	    }
 
 )
-))*)?	otherlv_4=';' 
+))*)*	otherlv_4=';' 
     {
     	newLeafNode(otherlv_4, grammarAccess.getBundlePromiseAccess().getSemicolonKeyword_2());
     }
@@ -1513,7 +1551,7 @@ ruleBodyComponent returns [EObject current=null]
 
 
 
-RULE_ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+RULE_ID : ('a'..'z'|'A'..'Z'|'_'|'\\s') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 RULE_STRING : ('"' (~(('\\'|'"'))|'\\' .)* '"'|'\'' (~(('\\'|'\''))|'\\' .)* '\'');
 

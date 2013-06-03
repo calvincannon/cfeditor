@@ -10,7 +10,7 @@ CfModel:
 
 // ---------------- update terminals
 terminal ID:
-	('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*; //'!'
+	('a'..'z' | 'A'..'Z' | '_' | '\\s') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*; //'!'
 //terminal INT returns ecore::EInt: //omittable?
 //	('0'..'9')+;
 
@@ -31,7 +31,9 @@ terminal ANY_OTHER:
 	.;
 
 CLASS_ID:
-	ID ('.' CLASS_ID)? | '!' CLASS_ID | '(' CLASS_ID ')' ('.' CLASS_ID)?;
+	//ID ('.' CLASS_ID)? | '!' CLASS_ID | '(' CLASS_ID ')' ('.' CLASS_ID)? ;
+	//ID ( ('.' | '|' | '!')? CLASS_ID)? | '(' CLASS_ID ')' (('.' | '|' | '!')? CLASS_ID)? ;
+	ID ( ('.' | '|' )? CLASS_ID)? | '!' CLASS_ID | '(' CLASS_ID ')' | '!(' CLASS_ID ')' | '! (' CLASS_ID ')' ;	
 
 //(ID | '(' | ')' | '|' | '!' | '.')+;
 //PLACEHOLDER:
@@ -39,9 +41,7 @@ CLASS_ID:
 //PLACEHOLDERB:
 //	(ANY_OTHER | ID | STRING | '=>' | ';' | ',' | '(' | ')');
 
-// ---------------- update terminals
-
-
+// ---------------- update non-terminals
 AbstractElement:
 	(Bundle | Body);
 
@@ -52,12 +52,14 @@ BundlePromiseType:
 	name=ID ':' (promises+=BundlePromise)* (classes+=BundleClass)*;
 
 BundleClass:
-	name=CLASS_ID '::' (promises+=BundlePromise)+; //TODO + or * ?
+	name=CLASS_ID '::' (promises+=BundlePromise)*; //TODO + or * ?
 BundlePromise:
-	name=STRING (values+=PromiseValue (',' values+=PromiseValue)*)? ';';//name=STRING (values+=PromiseValue (',' values+=PromiseValue)*)* ';';
+	name=STRING (values+=PromiseValue (',' values+=PromiseValue)*)* ';';
+	//name=STRING (values+=PromiseValue (',' values+=PromiseValue)*)? ';';
 
 PromiseValue:
-	keyword=ID '=>' ((values+=STRING | functions+=SimpleFunction|values+=ID) | ('{' (values+=STRING | functions+=SimpleFunction)
+	keyword=ID '=>' 
+	((values+=STRING | functions+=SimpleFunction|values+=ID) | ('{' (values+=STRING | functions+=SimpleFunction)
 	(',' (values+=STRING | functions+=SimpleFunction))* '}') | ('{' '@' '(' ID ')' '}')); //TODO "| ID"?
 	//	| '{''@' '(' ID ')' '}'); TODO?
 

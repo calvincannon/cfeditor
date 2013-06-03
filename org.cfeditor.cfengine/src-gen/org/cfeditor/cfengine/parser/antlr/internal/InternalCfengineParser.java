@@ -21,9 +21,12 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalCfengineParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_ANY_OTHER", "RULE_SL_COMMENT", "RULE_WS", "RULE_INT", "RULE_ML_COMMENT", "'.'", "'!'", "'('", "')'", "'bundle'", "','", "'{'", "'}'", "':'", "'::'", "';'", "'=>'", "'@'", "'body'", "'$('", "'${'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_ANY_OTHER", "RULE_SL_COMMENT", "RULE_WS", "RULE_INT", "RULE_ML_COMMENT", "'.'", "'|'", "'!'", "'('", "')'", "'!('", "'! ('", "'bundle'", "','", "'{'", "'}'", "':'", "'::'", "';'", "'=>'", "'@'", "'body'", "'$('", "'${'"
     };
     public static final int RULE_ID=4;
+    public static final int T__29=29;
+    public static final int T__28=28;
+    public static final int T__27=27;
     public static final int T__26=26;
     public static final int T__25=25;
     public static final int T__24=24;
@@ -142,7 +145,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==15||LA1_0==24) ) {
+                if ( (LA1_0==18||LA1_0==27) ) {
                     alt1=1;
                 }
 
@@ -239,43 +242,55 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCLASS_ID"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:115:1: ruleCLASS_ID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_ID_0= RULE_ID (kw= '.' this_CLASS_ID_2= ruleCLASS_ID )? ) | (kw= '!' this_CLASS_ID_4= ruleCLASS_ID ) | (kw= '(' this_CLASS_ID_6= ruleCLASS_ID kw= ')' (kw= '.' this_CLASS_ID_9= ruleCLASS_ID )? ) ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:115:1: ruleCLASS_ID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_ID_0= RULE_ID ( (kw= '.' | kw= '|' )? this_CLASS_ID_3= ruleCLASS_ID )? ) | (kw= '!' this_CLASS_ID_5= ruleCLASS_ID ) | (kw= '(' this_CLASS_ID_7= ruleCLASS_ID kw= ')' ) | (kw= '!(' this_CLASS_ID_10= ruleCLASS_ID kw= ')' ) | (kw= '! (' this_CLASS_ID_13= ruleCLASS_ID kw= ')' ) ) ;
     public final AntlrDatatypeRuleToken ruleCLASS_ID() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token this_ID_0=null;
         Token kw=null;
-        AntlrDatatypeRuleToken this_CLASS_ID_2 = null;
+        AntlrDatatypeRuleToken this_CLASS_ID_3 = null;
 
-        AntlrDatatypeRuleToken this_CLASS_ID_4 = null;
+        AntlrDatatypeRuleToken this_CLASS_ID_5 = null;
 
-        AntlrDatatypeRuleToken this_CLASS_ID_6 = null;
+        AntlrDatatypeRuleToken this_CLASS_ID_7 = null;
 
-        AntlrDatatypeRuleToken this_CLASS_ID_9 = null;
+        AntlrDatatypeRuleToken this_CLASS_ID_10 = null;
+
+        AntlrDatatypeRuleToken this_CLASS_ID_13 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:118:28: ( ( (this_ID_0= RULE_ID (kw= '.' this_CLASS_ID_2= ruleCLASS_ID )? ) | (kw= '!' this_CLASS_ID_4= ruleCLASS_ID ) | (kw= '(' this_CLASS_ID_6= ruleCLASS_ID kw= ')' (kw= '.' this_CLASS_ID_9= ruleCLASS_ID )? ) ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:119:1: ( (this_ID_0= RULE_ID (kw= '.' this_CLASS_ID_2= ruleCLASS_ID )? ) | (kw= '!' this_CLASS_ID_4= ruleCLASS_ID ) | (kw= '(' this_CLASS_ID_6= ruleCLASS_ID kw= ')' (kw= '.' this_CLASS_ID_9= ruleCLASS_ID )? ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:118:28: ( ( (this_ID_0= RULE_ID ( (kw= '.' | kw= '|' )? this_CLASS_ID_3= ruleCLASS_ID )? ) | (kw= '!' this_CLASS_ID_5= ruleCLASS_ID ) | (kw= '(' this_CLASS_ID_7= ruleCLASS_ID kw= ')' ) | (kw= '!(' this_CLASS_ID_10= ruleCLASS_ID kw= ')' ) | (kw= '! (' this_CLASS_ID_13= ruleCLASS_ID kw= ')' ) ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:119:1: ( (this_ID_0= RULE_ID ( (kw= '.' | kw= '|' )? this_CLASS_ID_3= ruleCLASS_ID )? ) | (kw= '!' this_CLASS_ID_5= ruleCLASS_ID ) | (kw= '(' this_CLASS_ID_7= ruleCLASS_ID kw= ')' ) | (kw= '!(' this_CLASS_ID_10= ruleCLASS_ID kw= ')' ) | (kw= '! (' this_CLASS_ID_13= ruleCLASS_ID kw= ')' ) )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:119:1: ( (this_ID_0= RULE_ID (kw= '.' this_CLASS_ID_2= ruleCLASS_ID )? ) | (kw= '!' this_CLASS_ID_4= ruleCLASS_ID ) | (kw= '(' this_CLASS_ID_6= ruleCLASS_ID kw= ')' (kw= '.' this_CLASS_ID_9= ruleCLASS_ID )? ) )
-            int alt4=3;
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:119:1: ( (this_ID_0= RULE_ID ( (kw= '.' | kw= '|' )? this_CLASS_ID_3= ruleCLASS_ID )? ) | (kw= '!' this_CLASS_ID_5= ruleCLASS_ID ) | (kw= '(' this_CLASS_ID_7= ruleCLASS_ID kw= ')' ) | (kw= '!(' this_CLASS_ID_10= ruleCLASS_ID kw= ')' ) | (kw= '! (' this_CLASS_ID_13= ruleCLASS_ID kw= ')' ) )
+            int alt4=5;
             switch ( input.LA(1) ) {
             case RULE_ID:
                 {
                 alt4=1;
                 }
                 break;
-            case 12:
+            case 13:
                 {
                 alt4=2;
                 }
                 break;
-            case 13:
+            case 14:
                 {
                 alt4=3;
+                }
+                break;
+            case 16:
+                {
+                alt4=4;
+                }
+                break;
+            case 17:
+                {
+                alt4=5;
                 }
                 break;
             default:
@@ -287,10 +302,10 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             switch (alt4) {
                 case 1 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:119:2: (this_ID_0= RULE_ID (kw= '.' this_CLASS_ID_2= ruleCLASS_ID )? )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:119:2: (this_ID_0= RULE_ID ( (kw= '.' | kw= '|' )? this_CLASS_ID_3= ruleCLASS_ID )? )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:119:2: (this_ID_0= RULE_ID (kw= '.' this_CLASS_ID_2= ruleCLASS_ID )? )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:119:7: this_ID_0= RULE_ID (kw= '.' this_CLASS_ID_2= ruleCLASS_ID )?
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:119:2: (this_ID_0= RULE_ID ( (kw= '.' | kw= '|' )? this_CLASS_ID_3= ruleCLASS_ID )? )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:119:7: this_ID_0= RULE_ID ( (kw= '.' | kw= '|' )? this_CLASS_ID_3= ruleCLASS_ID )?
                     {
                     this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCLASS_ID219); 
 
@@ -299,32 +314,63 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                      
                         newLeafNode(this_ID_0, grammarAccess.getCLASS_IDAccess().getIDTerminalRuleCall_0_0()); 
                         
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:126:1: (kw= '.' this_CLASS_ID_2= ruleCLASS_ID )?
-                    int alt2=2;
-                    int LA2_0 = input.LA(1);
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:126:1: ( (kw= '.' | kw= '|' )? this_CLASS_ID_3= ruleCLASS_ID )?
+                    int alt3=2;
+                    int LA3_0 = input.LA(1);
 
-                    if ( (LA2_0==11) ) {
-                        alt2=1;
+                    if ( (LA3_0==RULE_ID||(LA3_0>=11 && LA3_0<=14)||(LA3_0>=16 && LA3_0<=17)) ) {
+                        alt3=1;
                     }
-                    switch (alt2) {
+                    switch (alt3) {
                         case 1 :
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:127:2: kw= '.' this_CLASS_ID_2= ruleCLASS_ID
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:126:2: (kw= '.' | kw= '|' )? this_CLASS_ID_3= ruleCLASS_ID
                             {
-                            kw=(Token)match(input,11,FOLLOW_11_in_ruleCLASS_ID238); 
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:126:2: (kw= '.' | kw= '|' )?
+                            int alt2=3;
+                            int LA2_0 = input.LA(1);
 
-                                    current.merge(kw);
-                                    newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getFullStopKeyword_0_1_0()); 
-                                
+                            if ( (LA2_0==11) ) {
+                                alt2=1;
+                            }
+                            else if ( (LA2_0==12) ) {
+                                alt2=2;
+                            }
+                            switch (alt2) {
+                                case 1 :
+                                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:127:2: kw= '.'
+                                    {
+                                    kw=(Token)match(input,11,FOLLOW_11_in_ruleCLASS_ID239); 
+
+                                            current.merge(kw);
+                                            newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getFullStopKeyword_0_1_0_0()); 
+                                        
+
+                                    }
+                                    break;
+                                case 2 :
+                                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:134:2: kw= '|'
+                                    {
+                                    kw=(Token)match(input,12,FOLLOW_12_in_ruleCLASS_ID258); 
+
+                                            current.merge(kw);
+                                            newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getVerticalLineKeyword_0_1_0_1()); 
+                                        
+
+                                    }
+                                    break;
+
+                            }
+
                              
                                     newCompositeNode(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_0_1_1()); 
                                 
-                            pushFollow(FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID260);
-                            this_CLASS_ID_2=ruleCLASS_ID();
+                            pushFollow(FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID282);
+                            this_CLASS_ID_3=ruleCLASS_ID();
 
                             state._fsp--;
 
 
-                            		current.merge(this_CLASS_ID_2);
+                            		current.merge(this_CLASS_ID_3);
                                 
                              
                                     afterParserOrEnumRuleCall();
@@ -342,12 +388,12 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:144:6: (kw= '!' this_CLASS_ID_4= ruleCLASS_ID )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:151:6: (kw= '!' this_CLASS_ID_5= ruleCLASS_ID )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:144:6: (kw= '!' this_CLASS_ID_4= ruleCLASS_ID )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:145:2: kw= '!' this_CLASS_ID_4= ruleCLASS_ID
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:151:6: (kw= '!' this_CLASS_ID_5= ruleCLASS_ID )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:152:2: kw= '!' this_CLASS_ID_5= ruleCLASS_ID
                     {
-                    kw=(Token)match(input,12,FOLLOW_12_in_ruleCLASS_ID288); 
+                    kw=(Token)match(input,13,FOLLOW_13_in_ruleCLASS_ID310); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getExclamationMarkKeyword_1_0()); 
@@ -355,13 +401,13 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                      
                             newCompositeNode(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_1_1()); 
                         
-                    pushFollow(FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID310);
-                    this_CLASS_ID_4=ruleCLASS_ID();
+                    pushFollow(FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID332);
+                    this_CLASS_ID_5=ruleCLASS_ID();
 
                     state._fsp--;
 
 
-                    		current.merge(this_CLASS_ID_4);
+                    		current.merge(this_CLASS_ID_5);
                         
                      
                             afterParserOrEnumRuleCall();
@@ -373,12 +419,12 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:162:6: (kw= '(' this_CLASS_ID_6= ruleCLASS_ID kw= ')' (kw= '.' this_CLASS_ID_9= ruleCLASS_ID )? )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:169:6: (kw= '(' this_CLASS_ID_7= ruleCLASS_ID kw= ')' )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:162:6: (kw= '(' this_CLASS_ID_6= ruleCLASS_ID kw= ')' (kw= '.' this_CLASS_ID_9= ruleCLASS_ID )? )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:163:2: kw= '(' this_CLASS_ID_6= ruleCLASS_ID kw= ')' (kw= '.' this_CLASS_ID_9= ruleCLASS_ID )?
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:169:6: (kw= '(' this_CLASS_ID_7= ruleCLASS_ID kw= ')' )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:170:2: kw= '(' this_CLASS_ID_7= ruleCLASS_ID kw= ')'
                     {
-                    kw=(Token)match(input,13,FOLLOW_13_in_ruleCLASS_ID336); 
+                    kw=(Token)match(input,14,FOLLOW_14_in_ruleCLASS_ID358); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getLeftParenthesisKeyword_2_0()); 
@@ -386,58 +432,94 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                      
                             newCompositeNode(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_2_1()); 
                         
-                    pushFollow(FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID358);
-                    this_CLASS_ID_6=ruleCLASS_ID();
+                    pushFollow(FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID380);
+                    this_CLASS_ID_7=ruleCLASS_ID();
 
                     state._fsp--;
 
 
-                    		current.merge(this_CLASS_ID_6);
+                    		current.merge(this_CLASS_ID_7);
                         
                      
                             afterParserOrEnumRuleCall();
                         
-                    kw=(Token)match(input,14,FOLLOW_14_in_ruleCLASS_ID376); 
+                    kw=(Token)match(input,15,FOLLOW_15_in_ruleCLASS_ID398); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getRightParenthesisKeyword_2_2()); 
                         
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:185:1: (kw= '.' this_CLASS_ID_9= ruleCLASS_ID )?
-                    int alt3=2;
-                    int LA3_0 = input.LA(1);
-
-                    if ( (LA3_0==11) ) {
-                        alt3=1;
-                    }
-                    switch (alt3) {
-                        case 1 :
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:186:2: kw= '.' this_CLASS_ID_9= ruleCLASS_ID
-                            {
-                            kw=(Token)match(input,11,FOLLOW_11_in_ruleCLASS_ID390); 
-
-                                    current.merge(kw);
-                                    newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getFullStopKeyword_2_3_0()); 
-                                
-                             
-                                    newCompositeNode(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_2_3_1()); 
-                                
-                            pushFollow(FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID412);
-                            this_CLASS_ID_9=ruleCLASS_ID();
-
-                            state._fsp--;
-
-
-                            		current.merge(this_CLASS_ID_9);
-                                
-                             
-                                    afterParserOrEnumRuleCall();
-                                
-
-                            }
-                            break;
 
                     }
 
+
+                    }
+                    break;
+                case 4 :
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:193:6: (kw= '!(' this_CLASS_ID_10= ruleCLASS_ID kw= ')' )
+                    {
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:193:6: (kw= '!(' this_CLASS_ID_10= ruleCLASS_ID kw= ')' )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:194:2: kw= '!(' this_CLASS_ID_10= ruleCLASS_ID kw= ')'
+                    {
+                    kw=(Token)match(input,16,FOLLOW_16_in_ruleCLASS_ID419); 
+
+                            current.merge(kw);
+                            newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getExclamationMarkLeftParenthesisKeyword_3_0()); 
+                        
+                     
+                            newCompositeNode(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_3_1()); 
+                        
+                    pushFollow(FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID441);
+                    this_CLASS_ID_10=ruleCLASS_ID();
+
+                    state._fsp--;
+
+
+                    		current.merge(this_CLASS_ID_10);
+                        
+                     
+                            afterParserOrEnumRuleCall();
+                        
+                    kw=(Token)match(input,15,FOLLOW_15_in_ruleCLASS_ID459); 
+
+                            current.merge(kw);
+                            newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getRightParenthesisKeyword_3_2()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:217:6: (kw= '! (' this_CLASS_ID_13= ruleCLASS_ID kw= ')' )
+                    {
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:217:6: (kw= '! (' this_CLASS_ID_13= ruleCLASS_ID kw= ')' )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:218:2: kw= '! (' this_CLASS_ID_13= ruleCLASS_ID kw= ')'
+                    {
+                    kw=(Token)match(input,17,FOLLOW_17_in_ruleCLASS_ID480); 
+
+                            current.merge(kw);
+                            newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getExclamationMarkSpaceLeftParenthesisKeyword_4_0()); 
+                        
+                     
+                            newCompositeNode(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_4_1()); 
+                        
+                    pushFollow(FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID502);
+                    this_CLASS_ID_13=ruleCLASS_ID();
+
+                    state._fsp--;
+
+
+                    		current.merge(this_CLASS_ID_13);
+                        
+                     
+                            afterParserOrEnumRuleCall();
+                        
+                    kw=(Token)match(input,15,FOLLOW_15_in_ruleCLASS_ID520); 
+
+                            current.merge(kw);
+                            newLeafNode(kw, grammarAccess.getCLASS_IDAccess().getRightParenthesisKeyword_4_2()); 
+                        
 
                     }
 
@@ -465,7 +547,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAbstractElement"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:210:1: entryRuleAbstractElement returns [EObject current=null] : iv_ruleAbstractElement= ruleAbstractElement EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:248:1: entryRuleAbstractElement returns [EObject current=null] : iv_ruleAbstractElement= ruleAbstractElement EOF ;
     public final EObject entryRuleAbstractElement() throws RecognitionException {
         EObject current = null;
 
@@ -473,17 +555,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:211:2: (iv_ruleAbstractElement= ruleAbstractElement EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:212:2: iv_ruleAbstractElement= ruleAbstractElement EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:249:2: (iv_ruleAbstractElement= ruleAbstractElement EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:250:2: iv_ruleAbstractElement= ruleAbstractElement EOF
             {
              newCompositeNode(grammarAccess.getAbstractElementRule()); 
-            pushFollow(FOLLOW_ruleAbstractElement_in_entryRuleAbstractElement460);
+            pushFollow(FOLLOW_ruleAbstractElement_in_entryRuleAbstractElement561);
             iv_ruleAbstractElement=ruleAbstractElement();
 
             state._fsp--;
 
              current =iv_ruleAbstractElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAbstractElement470); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAbstractElement571); 
 
             }
 
@@ -501,7 +583,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAbstractElement"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:219:1: ruleAbstractElement returns [EObject current=null] : (this_Bundle_0= ruleBundle | this_Body_1= ruleBody ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:257:1: ruleAbstractElement returns [EObject current=null] : (this_Bundle_0= ruleBundle | this_Body_1= ruleBody ) ;
     public final EObject ruleAbstractElement() throws RecognitionException {
         EObject current = null;
 
@@ -513,17 +595,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:222:28: ( (this_Bundle_0= ruleBundle | this_Body_1= ruleBody ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:223:1: (this_Bundle_0= ruleBundle | this_Body_1= ruleBody )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:260:28: ( (this_Bundle_0= ruleBundle | this_Body_1= ruleBody ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:261:1: (this_Bundle_0= ruleBundle | this_Body_1= ruleBody )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:223:1: (this_Bundle_0= ruleBundle | this_Body_1= ruleBody )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:261:1: (this_Bundle_0= ruleBundle | this_Body_1= ruleBody )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==15) ) {
+            if ( (LA5_0==18) ) {
                 alt5=1;
             }
-            else if ( (LA5_0==24) ) {
+            else if ( (LA5_0==27) ) {
                 alt5=2;
             }
             else {
@@ -534,12 +616,12 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
             }
             switch (alt5) {
                 case 1 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:224:5: this_Bundle_0= ruleBundle
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:262:5: this_Bundle_0= ruleBundle
                     {
                      
                             newCompositeNode(grammarAccess.getAbstractElementAccess().getBundleParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleBundle_in_ruleAbstractElement517);
+                    pushFollow(FOLLOW_ruleBundle_in_ruleAbstractElement618);
                     this_Bundle_0=ruleBundle();
 
                     state._fsp--;
@@ -552,12 +634,12 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:234:5: this_Body_1= ruleBody
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:272:5: this_Body_1= ruleBody
                     {
                      
                             newCompositeNode(grammarAccess.getAbstractElementAccess().getBodyParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleBody_in_ruleAbstractElement544);
+                    pushFollow(FOLLOW_ruleBody_in_ruleAbstractElement645);
                     this_Body_1=ruleBody();
 
                     state._fsp--;
@@ -590,7 +672,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBundle"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:250:1: entryRuleBundle returns [EObject current=null] : iv_ruleBundle= ruleBundle EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:288:1: entryRuleBundle returns [EObject current=null] : iv_ruleBundle= ruleBundle EOF ;
     public final EObject entryRuleBundle() throws RecognitionException {
         EObject current = null;
 
@@ -598,17 +680,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:251:2: (iv_ruleBundle= ruleBundle EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:252:2: iv_ruleBundle= ruleBundle EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:289:2: (iv_ruleBundle= ruleBundle EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:290:2: iv_ruleBundle= ruleBundle EOF
             {
              newCompositeNode(grammarAccess.getBundleRule()); 
-            pushFollow(FOLLOW_ruleBundle_in_entryRuleBundle579);
+            pushFollow(FOLLOW_ruleBundle_in_entryRuleBundle680);
             iv_ruleBundle=ruleBundle();
 
             state._fsp--;
 
              current =iv_ruleBundle; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBundle589); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBundle690); 
 
             }
 
@@ -626,7 +708,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBundle"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:259:1: ruleBundle returns [EObject current=null] : (otherlv_0= 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBundlePromiseType ) )* otherlv_10= '}' ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:297:1: ruleBundle returns [EObject current=null] : (otherlv_0= 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBundlePromiseType ) )* otherlv_10= '}' ) ;
     public final EObject ruleBundle() throws RecognitionException {
         EObject current = null;
 
@@ -647,26 +729,26 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:262:28: ( (otherlv_0= 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBundlePromiseType ) )* otherlv_10= '}' ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:263:1: (otherlv_0= 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBundlePromiseType ) )* otherlv_10= '}' )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:300:28: ( (otherlv_0= 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBundlePromiseType ) )* otherlv_10= '}' ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:301:1: (otherlv_0= 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBundlePromiseType ) )* otherlv_10= '}' )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:263:1: (otherlv_0= 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBundlePromiseType ) )* otherlv_10= '}' )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:263:3: otherlv_0= 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBundlePromiseType ) )* otherlv_10= '}'
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:301:1: (otherlv_0= 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBundlePromiseType ) )* otherlv_10= '}' )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:301:3: otherlv_0= 'bundle' ( (lv_component_1_0= ruleBundleComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBundlePromiseType ) )* otherlv_10= '}'
             {
-            otherlv_0=(Token)match(input,15,FOLLOW_15_in_ruleBundle626); 
+            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleBundle727); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getBundleAccess().getBundleKeyword_0());
                 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:267:1: ( (lv_component_1_0= ruleBundleComponent ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:268:1: (lv_component_1_0= ruleBundleComponent )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:305:1: ( (lv_component_1_0= ruleBundleComponent ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:306:1: (lv_component_1_0= ruleBundleComponent )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:268:1: (lv_component_1_0= ruleBundleComponent )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:269:3: lv_component_1_0= ruleBundleComponent
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:306:1: (lv_component_1_0= ruleBundleComponent )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:307:3: lv_component_1_0= ruleBundleComponent
             {
              
             	        newCompositeNode(grammarAccess.getBundleAccess().getComponentBundleComponentParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleBundleComponent_in_ruleBundle647);
+            pushFollow(FOLLOW_ruleBundleComponent_in_ruleBundle748);
             lv_component_1_0=ruleBundleComponent();
 
             state._fsp--;
@@ -688,13 +770,13 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:285:2: ( (lv_name_2_0= RULE_ID ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:286:1: (lv_name_2_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:323:2: ( (lv_name_2_0= RULE_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:324:1: (lv_name_2_0= RULE_ID )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:286:1: (lv_name_2_0= RULE_ID )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:287:3: lv_name_2_0= RULE_ID
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:324:1: (lv_name_2_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:325:3: lv_name_2_0= RULE_ID
             {
-            lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundle664); 
+            lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundle765); 
 
             			newLeafNode(lv_name_2_0, grammarAccess.getBundleAccess().getNameIDTerminalRuleCall_2_0()); 
             		
@@ -714,28 +796,28 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:303:2: (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )?
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:341:2: (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==13) ) {
+            if ( (LA7_0==14) ) {
                 alt7=1;
             }
             switch (alt7) {
                 case 1 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:303:4: otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')'
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:341:4: otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')'
                     {
-                    otherlv_3=(Token)match(input,13,FOLLOW_13_in_ruleBundle682); 
+                    otherlv_3=(Token)match(input,14,FOLLOW_14_in_ruleBundle783); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getBundleAccess().getLeftParenthesisKeyword_3_0());
                         
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:307:1: ( (lv_variables_4_0= RULE_ID ) )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:308:1: (lv_variables_4_0= RULE_ID )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:345:1: ( (lv_variables_4_0= RULE_ID ) )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:346:1: (lv_variables_4_0= RULE_ID )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:308:1: (lv_variables_4_0= RULE_ID )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:309:3: lv_variables_4_0= RULE_ID
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:346:1: (lv_variables_4_0= RULE_ID )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:347:3: lv_variables_4_0= RULE_ID
                     {
-                    lv_variables_4_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundle699); 
+                    lv_variables_4_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundle800); 
 
                     			newLeafNode(lv_variables_4_0, grammarAccess.getBundleAccess().getVariablesIDTerminalRuleCall_3_1_0()); 
                     		
@@ -755,32 +837,32 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:325:2: (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )*
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:363:2: (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )*
                     loop6:
                     do {
                         int alt6=2;
                         int LA6_0 = input.LA(1);
 
-                        if ( (LA6_0==16) ) {
+                        if ( (LA6_0==19) ) {
                             alt6=1;
                         }
 
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:325:4: otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:363:4: otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) )
                     	    {
-                    	    otherlv_5=(Token)match(input,16,FOLLOW_16_in_ruleBundle717); 
+                    	    otherlv_5=(Token)match(input,19,FOLLOW_19_in_ruleBundle818); 
 
                     	        	newLeafNode(otherlv_5, grammarAccess.getBundleAccess().getCommaKeyword_3_2_0());
                     	        
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:329:1: ( (lv_variables_6_0= RULE_ID ) )
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:330:1: (lv_variables_6_0= RULE_ID )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:367:1: ( (lv_variables_6_0= RULE_ID ) )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:368:1: (lv_variables_6_0= RULE_ID )
                     	    {
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:330:1: (lv_variables_6_0= RULE_ID )
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:331:3: lv_variables_6_0= RULE_ID
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:368:1: (lv_variables_6_0= RULE_ID )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:369:3: lv_variables_6_0= RULE_ID
                     	    {
-                    	    lv_variables_6_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundle734); 
+                    	    lv_variables_6_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundle835); 
 
                     	    			newLeafNode(lv_variables_6_0, grammarAccess.getBundleAccess().getVariablesIDTerminalRuleCall_3_2_1_0()); 
                     	    		
@@ -809,7 +891,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_7=(Token)match(input,14,FOLLOW_14_in_ruleBundle753); 
+                    otherlv_7=(Token)match(input,15,FOLLOW_15_in_ruleBundle854); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getBundleAccess().getRightParenthesisKeyword_3_3());
                         
@@ -819,11 +901,11 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleBundle767); 
+            otherlv_8=(Token)match(input,20,FOLLOW_20_in_ruleBundle868); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getBundleAccess().getLeftCurlyBracketKeyword_4());
                 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:355:1: ( (lv_promiseType_9_0= ruleBundlePromiseType ) )*
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:393:1: ( (lv_promiseType_9_0= ruleBundlePromiseType ) )*
             loop8:
             do {
                 int alt8=2;
@@ -836,15 +918,15 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:356:1: (lv_promiseType_9_0= ruleBundlePromiseType )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:394:1: (lv_promiseType_9_0= ruleBundlePromiseType )
             	    {
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:356:1: (lv_promiseType_9_0= ruleBundlePromiseType )
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:357:3: lv_promiseType_9_0= ruleBundlePromiseType
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:394:1: (lv_promiseType_9_0= ruleBundlePromiseType )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:395:3: lv_promiseType_9_0= ruleBundlePromiseType
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getBundleAccess().getPromiseTypeBundlePromiseTypeParserRuleCall_5_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleBundlePromiseType_in_ruleBundle788);
+            	    pushFollow(FOLLOW_ruleBundlePromiseType_in_ruleBundle889);
             	    lv_promiseType_9_0=ruleBundlePromiseType();
 
             	    state._fsp--;
@@ -872,7 +954,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_10=(Token)match(input,18,FOLLOW_18_in_ruleBundle801); 
+            otherlv_10=(Token)match(input,21,FOLLOW_21_in_ruleBundle902); 
 
                 	newLeafNode(otherlv_10, grammarAccess.getBundleAccess().getRightCurlyBracketKeyword_6());
                 
@@ -897,7 +979,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBundlePromiseType"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:385:1: entryRuleBundlePromiseType returns [EObject current=null] : iv_ruleBundlePromiseType= ruleBundlePromiseType EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:423:1: entryRuleBundlePromiseType returns [EObject current=null] : iv_ruleBundlePromiseType= ruleBundlePromiseType EOF ;
     public final EObject entryRuleBundlePromiseType() throws RecognitionException {
         EObject current = null;
 
@@ -905,17 +987,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:386:2: (iv_ruleBundlePromiseType= ruleBundlePromiseType EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:387:2: iv_ruleBundlePromiseType= ruleBundlePromiseType EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:424:2: (iv_ruleBundlePromiseType= ruleBundlePromiseType EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:425:2: iv_ruleBundlePromiseType= ruleBundlePromiseType EOF
             {
              newCompositeNode(grammarAccess.getBundlePromiseTypeRule()); 
-            pushFollow(FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType837);
+            pushFollow(FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType938);
             iv_ruleBundlePromiseType=ruleBundlePromiseType();
 
             state._fsp--;
 
              current =iv_ruleBundlePromiseType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBundlePromiseType847); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBundlePromiseType948); 
 
             }
 
@@ -933,7 +1015,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBundlePromiseType"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:394:1: ruleBundlePromiseType returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_promises_2_0= ruleBundlePromise ) )* ( (lv_classes_3_0= ruleBundleClass ) )* ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:432:1: ruleBundlePromiseType returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_promises_2_0= ruleBundlePromise ) )* ( (lv_classes_3_0= ruleBundleClass ) )* ) ;
     public final EObject ruleBundlePromiseType() throws RecognitionException {
         EObject current = null;
 
@@ -947,19 +1029,19 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:397:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_promises_2_0= ruleBundlePromise ) )* ( (lv_classes_3_0= ruleBundleClass ) )* ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:398:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_promises_2_0= ruleBundlePromise ) )* ( (lv_classes_3_0= ruleBundleClass ) )* )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:435:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_promises_2_0= ruleBundlePromise ) )* ( (lv_classes_3_0= ruleBundleClass ) )* ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:436:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_promises_2_0= ruleBundlePromise ) )* ( (lv_classes_3_0= ruleBundleClass ) )* )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:398:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_promises_2_0= ruleBundlePromise ) )* ( (lv_classes_3_0= ruleBundleClass ) )* )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:398:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_promises_2_0= ruleBundlePromise ) )* ( (lv_classes_3_0= ruleBundleClass ) )*
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:436:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_promises_2_0= ruleBundlePromise ) )* ( (lv_classes_3_0= ruleBundleClass ) )* )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:436:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_promises_2_0= ruleBundlePromise ) )* ( (lv_classes_3_0= ruleBundleClass ) )*
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:398:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:399:1: (lv_name_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:436:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:437:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:399:1: (lv_name_0_0= RULE_ID )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:400:3: lv_name_0_0= RULE_ID
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:437:1: (lv_name_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:438:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundlePromiseType889); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundlePromiseType990); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getBundlePromiseTypeAccess().getNameIDTerminalRuleCall_0_0()); 
             		
@@ -979,11 +1061,11 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleBundlePromiseType906); 
+            otherlv_1=(Token)match(input,22,FOLLOW_22_in_ruleBundlePromiseType1007); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getBundlePromiseTypeAccess().getColonKeyword_1());
                 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:420:1: ( (lv_promises_2_0= ruleBundlePromise ) )*
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:458:1: ( (lv_promises_2_0= ruleBundlePromise ) )*
             loop9:
             do {
                 int alt9=2;
@@ -996,15 +1078,15 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:421:1: (lv_promises_2_0= ruleBundlePromise )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:459:1: (lv_promises_2_0= ruleBundlePromise )
             	    {
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:421:1: (lv_promises_2_0= ruleBundlePromise )
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:422:3: lv_promises_2_0= ruleBundlePromise
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:459:1: (lv_promises_2_0= ruleBundlePromise )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:460:3: lv_promises_2_0= ruleBundlePromise
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getBundlePromiseTypeAccess().getPromisesBundlePromiseParserRuleCall_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleBundlePromise_in_ruleBundlePromiseType927);
+            	    pushFollow(FOLLOW_ruleBundlePromise_in_ruleBundlePromiseType1028);
             	    lv_promises_2_0=ruleBundlePromise();
 
             	    state._fsp--;
@@ -1032,7 +1114,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:438:3: ( (lv_classes_3_0= ruleBundleClass ) )*
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:476:3: ( (lv_classes_3_0= ruleBundleClass ) )*
             loop10:
             do {
                 int alt10=2;
@@ -1041,28 +1123,28 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                 if ( (LA10_0==RULE_ID) ) {
                     int LA10_2 = input.LA(2);
 
-                    if ( (LA10_2==11||LA10_2==20) ) {
+                    if ( (LA10_2==RULE_ID||(LA10_2>=11 && LA10_2<=14)||(LA10_2>=16 && LA10_2<=17)||LA10_2==23) ) {
                         alt10=1;
                     }
 
 
                 }
-                else if ( ((LA10_0>=12 && LA10_0<=13)) ) {
+                else if ( ((LA10_0>=13 && LA10_0<=14)||(LA10_0>=16 && LA10_0<=17)) ) {
                     alt10=1;
                 }
 
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:439:1: (lv_classes_3_0= ruleBundleClass )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:477:1: (lv_classes_3_0= ruleBundleClass )
             	    {
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:439:1: (lv_classes_3_0= ruleBundleClass )
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:440:3: lv_classes_3_0= ruleBundleClass
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:477:1: (lv_classes_3_0= ruleBundleClass )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:478:3: lv_classes_3_0= ruleBundleClass
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getBundlePromiseTypeAccess().getClassesBundleClassParserRuleCall_3_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleBundleClass_in_ruleBundlePromiseType949);
+            	    pushFollow(FOLLOW_ruleBundleClass_in_ruleBundlePromiseType1050);
             	    lv_classes_3_0=ruleBundleClass();
 
             	    state._fsp--;
@@ -1111,7 +1193,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBundleClass"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:464:1: entryRuleBundleClass returns [EObject current=null] : iv_ruleBundleClass= ruleBundleClass EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:502:1: entryRuleBundleClass returns [EObject current=null] : iv_ruleBundleClass= ruleBundleClass EOF ;
     public final EObject entryRuleBundleClass() throws RecognitionException {
         EObject current = null;
 
@@ -1119,17 +1201,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:465:2: (iv_ruleBundleClass= ruleBundleClass EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:466:2: iv_ruleBundleClass= ruleBundleClass EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:503:2: (iv_ruleBundleClass= ruleBundleClass EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:504:2: iv_ruleBundleClass= ruleBundleClass EOF
             {
              newCompositeNode(grammarAccess.getBundleClassRule()); 
-            pushFollow(FOLLOW_ruleBundleClass_in_entryRuleBundleClass986);
+            pushFollow(FOLLOW_ruleBundleClass_in_entryRuleBundleClass1087);
             iv_ruleBundleClass=ruleBundleClass();
 
             state._fsp--;
 
              current =iv_ruleBundleClass; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBundleClass996); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBundleClass1097); 
 
             }
 
@@ -1147,7 +1229,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBundleClass"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:473:1: ruleBundleClass returns [EObject current=null] : ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promises_2_0= ruleBundlePromise ) )+ ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:511:1: ruleBundleClass returns [EObject current=null] : ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promises_2_0= ruleBundlePromise ) )* ) ;
     public final EObject ruleBundleClass() throws RecognitionException {
         EObject current = null;
 
@@ -1160,22 +1242,22 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:476:28: ( ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promises_2_0= ruleBundlePromise ) )+ ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:477:1: ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promises_2_0= ruleBundlePromise ) )+ )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:514:28: ( ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promises_2_0= ruleBundlePromise ) )* ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:515:1: ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promises_2_0= ruleBundlePromise ) )* )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:477:1: ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promises_2_0= ruleBundlePromise ) )+ )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:477:2: ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promises_2_0= ruleBundlePromise ) )+
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:515:1: ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promises_2_0= ruleBundlePromise ) )* )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:515:2: ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promises_2_0= ruleBundlePromise ) )*
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:477:2: ( (lv_name_0_0= ruleCLASS_ID ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:478:1: (lv_name_0_0= ruleCLASS_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:515:2: ( (lv_name_0_0= ruleCLASS_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:516:1: (lv_name_0_0= ruleCLASS_ID )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:478:1: (lv_name_0_0= ruleCLASS_ID )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:479:3: lv_name_0_0= ruleCLASS_ID
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:516:1: (lv_name_0_0= ruleCLASS_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:517:3: lv_name_0_0= ruleCLASS_ID
             {
              
             	        newCompositeNode(grammarAccess.getBundleClassAccess().getNameCLASS_IDParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleCLASS_ID_in_ruleBundleClass1042);
+            pushFollow(FOLLOW_ruleCLASS_ID_in_ruleBundleClass1143);
             lv_name_0_0=ruleCLASS_ID();
 
             state._fsp--;
@@ -1197,12 +1279,11 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,20,FOLLOW_20_in_ruleBundleClass1054); 
+            otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleBundleClass1155); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getBundleClassAccess().getColonColonKeyword_1());
                 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:499:1: ( (lv_promises_2_0= ruleBundlePromise ) )+
-            int cnt11=0;
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:537:1: ( (lv_promises_2_0= ruleBundlePromise ) )*
             loop11:
             do {
                 int alt11=2;
@@ -1215,15 +1296,15 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:500:1: (lv_promises_2_0= ruleBundlePromise )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:538:1: (lv_promises_2_0= ruleBundlePromise )
             	    {
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:500:1: (lv_promises_2_0= ruleBundlePromise )
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:501:3: lv_promises_2_0= ruleBundlePromise
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:538:1: (lv_promises_2_0= ruleBundlePromise )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:539:3: lv_promises_2_0= ruleBundlePromise
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getBundleClassAccess().getPromisesBundlePromiseParserRuleCall_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleBundlePromise_in_ruleBundleClass1075);
+            	    pushFollow(FOLLOW_ruleBundlePromise_in_ruleBundleClass1176);
             	    lv_promises_2_0=ruleBundlePromise();
 
             	    state._fsp--;
@@ -1247,12 +1328,8 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt11 >= 1 ) break loop11;
-                        EarlyExitException eee =
-                            new EarlyExitException(11, input);
-                        throw eee;
+            	    break loop11;
                 }
-                cnt11++;
             } while (true);
 
 
@@ -1276,7 +1353,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBundlePromise"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:525:1: entryRuleBundlePromise returns [EObject current=null] : iv_ruleBundlePromise= ruleBundlePromise EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:563:1: entryRuleBundlePromise returns [EObject current=null] : iv_ruleBundlePromise= ruleBundlePromise EOF ;
     public final EObject entryRuleBundlePromise() throws RecognitionException {
         EObject current = null;
 
@@ -1284,17 +1361,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:526:2: (iv_ruleBundlePromise= ruleBundlePromise EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:527:2: iv_ruleBundlePromise= ruleBundlePromise EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:564:2: (iv_ruleBundlePromise= ruleBundlePromise EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:565:2: iv_ruleBundlePromise= ruleBundlePromise EOF
             {
              newCompositeNode(grammarAccess.getBundlePromiseRule()); 
-            pushFollow(FOLLOW_ruleBundlePromise_in_entryRuleBundlePromise1112);
+            pushFollow(FOLLOW_ruleBundlePromise_in_entryRuleBundlePromise1213);
             iv_ruleBundlePromise=ruleBundlePromise();
 
             state._fsp--;
 
              current =iv_ruleBundlePromise; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBundlePromise1122); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBundlePromise1223); 
 
             }
 
@@ -1312,7 +1389,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBundlePromise"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:534:1: ruleBundlePromise returns [EObject current=null] : ( ( (lv_name_0_0= RULE_STRING ) ) ( ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )* )? otherlv_4= ';' ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:572:1: ruleBundlePromise returns [EObject current=null] : ( ( (lv_name_0_0= RULE_STRING ) ) ( ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )* )* otherlv_4= ';' ) ;
     public final EObject ruleBundlePromise() throws RecognitionException {
         EObject current = null;
 
@@ -1327,19 +1404,19 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:537:28: ( ( ( (lv_name_0_0= RULE_STRING ) ) ( ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )* )? otherlv_4= ';' ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:538:1: ( ( (lv_name_0_0= RULE_STRING ) ) ( ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )* )? otherlv_4= ';' )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:575:28: ( ( ( (lv_name_0_0= RULE_STRING ) ) ( ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )* )* otherlv_4= ';' ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:576:1: ( ( (lv_name_0_0= RULE_STRING ) ) ( ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )* )* otherlv_4= ';' )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:538:1: ( ( (lv_name_0_0= RULE_STRING ) ) ( ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )* )? otherlv_4= ';' )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:538:2: ( (lv_name_0_0= RULE_STRING ) ) ( ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )* )? otherlv_4= ';'
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:576:1: ( ( (lv_name_0_0= RULE_STRING ) ) ( ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )* )* otherlv_4= ';' )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:576:2: ( (lv_name_0_0= RULE_STRING ) ) ( ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )* )* otherlv_4= ';'
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:538:2: ( (lv_name_0_0= RULE_STRING ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:539:1: (lv_name_0_0= RULE_STRING )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:576:2: ( (lv_name_0_0= RULE_STRING ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:577:1: (lv_name_0_0= RULE_STRING )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:539:1: (lv_name_0_0= RULE_STRING )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:540:3: lv_name_0_0= RULE_STRING
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:577:1: (lv_name_0_0= RULE_STRING )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:578:3: lv_name_0_0= RULE_STRING
             {
-            lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBundlePromise1164); 
+            lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBundlePromise1265); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getBundlePromiseAccess().getNameSTRINGTerminalRuleCall_0_0()); 
             		
@@ -1359,114 +1436,121 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:556:2: ( ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )* )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:594:2: ( ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )* )*
+            loop13:
+            do {
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==RULE_ID) ) {
-                alt13=1;
-            }
-            switch (alt13) {
-                case 1 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:556:3: ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )*
-                    {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:556:3: ( (lv_values_1_0= rulePromiseValue ) )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:557:1: (lv_values_1_0= rulePromiseValue )
-                    {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:557:1: (lv_values_1_0= rulePromiseValue )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:558:3: lv_values_1_0= rulePromiseValue
-                    {
-                     
-                    	        newCompositeNode(grammarAccess.getBundlePromiseAccess().getValuesPromiseValueParserRuleCall_1_0_0()); 
-                    	    
-                    pushFollow(FOLLOW_rulePromiseValue_in_ruleBundlePromise1191);
-                    lv_values_1_0=rulePromiseValue();
-
-                    state._fsp--;
+                if ( (LA13_0==RULE_ID) ) {
+                    alt13=1;
+                }
 
 
-                    	        if (current==null) {
-                    	            current = createModelElementForParent(grammarAccess.getBundlePromiseRule());
-                    	        }
-                           		add(
-                           			current, 
-                           			"values",
-                            		lv_values_1_0, 
-                            		"PromiseValue");
-                    	        afterParserOrEnumRuleCall();
-                    	    
+                switch (alt13) {
+            	case 1 :
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:594:3: ( (lv_values_1_0= rulePromiseValue ) ) (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )*
+            	    {
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:594:3: ( (lv_values_1_0= rulePromiseValue ) )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:595:1: (lv_values_1_0= rulePromiseValue )
+            	    {
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:595:1: (lv_values_1_0= rulePromiseValue )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:596:3: lv_values_1_0= rulePromiseValue
+            	    {
+            	     
+            	    	        newCompositeNode(grammarAccess.getBundlePromiseAccess().getValuesPromiseValueParserRuleCall_1_0_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_rulePromiseValue_in_ruleBundlePromise1292);
+            	    lv_values_1_0=rulePromiseValue();
 
-                    }
-
-
-                    }
-
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:574:2: (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )*
-                    loop12:
-                    do {
-                        int alt12=2;
-                        int LA12_0 = input.LA(1);
-
-                        if ( (LA12_0==16) ) {
-                            alt12=1;
-                        }
+            	    state._fsp--;
 
 
-                        switch (alt12) {
-                    	case 1 :
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:574:4: otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) )
-                    	    {
-                    	    otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleBundlePromise1204); 
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getBundlePromiseRule());
+            	    	        }
+            	           		add(
+            	           			current, 
+            	           			"values",
+            	            		lv_values_1_0, 
+            	            		"PromiseValue");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
 
-                    	        	newLeafNode(otherlv_2, grammarAccess.getBundlePromiseAccess().getCommaKeyword_1_1_0());
-                    	        
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:578:1: ( (lv_values_3_0= rulePromiseValue ) )
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:579:1: (lv_values_3_0= rulePromiseValue )
-                    	    {
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:579:1: (lv_values_3_0= rulePromiseValue )
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:580:3: lv_values_3_0= rulePromiseValue
-                    	    {
-                    	     
-                    	    	        newCompositeNode(grammarAccess.getBundlePromiseAccess().getValuesPromiseValueParserRuleCall_1_1_1_0()); 
-                    	    	    
-                    	    pushFollow(FOLLOW_rulePromiseValue_in_ruleBundlePromise1225);
-                    	    lv_values_3_0=rulePromiseValue();
-
-                    	    state._fsp--;
+            	    }
 
 
-                    	    	        if (current==null) {
-                    	    	            current = createModelElementForParent(grammarAccess.getBundlePromiseRule());
-                    	    	        }
-                    	           		add(
-                    	           			current, 
-                    	           			"values",
-                    	            		lv_values_3_0, 
-                    	            		"PromiseValue");
-                    	    	        afterParserOrEnumRuleCall();
-                    	    	    
+            	    }
 
-                    	    }
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:612:2: (otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) ) )*
+            	    loop12:
+            	    do {
+            	        int alt12=2;
+            	        int LA12_0 = input.LA(1);
 
-
-                    	    }
+            	        if ( (LA12_0==19) ) {
+            	            alt12=1;
+            	        }
 
 
-                    	    }
-                    	    break;
+            	        switch (alt12) {
+            	    	case 1 :
+            	    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:612:4: otherlv_2= ',' ( (lv_values_3_0= rulePromiseValue ) )
+            	    	    {
+            	    	    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleBundlePromise1305); 
 
-                    	default :
-                    	    break loop12;
-                        }
-                    } while (true);
+            	    	        	newLeafNode(otherlv_2, grammarAccess.getBundlePromiseAccess().getCommaKeyword_1_1_0());
+            	    	        
+            	    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:616:1: ( (lv_values_3_0= rulePromiseValue ) )
+            	    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:617:1: (lv_values_3_0= rulePromiseValue )
+            	    	    {
+            	    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:617:1: (lv_values_3_0= rulePromiseValue )
+            	    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:618:3: lv_values_3_0= rulePromiseValue
+            	    	    {
+            	    	     
+            	    	    	        newCompositeNode(grammarAccess.getBundlePromiseAccess().getValuesPromiseValueParserRuleCall_1_1_1_0()); 
+            	    	    	    
+            	    	    pushFollow(FOLLOW_rulePromiseValue_in_ruleBundlePromise1326);
+            	    	    lv_values_3_0=rulePromiseValue();
+
+            	    	    state._fsp--;
 
 
-                    }
-                    break;
+            	    	    	        if (current==null) {
+            	    	    	            current = createModelElementForParent(grammarAccess.getBundlePromiseRule());
+            	    	    	        }
+            	    	           		add(
+            	    	           			current, 
+            	    	           			"values",
+            	    	            		lv_values_3_0, 
+            	    	            		"PromiseValue");
+            	    	    	        afterParserOrEnumRuleCall();
+            	    	    	    
 
-            }
+            	    	    }
 
-            otherlv_4=(Token)match(input,21,FOLLOW_21_in_ruleBundlePromise1241); 
+
+            	    	    }
+
+
+            	    	    }
+            	    	    break;
+
+            	    	default :
+            	    	    break loop12;
+            	        }
+            	    } while (true);
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop13;
+                }
+            } while (true);
+
+            otherlv_4=(Token)match(input,24,FOLLOW_24_in_ruleBundlePromise1342); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getBundlePromiseAccess().getSemicolonKeyword_2());
                 
@@ -1491,7 +1575,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePromiseValue"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:608:1: entryRulePromiseValue returns [EObject current=null] : iv_rulePromiseValue= rulePromiseValue EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:646:1: entryRulePromiseValue returns [EObject current=null] : iv_rulePromiseValue= rulePromiseValue EOF ;
     public final EObject entryRulePromiseValue() throws RecognitionException {
         EObject current = null;
 
@@ -1499,17 +1583,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:609:2: (iv_rulePromiseValue= rulePromiseValue EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:610:2: iv_rulePromiseValue= rulePromiseValue EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:647:2: (iv_rulePromiseValue= rulePromiseValue EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:648:2: iv_rulePromiseValue= rulePromiseValue EOF
             {
              newCompositeNode(grammarAccess.getPromiseValueRule()); 
-            pushFollow(FOLLOW_rulePromiseValue_in_entryRulePromiseValue1277);
+            pushFollow(FOLLOW_rulePromiseValue_in_entryRulePromiseValue1378);
             iv_rulePromiseValue=rulePromiseValue();
 
             state._fsp--;
 
              current =iv_rulePromiseValue; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePromiseValue1287); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePromiseValue1388); 
 
             }
 
@@ -1527,7 +1611,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePromiseValue"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:617:1: rulePromiseValue returns [EObject current=null] : ( ( (lv_keyword_0_0= RULE_ID ) ) otherlv_1= '=>' ( ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) ) | (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' ) | (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' ) ) ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:655:1: rulePromiseValue returns [EObject current=null] : ( ( (lv_keyword_0_0= RULE_ID ) ) otherlv_1= '=>' ( ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) ) | (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' ) | (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' ) ) ) ;
     public final EObject rulePromiseValue() throws RecognitionException {
         EObject current = null;
 
@@ -1556,19 +1640,19 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:620:28: ( ( ( (lv_keyword_0_0= RULE_ID ) ) otherlv_1= '=>' ( ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) ) | (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' ) | (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' ) ) ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:621:1: ( ( (lv_keyword_0_0= RULE_ID ) ) otherlv_1= '=>' ( ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) ) | (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' ) | (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' ) ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:658:28: ( ( ( (lv_keyword_0_0= RULE_ID ) ) otherlv_1= '=>' ( ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) ) | (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' ) | (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' ) ) ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:659:1: ( ( (lv_keyword_0_0= RULE_ID ) ) otherlv_1= '=>' ( ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) ) | (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' ) | (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' ) ) )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:621:1: ( ( (lv_keyword_0_0= RULE_ID ) ) otherlv_1= '=>' ( ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) ) | (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' ) | (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' ) ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:621:2: ( (lv_keyword_0_0= RULE_ID ) ) otherlv_1= '=>' ( ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) ) | (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' ) | (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:659:1: ( ( (lv_keyword_0_0= RULE_ID ) ) otherlv_1= '=>' ( ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) ) | (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' ) | (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' ) ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:659:2: ( (lv_keyword_0_0= RULE_ID ) ) otherlv_1= '=>' ( ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) ) | (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' ) | (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' ) )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:621:2: ( (lv_keyword_0_0= RULE_ID ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:622:1: (lv_keyword_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:659:2: ( (lv_keyword_0_0= RULE_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:660:1: (lv_keyword_0_0= RULE_ID )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:622:1: (lv_keyword_0_0= RULE_ID )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:623:3: lv_keyword_0_0= RULE_ID
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:660:1: (lv_keyword_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:661:3: lv_keyword_0_0= RULE_ID
             {
-            lv_keyword_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePromiseValue1329); 
+            lv_keyword_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePromiseValue1430); 
 
             			newLeafNode(lv_keyword_0_0, grammarAccess.getPromiseValueAccess().getKeywordIDTerminalRuleCall_0_0()); 
             		
@@ -1588,21 +1672,21 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,22,FOLLOW_22_in_rulePromiseValue1346); 
+            otherlv_1=(Token)match(input,25,FOLLOW_25_in_rulePromiseValue1447); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getPromiseValueAccess().getEqualsSignGreaterThanSignKeyword_1());
                 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:643:1: ( ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) ) | (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' ) | (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:681:1: ( ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) ) | (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' ) | (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' ) )
             int alt18=3;
             int LA18_0 = input.LA(1);
 
             if ( ((LA18_0>=RULE_ID && LA18_0<=RULE_STRING)) ) {
                 alt18=1;
             }
-            else if ( (LA18_0==17) ) {
+            else if ( (LA18_0==20) ) {
                 int LA18_2 = input.LA(2);
 
-                if ( (LA18_2==23) ) {
+                if ( (LA18_2==26) ) {
                     alt18=3;
                 }
                 else if ( ((LA18_2>=RULE_ID && LA18_2<=RULE_STRING)) ) {
@@ -1623,9 +1707,9 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
             }
             switch (alt18) {
                 case 1 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:643:2: ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:681:2: ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:643:2: ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:681:2: ( ( (lv_values_2_0= RULE_STRING ) ) | ( (lv_functions_3_0= ruleSimpleFunction ) ) | ( (lv_values_4_0= RULE_ID ) ) )
                     int alt14=3;
                     int LA14_0 = input.LA(1);
 
@@ -1635,11 +1719,11 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                     else if ( (LA14_0==RULE_ID) ) {
                         int LA14_2 = input.LA(2);
 
-                        if ( (LA14_2==EOF||LA14_2==16||LA14_2==21) ) {
-                            alt14=3;
-                        }
-                        else if ( (LA14_2==13) ) {
+                        if ( (LA14_2==14) ) {
                             alt14=2;
+                        }
+                        else if ( (LA14_2==EOF||LA14_2==RULE_ID||LA14_2==19||LA14_2==24) ) {
+                            alt14=3;
                         }
                         else {
                             NoViableAltException nvae =
@@ -1656,15 +1740,15 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt14) {
                         case 1 :
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:643:3: ( (lv_values_2_0= RULE_STRING ) )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:681:3: ( (lv_values_2_0= RULE_STRING ) )
                             {
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:643:3: ( (lv_values_2_0= RULE_STRING ) )
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:644:1: (lv_values_2_0= RULE_STRING )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:681:3: ( (lv_values_2_0= RULE_STRING ) )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:682:1: (lv_values_2_0= RULE_STRING )
                             {
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:644:1: (lv_values_2_0= RULE_STRING )
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:645:3: lv_values_2_0= RULE_STRING
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:682:1: (lv_values_2_0= RULE_STRING )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:683:3: lv_values_2_0= RULE_STRING
                             {
-                            lv_values_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePromiseValue1365); 
+                            lv_values_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePromiseValue1466); 
 
                             			newLeafNode(lv_values_2_0, grammarAccess.getPromiseValueAccess().getValuesSTRINGTerminalRuleCall_2_0_0_0()); 
                             		
@@ -1688,18 +1772,18 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:662:6: ( (lv_functions_3_0= ruleSimpleFunction ) )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:700:6: ( (lv_functions_3_0= ruleSimpleFunction ) )
                             {
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:662:6: ( (lv_functions_3_0= ruleSimpleFunction ) )
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:663:1: (lv_functions_3_0= ruleSimpleFunction )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:700:6: ( (lv_functions_3_0= ruleSimpleFunction ) )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:701:1: (lv_functions_3_0= ruleSimpleFunction )
                             {
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:663:1: (lv_functions_3_0= ruleSimpleFunction )
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:664:3: lv_functions_3_0= ruleSimpleFunction
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:701:1: (lv_functions_3_0= ruleSimpleFunction )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:702:3: lv_functions_3_0= ruleSimpleFunction
                             {
                              
                             	        newCompositeNode(grammarAccess.getPromiseValueAccess().getFunctionsSimpleFunctionParserRuleCall_2_0_1_0()); 
                             	    
-                            pushFollow(FOLLOW_ruleSimpleFunction_in_rulePromiseValue1397);
+                            pushFollow(FOLLOW_ruleSimpleFunction_in_rulePromiseValue1498);
                             lv_functions_3_0=ruleSimpleFunction();
 
                             state._fsp--;
@@ -1725,15 +1809,15 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 3 :
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:681:6: ( (lv_values_4_0= RULE_ID ) )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:719:6: ( (lv_values_4_0= RULE_ID ) )
                             {
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:681:6: ( (lv_values_4_0= RULE_ID ) )
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:682:1: (lv_values_4_0= RULE_ID )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:719:6: ( (lv_values_4_0= RULE_ID ) )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:720:1: (lv_values_4_0= RULE_ID )
                             {
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:682:1: (lv_values_4_0= RULE_ID )
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:683:3: lv_values_4_0= RULE_ID
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:720:1: (lv_values_4_0= RULE_ID )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:721:3: lv_values_4_0= RULE_ID
                             {
-                            lv_values_4_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePromiseValue1420); 
+                            lv_values_4_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePromiseValue1521); 
 
                             			newLeafNode(lv_values_4_0, grammarAccess.getPromiseValueAccess().getValuesIDTerminalRuleCall_2_0_2_0()); 
                             		
@@ -1763,16 +1847,16 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:700:6: (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:738:6: (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:700:6: (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:700:8: otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}'
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:738:6: (otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}' )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:738:8: otherlv_5= '{' ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) ) (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )* otherlv_11= '}'
                     {
-                    otherlv_5=(Token)match(input,17,FOLLOW_17_in_rulePromiseValue1445); 
+                    otherlv_5=(Token)match(input,20,FOLLOW_20_in_rulePromiseValue1546); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getPromiseValueAccess().getLeftCurlyBracketKeyword_2_1_0());
                         
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:704:1: ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:742:1: ( ( (lv_values_6_0= RULE_STRING ) ) | ( (lv_functions_7_0= ruleSimpleFunction ) ) )
                     int alt15=2;
                     int LA15_0 = input.LA(1);
 
@@ -1790,15 +1874,15 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt15) {
                         case 1 :
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:704:2: ( (lv_values_6_0= RULE_STRING ) )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:742:2: ( (lv_values_6_0= RULE_STRING ) )
                             {
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:704:2: ( (lv_values_6_0= RULE_STRING ) )
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:705:1: (lv_values_6_0= RULE_STRING )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:742:2: ( (lv_values_6_0= RULE_STRING ) )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:743:1: (lv_values_6_0= RULE_STRING )
                             {
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:705:1: (lv_values_6_0= RULE_STRING )
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:706:3: lv_values_6_0= RULE_STRING
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:743:1: (lv_values_6_0= RULE_STRING )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:744:3: lv_values_6_0= RULE_STRING
                             {
-                            lv_values_6_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePromiseValue1463); 
+                            lv_values_6_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePromiseValue1564); 
 
                             			newLeafNode(lv_values_6_0, grammarAccess.getPromiseValueAccess().getValuesSTRINGTerminalRuleCall_2_1_1_0_0()); 
                             		
@@ -1822,18 +1906,18 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:723:6: ( (lv_functions_7_0= ruleSimpleFunction ) )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:761:6: ( (lv_functions_7_0= ruleSimpleFunction ) )
                             {
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:723:6: ( (lv_functions_7_0= ruleSimpleFunction ) )
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:724:1: (lv_functions_7_0= ruleSimpleFunction )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:761:6: ( (lv_functions_7_0= ruleSimpleFunction ) )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:762:1: (lv_functions_7_0= ruleSimpleFunction )
                             {
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:724:1: (lv_functions_7_0= ruleSimpleFunction )
-                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:725:3: lv_functions_7_0= ruleSimpleFunction
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:762:1: (lv_functions_7_0= ruleSimpleFunction )
+                            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:763:3: lv_functions_7_0= ruleSimpleFunction
                             {
                              
                             	        newCompositeNode(grammarAccess.getPromiseValueAccess().getFunctionsSimpleFunctionParserRuleCall_2_1_1_1_0()); 
                             	    
-                            pushFollow(FOLLOW_ruleSimpleFunction_in_rulePromiseValue1495);
+                            pushFollow(FOLLOW_ruleSimpleFunction_in_rulePromiseValue1596);
                             lv_functions_7_0=ruleSimpleFunction();
 
                             state._fsp--;
@@ -1861,26 +1945,26 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:741:3: (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )*
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:779:3: (otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) ) )*
                     loop17:
                     do {
                         int alt17=2;
                         int LA17_0 = input.LA(1);
 
-                        if ( (LA17_0==16) ) {
+                        if ( (LA17_0==19) ) {
                             alt17=1;
                         }
 
 
                         switch (alt17) {
                     	case 1 :
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:741:5: otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:779:5: otherlv_8= ',' ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) )
                     	    {
-                    	    otherlv_8=(Token)match(input,16,FOLLOW_16_in_rulePromiseValue1509); 
+                    	    otherlv_8=(Token)match(input,19,FOLLOW_19_in_rulePromiseValue1610); 
 
                     	        	newLeafNode(otherlv_8, grammarAccess.getPromiseValueAccess().getCommaKeyword_2_1_2_0());
                     	        
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:745:1: ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:783:1: ( ( (lv_values_9_0= RULE_STRING ) ) | ( (lv_functions_10_0= ruleSimpleFunction ) ) )
                     	    int alt16=2;
                     	    int LA16_0 = input.LA(1);
 
@@ -1898,15 +1982,15 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                     	    }
                     	    switch (alt16) {
                     	        case 1 :
-                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:745:2: ( (lv_values_9_0= RULE_STRING ) )
+                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:783:2: ( (lv_values_9_0= RULE_STRING ) )
                     	            {
-                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:745:2: ( (lv_values_9_0= RULE_STRING ) )
-                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:746:1: (lv_values_9_0= RULE_STRING )
+                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:783:2: ( (lv_values_9_0= RULE_STRING ) )
+                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:784:1: (lv_values_9_0= RULE_STRING )
                     	            {
-                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:746:1: (lv_values_9_0= RULE_STRING )
-                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:747:3: lv_values_9_0= RULE_STRING
+                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:784:1: (lv_values_9_0= RULE_STRING )
+                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:785:3: lv_values_9_0= RULE_STRING
                     	            {
-                    	            lv_values_9_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePromiseValue1527); 
+                    	            lv_values_9_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePromiseValue1628); 
 
                     	            			newLeafNode(lv_values_9_0, grammarAccess.getPromiseValueAccess().getValuesSTRINGTerminalRuleCall_2_1_2_1_0_0()); 
                     	            		
@@ -1930,18 +2014,18 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                     	            }
                     	            break;
                     	        case 2 :
-                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:764:6: ( (lv_functions_10_0= ruleSimpleFunction ) )
+                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:802:6: ( (lv_functions_10_0= ruleSimpleFunction ) )
                     	            {
-                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:764:6: ( (lv_functions_10_0= ruleSimpleFunction ) )
-                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:765:1: (lv_functions_10_0= ruleSimpleFunction )
+                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:802:6: ( (lv_functions_10_0= ruleSimpleFunction ) )
+                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:803:1: (lv_functions_10_0= ruleSimpleFunction )
                     	            {
-                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:765:1: (lv_functions_10_0= ruleSimpleFunction )
-                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:766:3: lv_functions_10_0= ruleSimpleFunction
+                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:803:1: (lv_functions_10_0= ruleSimpleFunction )
+                    	            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:804:3: lv_functions_10_0= ruleSimpleFunction
                     	            {
                     	             
                     	            	        newCompositeNode(grammarAccess.getPromiseValueAccess().getFunctionsSimpleFunctionParserRuleCall_2_1_2_1_1_0()); 
                     	            	    
-                    	            pushFollow(FOLLOW_ruleSimpleFunction_in_rulePromiseValue1559);
+                    	            pushFollow(FOLLOW_ruleSimpleFunction_in_rulePromiseValue1660);
                     	            lv_functions_10_0=ruleSimpleFunction();
 
                     	            state._fsp--;
@@ -1978,7 +2062,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_11=(Token)match(input,18,FOLLOW_18_in_rulePromiseValue1574); 
+                    otherlv_11=(Token)match(input,21,FOLLOW_21_in_rulePromiseValue1675); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getPromiseValueAccess().getRightCurlyBracketKeyword_2_1_3());
                         
@@ -1989,32 +2073,32 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:787:6: (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:825:6: (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:787:6: (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:787:8: otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}'
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:825:6: (otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}' )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:825:8: otherlv_12= '{' otherlv_13= '@' otherlv_14= '(' this_ID_15= RULE_ID otherlv_16= ')' otherlv_17= '}'
                     {
-                    otherlv_12=(Token)match(input,17,FOLLOW_17_in_rulePromiseValue1594); 
+                    otherlv_12=(Token)match(input,20,FOLLOW_20_in_rulePromiseValue1695); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getPromiseValueAccess().getLeftCurlyBracketKeyword_2_2_0());
                         
-                    otherlv_13=(Token)match(input,23,FOLLOW_23_in_rulePromiseValue1606); 
+                    otherlv_13=(Token)match(input,26,FOLLOW_26_in_rulePromiseValue1707); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getPromiseValueAccess().getCommercialAtKeyword_2_2_1());
                         
-                    otherlv_14=(Token)match(input,13,FOLLOW_13_in_rulePromiseValue1618); 
+                    otherlv_14=(Token)match(input,14,FOLLOW_14_in_rulePromiseValue1719); 
 
                         	newLeafNode(otherlv_14, grammarAccess.getPromiseValueAccess().getLeftParenthesisKeyword_2_2_2());
                         
-                    this_ID_15=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePromiseValue1629); 
+                    this_ID_15=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePromiseValue1730); 
                      
                         newLeafNode(this_ID_15, grammarAccess.getPromiseValueAccess().getIDTerminalRuleCall_2_2_3()); 
                         
-                    otherlv_16=(Token)match(input,14,FOLLOW_14_in_rulePromiseValue1640); 
+                    otherlv_16=(Token)match(input,15,FOLLOW_15_in_rulePromiseValue1741); 
 
                         	newLeafNode(otherlv_16, grammarAccess.getPromiseValueAccess().getRightParenthesisKeyword_2_2_4());
                         
-                    otherlv_17=(Token)match(input,18,FOLLOW_18_in_rulePromiseValue1652); 
+                    otherlv_17=(Token)match(input,21,FOLLOW_21_in_rulePromiseValue1753); 
 
                         	newLeafNode(otherlv_17, grammarAccess.getPromiseValueAccess().getRightCurlyBracketKeyword_2_2_5());
                         
@@ -2048,7 +2132,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBody"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:819:1: entryRuleBody returns [EObject current=null] : iv_ruleBody= ruleBody EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:857:1: entryRuleBody returns [EObject current=null] : iv_ruleBody= ruleBody EOF ;
     public final EObject entryRuleBody() throws RecognitionException {
         EObject current = null;
 
@@ -2056,17 +2140,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:820:2: (iv_ruleBody= ruleBody EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:821:2: iv_ruleBody= ruleBody EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:858:2: (iv_ruleBody= ruleBody EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:859:2: iv_ruleBody= ruleBody EOF
             {
              newCompositeNode(grammarAccess.getBodyRule()); 
-            pushFollow(FOLLOW_ruleBody_in_entryRuleBody1690);
+            pushFollow(FOLLOW_ruleBody_in_entryRuleBody1791);
             iv_ruleBody=ruleBody();
 
             state._fsp--;
 
              current =iv_ruleBody; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBody1700); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBody1801); 
 
             }
 
@@ -2084,7 +2168,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBody"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:828:1: ruleBody returns [EObject current=null] : (otherlv_0= 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* ( (lv_classes_10_0= ruleBodyClass ) )* otherlv_11= '}' ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:866:1: ruleBody returns [EObject current=null] : (otherlv_0= 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* ( (lv_classes_10_0= ruleBodyClass ) )* otherlv_11= '}' ) ;
     public final EObject ruleBody() throws RecognitionException {
         EObject current = null;
 
@@ -2107,26 +2191,26 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:831:28: ( (otherlv_0= 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* ( (lv_classes_10_0= ruleBodyClass ) )* otherlv_11= '}' ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:832:1: (otherlv_0= 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* ( (lv_classes_10_0= ruleBodyClass ) )* otherlv_11= '}' )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:869:28: ( (otherlv_0= 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* ( (lv_classes_10_0= ruleBodyClass ) )* otherlv_11= '}' ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:870:1: (otherlv_0= 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* ( (lv_classes_10_0= ruleBodyClass ) )* otherlv_11= '}' )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:832:1: (otherlv_0= 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* ( (lv_classes_10_0= ruleBodyClass ) )* otherlv_11= '}' )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:832:3: otherlv_0= 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* ( (lv_classes_10_0= ruleBodyClass ) )* otherlv_11= '}'
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:870:1: (otherlv_0= 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* ( (lv_classes_10_0= ruleBodyClass ) )* otherlv_11= '}' )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:870:3: otherlv_0= 'body' ( (lv_component_1_0= ruleBodyComponent ) ) ( (lv_name_2_0= RULE_ID ) ) (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )? otherlv_8= '{' ( (lv_promiseType_9_0= ruleBodyFunction ) )* ( (lv_classes_10_0= ruleBodyClass ) )* otherlv_11= '}'
             {
-            otherlv_0=(Token)match(input,24,FOLLOW_24_in_ruleBody1737); 
+            otherlv_0=(Token)match(input,27,FOLLOW_27_in_ruleBody1838); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getBodyAccess().getBodyKeyword_0());
                 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:836:1: ( (lv_component_1_0= ruleBodyComponent ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:837:1: (lv_component_1_0= ruleBodyComponent )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:874:1: ( (lv_component_1_0= ruleBodyComponent ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:875:1: (lv_component_1_0= ruleBodyComponent )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:837:1: (lv_component_1_0= ruleBodyComponent )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:838:3: lv_component_1_0= ruleBodyComponent
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:875:1: (lv_component_1_0= ruleBodyComponent )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:876:3: lv_component_1_0= ruleBodyComponent
             {
              
             	        newCompositeNode(grammarAccess.getBodyAccess().getComponentBodyComponentParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleBodyComponent_in_ruleBody1758);
+            pushFollow(FOLLOW_ruleBodyComponent_in_ruleBody1859);
             lv_component_1_0=ruleBodyComponent();
 
             state._fsp--;
@@ -2148,13 +2232,13 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:854:2: ( (lv_name_2_0= RULE_ID ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:855:1: (lv_name_2_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:892:2: ( (lv_name_2_0= RULE_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:893:1: (lv_name_2_0= RULE_ID )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:855:1: (lv_name_2_0= RULE_ID )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:856:3: lv_name_2_0= RULE_ID
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:893:1: (lv_name_2_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:894:3: lv_name_2_0= RULE_ID
             {
-            lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBody1775); 
+            lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBody1876); 
 
             			newLeafNode(lv_name_2_0, grammarAccess.getBodyAccess().getNameIDTerminalRuleCall_2_0()); 
             		
@@ -2174,28 +2258,28 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:872:2: (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )?
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:910:2: (otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')' )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
-            if ( (LA20_0==13) ) {
+            if ( (LA20_0==14) ) {
                 alt20=1;
             }
             switch (alt20) {
                 case 1 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:872:4: otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')'
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:910:4: otherlv_3= '(' ( (lv_variables_4_0= RULE_ID ) ) (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )* otherlv_7= ')'
                     {
-                    otherlv_3=(Token)match(input,13,FOLLOW_13_in_ruleBody1793); 
+                    otherlv_3=(Token)match(input,14,FOLLOW_14_in_ruleBody1894); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getBodyAccess().getLeftParenthesisKeyword_3_0());
                         
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:876:1: ( (lv_variables_4_0= RULE_ID ) )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:877:1: (lv_variables_4_0= RULE_ID )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:914:1: ( (lv_variables_4_0= RULE_ID ) )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:915:1: (lv_variables_4_0= RULE_ID )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:877:1: (lv_variables_4_0= RULE_ID )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:878:3: lv_variables_4_0= RULE_ID
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:915:1: (lv_variables_4_0= RULE_ID )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:916:3: lv_variables_4_0= RULE_ID
                     {
-                    lv_variables_4_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBody1810); 
+                    lv_variables_4_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBody1911); 
 
                     			newLeafNode(lv_variables_4_0, grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_1_0()); 
                     		
@@ -2215,32 +2299,32 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:894:2: (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )*
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:932:2: (otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) ) )*
                     loop19:
                     do {
                         int alt19=2;
                         int LA19_0 = input.LA(1);
 
-                        if ( (LA19_0==16) ) {
+                        if ( (LA19_0==19) ) {
                             alt19=1;
                         }
 
 
                         switch (alt19) {
                     	case 1 :
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:894:4: otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:932:4: otherlv_5= ',' ( (lv_variables_6_0= RULE_ID ) )
                     	    {
-                    	    otherlv_5=(Token)match(input,16,FOLLOW_16_in_ruleBody1828); 
+                    	    otherlv_5=(Token)match(input,19,FOLLOW_19_in_ruleBody1929); 
 
                     	        	newLeafNode(otherlv_5, grammarAccess.getBodyAccess().getCommaKeyword_3_2_0());
                     	        
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:898:1: ( (lv_variables_6_0= RULE_ID ) )
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:899:1: (lv_variables_6_0= RULE_ID )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:936:1: ( (lv_variables_6_0= RULE_ID ) )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:937:1: (lv_variables_6_0= RULE_ID )
                     	    {
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:899:1: (lv_variables_6_0= RULE_ID )
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:900:3: lv_variables_6_0= RULE_ID
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:937:1: (lv_variables_6_0= RULE_ID )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:938:3: lv_variables_6_0= RULE_ID
                     	    {
-                    	    lv_variables_6_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBody1845); 
+                    	    lv_variables_6_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBody1946); 
 
                     	    			newLeafNode(lv_variables_6_0, grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_2_1_0()); 
                     	    		
@@ -2269,7 +2353,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_7=(Token)match(input,14,FOLLOW_14_in_ruleBody1864); 
+                    otherlv_7=(Token)match(input,15,FOLLOW_15_in_ruleBody1965); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getBodyAccess().getRightParenthesisKeyword_3_3());
                         
@@ -2279,11 +2363,11 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,17,FOLLOW_17_in_ruleBody1878); 
+            otherlv_8=(Token)match(input,20,FOLLOW_20_in_ruleBody1979); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getBodyAccess().getLeftCurlyBracketKeyword_4());
                 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:924:1: ( (lv_promiseType_9_0= ruleBodyFunction ) )*
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:962:1: ( (lv_promiseType_9_0= ruleBodyFunction ) )*
             loop21:
             do {
                 int alt21=2;
@@ -2292,7 +2376,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                 if ( (LA21_0==RULE_ID) ) {
                     int LA21_1 = input.LA(2);
 
-                    if ( (LA21_1==22) ) {
+                    if ( (LA21_1==25) ) {
                         alt21=1;
                     }
 
@@ -2302,15 +2386,15 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
                 switch (alt21) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:925:1: (lv_promiseType_9_0= ruleBodyFunction )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:963:1: (lv_promiseType_9_0= ruleBodyFunction )
             	    {
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:925:1: (lv_promiseType_9_0= ruleBodyFunction )
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:926:3: lv_promiseType_9_0= ruleBodyFunction
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:963:1: (lv_promiseType_9_0= ruleBodyFunction )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:964:3: lv_promiseType_9_0= ruleBodyFunction
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getBodyAccess().getPromiseTypeBodyFunctionParserRuleCall_5_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleBodyFunction_in_ruleBody1899);
+            	    pushFollow(FOLLOW_ruleBodyFunction_in_ruleBody2000);
             	    lv_promiseType_9_0=ruleBodyFunction();
 
             	    state._fsp--;
@@ -2338,28 +2422,28 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:942:3: ( (lv_classes_10_0= ruleBodyClass ) )*
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:980:3: ( (lv_classes_10_0= ruleBodyClass ) )*
             loop22:
             do {
                 int alt22=2;
                 int LA22_0 = input.LA(1);
 
-                if ( (LA22_0==RULE_ID||(LA22_0>=12 && LA22_0<=13)) ) {
+                if ( (LA22_0==RULE_ID||(LA22_0>=13 && LA22_0<=14)||(LA22_0>=16 && LA22_0<=17)) ) {
                     alt22=1;
                 }
 
 
                 switch (alt22) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:943:1: (lv_classes_10_0= ruleBodyClass )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:981:1: (lv_classes_10_0= ruleBodyClass )
             	    {
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:943:1: (lv_classes_10_0= ruleBodyClass )
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:944:3: lv_classes_10_0= ruleBodyClass
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:981:1: (lv_classes_10_0= ruleBodyClass )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:982:3: lv_classes_10_0= ruleBodyClass
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getBodyAccess().getClassesBodyClassParserRuleCall_6_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleBodyClass_in_ruleBody1921);
+            	    pushFollow(FOLLOW_ruleBodyClass_in_ruleBody2022);
             	    lv_classes_10_0=ruleBodyClass();
 
             	    state._fsp--;
@@ -2387,7 +2471,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_11=(Token)match(input,18,FOLLOW_18_in_ruleBody1934); 
+            otherlv_11=(Token)match(input,21,FOLLOW_21_in_ruleBody2035); 
 
                 	newLeafNode(otherlv_11, grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_7());
                 
@@ -2412,7 +2496,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBodyClass"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:972:1: entryRuleBodyClass returns [EObject current=null] : iv_ruleBodyClass= ruleBodyClass EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1010:1: entryRuleBodyClass returns [EObject current=null] : iv_ruleBodyClass= ruleBodyClass EOF ;
     public final EObject entryRuleBodyClass() throws RecognitionException {
         EObject current = null;
 
@@ -2420,17 +2504,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:973:2: (iv_ruleBodyClass= ruleBodyClass EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:974:2: iv_ruleBodyClass= ruleBodyClass EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1011:2: (iv_ruleBodyClass= ruleBodyClass EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1012:2: iv_ruleBodyClass= ruleBodyClass EOF
             {
              newCompositeNode(grammarAccess.getBodyClassRule()); 
-            pushFollow(FOLLOW_ruleBodyClass_in_entryRuleBodyClass1970);
+            pushFollow(FOLLOW_ruleBodyClass_in_entryRuleBodyClass2071);
             iv_ruleBodyClass=ruleBodyClass();
 
             state._fsp--;
 
              current =iv_ruleBodyClass; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyClass1980); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyClass2081); 
 
             }
 
@@ -2448,7 +2532,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBodyClass"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:981:1: ruleBodyClass returns [EObject current=null] : ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1019:1: ruleBodyClass returns [EObject current=null] : ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* ) ;
     public final EObject ruleBodyClass() throws RecognitionException {
         EObject current = null;
 
@@ -2461,22 +2545,22 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:984:28: ( ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:985:1: ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1022:28: ( ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1023:1: ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:985:1: ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:985:2: ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )*
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1023:1: ( ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )* )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1023:2: ( (lv_name_0_0= ruleCLASS_ID ) ) otherlv_1= '::' ( (lv_promiseType_2_0= ruleBodyFunction ) )*
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:985:2: ( (lv_name_0_0= ruleCLASS_ID ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:986:1: (lv_name_0_0= ruleCLASS_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1023:2: ( (lv_name_0_0= ruleCLASS_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1024:1: (lv_name_0_0= ruleCLASS_ID )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:986:1: (lv_name_0_0= ruleCLASS_ID )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:987:3: lv_name_0_0= ruleCLASS_ID
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1024:1: (lv_name_0_0= ruleCLASS_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1025:3: lv_name_0_0= ruleCLASS_ID
             {
              
             	        newCompositeNode(grammarAccess.getBodyClassAccess().getNameCLASS_IDParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleCLASS_ID_in_ruleBodyClass2026);
+            pushFollow(FOLLOW_ruleCLASS_ID_in_ruleBodyClass2127);
             lv_name_0_0=ruleCLASS_ID();
 
             state._fsp--;
@@ -2498,11 +2582,11 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,20,FOLLOW_20_in_ruleBodyClass2038); 
+            otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleBodyClass2139); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getBodyClassAccess().getColonColonKeyword_1());
                 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1007:1: ( (lv_promiseType_2_0= ruleBodyFunction ) )*
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1045:1: ( (lv_promiseType_2_0= ruleBodyFunction ) )*
             loop23:
             do {
                 int alt23=2;
@@ -2511,7 +2595,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                 if ( (LA23_0==RULE_ID) ) {
                     int LA23_2 = input.LA(2);
 
-                    if ( (LA23_2==22) ) {
+                    if ( (LA23_2==25) ) {
                         alt23=1;
                     }
 
@@ -2521,15 +2605,15 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
                 switch (alt23) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1008:1: (lv_promiseType_2_0= ruleBodyFunction )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1046:1: (lv_promiseType_2_0= ruleBodyFunction )
             	    {
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1008:1: (lv_promiseType_2_0= ruleBodyFunction )
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1009:3: lv_promiseType_2_0= ruleBodyFunction
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1046:1: (lv_promiseType_2_0= ruleBodyFunction )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1047:3: lv_promiseType_2_0= ruleBodyFunction
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getBodyClassAccess().getPromiseTypeBodyFunctionParserRuleCall_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleBodyFunction_in_ruleBodyClass2059);
+            	    pushFollow(FOLLOW_ruleBodyFunction_in_ruleBodyClass2160);
             	    lv_promiseType_2_0=ruleBodyFunction();
 
             	    state._fsp--;
@@ -2578,7 +2662,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBodyFunction"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1033:1: entryRuleBodyFunction returns [EObject current=null] : iv_ruleBodyFunction= ruleBodyFunction EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1071:1: entryRuleBodyFunction returns [EObject current=null] : iv_ruleBodyFunction= ruleBodyFunction EOF ;
     public final EObject entryRuleBodyFunction() throws RecognitionException {
         EObject current = null;
 
@@ -2586,17 +2670,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1034:2: (iv_ruleBodyFunction= ruleBodyFunction EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1035:2: iv_ruleBodyFunction= ruleBodyFunction EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1072:2: (iv_ruleBodyFunction= ruleBodyFunction EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1073:2: iv_ruleBodyFunction= ruleBodyFunction EOF
             {
              newCompositeNode(grammarAccess.getBodyFunctionRule()); 
-            pushFollow(FOLLOW_ruleBodyFunction_in_entryRuleBodyFunction2096);
+            pushFollow(FOLLOW_ruleBodyFunction_in_entryRuleBodyFunction2197);
             iv_ruleBodyFunction=ruleBodyFunction();
 
             state._fsp--;
 
              current =iv_ruleBodyFunction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyFunction2106); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyFunction2207); 
 
             }
 
@@ -2614,7 +2698,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBodyFunction"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1042:1: ruleBodyFunction returns [EObject current=null] : ( ( (lv_name_0_0= ruleBodyPromiseType ) ) otherlv_1= '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) | (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' ) ) otherlv_15= ';' ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1080:1: ruleBodyFunction returns [EObject current=null] : ( ( (lv_name_0_0= ruleBodyPromiseType ) ) otherlv_1= '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) | (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' ) ) otherlv_15= ';' ) ;
     public final EObject ruleBodyFunction() throws RecognitionException {
         EObject current = null;
 
@@ -2640,22 +2724,22 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1045:28: ( ( ( (lv_name_0_0= ruleBodyPromiseType ) ) otherlv_1= '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) | (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' ) ) otherlv_15= ';' ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1046:1: ( ( (lv_name_0_0= ruleBodyPromiseType ) ) otherlv_1= '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) | (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' ) ) otherlv_15= ';' )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1083:28: ( ( ( (lv_name_0_0= ruleBodyPromiseType ) ) otherlv_1= '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) | (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' ) ) otherlv_15= ';' ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1084:1: ( ( (lv_name_0_0= ruleBodyPromiseType ) ) otherlv_1= '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) | (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' ) ) otherlv_15= ';' )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1046:1: ( ( (lv_name_0_0= ruleBodyPromiseType ) ) otherlv_1= '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) | (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' ) ) otherlv_15= ';' )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1046:2: ( (lv_name_0_0= ruleBodyPromiseType ) ) otherlv_1= '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) | (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' ) ) otherlv_15= ';'
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1084:1: ( ( (lv_name_0_0= ruleBodyPromiseType ) ) otherlv_1= '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) | (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' ) ) otherlv_15= ';' )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1084:2: ( (lv_name_0_0= ruleBodyPromiseType ) ) otherlv_1= '=>' ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) | (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' ) ) otherlv_15= ';'
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1046:2: ( (lv_name_0_0= ruleBodyPromiseType ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1047:1: (lv_name_0_0= ruleBodyPromiseType )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1084:2: ( (lv_name_0_0= ruleBodyPromiseType ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1085:1: (lv_name_0_0= ruleBodyPromiseType )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1047:1: (lv_name_0_0= ruleBodyPromiseType )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1048:3: lv_name_0_0= ruleBodyPromiseType
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1085:1: (lv_name_0_0= ruleBodyPromiseType )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1086:3: lv_name_0_0= ruleBodyPromiseType
             {
              
             	        newCompositeNode(grammarAccess.getBodyFunctionAccess().getNameBodyPromiseTypeParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleBodyPromiseType_in_ruleBodyFunction2152);
+            pushFollow(FOLLOW_ruleBodyPromiseType_in_ruleBodyFunction2253);
             lv_name_0_0=ruleBodyPromiseType();
 
             state._fsp--;
@@ -2677,11 +2761,11 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,22,FOLLOW_22_in_ruleBodyFunction2164); 
+            otherlv_1=(Token)match(input,25,FOLLOW_25_in_ruleBodyFunction2265); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getBodyFunctionAccess().getEqualsSignGreaterThanSignKeyword_1());
                 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1068:1: ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) | (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1106:1: ( ( (lv_values_2_0= RULE_STRING ) ) | ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' ) | ( (lv_function_8_0= ruleSpecialFunction ) ) | (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' ) )
             int alt25=4;
             switch ( input.LA(1) ) {
             case RULE_STRING:
@@ -2689,11 +2773,11 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                 alt25=1;
                 }
                 break;
-            case 17:
+            case 20:
                 {
                 int LA25_2 = input.LA(2);
 
-                if ( (LA25_2==23) ) {
+                if ( (LA25_2==26) ) {
                     alt25=4;
                 }
                 else if ( (LA25_2==RULE_STRING) ) {
@@ -2721,15 +2805,15 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             switch (alt25) {
                 case 1 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1068:2: ( (lv_values_2_0= RULE_STRING ) )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1106:2: ( (lv_values_2_0= RULE_STRING ) )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1068:2: ( (lv_values_2_0= RULE_STRING ) )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1069:1: (lv_values_2_0= RULE_STRING )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1106:2: ( (lv_values_2_0= RULE_STRING ) )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1107:1: (lv_values_2_0= RULE_STRING )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1069:1: (lv_values_2_0= RULE_STRING )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1070:3: lv_values_2_0= RULE_STRING
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1107:1: (lv_values_2_0= RULE_STRING )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1108:3: lv_values_2_0= RULE_STRING
                     {
-                    lv_values_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction2182); 
+                    lv_values_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction2283); 
 
                     			newLeafNode(lv_values_2_0, grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_0_0()); 
                     		
@@ -2753,18 +2837,18 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1087:6: ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1125:6: ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1087:6: ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1087:7: ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}'
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1125:6: ( ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}' )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1125:7: ( (lv_List_3_0= '{' ) ) ( (lv_values_4_0= RULE_STRING ) ) (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )* otherlv_7= '}'
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1087:7: ( (lv_List_3_0= '{' ) )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1088:1: (lv_List_3_0= '{' )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1125:7: ( (lv_List_3_0= '{' ) )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1126:1: (lv_List_3_0= '{' )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1088:1: (lv_List_3_0= '{' )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1089:3: lv_List_3_0= '{'
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1126:1: (lv_List_3_0= '{' )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1127:3: lv_List_3_0= '{'
                     {
-                    lv_List_3_0=(Token)match(input,17,FOLLOW_17_in_ruleBodyFunction2212); 
+                    lv_List_3_0=(Token)match(input,20,FOLLOW_20_in_ruleBodyFunction2313); 
 
                             newLeafNode(lv_List_3_0, grammarAccess.getBodyFunctionAccess().getListLeftCurlyBracketKeyword_2_1_0_0());
                         
@@ -2780,13 +2864,13 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1102:2: ( (lv_values_4_0= RULE_STRING ) )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1103:1: (lv_values_4_0= RULE_STRING )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1140:2: ( (lv_values_4_0= RULE_STRING ) )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1141:1: (lv_values_4_0= RULE_STRING )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1103:1: (lv_values_4_0= RULE_STRING )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1104:3: lv_values_4_0= RULE_STRING
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1141:1: (lv_values_4_0= RULE_STRING )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1142:3: lv_values_4_0= RULE_STRING
                     {
-                    lv_values_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction2242); 
+                    lv_values_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction2343); 
 
                     			newLeafNode(lv_values_4_0, grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_1_0()); 
                     		
@@ -2806,32 +2890,32 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1120:2: (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )*
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1158:2: (otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) ) )*
                     loop24:
                     do {
                         int alt24=2;
                         int LA24_0 = input.LA(1);
 
-                        if ( (LA24_0==16) ) {
+                        if ( (LA24_0==19) ) {
                             alt24=1;
                         }
 
 
                         switch (alt24) {
                     	case 1 :
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1120:4: otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1158:4: otherlv_5= ',' ( (lv_values_6_0= RULE_STRING ) )
                     	    {
-                    	    otherlv_5=(Token)match(input,16,FOLLOW_16_in_ruleBodyFunction2260); 
+                    	    otherlv_5=(Token)match(input,19,FOLLOW_19_in_ruleBodyFunction2361); 
 
                     	        	newLeafNode(otherlv_5, grammarAccess.getBodyFunctionAccess().getCommaKeyword_2_1_2_0());
                     	        
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1124:1: ( (lv_values_6_0= RULE_STRING ) )
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1125:1: (lv_values_6_0= RULE_STRING )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1162:1: ( (lv_values_6_0= RULE_STRING ) )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1163:1: (lv_values_6_0= RULE_STRING )
                     	    {
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1125:1: (lv_values_6_0= RULE_STRING )
-                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1126:3: lv_values_6_0= RULE_STRING
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1163:1: (lv_values_6_0= RULE_STRING )
+                    	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1164:3: lv_values_6_0= RULE_STRING
                     	    {
-                    	    lv_values_6_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction2277); 
+                    	    lv_values_6_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleBodyFunction2378); 
 
                     	    			newLeafNode(lv_values_6_0, grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_2_1_0()); 
                     	    		
@@ -2860,7 +2944,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_7=(Token)match(input,18,FOLLOW_18_in_ruleBodyFunction2296); 
+                    otherlv_7=(Token)match(input,21,FOLLOW_21_in_ruleBodyFunction2397); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getBodyFunctionAccess().getRightCurlyBracketKeyword_2_1_3());
                         
@@ -2871,18 +2955,18 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1147:6: ( (lv_function_8_0= ruleSpecialFunction ) )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1185:6: ( (lv_function_8_0= ruleSpecialFunction ) )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1147:6: ( (lv_function_8_0= ruleSpecialFunction ) )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1148:1: (lv_function_8_0= ruleSpecialFunction )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1185:6: ( (lv_function_8_0= ruleSpecialFunction ) )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1186:1: (lv_function_8_0= ruleSpecialFunction )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1148:1: (lv_function_8_0= ruleSpecialFunction )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1149:3: lv_function_8_0= ruleSpecialFunction
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1186:1: (lv_function_8_0= ruleSpecialFunction )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1187:3: lv_function_8_0= ruleSpecialFunction
                     {
                      
                     	        newCompositeNode(grammarAccess.getBodyFunctionAccess().getFunctionSpecialFunctionParserRuleCall_2_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleSpecialFunction_in_ruleBodyFunction2324);
+                    pushFollow(FOLLOW_ruleSpecialFunction_in_ruleBodyFunction2425);
                     lv_function_8_0=ruleSpecialFunction();
 
                     state._fsp--;
@@ -2908,32 +2992,32 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1166:6: (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1204:6: (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' )
                     {
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1166:6: (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' )
-                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1166:8: otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}'
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1204:6: (otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}' )
+                    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1204:8: otherlv_9= '{' otherlv_10= '@' otherlv_11= '(' this_ID_12= RULE_ID otherlv_13= ')' otherlv_14= '}'
                     {
-                    otherlv_9=(Token)match(input,17,FOLLOW_17_in_ruleBodyFunction2343); 
+                    otherlv_9=(Token)match(input,20,FOLLOW_20_in_ruleBodyFunction2444); 
 
                         	newLeafNode(otherlv_9, grammarAccess.getBodyFunctionAccess().getLeftCurlyBracketKeyword_2_3_0());
                         
-                    otherlv_10=(Token)match(input,23,FOLLOW_23_in_ruleBodyFunction2355); 
+                    otherlv_10=(Token)match(input,26,FOLLOW_26_in_ruleBodyFunction2456); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getBodyFunctionAccess().getCommercialAtKeyword_2_3_1());
                         
-                    otherlv_11=(Token)match(input,13,FOLLOW_13_in_ruleBodyFunction2367); 
+                    otherlv_11=(Token)match(input,14,FOLLOW_14_in_ruleBodyFunction2468); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getBodyFunctionAccess().getLeftParenthesisKeyword_2_3_2());
                         
-                    this_ID_12=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyFunction2378); 
+                    this_ID_12=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyFunction2479); 
                      
                         newLeafNode(this_ID_12, grammarAccess.getBodyFunctionAccess().getIDTerminalRuleCall_2_3_3()); 
                         
-                    otherlv_13=(Token)match(input,14,FOLLOW_14_in_ruleBodyFunction2389); 
+                    otherlv_13=(Token)match(input,15,FOLLOW_15_in_ruleBodyFunction2490); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getBodyFunctionAccess().getRightParenthesisKeyword_2_3_4());
                         
-                    otherlv_14=(Token)match(input,18,FOLLOW_18_in_ruleBodyFunction2401); 
+                    otherlv_14=(Token)match(input,21,FOLLOW_21_in_ruleBodyFunction2502); 
 
                         	newLeafNode(otherlv_14, grammarAccess.getBodyFunctionAccess().getRightCurlyBracketKeyword_2_3_5());
                         
@@ -2946,7 +3030,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_15=(Token)match(input,21,FOLLOW_21_in_ruleBodyFunction2415); 
+            otherlv_15=(Token)match(input,24,FOLLOW_24_in_ruleBodyFunction2516); 
 
                 	newLeafNode(otherlv_15, grammarAccess.getBodyFunctionAccess().getSemicolonKeyword_3());
                 
@@ -2971,7 +3055,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSimpleFunction"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1202:1: entryRuleSimpleFunction returns [EObject current=null] : iv_ruleSimpleFunction= ruleSimpleFunction EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1240:1: entryRuleSimpleFunction returns [EObject current=null] : iv_ruleSimpleFunction= ruleSimpleFunction EOF ;
     public final EObject entryRuleSimpleFunction() throws RecognitionException {
         EObject current = null;
 
@@ -2979,17 +3063,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1203:2: (iv_ruleSimpleFunction= ruleSimpleFunction EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1204:2: iv_ruleSimpleFunction= ruleSimpleFunction EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1241:2: (iv_ruleSimpleFunction= ruleSimpleFunction EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1242:2: iv_ruleSimpleFunction= ruleSimpleFunction EOF
             {
              newCompositeNode(grammarAccess.getSimpleFunctionRule()); 
-            pushFollow(FOLLOW_ruleSimpleFunction_in_entryRuleSimpleFunction2451);
+            pushFollow(FOLLOW_ruleSimpleFunction_in_entryRuleSimpleFunction2552);
             iv_ruleSimpleFunction=ruleSimpleFunction();
 
             state._fsp--;
 
              current =iv_ruleSimpleFunction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSimpleFunction2461); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSimpleFunction2562); 
 
             }
 
@@ -3007,7 +3091,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSimpleFunction"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1211:1: ruleSimpleFunction returns [EObject current=null] : ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' ( (lv_values_2_0= RULE_STRING ) ) (otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) ) )* otherlv_5= ')' ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1249:1: ruleSimpleFunction returns [EObject current=null] : ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' ( (lv_values_2_0= RULE_STRING ) ) (otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) ) )* otherlv_5= ')' ) ;
     public final EObject ruleSimpleFunction() throws RecognitionException {
         EObject current = null;
 
@@ -3021,19 +3105,19 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1214:28: ( ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' ( (lv_values_2_0= RULE_STRING ) ) (otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) ) )* otherlv_5= ')' ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1215:1: ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' ( (lv_values_2_0= RULE_STRING ) ) (otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) ) )* otherlv_5= ')' )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1252:28: ( ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' ( (lv_values_2_0= RULE_STRING ) ) (otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) ) )* otherlv_5= ')' ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1253:1: ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' ( (lv_values_2_0= RULE_STRING ) ) (otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) ) )* otherlv_5= ')' )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1215:1: ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' ( (lv_values_2_0= RULE_STRING ) ) (otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) ) )* otherlv_5= ')' )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1215:2: ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' ( (lv_values_2_0= RULE_STRING ) ) (otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) ) )* otherlv_5= ')'
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1253:1: ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' ( (lv_values_2_0= RULE_STRING ) ) (otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) ) )* otherlv_5= ')' )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1253:2: ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' ( (lv_values_2_0= RULE_STRING ) ) (otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) ) )* otherlv_5= ')'
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1215:2: ( (lv_id_0_0= RULE_ID ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1216:1: (lv_id_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1253:2: ( (lv_id_0_0= RULE_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1254:1: (lv_id_0_0= RULE_ID )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1216:1: (lv_id_0_0= RULE_ID )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1217:3: lv_id_0_0= RULE_ID
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1254:1: (lv_id_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1255:3: lv_id_0_0= RULE_ID
             {
-            lv_id_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSimpleFunction2503); 
+            lv_id_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSimpleFunction2604); 
 
             			newLeafNode(lv_id_0_0, grammarAccess.getSimpleFunctionAccess().getIdIDTerminalRuleCall_0_0()); 
             		
@@ -3053,17 +3137,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,13,FOLLOW_13_in_ruleSimpleFunction2520); 
+            otherlv_1=(Token)match(input,14,FOLLOW_14_in_ruleSimpleFunction2621); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getSimpleFunctionAccess().getLeftParenthesisKeyword_1());
                 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1237:1: ( (lv_values_2_0= RULE_STRING ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1238:1: (lv_values_2_0= RULE_STRING )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1275:1: ( (lv_values_2_0= RULE_STRING ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1276:1: (lv_values_2_0= RULE_STRING )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1238:1: (lv_values_2_0= RULE_STRING )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1239:3: lv_values_2_0= RULE_STRING
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1276:1: (lv_values_2_0= RULE_STRING )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1277:3: lv_values_2_0= RULE_STRING
             {
-            lv_values_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSimpleFunction2537); 
+            lv_values_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSimpleFunction2638); 
 
             			newLeafNode(lv_values_2_0, grammarAccess.getSimpleFunctionAccess().getValuesSTRINGTerminalRuleCall_2_0()); 
             		
@@ -3083,32 +3167,32 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1255:2: (otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) ) )*
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1293:2: (otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) ) )*
             loop26:
             do {
                 int alt26=2;
                 int LA26_0 = input.LA(1);
 
-                if ( (LA26_0==16) ) {
+                if ( (LA26_0==19) ) {
                     alt26=1;
                 }
 
 
                 switch (alt26) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1255:4: otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1293:4: otherlv_3= ',' ( (lv_values_4_0= RULE_STRING ) )
             	    {
-            	    otherlv_3=(Token)match(input,16,FOLLOW_16_in_ruleSimpleFunction2555); 
+            	    otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleSimpleFunction2656); 
 
             	        	newLeafNode(otherlv_3, grammarAccess.getSimpleFunctionAccess().getCommaKeyword_3_0());
             	        
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1259:1: ( (lv_values_4_0= RULE_STRING ) )
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1260:1: (lv_values_4_0= RULE_STRING )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1297:1: ( (lv_values_4_0= RULE_STRING ) )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1298:1: (lv_values_4_0= RULE_STRING )
             	    {
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1260:1: (lv_values_4_0= RULE_STRING )
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1261:3: lv_values_4_0= RULE_STRING
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1298:1: (lv_values_4_0= RULE_STRING )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1299:3: lv_values_4_0= RULE_STRING
             	    {
-            	    lv_values_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSimpleFunction2572); 
+            	    lv_values_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSimpleFunction2673); 
 
             	    			newLeafNode(lv_values_4_0, grammarAccess.getSimpleFunctionAccess().getValuesSTRINGTerminalRuleCall_3_1_0()); 
             	    		
@@ -3137,7 +3221,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleSimpleFunction2591); 
+            otherlv_5=(Token)match(input,15,FOLLOW_15_in_ruleSimpleFunction2692); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getSimpleFunctionAccess().getRightParenthesisKeyword_4());
                 
@@ -3162,7 +3246,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSpecialFunction"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1289:1: entryRuleSpecialFunction returns [EObject current=null] : iv_ruleSpecialFunction= ruleSpecialFunction EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1327:1: entryRuleSpecialFunction returns [EObject current=null] : iv_ruleSpecialFunction= ruleSpecialFunction EOF ;
     public final EObject entryRuleSpecialFunction() throws RecognitionException {
         EObject current = null;
 
@@ -3170,17 +3254,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1290:2: (iv_ruleSpecialFunction= ruleSpecialFunction EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1291:2: iv_ruleSpecialFunction= ruleSpecialFunction EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1328:2: (iv_ruleSpecialFunction= ruleSpecialFunction EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1329:2: iv_ruleSpecialFunction= ruleSpecialFunction EOF
             {
              newCompositeNode(grammarAccess.getSpecialFunctionRule()); 
-            pushFollow(FOLLOW_ruleSpecialFunction_in_entryRuleSpecialFunction2627);
+            pushFollow(FOLLOW_ruleSpecialFunction_in_entryRuleSpecialFunction2728);
             iv_ruleSpecialFunction=ruleSpecialFunction();
 
             state._fsp--;
 
              current =iv_ruleSpecialFunction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSpecialFunction2637); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSpecialFunction2738); 
 
             }
 
@@ -3198,7 +3282,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSpecialFunction"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1298:1: ruleSpecialFunction returns [EObject current=null] : ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )* otherlv_13= ')' ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1336:1: ruleSpecialFunction returns [EObject current=null] : ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )* otherlv_13= ')' ) ;
     public final EObject ruleSpecialFunction() throws RecognitionException {
         EObject current = null;
 
@@ -3221,19 +3305,19 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1301:28: ( ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )* otherlv_13= ')' ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1302:1: ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )* otherlv_13= ')' )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1339:28: ( ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )* otherlv_13= ')' ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1340:1: ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )* otherlv_13= ')' )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1302:1: ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )* otherlv_13= ')' )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1302:2: ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )* otherlv_13= ')'
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1340:1: ( ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )* otherlv_13= ')' )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1340:2: ( (lv_id_0_0= RULE_ID ) ) otherlv_1= '(' (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )* otherlv_13= ')'
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1302:2: ( (lv_id_0_0= RULE_ID ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1303:1: (lv_id_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1340:2: ( (lv_id_0_0= RULE_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1341:1: (lv_id_0_0= RULE_ID )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1303:1: (lv_id_0_0= RULE_ID )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1304:3: lv_id_0_0= RULE_ID
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1341:1: (lv_id_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1342:3: lv_id_0_0= RULE_ID
             {
-            lv_id_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction2679); 
+            lv_id_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction2780); 
 
             			newLeafNode(lv_id_0_0, grammarAccess.getSpecialFunctionAccess().getIdIDTerminalRuleCall_0_0()); 
             		
@@ -3253,20 +3337,20 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,13,FOLLOW_13_in_ruleSpecialFunction2696); 
+            otherlv_1=(Token)match(input,14,FOLLOW_14_in_ruleSpecialFunction2797); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getSpecialFunctionAccess().getLeftParenthesisKeyword_1());
                 
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1324:1: (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )*
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1362:1: (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )*
             loop27:
             do {
                 int alt27=8;
                 alt27 = dfa27.predict(input);
                 switch (alt27) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1324:2: this_ANY_OTHER_2= RULE_ANY_OTHER
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1362:2: this_ANY_OTHER_2= RULE_ANY_OTHER
             	    {
-            	    this_ANY_OTHER_2=(Token)match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_ruleSpecialFunction2708); 
+            	    this_ANY_OTHER_2=(Token)match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_ruleSpecialFunction2809); 
             	     
             	        newLeafNode(this_ANY_OTHER_2, grammarAccess.getSpecialFunctionAccess().getANY_OTHERTerminalRuleCall_2_0()); 
             	        
@@ -3274,9 +3358,9 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1329:6: this_ID_3= RULE_ID
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1367:6: this_ID_3= RULE_ID
             	    {
-            	    this_ID_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction2724); 
+            	    this_ID_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction2825); 
             	     
             	        newLeafNode(this_ID_3, grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_1()); 
             	        
@@ -3284,9 +3368,9 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1334:6: this_STRING_4= RULE_STRING
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1372:6: this_STRING_4= RULE_STRING
             	    {
-            	    this_STRING_4=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSpecialFunction2740); 
+            	    this_STRING_4=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSpecialFunction2841); 
             	     
             	        newLeafNode(this_STRING_4, grammarAccess.getSpecialFunctionAccess().getSTRINGTerminalRuleCall_2_2()); 
             	        
@@ -3294,9 +3378,9 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 4 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1339:7: otherlv_5= ','
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1377:7: otherlv_5= ','
             	    {
-            	    otherlv_5=(Token)match(input,16,FOLLOW_16_in_ruleSpecialFunction2757); 
+            	    otherlv_5=(Token)match(input,19,FOLLOW_19_in_ruleSpecialFunction2858); 
 
             	        	newLeafNode(otherlv_5, grammarAccess.getSpecialFunctionAccess().getCommaKeyword_2_3());
             	        
@@ -3304,20 +3388,20 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 5 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1344:6: (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1382:6: (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' )
             	    {
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1344:6: (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' )
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1344:8: otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')'
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1382:6: (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1382:8: otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')'
             	    {
-            	    otherlv_6=(Token)match(input,25,FOLLOW_25_in_ruleSpecialFunction2776); 
+            	    otherlv_6=(Token)match(input,28,FOLLOW_28_in_ruleSpecialFunction2877); 
 
             	        	newLeafNode(otherlv_6, grammarAccess.getSpecialFunctionAccess().getDollarSignLeftParenthesisKeyword_2_4_0());
             	        
-            	    this_ID_7=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction2787); 
+            	    this_ID_7=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction2888); 
             	     
             	        newLeafNode(this_ID_7, grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_4_1()); 
             	        
-            	    otherlv_8=(Token)match(input,14,FOLLOW_14_in_ruleSpecialFunction2798); 
+            	    otherlv_8=(Token)match(input,15,FOLLOW_15_in_ruleSpecialFunction2899); 
 
             	        	newLeafNode(otherlv_8, grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_2_4_2());
             	        
@@ -3328,20 +3412,20 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 6 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1357:6: (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1395:6: (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' )
             	    {
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1357:6: (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' )
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1357:8: otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}'
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1395:6: (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1395:8: otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}'
             	    {
-            	    otherlv_9=(Token)match(input,26,FOLLOW_26_in_ruleSpecialFunction2818); 
+            	    otherlv_9=(Token)match(input,29,FOLLOW_29_in_ruleSpecialFunction2919); 
 
             	        	newLeafNode(otherlv_9, grammarAccess.getSpecialFunctionAccess().getDollarSignLeftCurlyBracketKeyword_2_5_0());
             	        
-            	    this_ID_10=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction2829); 
+            	    this_ID_10=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSpecialFunction2930); 
             	     
             	        newLeafNode(this_ID_10, grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_5_1()); 
             	        
-            	    otherlv_11=(Token)match(input,18,FOLLOW_18_in_ruleSpecialFunction2840); 
+            	    otherlv_11=(Token)match(input,21,FOLLOW_21_in_ruleSpecialFunction2941); 
 
             	        	newLeafNode(otherlv_11, grammarAccess.getSpecialFunctionAccess().getRightCurlyBracketKeyword_2_5_2());
             	        
@@ -3352,18 +3436,18 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 7 :
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1370:6: ( (lv_func_12_0= ruleSpecialFunction ) )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1408:6: ( (lv_func_12_0= ruleSpecialFunction ) )
             	    {
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1370:6: ( (lv_func_12_0= ruleSpecialFunction ) )
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1371:1: (lv_func_12_0= ruleSpecialFunction )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1408:6: ( (lv_func_12_0= ruleSpecialFunction ) )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1409:1: (lv_func_12_0= ruleSpecialFunction )
             	    {
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1371:1: (lv_func_12_0= ruleSpecialFunction )
-            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1372:3: lv_func_12_0= ruleSpecialFunction
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1409:1: (lv_func_12_0= ruleSpecialFunction )
+            	    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1410:3: lv_func_12_0= ruleSpecialFunction
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getSpecialFunctionAccess().getFuncSpecialFunctionParserRuleCall_2_6_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleSpecialFunction_in_ruleSpecialFunction2868);
+            	    pushFollow(FOLLOW_ruleSpecialFunction_in_ruleSpecialFunction2969);
             	    lv_func_12_0=ruleSpecialFunction();
 
             	    state._fsp--;
@@ -3394,7 +3478,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_13=(Token)match(input,14,FOLLOW_14_in_ruleSpecialFunction2882); 
+            otherlv_13=(Token)match(input,15,FOLLOW_15_in_ruleSpecialFunction2983); 
 
                 	newLeafNode(otherlv_13, grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_3());
                 
@@ -3419,7 +3503,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBodyPromiseType"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1400:1: entryRuleBodyPromiseType returns [EObject current=null] : iv_ruleBodyPromiseType= ruleBodyPromiseType EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1438:1: entryRuleBodyPromiseType returns [EObject current=null] : iv_ruleBodyPromiseType= ruleBodyPromiseType EOF ;
     public final EObject entryRuleBodyPromiseType() throws RecognitionException {
         EObject current = null;
 
@@ -3427,17 +3511,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1401:2: (iv_ruleBodyPromiseType= ruleBodyPromiseType EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1402:2: iv_ruleBodyPromiseType= ruleBodyPromiseType EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1439:2: (iv_ruleBodyPromiseType= ruleBodyPromiseType EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1440:2: iv_ruleBodyPromiseType= ruleBodyPromiseType EOF
             {
              newCompositeNode(grammarAccess.getBodyPromiseTypeRule()); 
-            pushFollow(FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType2918);
+            pushFollow(FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType3019);
             iv_ruleBodyPromiseType=ruleBodyPromiseType();
 
             state._fsp--;
 
              current =iv_ruleBodyPromiseType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyPromiseType2928); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyPromiseType3029); 
 
             }
 
@@ -3455,7 +3539,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBodyPromiseType"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1409:1: ruleBodyPromiseType returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1447:1: ruleBodyPromiseType returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleBodyPromiseType() throws RecognitionException {
         EObject current = null;
 
@@ -3464,16 +3548,16 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1412:28: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1413:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1450:28: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1451:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1413:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1414:1: (lv_name_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1451:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1452:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1414:1: (lv_name_0_0= RULE_ID )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1415:3: lv_name_0_0= RULE_ID
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1452:1: (lv_name_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1453:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyPromiseType2969); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyPromiseType3070); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getBodyPromiseTypeAccess().getNameIDTerminalRuleCall_0()); 
             		
@@ -3511,7 +3595,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBundleComponent"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1439:1: entryRuleBundleComponent returns [EObject current=null] : iv_ruleBundleComponent= ruleBundleComponent EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1477:1: entryRuleBundleComponent returns [EObject current=null] : iv_ruleBundleComponent= ruleBundleComponent EOF ;
     public final EObject entryRuleBundleComponent() throws RecognitionException {
         EObject current = null;
 
@@ -3519,17 +3603,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1440:2: (iv_ruleBundleComponent= ruleBundleComponent EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1441:2: iv_ruleBundleComponent= ruleBundleComponent EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1478:2: (iv_ruleBundleComponent= ruleBundleComponent EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1479:2: iv_ruleBundleComponent= ruleBundleComponent EOF
             {
              newCompositeNode(grammarAccess.getBundleComponentRule()); 
-            pushFollow(FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent3009);
+            pushFollow(FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent3110);
             iv_ruleBundleComponent=ruleBundleComponent();
 
             state._fsp--;
 
              current =iv_ruleBundleComponent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBundleComponent3019); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBundleComponent3120); 
 
             }
 
@@ -3547,7 +3631,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBundleComponent"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1448:1: ruleBundleComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1486:1: ruleBundleComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleBundleComponent() throws RecognitionException {
         EObject current = null;
 
@@ -3556,16 +3640,16 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1451:28: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1452:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1489:28: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1490:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1452:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1453:1: (lv_name_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1490:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1491:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1453:1: (lv_name_0_0= RULE_ID )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1454:3: lv_name_0_0= RULE_ID
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1491:1: (lv_name_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1492:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundleComponent3060); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBundleComponent3161); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getBundleComponentAccess().getNameIDTerminalRuleCall_0()); 
             		
@@ -3603,7 +3687,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBodyComponent"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1478:1: entryRuleBodyComponent returns [EObject current=null] : iv_ruleBodyComponent= ruleBodyComponent EOF ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1516:1: entryRuleBodyComponent returns [EObject current=null] : iv_ruleBodyComponent= ruleBodyComponent EOF ;
     public final EObject entryRuleBodyComponent() throws RecognitionException {
         EObject current = null;
 
@@ -3611,17 +3695,17 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1479:2: (iv_ruleBodyComponent= ruleBodyComponent EOF )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1480:2: iv_ruleBodyComponent= ruleBodyComponent EOF
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1517:2: (iv_ruleBodyComponent= ruleBodyComponent EOF )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1518:2: iv_ruleBodyComponent= ruleBodyComponent EOF
             {
              newCompositeNode(grammarAccess.getBodyComponentRule()); 
-            pushFollow(FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent3100);
+            pushFollow(FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent3201);
             iv_ruleBodyComponent=ruleBodyComponent();
 
             state._fsp--;
 
              current =iv_ruleBodyComponent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyComponent3110); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBodyComponent3211); 
 
             }
 
@@ -3639,7 +3723,7 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBodyComponent"
-    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1487:1: ruleBodyComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1525:1: ruleBodyComponent returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleBodyComponent() throws RecognitionException {
         EObject current = null;
 
@@ -3648,16 +3732,16 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1490:28: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1491:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1528:28: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1529:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1491:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1492:1: (lv_name_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1529:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1530:1: (lv_name_0_0= RULE_ID )
             {
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1492:1: (lv_name_0_0= RULE_ID )
-            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1493:3: lv_name_0_0= RULE_ID
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1530:1: (lv_name_0_0= RULE_ID )
+            // ../org.cfeditor.cfengine/src-gen/org/cfeditor/cfengine/parser/antlr/internal/InternalCfengine.g:1531:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyComponent3151); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleBodyComponent3252); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getBodyComponentAccess().getNameIDTerminalRuleCall_0()); 
             		
@@ -3704,16 +3788,16 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
     static final String DFA27_minS =
         "\1\4\2\uffff\1\4\6\uffff";
     static final String DFA27_maxS =
-        "\1\32\2\uffff\1\32\6\uffff";
+        "\1\35\2\uffff\1\35\6\uffff";
     static final String DFA27_acceptS =
-        "\1\uffff\1\10\1\1\1\uffff\1\3\1\4\1\5\1\6\1\2\1\7";
+        "\1\uffff\1\10\1\1\1\uffff\1\3\1\4\1\5\1\6\1\7\1\2";
     static final String DFA27_specialS =
         "\12\uffff}>";
     static final String[] DFA27_transitionS = {
-            "\1\3\1\4\1\2\7\uffff\1\1\1\uffff\1\5\10\uffff\1\6\1\7",
+            "\1\3\1\4\1\2\10\uffff\1\1\3\uffff\1\5\10\uffff\1\6\1\7",
             "",
             "",
-            "\3\10\6\uffff\1\11\1\10\1\uffff\1\10\10\uffff\2\10",
+            "\3\11\7\uffff\1\10\1\11\3\uffff\1\11\10\uffff\2\11",
             "",
             "",
             "",
@@ -3752,150 +3836,155 @@ public class InternalCfengineParser extends AbstractInternalAntlrParser {
             this.transition = DFA27_transition;
         }
         public String getDescription() {
-            return "()* loopback of 1324:1: (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )*";
+            return "()* loopback of 1362:1: (this_ANY_OTHER_2= RULE_ANY_OTHER | this_ID_3= RULE_ID | this_STRING_4= RULE_STRING | otherlv_5= ',' | (otherlv_6= '$(' this_ID_7= RULE_ID otherlv_8= ')' ) | (otherlv_9= '${' this_ID_10= RULE_ID otherlv_11= '}' ) | ( (lv_func_12_0= ruleSpecialFunction ) ) )*";
         }
     }
  
 
     public static final BitSet FOLLOW_ruleCfModel_in_entryRuleCfModel75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCfModel85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractElement_in_ruleCfModel130 = new BitSet(new long[]{0x0000000001008002L});
+    public static final BitSet FOLLOW_ruleAbstractElement_in_ruleCfModel130 = new BitSet(new long[]{0x0000000008040002L});
     public static final BitSet FOLLOW_ruleCLASS_ID_in_entryRuleCLASS_ID167 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCLASS_ID178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleCLASS_ID219 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_11_in_ruleCLASS_ID238 = new BitSet(new long[]{0x0000000000003010L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_ruleCLASS_ID288 = new BitSet(new long[]{0x0000000000003010L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID310 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleCLASS_ID336 = new BitSet(new long[]{0x0000000000003010L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID358 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleCLASS_ID376 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_11_in_ruleCLASS_ID390 = new BitSet(new long[]{0x0000000000003010L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractElement_in_entryRuleAbstractElement460 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAbstractElement470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundle_in_ruleAbstractElement517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBody_in_ruleAbstractElement544 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundle_in_entryRuleBundle579 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBundle589 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleBundle626 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleBundleComponent_in_ruleBundle647 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBundle664 = new BitSet(new long[]{0x0000000000022000L});
-    public static final BitSet FOLLOW_13_in_ruleBundle682 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBundle699 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_16_in_ruleBundle717 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBundle734 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_14_in_ruleBundle753 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleBundle767 = new BitSet(new long[]{0x0000000000040010L});
-    public static final BitSet FOLLOW_ruleBundlePromiseType_in_ruleBundle788 = new BitSet(new long[]{0x0000000000040010L});
-    public static final BitSet FOLLOW_18_in_ruleBundle801 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType837 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBundlePromiseType847 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBundlePromiseType889 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleBundlePromiseType906 = new BitSet(new long[]{0x0000000000003032L});
-    public static final BitSet FOLLOW_ruleBundlePromise_in_ruleBundlePromiseType927 = new BitSet(new long[]{0x0000000000003032L});
-    public static final BitSet FOLLOW_ruleBundleClass_in_ruleBundlePromiseType949 = new BitSet(new long[]{0x0000000000003012L});
-    public static final BitSet FOLLOW_ruleBundleClass_in_entryRuleBundleClass986 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBundleClass996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleBundleClass1042 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleBundleClass1054 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleBundlePromise_in_ruleBundleClass1075 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_ruleBundlePromise_in_entryRuleBundlePromise1112 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBundlePromise1122 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleBundlePromise1164 = new BitSet(new long[]{0x0000000000200010L});
-    public static final BitSet FOLLOW_rulePromiseValue_in_ruleBundlePromise1191 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_16_in_ruleBundlePromise1204 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rulePromiseValue_in_ruleBundlePromise1225 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_21_in_ruleBundlePromise1241 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePromiseValue_in_entryRulePromiseValue1277 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePromiseValue1287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePromiseValue1329 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_rulePromiseValue1346 = new BitSet(new long[]{0x0000000000020030L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulePromiseValue1365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleFunction_in_rulePromiseValue1397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePromiseValue1420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rulePromiseValue1445 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulePromiseValue1463 = new BitSet(new long[]{0x0000000000050000L});
-    public static final BitSet FOLLOW_ruleSimpleFunction_in_rulePromiseValue1495 = new BitSet(new long[]{0x0000000000050000L});
-    public static final BitSet FOLLOW_16_in_rulePromiseValue1509 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulePromiseValue1527 = new BitSet(new long[]{0x0000000000050000L});
-    public static final BitSet FOLLOW_ruleSimpleFunction_in_rulePromiseValue1559 = new BitSet(new long[]{0x0000000000050000L});
-    public static final BitSet FOLLOW_18_in_rulePromiseValue1574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rulePromiseValue1594 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_rulePromiseValue1606 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_rulePromiseValue1618 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePromiseValue1629 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_rulePromiseValue1640 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_rulePromiseValue1652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBody_in_entryRuleBody1690 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBody1700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleBody1737 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleBodyComponent_in_ruleBody1758 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBody1775 = new BitSet(new long[]{0x0000000000022000L});
-    public static final BitSet FOLLOW_13_in_ruleBody1793 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBody1810 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_16_in_ruleBody1828 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBody1845 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_14_in_ruleBody1864 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleBody1878 = new BitSet(new long[]{0x0000000000043010L});
-    public static final BitSet FOLLOW_ruleBodyFunction_in_ruleBody1899 = new BitSet(new long[]{0x0000000000043010L});
-    public static final BitSet FOLLOW_ruleBodyClass_in_ruleBody1921 = new BitSet(new long[]{0x0000000000043010L});
-    public static final BitSet FOLLOW_18_in_ruleBody1934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyClass_in_entryRuleBodyClass1970 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBodyClass1980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleBodyClass2026 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleBodyClass2038 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleBodyFunction_in_ruleBodyClass2059 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleBodyFunction_in_entryRuleBodyFunction2096 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBodyFunction2106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyPromiseType_in_ruleBodyFunction2152 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_22_in_ruleBodyFunction2164 = new BitSet(new long[]{0x0000000000020030L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction2182 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_17_in_ruleBodyFunction2212 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction2242 = new BitSet(new long[]{0x0000000000050000L});
-    public static final BitSet FOLLOW_16_in_ruleBodyFunction2260 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction2277 = new BitSet(new long[]{0x0000000000050000L});
-    public static final BitSet FOLLOW_18_in_ruleBodyFunction2296 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_ruleSpecialFunction_in_ruleBodyFunction2324 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_17_in_ruleBodyFunction2343 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleBodyFunction2355 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleBodyFunction2367 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyFunction2378 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleBodyFunction2389 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleBodyFunction2401 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleBodyFunction2415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleFunction_in_entryRuleSimpleFunction2451 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSimpleFunction2461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSimpleFunction2503 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleSimpleFunction2520 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSimpleFunction2537 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_16_in_ruleSimpleFunction2555 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSimpleFunction2572 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_14_in_ruleSimpleFunction2591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSpecialFunction_in_entryRuleSpecialFunction2627 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSpecialFunction2637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction2679 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleSpecialFunction2696 = new BitSet(new long[]{0x0000000006014070L});
-    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_ruleSpecialFunction2708 = new BitSet(new long[]{0x0000000006014070L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction2724 = new BitSet(new long[]{0x0000000006014070L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSpecialFunction2740 = new BitSet(new long[]{0x0000000006014070L});
-    public static final BitSet FOLLOW_16_in_ruleSpecialFunction2757 = new BitSet(new long[]{0x0000000006014070L});
-    public static final BitSet FOLLOW_25_in_ruleSpecialFunction2776 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction2787 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleSpecialFunction2798 = new BitSet(new long[]{0x0000000006014070L});
-    public static final BitSet FOLLOW_26_in_ruleSpecialFunction2818 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction2829 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleSpecialFunction2840 = new BitSet(new long[]{0x0000000006014070L});
-    public static final BitSet FOLLOW_ruleSpecialFunction_in_ruleSpecialFunction2868 = new BitSet(new long[]{0x0000000006014070L});
-    public static final BitSet FOLLOW_14_in_ruleSpecialFunction2882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType2918 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBodyPromiseType2928 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyPromiseType2969 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent3009 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBundleComponent3019 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBundleComponent3060 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent3100 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBodyComponent3110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyComponent3151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleCLASS_ID219 = new BitSet(new long[]{0x0000000000037812L});
+    public static final BitSet FOLLOW_11_in_ruleCLASS_ID239 = new BitSet(new long[]{0x0000000000037810L});
+    public static final BitSet FOLLOW_12_in_ruleCLASS_ID258 = new BitSet(new long[]{0x0000000000037810L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleCLASS_ID310 = new BitSet(new long[]{0x0000000000037810L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_ruleCLASS_ID358 = new BitSet(new long[]{0x0000000000037810L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID380 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleCLASS_ID398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_ruleCLASS_ID419 = new BitSet(new long[]{0x0000000000037810L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID441 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleCLASS_ID459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleCLASS_ID480 = new BitSet(new long[]{0x0000000000037810L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleCLASS_ID502 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleCLASS_ID520 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractElement_in_entryRuleAbstractElement561 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAbstractElement571 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundle_in_ruleAbstractElement618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBody_in_ruleAbstractElement645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundle_in_entryRuleBundle680 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBundle690 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleBundle727 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleBundleComponent_in_ruleBundle748 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBundle765 = new BitSet(new long[]{0x0000000000104000L});
+    public static final BitSet FOLLOW_14_in_ruleBundle783 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBundle800 = new BitSet(new long[]{0x0000000000088000L});
+    public static final BitSet FOLLOW_19_in_ruleBundle818 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBundle835 = new BitSet(new long[]{0x0000000000088000L});
+    public static final BitSet FOLLOW_15_in_ruleBundle854 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleBundle868 = new BitSet(new long[]{0x0000000000200010L});
+    public static final BitSet FOLLOW_ruleBundlePromiseType_in_ruleBundle889 = new BitSet(new long[]{0x0000000000200010L});
+    public static final BitSet FOLLOW_21_in_ruleBundle902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundlePromiseType_in_entryRuleBundlePromiseType938 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBundlePromiseType948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBundlePromiseType990 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_ruleBundlePromiseType1007 = new BitSet(new long[]{0x0000000000037832L});
+    public static final BitSet FOLLOW_ruleBundlePromise_in_ruleBundlePromiseType1028 = new BitSet(new long[]{0x0000000000037832L});
+    public static final BitSet FOLLOW_ruleBundleClass_in_ruleBundlePromiseType1050 = new BitSet(new long[]{0x0000000000037812L});
+    public static final BitSet FOLLOW_ruleBundleClass_in_entryRuleBundleClass1087 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBundleClass1097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleBundleClass1143 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleBundleClass1155 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_ruleBundlePromise_in_ruleBundleClass1176 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_ruleBundlePromise_in_entryRuleBundlePromise1213 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBundlePromise1223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleBundlePromise1265 = new BitSet(new long[]{0x0000000001000010L});
+    public static final BitSet FOLLOW_rulePromiseValue_in_ruleBundlePromise1292 = new BitSet(new long[]{0x0000000001080010L});
+    public static final BitSet FOLLOW_19_in_ruleBundlePromise1305 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulePromiseValue_in_ruleBundlePromise1326 = new BitSet(new long[]{0x0000000001080010L});
+    public static final BitSet FOLLOW_24_in_ruleBundlePromise1342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePromiseValue_in_entryRulePromiseValue1378 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePromiseValue1388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePromiseValue1430 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_rulePromiseValue1447 = new BitSet(new long[]{0x0000000000100030L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rulePromiseValue1466 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleFunction_in_rulePromiseValue1498 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePromiseValue1521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rulePromiseValue1546 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rulePromiseValue1564 = new BitSet(new long[]{0x0000000000280000L});
+    public static final BitSet FOLLOW_ruleSimpleFunction_in_rulePromiseValue1596 = new BitSet(new long[]{0x0000000000280000L});
+    public static final BitSet FOLLOW_19_in_rulePromiseValue1610 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rulePromiseValue1628 = new BitSet(new long[]{0x0000000000280000L});
+    public static final BitSet FOLLOW_ruleSimpleFunction_in_rulePromiseValue1660 = new BitSet(new long[]{0x0000000000280000L});
+    public static final BitSet FOLLOW_21_in_rulePromiseValue1675 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rulePromiseValue1695 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_rulePromiseValue1707 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_rulePromiseValue1719 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePromiseValue1730 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_rulePromiseValue1741 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_rulePromiseValue1753 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBody_in_entryRuleBody1791 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBody1801 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleBody1838 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleBodyComponent_in_ruleBody1859 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBody1876 = new BitSet(new long[]{0x0000000000104000L});
+    public static final BitSet FOLLOW_14_in_ruleBody1894 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBody1911 = new BitSet(new long[]{0x0000000000088000L});
+    public static final BitSet FOLLOW_19_in_ruleBody1929 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBody1946 = new BitSet(new long[]{0x0000000000088000L});
+    public static final BitSet FOLLOW_15_in_ruleBody1965 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleBody1979 = new BitSet(new long[]{0x0000000000237810L});
+    public static final BitSet FOLLOW_ruleBodyFunction_in_ruleBody2000 = new BitSet(new long[]{0x0000000000237810L});
+    public static final BitSet FOLLOW_ruleBodyClass_in_ruleBody2022 = new BitSet(new long[]{0x0000000000237810L});
+    public static final BitSet FOLLOW_21_in_ruleBody2035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyClass_in_entryRuleBodyClass2071 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBodyClass2081 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_ruleBodyClass2127 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_ruleBodyClass2139 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_ruleBodyFunction_in_ruleBodyClass2160 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_ruleBodyFunction_in_entryRuleBodyFunction2197 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBodyFunction2207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyPromiseType_in_ruleBodyFunction2253 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleBodyFunction2265 = new BitSet(new long[]{0x0000000000100030L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction2283 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_20_in_ruleBodyFunction2313 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction2343 = new BitSet(new long[]{0x0000000000280000L});
+    public static final BitSet FOLLOW_19_in_ruleBodyFunction2361 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleBodyFunction2378 = new BitSet(new long[]{0x0000000000280000L});
+    public static final BitSet FOLLOW_21_in_ruleBodyFunction2397 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_ruleSpecialFunction_in_ruleBodyFunction2425 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_20_in_ruleBodyFunction2444 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_ruleBodyFunction2456 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleBodyFunction2468 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyFunction2479 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleBodyFunction2490 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleBodyFunction2502 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_ruleBodyFunction2516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleFunction_in_entryRuleSimpleFunction2552 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSimpleFunction2562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSimpleFunction2604 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleSimpleFunction2621 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSimpleFunction2638 = new BitSet(new long[]{0x0000000000088000L});
+    public static final BitSet FOLLOW_19_in_ruleSimpleFunction2656 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSimpleFunction2673 = new BitSet(new long[]{0x0000000000088000L});
+    public static final BitSet FOLLOW_15_in_ruleSimpleFunction2692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSpecialFunction_in_entryRuleSpecialFunction2728 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSpecialFunction2738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction2780 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleSpecialFunction2797 = new BitSet(new long[]{0x0000000030088070L});
+    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_ruleSpecialFunction2809 = new BitSet(new long[]{0x0000000030088070L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction2825 = new BitSet(new long[]{0x0000000030088070L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSpecialFunction2841 = new BitSet(new long[]{0x0000000030088070L});
+    public static final BitSet FOLLOW_19_in_ruleSpecialFunction2858 = new BitSet(new long[]{0x0000000030088070L});
+    public static final BitSet FOLLOW_28_in_ruleSpecialFunction2877 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction2888 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleSpecialFunction2899 = new BitSet(new long[]{0x0000000030088070L});
+    public static final BitSet FOLLOW_29_in_ruleSpecialFunction2919 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSpecialFunction2930 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleSpecialFunction2941 = new BitSet(new long[]{0x0000000030088070L});
+    public static final BitSet FOLLOW_ruleSpecialFunction_in_ruleSpecialFunction2969 = new BitSet(new long[]{0x0000000030088070L});
+    public static final BitSet FOLLOW_15_in_ruleSpecialFunction2983 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyPromiseType_in_entryRuleBodyPromiseType3019 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBodyPromiseType3029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyPromiseType3070 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundleComponent_in_entryRuleBundleComponent3110 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBundleComponent3120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBundleComponent3161 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyComponent_in_entryRuleBodyComponent3201 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBodyComponent3211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleBodyComponent3252 = new BitSet(new long[]{0x0000000000000002L});
 
 }

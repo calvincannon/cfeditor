@@ -5,9 +5,7 @@ import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.xtext.nodemodel.impl.CompositeNode;
-// org.eclipse.xtext.parsetree.CompositeNode;
 import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
 import org.eclipse.xtext.validation.Check;
 
@@ -46,12 +44,12 @@ public class CfengineJavaValidator extends AbstractCfengineJavaValidator {
 			String pName = pType.getName();
 			String compName = bundle.getComponent().getName();
 
-			/*
+			
 			if (!promiseMap.get(compName).contains(pName)) {
 				error("Promise type \"" + pName + "\" not allowed with component \"" + compName + "\"",
-						CfenginePackage.BUNDLE_PROMISE_TYPE__NAME);
+						CfenginePackage.Literals.BUNDLE__PROMISE_TYPE);
 			}
-			*/
+			
 		}
 	}
 
@@ -77,12 +75,12 @@ public class CfengineJavaValidator extends AbstractCfengineJavaValidator {
 
 			String pName = pType.getName();
 			String compName = body.getComponent().getName();
-			/*
+			
 			if (!promiseMap.get(compName).contains(pName)) {
 				error("Promise type \"" + pName + "\" not allowed with component \"" + compName + "\"",
-						CfenginePackage.BODY_PROMISE_TYPE__NAME);
+						CfenginePackage.Literals.BODY_PROMISE_TYPE__NAME);
 			}
-			*/
+			
 		}
 	}
 
@@ -114,11 +112,11 @@ public class CfengineJavaValidator extends AbstractCfengineJavaValidator {
 		}
 
 		String errorString = functionValidator.checkBodyFunction(name, values, isList, variables);
-		/*
+		
 		if (null != errorString) {
-			warning(errorString, CfenginePackage.BODY_FUNCTION__NAME);
+			warning(errorString, CfenginePackage.Literals.BODY_FUNCTION__NAME);
 		}
-		*/
+		
 	}
 
 	// @Check

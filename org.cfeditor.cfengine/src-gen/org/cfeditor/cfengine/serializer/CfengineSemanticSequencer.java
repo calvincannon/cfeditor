@@ -189,7 +189,7 @@ public class CfengineSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (name=CLASS_ID promises+=BundlePromise+)
+	 *     (name=CLASS_ID promises+=BundlePromise*)
 	 */
 	protected void sequence_BundleClass(EObject context, BundleClass semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -223,7 +223,7 @@ public class CfengineSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     (name=STRING (values+=PromiseValue values+=PromiseValue*)?)
+	 *     (name=STRING (values+=PromiseValue values+=PromiseValue*)*)
 	 */
 	protected void sequence_BundlePromise(EObject context, BundlePromise semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

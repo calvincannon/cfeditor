@@ -13,6 +13,9 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalCfengineLexer extends Lexer {
     public static final int RULE_ID=5;
+    public static final int T__29=29;
+    public static final int T__28=28;
+    public static final int T__27=27;
     public static final int T__26=26;
     public static final int T__25=25;
     public static final int T__24=24;
@@ -55,10 +58,10 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:11:7: ( ',' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:11:9: ','
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:11:7: ( '.' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:11:9: '.'
             {
-            match(','); 
+            match('.'); 
 
             }
 
@@ -75,10 +78,10 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:12:7: ( '.' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:12:9: '.'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:12:7: ( '|' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:12:9: '|'
             {
-            match('.'); 
+            match('|'); 
 
             }
 
@@ -95,10 +98,10 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:13:7: ( '!' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:13:9: '!'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:13:7: ( ',' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:13:9: ','
             {
-            match('!'); 
+            match(','); 
 
             }
 
@@ -115,10 +118,10 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:14:7: ( '(' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:14:9: '('
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:14:7: ( '!' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:14:9: '!'
             {
-            match('('); 
+            match('!'); 
 
             }
 
@@ -135,10 +138,10 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:15:7: ( ')' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:15:9: ')'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:15:7: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:15:9: '('
             {
-            match(')'); 
+            match('('); 
 
             }
 
@@ -155,11 +158,10 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:16:7: ( 'bundle' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:16:9: 'bundle'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:16:7: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:16:9: ')'
             {
-            match("bundle"); 
-
+            match(')'); 
 
             }
 
@@ -176,10 +178,11 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:17:7: ( '{' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:17:9: '{'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:17:7: ( '!(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:17:9: '!('
             {
-            match('{'); 
+            match("!("); 
+
 
             }
 
@@ -196,10 +199,11 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:18:7: ( '}' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:18:9: '}'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:18:7: ( '! (' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:18:9: '! ('
             {
-            match('}'); 
+            match("! ("); 
+
 
             }
 
@@ -216,10 +220,11 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:19:7: ( ':' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:19:9: ':'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:19:7: ( 'bundle' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:19:9: 'bundle'
             {
-            match(':'); 
+            match("bundle"); 
+
 
             }
 
@@ -236,11 +241,10 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:20:7: ( '::' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:20:9: '::'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:20:7: ( '{' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:20:9: '{'
             {
-            match("::"); 
-
+            match('{'); 
 
             }
 
@@ -257,10 +261,10 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:21:7: ( ';' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:21:9: ';'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:21:7: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:21:9: '}'
             {
-            match(';'); 
+            match('}'); 
 
             }
 
@@ -277,11 +281,10 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:22:7: ( '=>' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:22:9: '=>'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:22:7: ( ':' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:22:9: ':'
             {
-            match("=>"); 
-
+            match(':'); 
 
             }
 
@@ -298,10 +301,11 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:23:7: ( '@' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:23:9: '@'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:23:7: ( '::' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:23:9: '::'
             {
-            match('@'); 
+            match("::"); 
+
 
             }
 
@@ -318,11 +322,10 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:24:7: ( 'body' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:24:9: 'body'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:24:7: ( ';' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:24:9: ';'
             {
-            match("body"); 
-
+            match(';'); 
 
             }
 
@@ -339,10 +342,10 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:25:7: ( '$(' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:25:9: '$('
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:25:7: ( '=>' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:25:9: '=>'
             {
-            match("$("); 
+            match("=>"); 
 
 
             }
@@ -360,8 +363,70 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:26:7: ( '${' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:26:9: '${'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:26:7: ( '@' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:26:9: '@'
+            {
+            match('@'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__26"
+
+    // $ANTLR start "T__27"
+    public final void mT__27() throws RecognitionException {
+        try {
+            int _type = T__27;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:27:7: ( 'body' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:27:9: 'body'
+            {
+            match("body"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__27"
+
+    // $ANTLR start "T__28"
+    public final void mT__28() throws RecognitionException {
+        try {
+            int _type = T__28;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:28:7: ( '$(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:28:9: '$('
+            {
+            match("$("); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__28"
+
+    // $ANTLR start "T__29"
+    public final void mT__29() throws RecognitionException {
+        try {
+            int _type = T__29;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:29:7: ( '${' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:29:9: '${'
             {
             match("${"); 
 
@@ -374,37 +439,141 @@ public class InternalCfengineLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__26"
+    // $ANTLR end "T__29"
 
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4717:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4717:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4844:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '\\\\s' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4844:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '\\\\s' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
-                input.consume();
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4844:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '\\\\s' )
+            int alt1=4;
+            switch ( input.LA(1) ) {
+            case 'a':
+            case 'b':
+            case 'c':
+            case 'd':
+            case 'e':
+            case 'f':
+            case 'g':
+            case 'h':
+            case 'i':
+            case 'j':
+            case 'k':
+            case 'l':
+            case 'm':
+            case 'n':
+            case 'o':
+            case 'p':
+            case 'q':
+            case 'r':
+            case 's':
+            case 't':
+            case 'u':
+            case 'v':
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+                {
+                alt1=1;
+                }
+                break;
+            case 'A':
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'I':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'O':
+            case 'P':
+            case 'Q':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'U':
+            case 'V':
+            case 'W':
+            case 'X':
+            case 'Y':
+            case 'Z':
+                {
+                alt1=2;
+                }
+                break;
+            case '_':
+                {
+                alt1=3;
+                }
+                break;
+            case '\\':
+                {
+                alt1=4;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 1, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt1) {
+                case 1 :
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4844:12: 'a' .. 'z'
+                    {
+                    matchRange('a','z'); 
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4844:21: 'A' .. 'Z'
+                    {
+                    matchRange('A','Z'); 
+
+                    }
+                    break;
+                case 3 :
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4844:30: '_'
+                    {
+                    match('_'); 
+
+                    }
+                    break;
+                case 4 :
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4844:34: '\\\\s'
+                    {
+                    match("\\s"); 
+
+
+                    }
+                    break;
 
             }
-            else {
-                MismatchedSetException mse = new MismatchedSetException(null,input);
-                recover(mse);
-                throw mse;}
 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4717:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
-            loop1:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4844:41: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            loop2:
             do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
+                int alt2=2;
+                int LA2_0 = input.LA(1);
 
-                if ( ((LA1_0>='0' && LA1_0<='9')||(LA1_0>='A' && LA1_0<='Z')||LA1_0=='_'||(LA1_0>='a' && LA1_0<='z')) ) {
-                    alt1=1;
+                if ( ((LA2_0>='0' && LA2_0<='9')||(LA2_0>='A' && LA2_0<='Z')||LA2_0=='_'||(LA2_0>='a' && LA2_0<='z')) ) {
+                    alt2=1;
                 }
 
 
-                switch (alt1) {
+                switch (alt2) {
             	case 1 :
             	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:
             	    {
@@ -422,7 +591,7 @@ public class InternalCfengineLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop1;
+            	    break loop2;
                 }
             } while (true);
 
@@ -442,47 +611,47 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4719:13: ( ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4719:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4846:13: ( ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4846:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4719:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4846:15: ( '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"' | '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\'' )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA4_0=='\"') ) {
-                alt4=1;
+            if ( (LA5_0=='\"') ) {
+                alt5=1;
             }
-            else if ( (LA4_0=='\'') ) {
-                alt4=2;
+            else if ( (LA5_0=='\'') ) {
+                alt5=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt4) {
+            switch (alt5) {
                 case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4719:16: '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"'
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4846:16: '\"' (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )* '\"'
                     {
                     match('\"'); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4719:20: (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )*
-                    loop2:
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4846:20: (~ ( ( '\\\\' | '\"' ) ) | '\\\\' . )*
+                    loop3:
                     do {
-                        int alt2=3;
-                        int LA2_0 = input.LA(1);
+                        int alt3=3;
+                        int LA3_0 = input.LA(1);
 
-                        if ( ((LA2_0>='\u0000' && LA2_0<='!')||(LA2_0>='#' && LA2_0<='[')||(LA2_0>=']' && LA2_0<='\uFFFF')) ) {
-                            alt2=1;
+                        if ( ((LA3_0>='\u0000' && LA3_0<='!')||(LA3_0>='#' && LA3_0<='[')||(LA3_0>=']' && LA3_0<='\uFFFF')) ) {
+                            alt3=1;
                         }
-                        else if ( (LA2_0=='\\') ) {
-                            alt2=2;
+                        else if ( (LA3_0=='\\') ) {
+                            alt3=2;
                         }
 
 
-                        switch (alt2) {
+                        switch (alt3) {
                     	case 1 :
-                    	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4719:21: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4846:21: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -497,7 +666,7 @@ public class InternalCfengineLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4719:35: '\\\\' .
+                    	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4846:35: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -506,7 +675,7 @@ public class InternalCfengineLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop2;
+                    	    break loop3;
                         }
                     } while (true);
 
@@ -515,26 +684,26 @@ public class InternalCfengineLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4719:48: '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\''
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4846:48: '\\'' (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )* '\\''
                     {
                     match('\''); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4719:53: (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )*
-                    loop3:
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4846:53: (~ ( ( '\\\\' | '\\'' ) ) | '\\\\' . )*
+                    loop4:
                     do {
-                        int alt3=3;
-                        int LA3_0 = input.LA(1);
+                        int alt4=3;
+                        int LA4_0 = input.LA(1);
 
-                        if ( ((LA3_0>='\u0000' && LA3_0<='&')||(LA3_0>='(' && LA3_0<='[')||(LA3_0>=']' && LA3_0<='\uFFFF')) ) {
-                            alt3=1;
+                        if ( ((LA4_0>='\u0000' && LA4_0<='&')||(LA4_0>='(' && LA4_0<='[')||(LA4_0>=']' && LA4_0<='\uFFFF')) ) {
+                            alt4=1;
                         }
-                        else if ( (LA3_0=='\\') ) {
-                            alt3=2;
+                        else if ( (LA4_0=='\\') ) {
+                            alt4=2;
                         }
 
 
-                        switch (alt3) {
+                        switch (alt4) {
                     	case 1 :
-                    	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4719:54: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4846:54: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -549,7 +718,7 @@ public class InternalCfengineLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4719:69: '\\\\' .
+                    	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4846:69: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -558,7 +727,7 @@ public class InternalCfengineLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop3;
+                    	    break loop4;
                         }
                     } while (true);
 
@@ -585,24 +754,24 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4721:17: ( '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4721:19: '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4848:17: ( '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4848:19: '#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match('#'); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4721:23: (~ ( ( '\\n' | '\\r' ) ) )*
-            loop5:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4848:23: (~ ( ( '\\n' | '\\r' ) ) )*
+            loop6:
             do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
+                int alt6=2;
+                int LA6_0 = input.LA(1);
 
-                if ( ((LA5_0>='\u0000' && LA5_0<='\t')||(LA5_0>='\u000B' && LA5_0<='\f')||(LA5_0>='\u000E' && LA5_0<='\uFFFF')) ) {
-                    alt5=1;
+                if ( ((LA6_0>='\u0000' && LA6_0<='\t')||(LA6_0>='\u000B' && LA6_0<='\f')||(LA6_0>='\u000E' && LA6_0<='\uFFFF')) ) {
+                    alt6=1;
                 }
 
 
-                switch (alt5) {
+                switch (alt6) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4721:23: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4848:23: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -618,31 +787,31 @@ public class InternalCfengineLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop5;
+            	    break loop6;
                 }
             } while (true);
 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4721:39: ( ( '\\r' )? '\\n' )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4848:39: ( ( '\\r' )? '\\n' )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA7_0=='\n'||LA7_0=='\r') ) {
-                alt7=1;
+            if ( (LA8_0=='\n'||LA8_0=='\r') ) {
+                alt8=1;
             }
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4721:40: ( '\\r' )? '\\n'
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4848:40: ( '\\r' )? '\\n'
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4721:40: ( '\\r' )?
-                    int alt6=2;
-                    int LA6_0 = input.LA(1);
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4848:40: ( '\\r' )?
+                    int alt7=2;
+                    int LA7_0 = input.LA(1);
 
-                    if ( (LA6_0=='\r') ) {
-                        alt6=1;
+                    if ( (LA7_0=='\r') ) {
+                        alt7=1;
                     }
-                    switch (alt6) {
+                    switch (alt7) {
                         case 1 :
-                            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4721:40: '\\r'
+                            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4848:40: '\\r'
                             {
                             match('\r'); 
 
@@ -674,22 +843,22 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4723:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4723:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4850:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4850:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4723:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
-            int cnt8=0;
-            loop8:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4850:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            int cnt9=0;
+            loop9:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( ((LA8_0>='\t' && LA8_0<='\n')||LA8_0=='\r'||LA8_0==' ') ) {
-                    alt8=1;
+                if ( ((LA9_0>='\t' && LA9_0<='\n')||LA9_0=='\r'||LA9_0==' ') ) {
+                    alt9=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt9) {
             	case 1 :
             	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:
             	    {
@@ -702,75 +871,6 @@ public class InternalCfengineLexer extends Lexer {
             	        recover(mse);
             	        throw mse;}
 
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt8 >= 1 ) break loop8;
-                        EarlyExitException eee =
-                            new EarlyExitException(8, input);
-                        throw eee;
-                }
-                cnt8++;
-            } while (true);
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_WS"
-
-    // $ANTLR start "RULE_ANY_OTHER"
-    public final void mRULE_ANY_OTHER() throws RecognitionException {
-        try {
-            int _type = RULE_ANY_OTHER;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4725:16: ( . )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4725:18: .
-            {
-            matchAny(); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_ANY_OTHER"
-
-    // $ANTLR start "RULE_INT"
-    public final void mRULE_INT() throws RecognitionException {
-        try {
-            int _type = RULE_INT;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4727:10: ( ( '0' .. '9' )+ )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4727:12: ( '0' .. '9' )+
-            {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4727:12: ( '0' .. '9' )+
-            int cnt9=0;
-            loop9:
-            do {
-                int alt9=2;
-                int LA9_0 = input.LA(1);
-
-                if ( ((LA9_0>='0' && LA9_0<='9')) ) {
-                    alt9=1;
-                }
-
-
-                switch (alt9) {
-            	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4727:13: '0' .. '9'
-            	    {
-            	    matchRange('0','9'); 
 
             	    }
             	    break;
@@ -793,6 +893,75 @@ public class InternalCfengineLexer extends Lexer {
         finally {
         }
     }
+    // $ANTLR end "RULE_WS"
+
+    // $ANTLR start "RULE_ANY_OTHER"
+    public final void mRULE_ANY_OTHER() throws RecognitionException {
+        try {
+            int _type = RULE_ANY_OTHER;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4852:16: ( . )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4852:18: .
+            {
+            matchAny(); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_ANY_OTHER"
+
+    // $ANTLR start "RULE_INT"
+    public final void mRULE_INT() throws RecognitionException {
+        try {
+            int _type = RULE_INT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4854:10: ( ( '0' .. '9' )+ )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4854:12: ( '0' .. '9' )+
+            {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4854:12: ( '0' .. '9' )+
+            int cnt10=0;
+            loop10:
+            do {
+                int alt10=2;
+                int LA10_0 = input.LA(1);
+
+                if ( ((LA10_0>='0' && LA10_0<='9')) ) {
+                    alt10=1;
+                }
+
+
+                switch (alt10) {
+            	case 1 :
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4854:13: '0' .. '9'
+            	    {
+            	    matchRange('0','9'); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt10 >= 1 ) break loop10;
+                        EarlyExitException eee =
+                            new EarlyExitException(10, input);
+                        throw eee;
+                }
+                cnt10++;
+            } while (true);
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
     // $ANTLR end "RULE_INT"
 
     // $ANTLR start "RULE_ML_COMMENT"
@@ -800,37 +969,37 @@ public class InternalCfengineLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4729:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4729:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4856:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4856:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4729:24: ( options {greedy=false; } : . )*
-            loop10:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4856:24: ( options {greedy=false; } : . )*
+            loop11:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( (LA10_0=='*') ) {
-                    int LA10_1 = input.LA(2);
+                if ( (LA11_0=='*') ) {
+                    int LA11_1 = input.LA(2);
 
-                    if ( (LA10_1=='/') ) {
-                        alt10=2;
+                    if ( (LA11_1=='/') ) {
+                        alt11=2;
                     }
-                    else if ( ((LA10_1>='\u0000' && LA10_1<='.')||(LA10_1>='0' && LA10_1<='\uFFFF')) ) {
-                        alt10=1;
+                    else if ( ((LA11_1>='\u0000' && LA11_1<='.')||(LA11_1>='0' && LA11_1<='\uFFFF')) ) {
+                        alt11=1;
                     }
 
 
                 }
-                else if ( ((LA10_0>='\u0000' && LA10_0<=')')||(LA10_0>='+' && LA10_0<='\uFFFF')) ) {
-                    alt10=1;
+                else if ( ((LA11_0>='\u0000' && LA11_0<=')')||(LA11_0>='+' && LA11_0<='\uFFFF')) ) {
+                    alt11=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt11) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4729:52: .
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4856:52: .
             	    {
             	    matchAny(); 
 
@@ -838,7 +1007,7 @@ public class InternalCfengineLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop11;
                 }
             } while (true);
 
@@ -856,10 +1025,10 @@ public class InternalCfengineLexer extends Lexer {
     // $ANTLR end "RULE_ML_COMMENT"
 
     public void mTokens() throws RecognitionException {
-        // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | RULE_ID | RULE_STRING | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER | RULE_INT | RULE_ML_COMMENT )
-        int alt11=23;
-        alt11 = dfa11.predict(input);
-        switch (alt11) {
+        // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_ID | RULE_STRING | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER | RULE_INT | RULE_ML_COMMENT )
+        int alt12=26;
+        alt12 = dfa12.predict(input);
+        switch (alt12) {
             case 1 :
                 // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:10: T__11
                 {
@@ -973,49 +1142,70 @@ public class InternalCfengineLexer extends Lexer {
                 }
                 break;
             case 17 :
-                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:106: RULE_ID
+                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:106: T__27
+                {
+                mT__27(); 
+
+                }
+                break;
+            case 18 :
+                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:112: T__28
+                {
+                mT__28(); 
+
+                }
+                break;
+            case 19 :
+                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:118: T__29
+                {
+                mT__29(); 
+
+                }
+                break;
+            case 20 :
+                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:124: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 18 :
-                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:114: RULE_STRING
+            case 21 :
+                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:132: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 19 :
-                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:126: RULE_SL_COMMENT
+            case 22 :
+                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:144: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 20 :
-                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:142: RULE_WS
+            case 23 :
+                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:160: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 21 :
-                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:150: RULE_ANY_OTHER
+            case 24 :
+                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:168: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
                 }
                 break;
-            case 22 :
-                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:165: RULE_INT
+            case 25 :
+                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:183: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 23 :
-                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:174: RULE_ML_COMMENT
+            case 26 :
+                // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1:192: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
@@ -1027,193 +1217,210 @@ public class InternalCfengineLexer extends Lexer {
     }
 
 
-    protected DFA11 dfa11 = new DFA11(this);
-    static final String DFA11_eotS =
-        "\6\uffff\1\35\2\uffff\1\41\1\uffff\1\25\1\uffff\1\25\1\uffff\2\25"+
-        "\2\uffff\2\25\6\uffff\2\35\17\uffff\3\35\1\61\1\35\1\uffff\1\63"+
+    protected DFA12 dfa12 = new DFA12(this);
+    static final String DFA12_eotS =
+        "\4\uffff\1\37\2\uffff\1\44\2\uffff\1\50\1\uffff\1\31\1\uffff\1\31"+
+        "\3\uffff\3\31\2\uffff\2\31\11\uffff\2\44\17\uffff\3\44\1\70\1\44"+
+        "\1\uffff\1\72\1\uffff";
+    static final String DFA12_eofS =
+        "\73\uffff";
+    static final String DFA12_minS =
+        "\1\0\3\uffff\1\40\2\uffff\1\157\2\uffff\1\72\1\uffff\1\76\1\uffff"+
+        "\1\50\3\uffff\1\163\2\0\2\uffff\1\60\1\52\11\uffff\1\156\1\144\17"+
+        "\uffff\1\144\1\171\1\154\1\60\1\145\1\uffff\1\60\1\uffff";
+    static final String DFA12_maxS =
+        "\1\uffff\3\uffff\1\50\2\uffff\1\165\2\uffff\1\72\1\uffff\1\76\1"+
+        "\uffff\1\173\3\uffff\1\163\2\uffff\2\uffff\1\71\1\52\11\uffff\1"+
+        "\156\1\144\17\uffff\1\144\1\171\1\154\1\172\1\145\1\uffff\1\172"+
         "\1\uffff";
-    static final String DFA11_eofS =
-        "\64\uffff";
-    static final String DFA11_minS =
-        "\1\0\5\uffff\1\157\2\uffff\1\72\1\uffff\1\76\1\uffff\1\50\1\uffff"+
-        "\2\0\2\uffff\1\60\1\52\6\uffff\1\156\1\144\17\uffff\1\144\1\171"+
-        "\1\154\1\60\1\145\1\uffff\1\60\1\uffff";
-    static final String DFA11_maxS =
-        "\1\uffff\5\uffff\1\165\2\uffff\1\72\1\uffff\1\76\1\uffff\1\173\1"+
-        "\uffff\2\uffff\2\uffff\1\71\1\52\6\uffff\1\156\1\144\17\uffff\1"+
-        "\144\1\171\1\154\1\172\1\145\1\uffff\1\172\1\uffff";
-    static final String DFA11_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\uffff\1\7\1\10\1\uffff\1\13\1\uffff"+
-        "\1\15\1\uffff\1\21\2\uffff\1\23\1\24\2\uffff\1\25\1\1\1\2\1\3\1"+
-        "\4\1\5\2\uffff\1\21\1\7\1\10\1\12\1\11\1\13\1\14\1\15\1\17\1\20"+
-        "\1\22\1\23\1\24\1\26\1\27\5\uffff\1\16\1\uffff\1\6";
-    static final String DFA11_specialS =
-        "\1\2\16\uffff\1\0\1\1\43\uffff}>";
-    static final String[] DFA11_transitionS = {
-            "\11\25\2\22\2\25\1\22\22\25\1\22\1\3\1\17\1\21\1\15\2\25\1\20"+
-            "\1\4\1\5\2\25\1\1\1\25\1\2\1\24\12\23\1\11\1\12\1\25\1\13\2"+
-            "\25\1\14\32\16\4\25\1\16\1\25\1\16\1\6\30\16\1\7\1\25\1\10\uff82"+
-            "\25",
+    static final String DFA12_acceptS =
+        "\1\uffff\1\1\1\2\1\3\1\uffff\1\5\1\6\1\uffff\1\12\1\13\1\uffff\1"+
+        "\16\1\uffff\1\20\1\uffff\3\24\3\uffff\1\26\1\27\2\uffff\1\30\1\1"+
+        "\1\2\1\3\1\7\1\10\1\4\1\5\1\6\2\uffff\1\24\1\12\1\13\1\15\1\14\1"+
+        "\16\1\17\1\20\1\22\1\23\1\25\1\26\1\27\1\31\1\32\5\uffff\1\21\1"+
+        "\uffff\1\11";
+    static final String DFA12_specialS =
+        "\1\2\22\uffff\1\1\1\0\46\uffff}>";
+    static final String[] DFA12_transitionS = {
+            "\11\31\2\26\2\31\1\26\22\31\1\26\1\4\1\23\1\25\1\16\2\31\1\24"+
+            "\1\5\1\6\2\31\1\3\1\31\1\1\1\30\12\27\1\12\1\13\1\31\1\14\2"+
+            "\31\1\15\32\20\1\31\1\22\2\31\1\21\1\31\1\17\1\7\30\17\1\10"+
+            "\1\2\1\11\uff82\31",
             "",
             "",
             "",
+            "\1\36\7\uffff\1\35",
             "",
             "",
-            "\1\34\5\uffff\1\33",
+            "\1\43\5\uffff\1\42",
             "",
             "",
-            "\1\40",
+            "\1\47",
             "",
-            "\1\43",
+            "\1\52",
             "",
-            "\1\45\122\uffff\1\46",
-            "",
-            "\0\47",
-            "\0\47",
-            "",
-            "",
-            "\12\52",
-            "\1\53",
+            "\1\54\122\uffff\1\55",
             "",
             "",
             "",
+            "\1\44",
+            "\0\56",
+            "\0\56",
             "",
             "",
-            "",
-            "\1\54",
-            "\1\55",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\56",
-            "\1\57",
-            "\1\60",
-            "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
+            "\12\61",
             "\1\62",
             "",
-            "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\63",
+            "\1\64",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\65",
+            "\1\66",
+            "\1\67",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
+            "\1\71",
+            "",
+            "\12\44\7\uffff\32\44\4\uffff\1\44\1\uffff\32\44",
             ""
     };
 
-    static final short[] DFA11_eot = DFA.unpackEncodedString(DFA11_eotS);
-    static final short[] DFA11_eof = DFA.unpackEncodedString(DFA11_eofS);
-    static final char[] DFA11_min = DFA.unpackEncodedStringToUnsignedChars(DFA11_minS);
-    static final char[] DFA11_max = DFA.unpackEncodedStringToUnsignedChars(DFA11_maxS);
-    static final short[] DFA11_accept = DFA.unpackEncodedString(DFA11_acceptS);
-    static final short[] DFA11_special = DFA.unpackEncodedString(DFA11_specialS);
-    static final short[][] DFA11_transition;
+    static final short[] DFA12_eot = DFA.unpackEncodedString(DFA12_eotS);
+    static final short[] DFA12_eof = DFA.unpackEncodedString(DFA12_eofS);
+    static final char[] DFA12_min = DFA.unpackEncodedStringToUnsignedChars(DFA12_minS);
+    static final char[] DFA12_max = DFA.unpackEncodedStringToUnsignedChars(DFA12_maxS);
+    static final short[] DFA12_accept = DFA.unpackEncodedString(DFA12_acceptS);
+    static final short[] DFA12_special = DFA.unpackEncodedString(DFA12_specialS);
+    static final short[][] DFA12_transition;
 
     static {
-        int numStates = DFA11_transitionS.length;
-        DFA11_transition = new short[numStates][];
+        int numStates = DFA12_transitionS.length;
+        DFA12_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA11_transition[i] = DFA.unpackEncodedString(DFA11_transitionS[i]);
+            DFA12_transition[i] = DFA.unpackEncodedString(DFA12_transitionS[i]);
         }
     }
 
-    class DFA11 extends DFA {
+    class DFA12 extends DFA {
 
-        public DFA11(BaseRecognizer recognizer) {
+        public DFA12(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 11;
-            this.eot = DFA11_eot;
-            this.eof = DFA11_eof;
-            this.min = DFA11_min;
-            this.max = DFA11_max;
-            this.accept = DFA11_accept;
-            this.special = DFA11_special;
-            this.transition = DFA11_transition;
+            this.decisionNumber = 12;
+            this.eot = DFA12_eot;
+            this.eof = DFA12_eof;
+            this.min = DFA12_min;
+            this.max = DFA12_max;
+            this.accept = DFA12_accept;
+            this.special = DFA12_special;
+            this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | RULE_ID | RULE_STRING | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER | RULE_INT | RULE_ML_COMMENT );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_ID | RULE_STRING | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER | RULE_INT | RULE_ML_COMMENT );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA11_15 = input.LA(1);
+                        int LA12_20 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA11_15>='\u0000' && LA11_15<='\uFFFF')) ) {s = 39;}
+                        if ( ((LA12_20>='\u0000' && LA12_20<='\uFFFF')) ) {s = 46;}
 
-                        else s = 21;
+                        else s = 25;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA11_16 = input.LA(1);
+                        int LA12_19 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA11_16>='\u0000' && LA11_16<='\uFFFF')) ) {s = 39;}
+                        if ( ((LA12_19>='\u0000' && LA12_19<='\uFFFF')) ) {s = 46;}
 
-                        else s = 21;
+                        else s = 25;
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA11_0 = input.LA(1);
+                        int LA12_0 = input.LA(1);
 
                         s = -1;
-                        if ( (LA11_0==',') ) {s = 1;}
+                        if ( (LA12_0=='.') ) {s = 1;}
 
-                        else if ( (LA11_0=='.') ) {s = 2;}
+                        else if ( (LA12_0=='|') ) {s = 2;}
 
-                        else if ( (LA11_0=='!') ) {s = 3;}
+                        else if ( (LA12_0==',') ) {s = 3;}
 
-                        else if ( (LA11_0=='(') ) {s = 4;}
+                        else if ( (LA12_0=='!') ) {s = 4;}
 
-                        else if ( (LA11_0==')') ) {s = 5;}
+                        else if ( (LA12_0=='(') ) {s = 5;}
 
-                        else if ( (LA11_0=='b') ) {s = 6;}
+                        else if ( (LA12_0==')') ) {s = 6;}
 
-                        else if ( (LA11_0=='{') ) {s = 7;}
+                        else if ( (LA12_0=='b') ) {s = 7;}
 
-                        else if ( (LA11_0=='}') ) {s = 8;}
+                        else if ( (LA12_0=='{') ) {s = 8;}
 
-                        else if ( (LA11_0==':') ) {s = 9;}
+                        else if ( (LA12_0=='}') ) {s = 9;}
 
-                        else if ( (LA11_0==';') ) {s = 10;}
+                        else if ( (LA12_0==':') ) {s = 10;}
 
-                        else if ( (LA11_0=='=') ) {s = 11;}
+                        else if ( (LA12_0==';') ) {s = 11;}
 
-                        else if ( (LA11_0=='@') ) {s = 12;}
+                        else if ( (LA12_0=='=') ) {s = 12;}
 
-                        else if ( (LA11_0=='$') ) {s = 13;}
+                        else if ( (LA12_0=='@') ) {s = 13;}
 
-                        else if ( ((LA11_0>='A' && LA11_0<='Z')||LA11_0=='_'||LA11_0=='a'||(LA11_0>='c' && LA11_0<='z')) ) {s = 14;}
+                        else if ( (LA12_0=='$') ) {s = 14;}
 
-                        else if ( (LA11_0=='\"') ) {s = 15;}
+                        else if ( (LA12_0=='a'||(LA12_0>='c' && LA12_0<='z')) ) {s = 15;}
 
-                        else if ( (LA11_0=='\'') ) {s = 16;}
+                        else if ( ((LA12_0>='A' && LA12_0<='Z')) ) {s = 16;}
 
-                        else if ( (LA11_0=='#') ) {s = 17;}
+                        else if ( (LA12_0=='_') ) {s = 17;}
 
-                        else if ( ((LA11_0>='\t' && LA11_0<='\n')||LA11_0=='\r'||LA11_0==' ') ) {s = 18;}
+                        else if ( (LA12_0=='\\') ) {s = 18;}
 
-                        else if ( ((LA11_0>='0' && LA11_0<='9')) ) {s = 19;}
+                        else if ( (LA12_0=='\"') ) {s = 19;}
 
-                        else if ( (LA11_0=='/') ) {s = 20;}
+                        else if ( (LA12_0=='\'') ) {s = 20;}
 
-                        else if ( ((LA11_0>='\u0000' && LA11_0<='\b')||(LA11_0>='\u000B' && LA11_0<='\f')||(LA11_0>='\u000E' && LA11_0<='\u001F')||(LA11_0>='%' && LA11_0<='&')||(LA11_0>='*' && LA11_0<='+')||LA11_0=='-'||LA11_0=='<'||(LA11_0>='>' && LA11_0<='?')||(LA11_0>='[' && LA11_0<='^')||LA11_0=='`'||LA11_0=='|'||(LA11_0>='~' && LA11_0<='\uFFFF')) ) {s = 21;}
+                        else if ( (LA12_0=='#') ) {s = 21;}
+
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 22;}
+
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 23;}
+
+                        else if ( (LA12_0=='/') ) {s = 24;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||(LA12_0>='%' && LA12_0<='&')||(LA12_0>='*' && LA12_0<='+')||LA12_0=='-'||LA12_0=='<'||(LA12_0>='>' && LA12_0<='?')||LA12_0=='['||(LA12_0>=']' && LA12_0<='^')||LA12_0=='`'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 25;}
 
                         if ( s>=0 ) return s;
                         break;
             }
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 11, _s, input);
+                new NoViableAltException(getDescription(), 12, _s, input);
             error(nvae);
             throw nvae;
         }
