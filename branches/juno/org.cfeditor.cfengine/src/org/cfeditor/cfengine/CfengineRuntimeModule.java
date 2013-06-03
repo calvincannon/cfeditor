@@ -3,9 +3,18 @@
  */
 package org.cfeditor.cfengine;
 
+import org.cfeditor.cfengine.validation.CfengineTerminalConverters;
+
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 public class CfengineRuntimeModule extends org.cfeditor.cfengine.AbstractCfengineRuntimeModule {
 
+	/**
+	 * Binds the customized value converter.
+	 */
+	@Override
+	public Class<? extends org.eclipse.xtext.conversion.IValueConverterService> bindIValueConverterService() {
+		return CfengineTerminalConverters.class;
+	}
 }

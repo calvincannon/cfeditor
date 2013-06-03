@@ -22,9 +22,12 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalCfengineParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ANY_OTHER", "RULE_ID", "RULE_STRING", "RULE_SL_COMMENT", "RULE_WS", "RULE_INT", "RULE_ML_COMMENT", "','", "'.'", "'!'", "'('", "')'", "'bundle'", "'{'", "'}'", "':'", "'::'", "';'", "'=>'", "'@'", "'body'", "'$('", "'${'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ANY_OTHER", "RULE_ID", "RULE_STRING", "RULE_SL_COMMENT", "RULE_WS", "RULE_INT", "RULE_ML_COMMENT", "'.'", "'|'", "','", "'!'", "'('", "')'", "'!('", "'! ('", "'bundle'", "'{'", "'}'", "':'", "'::'", "';'", "'=>'", "'@'", "'body'", "'$('", "'${'"
     };
     public static final int RULE_ID=5;
+    public static final int T__29=29;
+    public static final int T__28=28;
+    public static final int T__27=27;
     public static final int T__26=26;
     public static final int T__25=25;
     public static final int T__24=24;
@@ -136,7 +139,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==16||LA1_0==24) ) {
+                if ( (LA1_0==19||LA1_0==27) ) {
                     alt1=1;
                 }
 
@@ -1337,28 +1340,38 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Alternatives"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:508:1: rule__CLASS_ID__Alternatives : ( ( ( rule__CLASS_ID__Group_0__0 ) ) | ( ( rule__CLASS_ID__Group_1__0 ) ) | ( ( rule__CLASS_ID__Group_2__0 ) ) );
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:508:1: rule__CLASS_ID__Alternatives : ( ( ( rule__CLASS_ID__Group_0__0 ) ) | ( ( rule__CLASS_ID__Group_1__0 ) ) | ( ( rule__CLASS_ID__Group_2__0 ) ) | ( ( rule__CLASS_ID__Group_3__0 ) ) | ( ( rule__CLASS_ID__Group_4__0 ) ) );
     public final void rule__CLASS_ID__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:512:1: ( ( ( rule__CLASS_ID__Group_0__0 ) ) | ( ( rule__CLASS_ID__Group_1__0 ) ) | ( ( rule__CLASS_ID__Group_2__0 ) ) )
-            int alt2=3;
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:512:1: ( ( ( rule__CLASS_ID__Group_0__0 ) ) | ( ( rule__CLASS_ID__Group_1__0 ) ) | ( ( rule__CLASS_ID__Group_2__0 ) ) | ( ( rule__CLASS_ID__Group_3__0 ) ) | ( ( rule__CLASS_ID__Group_4__0 ) ) )
+            int alt2=5;
             switch ( input.LA(1) ) {
             case RULE_ID:
                 {
                 alt2=1;
                 }
                 break;
-            case 13:
+            case 14:
                 {
                 alt2=2;
                 }
                 break;
-            case 14:
+            case 15:
                 {
                 alt2=3;
+                }
+                break;
+            case 17:
+                {
+                alt2=4;
+                }
+                break;
+            case 18:
+                {
+                alt2=5;
                 }
                 break;
             default:
@@ -1444,6 +1457,56 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
                     }
                     break;
+                case 4 :
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:531:6: ( ( rule__CLASS_ID__Group_3__0 ) )
+                    {
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:531:6: ( ( rule__CLASS_ID__Group_3__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:532:1: ( rule__CLASS_ID__Group_3__0 )
+                    {
+                     before(grammarAccess.getCLASS_IDAccess().getGroup_3()); 
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:533:1: ( rule__CLASS_ID__Group_3__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:533:2: rule__CLASS_ID__Group_3__0
+                    {
+                    pushFollow(FOLLOW_rule__CLASS_ID__Group_3__0_in_rule__CLASS_ID__Alternatives1085);
+                    rule__CLASS_ID__Group_3__0();
+
+                    state._fsp--;
+
+
+                    }
+
+                     after(grammarAccess.getCLASS_IDAccess().getGroup_3()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:537:6: ( ( rule__CLASS_ID__Group_4__0 ) )
+                    {
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:537:6: ( ( rule__CLASS_ID__Group_4__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:538:1: ( rule__CLASS_ID__Group_4__0 )
+                    {
+                     before(grammarAccess.getCLASS_IDAccess().getGroup_4()); 
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:539:1: ( rule__CLASS_ID__Group_4__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:539:2: rule__CLASS_ID__Group_4__0
+                    {
+                    pushFollow(FOLLOW_rule__CLASS_ID__Group_4__0_in_rule__CLASS_ID__Alternatives1103);
+                    rule__CLASS_ID__Group_4__0();
+
+                    state._fsp--;
+
+
+                    }
+
+                     after(grammarAccess.getCLASS_IDAccess().getGroup_4()); 
+
+                    }
+
+
+                    }
+                    break;
 
             }
         }
@@ -1461,21 +1524,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__CLASS_ID__Alternatives"
 
 
-    // $ANTLR start "rule__AbstractElement__Alternatives"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:536:1: rule__AbstractElement__Alternatives : ( ( ruleBundle ) | ( ruleBody ) );
-    public final void rule__AbstractElement__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__CLASS_ID__Alternatives_0_1_0"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:548:1: rule__CLASS_ID__Alternatives_0_1_0 : ( ( '.' ) | ( '|' ) );
+    public final void rule__CLASS_ID__Alternatives_0_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:540:1: ( ( ruleBundle ) | ( ruleBody ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:552:1: ( ( '.' ) | ( '|' ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==16) ) {
+            if ( (LA3_0==11) ) {
                 alt3=1;
             }
-            else if ( (LA3_0==24) ) {
+            else if ( (LA3_0==12) ) {
                 alt3=2;
             }
             else {
@@ -1486,13 +1549,84 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             }
             switch (alt3) {
                 case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:541:1: ( ruleBundle )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:553:1: ( '.' )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:541:1: ( ruleBundle )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:542:1: ruleBundle
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:553:1: ( '.' )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:554:1: '.'
+                    {
+                     before(grammarAccess.getCLASS_IDAccess().getFullStopKeyword_0_1_0_0()); 
+                    match(input,11,FOLLOW_11_in_rule__CLASS_ID__Alternatives_0_1_01137); 
+                     after(grammarAccess.getCLASS_IDAccess().getFullStopKeyword_0_1_0_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:561:6: ( '|' )
+                    {
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:561:6: ( '|' )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:562:1: '|'
+                    {
+                     before(grammarAccess.getCLASS_IDAccess().getVerticalLineKeyword_0_1_0_1()); 
+                    match(input,12,FOLLOW_12_in_rule__CLASS_ID__Alternatives_0_1_01157); 
+                     after(grammarAccess.getCLASS_IDAccess().getVerticalLineKeyword_0_1_0_1()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CLASS_ID__Alternatives_0_1_0"
+
+
+    // $ANTLR start "rule__AbstractElement__Alternatives"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:574:1: rule__AbstractElement__Alternatives : ( ( ruleBundle ) | ( ruleBody ) );
+    public final void rule__AbstractElement__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:578:1: ( ( ruleBundle ) | ( ruleBody ) )
+            int alt4=2;
+            int LA4_0 = input.LA(1);
+
+            if ( (LA4_0==19) ) {
+                alt4=1;
+            }
+            else if ( (LA4_0==27) ) {
+                alt4=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 4, 0, input);
+
+                throw nvae;
+            }
+            switch (alt4) {
+                case 1 :
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:579:1: ( ruleBundle )
+                    {
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:579:1: ( ruleBundle )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:580:1: ruleBundle
                     {
                      before(grammarAccess.getAbstractElementAccess().getBundleParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleBundle_in_rule__AbstractElement__Alternatives1100);
+                    pushFollow(FOLLOW_ruleBundle_in_rule__AbstractElement__Alternatives1191);
                     ruleBundle();
 
                     state._fsp--;
@@ -1505,13 +1639,13 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:547:6: ( ruleBody )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:585:6: ( ruleBody )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:547:6: ( ruleBody )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:548:1: ruleBody
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:585:6: ( ruleBody )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:586:1: ruleBody
                     {
                      before(grammarAccess.getAbstractElementAccess().getBodyParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleBody_in_rule__AbstractElement__Alternatives1117);
+                    pushFollow(FOLLOW_ruleBody_in_rule__AbstractElement__Alternatives1208);
                     ruleBody();
 
                     state._fsp--;
@@ -1541,53 +1675,53 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Alternatives_2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:558:1: rule__PromiseValue__Alternatives_2 : ( ( ( rule__PromiseValue__Alternatives_2_0 ) ) | ( ( rule__PromiseValue__Group_2_1__0 ) ) | ( ( rule__PromiseValue__Group_2_2__0 ) ) );
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:596:1: rule__PromiseValue__Alternatives_2 : ( ( ( rule__PromiseValue__Alternatives_2_0 ) ) | ( ( rule__PromiseValue__Group_2_1__0 ) ) | ( ( rule__PromiseValue__Group_2_2__0 ) ) );
     public final void rule__PromiseValue__Alternatives_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:562:1: ( ( ( rule__PromiseValue__Alternatives_2_0 ) ) | ( ( rule__PromiseValue__Group_2_1__0 ) ) | ( ( rule__PromiseValue__Group_2_2__0 ) ) )
-            int alt4=3;
-            int LA4_0 = input.LA(1);
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:600:1: ( ( ( rule__PromiseValue__Alternatives_2_0 ) ) | ( ( rule__PromiseValue__Group_2_1__0 ) ) | ( ( rule__PromiseValue__Group_2_2__0 ) ) )
+            int alt5=3;
+            int LA5_0 = input.LA(1);
 
-            if ( ((LA4_0>=RULE_ID && LA4_0<=RULE_STRING)) ) {
-                alt4=1;
+            if ( ((LA5_0>=RULE_ID && LA5_0<=RULE_STRING)) ) {
+                alt5=1;
             }
-            else if ( (LA4_0==17) ) {
-                int LA4_2 = input.LA(2);
+            else if ( (LA5_0==20) ) {
+                int LA5_2 = input.LA(2);
 
-                if ( (LA4_2==23) ) {
-                    alt4=3;
+                if ( (LA5_2==26) ) {
+                    alt5=3;
                 }
-                else if ( ((LA4_2>=RULE_ID && LA4_2<=RULE_STRING)) ) {
-                    alt4=2;
+                else if ( ((LA5_2>=RULE_ID && LA5_2<=RULE_STRING)) ) {
+                    alt5=2;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 4, 2, input);
+                        new NoViableAltException("", 5, 2, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt4) {
+            switch (alt5) {
                 case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:563:1: ( ( rule__PromiseValue__Alternatives_2_0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:601:1: ( ( rule__PromiseValue__Alternatives_2_0 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:563:1: ( ( rule__PromiseValue__Alternatives_2_0 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:564:1: ( rule__PromiseValue__Alternatives_2_0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:601:1: ( ( rule__PromiseValue__Alternatives_2_0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:602:1: ( rule__PromiseValue__Alternatives_2_0 )
                     {
                      before(grammarAccess.getPromiseValueAccess().getAlternatives_2_0()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:565:1: ( rule__PromiseValue__Alternatives_2_0 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:565:2: rule__PromiseValue__Alternatives_2_0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:603:1: ( rule__PromiseValue__Alternatives_2_0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:603:2: rule__PromiseValue__Alternatives_2_0
                     {
-                    pushFollow(FOLLOW_rule__PromiseValue__Alternatives_2_0_in_rule__PromiseValue__Alternatives_21149);
+                    pushFollow(FOLLOW_rule__PromiseValue__Alternatives_2_0_in_rule__PromiseValue__Alternatives_21240);
                     rule__PromiseValue__Alternatives_2_0();
 
                     state._fsp--;
@@ -1603,16 +1737,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:569:6: ( ( rule__PromiseValue__Group_2_1__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:607:6: ( ( rule__PromiseValue__Group_2_1__0 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:569:6: ( ( rule__PromiseValue__Group_2_1__0 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:570:1: ( rule__PromiseValue__Group_2_1__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:607:6: ( ( rule__PromiseValue__Group_2_1__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:608:1: ( rule__PromiseValue__Group_2_1__0 )
                     {
                      before(grammarAccess.getPromiseValueAccess().getGroup_2_1()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:571:1: ( rule__PromiseValue__Group_2_1__0 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:571:2: rule__PromiseValue__Group_2_1__0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:609:1: ( rule__PromiseValue__Group_2_1__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:609:2: rule__PromiseValue__Group_2_1__0
                     {
-                    pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__0_in_rule__PromiseValue__Alternatives_21167);
+                    pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__0_in_rule__PromiseValue__Alternatives_21258);
                     rule__PromiseValue__Group_2_1__0();
 
                     state._fsp--;
@@ -1628,16 +1762,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 3 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:575:6: ( ( rule__PromiseValue__Group_2_2__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:613:6: ( ( rule__PromiseValue__Group_2_2__0 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:575:6: ( ( rule__PromiseValue__Group_2_2__0 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:576:1: ( rule__PromiseValue__Group_2_2__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:613:6: ( ( rule__PromiseValue__Group_2_2__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:614:1: ( rule__PromiseValue__Group_2_2__0 )
                     {
                      before(grammarAccess.getPromiseValueAccess().getGroup_2_2()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:577:1: ( rule__PromiseValue__Group_2_2__0 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:577:2: rule__PromiseValue__Group_2_2__0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:615:1: ( rule__PromiseValue__Group_2_2__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:615:2: rule__PromiseValue__Group_2_2__0
                     {
-                    pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__0_in_rule__PromiseValue__Alternatives_21185);
+                    pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__0_in_rule__PromiseValue__Alternatives_21276);
                     rule__PromiseValue__Group_2_2__0();
 
                     state._fsp--;
@@ -1670,53 +1804,53 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Alternatives_2_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:586:1: rule__PromiseValue__Alternatives_2_0 : ( ( ( rule__PromiseValue__ValuesAssignment_2_0_0 ) ) | ( ( rule__PromiseValue__FunctionsAssignment_2_0_1 ) ) | ( ( rule__PromiseValue__ValuesAssignment_2_0_2 ) ) );
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:624:1: rule__PromiseValue__Alternatives_2_0 : ( ( ( rule__PromiseValue__ValuesAssignment_2_0_0 ) ) | ( ( rule__PromiseValue__FunctionsAssignment_2_0_1 ) ) | ( ( rule__PromiseValue__ValuesAssignment_2_0_2 ) ) );
     public final void rule__PromiseValue__Alternatives_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:590:1: ( ( ( rule__PromiseValue__ValuesAssignment_2_0_0 ) ) | ( ( rule__PromiseValue__FunctionsAssignment_2_0_1 ) ) | ( ( rule__PromiseValue__ValuesAssignment_2_0_2 ) ) )
-            int alt5=3;
-            int LA5_0 = input.LA(1);
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:628:1: ( ( ( rule__PromiseValue__ValuesAssignment_2_0_0 ) ) | ( ( rule__PromiseValue__FunctionsAssignment_2_0_1 ) ) | ( ( rule__PromiseValue__ValuesAssignment_2_0_2 ) ) )
+            int alt6=3;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA5_0==RULE_STRING) ) {
-                alt5=1;
+            if ( (LA6_0==RULE_STRING) ) {
+                alt6=1;
             }
-            else if ( (LA5_0==RULE_ID) ) {
-                int LA5_2 = input.LA(2);
+            else if ( (LA6_0==RULE_ID) ) {
+                int LA6_2 = input.LA(2);
 
-                if ( (LA5_2==14) ) {
-                    alt5=2;
+                if ( (LA6_2==15) ) {
+                    alt6=2;
                 }
-                else if ( (LA5_2==EOF||LA5_2==11||LA5_2==21) ) {
-                    alt5=3;
+                else if ( (LA6_2==EOF||LA6_2==RULE_ID||LA6_2==13||LA6_2==24) ) {
+                    alt6=3;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 5, 2, input);
+                        new NoViableAltException("", 6, 2, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:591:1: ( ( rule__PromiseValue__ValuesAssignment_2_0_0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:629:1: ( ( rule__PromiseValue__ValuesAssignment_2_0_0 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:591:1: ( ( rule__PromiseValue__ValuesAssignment_2_0_0 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:592:1: ( rule__PromiseValue__ValuesAssignment_2_0_0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:629:1: ( ( rule__PromiseValue__ValuesAssignment_2_0_0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:630:1: ( rule__PromiseValue__ValuesAssignment_2_0_0 )
                     {
                      before(grammarAccess.getPromiseValueAccess().getValuesAssignment_2_0_0()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:593:1: ( rule__PromiseValue__ValuesAssignment_2_0_0 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:593:2: rule__PromiseValue__ValuesAssignment_2_0_0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:631:1: ( rule__PromiseValue__ValuesAssignment_2_0_0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:631:2: rule__PromiseValue__ValuesAssignment_2_0_0
                     {
-                    pushFollow(FOLLOW_rule__PromiseValue__ValuesAssignment_2_0_0_in_rule__PromiseValue__Alternatives_2_01218);
+                    pushFollow(FOLLOW_rule__PromiseValue__ValuesAssignment_2_0_0_in_rule__PromiseValue__Alternatives_2_01309);
                     rule__PromiseValue__ValuesAssignment_2_0_0();
 
                     state._fsp--;
@@ -1732,16 +1866,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:597:6: ( ( rule__PromiseValue__FunctionsAssignment_2_0_1 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:635:6: ( ( rule__PromiseValue__FunctionsAssignment_2_0_1 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:597:6: ( ( rule__PromiseValue__FunctionsAssignment_2_0_1 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:598:1: ( rule__PromiseValue__FunctionsAssignment_2_0_1 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:635:6: ( ( rule__PromiseValue__FunctionsAssignment_2_0_1 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:636:1: ( rule__PromiseValue__FunctionsAssignment_2_0_1 )
                     {
                      before(grammarAccess.getPromiseValueAccess().getFunctionsAssignment_2_0_1()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:599:1: ( rule__PromiseValue__FunctionsAssignment_2_0_1 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:599:2: rule__PromiseValue__FunctionsAssignment_2_0_1
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:637:1: ( rule__PromiseValue__FunctionsAssignment_2_0_1 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:637:2: rule__PromiseValue__FunctionsAssignment_2_0_1
                     {
-                    pushFollow(FOLLOW_rule__PromiseValue__FunctionsAssignment_2_0_1_in_rule__PromiseValue__Alternatives_2_01236);
+                    pushFollow(FOLLOW_rule__PromiseValue__FunctionsAssignment_2_0_1_in_rule__PromiseValue__Alternatives_2_01327);
                     rule__PromiseValue__FunctionsAssignment_2_0_1();
 
                     state._fsp--;
@@ -1757,16 +1891,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 3 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:603:6: ( ( rule__PromiseValue__ValuesAssignment_2_0_2 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:641:6: ( ( rule__PromiseValue__ValuesAssignment_2_0_2 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:603:6: ( ( rule__PromiseValue__ValuesAssignment_2_0_2 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:604:1: ( rule__PromiseValue__ValuesAssignment_2_0_2 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:641:6: ( ( rule__PromiseValue__ValuesAssignment_2_0_2 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:642:1: ( rule__PromiseValue__ValuesAssignment_2_0_2 )
                     {
                      before(grammarAccess.getPromiseValueAccess().getValuesAssignment_2_0_2()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:605:1: ( rule__PromiseValue__ValuesAssignment_2_0_2 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:605:2: rule__PromiseValue__ValuesAssignment_2_0_2
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:643:1: ( rule__PromiseValue__ValuesAssignment_2_0_2 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:643:2: rule__PromiseValue__ValuesAssignment_2_0_2
                     {
-                    pushFollow(FOLLOW_rule__PromiseValue__ValuesAssignment_2_0_2_in_rule__PromiseValue__Alternatives_2_01254);
+                    pushFollow(FOLLOW_rule__PromiseValue__ValuesAssignment_2_0_2_in_rule__PromiseValue__Alternatives_2_01345);
                     rule__PromiseValue__ValuesAssignment_2_0_2();
 
                     state._fsp--;
@@ -1799,40 +1933,40 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Alternatives_2_1_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:614:1: rule__PromiseValue__Alternatives_2_1_1 : ( ( ( rule__PromiseValue__ValuesAssignment_2_1_1_0 ) ) | ( ( rule__PromiseValue__FunctionsAssignment_2_1_1_1 ) ) );
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:652:1: rule__PromiseValue__Alternatives_2_1_1 : ( ( ( rule__PromiseValue__ValuesAssignment_2_1_1_0 ) ) | ( ( rule__PromiseValue__FunctionsAssignment_2_1_1_1 ) ) );
     public final void rule__PromiseValue__Alternatives_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:618:1: ( ( ( rule__PromiseValue__ValuesAssignment_2_1_1_0 ) ) | ( ( rule__PromiseValue__FunctionsAssignment_2_1_1_1 ) ) )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:656:1: ( ( ( rule__PromiseValue__ValuesAssignment_2_1_1_0 ) ) | ( ( rule__PromiseValue__FunctionsAssignment_2_1_1_1 ) ) )
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA6_0==RULE_STRING) ) {
-                alt6=1;
+            if ( (LA7_0==RULE_STRING) ) {
+                alt7=1;
             }
-            else if ( (LA6_0==RULE_ID) ) {
-                alt6=2;
+            else if ( (LA7_0==RULE_ID) ) {
+                alt7=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:619:1: ( ( rule__PromiseValue__ValuesAssignment_2_1_1_0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:657:1: ( ( rule__PromiseValue__ValuesAssignment_2_1_1_0 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:619:1: ( ( rule__PromiseValue__ValuesAssignment_2_1_1_0 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:620:1: ( rule__PromiseValue__ValuesAssignment_2_1_1_0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:657:1: ( ( rule__PromiseValue__ValuesAssignment_2_1_1_0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:658:1: ( rule__PromiseValue__ValuesAssignment_2_1_1_0 )
                     {
                      before(grammarAccess.getPromiseValueAccess().getValuesAssignment_2_1_1_0()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:621:1: ( rule__PromiseValue__ValuesAssignment_2_1_1_0 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:621:2: rule__PromiseValue__ValuesAssignment_2_1_1_0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:659:1: ( rule__PromiseValue__ValuesAssignment_2_1_1_0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:659:2: rule__PromiseValue__ValuesAssignment_2_1_1_0
                     {
-                    pushFollow(FOLLOW_rule__PromiseValue__ValuesAssignment_2_1_1_0_in_rule__PromiseValue__Alternatives_2_1_11287);
+                    pushFollow(FOLLOW_rule__PromiseValue__ValuesAssignment_2_1_1_0_in_rule__PromiseValue__Alternatives_2_1_11378);
                     rule__PromiseValue__ValuesAssignment_2_1_1_0();
 
                     state._fsp--;
@@ -1848,16 +1982,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:625:6: ( ( rule__PromiseValue__FunctionsAssignment_2_1_1_1 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:663:6: ( ( rule__PromiseValue__FunctionsAssignment_2_1_1_1 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:625:6: ( ( rule__PromiseValue__FunctionsAssignment_2_1_1_1 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:626:1: ( rule__PromiseValue__FunctionsAssignment_2_1_1_1 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:663:6: ( ( rule__PromiseValue__FunctionsAssignment_2_1_1_1 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:664:1: ( rule__PromiseValue__FunctionsAssignment_2_1_1_1 )
                     {
                      before(grammarAccess.getPromiseValueAccess().getFunctionsAssignment_2_1_1_1()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:627:1: ( rule__PromiseValue__FunctionsAssignment_2_1_1_1 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:627:2: rule__PromiseValue__FunctionsAssignment_2_1_1_1
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:665:1: ( rule__PromiseValue__FunctionsAssignment_2_1_1_1 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:665:2: rule__PromiseValue__FunctionsAssignment_2_1_1_1
                     {
-                    pushFollow(FOLLOW_rule__PromiseValue__FunctionsAssignment_2_1_1_1_in_rule__PromiseValue__Alternatives_2_1_11305);
+                    pushFollow(FOLLOW_rule__PromiseValue__FunctionsAssignment_2_1_1_1_in_rule__PromiseValue__Alternatives_2_1_11396);
                     rule__PromiseValue__FunctionsAssignment_2_1_1_1();
 
                     state._fsp--;
@@ -1890,40 +2024,40 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Alternatives_2_1_2_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:636:1: rule__PromiseValue__Alternatives_2_1_2_1 : ( ( ( rule__PromiseValue__ValuesAssignment_2_1_2_1_0 ) ) | ( ( rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 ) ) );
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:674:1: rule__PromiseValue__Alternatives_2_1_2_1 : ( ( ( rule__PromiseValue__ValuesAssignment_2_1_2_1_0 ) ) | ( ( rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 ) ) );
     public final void rule__PromiseValue__Alternatives_2_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:640:1: ( ( ( rule__PromiseValue__ValuesAssignment_2_1_2_1_0 ) ) | ( ( rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 ) ) )
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:678:1: ( ( ( rule__PromiseValue__ValuesAssignment_2_1_2_1_0 ) ) | ( ( rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 ) ) )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA7_0==RULE_STRING) ) {
-                alt7=1;
+            if ( (LA8_0==RULE_STRING) ) {
+                alt8=1;
             }
-            else if ( (LA7_0==RULE_ID) ) {
-                alt7=2;
+            else if ( (LA8_0==RULE_ID) ) {
+                alt8=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:641:1: ( ( rule__PromiseValue__ValuesAssignment_2_1_2_1_0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:679:1: ( ( rule__PromiseValue__ValuesAssignment_2_1_2_1_0 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:641:1: ( ( rule__PromiseValue__ValuesAssignment_2_1_2_1_0 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:642:1: ( rule__PromiseValue__ValuesAssignment_2_1_2_1_0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:679:1: ( ( rule__PromiseValue__ValuesAssignment_2_1_2_1_0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:680:1: ( rule__PromiseValue__ValuesAssignment_2_1_2_1_0 )
                     {
                      before(grammarAccess.getPromiseValueAccess().getValuesAssignment_2_1_2_1_0()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:643:1: ( rule__PromiseValue__ValuesAssignment_2_1_2_1_0 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:643:2: rule__PromiseValue__ValuesAssignment_2_1_2_1_0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:681:1: ( rule__PromiseValue__ValuesAssignment_2_1_2_1_0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:681:2: rule__PromiseValue__ValuesAssignment_2_1_2_1_0
                     {
-                    pushFollow(FOLLOW_rule__PromiseValue__ValuesAssignment_2_1_2_1_0_in_rule__PromiseValue__Alternatives_2_1_2_11338);
+                    pushFollow(FOLLOW_rule__PromiseValue__ValuesAssignment_2_1_2_1_0_in_rule__PromiseValue__Alternatives_2_1_2_11429);
                     rule__PromiseValue__ValuesAssignment_2_1_2_1_0();
 
                     state._fsp--;
@@ -1939,16 +2073,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:647:6: ( ( rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:685:6: ( ( rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:647:6: ( ( rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:648:1: ( rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:685:6: ( ( rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:686:1: ( rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 )
                     {
                      before(grammarAccess.getPromiseValueAccess().getFunctionsAssignment_2_1_2_1_1()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:649:1: ( rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:649:2: rule__PromiseValue__FunctionsAssignment_2_1_2_1_1
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:687:1: ( rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:687:2: rule__PromiseValue__FunctionsAssignment_2_1_2_1_1
                     {
-                    pushFollow(FOLLOW_rule__PromiseValue__FunctionsAssignment_2_1_2_1_1_in_rule__PromiseValue__Alternatives_2_1_2_11356);
+                    pushFollow(FOLLOW_rule__PromiseValue__FunctionsAssignment_2_1_2_1_1_in_rule__PromiseValue__Alternatives_2_1_2_11447);
                     rule__PromiseValue__FunctionsAssignment_2_1_2_1_1();
 
                     state._fsp--;
@@ -1981,33 +2115,33 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Alternatives_2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:658:1: rule__BodyFunction__Alternatives_2 : ( ( ( rule__BodyFunction__ValuesAssignment_2_0 ) ) | ( ( rule__BodyFunction__Group_2_1__0 ) ) | ( ( rule__BodyFunction__FunctionAssignment_2_2 ) ) | ( ( rule__BodyFunction__Group_2_3__0 ) ) );
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:696:1: rule__BodyFunction__Alternatives_2 : ( ( ( rule__BodyFunction__ValuesAssignment_2_0 ) ) | ( ( rule__BodyFunction__Group_2_1__0 ) ) | ( ( rule__BodyFunction__FunctionAssignment_2_2 ) ) | ( ( rule__BodyFunction__Group_2_3__0 ) ) );
     public final void rule__BodyFunction__Alternatives_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:662:1: ( ( ( rule__BodyFunction__ValuesAssignment_2_0 ) ) | ( ( rule__BodyFunction__Group_2_1__0 ) ) | ( ( rule__BodyFunction__FunctionAssignment_2_2 ) ) | ( ( rule__BodyFunction__Group_2_3__0 ) ) )
-            int alt8=4;
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:700:1: ( ( ( rule__BodyFunction__ValuesAssignment_2_0 ) ) | ( ( rule__BodyFunction__Group_2_1__0 ) ) | ( ( rule__BodyFunction__FunctionAssignment_2_2 ) ) | ( ( rule__BodyFunction__Group_2_3__0 ) ) )
+            int alt9=4;
             switch ( input.LA(1) ) {
             case RULE_STRING:
                 {
-                alt8=1;
+                alt9=1;
                 }
                 break;
-            case 17:
+            case 20:
                 {
-                int LA8_2 = input.LA(2);
+                int LA9_2 = input.LA(2);
 
-                if ( (LA8_2==RULE_STRING) ) {
-                    alt8=2;
+                if ( (LA9_2==26) ) {
+                    alt9=4;
                 }
-                else if ( (LA8_2==23) ) {
-                    alt8=4;
+                else if ( (LA9_2==RULE_STRING) ) {
+                    alt9=2;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 8, 2, input);
+                        new NoViableAltException("", 9, 2, input);
 
                     throw nvae;
                 }
@@ -2015,28 +2149,28 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                 break;
             case RULE_ID:
                 {
-                alt8=3;
+                alt9=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 9, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt8) {
+            switch (alt9) {
                 case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:663:1: ( ( rule__BodyFunction__ValuesAssignment_2_0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:701:1: ( ( rule__BodyFunction__ValuesAssignment_2_0 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:663:1: ( ( rule__BodyFunction__ValuesAssignment_2_0 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:664:1: ( rule__BodyFunction__ValuesAssignment_2_0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:701:1: ( ( rule__BodyFunction__ValuesAssignment_2_0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:702:1: ( rule__BodyFunction__ValuesAssignment_2_0 )
                     {
                      before(grammarAccess.getBodyFunctionAccess().getValuesAssignment_2_0()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:665:1: ( rule__BodyFunction__ValuesAssignment_2_0 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:665:2: rule__BodyFunction__ValuesAssignment_2_0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:703:1: ( rule__BodyFunction__ValuesAssignment_2_0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:703:2: rule__BodyFunction__ValuesAssignment_2_0
                     {
-                    pushFollow(FOLLOW_rule__BodyFunction__ValuesAssignment_2_0_in_rule__BodyFunction__Alternatives_21389);
+                    pushFollow(FOLLOW_rule__BodyFunction__ValuesAssignment_2_0_in_rule__BodyFunction__Alternatives_21480);
                     rule__BodyFunction__ValuesAssignment_2_0();
 
                     state._fsp--;
@@ -2052,16 +2186,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:669:6: ( ( rule__BodyFunction__Group_2_1__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:707:6: ( ( rule__BodyFunction__Group_2_1__0 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:669:6: ( ( rule__BodyFunction__Group_2_1__0 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:670:1: ( rule__BodyFunction__Group_2_1__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:707:6: ( ( rule__BodyFunction__Group_2_1__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:708:1: ( rule__BodyFunction__Group_2_1__0 )
                     {
                      before(grammarAccess.getBodyFunctionAccess().getGroup_2_1()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:671:1: ( rule__BodyFunction__Group_2_1__0 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:671:2: rule__BodyFunction__Group_2_1__0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:709:1: ( rule__BodyFunction__Group_2_1__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:709:2: rule__BodyFunction__Group_2_1__0
                     {
-                    pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__0_in_rule__BodyFunction__Alternatives_21407);
+                    pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__0_in_rule__BodyFunction__Alternatives_21498);
                     rule__BodyFunction__Group_2_1__0();
 
                     state._fsp--;
@@ -2077,16 +2211,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 3 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:675:6: ( ( rule__BodyFunction__FunctionAssignment_2_2 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:713:6: ( ( rule__BodyFunction__FunctionAssignment_2_2 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:675:6: ( ( rule__BodyFunction__FunctionAssignment_2_2 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:676:1: ( rule__BodyFunction__FunctionAssignment_2_2 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:713:6: ( ( rule__BodyFunction__FunctionAssignment_2_2 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:714:1: ( rule__BodyFunction__FunctionAssignment_2_2 )
                     {
                      before(grammarAccess.getBodyFunctionAccess().getFunctionAssignment_2_2()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:677:1: ( rule__BodyFunction__FunctionAssignment_2_2 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:677:2: rule__BodyFunction__FunctionAssignment_2_2
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:715:1: ( rule__BodyFunction__FunctionAssignment_2_2 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:715:2: rule__BodyFunction__FunctionAssignment_2_2
                     {
-                    pushFollow(FOLLOW_rule__BodyFunction__FunctionAssignment_2_2_in_rule__BodyFunction__Alternatives_21425);
+                    pushFollow(FOLLOW_rule__BodyFunction__FunctionAssignment_2_2_in_rule__BodyFunction__Alternatives_21516);
                     rule__BodyFunction__FunctionAssignment_2_2();
 
                     state._fsp--;
@@ -2102,16 +2236,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 4 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:681:6: ( ( rule__BodyFunction__Group_2_3__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:719:6: ( ( rule__BodyFunction__Group_2_3__0 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:681:6: ( ( rule__BodyFunction__Group_2_3__0 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:682:1: ( rule__BodyFunction__Group_2_3__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:719:6: ( ( rule__BodyFunction__Group_2_3__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:720:1: ( rule__BodyFunction__Group_2_3__0 )
                     {
                      before(grammarAccess.getBodyFunctionAccess().getGroup_2_3()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:683:1: ( rule__BodyFunction__Group_2_3__0 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:683:2: rule__BodyFunction__Group_2_3__0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:721:1: ( rule__BodyFunction__Group_2_3__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:721:2: rule__BodyFunction__Group_2_3__0
                     {
-                    pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__0_in_rule__BodyFunction__Alternatives_21443);
+                    pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__0_in_rule__BodyFunction__Alternatives_21534);
                     rule__BodyFunction__Group_2_3__0();
 
                     state._fsp--;
@@ -2144,33 +2278,33 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Alternatives_2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:692:1: rule__SpecialFunction__Alternatives_2 : ( ( RULE_ANY_OTHER ) | ( RULE_ID ) | ( RULE_STRING ) | ( ',' ) | ( ( rule__SpecialFunction__Group_2_4__0 ) ) | ( ( rule__SpecialFunction__Group_2_5__0 ) ) | ( ( rule__SpecialFunction__FuncAssignment_2_6 ) ) );
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:730:1: rule__SpecialFunction__Alternatives_2 : ( ( RULE_ANY_OTHER ) | ( RULE_ID ) | ( RULE_STRING ) | ( ',' ) | ( ( rule__SpecialFunction__Group_2_4__0 ) ) | ( ( rule__SpecialFunction__Group_2_5__0 ) ) | ( ( rule__SpecialFunction__FuncAssignment_2_6 ) ) );
     public final void rule__SpecialFunction__Alternatives_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:696:1: ( ( RULE_ANY_OTHER ) | ( RULE_ID ) | ( RULE_STRING ) | ( ',' ) | ( ( rule__SpecialFunction__Group_2_4__0 ) ) | ( ( rule__SpecialFunction__Group_2_5__0 ) ) | ( ( rule__SpecialFunction__FuncAssignment_2_6 ) ) )
-            int alt9=7;
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:734:1: ( ( RULE_ANY_OTHER ) | ( RULE_ID ) | ( RULE_STRING ) | ( ',' ) | ( ( rule__SpecialFunction__Group_2_4__0 ) ) | ( ( rule__SpecialFunction__Group_2_5__0 ) ) | ( ( rule__SpecialFunction__FuncAssignment_2_6 ) ) )
+            int alt10=7;
             switch ( input.LA(1) ) {
             case RULE_ANY_OTHER:
                 {
-                alt9=1;
+                alt10=1;
                 }
                 break;
             case RULE_ID:
                 {
-                int LA9_2 = input.LA(2);
+                int LA10_2 = input.LA(2);
 
-                if ( ((LA9_2>=RULE_ANY_OTHER && LA9_2<=RULE_STRING)||LA9_2==11||LA9_2==15||(LA9_2>=25 && LA9_2<=26)) ) {
-                    alt9=2;
+                if ( (LA10_2==15) ) {
+                    alt10=7;
                 }
-                else if ( (LA9_2==14) ) {
-                    alt9=7;
+                else if ( ((LA10_2>=RULE_ANY_OTHER && LA10_2<=RULE_STRING)||LA10_2==13||LA10_2==16||(LA10_2>=28 && LA10_2<=29)) ) {
+                    alt10=2;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 9, 2, input);
+                        new NoViableAltException("", 10, 2, input);
 
                     throw nvae;
                 }
@@ -2178,40 +2312,40 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                 break;
             case RULE_STRING:
                 {
-                alt9=3;
+                alt10=3;
                 }
                 break;
-            case 11:
+            case 13:
                 {
-                alt9=4;
+                alt10=4;
                 }
                 break;
-            case 25:
+            case 28:
                 {
-                alt9=5;
+                alt10=5;
                 }
                 break;
-            case 26:
+            case 29:
                 {
-                alt9=6;
+                alt10=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
+                    new NoViableAltException("", 10, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt9) {
+            switch (alt10) {
                 case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:697:1: ( RULE_ANY_OTHER )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:735:1: ( RULE_ANY_OTHER )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:697:1: ( RULE_ANY_OTHER )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:698:1: RULE_ANY_OTHER
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:735:1: ( RULE_ANY_OTHER )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:736:1: RULE_ANY_OTHER
                     {
                      before(grammarAccess.getSpecialFunctionAccess().getANY_OTHERTerminalRuleCall_2_0()); 
-                    match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_rule__SpecialFunction__Alternatives_21476); 
+                    match(input,RULE_ANY_OTHER,FOLLOW_RULE_ANY_OTHER_in_rule__SpecialFunction__Alternatives_21567); 
                      after(grammarAccess.getSpecialFunctionAccess().getANY_OTHERTerminalRuleCall_2_0()); 
 
                     }
@@ -2220,13 +2354,13 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 2 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:703:6: ( RULE_ID )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:741:6: ( RULE_ID )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:703:6: ( RULE_ID )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:704:1: RULE_ID
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:741:6: ( RULE_ID )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:742:1: RULE_ID
                     {
                      before(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_1()); 
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__Alternatives_21493); 
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__Alternatives_21584); 
                      after(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_1()); 
 
                     }
@@ -2235,13 +2369,13 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 3 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:709:6: ( RULE_STRING )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:747:6: ( RULE_STRING )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:709:6: ( RULE_STRING )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:710:1: RULE_STRING
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:747:6: ( RULE_STRING )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:748:1: RULE_STRING
                     {
                      before(grammarAccess.getSpecialFunctionAccess().getSTRINGTerminalRuleCall_2_2()); 
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SpecialFunction__Alternatives_21510); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SpecialFunction__Alternatives_21601); 
                      after(grammarAccess.getSpecialFunctionAccess().getSTRINGTerminalRuleCall_2_2()); 
 
                     }
@@ -2250,13 +2384,13 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 4 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:715:6: ( ',' )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:753:6: ( ',' )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:715:6: ( ',' )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:716:1: ','
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:753:6: ( ',' )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:754:1: ','
                     {
                      before(grammarAccess.getSpecialFunctionAccess().getCommaKeyword_2_3()); 
-                    match(input,11,FOLLOW_11_in_rule__SpecialFunction__Alternatives_21528); 
+                    match(input,13,FOLLOW_13_in_rule__SpecialFunction__Alternatives_21619); 
                      after(grammarAccess.getSpecialFunctionAccess().getCommaKeyword_2_3()); 
 
                     }
@@ -2265,16 +2399,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 5 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:723:6: ( ( rule__SpecialFunction__Group_2_4__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:761:6: ( ( rule__SpecialFunction__Group_2_4__0 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:723:6: ( ( rule__SpecialFunction__Group_2_4__0 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:724:1: ( rule__SpecialFunction__Group_2_4__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:761:6: ( ( rule__SpecialFunction__Group_2_4__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:762:1: ( rule__SpecialFunction__Group_2_4__0 )
                     {
                      before(grammarAccess.getSpecialFunctionAccess().getGroup_2_4()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:725:1: ( rule__SpecialFunction__Group_2_4__0 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:725:2: rule__SpecialFunction__Group_2_4__0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:763:1: ( rule__SpecialFunction__Group_2_4__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:763:2: rule__SpecialFunction__Group_2_4__0
                     {
-                    pushFollow(FOLLOW_rule__SpecialFunction__Group_2_4__0_in_rule__SpecialFunction__Alternatives_21547);
+                    pushFollow(FOLLOW_rule__SpecialFunction__Group_2_4__0_in_rule__SpecialFunction__Alternatives_21638);
                     rule__SpecialFunction__Group_2_4__0();
 
                     state._fsp--;
@@ -2290,16 +2424,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 6 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:729:6: ( ( rule__SpecialFunction__Group_2_5__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:767:6: ( ( rule__SpecialFunction__Group_2_5__0 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:729:6: ( ( rule__SpecialFunction__Group_2_5__0 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:730:1: ( rule__SpecialFunction__Group_2_5__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:767:6: ( ( rule__SpecialFunction__Group_2_5__0 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:768:1: ( rule__SpecialFunction__Group_2_5__0 )
                     {
                      before(grammarAccess.getSpecialFunctionAccess().getGroup_2_5()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:731:1: ( rule__SpecialFunction__Group_2_5__0 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:731:2: rule__SpecialFunction__Group_2_5__0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:769:1: ( rule__SpecialFunction__Group_2_5__0 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:769:2: rule__SpecialFunction__Group_2_5__0
                     {
-                    pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__0_in_rule__SpecialFunction__Alternatives_21565);
+                    pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__0_in_rule__SpecialFunction__Alternatives_21656);
                     rule__SpecialFunction__Group_2_5__0();
 
                     state._fsp--;
@@ -2315,16 +2449,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
                     }
                     break;
                 case 7 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:735:6: ( ( rule__SpecialFunction__FuncAssignment_2_6 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:773:6: ( ( rule__SpecialFunction__FuncAssignment_2_6 ) )
                     {
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:735:6: ( ( rule__SpecialFunction__FuncAssignment_2_6 ) )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:736:1: ( rule__SpecialFunction__FuncAssignment_2_6 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:773:6: ( ( rule__SpecialFunction__FuncAssignment_2_6 ) )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:774:1: ( rule__SpecialFunction__FuncAssignment_2_6 )
                     {
                      before(grammarAccess.getSpecialFunctionAccess().getFuncAssignment_2_6()); 
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:737:1: ( rule__SpecialFunction__FuncAssignment_2_6 )
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:737:2: rule__SpecialFunction__FuncAssignment_2_6
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:775:1: ( rule__SpecialFunction__FuncAssignment_2_6 )
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:775:2: rule__SpecialFunction__FuncAssignment_2_6
                     {
-                    pushFollow(FOLLOW_rule__SpecialFunction__FuncAssignment_2_6_in_rule__SpecialFunction__Alternatives_21583);
+                    pushFollow(FOLLOW_rule__SpecialFunction__FuncAssignment_2_6_in_rule__SpecialFunction__Alternatives_21674);
                     rule__SpecialFunction__FuncAssignment_2_6();
 
                     state._fsp--;
@@ -2357,21 +2491,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_0__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:748:1: rule__CLASS_ID__Group_0__0 : rule__CLASS_ID__Group_0__0__Impl rule__CLASS_ID__Group_0__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:786:1: rule__CLASS_ID__Group_0__0 : rule__CLASS_ID__Group_0__0__Impl rule__CLASS_ID__Group_0__1 ;
     public final void rule__CLASS_ID__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:752:1: ( rule__CLASS_ID__Group_0__0__Impl rule__CLASS_ID__Group_0__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:753:2: rule__CLASS_ID__Group_0__0__Impl rule__CLASS_ID__Group_0__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:790:1: ( rule__CLASS_ID__Group_0__0__Impl rule__CLASS_ID__Group_0__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:791:2: rule__CLASS_ID__Group_0__0__Impl rule__CLASS_ID__Group_0__1
             {
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_0__0__Impl_in_rule__CLASS_ID__Group_0__01614);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_0__0__Impl_in_rule__CLASS_ID__Group_0__01705);
             rule__CLASS_ID__Group_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_0__1_in_rule__CLASS_ID__Group_0__01617);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_0__1_in_rule__CLASS_ID__Group_0__01708);
             rule__CLASS_ID__Group_0__1();
 
             state._fsp--;
@@ -2395,20 +2529,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_0__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:760:1: rule__CLASS_ID__Group_0__0__Impl : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:798:1: rule__CLASS_ID__Group_0__0__Impl : ( RULE_ID ) ;
     public final void rule__CLASS_ID__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:764:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:765:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:802:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:803:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:765:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:766:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:803:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:804:1: RULE_ID
             {
              before(grammarAccess.getCLASS_IDAccess().getIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CLASS_ID__Group_0__0__Impl1644); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CLASS_ID__Group_0__0__Impl1735); 
              after(grammarAccess.getCLASS_IDAccess().getIDTerminalRuleCall_0_0()); 
 
             }
@@ -2432,16 +2566,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_0__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:777:1: rule__CLASS_ID__Group_0__1 : rule__CLASS_ID__Group_0__1__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:815:1: rule__CLASS_ID__Group_0__1 : rule__CLASS_ID__Group_0__1__Impl ;
     public final void rule__CLASS_ID__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:781:1: ( rule__CLASS_ID__Group_0__1__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:782:2: rule__CLASS_ID__Group_0__1__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:819:1: ( rule__CLASS_ID__Group_0__1__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:820:2: rule__CLASS_ID__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_0__1__Impl_in_rule__CLASS_ID__Group_0__11673);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_0__1__Impl_in_rule__CLASS_ID__Group_0__11764);
             rule__CLASS_ID__Group_0__1__Impl();
 
             state._fsp--;
@@ -2465,31 +2599,31 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_0__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:788:1: rule__CLASS_ID__Group_0__1__Impl : ( ( rule__CLASS_ID__Group_0_1__0 )? ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:826:1: rule__CLASS_ID__Group_0__1__Impl : ( ( rule__CLASS_ID__Group_0_1__0 )? ) ;
     public final void rule__CLASS_ID__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:792:1: ( ( ( rule__CLASS_ID__Group_0_1__0 )? ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:793:1: ( ( rule__CLASS_ID__Group_0_1__0 )? )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:830:1: ( ( ( rule__CLASS_ID__Group_0_1__0 )? ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:831:1: ( ( rule__CLASS_ID__Group_0_1__0 )? )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:793:1: ( ( rule__CLASS_ID__Group_0_1__0 )? )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:794:1: ( rule__CLASS_ID__Group_0_1__0 )?
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:831:1: ( ( rule__CLASS_ID__Group_0_1__0 )? )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:832:1: ( rule__CLASS_ID__Group_0_1__0 )?
             {
              before(grammarAccess.getCLASS_IDAccess().getGroup_0_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:795:1: ( rule__CLASS_ID__Group_0_1__0 )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:833:1: ( rule__CLASS_ID__Group_0_1__0 )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA10_0==12) ) {
-                alt10=1;
+            if ( (LA11_0==RULE_ID||(LA11_0>=11 && LA11_0<=12)||(LA11_0>=14 && LA11_0<=15)||(LA11_0>=17 && LA11_0<=18)) ) {
+                alt11=1;
             }
-            switch (alt10) {
+            switch (alt11) {
                 case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:795:2: rule__CLASS_ID__Group_0_1__0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:833:2: rule__CLASS_ID__Group_0_1__0
                     {
-                    pushFollow(FOLLOW_rule__CLASS_ID__Group_0_1__0_in_rule__CLASS_ID__Group_0__1__Impl1700);
+                    pushFollow(FOLLOW_rule__CLASS_ID__Group_0_1__0_in_rule__CLASS_ID__Group_0__1__Impl1791);
                     rule__CLASS_ID__Group_0_1__0();
 
                     state._fsp--;
@@ -2523,21 +2657,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_0_1__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:809:1: rule__CLASS_ID__Group_0_1__0 : rule__CLASS_ID__Group_0_1__0__Impl rule__CLASS_ID__Group_0_1__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:847:1: rule__CLASS_ID__Group_0_1__0 : rule__CLASS_ID__Group_0_1__0__Impl rule__CLASS_ID__Group_0_1__1 ;
     public final void rule__CLASS_ID__Group_0_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:813:1: ( rule__CLASS_ID__Group_0_1__0__Impl rule__CLASS_ID__Group_0_1__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:814:2: rule__CLASS_ID__Group_0_1__0__Impl rule__CLASS_ID__Group_0_1__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:851:1: ( rule__CLASS_ID__Group_0_1__0__Impl rule__CLASS_ID__Group_0_1__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:852:2: rule__CLASS_ID__Group_0_1__0__Impl rule__CLASS_ID__Group_0_1__1
             {
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_0_1__0__Impl_in_rule__CLASS_ID__Group_0_1__01735);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_0_1__0__Impl_in_rule__CLASS_ID__Group_0_1__01826);
             rule__CLASS_ID__Group_0_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_0_1__1_in_rule__CLASS_ID__Group_0_1__01738);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_0_1__1_in_rule__CLASS_ID__Group_0_1__01829);
             rule__CLASS_ID__Group_0_1__1();
 
             state._fsp--;
@@ -2561,21 +2695,42 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_0_1__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:821:1: rule__CLASS_ID__Group_0_1__0__Impl : ( '.' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:859:1: rule__CLASS_ID__Group_0_1__0__Impl : ( ( rule__CLASS_ID__Alternatives_0_1_0 )? ) ;
     public final void rule__CLASS_ID__Group_0_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:825:1: ( ( '.' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:826:1: ( '.' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:863:1: ( ( ( rule__CLASS_ID__Alternatives_0_1_0 )? ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:864:1: ( ( rule__CLASS_ID__Alternatives_0_1_0 )? )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:826:1: ( '.' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:827:1: '.'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:864:1: ( ( rule__CLASS_ID__Alternatives_0_1_0 )? )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:865:1: ( rule__CLASS_ID__Alternatives_0_1_0 )?
             {
-             before(grammarAccess.getCLASS_IDAccess().getFullStopKeyword_0_1_0()); 
-            match(input,12,FOLLOW_12_in_rule__CLASS_ID__Group_0_1__0__Impl1766); 
-             after(grammarAccess.getCLASS_IDAccess().getFullStopKeyword_0_1_0()); 
+             before(grammarAccess.getCLASS_IDAccess().getAlternatives_0_1_0()); 
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:866:1: ( rule__CLASS_ID__Alternatives_0_1_0 )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
+
+            if ( ((LA12_0>=11 && LA12_0<=12)) ) {
+                alt12=1;
+            }
+            switch (alt12) {
+                case 1 :
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:866:2: rule__CLASS_ID__Alternatives_0_1_0
+                    {
+                    pushFollow(FOLLOW_rule__CLASS_ID__Alternatives_0_1_0_in_rule__CLASS_ID__Group_0_1__0__Impl1856);
+                    rule__CLASS_ID__Alternatives_0_1_0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getCLASS_IDAccess().getAlternatives_0_1_0()); 
 
             }
 
@@ -2598,16 +2753,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_0_1__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:840:1: rule__CLASS_ID__Group_0_1__1 : rule__CLASS_ID__Group_0_1__1__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:876:1: rule__CLASS_ID__Group_0_1__1 : rule__CLASS_ID__Group_0_1__1__Impl ;
     public final void rule__CLASS_ID__Group_0_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:844:1: ( rule__CLASS_ID__Group_0_1__1__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:845:2: rule__CLASS_ID__Group_0_1__1__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:880:1: ( rule__CLASS_ID__Group_0_1__1__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:881:2: rule__CLASS_ID__Group_0_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_0_1__1__Impl_in_rule__CLASS_ID__Group_0_1__11797);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_0_1__1__Impl_in_rule__CLASS_ID__Group_0_1__11887);
             rule__CLASS_ID__Group_0_1__1__Impl();
 
             state._fsp--;
@@ -2631,20 +2786,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_0_1__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:851:1: rule__CLASS_ID__Group_0_1__1__Impl : ( ruleCLASS_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:887:1: rule__CLASS_ID__Group_0_1__1__Impl : ( ruleCLASS_ID ) ;
     public final void rule__CLASS_ID__Group_0_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:855:1: ( ( ruleCLASS_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:856:1: ( ruleCLASS_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:891:1: ( ( ruleCLASS_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:892:1: ( ruleCLASS_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:856:1: ( ruleCLASS_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:857:1: ruleCLASS_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:892:1: ( ruleCLASS_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:893:1: ruleCLASS_ID
             {
              before(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_0_1_1()); 
-            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_0_1__1__Impl1824);
+            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_0_1__1__Impl1914);
             ruleCLASS_ID();
 
             state._fsp--;
@@ -2672,21 +2827,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_1__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:872:1: rule__CLASS_ID__Group_1__0 : rule__CLASS_ID__Group_1__0__Impl rule__CLASS_ID__Group_1__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:908:1: rule__CLASS_ID__Group_1__0 : rule__CLASS_ID__Group_1__0__Impl rule__CLASS_ID__Group_1__1 ;
     public final void rule__CLASS_ID__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:876:1: ( rule__CLASS_ID__Group_1__0__Impl rule__CLASS_ID__Group_1__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:877:2: rule__CLASS_ID__Group_1__0__Impl rule__CLASS_ID__Group_1__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:912:1: ( rule__CLASS_ID__Group_1__0__Impl rule__CLASS_ID__Group_1__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:913:2: rule__CLASS_ID__Group_1__0__Impl rule__CLASS_ID__Group_1__1
             {
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_1__0__Impl_in_rule__CLASS_ID__Group_1__01857);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_1__0__Impl_in_rule__CLASS_ID__Group_1__01947);
             rule__CLASS_ID__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_1__1_in_rule__CLASS_ID__Group_1__01860);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_1__1_in_rule__CLASS_ID__Group_1__01950);
             rule__CLASS_ID__Group_1__1();
 
             state._fsp--;
@@ -2710,20 +2865,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_1__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:884:1: rule__CLASS_ID__Group_1__0__Impl : ( '!' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:920:1: rule__CLASS_ID__Group_1__0__Impl : ( '!' ) ;
     public final void rule__CLASS_ID__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:888:1: ( ( '!' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:889:1: ( '!' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:924:1: ( ( '!' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:925:1: ( '!' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:889:1: ( '!' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:890:1: '!'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:925:1: ( '!' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:926:1: '!'
             {
              before(grammarAccess.getCLASS_IDAccess().getExclamationMarkKeyword_1_0()); 
-            match(input,13,FOLLOW_13_in_rule__CLASS_ID__Group_1__0__Impl1888); 
+            match(input,14,FOLLOW_14_in_rule__CLASS_ID__Group_1__0__Impl1978); 
              after(grammarAccess.getCLASS_IDAccess().getExclamationMarkKeyword_1_0()); 
 
             }
@@ -2747,16 +2902,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_1__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:903:1: rule__CLASS_ID__Group_1__1 : rule__CLASS_ID__Group_1__1__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:939:1: rule__CLASS_ID__Group_1__1 : rule__CLASS_ID__Group_1__1__Impl ;
     public final void rule__CLASS_ID__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:907:1: ( rule__CLASS_ID__Group_1__1__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:908:2: rule__CLASS_ID__Group_1__1__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:943:1: ( rule__CLASS_ID__Group_1__1__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:944:2: rule__CLASS_ID__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_1__1__Impl_in_rule__CLASS_ID__Group_1__11919);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_1__1__Impl_in_rule__CLASS_ID__Group_1__12009);
             rule__CLASS_ID__Group_1__1__Impl();
 
             state._fsp--;
@@ -2780,20 +2935,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_1__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:914:1: rule__CLASS_ID__Group_1__1__Impl : ( ruleCLASS_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:950:1: rule__CLASS_ID__Group_1__1__Impl : ( ruleCLASS_ID ) ;
     public final void rule__CLASS_ID__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:918:1: ( ( ruleCLASS_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:919:1: ( ruleCLASS_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:954:1: ( ( ruleCLASS_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:955:1: ( ruleCLASS_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:919:1: ( ruleCLASS_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:920:1: ruleCLASS_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:955:1: ( ruleCLASS_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:956:1: ruleCLASS_ID
             {
              before(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_1_1()); 
-            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_1__1__Impl1946);
+            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_1__1__Impl2036);
             ruleCLASS_ID();
 
             state._fsp--;
@@ -2821,21 +2976,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_2__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:935:1: rule__CLASS_ID__Group_2__0 : rule__CLASS_ID__Group_2__0__Impl rule__CLASS_ID__Group_2__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:971:1: rule__CLASS_ID__Group_2__0 : rule__CLASS_ID__Group_2__0__Impl rule__CLASS_ID__Group_2__1 ;
     public final void rule__CLASS_ID__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:939:1: ( rule__CLASS_ID__Group_2__0__Impl rule__CLASS_ID__Group_2__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:940:2: rule__CLASS_ID__Group_2__0__Impl rule__CLASS_ID__Group_2__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:975:1: ( rule__CLASS_ID__Group_2__0__Impl rule__CLASS_ID__Group_2__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:976:2: rule__CLASS_ID__Group_2__0__Impl rule__CLASS_ID__Group_2__1
             {
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_2__0__Impl_in_rule__CLASS_ID__Group_2__01979);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_2__0__Impl_in_rule__CLASS_ID__Group_2__02069);
             rule__CLASS_ID__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_2__1_in_rule__CLASS_ID__Group_2__01982);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_2__1_in_rule__CLASS_ID__Group_2__02072);
             rule__CLASS_ID__Group_2__1();
 
             state._fsp--;
@@ -2859,20 +3014,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_2__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:947:1: rule__CLASS_ID__Group_2__0__Impl : ( '(' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:983:1: rule__CLASS_ID__Group_2__0__Impl : ( '(' ) ;
     public final void rule__CLASS_ID__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:951:1: ( ( '(' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:952:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:987:1: ( ( '(' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:988:1: ( '(' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:952:1: ( '(' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:953:1: '('
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:988:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:989:1: '('
             {
              before(grammarAccess.getCLASS_IDAccess().getLeftParenthesisKeyword_2_0()); 
-            match(input,14,FOLLOW_14_in_rule__CLASS_ID__Group_2__0__Impl2010); 
+            match(input,15,FOLLOW_15_in_rule__CLASS_ID__Group_2__0__Impl2100); 
              after(grammarAccess.getCLASS_IDAccess().getLeftParenthesisKeyword_2_0()); 
 
             }
@@ -2896,21 +3051,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_2__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:966:1: rule__CLASS_ID__Group_2__1 : rule__CLASS_ID__Group_2__1__Impl rule__CLASS_ID__Group_2__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1002:1: rule__CLASS_ID__Group_2__1 : rule__CLASS_ID__Group_2__1__Impl rule__CLASS_ID__Group_2__2 ;
     public final void rule__CLASS_ID__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:970:1: ( rule__CLASS_ID__Group_2__1__Impl rule__CLASS_ID__Group_2__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:971:2: rule__CLASS_ID__Group_2__1__Impl rule__CLASS_ID__Group_2__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1006:1: ( rule__CLASS_ID__Group_2__1__Impl rule__CLASS_ID__Group_2__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1007:2: rule__CLASS_ID__Group_2__1__Impl rule__CLASS_ID__Group_2__2
             {
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_2__1__Impl_in_rule__CLASS_ID__Group_2__12041);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_2__1__Impl_in_rule__CLASS_ID__Group_2__12131);
             rule__CLASS_ID__Group_2__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_2__2_in_rule__CLASS_ID__Group_2__12044);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_2__2_in_rule__CLASS_ID__Group_2__12134);
             rule__CLASS_ID__Group_2__2();
 
             state._fsp--;
@@ -2934,20 +3089,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_2__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:978:1: rule__CLASS_ID__Group_2__1__Impl : ( ruleCLASS_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1014:1: rule__CLASS_ID__Group_2__1__Impl : ( ruleCLASS_ID ) ;
     public final void rule__CLASS_ID__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:982:1: ( ( ruleCLASS_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:983:1: ( ruleCLASS_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1018:1: ( ( ruleCLASS_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1019:1: ( ruleCLASS_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:983:1: ( ruleCLASS_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:984:1: ruleCLASS_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1019:1: ( ruleCLASS_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1020:1: ruleCLASS_ID
             {
              before(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_2_1()); 
-            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_2__1__Impl2071);
+            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_2__1__Impl2161);
             ruleCLASS_ID();
 
             state._fsp--;
@@ -2975,22 +3130,17 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_2__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:995:1: rule__CLASS_ID__Group_2__2 : rule__CLASS_ID__Group_2__2__Impl rule__CLASS_ID__Group_2__3 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1031:1: rule__CLASS_ID__Group_2__2 : rule__CLASS_ID__Group_2__2__Impl ;
     public final void rule__CLASS_ID__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:999:1: ( rule__CLASS_ID__Group_2__2__Impl rule__CLASS_ID__Group_2__3 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1000:2: rule__CLASS_ID__Group_2__2__Impl rule__CLASS_ID__Group_2__3
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1035:1: ( rule__CLASS_ID__Group_2__2__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1036:2: rule__CLASS_ID__Group_2__2__Impl
             {
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_2__2__Impl_in_rule__CLASS_ID__Group_2__22100);
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_2__2__Impl_in_rule__CLASS_ID__Group_2__22190);
             rule__CLASS_ID__Group_2__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_2__3_in_rule__CLASS_ID__Group_2__22103);
-            rule__CLASS_ID__Group_2__3();
 
             state._fsp--;
 
@@ -3013,20 +3163,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CLASS_ID__Group_2__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1007:1: rule__CLASS_ID__Group_2__2__Impl : ( ')' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1042:1: rule__CLASS_ID__Group_2__2__Impl : ( ')' ) ;
     public final void rule__CLASS_ID__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1011:1: ( ( ')' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1012:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1046:1: ( ( ')' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1047:1: ( ')' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1012:1: ( ')' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1013:1: ')'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1047:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1048:1: ')'
             {
              before(grammarAccess.getCLASS_IDAccess().getRightParenthesisKeyword_2_2()); 
-            match(input,15,FOLLOW_15_in_rule__CLASS_ID__Group_2__2__Impl2131); 
+            match(input,16,FOLLOW_16_in_rule__CLASS_ID__Group_2__2__Impl2218); 
              after(grammarAccess.getCLASS_IDAccess().getRightParenthesisKeyword_2_2()); 
 
             }
@@ -3049,18 +3199,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__CLASS_ID__Group_2__2__Impl"
 
 
-    // $ANTLR start "rule__CLASS_ID__Group_2__3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1026:1: rule__CLASS_ID__Group_2__3 : rule__CLASS_ID__Group_2__3__Impl ;
-    public final void rule__CLASS_ID__Group_2__3() throws RecognitionException {
+    // $ANTLR start "rule__CLASS_ID__Group_3__0"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1067:1: rule__CLASS_ID__Group_3__0 : rule__CLASS_ID__Group_3__0__Impl rule__CLASS_ID__Group_3__1 ;
+    public final void rule__CLASS_ID__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1030:1: ( rule__CLASS_ID__Group_2__3__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1031:2: rule__CLASS_ID__Group_2__3__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1071:1: ( rule__CLASS_ID__Group_3__0__Impl rule__CLASS_ID__Group_3__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1072:2: rule__CLASS_ID__Group_3__0__Impl rule__CLASS_ID__Group_3__1
             {
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_2__3__Impl_in_rule__CLASS_ID__Group_2__32162);
-            rule__CLASS_ID__Group_2__3__Impl();
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_3__0__Impl_in_rule__CLASS_ID__Group_3__02255);
+            rule__CLASS_ID__Group_3__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_3__1_in_rule__CLASS_ID__Group_3__02258);
+            rule__CLASS_ID__Group_3__1();
 
             state._fsp--;
 
@@ -3079,46 +3234,25 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CLASS_ID__Group_2__3"
+    // $ANTLR end "rule__CLASS_ID__Group_3__0"
 
 
-    // $ANTLR start "rule__CLASS_ID__Group_2__3__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1037:1: rule__CLASS_ID__Group_2__3__Impl : ( ( rule__CLASS_ID__Group_2_3__0 )? ) ;
-    public final void rule__CLASS_ID__Group_2__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__CLASS_ID__Group_3__0__Impl"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1079:1: rule__CLASS_ID__Group_3__0__Impl : ( '!(' ) ;
+    public final void rule__CLASS_ID__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1041:1: ( ( ( rule__CLASS_ID__Group_2_3__0 )? ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1042:1: ( ( rule__CLASS_ID__Group_2_3__0 )? )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1083:1: ( ( '!(' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1084:1: ( '!(' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1042:1: ( ( rule__CLASS_ID__Group_2_3__0 )? )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1043:1: ( rule__CLASS_ID__Group_2_3__0 )?
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1084:1: ( '!(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1085:1: '!('
             {
-             before(grammarAccess.getCLASS_IDAccess().getGroup_2_3()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1044:1: ( rule__CLASS_ID__Group_2_3__0 )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
-
-            if ( (LA11_0==12) ) {
-                alt11=1;
-            }
-            switch (alt11) {
-                case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1044:2: rule__CLASS_ID__Group_2_3__0
-                    {
-                    pushFollow(FOLLOW_rule__CLASS_ID__Group_2_3__0_in_rule__CLASS_ID__Group_2__3__Impl2189);
-                    rule__CLASS_ID__Group_2_3__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getCLASS_IDAccess().getGroup_2_3()); 
+             before(grammarAccess.getCLASS_IDAccess().getExclamationMarkLeftParenthesisKeyword_3_0()); 
+            match(input,17,FOLLOW_17_in_rule__CLASS_ID__Group_3__0__Impl2286); 
+             after(grammarAccess.getCLASS_IDAccess().getExclamationMarkLeftParenthesisKeyword_3_0()); 
 
             }
 
@@ -3137,26 +3271,26 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CLASS_ID__Group_2__3__Impl"
+    // $ANTLR end "rule__CLASS_ID__Group_3__0__Impl"
 
 
-    // $ANTLR start "rule__CLASS_ID__Group_2_3__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1062:1: rule__CLASS_ID__Group_2_3__0 : rule__CLASS_ID__Group_2_3__0__Impl rule__CLASS_ID__Group_2_3__1 ;
-    public final void rule__CLASS_ID__Group_2_3__0() throws RecognitionException {
+    // $ANTLR start "rule__CLASS_ID__Group_3__1"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1098:1: rule__CLASS_ID__Group_3__1 : rule__CLASS_ID__Group_3__1__Impl rule__CLASS_ID__Group_3__2 ;
+    public final void rule__CLASS_ID__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1066:1: ( rule__CLASS_ID__Group_2_3__0__Impl rule__CLASS_ID__Group_2_3__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1067:2: rule__CLASS_ID__Group_2_3__0__Impl rule__CLASS_ID__Group_2_3__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1102:1: ( rule__CLASS_ID__Group_3__1__Impl rule__CLASS_ID__Group_3__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1103:2: rule__CLASS_ID__Group_3__1__Impl rule__CLASS_ID__Group_3__2
             {
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_2_3__0__Impl_in_rule__CLASS_ID__Group_2_3__02228);
-            rule__CLASS_ID__Group_2_3__0__Impl();
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_3__1__Impl_in_rule__CLASS_ID__Group_3__12317);
+            rule__CLASS_ID__Group_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_2_3__1_in_rule__CLASS_ID__Group_2_3__02231);
-            rule__CLASS_ID__Group_2_3__1();
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_3__2_in_rule__CLASS_ID__Group_3__12320);
+            rule__CLASS_ID__Group_3__2();
 
             state._fsp--;
 
@@ -3175,99 +3309,29 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CLASS_ID__Group_2_3__0"
+    // $ANTLR end "rule__CLASS_ID__Group_3__1"
 
 
-    // $ANTLR start "rule__CLASS_ID__Group_2_3__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1074:1: rule__CLASS_ID__Group_2_3__0__Impl : ( '.' ) ;
-    public final void rule__CLASS_ID__Group_2_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1078:1: ( ( '.' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1079:1: ( '.' )
-            {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1079:1: ( '.' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1080:1: '.'
-            {
-             before(grammarAccess.getCLASS_IDAccess().getFullStopKeyword_2_3_0()); 
-            match(input,12,FOLLOW_12_in_rule__CLASS_ID__Group_2_3__0__Impl2259); 
-             after(grammarAccess.getCLASS_IDAccess().getFullStopKeyword_2_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CLASS_ID__Group_2_3__0__Impl"
-
-
-    // $ANTLR start "rule__CLASS_ID__Group_2_3__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1093:1: rule__CLASS_ID__Group_2_3__1 : rule__CLASS_ID__Group_2_3__1__Impl ;
-    public final void rule__CLASS_ID__Group_2_3__1() throws RecognitionException {
+    // $ANTLR start "rule__CLASS_ID__Group_3__1__Impl"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1110:1: rule__CLASS_ID__Group_3__1__Impl : ( ruleCLASS_ID ) ;
+    public final void rule__CLASS_ID__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1097:1: ( rule__CLASS_ID__Group_2_3__1__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1098:2: rule__CLASS_ID__Group_2_3__1__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1114:1: ( ( ruleCLASS_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1115:1: ( ruleCLASS_ID )
             {
-            pushFollow(FOLLOW_rule__CLASS_ID__Group_2_3__1__Impl_in_rule__CLASS_ID__Group_2_3__12290);
-            rule__CLASS_ID__Group_2_3__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__CLASS_ID__Group_2_3__1"
-
-
-    // $ANTLR start "rule__CLASS_ID__Group_2_3__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1104:1: rule__CLASS_ID__Group_2_3__1__Impl : ( ruleCLASS_ID ) ;
-    public final void rule__CLASS_ID__Group_2_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1108:1: ( ( ruleCLASS_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1109:1: ( ruleCLASS_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1115:1: ( ruleCLASS_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1116:1: ruleCLASS_ID
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1109:1: ( ruleCLASS_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1110:1: ruleCLASS_ID
-            {
-             before(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_2_3_1()); 
-            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_2_3__1__Impl2317);
+             before(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_3_1()); 
+            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_3__1__Impl2347);
             ruleCLASS_ID();
 
             state._fsp--;
 
-             after(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_2_3_1()); 
+             after(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_3_1()); 
 
             }
 
@@ -3286,25 +3350,319 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__CLASS_ID__Group_2_3__1__Impl"
+    // $ANTLR end "rule__CLASS_ID__Group_3__1__Impl"
+
+
+    // $ANTLR start "rule__CLASS_ID__Group_3__2"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1127:1: rule__CLASS_ID__Group_3__2 : rule__CLASS_ID__Group_3__2__Impl ;
+    public final void rule__CLASS_ID__Group_3__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1131:1: ( rule__CLASS_ID__Group_3__2__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1132:2: rule__CLASS_ID__Group_3__2__Impl
+            {
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_3__2__Impl_in_rule__CLASS_ID__Group_3__22376);
+            rule__CLASS_ID__Group_3__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CLASS_ID__Group_3__2"
+
+
+    // $ANTLR start "rule__CLASS_ID__Group_3__2__Impl"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1138:1: rule__CLASS_ID__Group_3__2__Impl : ( ')' ) ;
+    public final void rule__CLASS_ID__Group_3__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1142:1: ( ( ')' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1143:1: ( ')' )
+            {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1143:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1144:1: ')'
+            {
+             before(grammarAccess.getCLASS_IDAccess().getRightParenthesisKeyword_3_2()); 
+            match(input,16,FOLLOW_16_in_rule__CLASS_ID__Group_3__2__Impl2404); 
+             after(grammarAccess.getCLASS_IDAccess().getRightParenthesisKeyword_3_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CLASS_ID__Group_3__2__Impl"
+
+
+    // $ANTLR start "rule__CLASS_ID__Group_4__0"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1163:1: rule__CLASS_ID__Group_4__0 : rule__CLASS_ID__Group_4__0__Impl rule__CLASS_ID__Group_4__1 ;
+    public final void rule__CLASS_ID__Group_4__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1167:1: ( rule__CLASS_ID__Group_4__0__Impl rule__CLASS_ID__Group_4__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1168:2: rule__CLASS_ID__Group_4__0__Impl rule__CLASS_ID__Group_4__1
+            {
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_4__0__Impl_in_rule__CLASS_ID__Group_4__02441);
+            rule__CLASS_ID__Group_4__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_4__1_in_rule__CLASS_ID__Group_4__02444);
+            rule__CLASS_ID__Group_4__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CLASS_ID__Group_4__0"
+
+
+    // $ANTLR start "rule__CLASS_ID__Group_4__0__Impl"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1175:1: rule__CLASS_ID__Group_4__0__Impl : ( '! (' ) ;
+    public final void rule__CLASS_ID__Group_4__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1179:1: ( ( '! (' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1180:1: ( '! (' )
+            {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1180:1: ( '! (' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1181:1: '! ('
+            {
+             before(grammarAccess.getCLASS_IDAccess().getExclamationMarkSpaceLeftParenthesisKeyword_4_0()); 
+            match(input,18,FOLLOW_18_in_rule__CLASS_ID__Group_4__0__Impl2472); 
+             after(grammarAccess.getCLASS_IDAccess().getExclamationMarkSpaceLeftParenthesisKeyword_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CLASS_ID__Group_4__0__Impl"
+
+
+    // $ANTLR start "rule__CLASS_ID__Group_4__1"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1194:1: rule__CLASS_ID__Group_4__1 : rule__CLASS_ID__Group_4__1__Impl rule__CLASS_ID__Group_4__2 ;
+    public final void rule__CLASS_ID__Group_4__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1198:1: ( rule__CLASS_ID__Group_4__1__Impl rule__CLASS_ID__Group_4__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1199:2: rule__CLASS_ID__Group_4__1__Impl rule__CLASS_ID__Group_4__2
+            {
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_4__1__Impl_in_rule__CLASS_ID__Group_4__12503);
+            rule__CLASS_ID__Group_4__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_4__2_in_rule__CLASS_ID__Group_4__12506);
+            rule__CLASS_ID__Group_4__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CLASS_ID__Group_4__1"
+
+
+    // $ANTLR start "rule__CLASS_ID__Group_4__1__Impl"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1206:1: rule__CLASS_ID__Group_4__1__Impl : ( ruleCLASS_ID ) ;
+    public final void rule__CLASS_ID__Group_4__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1210:1: ( ( ruleCLASS_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1211:1: ( ruleCLASS_ID )
+            {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1211:1: ( ruleCLASS_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1212:1: ruleCLASS_ID
+            {
+             before(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_4_1()); 
+            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_4__1__Impl2533);
+            ruleCLASS_ID();
+
+            state._fsp--;
+
+             after(grammarAccess.getCLASS_IDAccess().getCLASS_IDParserRuleCall_4_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CLASS_ID__Group_4__1__Impl"
+
+
+    // $ANTLR start "rule__CLASS_ID__Group_4__2"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1223:1: rule__CLASS_ID__Group_4__2 : rule__CLASS_ID__Group_4__2__Impl ;
+    public final void rule__CLASS_ID__Group_4__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1227:1: ( rule__CLASS_ID__Group_4__2__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1228:2: rule__CLASS_ID__Group_4__2__Impl
+            {
+            pushFollow(FOLLOW_rule__CLASS_ID__Group_4__2__Impl_in_rule__CLASS_ID__Group_4__22562);
+            rule__CLASS_ID__Group_4__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CLASS_ID__Group_4__2"
+
+
+    // $ANTLR start "rule__CLASS_ID__Group_4__2__Impl"
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1234:1: rule__CLASS_ID__Group_4__2__Impl : ( ')' ) ;
+    public final void rule__CLASS_ID__Group_4__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1238:1: ( ( ')' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1239:1: ( ')' )
+            {
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1239:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1240:1: ')'
+            {
+             before(grammarAccess.getCLASS_IDAccess().getRightParenthesisKeyword_4_2()); 
+            match(input,16,FOLLOW_16_in_rule__CLASS_ID__Group_4__2__Impl2590); 
+             after(grammarAccess.getCLASS_IDAccess().getRightParenthesisKeyword_4_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__CLASS_ID__Group_4__2__Impl"
 
 
     // $ANTLR start "rule__Bundle__Group__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1125:1: rule__Bundle__Group__0 : rule__Bundle__Group__0__Impl rule__Bundle__Group__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1259:1: rule__Bundle__Group__0 : rule__Bundle__Group__0__Impl rule__Bundle__Group__1 ;
     public final void rule__Bundle__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1129:1: ( rule__Bundle__Group__0__Impl rule__Bundle__Group__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1130:2: rule__Bundle__Group__0__Impl rule__Bundle__Group__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1263:1: ( rule__Bundle__Group__0__Impl rule__Bundle__Group__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1264:2: rule__Bundle__Group__0__Impl rule__Bundle__Group__1
             {
-            pushFollow(FOLLOW_rule__Bundle__Group__0__Impl_in_rule__Bundle__Group__02350);
+            pushFollow(FOLLOW_rule__Bundle__Group__0__Impl_in_rule__Bundle__Group__02627);
             rule__Bundle__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Bundle__Group__1_in_rule__Bundle__Group__02353);
+            pushFollow(FOLLOW_rule__Bundle__Group__1_in_rule__Bundle__Group__02630);
             rule__Bundle__Group__1();
 
             state._fsp--;
@@ -3328,20 +3686,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1137:1: rule__Bundle__Group__0__Impl : ( 'bundle' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1271:1: rule__Bundle__Group__0__Impl : ( 'bundle' ) ;
     public final void rule__Bundle__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1141:1: ( ( 'bundle' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1142:1: ( 'bundle' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1275:1: ( ( 'bundle' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1276:1: ( 'bundle' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1142:1: ( 'bundle' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1143:1: 'bundle'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1276:1: ( 'bundle' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1277:1: 'bundle'
             {
              before(grammarAccess.getBundleAccess().getBundleKeyword_0()); 
-            match(input,16,FOLLOW_16_in_rule__Bundle__Group__0__Impl2381); 
+            match(input,19,FOLLOW_19_in_rule__Bundle__Group__0__Impl2658); 
              after(grammarAccess.getBundleAccess().getBundleKeyword_0()); 
 
             }
@@ -3365,21 +3723,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1156:1: rule__Bundle__Group__1 : rule__Bundle__Group__1__Impl rule__Bundle__Group__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1290:1: rule__Bundle__Group__1 : rule__Bundle__Group__1__Impl rule__Bundle__Group__2 ;
     public final void rule__Bundle__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1160:1: ( rule__Bundle__Group__1__Impl rule__Bundle__Group__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1161:2: rule__Bundle__Group__1__Impl rule__Bundle__Group__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1294:1: ( rule__Bundle__Group__1__Impl rule__Bundle__Group__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1295:2: rule__Bundle__Group__1__Impl rule__Bundle__Group__2
             {
-            pushFollow(FOLLOW_rule__Bundle__Group__1__Impl_in_rule__Bundle__Group__12412);
+            pushFollow(FOLLOW_rule__Bundle__Group__1__Impl_in_rule__Bundle__Group__12689);
             rule__Bundle__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Bundle__Group__2_in_rule__Bundle__Group__12415);
+            pushFollow(FOLLOW_rule__Bundle__Group__2_in_rule__Bundle__Group__12692);
             rule__Bundle__Group__2();
 
             state._fsp--;
@@ -3403,23 +3761,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1168:1: rule__Bundle__Group__1__Impl : ( ( rule__Bundle__ComponentAssignment_1 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1302:1: rule__Bundle__Group__1__Impl : ( ( rule__Bundle__ComponentAssignment_1 ) ) ;
     public final void rule__Bundle__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1172:1: ( ( ( rule__Bundle__ComponentAssignment_1 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1173:1: ( ( rule__Bundle__ComponentAssignment_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1306:1: ( ( ( rule__Bundle__ComponentAssignment_1 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1307:1: ( ( rule__Bundle__ComponentAssignment_1 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1173:1: ( ( rule__Bundle__ComponentAssignment_1 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1174:1: ( rule__Bundle__ComponentAssignment_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1307:1: ( ( rule__Bundle__ComponentAssignment_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1308:1: ( rule__Bundle__ComponentAssignment_1 )
             {
              before(grammarAccess.getBundleAccess().getComponentAssignment_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1175:1: ( rule__Bundle__ComponentAssignment_1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1175:2: rule__Bundle__ComponentAssignment_1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1309:1: ( rule__Bundle__ComponentAssignment_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1309:2: rule__Bundle__ComponentAssignment_1
             {
-            pushFollow(FOLLOW_rule__Bundle__ComponentAssignment_1_in_rule__Bundle__Group__1__Impl2442);
+            pushFollow(FOLLOW_rule__Bundle__ComponentAssignment_1_in_rule__Bundle__Group__1__Impl2719);
             rule__Bundle__ComponentAssignment_1();
 
             state._fsp--;
@@ -3450,21 +3808,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1185:1: rule__Bundle__Group__2 : rule__Bundle__Group__2__Impl rule__Bundle__Group__3 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1319:1: rule__Bundle__Group__2 : rule__Bundle__Group__2__Impl rule__Bundle__Group__3 ;
     public final void rule__Bundle__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1189:1: ( rule__Bundle__Group__2__Impl rule__Bundle__Group__3 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1190:2: rule__Bundle__Group__2__Impl rule__Bundle__Group__3
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1323:1: ( rule__Bundle__Group__2__Impl rule__Bundle__Group__3 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1324:2: rule__Bundle__Group__2__Impl rule__Bundle__Group__3
             {
-            pushFollow(FOLLOW_rule__Bundle__Group__2__Impl_in_rule__Bundle__Group__22472);
+            pushFollow(FOLLOW_rule__Bundle__Group__2__Impl_in_rule__Bundle__Group__22749);
             rule__Bundle__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Bundle__Group__3_in_rule__Bundle__Group__22475);
+            pushFollow(FOLLOW_rule__Bundle__Group__3_in_rule__Bundle__Group__22752);
             rule__Bundle__Group__3();
 
             state._fsp--;
@@ -3488,23 +3846,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1197:1: rule__Bundle__Group__2__Impl : ( ( rule__Bundle__NameAssignment_2 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1331:1: rule__Bundle__Group__2__Impl : ( ( rule__Bundle__NameAssignment_2 ) ) ;
     public final void rule__Bundle__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1201:1: ( ( ( rule__Bundle__NameAssignment_2 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1202:1: ( ( rule__Bundle__NameAssignment_2 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1335:1: ( ( ( rule__Bundle__NameAssignment_2 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1336:1: ( ( rule__Bundle__NameAssignment_2 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1202:1: ( ( rule__Bundle__NameAssignment_2 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1203:1: ( rule__Bundle__NameAssignment_2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1336:1: ( ( rule__Bundle__NameAssignment_2 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1337:1: ( rule__Bundle__NameAssignment_2 )
             {
              before(grammarAccess.getBundleAccess().getNameAssignment_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1204:1: ( rule__Bundle__NameAssignment_2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1204:2: rule__Bundle__NameAssignment_2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1338:1: ( rule__Bundle__NameAssignment_2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1338:2: rule__Bundle__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__Bundle__NameAssignment_2_in_rule__Bundle__Group__2__Impl2502);
+            pushFollow(FOLLOW_rule__Bundle__NameAssignment_2_in_rule__Bundle__Group__2__Impl2779);
             rule__Bundle__NameAssignment_2();
 
             state._fsp--;
@@ -3535,21 +3893,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group__3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1214:1: rule__Bundle__Group__3 : rule__Bundle__Group__3__Impl rule__Bundle__Group__4 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1348:1: rule__Bundle__Group__3 : rule__Bundle__Group__3__Impl rule__Bundle__Group__4 ;
     public final void rule__Bundle__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1218:1: ( rule__Bundle__Group__3__Impl rule__Bundle__Group__4 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1219:2: rule__Bundle__Group__3__Impl rule__Bundle__Group__4
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1352:1: ( rule__Bundle__Group__3__Impl rule__Bundle__Group__4 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1353:2: rule__Bundle__Group__3__Impl rule__Bundle__Group__4
             {
-            pushFollow(FOLLOW_rule__Bundle__Group__3__Impl_in_rule__Bundle__Group__32532);
+            pushFollow(FOLLOW_rule__Bundle__Group__3__Impl_in_rule__Bundle__Group__32809);
             rule__Bundle__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Bundle__Group__4_in_rule__Bundle__Group__32535);
+            pushFollow(FOLLOW_rule__Bundle__Group__4_in_rule__Bundle__Group__32812);
             rule__Bundle__Group__4();
 
             state._fsp--;
@@ -3573,31 +3931,31 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group__3__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1226:1: rule__Bundle__Group__3__Impl : ( ( rule__Bundle__Group_3__0 )? ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1360:1: rule__Bundle__Group__3__Impl : ( ( rule__Bundle__Group_3__0 )? ) ;
     public final void rule__Bundle__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1230:1: ( ( ( rule__Bundle__Group_3__0 )? ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1231:1: ( ( rule__Bundle__Group_3__0 )? )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1364:1: ( ( ( rule__Bundle__Group_3__0 )? ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1365:1: ( ( rule__Bundle__Group_3__0 )? )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1231:1: ( ( rule__Bundle__Group_3__0 )? )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1232:1: ( rule__Bundle__Group_3__0 )?
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1365:1: ( ( rule__Bundle__Group_3__0 )? )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1366:1: ( rule__Bundle__Group_3__0 )?
             {
              before(grammarAccess.getBundleAccess().getGroup_3()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1233:1: ( rule__Bundle__Group_3__0 )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1367:1: ( rule__Bundle__Group_3__0 )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            if ( (LA12_0==14) ) {
-                alt12=1;
+            if ( (LA13_0==15) ) {
+                alt13=1;
             }
-            switch (alt12) {
+            switch (alt13) {
                 case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1233:2: rule__Bundle__Group_3__0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1367:2: rule__Bundle__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Bundle__Group_3__0_in_rule__Bundle__Group__3__Impl2562);
+                    pushFollow(FOLLOW_rule__Bundle__Group_3__0_in_rule__Bundle__Group__3__Impl2839);
                     rule__Bundle__Group_3__0();
 
                     state._fsp--;
@@ -3631,21 +3989,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group__4"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1243:1: rule__Bundle__Group__4 : rule__Bundle__Group__4__Impl rule__Bundle__Group__5 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1377:1: rule__Bundle__Group__4 : rule__Bundle__Group__4__Impl rule__Bundle__Group__5 ;
     public final void rule__Bundle__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1247:1: ( rule__Bundle__Group__4__Impl rule__Bundle__Group__5 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1248:2: rule__Bundle__Group__4__Impl rule__Bundle__Group__5
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1381:1: ( rule__Bundle__Group__4__Impl rule__Bundle__Group__5 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1382:2: rule__Bundle__Group__4__Impl rule__Bundle__Group__5
             {
-            pushFollow(FOLLOW_rule__Bundle__Group__4__Impl_in_rule__Bundle__Group__42593);
+            pushFollow(FOLLOW_rule__Bundle__Group__4__Impl_in_rule__Bundle__Group__42870);
             rule__Bundle__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Bundle__Group__5_in_rule__Bundle__Group__42596);
+            pushFollow(FOLLOW_rule__Bundle__Group__5_in_rule__Bundle__Group__42873);
             rule__Bundle__Group__5();
 
             state._fsp--;
@@ -3669,20 +4027,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group__4__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1255:1: rule__Bundle__Group__4__Impl : ( '{' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1389:1: rule__Bundle__Group__4__Impl : ( '{' ) ;
     public final void rule__Bundle__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1259:1: ( ( '{' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1260:1: ( '{' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1393:1: ( ( '{' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1394:1: ( '{' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1260:1: ( '{' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1261:1: '{'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1394:1: ( '{' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1395:1: '{'
             {
              before(grammarAccess.getBundleAccess().getLeftCurlyBracketKeyword_4()); 
-            match(input,17,FOLLOW_17_in_rule__Bundle__Group__4__Impl2624); 
+            match(input,20,FOLLOW_20_in_rule__Bundle__Group__4__Impl2901); 
              after(grammarAccess.getBundleAccess().getLeftCurlyBracketKeyword_4()); 
 
             }
@@ -3706,21 +4064,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group__5"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1274:1: rule__Bundle__Group__5 : rule__Bundle__Group__5__Impl rule__Bundle__Group__6 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1408:1: rule__Bundle__Group__5 : rule__Bundle__Group__5__Impl rule__Bundle__Group__6 ;
     public final void rule__Bundle__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1278:1: ( rule__Bundle__Group__5__Impl rule__Bundle__Group__6 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1279:2: rule__Bundle__Group__5__Impl rule__Bundle__Group__6
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1412:1: ( rule__Bundle__Group__5__Impl rule__Bundle__Group__6 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1413:2: rule__Bundle__Group__5__Impl rule__Bundle__Group__6
             {
-            pushFollow(FOLLOW_rule__Bundle__Group__5__Impl_in_rule__Bundle__Group__52655);
+            pushFollow(FOLLOW_rule__Bundle__Group__5__Impl_in_rule__Bundle__Group__52932);
             rule__Bundle__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Bundle__Group__6_in_rule__Bundle__Group__52658);
+            pushFollow(FOLLOW_rule__Bundle__Group__6_in_rule__Bundle__Group__52935);
             rule__Bundle__Group__6();
 
             state._fsp--;
@@ -3744,35 +4102,35 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group__5__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1286:1: rule__Bundle__Group__5__Impl : ( ( rule__Bundle__PromiseTypeAssignment_5 )* ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1420:1: rule__Bundle__Group__5__Impl : ( ( rule__Bundle__PromiseTypeAssignment_5 )* ) ;
     public final void rule__Bundle__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1290:1: ( ( ( rule__Bundle__PromiseTypeAssignment_5 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1291:1: ( ( rule__Bundle__PromiseTypeAssignment_5 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1424:1: ( ( ( rule__Bundle__PromiseTypeAssignment_5 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1425:1: ( ( rule__Bundle__PromiseTypeAssignment_5 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1291:1: ( ( rule__Bundle__PromiseTypeAssignment_5 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1292:1: ( rule__Bundle__PromiseTypeAssignment_5 )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1425:1: ( ( rule__Bundle__PromiseTypeAssignment_5 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1426:1: ( rule__Bundle__PromiseTypeAssignment_5 )*
             {
              before(grammarAccess.getBundleAccess().getPromiseTypeAssignment_5()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1293:1: ( rule__Bundle__PromiseTypeAssignment_5 )*
-            loop13:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1427:1: ( rule__Bundle__PromiseTypeAssignment_5 )*
+            loop14:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA13_0==RULE_ID) ) {
-                    alt13=1;
+                if ( (LA14_0==RULE_ID) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt14) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1293:2: rule__Bundle__PromiseTypeAssignment_5
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1427:2: rule__Bundle__PromiseTypeAssignment_5
             	    {
-            	    pushFollow(FOLLOW_rule__Bundle__PromiseTypeAssignment_5_in_rule__Bundle__Group__5__Impl2685);
+            	    pushFollow(FOLLOW_rule__Bundle__PromiseTypeAssignment_5_in_rule__Bundle__Group__5__Impl2962);
             	    rule__Bundle__PromiseTypeAssignment_5();
 
             	    state._fsp--;
@@ -3782,7 +4140,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop14;
                 }
             } while (true);
 
@@ -3809,16 +4167,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group__6"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1303:1: rule__Bundle__Group__6 : rule__Bundle__Group__6__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1437:1: rule__Bundle__Group__6 : rule__Bundle__Group__6__Impl ;
     public final void rule__Bundle__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1307:1: ( rule__Bundle__Group__6__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1308:2: rule__Bundle__Group__6__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1441:1: ( rule__Bundle__Group__6__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1442:2: rule__Bundle__Group__6__Impl
             {
-            pushFollow(FOLLOW_rule__Bundle__Group__6__Impl_in_rule__Bundle__Group__62716);
+            pushFollow(FOLLOW_rule__Bundle__Group__6__Impl_in_rule__Bundle__Group__62993);
             rule__Bundle__Group__6__Impl();
 
             state._fsp--;
@@ -3842,20 +4200,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group__6__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1314:1: rule__Bundle__Group__6__Impl : ( '}' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1448:1: rule__Bundle__Group__6__Impl : ( '}' ) ;
     public final void rule__Bundle__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1318:1: ( ( '}' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1319:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1452:1: ( ( '}' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1453:1: ( '}' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1319:1: ( '}' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1320:1: '}'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1453:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1454:1: '}'
             {
              before(grammarAccess.getBundleAccess().getRightCurlyBracketKeyword_6()); 
-            match(input,18,FOLLOW_18_in_rule__Bundle__Group__6__Impl2744); 
+            match(input,21,FOLLOW_21_in_rule__Bundle__Group__6__Impl3021); 
              after(grammarAccess.getBundleAccess().getRightCurlyBracketKeyword_6()); 
 
             }
@@ -3879,21 +4237,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group_3__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1347:1: rule__Bundle__Group_3__0 : rule__Bundle__Group_3__0__Impl rule__Bundle__Group_3__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1481:1: rule__Bundle__Group_3__0 : rule__Bundle__Group_3__0__Impl rule__Bundle__Group_3__1 ;
     public final void rule__Bundle__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1351:1: ( rule__Bundle__Group_3__0__Impl rule__Bundle__Group_3__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1352:2: rule__Bundle__Group_3__0__Impl rule__Bundle__Group_3__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1485:1: ( rule__Bundle__Group_3__0__Impl rule__Bundle__Group_3__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1486:2: rule__Bundle__Group_3__0__Impl rule__Bundle__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Bundle__Group_3__0__Impl_in_rule__Bundle__Group_3__02789);
+            pushFollow(FOLLOW_rule__Bundle__Group_3__0__Impl_in_rule__Bundle__Group_3__03066);
             rule__Bundle__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Bundle__Group_3__1_in_rule__Bundle__Group_3__02792);
+            pushFollow(FOLLOW_rule__Bundle__Group_3__1_in_rule__Bundle__Group_3__03069);
             rule__Bundle__Group_3__1();
 
             state._fsp--;
@@ -3917,20 +4275,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group_3__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1359:1: rule__Bundle__Group_3__0__Impl : ( '(' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1493:1: rule__Bundle__Group_3__0__Impl : ( '(' ) ;
     public final void rule__Bundle__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1363:1: ( ( '(' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1364:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1497:1: ( ( '(' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1498:1: ( '(' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1364:1: ( '(' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1365:1: '('
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1498:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1499:1: '('
             {
              before(grammarAccess.getBundleAccess().getLeftParenthesisKeyword_3_0()); 
-            match(input,14,FOLLOW_14_in_rule__Bundle__Group_3__0__Impl2820); 
+            match(input,15,FOLLOW_15_in_rule__Bundle__Group_3__0__Impl3097); 
              after(grammarAccess.getBundleAccess().getLeftParenthesisKeyword_3_0()); 
 
             }
@@ -3954,21 +4312,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group_3__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1378:1: rule__Bundle__Group_3__1 : rule__Bundle__Group_3__1__Impl rule__Bundle__Group_3__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1512:1: rule__Bundle__Group_3__1 : rule__Bundle__Group_3__1__Impl rule__Bundle__Group_3__2 ;
     public final void rule__Bundle__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1382:1: ( rule__Bundle__Group_3__1__Impl rule__Bundle__Group_3__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1383:2: rule__Bundle__Group_3__1__Impl rule__Bundle__Group_3__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1516:1: ( rule__Bundle__Group_3__1__Impl rule__Bundle__Group_3__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1517:2: rule__Bundle__Group_3__1__Impl rule__Bundle__Group_3__2
             {
-            pushFollow(FOLLOW_rule__Bundle__Group_3__1__Impl_in_rule__Bundle__Group_3__12851);
+            pushFollow(FOLLOW_rule__Bundle__Group_3__1__Impl_in_rule__Bundle__Group_3__13128);
             rule__Bundle__Group_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Bundle__Group_3__2_in_rule__Bundle__Group_3__12854);
+            pushFollow(FOLLOW_rule__Bundle__Group_3__2_in_rule__Bundle__Group_3__13131);
             rule__Bundle__Group_3__2();
 
             state._fsp--;
@@ -3992,23 +4350,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group_3__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1390:1: rule__Bundle__Group_3__1__Impl : ( ( rule__Bundle__VariablesAssignment_3_1 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1524:1: rule__Bundle__Group_3__1__Impl : ( ( rule__Bundle__VariablesAssignment_3_1 ) ) ;
     public final void rule__Bundle__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1394:1: ( ( ( rule__Bundle__VariablesAssignment_3_1 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1395:1: ( ( rule__Bundle__VariablesAssignment_3_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1528:1: ( ( ( rule__Bundle__VariablesAssignment_3_1 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1529:1: ( ( rule__Bundle__VariablesAssignment_3_1 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1395:1: ( ( rule__Bundle__VariablesAssignment_3_1 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1396:1: ( rule__Bundle__VariablesAssignment_3_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1529:1: ( ( rule__Bundle__VariablesAssignment_3_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1530:1: ( rule__Bundle__VariablesAssignment_3_1 )
             {
              before(grammarAccess.getBundleAccess().getVariablesAssignment_3_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1397:1: ( rule__Bundle__VariablesAssignment_3_1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1397:2: rule__Bundle__VariablesAssignment_3_1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1531:1: ( rule__Bundle__VariablesAssignment_3_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1531:2: rule__Bundle__VariablesAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Bundle__VariablesAssignment_3_1_in_rule__Bundle__Group_3__1__Impl2881);
+            pushFollow(FOLLOW_rule__Bundle__VariablesAssignment_3_1_in_rule__Bundle__Group_3__1__Impl3158);
             rule__Bundle__VariablesAssignment_3_1();
 
             state._fsp--;
@@ -4039,21 +4397,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group_3__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1407:1: rule__Bundle__Group_3__2 : rule__Bundle__Group_3__2__Impl rule__Bundle__Group_3__3 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1541:1: rule__Bundle__Group_3__2 : rule__Bundle__Group_3__2__Impl rule__Bundle__Group_3__3 ;
     public final void rule__Bundle__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1411:1: ( rule__Bundle__Group_3__2__Impl rule__Bundle__Group_3__3 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1412:2: rule__Bundle__Group_3__2__Impl rule__Bundle__Group_3__3
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1545:1: ( rule__Bundle__Group_3__2__Impl rule__Bundle__Group_3__3 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1546:2: rule__Bundle__Group_3__2__Impl rule__Bundle__Group_3__3
             {
-            pushFollow(FOLLOW_rule__Bundle__Group_3__2__Impl_in_rule__Bundle__Group_3__22911);
+            pushFollow(FOLLOW_rule__Bundle__Group_3__2__Impl_in_rule__Bundle__Group_3__23188);
             rule__Bundle__Group_3__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Bundle__Group_3__3_in_rule__Bundle__Group_3__22914);
+            pushFollow(FOLLOW_rule__Bundle__Group_3__3_in_rule__Bundle__Group_3__23191);
             rule__Bundle__Group_3__3();
 
             state._fsp--;
@@ -4077,35 +4435,35 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group_3__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1419:1: rule__Bundle__Group_3__2__Impl : ( ( rule__Bundle__Group_3_2__0 )* ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1553:1: rule__Bundle__Group_3__2__Impl : ( ( rule__Bundle__Group_3_2__0 )* ) ;
     public final void rule__Bundle__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1423:1: ( ( ( rule__Bundle__Group_3_2__0 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1424:1: ( ( rule__Bundle__Group_3_2__0 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1557:1: ( ( ( rule__Bundle__Group_3_2__0 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1558:1: ( ( rule__Bundle__Group_3_2__0 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1424:1: ( ( rule__Bundle__Group_3_2__0 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1425:1: ( rule__Bundle__Group_3_2__0 )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1558:1: ( ( rule__Bundle__Group_3_2__0 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1559:1: ( rule__Bundle__Group_3_2__0 )*
             {
              before(grammarAccess.getBundleAccess().getGroup_3_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1426:1: ( rule__Bundle__Group_3_2__0 )*
-            loop14:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1560:1: ( rule__Bundle__Group_3_2__0 )*
+            loop15:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt15=2;
+                int LA15_0 = input.LA(1);
 
-                if ( (LA14_0==11) ) {
-                    alt14=1;
+                if ( (LA15_0==13) ) {
+                    alt15=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt15) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1426:2: rule__Bundle__Group_3_2__0
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1560:2: rule__Bundle__Group_3_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Bundle__Group_3_2__0_in_rule__Bundle__Group_3__2__Impl2941);
+            	    pushFollow(FOLLOW_rule__Bundle__Group_3_2__0_in_rule__Bundle__Group_3__2__Impl3218);
             	    rule__Bundle__Group_3_2__0();
 
             	    state._fsp--;
@@ -4115,7 +4473,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop15;
                 }
             } while (true);
 
@@ -4142,16 +4500,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group_3__3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1436:1: rule__Bundle__Group_3__3 : rule__Bundle__Group_3__3__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1570:1: rule__Bundle__Group_3__3 : rule__Bundle__Group_3__3__Impl ;
     public final void rule__Bundle__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1440:1: ( rule__Bundle__Group_3__3__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1441:2: rule__Bundle__Group_3__3__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1574:1: ( rule__Bundle__Group_3__3__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1575:2: rule__Bundle__Group_3__3__Impl
             {
-            pushFollow(FOLLOW_rule__Bundle__Group_3__3__Impl_in_rule__Bundle__Group_3__32972);
+            pushFollow(FOLLOW_rule__Bundle__Group_3__3__Impl_in_rule__Bundle__Group_3__33249);
             rule__Bundle__Group_3__3__Impl();
 
             state._fsp--;
@@ -4175,20 +4533,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group_3__3__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1447:1: rule__Bundle__Group_3__3__Impl : ( ')' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1581:1: rule__Bundle__Group_3__3__Impl : ( ')' ) ;
     public final void rule__Bundle__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1451:1: ( ( ')' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1452:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1585:1: ( ( ')' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1586:1: ( ')' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1452:1: ( ')' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1453:1: ')'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1586:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1587:1: ')'
             {
              before(grammarAccess.getBundleAccess().getRightParenthesisKeyword_3_3()); 
-            match(input,15,FOLLOW_15_in_rule__Bundle__Group_3__3__Impl3000); 
+            match(input,16,FOLLOW_16_in_rule__Bundle__Group_3__3__Impl3277); 
              after(grammarAccess.getBundleAccess().getRightParenthesisKeyword_3_3()); 
 
             }
@@ -4212,21 +4570,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group_3_2__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1474:1: rule__Bundle__Group_3_2__0 : rule__Bundle__Group_3_2__0__Impl rule__Bundle__Group_3_2__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1608:1: rule__Bundle__Group_3_2__0 : rule__Bundle__Group_3_2__0__Impl rule__Bundle__Group_3_2__1 ;
     public final void rule__Bundle__Group_3_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1478:1: ( rule__Bundle__Group_3_2__0__Impl rule__Bundle__Group_3_2__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1479:2: rule__Bundle__Group_3_2__0__Impl rule__Bundle__Group_3_2__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1612:1: ( rule__Bundle__Group_3_2__0__Impl rule__Bundle__Group_3_2__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1613:2: rule__Bundle__Group_3_2__0__Impl rule__Bundle__Group_3_2__1
             {
-            pushFollow(FOLLOW_rule__Bundle__Group_3_2__0__Impl_in_rule__Bundle__Group_3_2__03039);
+            pushFollow(FOLLOW_rule__Bundle__Group_3_2__0__Impl_in_rule__Bundle__Group_3_2__03316);
             rule__Bundle__Group_3_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Bundle__Group_3_2__1_in_rule__Bundle__Group_3_2__03042);
+            pushFollow(FOLLOW_rule__Bundle__Group_3_2__1_in_rule__Bundle__Group_3_2__03319);
             rule__Bundle__Group_3_2__1();
 
             state._fsp--;
@@ -4250,20 +4608,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group_3_2__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1486:1: rule__Bundle__Group_3_2__0__Impl : ( ',' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1620:1: rule__Bundle__Group_3_2__0__Impl : ( ',' ) ;
     public final void rule__Bundle__Group_3_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1490:1: ( ( ',' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1491:1: ( ',' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1624:1: ( ( ',' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1625:1: ( ',' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1491:1: ( ',' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1492:1: ','
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1625:1: ( ',' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1626:1: ','
             {
              before(grammarAccess.getBundleAccess().getCommaKeyword_3_2_0()); 
-            match(input,11,FOLLOW_11_in_rule__Bundle__Group_3_2__0__Impl3070); 
+            match(input,13,FOLLOW_13_in_rule__Bundle__Group_3_2__0__Impl3347); 
              after(grammarAccess.getBundleAccess().getCommaKeyword_3_2_0()); 
 
             }
@@ -4287,16 +4645,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group_3_2__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1505:1: rule__Bundle__Group_3_2__1 : rule__Bundle__Group_3_2__1__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1639:1: rule__Bundle__Group_3_2__1 : rule__Bundle__Group_3_2__1__Impl ;
     public final void rule__Bundle__Group_3_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1509:1: ( rule__Bundle__Group_3_2__1__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1510:2: rule__Bundle__Group_3_2__1__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1643:1: ( rule__Bundle__Group_3_2__1__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1644:2: rule__Bundle__Group_3_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Bundle__Group_3_2__1__Impl_in_rule__Bundle__Group_3_2__13101);
+            pushFollow(FOLLOW_rule__Bundle__Group_3_2__1__Impl_in_rule__Bundle__Group_3_2__13378);
             rule__Bundle__Group_3_2__1__Impl();
 
             state._fsp--;
@@ -4320,23 +4678,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__Group_3_2__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1516:1: rule__Bundle__Group_3_2__1__Impl : ( ( rule__Bundle__VariablesAssignment_3_2_1 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1650:1: rule__Bundle__Group_3_2__1__Impl : ( ( rule__Bundle__VariablesAssignment_3_2_1 ) ) ;
     public final void rule__Bundle__Group_3_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1520:1: ( ( ( rule__Bundle__VariablesAssignment_3_2_1 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1521:1: ( ( rule__Bundle__VariablesAssignment_3_2_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1654:1: ( ( ( rule__Bundle__VariablesAssignment_3_2_1 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1655:1: ( ( rule__Bundle__VariablesAssignment_3_2_1 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1521:1: ( ( rule__Bundle__VariablesAssignment_3_2_1 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1522:1: ( rule__Bundle__VariablesAssignment_3_2_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1655:1: ( ( rule__Bundle__VariablesAssignment_3_2_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1656:1: ( rule__Bundle__VariablesAssignment_3_2_1 )
             {
              before(grammarAccess.getBundleAccess().getVariablesAssignment_3_2_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1523:1: ( rule__Bundle__VariablesAssignment_3_2_1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1523:2: rule__Bundle__VariablesAssignment_3_2_1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1657:1: ( rule__Bundle__VariablesAssignment_3_2_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1657:2: rule__Bundle__VariablesAssignment_3_2_1
             {
-            pushFollow(FOLLOW_rule__Bundle__VariablesAssignment_3_2_1_in_rule__Bundle__Group_3_2__1__Impl3128);
+            pushFollow(FOLLOW_rule__Bundle__VariablesAssignment_3_2_1_in_rule__Bundle__Group_3_2__1__Impl3405);
             rule__Bundle__VariablesAssignment_3_2_1();
 
             state._fsp--;
@@ -4367,21 +4725,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromiseType__Group__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1537:1: rule__BundlePromiseType__Group__0 : rule__BundlePromiseType__Group__0__Impl rule__BundlePromiseType__Group__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1671:1: rule__BundlePromiseType__Group__0 : rule__BundlePromiseType__Group__0__Impl rule__BundlePromiseType__Group__1 ;
     public final void rule__BundlePromiseType__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1541:1: ( rule__BundlePromiseType__Group__0__Impl rule__BundlePromiseType__Group__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1542:2: rule__BundlePromiseType__Group__0__Impl rule__BundlePromiseType__Group__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1675:1: ( rule__BundlePromiseType__Group__0__Impl rule__BundlePromiseType__Group__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1676:2: rule__BundlePromiseType__Group__0__Impl rule__BundlePromiseType__Group__1
             {
-            pushFollow(FOLLOW_rule__BundlePromiseType__Group__0__Impl_in_rule__BundlePromiseType__Group__03162);
+            pushFollow(FOLLOW_rule__BundlePromiseType__Group__0__Impl_in_rule__BundlePromiseType__Group__03439);
             rule__BundlePromiseType__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BundlePromiseType__Group__1_in_rule__BundlePromiseType__Group__03165);
+            pushFollow(FOLLOW_rule__BundlePromiseType__Group__1_in_rule__BundlePromiseType__Group__03442);
             rule__BundlePromiseType__Group__1();
 
             state._fsp--;
@@ -4405,23 +4763,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromiseType__Group__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1549:1: rule__BundlePromiseType__Group__0__Impl : ( ( rule__BundlePromiseType__NameAssignment_0 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1683:1: rule__BundlePromiseType__Group__0__Impl : ( ( rule__BundlePromiseType__NameAssignment_0 ) ) ;
     public final void rule__BundlePromiseType__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1553:1: ( ( ( rule__BundlePromiseType__NameAssignment_0 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1554:1: ( ( rule__BundlePromiseType__NameAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1687:1: ( ( ( rule__BundlePromiseType__NameAssignment_0 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1688:1: ( ( rule__BundlePromiseType__NameAssignment_0 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1554:1: ( ( rule__BundlePromiseType__NameAssignment_0 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1555:1: ( rule__BundlePromiseType__NameAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1688:1: ( ( rule__BundlePromiseType__NameAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1689:1: ( rule__BundlePromiseType__NameAssignment_0 )
             {
              before(grammarAccess.getBundlePromiseTypeAccess().getNameAssignment_0()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1556:1: ( rule__BundlePromiseType__NameAssignment_0 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1556:2: rule__BundlePromiseType__NameAssignment_0
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1690:1: ( rule__BundlePromiseType__NameAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1690:2: rule__BundlePromiseType__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__BundlePromiseType__NameAssignment_0_in_rule__BundlePromiseType__Group__0__Impl3192);
+            pushFollow(FOLLOW_rule__BundlePromiseType__NameAssignment_0_in_rule__BundlePromiseType__Group__0__Impl3469);
             rule__BundlePromiseType__NameAssignment_0();
 
             state._fsp--;
@@ -4452,21 +4810,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromiseType__Group__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1566:1: rule__BundlePromiseType__Group__1 : rule__BundlePromiseType__Group__1__Impl rule__BundlePromiseType__Group__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1700:1: rule__BundlePromiseType__Group__1 : rule__BundlePromiseType__Group__1__Impl rule__BundlePromiseType__Group__2 ;
     public final void rule__BundlePromiseType__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1570:1: ( rule__BundlePromiseType__Group__1__Impl rule__BundlePromiseType__Group__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1571:2: rule__BundlePromiseType__Group__1__Impl rule__BundlePromiseType__Group__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1704:1: ( rule__BundlePromiseType__Group__1__Impl rule__BundlePromiseType__Group__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1705:2: rule__BundlePromiseType__Group__1__Impl rule__BundlePromiseType__Group__2
             {
-            pushFollow(FOLLOW_rule__BundlePromiseType__Group__1__Impl_in_rule__BundlePromiseType__Group__13222);
+            pushFollow(FOLLOW_rule__BundlePromiseType__Group__1__Impl_in_rule__BundlePromiseType__Group__13499);
             rule__BundlePromiseType__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BundlePromiseType__Group__2_in_rule__BundlePromiseType__Group__13225);
+            pushFollow(FOLLOW_rule__BundlePromiseType__Group__2_in_rule__BundlePromiseType__Group__13502);
             rule__BundlePromiseType__Group__2();
 
             state._fsp--;
@@ -4490,20 +4848,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromiseType__Group__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1578:1: rule__BundlePromiseType__Group__1__Impl : ( ':' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1712:1: rule__BundlePromiseType__Group__1__Impl : ( ':' ) ;
     public final void rule__BundlePromiseType__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1582:1: ( ( ':' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1583:1: ( ':' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1716:1: ( ( ':' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1717:1: ( ':' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1583:1: ( ':' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1584:1: ':'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1717:1: ( ':' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1718:1: ':'
             {
              before(grammarAccess.getBundlePromiseTypeAccess().getColonKeyword_1()); 
-            match(input,19,FOLLOW_19_in_rule__BundlePromiseType__Group__1__Impl3253); 
+            match(input,22,FOLLOW_22_in_rule__BundlePromiseType__Group__1__Impl3530); 
              after(grammarAccess.getBundlePromiseTypeAccess().getColonKeyword_1()); 
 
             }
@@ -4527,21 +4885,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromiseType__Group__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1597:1: rule__BundlePromiseType__Group__2 : rule__BundlePromiseType__Group__2__Impl rule__BundlePromiseType__Group__3 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1731:1: rule__BundlePromiseType__Group__2 : rule__BundlePromiseType__Group__2__Impl rule__BundlePromiseType__Group__3 ;
     public final void rule__BundlePromiseType__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1601:1: ( rule__BundlePromiseType__Group__2__Impl rule__BundlePromiseType__Group__3 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1602:2: rule__BundlePromiseType__Group__2__Impl rule__BundlePromiseType__Group__3
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1735:1: ( rule__BundlePromiseType__Group__2__Impl rule__BundlePromiseType__Group__3 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1736:2: rule__BundlePromiseType__Group__2__Impl rule__BundlePromiseType__Group__3
             {
-            pushFollow(FOLLOW_rule__BundlePromiseType__Group__2__Impl_in_rule__BundlePromiseType__Group__23284);
+            pushFollow(FOLLOW_rule__BundlePromiseType__Group__2__Impl_in_rule__BundlePromiseType__Group__23561);
             rule__BundlePromiseType__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BundlePromiseType__Group__3_in_rule__BundlePromiseType__Group__23287);
+            pushFollow(FOLLOW_rule__BundlePromiseType__Group__3_in_rule__BundlePromiseType__Group__23564);
             rule__BundlePromiseType__Group__3();
 
             state._fsp--;
@@ -4565,35 +4923,35 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromiseType__Group__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1609:1: rule__BundlePromiseType__Group__2__Impl : ( ( rule__BundlePromiseType__PromisesAssignment_2 )* ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1743:1: rule__BundlePromiseType__Group__2__Impl : ( ( rule__BundlePromiseType__PromisesAssignment_2 )* ) ;
     public final void rule__BundlePromiseType__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1613:1: ( ( ( rule__BundlePromiseType__PromisesAssignment_2 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1614:1: ( ( rule__BundlePromiseType__PromisesAssignment_2 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1747:1: ( ( ( rule__BundlePromiseType__PromisesAssignment_2 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1748:1: ( ( rule__BundlePromiseType__PromisesAssignment_2 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1614:1: ( ( rule__BundlePromiseType__PromisesAssignment_2 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1615:1: ( rule__BundlePromiseType__PromisesAssignment_2 )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1748:1: ( ( rule__BundlePromiseType__PromisesAssignment_2 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1749:1: ( rule__BundlePromiseType__PromisesAssignment_2 )*
             {
              before(grammarAccess.getBundlePromiseTypeAccess().getPromisesAssignment_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1616:1: ( rule__BundlePromiseType__PromisesAssignment_2 )*
-            loop15:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1750:1: ( rule__BundlePromiseType__PromisesAssignment_2 )*
+            loop16:
             do {
-                int alt15=2;
-                int LA15_0 = input.LA(1);
+                int alt16=2;
+                int LA16_0 = input.LA(1);
 
-                if ( (LA15_0==RULE_STRING) ) {
-                    alt15=1;
+                if ( (LA16_0==RULE_STRING) ) {
+                    alt16=1;
                 }
 
 
-                switch (alt15) {
+                switch (alt16) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1616:2: rule__BundlePromiseType__PromisesAssignment_2
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1750:2: rule__BundlePromiseType__PromisesAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__BundlePromiseType__PromisesAssignment_2_in_rule__BundlePromiseType__Group__2__Impl3314);
+            	    pushFollow(FOLLOW_rule__BundlePromiseType__PromisesAssignment_2_in_rule__BundlePromiseType__Group__2__Impl3591);
             	    rule__BundlePromiseType__PromisesAssignment_2();
 
             	    state._fsp--;
@@ -4603,7 +4961,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop15;
+            	    break loop16;
                 }
             } while (true);
 
@@ -4630,16 +4988,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromiseType__Group__3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1626:1: rule__BundlePromiseType__Group__3 : rule__BundlePromiseType__Group__3__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1760:1: rule__BundlePromiseType__Group__3 : rule__BundlePromiseType__Group__3__Impl ;
     public final void rule__BundlePromiseType__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1630:1: ( rule__BundlePromiseType__Group__3__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1631:2: rule__BundlePromiseType__Group__3__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1764:1: ( rule__BundlePromiseType__Group__3__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1765:2: rule__BundlePromiseType__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__BundlePromiseType__Group__3__Impl_in_rule__BundlePromiseType__Group__33345);
+            pushFollow(FOLLOW_rule__BundlePromiseType__Group__3__Impl_in_rule__BundlePromiseType__Group__33622);
             rule__BundlePromiseType__Group__3__Impl();
 
             state._fsp--;
@@ -4663,44 +5021,44 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromiseType__Group__3__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1637:1: rule__BundlePromiseType__Group__3__Impl : ( ( rule__BundlePromiseType__ClassesAssignment_3 )* ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1771:1: rule__BundlePromiseType__Group__3__Impl : ( ( rule__BundlePromiseType__ClassesAssignment_3 )* ) ;
     public final void rule__BundlePromiseType__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1641:1: ( ( ( rule__BundlePromiseType__ClassesAssignment_3 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1642:1: ( ( rule__BundlePromiseType__ClassesAssignment_3 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1775:1: ( ( ( rule__BundlePromiseType__ClassesAssignment_3 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1776:1: ( ( rule__BundlePromiseType__ClassesAssignment_3 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1642:1: ( ( rule__BundlePromiseType__ClassesAssignment_3 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1643:1: ( rule__BundlePromiseType__ClassesAssignment_3 )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1776:1: ( ( rule__BundlePromiseType__ClassesAssignment_3 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1777:1: ( rule__BundlePromiseType__ClassesAssignment_3 )*
             {
              before(grammarAccess.getBundlePromiseTypeAccess().getClassesAssignment_3()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1644:1: ( rule__BundlePromiseType__ClassesAssignment_3 )*
-            loop16:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1778:1: ( rule__BundlePromiseType__ClassesAssignment_3 )*
+            loop17:
             do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( (LA16_0==RULE_ID) ) {
-                    int LA16_2 = input.LA(2);
+                if ( (LA17_0==RULE_ID) ) {
+                    int LA17_2 = input.LA(2);
 
-                    if ( (LA16_2==12||LA16_2==20) ) {
-                        alt16=1;
+                    if ( (LA17_2==RULE_ID||(LA17_2>=11 && LA17_2<=12)||(LA17_2>=14 && LA17_2<=15)||(LA17_2>=17 && LA17_2<=18)||LA17_2==23) ) {
+                        alt17=1;
                     }
 
 
                 }
-                else if ( ((LA16_0>=13 && LA16_0<=14)) ) {
-                    alt16=1;
+                else if ( ((LA17_0>=14 && LA17_0<=15)||(LA17_0>=17 && LA17_0<=18)) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt16) {
+                switch (alt17) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1644:2: rule__BundlePromiseType__ClassesAssignment_3
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1778:2: rule__BundlePromiseType__ClassesAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__BundlePromiseType__ClassesAssignment_3_in_rule__BundlePromiseType__Group__3__Impl3372);
+            	    pushFollow(FOLLOW_rule__BundlePromiseType__ClassesAssignment_3_in_rule__BundlePromiseType__Group__3__Impl3649);
             	    rule__BundlePromiseType__ClassesAssignment_3();
 
             	    state._fsp--;
@@ -4710,7 +5068,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop16;
+            	    break loop17;
                 }
             } while (true);
 
@@ -4737,21 +5095,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundleClass__Group__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1662:1: rule__BundleClass__Group__0 : rule__BundleClass__Group__0__Impl rule__BundleClass__Group__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1796:1: rule__BundleClass__Group__0 : rule__BundleClass__Group__0__Impl rule__BundleClass__Group__1 ;
     public final void rule__BundleClass__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1666:1: ( rule__BundleClass__Group__0__Impl rule__BundleClass__Group__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1667:2: rule__BundleClass__Group__0__Impl rule__BundleClass__Group__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1800:1: ( rule__BundleClass__Group__0__Impl rule__BundleClass__Group__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1801:2: rule__BundleClass__Group__0__Impl rule__BundleClass__Group__1
             {
-            pushFollow(FOLLOW_rule__BundleClass__Group__0__Impl_in_rule__BundleClass__Group__03411);
+            pushFollow(FOLLOW_rule__BundleClass__Group__0__Impl_in_rule__BundleClass__Group__03688);
             rule__BundleClass__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BundleClass__Group__1_in_rule__BundleClass__Group__03414);
+            pushFollow(FOLLOW_rule__BundleClass__Group__1_in_rule__BundleClass__Group__03691);
             rule__BundleClass__Group__1();
 
             state._fsp--;
@@ -4775,23 +5133,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundleClass__Group__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1674:1: rule__BundleClass__Group__0__Impl : ( ( rule__BundleClass__NameAssignment_0 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1808:1: rule__BundleClass__Group__0__Impl : ( ( rule__BundleClass__NameAssignment_0 ) ) ;
     public final void rule__BundleClass__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1678:1: ( ( ( rule__BundleClass__NameAssignment_0 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1679:1: ( ( rule__BundleClass__NameAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1812:1: ( ( ( rule__BundleClass__NameAssignment_0 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1813:1: ( ( rule__BundleClass__NameAssignment_0 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1679:1: ( ( rule__BundleClass__NameAssignment_0 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1680:1: ( rule__BundleClass__NameAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1813:1: ( ( rule__BundleClass__NameAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1814:1: ( rule__BundleClass__NameAssignment_0 )
             {
              before(grammarAccess.getBundleClassAccess().getNameAssignment_0()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1681:1: ( rule__BundleClass__NameAssignment_0 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1681:2: rule__BundleClass__NameAssignment_0
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1815:1: ( rule__BundleClass__NameAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1815:2: rule__BundleClass__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__BundleClass__NameAssignment_0_in_rule__BundleClass__Group__0__Impl3441);
+            pushFollow(FOLLOW_rule__BundleClass__NameAssignment_0_in_rule__BundleClass__Group__0__Impl3718);
             rule__BundleClass__NameAssignment_0();
 
             state._fsp--;
@@ -4822,21 +5180,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundleClass__Group__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1691:1: rule__BundleClass__Group__1 : rule__BundleClass__Group__1__Impl rule__BundleClass__Group__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1825:1: rule__BundleClass__Group__1 : rule__BundleClass__Group__1__Impl rule__BundleClass__Group__2 ;
     public final void rule__BundleClass__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1695:1: ( rule__BundleClass__Group__1__Impl rule__BundleClass__Group__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1696:2: rule__BundleClass__Group__1__Impl rule__BundleClass__Group__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1829:1: ( rule__BundleClass__Group__1__Impl rule__BundleClass__Group__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1830:2: rule__BundleClass__Group__1__Impl rule__BundleClass__Group__2
             {
-            pushFollow(FOLLOW_rule__BundleClass__Group__1__Impl_in_rule__BundleClass__Group__13471);
+            pushFollow(FOLLOW_rule__BundleClass__Group__1__Impl_in_rule__BundleClass__Group__13748);
             rule__BundleClass__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BundleClass__Group__2_in_rule__BundleClass__Group__13474);
+            pushFollow(FOLLOW_rule__BundleClass__Group__2_in_rule__BundleClass__Group__13751);
             rule__BundleClass__Group__2();
 
             state._fsp--;
@@ -4860,20 +5218,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundleClass__Group__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1703:1: rule__BundleClass__Group__1__Impl : ( '::' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1837:1: rule__BundleClass__Group__1__Impl : ( '::' ) ;
     public final void rule__BundleClass__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1707:1: ( ( '::' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1708:1: ( '::' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1841:1: ( ( '::' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1842:1: ( '::' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1708:1: ( '::' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1709:1: '::'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1842:1: ( '::' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1843:1: '::'
             {
              before(grammarAccess.getBundleClassAccess().getColonColonKeyword_1()); 
-            match(input,20,FOLLOW_20_in_rule__BundleClass__Group__1__Impl3502); 
+            match(input,23,FOLLOW_23_in_rule__BundleClass__Group__1__Impl3779); 
              after(grammarAccess.getBundleClassAccess().getColonColonKeyword_1()); 
 
             }
@@ -4897,16 +5255,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundleClass__Group__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1722:1: rule__BundleClass__Group__2 : rule__BundleClass__Group__2__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1856:1: rule__BundleClass__Group__2 : rule__BundleClass__Group__2__Impl ;
     public final void rule__BundleClass__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1726:1: ( rule__BundleClass__Group__2__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1727:2: rule__BundleClass__Group__2__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1860:1: ( rule__BundleClass__Group__2__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1861:2: rule__BundleClass__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__BundleClass__Group__2__Impl_in_rule__BundleClass__Group__23533);
+            pushFollow(FOLLOW_rule__BundleClass__Group__2__Impl_in_rule__BundleClass__Group__23810);
             rule__BundleClass__Group__2__Impl();
 
             state._fsp--;
@@ -4930,57 +5288,35 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundleClass__Group__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1733:1: rule__BundleClass__Group__2__Impl : ( ( ( rule__BundleClass__PromisesAssignment_2 ) ) ( ( rule__BundleClass__PromisesAssignment_2 )* ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1867:1: rule__BundleClass__Group__2__Impl : ( ( rule__BundleClass__PromisesAssignment_2 )* ) ;
     public final void rule__BundleClass__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1737:1: ( ( ( ( rule__BundleClass__PromisesAssignment_2 ) ) ( ( rule__BundleClass__PromisesAssignment_2 )* ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1738:1: ( ( ( rule__BundleClass__PromisesAssignment_2 ) ) ( ( rule__BundleClass__PromisesAssignment_2 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1871:1: ( ( ( rule__BundleClass__PromisesAssignment_2 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1872:1: ( ( rule__BundleClass__PromisesAssignment_2 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1738:1: ( ( ( rule__BundleClass__PromisesAssignment_2 ) ) ( ( rule__BundleClass__PromisesAssignment_2 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1739:1: ( ( rule__BundleClass__PromisesAssignment_2 ) ) ( ( rule__BundleClass__PromisesAssignment_2 )* )
-            {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1739:1: ( ( rule__BundleClass__PromisesAssignment_2 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1740:1: ( rule__BundleClass__PromisesAssignment_2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1872:1: ( ( rule__BundleClass__PromisesAssignment_2 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1873:1: ( rule__BundleClass__PromisesAssignment_2 )*
             {
              before(grammarAccess.getBundleClassAccess().getPromisesAssignment_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1741:1: ( rule__BundleClass__PromisesAssignment_2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1741:2: rule__BundleClass__PromisesAssignment_2
-            {
-            pushFollow(FOLLOW_rule__BundleClass__PromisesAssignment_2_in_rule__BundleClass__Group__2__Impl3562);
-            rule__BundleClass__PromisesAssignment_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getBundleClassAccess().getPromisesAssignment_2()); 
-
-            }
-
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1744:1: ( ( rule__BundleClass__PromisesAssignment_2 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1745:1: ( rule__BundleClass__PromisesAssignment_2 )*
-            {
-             before(grammarAccess.getBundleClassAccess().getPromisesAssignment_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1746:1: ( rule__BundleClass__PromisesAssignment_2 )*
-            loop17:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1874:1: ( rule__BundleClass__PromisesAssignment_2 )*
+            loop18:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-                if ( (LA17_0==RULE_STRING) ) {
-                    alt17=1;
+                if ( (LA18_0==RULE_STRING) ) {
+                    alt18=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt18) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1746:2: rule__BundleClass__PromisesAssignment_2
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1874:2: rule__BundleClass__PromisesAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__BundleClass__PromisesAssignment_2_in_rule__BundleClass__Group__2__Impl3574);
+            	    pushFollow(FOLLOW_rule__BundleClass__PromisesAssignment_2_in_rule__BundleClass__Group__2__Impl3837);
             	    rule__BundleClass__PromisesAssignment_2();
 
             	    state._fsp--;
@@ -4990,14 +5326,11 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop18;
                 }
             } while (true);
 
              after(grammarAccess.getBundleClassAccess().getPromisesAssignment_2()); 
-
-            }
-
 
             }
 
@@ -5020,21 +5353,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1763:1: rule__BundlePromise__Group__0 : rule__BundlePromise__Group__0__Impl rule__BundlePromise__Group__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1890:1: rule__BundlePromise__Group__0 : rule__BundlePromise__Group__0__Impl rule__BundlePromise__Group__1 ;
     public final void rule__BundlePromise__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1767:1: ( rule__BundlePromise__Group__0__Impl rule__BundlePromise__Group__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1768:2: rule__BundlePromise__Group__0__Impl rule__BundlePromise__Group__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1894:1: ( rule__BundlePromise__Group__0__Impl rule__BundlePromise__Group__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1895:2: rule__BundlePromise__Group__0__Impl rule__BundlePromise__Group__1
             {
-            pushFollow(FOLLOW_rule__BundlePromise__Group__0__Impl_in_rule__BundlePromise__Group__03613);
+            pushFollow(FOLLOW_rule__BundlePromise__Group__0__Impl_in_rule__BundlePromise__Group__03874);
             rule__BundlePromise__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BundlePromise__Group__1_in_rule__BundlePromise__Group__03616);
+            pushFollow(FOLLOW_rule__BundlePromise__Group__1_in_rule__BundlePromise__Group__03877);
             rule__BundlePromise__Group__1();
 
             state._fsp--;
@@ -5058,23 +5391,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1775:1: rule__BundlePromise__Group__0__Impl : ( ( rule__BundlePromise__NameAssignment_0 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1902:1: rule__BundlePromise__Group__0__Impl : ( ( rule__BundlePromise__NameAssignment_0 ) ) ;
     public final void rule__BundlePromise__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1779:1: ( ( ( rule__BundlePromise__NameAssignment_0 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1780:1: ( ( rule__BundlePromise__NameAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1906:1: ( ( ( rule__BundlePromise__NameAssignment_0 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1907:1: ( ( rule__BundlePromise__NameAssignment_0 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1780:1: ( ( rule__BundlePromise__NameAssignment_0 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1781:1: ( rule__BundlePromise__NameAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1907:1: ( ( rule__BundlePromise__NameAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1908:1: ( rule__BundlePromise__NameAssignment_0 )
             {
              before(grammarAccess.getBundlePromiseAccess().getNameAssignment_0()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1782:1: ( rule__BundlePromise__NameAssignment_0 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1782:2: rule__BundlePromise__NameAssignment_0
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1909:1: ( rule__BundlePromise__NameAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1909:2: rule__BundlePromise__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__BundlePromise__NameAssignment_0_in_rule__BundlePromise__Group__0__Impl3643);
+            pushFollow(FOLLOW_rule__BundlePromise__NameAssignment_0_in_rule__BundlePromise__Group__0__Impl3904);
             rule__BundlePromise__NameAssignment_0();
 
             state._fsp--;
@@ -5105,21 +5438,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1792:1: rule__BundlePromise__Group__1 : rule__BundlePromise__Group__1__Impl rule__BundlePromise__Group__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1919:1: rule__BundlePromise__Group__1 : rule__BundlePromise__Group__1__Impl rule__BundlePromise__Group__2 ;
     public final void rule__BundlePromise__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1796:1: ( rule__BundlePromise__Group__1__Impl rule__BundlePromise__Group__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1797:2: rule__BundlePromise__Group__1__Impl rule__BundlePromise__Group__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1923:1: ( rule__BundlePromise__Group__1__Impl rule__BundlePromise__Group__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1924:2: rule__BundlePromise__Group__1__Impl rule__BundlePromise__Group__2
             {
-            pushFollow(FOLLOW_rule__BundlePromise__Group__1__Impl_in_rule__BundlePromise__Group__13673);
+            pushFollow(FOLLOW_rule__BundlePromise__Group__1__Impl_in_rule__BundlePromise__Group__13934);
             rule__BundlePromise__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BundlePromise__Group__2_in_rule__BundlePromise__Group__13676);
+            pushFollow(FOLLOW_rule__BundlePromise__Group__2_in_rule__BundlePromise__Group__13937);
             rule__BundlePromise__Group__2();
 
             state._fsp--;
@@ -5143,40 +5476,47 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1804:1: rule__BundlePromise__Group__1__Impl : ( ( rule__BundlePromise__Group_1__0 )? ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1931:1: rule__BundlePromise__Group__1__Impl : ( ( rule__BundlePromise__Group_1__0 )* ) ;
     public final void rule__BundlePromise__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1808:1: ( ( ( rule__BundlePromise__Group_1__0 )? ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1809:1: ( ( rule__BundlePromise__Group_1__0 )? )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1935:1: ( ( ( rule__BundlePromise__Group_1__0 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1936:1: ( ( rule__BundlePromise__Group_1__0 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1809:1: ( ( rule__BundlePromise__Group_1__0 )? )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1810:1: ( rule__BundlePromise__Group_1__0 )?
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1936:1: ( ( rule__BundlePromise__Group_1__0 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1937:1: ( rule__BundlePromise__Group_1__0 )*
             {
              before(grammarAccess.getBundlePromiseAccess().getGroup_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1811:1: ( rule__BundlePromise__Group_1__0 )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1938:1: ( rule__BundlePromise__Group_1__0 )*
+            loop19:
+            do {
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-            if ( (LA18_0==RULE_ID) ) {
-                alt18=1;
-            }
-            switch (alt18) {
-                case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1811:2: rule__BundlePromise__Group_1__0
-                    {
-                    pushFollow(FOLLOW_rule__BundlePromise__Group_1__0_in_rule__BundlePromise__Group__1__Impl3703);
-                    rule__BundlePromise__Group_1__0();
-
-                    state._fsp--;
+                if ( (LA19_0==RULE_ID) ) {
+                    alt19=1;
+                }
 
 
-                    }
-                    break;
+                switch (alt19) {
+            	case 1 :
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1938:2: rule__BundlePromise__Group_1__0
+            	    {
+            	    pushFollow(FOLLOW_rule__BundlePromise__Group_1__0_in_rule__BundlePromise__Group__1__Impl3964);
+            	    rule__BundlePromise__Group_1__0();
 
-            }
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop19;
+                }
+            } while (true);
 
              after(grammarAccess.getBundlePromiseAccess().getGroup_1()); 
 
@@ -5201,16 +5541,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1821:1: rule__BundlePromise__Group__2 : rule__BundlePromise__Group__2__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1948:1: rule__BundlePromise__Group__2 : rule__BundlePromise__Group__2__Impl ;
     public final void rule__BundlePromise__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1825:1: ( rule__BundlePromise__Group__2__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1826:2: rule__BundlePromise__Group__2__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1952:1: ( rule__BundlePromise__Group__2__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1953:2: rule__BundlePromise__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__BundlePromise__Group__2__Impl_in_rule__BundlePromise__Group__23734);
+            pushFollow(FOLLOW_rule__BundlePromise__Group__2__Impl_in_rule__BundlePromise__Group__23995);
             rule__BundlePromise__Group__2__Impl();
 
             state._fsp--;
@@ -5234,20 +5574,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1832:1: rule__BundlePromise__Group__2__Impl : ( ';' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1959:1: rule__BundlePromise__Group__2__Impl : ( ';' ) ;
     public final void rule__BundlePromise__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1836:1: ( ( ';' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1837:1: ( ';' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1963:1: ( ( ';' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1964:1: ( ';' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1837:1: ( ';' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1838:1: ';'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1964:1: ( ';' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1965:1: ';'
             {
              before(grammarAccess.getBundlePromiseAccess().getSemicolonKeyword_2()); 
-            match(input,21,FOLLOW_21_in_rule__BundlePromise__Group__2__Impl3762); 
+            match(input,24,FOLLOW_24_in_rule__BundlePromise__Group__2__Impl4023); 
              after(grammarAccess.getBundlePromiseAccess().getSemicolonKeyword_2()); 
 
             }
@@ -5271,21 +5611,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group_1__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1857:1: rule__BundlePromise__Group_1__0 : rule__BundlePromise__Group_1__0__Impl rule__BundlePromise__Group_1__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1984:1: rule__BundlePromise__Group_1__0 : rule__BundlePromise__Group_1__0__Impl rule__BundlePromise__Group_1__1 ;
     public final void rule__BundlePromise__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1861:1: ( rule__BundlePromise__Group_1__0__Impl rule__BundlePromise__Group_1__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1862:2: rule__BundlePromise__Group_1__0__Impl rule__BundlePromise__Group_1__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1988:1: ( rule__BundlePromise__Group_1__0__Impl rule__BundlePromise__Group_1__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1989:2: rule__BundlePromise__Group_1__0__Impl rule__BundlePromise__Group_1__1
             {
-            pushFollow(FOLLOW_rule__BundlePromise__Group_1__0__Impl_in_rule__BundlePromise__Group_1__03799);
+            pushFollow(FOLLOW_rule__BundlePromise__Group_1__0__Impl_in_rule__BundlePromise__Group_1__04060);
             rule__BundlePromise__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BundlePromise__Group_1__1_in_rule__BundlePromise__Group_1__03802);
+            pushFollow(FOLLOW_rule__BundlePromise__Group_1__1_in_rule__BundlePromise__Group_1__04063);
             rule__BundlePromise__Group_1__1();
 
             state._fsp--;
@@ -5309,23 +5649,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group_1__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1869:1: rule__BundlePromise__Group_1__0__Impl : ( ( rule__BundlePromise__ValuesAssignment_1_0 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1996:1: rule__BundlePromise__Group_1__0__Impl : ( ( rule__BundlePromise__ValuesAssignment_1_0 ) ) ;
     public final void rule__BundlePromise__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1873:1: ( ( ( rule__BundlePromise__ValuesAssignment_1_0 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1874:1: ( ( rule__BundlePromise__ValuesAssignment_1_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2000:1: ( ( ( rule__BundlePromise__ValuesAssignment_1_0 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2001:1: ( ( rule__BundlePromise__ValuesAssignment_1_0 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1874:1: ( ( rule__BundlePromise__ValuesAssignment_1_0 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1875:1: ( rule__BundlePromise__ValuesAssignment_1_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2001:1: ( ( rule__BundlePromise__ValuesAssignment_1_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2002:1: ( rule__BundlePromise__ValuesAssignment_1_0 )
             {
              before(grammarAccess.getBundlePromiseAccess().getValuesAssignment_1_0()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1876:1: ( rule__BundlePromise__ValuesAssignment_1_0 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1876:2: rule__BundlePromise__ValuesAssignment_1_0
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2003:1: ( rule__BundlePromise__ValuesAssignment_1_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2003:2: rule__BundlePromise__ValuesAssignment_1_0
             {
-            pushFollow(FOLLOW_rule__BundlePromise__ValuesAssignment_1_0_in_rule__BundlePromise__Group_1__0__Impl3829);
+            pushFollow(FOLLOW_rule__BundlePromise__ValuesAssignment_1_0_in_rule__BundlePromise__Group_1__0__Impl4090);
             rule__BundlePromise__ValuesAssignment_1_0();
 
             state._fsp--;
@@ -5356,16 +5696,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group_1__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1886:1: rule__BundlePromise__Group_1__1 : rule__BundlePromise__Group_1__1__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2013:1: rule__BundlePromise__Group_1__1 : rule__BundlePromise__Group_1__1__Impl ;
     public final void rule__BundlePromise__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1890:1: ( rule__BundlePromise__Group_1__1__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1891:2: rule__BundlePromise__Group_1__1__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2017:1: ( rule__BundlePromise__Group_1__1__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2018:2: rule__BundlePromise__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__BundlePromise__Group_1__1__Impl_in_rule__BundlePromise__Group_1__13859);
+            pushFollow(FOLLOW_rule__BundlePromise__Group_1__1__Impl_in_rule__BundlePromise__Group_1__14120);
             rule__BundlePromise__Group_1__1__Impl();
 
             state._fsp--;
@@ -5389,35 +5729,35 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group_1__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1897:1: rule__BundlePromise__Group_1__1__Impl : ( ( rule__BundlePromise__Group_1_1__0 )* ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2024:1: rule__BundlePromise__Group_1__1__Impl : ( ( rule__BundlePromise__Group_1_1__0 )* ) ;
     public final void rule__BundlePromise__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1901:1: ( ( ( rule__BundlePromise__Group_1_1__0 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1902:1: ( ( rule__BundlePromise__Group_1_1__0 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2028:1: ( ( ( rule__BundlePromise__Group_1_1__0 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2029:1: ( ( rule__BundlePromise__Group_1_1__0 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1902:1: ( ( rule__BundlePromise__Group_1_1__0 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1903:1: ( rule__BundlePromise__Group_1_1__0 )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2029:1: ( ( rule__BundlePromise__Group_1_1__0 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2030:1: ( rule__BundlePromise__Group_1_1__0 )*
             {
              before(grammarAccess.getBundlePromiseAccess().getGroup_1_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1904:1: ( rule__BundlePromise__Group_1_1__0 )*
-            loop19:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2031:1: ( rule__BundlePromise__Group_1_1__0 )*
+            loop20:
             do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( (LA19_0==11) ) {
-                    alt19=1;
+                if ( (LA20_0==13) ) {
+                    alt20=1;
                 }
 
 
-                switch (alt19) {
+                switch (alt20) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1904:2: rule__BundlePromise__Group_1_1__0
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2031:2: rule__BundlePromise__Group_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__BundlePromise__Group_1_1__0_in_rule__BundlePromise__Group_1__1__Impl3886);
+            	    pushFollow(FOLLOW_rule__BundlePromise__Group_1_1__0_in_rule__BundlePromise__Group_1__1__Impl4147);
             	    rule__BundlePromise__Group_1_1__0();
 
             	    state._fsp--;
@@ -5427,7 +5767,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop19;
+            	    break loop20;
                 }
             } while (true);
 
@@ -5454,21 +5794,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group_1_1__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1918:1: rule__BundlePromise__Group_1_1__0 : rule__BundlePromise__Group_1_1__0__Impl rule__BundlePromise__Group_1_1__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2045:1: rule__BundlePromise__Group_1_1__0 : rule__BundlePromise__Group_1_1__0__Impl rule__BundlePromise__Group_1_1__1 ;
     public final void rule__BundlePromise__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1922:1: ( rule__BundlePromise__Group_1_1__0__Impl rule__BundlePromise__Group_1_1__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1923:2: rule__BundlePromise__Group_1_1__0__Impl rule__BundlePromise__Group_1_1__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2049:1: ( rule__BundlePromise__Group_1_1__0__Impl rule__BundlePromise__Group_1_1__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2050:2: rule__BundlePromise__Group_1_1__0__Impl rule__BundlePromise__Group_1_1__1
             {
-            pushFollow(FOLLOW_rule__BundlePromise__Group_1_1__0__Impl_in_rule__BundlePromise__Group_1_1__03921);
+            pushFollow(FOLLOW_rule__BundlePromise__Group_1_1__0__Impl_in_rule__BundlePromise__Group_1_1__04182);
             rule__BundlePromise__Group_1_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BundlePromise__Group_1_1__1_in_rule__BundlePromise__Group_1_1__03924);
+            pushFollow(FOLLOW_rule__BundlePromise__Group_1_1__1_in_rule__BundlePromise__Group_1_1__04185);
             rule__BundlePromise__Group_1_1__1();
 
             state._fsp--;
@@ -5492,20 +5832,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group_1_1__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1930:1: rule__BundlePromise__Group_1_1__0__Impl : ( ',' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2057:1: rule__BundlePromise__Group_1_1__0__Impl : ( ',' ) ;
     public final void rule__BundlePromise__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1934:1: ( ( ',' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1935:1: ( ',' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2061:1: ( ( ',' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2062:1: ( ',' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1935:1: ( ',' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1936:1: ','
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2062:1: ( ',' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2063:1: ','
             {
              before(grammarAccess.getBundlePromiseAccess().getCommaKeyword_1_1_0()); 
-            match(input,11,FOLLOW_11_in_rule__BundlePromise__Group_1_1__0__Impl3952); 
+            match(input,13,FOLLOW_13_in_rule__BundlePromise__Group_1_1__0__Impl4213); 
              after(grammarAccess.getBundlePromiseAccess().getCommaKeyword_1_1_0()); 
 
             }
@@ -5529,16 +5869,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group_1_1__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1949:1: rule__BundlePromise__Group_1_1__1 : rule__BundlePromise__Group_1_1__1__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2076:1: rule__BundlePromise__Group_1_1__1 : rule__BundlePromise__Group_1_1__1__Impl ;
     public final void rule__BundlePromise__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1953:1: ( rule__BundlePromise__Group_1_1__1__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1954:2: rule__BundlePromise__Group_1_1__1__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2080:1: ( rule__BundlePromise__Group_1_1__1__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2081:2: rule__BundlePromise__Group_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__BundlePromise__Group_1_1__1__Impl_in_rule__BundlePromise__Group_1_1__13983);
+            pushFollow(FOLLOW_rule__BundlePromise__Group_1_1__1__Impl_in_rule__BundlePromise__Group_1_1__14244);
             rule__BundlePromise__Group_1_1__1__Impl();
 
             state._fsp--;
@@ -5562,23 +5902,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__Group_1_1__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1960:1: rule__BundlePromise__Group_1_1__1__Impl : ( ( rule__BundlePromise__ValuesAssignment_1_1_1 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2087:1: rule__BundlePromise__Group_1_1__1__Impl : ( ( rule__BundlePromise__ValuesAssignment_1_1_1 ) ) ;
     public final void rule__BundlePromise__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1964:1: ( ( ( rule__BundlePromise__ValuesAssignment_1_1_1 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1965:1: ( ( rule__BundlePromise__ValuesAssignment_1_1_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2091:1: ( ( ( rule__BundlePromise__ValuesAssignment_1_1_1 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2092:1: ( ( rule__BundlePromise__ValuesAssignment_1_1_1 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1965:1: ( ( rule__BundlePromise__ValuesAssignment_1_1_1 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1966:1: ( rule__BundlePromise__ValuesAssignment_1_1_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2092:1: ( ( rule__BundlePromise__ValuesAssignment_1_1_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2093:1: ( rule__BundlePromise__ValuesAssignment_1_1_1 )
             {
              before(grammarAccess.getBundlePromiseAccess().getValuesAssignment_1_1_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1967:1: ( rule__BundlePromise__ValuesAssignment_1_1_1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1967:2: rule__BundlePromise__ValuesAssignment_1_1_1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2094:1: ( rule__BundlePromise__ValuesAssignment_1_1_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2094:2: rule__BundlePromise__ValuesAssignment_1_1_1
             {
-            pushFollow(FOLLOW_rule__BundlePromise__ValuesAssignment_1_1_1_in_rule__BundlePromise__Group_1_1__1__Impl4010);
+            pushFollow(FOLLOW_rule__BundlePromise__ValuesAssignment_1_1_1_in_rule__BundlePromise__Group_1_1__1__Impl4271);
             rule__BundlePromise__ValuesAssignment_1_1_1();
 
             state._fsp--;
@@ -5609,21 +5949,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1981:1: rule__PromiseValue__Group__0 : rule__PromiseValue__Group__0__Impl rule__PromiseValue__Group__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2108:1: rule__PromiseValue__Group__0 : rule__PromiseValue__Group__0__Impl rule__PromiseValue__Group__1 ;
     public final void rule__PromiseValue__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1985:1: ( rule__PromiseValue__Group__0__Impl rule__PromiseValue__Group__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1986:2: rule__PromiseValue__Group__0__Impl rule__PromiseValue__Group__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2112:1: ( rule__PromiseValue__Group__0__Impl rule__PromiseValue__Group__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2113:2: rule__PromiseValue__Group__0__Impl rule__PromiseValue__Group__1
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group__0__Impl_in_rule__PromiseValue__Group__04044);
+            pushFollow(FOLLOW_rule__PromiseValue__Group__0__Impl_in_rule__PromiseValue__Group__04305);
             rule__PromiseValue__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PromiseValue__Group__1_in_rule__PromiseValue__Group__04047);
+            pushFollow(FOLLOW_rule__PromiseValue__Group__1_in_rule__PromiseValue__Group__04308);
             rule__PromiseValue__Group__1();
 
             state._fsp--;
@@ -5647,23 +5987,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1993:1: rule__PromiseValue__Group__0__Impl : ( ( rule__PromiseValue__KeywordAssignment_0 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2120:1: rule__PromiseValue__Group__0__Impl : ( ( rule__PromiseValue__KeywordAssignment_0 ) ) ;
     public final void rule__PromiseValue__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1997:1: ( ( ( rule__PromiseValue__KeywordAssignment_0 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1998:1: ( ( rule__PromiseValue__KeywordAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2124:1: ( ( ( rule__PromiseValue__KeywordAssignment_0 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2125:1: ( ( rule__PromiseValue__KeywordAssignment_0 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1998:1: ( ( rule__PromiseValue__KeywordAssignment_0 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:1999:1: ( rule__PromiseValue__KeywordAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2125:1: ( ( rule__PromiseValue__KeywordAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2126:1: ( rule__PromiseValue__KeywordAssignment_0 )
             {
              before(grammarAccess.getPromiseValueAccess().getKeywordAssignment_0()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2000:1: ( rule__PromiseValue__KeywordAssignment_0 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2000:2: rule__PromiseValue__KeywordAssignment_0
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2127:1: ( rule__PromiseValue__KeywordAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2127:2: rule__PromiseValue__KeywordAssignment_0
             {
-            pushFollow(FOLLOW_rule__PromiseValue__KeywordAssignment_0_in_rule__PromiseValue__Group__0__Impl4074);
+            pushFollow(FOLLOW_rule__PromiseValue__KeywordAssignment_0_in_rule__PromiseValue__Group__0__Impl4335);
             rule__PromiseValue__KeywordAssignment_0();
 
             state._fsp--;
@@ -5694,21 +6034,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2010:1: rule__PromiseValue__Group__1 : rule__PromiseValue__Group__1__Impl rule__PromiseValue__Group__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2137:1: rule__PromiseValue__Group__1 : rule__PromiseValue__Group__1__Impl rule__PromiseValue__Group__2 ;
     public final void rule__PromiseValue__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2014:1: ( rule__PromiseValue__Group__1__Impl rule__PromiseValue__Group__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2015:2: rule__PromiseValue__Group__1__Impl rule__PromiseValue__Group__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2141:1: ( rule__PromiseValue__Group__1__Impl rule__PromiseValue__Group__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2142:2: rule__PromiseValue__Group__1__Impl rule__PromiseValue__Group__2
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group__1__Impl_in_rule__PromiseValue__Group__14104);
+            pushFollow(FOLLOW_rule__PromiseValue__Group__1__Impl_in_rule__PromiseValue__Group__14365);
             rule__PromiseValue__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PromiseValue__Group__2_in_rule__PromiseValue__Group__14107);
+            pushFollow(FOLLOW_rule__PromiseValue__Group__2_in_rule__PromiseValue__Group__14368);
             rule__PromiseValue__Group__2();
 
             state._fsp--;
@@ -5732,20 +6072,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2022:1: rule__PromiseValue__Group__1__Impl : ( '=>' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2149:1: rule__PromiseValue__Group__1__Impl : ( '=>' ) ;
     public final void rule__PromiseValue__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2026:1: ( ( '=>' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2027:1: ( '=>' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2153:1: ( ( '=>' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2154:1: ( '=>' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2027:1: ( '=>' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2028:1: '=>'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2154:1: ( '=>' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2155:1: '=>'
             {
              before(grammarAccess.getPromiseValueAccess().getEqualsSignGreaterThanSignKeyword_1()); 
-            match(input,22,FOLLOW_22_in_rule__PromiseValue__Group__1__Impl4135); 
+            match(input,25,FOLLOW_25_in_rule__PromiseValue__Group__1__Impl4396); 
              after(grammarAccess.getPromiseValueAccess().getEqualsSignGreaterThanSignKeyword_1()); 
 
             }
@@ -5769,16 +6109,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2041:1: rule__PromiseValue__Group__2 : rule__PromiseValue__Group__2__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2168:1: rule__PromiseValue__Group__2 : rule__PromiseValue__Group__2__Impl ;
     public final void rule__PromiseValue__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2045:1: ( rule__PromiseValue__Group__2__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2046:2: rule__PromiseValue__Group__2__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2172:1: ( rule__PromiseValue__Group__2__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2173:2: rule__PromiseValue__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group__2__Impl_in_rule__PromiseValue__Group__24166);
+            pushFollow(FOLLOW_rule__PromiseValue__Group__2__Impl_in_rule__PromiseValue__Group__24427);
             rule__PromiseValue__Group__2__Impl();
 
             state._fsp--;
@@ -5802,23 +6142,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2052:1: rule__PromiseValue__Group__2__Impl : ( ( rule__PromiseValue__Alternatives_2 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2179:1: rule__PromiseValue__Group__2__Impl : ( ( rule__PromiseValue__Alternatives_2 ) ) ;
     public final void rule__PromiseValue__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2056:1: ( ( ( rule__PromiseValue__Alternatives_2 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2057:1: ( ( rule__PromiseValue__Alternatives_2 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2183:1: ( ( ( rule__PromiseValue__Alternatives_2 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2184:1: ( ( rule__PromiseValue__Alternatives_2 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2057:1: ( ( rule__PromiseValue__Alternatives_2 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2058:1: ( rule__PromiseValue__Alternatives_2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2184:1: ( ( rule__PromiseValue__Alternatives_2 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2185:1: ( rule__PromiseValue__Alternatives_2 )
             {
              before(grammarAccess.getPromiseValueAccess().getAlternatives_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2059:1: ( rule__PromiseValue__Alternatives_2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2059:2: rule__PromiseValue__Alternatives_2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2186:1: ( rule__PromiseValue__Alternatives_2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2186:2: rule__PromiseValue__Alternatives_2
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Alternatives_2_in_rule__PromiseValue__Group__2__Impl4193);
+            pushFollow(FOLLOW_rule__PromiseValue__Alternatives_2_in_rule__PromiseValue__Group__2__Impl4454);
             rule__PromiseValue__Alternatives_2();
 
             state._fsp--;
@@ -5849,21 +6189,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_1__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2075:1: rule__PromiseValue__Group_2_1__0 : rule__PromiseValue__Group_2_1__0__Impl rule__PromiseValue__Group_2_1__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2202:1: rule__PromiseValue__Group_2_1__0 : rule__PromiseValue__Group_2_1__0__Impl rule__PromiseValue__Group_2_1__1 ;
     public final void rule__PromiseValue__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2079:1: ( rule__PromiseValue__Group_2_1__0__Impl rule__PromiseValue__Group_2_1__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2080:2: rule__PromiseValue__Group_2_1__0__Impl rule__PromiseValue__Group_2_1__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2206:1: ( rule__PromiseValue__Group_2_1__0__Impl rule__PromiseValue__Group_2_1__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2207:2: rule__PromiseValue__Group_2_1__0__Impl rule__PromiseValue__Group_2_1__1
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__0__Impl_in_rule__PromiseValue__Group_2_1__04229);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__0__Impl_in_rule__PromiseValue__Group_2_1__04490);
             rule__PromiseValue__Group_2_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__1_in_rule__PromiseValue__Group_2_1__04232);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__1_in_rule__PromiseValue__Group_2_1__04493);
             rule__PromiseValue__Group_2_1__1();
 
             state._fsp--;
@@ -5887,20 +6227,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_1__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2087:1: rule__PromiseValue__Group_2_1__0__Impl : ( '{' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2214:1: rule__PromiseValue__Group_2_1__0__Impl : ( '{' ) ;
     public final void rule__PromiseValue__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2091:1: ( ( '{' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2092:1: ( '{' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2218:1: ( ( '{' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2219:1: ( '{' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2092:1: ( '{' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2093:1: '{'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2219:1: ( '{' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2220:1: '{'
             {
              before(grammarAccess.getPromiseValueAccess().getLeftCurlyBracketKeyword_2_1_0()); 
-            match(input,17,FOLLOW_17_in_rule__PromiseValue__Group_2_1__0__Impl4260); 
+            match(input,20,FOLLOW_20_in_rule__PromiseValue__Group_2_1__0__Impl4521); 
              after(grammarAccess.getPromiseValueAccess().getLeftCurlyBracketKeyword_2_1_0()); 
 
             }
@@ -5924,21 +6264,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_1__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2106:1: rule__PromiseValue__Group_2_1__1 : rule__PromiseValue__Group_2_1__1__Impl rule__PromiseValue__Group_2_1__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2233:1: rule__PromiseValue__Group_2_1__1 : rule__PromiseValue__Group_2_1__1__Impl rule__PromiseValue__Group_2_1__2 ;
     public final void rule__PromiseValue__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2110:1: ( rule__PromiseValue__Group_2_1__1__Impl rule__PromiseValue__Group_2_1__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2111:2: rule__PromiseValue__Group_2_1__1__Impl rule__PromiseValue__Group_2_1__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2237:1: ( rule__PromiseValue__Group_2_1__1__Impl rule__PromiseValue__Group_2_1__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2238:2: rule__PromiseValue__Group_2_1__1__Impl rule__PromiseValue__Group_2_1__2
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__1__Impl_in_rule__PromiseValue__Group_2_1__14291);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__1__Impl_in_rule__PromiseValue__Group_2_1__14552);
             rule__PromiseValue__Group_2_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__2_in_rule__PromiseValue__Group_2_1__14294);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__2_in_rule__PromiseValue__Group_2_1__14555);
             rule__PromiseValue__Group_2_1__2();
 
             state._fsp--;
@@ -5962,23 +6302,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_1__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2118:1: rule__PromiseValue__Group_2_1__1__Impl : ( ( rule__PromiseValue__Alternatives_2_1_1 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2245:1: rule__PromiseValue__Group_2_1__1__Impl : ( ( rule__PromiseValue__Alternatives_2_1_1 ) ) ;
     public final void rule__PromiseValue__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2122:1: ( ( ( rule__PromiseValue__Alternatives_2_1_1 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2123:1: ( ( rule__PromiseValue__Alternatives_2_1_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2249:1: ( ( ( rule__PromiseValue__Alternatives_2_1_1 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2250:1: ( ( rule__PromiseValue__Alternatives_2_1_1 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2123:1: ( ( rule__PromiseValue__Alternatives_2_1_1 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2124:1: ( rule__PromiseValue__Alternatives_2_1_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2250:1: ( ( rule__PromiseValue__Alternatives_2_1_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2251:1: ( rule__PromiseValue__Alternatives_2_1_1 )
             {
              before(grammarAccess.getPromiseValueAccess().getAlternatives_2_1_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2125:1: ( rule__PromiseValue__Alternatives_2_1_1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2125:2: rule__PromiseValue__Alternatives_2_1_1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2252:1: ( rule__PromiseValue__Alternatives_2_1_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2252:2: rule__PromiseValue__Alternatives_2_1_1
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Alternatives_2_1_1_in_rule__PromiseValue__Group_2_1__1__Impl4321);
+            pushFollow(FOLLOW_rule__PromiseValue__Alternatives_2_1_1_in_rule__PromiseValue__Group_2_1__1__Impl4582);
             rule__PromiseValue__Alternatives_2_1_1();
 
             state._fsp--;
@@ -6009,21 +6349,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_1__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2135:1: rule__PromiseValue__Group_2_1__2 : rule__PromiseValue__Group_2_1__2__Impl rule__PromiseValue__Group_2_1__3 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2262:1: rule__PromiseValue__Group_2_1__2 : rule__PromiseValue__Group_2_1__2__Impl rule__PromiseValue__Group_2_1__3 ;
     public final void rule__PromiseValue__Group_2_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2139:1: ( rule__PromiseValue__Group_2_1__2__Impl rule__PromiseValue__Group_2_1__3 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2140:2: rule__PromiseValue__Group_2_1__2__Impl rule__PromiseValue__Group_2_1__3
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2266:1: ( rule__PromiseValue__Group_2_1__2__Impl rule__PromiseValue__Group_2_1__3 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2267:2: rule__PromiseValue__Group_2_1__2__Impl rule__PromiseValue__Group_2_1__3
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__2__Impl_in_rule__PromiseValue__Group_2_1__24351);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__2__Impl_in_rule__PromiseValue__Group_2_1__24612);
             rule__PromiseValue__Group_2_1__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__3_in_rule__PromiseValue__Group_2_1__24354);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__3_in_rule__PromiseValue__Group_2_1__24615);
             rule__PromiseValue__Group_2_1__3();
 
             state._fsp--;
@@ -6047,35 +6387,35 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_1__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2147:1: rule__PromiseValue__Group_2_1__2__Impl : ( ( rule__PromiseValue__Group_2_1_2__0 )* ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2274:1: rule__PromiseValue__Group_2_1__2__Impl : ( ( rule__PromiseValue__Group_2_1_2__0 )* ) ;
     public final void rule__PromiseValue__Group_2_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2151:1: ( ( ( rule__PromiseValue__Group_2_1_2__0 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2152:1: ( ( rule__PromiseValue__Group_2_1_2__0 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2278:1: ( ( ( rule__PromiseValue__Group_2_1_2__0 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2279:1: ( ( rule__PromiseValue__Group_2_1_2__0 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2152:1: ( ( rule__PromiseValue__Group_2_1_2__0 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2153:1: ( rule__PromiseValue__Group_2_1_2__0 )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2279:1: ( ( rule__PromiseValue__Group_2_1_2__0 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2280:1: ( rule__PromiseValue__Group_2_1_2__0 )*
             {
              before(grammarAccess.getPromiseValueAccess().getGroup_2_1_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2154:1: ( rule__PromiseValue__Group_2_1_2__0 )*
-            loop20:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2281:1: ( rule__PromiseValue__Group_2_1_2__0 )*
+            loop21:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( (LA20_0==11) ) {
-                    alt20=1;
+                if ( (LA21_0==13) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt21) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2154:2: rule__PromiseValue__Group_2_1_2__0
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2281:2: rule__PromiseValue__Group_2_1_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__PromiseValue__Group_2_1_2__0_in_rule__PromiseValue__Group_2_1__2__Impl4381);
+            	    pushFollow(FOLLOW_rule__PromiseValue__Group_2_1_2__0_in_rule__PromiseValue__Group_2_1__2__Impl4642);
             	    rule__PromiseValue__Group_2_1_2__0();
 
             	    state._fsp--;
@@ -6085,7 +6425,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop20;
+            	    break loop21;
                 }
             } while (true);
 
@@ -6112,16 +6452,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_1__3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2164:1: rule__PromiseValue__Group_2_1__3 : rule__PromiseValue__Group_2_1__3__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2291:1: rule__PromiseValue__Group_2_1__3 : rule__PromiseValue__Group_2_1__3__Impl ;
     public final void rule__PromiseValue__Group_2_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2168:1: ( rule__PromiseValue__Group_2_1__3__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2169:2: rule__PromiseValue__Group_2_1__3__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2295:1: ( rule__PromiseValue__Group_2_1__3__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2296:2: rule__PromiseValue__Group_2_1__3__Impl
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__3__Impl_in_rule__PromiseValue__Group_2_1__34412);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1__3__Impl_in_rule__PromiseValue__Group_2_1__34673);
             rule__PromiseValue__Group_2_1__3__Impl();
 
             state._fsp--;
@@ -6145,20 +6485,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_1__3__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2175:1: rule__PromiseValue__Group_2_1__3__Impl : ( '}' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2302:1: rule__PromiseValue__Group_2_1__3__Impl : ( '}' ) ;
     public final void rule__PromiseValue__Group_2_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2179:1: ( ( '}' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2180:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2306:1: ( ( '}' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2307:1: ( '}' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2180:1: ( '}' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2181:1: '}'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2307:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2308:1: '}'
             {
              before(grammarAccess.getPromiseValueAccess().getRightCurlyBracketKeyword_2_1_3()); 
-            match(input,18,FOLLOW_18_in_rule__PromiseValue__Group_2_1__3__Impl4440); 
+            match(input,21,FOLLOW_21_in_rule__PromiseValue__Group_2_1__3__Impl4701); 
              after(grammarAccess.getPromiseValueAccess().getRightCurlyBracketKeyword_2_1_3()); 
 
             }
@@ -6182,21 +6522,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_1_2__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2202:1: rule__PromiseValue__Group_2_1_2__0 : rule__PromiseValue__Group_2_1_2__0__Impl rule__PromiseValue__Group_2_1_2__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2329:1: rule__PromiseValue__Group_2_1_2__0 : rule__PromiseValue__Group_2_1_2__0__Impl rule__PromiseValue__Group_2_1_2__1 ;
     public final void rule__PromiseValue__Group_2_1_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2206:1: ( rule__PromiseValue__Group_2_1_2__0__Impl rule__PromiseValue__Group_2_1_2__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2207:2: rule__PromiseValue__Group_2_1_2__0__Impl rule__PromiseValue__Group_2_1_2__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2333:1: ( rule__PromiseValue__Group_2_1_2__0__Impl rule__PromiseValue__Group_2_1_2__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2334:2: rule__PromiseValue__Group_2_1_2__0__Impl rule__PromiseValue__Group_2_1_2__1
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1_2__0__Impl_in_rule__PromiseValue__Group_2_1_2__04479);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1_2__0__Impl_in_rule__PromiseValue__Group_2_1_2__04740);
             rule__PromiseValue__Group_2_1_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1_2__1_in_rule__PromiseValue__Group_2_1_2__04482);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1_2__1_in_rule__PromiseValue__Group_2_1_2__04743);
             rule__PromiseValue__Group_2_1_2__1();
 
             state._fsp--;
@@ -6220,20 +6560,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_1_2__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2214:1: rule__PromiseValue__Group_2_1_2__0__Impl : ( ',' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2341:1: rule__PromiseValue__Group_2_1_2__0__Impl : ( ',' ) ;
     public final void rule__PromiseValue__Group_2_1_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2218:1: ( ( ',' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2219:1: ( ',' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2345:1: ( ( ',' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2346:1: ( ',' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2219:1: ( ',' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2220:1: ','
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2346:1: ( ',' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2347:1: ','
             {
              before(grammarAccess.getPromiseValueAccess().getCommaKeyword_2_1_2_0()); 
-            match(input,11,FOLLOW_11_in_rule__PromiseValue__Group_2_1_2__0__Impl4510); 
+            match(input,13,FOLLOW_13_in_rule__PromiseValue__Group_2_1_2__0__Impl4771); 
              after(grammarAccess.getPromiseValueAccess().getCommaKeyword_2_1_2_0()); 
 
             }
@@ -6257,16 +6597,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_1_2__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2233:1: rule__PromiseValue__Group_2_1_2__1 : rule__PromiseValue__Group_2_1_2__1__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2360:1: rule__PromiseValue__Group_2_1_2__1 : rule__PromiseValue__Group_2_1_2__1__Impl ;
     public final void rule__PromiseValue__Group_2_1_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2237:1: ( rule__PromiseValue__Group_2_1_2__1__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2238:2: rule__PromiseValue__Group_2_1_2__1__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2364:1: ( rule__PromiseValue__Group_2_1_2__1__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2365:2: rule__PromiseValue__Group_2_1_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1_2__1__Impl_in_rule__PromiseValue__Group_2_1_2__14541);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_1_2__1__Impl_in_rule__PromiseValue__Group_2_1_2__14802);
             rule__PromiseValue__Group_2_1_2__1__Impl();
 
             state._fsp--;
@@ -6290,23 +6630,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_1_2__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2244:1: rule__PromiseValue__Group_2_1_2__1__Impl : ( ( rule__PromiseValue__Alternatives_2_1_2_1 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2371:1: rule__PromiseValue__Group_2_1_2__1__Impl : ( ( rule__PromiseValue__Alternatives_2_1_2_1 ) ) ;
     public final void rule__PromiseValue__Group_2_1_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2248:1: ( ( ( rule__PromiseValue__Alternatives_2_1_2_1 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2249:1: ( ( rule__PromiseValue__Alternatives_2_1_2_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2375:1: ( ( ( rule__PromiseValue__Alternatives_2_1_2_1 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2376:1: ( ( rule__PromiseValue__Alternatives_2_1_2_1 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2249:1: ( ( rule__PromiseValue__Alternatives_2_1_2_1 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2250:1: ( rule__PromiseValue__Alternatives_2_1_2_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2376:1: ( ( rule__PromiseValue__Alternatives_2_1_2_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2377:1: ( rule__PromiseValue__Alternatives_2_1_2_1 )
             {
              before(grammarAccess.getPromiseValueAccess().getAlternatives_2_1_2_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2251:1: ( rule__PromiseValue__Alternatives_2_1_2_1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2251:2: rule__PromiseValue__Alternatives_2_1_2_1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2378:1: ( rule__PromiseValue__Alternatives_2_1_2_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2378:2: rule__PromiseValue__Alternatives_2_1_2_1
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Alternatives_2_1_2_1_in_rule__PromiseValue__Group_2_1_2__1__Impl4568);
+            pushFollow(FOLLOW_rule__PromiseValue__Alternatives_2_1_2_1_in_rule__PromiseValue__Group_2_1_2__1__Impl4829);
             rule__PromiseValue__Alternatives_2_1_2_1();
 
             state._fsp--;
@@ -6337,21 +6677,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_2__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2265:1: rule__PromiseValue__Group_2_2__0 : rule__PromiseValue__Group_2_2__0__Impl rule__PromiseValue__Group_2_2__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2392:1: rule__PromiseValue__Group_2_2__0 : rule__PromiseValue__Group_2_2__0__Impl rule__PromiseValue__Group_2_2__1 ;
     public final void rule__PromiseValue__Group_2_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2269:1: ( rule__PromiseValue__Group_2_2__0__Impl rule__PromiseValue__Group_2_2__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2270:2: rule__PromiseValue__Group_2_2__0__Impl rule__PromiseValue__Group_2_2__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2396:1: ( rule__PromiseValue__Group_2_2__0__Impl rule__PromiseValue__Group_2_2__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2397:2: rule__PromiseValue__Group_2_2__0__Impl rule__PromiseValue__Group_2_2__1
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__0__Impl_in_rule__PromiseValue__Group_2_2__04602);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__0__Impl_in_rule__PromiseValue__Group_2_2__04863);
             rule__PromiseValue__Group_2_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__1_in_rule__PromiseValue__Group_2_2__04605);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__1_in_rule__PromiseValue__Group_2_2__04866);
             rule__PromiseValue__Group_2_2__1();
 
             state._fsp--;
@@ -6375,20 +6715,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_2__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2277:1: rule__PromiseValue__Group_2_2__0__Impl : ( '{' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2404:1: rule__PromiseValue__Group_2_2__0__Impl : ( '{' ) ;
     public final void rule__PromiseValue__Group_2_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2281:1: ( ( '{' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2282:1: ( '{' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2408:1: ( ( '{' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2409:1: ( '{' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2282:1: ( '{' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2283:1: '{'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2409:1: ( '{' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2410:1: '{'
             {
              before(grammarAccess.getPromiseValueAccess().getLeftCurlyBracketKeyword_2_2_0()); 
-            match(input,17,FOLLOW_17_in_rule__PromiseValue__Group_2_2__0__Impl4633); 
+            match(input,20,FOLLOW_20_in_rule__PromiseValue__Group_2_2__0__Impl4894); 
              after(grammarAccess.getPromiseValueAccess().getLeftCurlyBracketKeyword_2_2_0()); 
 
             }
@@ -6412,21 +6752,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_2__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2296:1: rule__PromiseValue__Group_2_2__1 : rule__PromiseValue__Group_2_2__1__Impl rule__PromiseValue__Group_2_2__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2423:1: rule__PromiseValue__Group_2_2__1 : rule__PromiseValue__Group_2_2__1__Impl rule__PromiseValue__Group_2_2__2 ;
     public final void rule__PromiseValue__Group_2_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2300:1: ( rule__PromiseValue__Group_2_2__1__Impl rule__PromiseValue__Group_2_2__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2301:2: rule__PromiseValue__Group_2_2__1__Impl rule__PromiseValue__Group_2_2__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2427:1: ( rule__PromiseValue__Group_2_2__1__Impl rule__PromiseValue__Group_2_2__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2428:2: rule__PromiseValue__Group_2_2__1__Impl rule__PromiseValue__Group_2_2__2
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__1__Impl_in_rule__PromiseValue__Group_2_2__14664);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__1__Impl_in_rule__PromiseValue__Group_2_2__14925);
             rule__PromiseValue__Group_2_2__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__2_in_rule__PromiseValue__Group_2_2__14667);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__2_in_rule__PromiseValue__Group_2_2__14928);
             rule__PromiseValue__Group_2_2__2();
 
             state._fsp--;
@@ -6450,20 +6790,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_2__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2308:1: rule__PromiseValue__Group_2_2__1__Impl : ( '@' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2435:1: rule__PromiseValue__Group_2_2__1__Impl : ( '@' ) ;
     public final void rule__PromiseValue__Group_2_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2312:1: ( ( '@' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2313:1: ( '@' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2439:1: ( ( '@' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2440:1: ( '@' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2313:1: ( '@' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2314:1: '@'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2440:1: ( '@' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2441:1: '@'
             {
              before(grammarAccess.getPromiseValueAccess().getCommercialAtKeyword_2_2_1()); 
-            match(input,23,FOLLOW_23_in_rule__PromiseValue__Group_2_2__1__Impl4695); 
+            match(input,26,FOLLOW_26_in_rule__PromiseValue__Group_2_2__1__Impl4956); 
              after(grammarAccess.getPromiseValueAccess().getCommercialAtKeyword_2_2_1()); 
 
             }
@@ -6487,21 +6827,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_2__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2327:1: rule__PromiseValue__Group_2_2__2 : rule__PromiseValue__Group_2_2__2__Impl rule__PromiseValue__Group_2_2__3 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2454:1: rule__PromiseValue__Group_2_2__2 : rule__PromiseValue__Group_2_2__2__Impl rule__PromiseValue__Group_2_2__3 ;
     public final void rule__PromiseValue__Group_2_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2331:1: ( rule__PromiseValue__Group_2_2__2__Impl rule__PromiseValue__Group_2_2__3 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2332:2: rule__PromiseValue__Group_2_2__2__Impl rule__PromiseValue__Group_2_2__3
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2458:1: ( rule__PromiseValue__Group_2_2__2__Impl rule__PromiseValue__Group_2_2__3 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2459:2: rule__PromiseValue__Group_2_2__2__Impl rule__PromiseValue__Group_2_2__3
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__2__Impl_in_rule__PromiseValue__Group_2_2__24726);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__2__Impl_in_rule__PromiseValue__Group_2_2__24987);
             rule__PromiseValue__Group_2_2__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__3_in_rule__PromiseValue__Group_2_2__24729);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__3_in_rule__PromiseValue__Group_2_2__24990);
             rule__PromiseValue__Group_2_2__3();
 
             state._fsp--;
@@ -6525,20 +6865,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_2__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2339:1: rule__PromiseValue__Group_2_2__2__Impl : ( '(' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2466:1: rule__PromiseValue__Group_2_2__2__Impl : ( '(' ) ;
     public final void rule__PromiseValue__Group_2_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2343:1: ( ( '(' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2344:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2470:1: ( ( '(' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2471:1: ( '(' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2344:1: ( '(' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2345:1: '('
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2471:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2472:1: '('
             {
              before(grammarAccess.getPromiseValueAccess().getLeftParenthesisKeyword_2_2_2()); 
-            match(input,14,FOLLOW_14_in_rule__PromiseValue__Group_2_2__2__Impl4757); 
+            match(input,15,FOLLOW_15_in_rule__PromiseValue__Group_2_2__2__Impl5018); 
              after(grammarAccess.getPromiseValueAccess().getLeftParenthesisKeyword_2_2_2()); 
 
             }
@@ -6562,21 +6902,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_2__3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2358:1: rule__PromiseValue__Group_2_2__3 : rule__PromiseValue__Group_2_2__3__Impl rule__PromiseValue__Group_2_2__4 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2485:1: rule__PromiseValue__Group_2_2__3 : rule__PromiseValue__Group_2_2__3__Impl rule__PromiseValue__Group_2_2__4 ;
     public final void rule__PromiseValue__Group_2_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2362:1: ( rule__PromiseValue__Group_2_2__3__Impl rule__PromiseValue__Group_2_2__4 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2363:2: rule__PromiseValue__Group_2_2__3__Impl rule__PromiseValue__Group_2_2__4
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2489:1: ( rule__PromiseValue__Group_2_2__3__Impl rule__PromiseValue__Group_2_2__4 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2490:2: rule__PromiseValue__Group_2_2__3__Impl rule__PromiseValue__Group_2_2__4
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__3__Impl_in_rule__PromiseValue__Group_2_2__34788);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__3__Impl_in_rule__PromiseValue__Group_2_2__35049);
             rule__PromiseValue__Group_2_2__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__4_in_rule__PromiseValue__Group_2_2__34791);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__4_in_rule__PromiseValue__Group_2_2__35052);
             rule__PromiseValue__Group_2_2__4();
 
             state._fsp--;
@@ -6600,20 +6940,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_2__3__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2370:1: rule__PromiseValue__Group_2_2__3__Impl : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2497:1: rule__PromiseValue__Group_2_2__3__Impl : ( RULE_ID ) ;
     public final void rule__PromiseValue__Group_2_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2374:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2375:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2501:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2502:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2375:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2376:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2502:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2503:1: RULE_ID
             {
              before(grammarAccess.getPromiseValueAccess().getIDTerminalRuleCall_2_2_3()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PromiseValue__Group_2_2__3__Impl4818); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PromiseValue__Group_2_2__3__Impl5079); 
              after(grammarAccess.getPromiseValueAccess().getIDTerminalRuleCall_2_2_3()); 
 
             }
@@ -6637,21 +6977,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_2__4"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2387:1: rule__PromiseValue__Group_2_2__4 : rule__PromiseValue__Group_2_2__4__Impl rule__PromiseValue__Group_2_2__5 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2514:1: rule__PromiseValue__Group_2_2__4 : rule__PromiseValue__Group_2_2__4__Impl rule__PromiseValue__Group_2_2__5 ;
     public final void rule__PromiseValue__Group_2_2__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2391:1: ( rule__PromiseValue__Group_2_2__4__Impl rule__PromiseValue__Group_2_2__5 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2392:2: rule__PromiseValue__Group_2_2__4__Impl rule__PromiseValue__Group_2_2__5
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2518:1: ( rule__PromiseValue__Group_2_2__4__Impl rule__PromiseValue__Group_2_2__5 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2519:2: rule__PromiseValue__Group_2_2__4__Impl rule__PromiseValue__Group_2_2__5
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__4__Impl_in_rule__PromiseValue__Group_2_2__44847);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__4__Impl_in_rule__PromiseValue__Group_2_2__45108);
             rule__PromiseValue__Group_2_2__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__5_in_rule__PromiseValue__Group_2_2__44850);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__5_in_rule__PromiseValue__Group_2_2__45111);
             rule__PromiseValue__Group_2_2__5();
 
             state._fsp--;
@@ -6675,20 +7015,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_2__4__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2399:1: rule__PromiseValue__Group_2_2__4__Impl : ( ')' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2526:1: rule__PromiseValue__Group_2_2__4__Impl : ( ')' ) ;
     public final void rule__PromiseValue__Group_2_2__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2403:1: ( ( ')' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2404:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2530:1: ( ( ')' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2531:1: ( ')' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2404:1: ( ')' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2405:1: ')'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2531:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2532:1: ')'
             {
              before(grammarAccess.getPromiseValueAccess().getRightParenthesisKeyword_2_2_4()); 
-            match(input,15,FOLLOW_15_in_rule__PromiseValue__Group_2_2__4__Impl4878); 
+            match(input,16,FOLLOW_16_in_rule__PromiseValue__Group_2_2__4__Impl5139); 
              after(grammarAccess.getPromiseValueAccess().getRightParenthesisKeyword_2_2_4()); 
 
             }
@@ -6712,16 +7052,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_2__5"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2418:1: rule__PromiseValue__Group_2_2__5 : rule__PromiseValue__Group_2_2__5__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2545:1: rule__PromiseValue__Group_2_2__5 : rule__PromiseValue__Group_2_2__5__Impl ;
     public final void rule__PromiseValue__Group_2_2__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2422:1: ( rule__PromiseValue__Group_2_2__5__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2423:2: rule__PromiseValue__Group_2_2__5__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2549:1: ( rule__PromiseValue__Group_2_2__5__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2550:2: rule__PromiseValue__Group_2_2__5__Impl
             {
-            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__5__Impl_in_rule__PromiseValue__Group_2_2__54909);
+            pushFollow(FOLLOW_rule__PromiseValue__Group_2_2__5__Impl_in_rule__PromiseValue__Group_2_2__55170);
             rule__PromiseValue__Group_2_2__5__Impl();
 
             state._fsp--;
@@ -6745,20 +7085,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__Group_2_2__5__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2429:1: rule__PromiseValue__Group_2_2__5__Impl : ( '}' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2556:1: rule__PromiseValue__Group_2_2__5__Impl : ( '}' ) ;
     public final void rule__PromiseValue__Group_2_2__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2433:1: ( ( '}' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2434:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2560:1: ( ( '}' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2561:1: ( '}' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2434:1: ( '}' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2435:1: '}'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2561:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2562:1: '}'
             {
              before(grammarAccess.getPromiseValueAccess().getRightCurlyBracketKeyword_2_2_5()); 
-            match(input,18,FOLLOW_18_in_rule__PromiseValue__Group_2_2__5__Impl4937); 
+            match(input,21,FOLLOW_21_in_rule__PromiseValue__Group_2_2__5__Impl5198); 
              after(grammarAccess.getPromiseValueAccess().getRightCurlyBracketKeyword_2_2_5()); 
 
             }
@@ -6782,21 +7122,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2460:1: rule__Body__Group__0 : rule__Body__Group__0__Impl rule__Body__Group__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2587:1: rule__Body__Group__0 : rule__Body__Group__0__Impl rule__Body__Group__1 ;
     public final void rule__Body__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2464:1: ( rule__Body__Group__0__Impl rule__Body__Group__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2465:2: rule__Body__Group__0__Impl rule__Body__Group__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2591:1: ( rule__Body__Group__0__Impl rule__Body__Group__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2592:2: rule__Body__Group__0__Impl rule__Body__Group__1
             {
-            pushFollow(FOLLOW_rule__Body__Group__0__Impl_in_rule__Body__Group__04980);
+            pushFollow(FOLLOW_rule__Body__Group__0__Impl_in_rule__Body__Group__05241);
             rule__Body__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group__1_in_rule__Body__Group__04983);
+            pushFollow(FOLLOW_rule__Body__Group__1_in_rule__Body__Group__05244);
             rule__Body__Group__1();
 
             state._fsp--;
@@ -6820,20 +7160,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2472:1: rule__Body__Group__0__Impl : ( 'body' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2599:1: rule__Body__Group__0__Impl : ( 'body' ) ;
     public final void rule__Body__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2476:1: ( ( 'body' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2477:1: ( 'body' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2603:1: ( ( 'body' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2604:1: ( 'body' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2477:1: ( 'body' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2478:1: 'body'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2604:1: ( 'body' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2605:1: 'body'
             {
              before(grammarAccess.getBodyAccess().getBodyKeyword_0()); 
-            match(input,24,FOLLOW_24_in_rule__Body__Group__0__Impl5011); 
+            match(input,27,FOLLOW_27_in_rule__Body__Group__0__Impl5272); 
              after(grammarAccess.getBodyAccess().getBodyKeyword_0()); 
 
             }
@@ -6857,21 +7197,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2491:1: rule__Body__Group__1 : rule__Body__Group__1__Impl rule__Body__Group__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2618:1: rule__Body__Group__1 : rule__Body__Group__1__Impl rule__Body__Group__2 ;
     public final void rule__Body__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2495:1: ( rule__Body__Group__1__Impl rule__Body__Group__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2496:2: rule__Body__Group__1__Impl rule__Body__Group__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2622:1: ( rule__Body__Group__1__Impl rule__Body__Group__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2623:2: rule__Body__Group__1__Impl rule__Body__Group__2
             {
-            pushFollow(FOLLOW_rule__Body__Group__1__Impl_in_rule__Body__Group__15042);
+            pushFollow(FOLLOW_rule__Body__Group__1__Impl_in_rule__Body__Group__15303);
             rule__Body__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group__2_in_rule__Body__Group__15045);
+            pushFollow(FOLLOW_rule__Body__Group__2_in_rule__Body__Group__15306);
             rule__Body__Group__2();
 
             state._fsp--;
@@ -6895,23 +7235,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2503:1: rule__Body__Group__1__Impl : ( ( rule__Body__ComponentAssignment_1 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2630:1: rule__Body__Group__1__Impl : ( ( rule__Body__ComponentAssignment_1 ) ) ;
     public final void rule__Body__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2507:1: ( ( ( rule__Body__ComponentAssignment_1 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2508:1: ( ( rule__Body__ComponentAssignment_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2634:1: ( ( ( rule__Body__ComponentAssignment_1 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2635:1: ( ( rule__Body__ComponentAssignment_1 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2508:1: ( ( rule__Body__ComponentAssignment_1 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2509:1: ( rule__Body__ComponentAssignment_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2635:1: ( ( rule__Body__ComponentAssignment_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2636:1: ( rule__Body__ComponentAssignment_1 )
             {
              before(grammarAccess.getBodyAccess().getComponentAssignment_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2510:1: ( rule__Body__ComponentAssignment_1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2510:2: rule__Body__ComponentAssignment_1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2637:1: ( rule__Body__ComponentAssignment_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2637:2: rule__Body__ComponentAssignment_1
             {
-            pushFollow(FOLLOW_rule__Body__ComponentAssignment_1_in_rule__Body__Group__1__Impl5072);
+            pushFollow(FOLLOW_rule__Body__ComponentAssignment_1_in_rule__Body__Group__1__Impl5333);
             rule__Body__ComponentAssignment_1();
 
             state._fsp--;
@@ -6942,21 +7282,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2520:1: rule__Body__Group__2 : rule__Body__Group__2__Impl rule__Body__Group__3 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2647:1: rule__Body__Group__2 : rule__Body__Group__2__Impl rule__Body__Group__3 ;
     public final void rule__Body__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2524:1: ( rule__Body__Group__2__Impl rule__Body__Group__3 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2525:2: rule__Body__Group__2__Impl rule__Body__Group__3
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2651:1: ( rule__Body__Group__2__Impl rule__Body__Group__3 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2652:2: rule__Body__Group__2__Impl rule__Body__Group__3
             {
-            pushFollow(FOLLOW_rule__Body__Group__2__Impl_in_rule__Body__Group__25102);
+            pushFollow(FOLLOW_rule__Body__Group__2__Impl_in_rule__Body__Group__25363);
             rule__Body__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group__3_in_rule__Body__Group__25105);
+            pushFollow(FOLLOW_rule__Body__Group__3_in_rule__Body__Group__25366);
             rule__Body__Group__3();
 
             state._fsp--;
@@ -6980,23 +7320,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2532:1: rule__Body__Group__2__Impl : ( ( rule__Body__NameAssignment_2 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2659:1: rule__Body__Group__2__Impl : ( ( rule__Body__NameAssignment_2 ) ) ;
     public final void rule__Body__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2536:1: ( ( ( rule__Body__NameAssignment_2 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2537:1: ( ( rule__Body__NameAssignment_2 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2663:1: ( ( ( rule__Body__NameAssignment_2 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2664:1: ( ( rule__Body__NameAssignment_2 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2537:1: ( ( rule__Body__NameAssignment_2 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2538:1: ( rule__Body__NameAssignment_2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2664:1: ( ( rule__Body__NameAssignment_2 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2665:1: ( rule__Body__NameAssignment_2 )
             {
              before(grammarAccess.getBodyAccess().getNameAssignment_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2539:1: ( rule__Body__NameAssignment_2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2539:2: rule__Body__NameAssignment_2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2666:1: ( rule__Body__NameAssignment_2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2666:2: rule__Body__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__Body__NameAssignment_2_in_rule__Body__Group__2__Impl5132);
+            pushFollow(FOLLOW_rule__Body__NameAssignment_2_in_rule__Body__Group__2__Impl5393);
             rule__Body__NameAssignment_2();
 
             state._fsp--;
@@ -7027,21 +7367,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2549:1: rule__Body__Group__3 : rule__Body__Group__3__Impl rule__Body__Group__4 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2676:1: rule__Body__Group__3 : rule__Body__Group__3__Impl rule__Body__Group__4 ;
     public final void rule__Body__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2553:1: ( rule__Body__Group__3__Impl rule__Body__Group__4 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2554:2: rule__Body__Group__3__Impl rule__Body__Group__4
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2680:1: ( rule__Body__Group__3__Impl rule__Body__Group__4 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2681:2: rule__Body__Group__3__Impl rule__Body__Group__4
             {
-            pushFollow(FOLLOW_rule__Body__Group__3__Impl_in_rule__Body__Group__35162);
+            pushFollow(FOLLOW_rule__Body__Group__3__Impl_in_rule__Body__Group__35423);
             rule__Body__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group__4_in_rule__Body__Group__35165);
+            pushFollow(FOLLOW_rule__Body__Group__4_in_rule__Body__Group__35426);
             rule__Body__Group__4();
 
             state._fsp--;
@@ -7065,31 +7405,31 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__3__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2561:1: rule__Body__Group__3__Impl : ( ( rule__Body__Group_3__0 )? ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2688:1: rule__Body__Group__3__Impl : ( ( rule__Body__Group_3__0 )? ) ;
     public final void rule__Body__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2565:1: ( ( ( rule__Body__Group_3__0 )? ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2566:1: ( ( rule__Body__Group_3__0 )? )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2692:1: ( ( ( rule__Body__Group_3__0 )? ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2693:1: ( ( rule__Body__Group_3__0 )? )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2566:1: ( ( rule__Body__Group_3__0 )? )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2567:1: ( rule__Body__Group_3__0 )?
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2693:1: ( ( rule__Body__Group_3__0 )? )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2694:1: ( rule__Body__Group_3__0 )?
             {
              before(grammarAccess.getBodyAccess().getGroup_3()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2568:1: ( rule__Body__Group_3__0 )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2695:1: ( rule__Body__Group_3__0 )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA21_0==14) ) {
-                alt21=1;
+            if ( (LA22_0==15) ) {
+                alt22=1;
             }
-            switch (alt21) {
+            switch (alt22) {
                 case 1 :
-                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2568:2: rule__Body__Group_3__0
+                    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2695:2: rule__Body__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Body__Group_3__0_in_rule__Body__Group__3__Impl5192);
+                    pushFollow(FOLLOW_rule__Body__Group_3__0_in_rule__Body__Group__3__Impl5453);
                     rule__Body__Group_3__0();
 
                     state._fsp--;
@@ -7123,21 +7463,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__4"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2578:1: rule__Body__Group__4 : rule__Body__Group__4__Impl rule__Body__Group__5 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2705:1: rule__Body__Group__4 : rule__Body__Group__4__Impl rule__Body__Group__5 ;
     public final void rule__Body__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2582:1: ( rule__Body__Group__4__Impl rule__Body__Group__5 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2583:2: rule__Body__Group__4__Impl rule__Body__Group__5
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2709:1: ( rule__Body__Group__4__Impl rule__Body__Group__5 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2710:2: rule__Body__Group__4__Impl rule__Body__Group__5
             {
-            pushFollow(FOLLOW_rule__Body__Group__4__Impl_in_rule__Body__Group__45223);
+            pushFollow(FOLLOW_rule__Body__Group__4__Impl_in_rule__Body__Group__45484);
             rule__Body__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group__5_in_rule__Body__Group__45226);
+            pushFollow(FOLLOW_rule__Body__Group__5_in_rule__Body__Group__45487);
             rule__Body__Group__5();
 
             state._fsp--;
@@ -7161,20 +7501,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__4__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2590:1: rule__Body__Group__4__Impl : ( '{' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2717:1: rule__Body__Group__4__Impl : ( '{' ) ;
     public final void rule__Body__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2594:1: ( ( '{' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2595:1: ( '{' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2721:1: ( ( '{' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2722:1: ( '{' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2595:1: ( '{' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2596:1: '{'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2722:1: ( '{' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2723:1: '{'
             {
              before(grammarAccess.getBodyAccess().getLeftCurlyBracketKeyword_4()); 
-            match(input,17,FOLLOW_17_in_rule__Body__Group__4__Impl5254); 
+            match(input,20,FOLLOW_20_in_rule__Body__Group__4__Impl5515); 
              after(grammarAccess.getBodyAccess().getLeftCurlyBracketKeyword_4()); 
 
             }
@@ -7198,21 +7538,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__5"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2609:1: rule__Body__Group__5 : rule__Body__Group__5__Impl rule__Body__Group__6 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2736:1: rule__Body__Group__5 : rule__Body__Group__5__Impl rule__Body__Group__6 ;
     public final void rule__Body__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2613:1: ( rule__Body__Group__5__Impl rule__Body__Group__6 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2614:2: rule__Body__Group__5__Impl rule__Body__Group__6
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2740:1: ( rule__Body__Group__5__Impl rule__Body__Group__6 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2741:2: rule__Body__Group__5__Impl rule__Body__Group__6
             {
-            pushFollow(FOLLOW_rule__Body__Group__5__Impl_in_rule__Body__Group__55285);
+            pushFollow(FOLLOW_rule__Body__Group__5__Impl_in_rule__Body__Group__55546);
             rule__Body__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group__6_in_rule__Body__Group__55288);
+            pushFollow(FOLLOW_rule__Body__Group__6_in_rule__Body__Group__55549);
             rule__Body__Group__6();
 
             state._fsp--;
@@ -7236,41 +7576,41 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__5__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2621:1: rule__Body__Group__5__Impl : ( ( rule__Body__PromiseTypeAssignment_5 )* ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2748:1: rule__Body__Group__5__Impl : ( ( rule__Body__PromiseTypeAssignment_5 )* ) ;
     public final void rule__Body__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2625:1: ( ( ( rule__Body__PromiseTypeAssignment_5 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2626:1: ( ( rule__Body__PromiseTypeAssignment_5 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2752:1: ( ( ( rule__Body__PromiseTypeAssignment_5 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2753:1: ( ( rule__Body__PromiseTypeAssignment_5 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2626:1: ( ( rule__Body__PromiseTypeAssignment_5 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2627:1: ( rule__Body__PromiseTypeAssignment_5 )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2753:1: ( ( rule__Body__PromiseTypeAssignment_5 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2754:1: ( rule__Body__PromiseTypeAssignment_5 )*
             {
              before(grammarAccess.getBodyAccess().getPromiseTypeAssignment_5()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2628:1: ( rule__Body__PromiseTypeAssignment_5 )*
-            loop22:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2755:1: ( rule__Body__PromiseTypeAssignment_5 )*
+            loop23:
             do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+                int alt23=2;
+                int LA23_0 = input.LA(1);
 
-                if ( (LA22_0==RULE_ID) ) {
-                    int LA22_1 = input.LA(2);
+                if ( (LA23_0==RULE_ID) ) {
+                    int LA23_1 = input.LA(2);
 
-                    if ( (LA22_1==22) ) {
-                        alt22=1;
+                    if ( (LA23_1==25) ) {
+                        alt23=1;
                     }
 
 
                 }
 
 
-                switch (alt22) {
+                switch (alt23) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2628:2: rule__Body__PromiseTypeAssignment_5
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2755:2: rule__Body__PromiseTypeAssignment_5
             	    {
-            	    pushFollow(FOLLOW_rule__Body__PromiseTypeAssignment_5_in_rule__Body__Group__5__Impl5315);
+            	    pushFollow(FOLLOW_rule__Body__PromiseTypeAssignment_5_in_rule__Body__Group__5__Impl5576);
             	    rule__Body__PromiseTypeAssignment_5();
 
             	    state._fsp--;
@@ -7280,7 +7620,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop22;
+            	    break loop23;
                 }
             } while (true);
 
@@ -7307,21 +7647,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__6"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2638:1: rule__Body__Group__6 : rule__Body__Group__6__Impl rule__Body__Group__7 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2765:1: rule__Body__Group__6 : rule__Body__Group__6__Impl rule__Body__Group__7 ;
     public final void rule__Body__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2642:1: ( rule__Body__Group__6__Impl rule__Body__Group__7 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2643:2: rule__Body__Group__6__Impl rule__Body__Group__7
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2769:1: ( rule__Body__Group__6__Impl rule__Body__Group__7 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2770:2: rule__Body__Group__6__Impl rule__Body__Group__7
             {
-            pushFollow(FOLLOW_rule__Body__Group__6__Impl_in_rule__Body__Group__65346);
+            pushFollow(FOLLOW_rule__Body__Group__6__Impl_in_rule__Body__Group__65607);
             rule__Body__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group__7_in_rule__Body__Group__65349);
+            pushFollow(FOLLOW_rule__Body__Group__7_in_rule__Body__Group__65610);
             rule__Body__Group__7();
 
             state._fsp--;
@@ -7345,35 +7685,35 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__6__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2650:1: rule__Body__Group__6__Impl : ( ( rule__Body__ClassesAssignment_6 )* ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2777:1: rule__Body__Group__6__Impl : ( ( rule__Body__ClassesAssignment_6 )* ) ;
     public final void rule__Body__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2654:1: ( ( ( rule__Body__ClassesAssignment_6 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2655:1: ( ( rule__Body__ClassesAssignment_6 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2781:1: ( ( ( rule__Body__ClassesAssignment_6 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2782:1: ( ( rule__Body__ClassesAssignment_6 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2655:1: ( ( rule__Body__ClassesAssignment_6 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2656:1: ( rule__Body__ClassesAssignment_6 )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2782:1: ( ( rule__Body__ClassesAssignment_6 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2783:1: ( rule__Body__ClassesAssignment_6 )*
             {
              before(grammarAccess.getBodyAccess().getClassesAssignment_6()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2657:1: ( rule__Body__ClassesAssignment_6 )*
-            loop23:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2784:1: ( rule__Body__ClassesAssignment_6 )*
+            loop24:
             do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
+                int alt24=2;
+                int LA24_0 = input.LA(1);
 
-                if ( (LA23_0==RULE_ID||(LA23_0>=13 && LA23_0<=14)) ) {
-                    alt23=1;
+                if ( (LA24_0==RULE_ID||(LA24_0>=14 && LA24_0<=15)||(LA24_0>=17 && LA24_0<=18)) ) {
+                    alt24=1;
                 }
 
 
-                switch (alt23) {
+                switch (alt24) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2657:2: rule__Body__ClassesAssignment_6
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2784:2: rule__Body__ClassesAssignment_6
             	    {
-            	    pushFollow(FOLLOW_rule__Body__ClassesAssignment_6_in_rule__Body__Group__6__Impl5376);
+            	    pushFollow(FOLLOW_rule__Body__ClassesAssignment_6_in_rule__Body__Group__6__Impl5637);
             	    rule__Body__ClassesAssignment_6();
 
             	    state._fsp--;
@@ -7383,7 +7723,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop23;
+            	    break loop24;
                 }
             } while (true);
 
@@ -7410,16 +7750,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__7"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2667:1: rule__Body__Group__7 : rule__Body__Group__7__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2794:1: rule__Body__Group__7 : rule__Body__Group__7__Impl ;
     public final void rule__Body__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2671:1: ( rule__Body__Group__7__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2672:2: rule__Body__Group__7__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2798:1: ( rule__Body__Group__7__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2799:2: rule__Body__Group__7__Impl
             {
-            pushFollow(FOLLOW_rule__Body__Group__7__Impl_in_rule__Body__Group__75407);
+            pushFollow(FOLLOW_rule__Body__Group__7__Impl_in_rule__Body__Group__75668);
             rule__Body__Group__7__Impl();
 
             state._fsp--;
@@ -7443,20 +7783,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group__7__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2678:1: rule__Body__Group__7__Impl : ( '}' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2805:1: rule__Body__Group__7__Impl : ( '}' ) ;
     public final void rule__Body__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2682:1: ( ( '}' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2683:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2809:1: ( ( '}' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2810:1: ( '}' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2683:1: ( '}' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2684:1: '}'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2810:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2811:1: '}'
             {
              before(grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_7()); 
-            match(input,18,FOLLOW_18_in_rule__Body__Group__7__Impl5435); 
+            match(input,21,FOLLOW_21_in_rule__Body__Group__7__Impl5696); 
              after(grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_7()); 
 
             }
@@ -7480,21 +7820,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group_3__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2713:1: rule__Body__Group_3__0 : rule__Body__Group_3__0__Impl rule__Body__Group_3__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2840:1: rule__Body__Group_3__0 : rule__Body__Group_3__0__Impl rule__Body__Group_3__1 ;
     public final void rule__Body__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2717:1: ( rule__Body__Group_3__0__Impl rule__Body__Group_3__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2718:2: rule__Body__Group_3__0__Impl rule__Body__Group_3__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2844:1: ( rule__Body__Group_3__0__Impl rule__Body__Group_3__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2845:2: rule__Body__Group_3__0__Impl rule__Body__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Body__Group_3__0__Impl_in_rule__Body__Group_3__05482);
+            pushFollow(FOLLOW_rule__Body__Group_3__0__Impl_in_rule__Body__Group_3__05743);
             rule__Body__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group_3__1_in_rule__Body__Group_3__05485);
+            pushFollow(FOLLOW_rule__Body__Group_3__1_in_rule__Body__Group_3__05746);
             rule__Body__Group_3__1();
 
             state._fsp--;
@@ -7518,20 +7858,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group_3__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2725:1: rule__Body__Group_3__0__Impl : ( '(' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2852:1: rule__Body__Group_3__0__Impl : ( '(' ) ;
     public final void rule__Body__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2729:1: ( ( '(' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2730:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2856:1: ( ( '(' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2857:1: ( '(' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2730:1: ( '(' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2731:1: '('
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2857:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2858:1: '('
             {
              before(grammarAccess.getBodyAccess().getLeftParenthesisKeyword_3_0()); 
-            match(input,14,FOLLOW_14_in_rule__Body__Group_3__0__Impl5513); 
+            match(input,15,FOLLOW_15_in_rule__Body__Group_3__0__Impl5774); 
              after(grammarAccess.getBodyAccess().getLeftParenthesisKeyword_3_0()); 
 
             }
@@ -7555,21 +7895,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group_3__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2744:1: rule__Body__Group_3__1 : rule__Body__Group_3__1__Impl rule__Body__Group_3__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2871:1: rule__Body__Group_3__1 : rule__Body__Group_3__1__Impl rule__Body__Group_3__2 ;
     public final void rule__Body__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2748:1: ( rule__Body__Group_3__1__Impl rule__Body__Group_3__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2749:2: rule__Body__Group_3__1__Impl rule__Body__Group_3__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2875:1: ( rule__Body__Group_3__1__Impl rule__Body__Group_3__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2876:2: rule__Body__Group_3__1__Impl rule__Body__Group_3__2
             {
-            pushFollow(FOLLOW_rule__Body__Group_3__1__Impl_in_rule__Body__Group_3__15544);
+            pushFollow(FOLLOW_rule__Body__Group_3__1__Impl_in_rule__Body__Group_3__15805);
             rule__Body__Group_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group_3__2_in_rule__Body__Group_3__15547);
+            pushFollow(FOLLOW_rule__Body__Group_3__2_in_rule__Body__Group_3__15808);
             rule__Body__Group_3__2();
 
             state._fsp--;
@@ -7593,23 +7933,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group_3__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2756:1: rule__Body__Group_3__1__Impl : ( ( rule__Body__VariablesAssignment_3_1 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2883:1: rule__Body__Group_3__1__Impl : ( ( rule__Body__VariablesAssignment_3_1 ) ) ;
     public final void rule__Body__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2760:1: ( ( ( rule__Body__VariablesAssignment_3_1 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2761:1: ( ( rule__Body__VariablesAssignment_3_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2887:1: ( ( ( rule__Body__VariablesAssignment_3_1 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2888:1: ( ( rule__Body__VariablesAssignment_3_1 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2761:1: ( ( rule__Body__VariablesAssignment_3_1 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2762:1: ( rule__Body__VariablesAssignment_3_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2888:1: ( ( rule__Body__VariablesAssignment_3_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2889:1: ( rule__Body__VariablesAssignment_3_1 )
             {
              before(grammarAccess.getBodyAccess().getVariablesAssignment_3_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2763:1: ( rule__Body__VariablesAssignment_3_1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2763:2: rule__Body__VariablesAssignment_3_1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2890:1: ( rule__Body__VariablesAssignment_3_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2890:2: rule__Body__VariablesAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Body__VariablesAssignment_3_1_in_rule__Body__Group_3__1__Impl5574);
+            pushFollow(FOLLOW_rule__Body__VariablesAssignment_3_1_in_rule__Body__Group_3__1__Impl5835);
             rule__Body__VariablesAssignment_3_1();
 
             state._fsp--;
@@ -7640,21 +7980,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group_3__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2773:1: rule__Body__Group_3__2 : rule__Body__Group_3__2__Impl rule__Body__Group_3__3 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2900:1: rule__Body__Group_3__2 : rule__Body__Group_3__2__Impl rule__Body__Group_3__3 ;
     public final void rule__Body__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2777:1: ( rule__Body__Group_3__2__Impl rule__Body__Group_3__3 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2778:2: rule__Body__Group_3__2__Impl rule__Body__Group_3__3
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2904:1: ( rule__Body__Group_3__2__Impl rule__Body__Group_3__3 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2905:2: rule__Body__Group_3__2__Impl rule__Body__Group_3__3
             {
-            pushFollow(FOLLOW_rule__Body__Group_3__2__Impl_in_rule__Body__Group_3__25604);
+            pushFollow(FOLLOW_rule__Body__Group_3__2__Impl_in_rule__Body__Group_3__25865);
             rule__Body__Group_3__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group_3__3_in_rule__Body__Group_3__25607);
+            pushFollow(FOLLOW_rule__Body__Group_3__3_in_rule__Body__Group_3__25868);
             rule__Body__Group_3__3();
 
             state._fsp--;
@@ -7678,35 +8018,35 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group_3__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2785:1: rule__Body__Group_3__2__Impl : ( ( rule__Body__Group_3_2__0 )* ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2912:1: rule__Body__Group_3__2__Impl : ( ( rule__Body__Group_3_2__0 )* ) ;
     public final void rule__Body__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2789:1: ( ( ( rule__Body__Group_3_2__0 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2790:1: ( ( rule__Body__Group_3_2__0 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2916:1: ( ( ( rule__Body__Group_3_2__0 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2917:1: ( ( rule__Body__Group_3_2__0 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2790:1: ( ( rule__Body__Group_3_2__0 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2791:1: ( rule__Body__Group_3_2__0 )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2917:1: ( ( rule__Body__Group_3_2__0 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2918:1: ( rule__Body__Group_3_2__0 )*
             {
              before(grammarAccess.getBodyAccess().getGroup_3_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2792:1: ( rule__Body__Group_3_2__0 )*
-            loop24:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2919:1: ( rule__Body__Group_3_2__0 )*
+            loop25:
             do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
+                int alt25=2;
+                int LA25_0 = input.LA(1);
 
-                if ( (LA24_0==11) ) {
-                    alt24=1;
+                if ( (LA25_0==13) ) {
+                    alt25=1;
                 }
 
 
-                switch (alt24) {
+                switch (alt25) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2792:2: rule__Body__Group_3_2__0
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2919:2: rule__Body__Group_3_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Body__Group_3_2__0_in_rule__Body__Group_3__2__Impl5634);
+            	    pushFollow(FOLLOW_rule__Body__Group_3_2__0_in_rule__Body__Group_3__2__Impl5895);
             	    rule__Body__Group_3_2__0();
 
             	    state._fsp--;
@@ -7716,7 +8056,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop24;
+            	    break loop25;
                 }
             } while (true);
 
@@ -7743,16 +8083,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group_3__3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2802:1: rule__Body__Group_3__3 : rule__Body__Group_3__3__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2929:1: rule__Body__Group_3__3 : rule__Body__Group_3__3__Impl ;
     public final void rule__Body__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2806:1: ( rule__Body__Group_3__3__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2807:2: rule__Body__Group_3__3__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2933:1: ( rule__Body__Group_3__3__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2934:2: rule__Body__Group_3__3__Impl
             {
-            pushFollow(FOLLOW_rule__Body__Group_3__3__Impl_in_rule__Body__Group_3__35665);
+            pushFollow(FOLLOW_rule__Body__Group_3__3__Impl_in_rule__Body__Group_3__35926);
             rule__Body__Group_3__3__Impl();
 
             state._fsp--;
@@ -7776,20 +8116,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group_3__3__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2813:1: rule__Body__Group_3__3__Impl : ( ')' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2940:1: rule__Body__Group_3__3__Impl : ( ')' ) ;
     public final void rule__Body__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2817:1: ( ( ')' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2818:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2944:1: ( ( ')' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2945:1: ( ')' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2818:1: ( ')' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2819:1: ')'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2945:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2946:1: ')'
             {
              before(grammarAccess.getBodyAccess().getRightParenthesisKeyword_3_3()); 
-            match(input,15,FOLLOW_15_in_rule__Body__Group_3__3__Impl5693); 
+            match(input,16,FOLLOW_16_in_rule__Body__Group_3__3__Impl5954); 
              after(grammarAccess.getBodyAccess().getRightParenthesisKeyword_3_3()); 
 
             }
@@ -7813,21 +8153,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group_3_2__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2840:1: rule__Body__Group_3_2__0 : rule__Body__Group_3_2__0__Impl rule__Body__Group_3_2__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2967:1: rule__Body__Group_3_2__0 : rule__Body__Group_3_2__0__Impl rule__Body__Group_3_2__1 ;
     public final void rule__Body__Group_3_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2844:1: ( rule__Body__Group_3_2__0__Impl rule__Body__Group_3_2__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2845:2: rule__Body__Group_3_2__0__Impl rule__Body__Group_3_2__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2971:1: ( rule__Body__Group_3_2__0__Impl rule__Body__Group_3_2__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2972:2: rule__Body__Group_3_2__0__Impl rule__Body__Group_3_2__1
             {
-            pushFollow(FOLLOW_rule__Body__Group_3_2__0__Impl_in_rule__Body__Group_3_2__05732);
+            pushFollow(FOLLOW_rule__Body__Group_3_2__0__Impl_in_rule__Body__Group_3_2__05993);
             rule__Body__Group_3_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group_3_2__1_in_rule__Body__Group_3_2__05735);
+            pushFollow(FOLLOW_rule__Body__Group_3_2__1_in_rule__Body__Group_3_2__05996);
             rule__Body__Group_3_2__1();
 
             state._fsp--;
@@ -7851,20 +8191,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group_3_2__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2852:1: rule__Body__Group_3_2__0__Impl : ( ',' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2979:1: rule__Body__Group_3_2__0__Impl : ( ',' ) ;
     public final void rule__Body__Group_3_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2856:1: ( ( ',' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2857:1: ( ',' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2983:1: ( ( ',' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2984:1: ( ',' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2857:1: ( ',' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2858:1: ','
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2984:1: ( ',' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2985:1: ','
             {
              before(grammarAccess.getBodyAccess().getCommaKeyword_3_2_0()); 
-            match(input,11,FOLLOW_11_in_rule__Body__Group_3_2__0__Impl5763); 
+            match(input,13,FOLLOW_13_in_rule__Body__Group_3_2__0__Impl6024); 
              after(grammarAccess.getBodyAccess().getCommaKeyword_3_2_0()); 
 
             }
@@ -7888,16 +8228,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group_3_2__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2871:1: rule__Body__Group_3_2__1 : rule__Body__Group_3_2__1__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2998:1: rule__Body__Group_3_2__1 : rule__Body__Group_3_2__1__Impl ;
     public final void rule__Body__Group_3_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2875:1: ( rule__Body__Group_3_2__1__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2876:2: rule__Body__Group_3_2__1__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3002:1: ( rule__Body__Group_3_2__1__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3003:2: rule__Body__Group_3_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Body__Group_3_2__1__Impl_in_rule__Body__Group_3_2__15794);
+            pushFollow(FOLLOW_rule__Body__Group_3_2__1__Impl_in_rule__Body__Group_3_2__16055);
             rule__Body__Group_3_2__1__Impl();
 
             state._fsp--;
@@ -7921,23 +8261,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__Group_3_2__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2882:1: rule__Body__Group_3_2__1__Impl : ( ( rule__Body__VariablesAssignment_3_2_1 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3009:1: rule__Body__Group_3_2__1__Impl : ( ( rule__Body__VariablesAssignment_3_2_1 ) ) ;
     public final void rule__Body__Group_3_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2886:1: ( ( ( rule__Body__VariablesAssignment_3_2_1 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2887:1: ( ( rule__Body__VariablesAssignment_3_2_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3013:1: ( ( ( rule__Body__VariablesAssignment_3_2_1 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3014:1: ( ( rule__Body__VariablesAssignment_3_2_1 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2887:1: ( ( rule__Body__VariablesAssignment_3_2_1 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2888:1: ( rule__Body__VariablesAssignment_3_2_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3014:1: ( ( rule__Body__VariablesAssignment_3_2_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3015:1: ( rule__Body__VariablesAssignment_3_2_1 )
             {
              before(grammarAccess.getBodyAccess().getVariablesAssignment_3_2_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2889:1: ( rule__Body__VariablesAssignment_3_2_1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2889:2: rule__Body__VariablesAssignment_3_2_1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3016:1: ( rule__Body__VariablesAssignment_3_2_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3016:2: rule__Body__VariablesAssignment_3_2_1
             {
-            pushFollow(FOLLOW_rule__Body__VariablesAssignment_3_2_1_in_rule__Body__Group_3_2__1__Impl5821);
+            pushFollow(FOLLOW_rule__Body__VariablesAssignment_3_2_1_in_rule__Body__Group_3_2__1__Impl6082);
             rule__Body__VariablesAssignment_3_2_1();
 
             state._fsp--;
@@ -7968,21 +8308,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyClass__Group__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2903:1: rule__BodyClass__Group__0 : rule__BodyClass__Group__0__Impl rule__BodyClass__Group__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3030:1: rule__BodyClass__Group__0 : rule__BodyClass__Group__0__Impl rule__BodyClass__Group__1 ;
     public final void rule__BodyClass__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2907:1: ( rule__BodyClass__Group__0__Impl rule__BodyClass__Group__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2908:2: rule__BodyClass__Group__0__Impl rule__BodyClass__Group__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3034:1: ( rule__BodyClass__Group__0__Impl rule__BodyClass__Group__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3035:2: rule__BodyClass__Group__0__Impl rule__BodyClass__Group__1
             {
-            pushFollow(FOLLOW_rule__BodyClass__Group__0__Impl_in_rule__BodyClass__Group__05855);
+            pushFollow(FOLLOW_rule__BodyClass__Group__0__Impl_in_rule__BodyClass__Group__06116);
             rule__BodyClass__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyClass__Group__1_in_rule__BodyClass__Group__05858);
+            pushFollow(FOLLOW_rule__BodyClass__Group__1_in_rule__BodyClass__Group__06119);
             rule__BodyClass__Group__1();
 
             state._fsp--;
@@ -8006,23 +8346,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyClass__Group__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2915:1: rule__BodyClass__Group__0__Impl : ( ( rule__BodyClass__NameAssignment_0 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3042:1: rule__BodyClass__Group__0__Impl : ( ( rule__BodyClass__NameAssignment_0 ) ) ;
     public final void rule__BodyClass__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2919:1: ( ( ( rule__BodyClass__NameAssignment_0 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2920:1: ( ( rule__BodyClass__NameAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3046:1: ( ( ( rule__BodyClass__NameAssignment_0 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3047:1: ( ( rule__BodyClass__NameAssignment_0 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2920:1: ( ( rule__BodyClass__NameAssignment_0 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2921:1: ( rule__BodyClass__NameAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3047:1: ( ( rule__BodyClass__NameAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3048:1: ( rule__BodyClass__NameAssignment_0 )
             {
              before(grammarAccess.getBodyClassAccess().getNameAssignment_0()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2922:1: ( rule__BodyClass__NameAssignment_0 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2922:2: rule__BodyClass__NameAssignment_0
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3049:1: ( rule__BodyClass__NameAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3049:2: rule__BodyClass__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__BodyClass__NameAssignment_0_in_rule__BodyClass__Group__0__Impl5885);
+            pushFollow(FOLLOW_rule__BodyClass__NameAssignment_0_in_rule__BodyClass__Group__0__Impl6146);
             rule__BodyClass__NameAssignment_0();
 
             state._fsp--;
@@ -8053,21 +8393,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyClass__Group__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2932:1: rule__BodyClass__Group__1 : rule__BodyClass__Group__1__Impl rule__BodyClass__Group__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3059:1: rule__BodyClass__Group__1 : rule__BodyClass__Group__1__Impl rule__BodyClass__Group__2 ;
     public final void rule__BodyClass__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2936:1: ( rule__BodyClass__Group__1__Impl rule__BodyClass__Group__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2937:2: rule__BodyClass__Group__1__Impl rule__BodyClass__Group__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3063:1: ( rule__BodyClass__Group__1__Impl rule__BodyClass__Group__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3064:2: rule__BodyClass__Group__1__Impl rule__BodyClass__Group__2
             {
-            pushFollow(FOLLOW_rule__BodyClass__Group__1__Impl_in_rule__BodyClass__Group__15915);
+            pushFollow(FOLLOW_rule__BodyClass__Group__1__Impl_in_rule__BodyClass__Group__16176);
             rule__BodyClass__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyClass__Group__2_in_rule__BodyClass__Group__15918);
+            pushFollow(FOLLOW_rule__BodyClass__Group__2_in_rule__BodyClass__Group__16179);
             rule__BodyClass__Group__2();
 
             state._fsp--;
@@ -8091,20 +8431,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyClass__Group__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2944:1: rule__BodyClass__Group__1__Impl : ( '::' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3071:1: rule__BodyClass__Group__1__Impl : ( '::' ) ;
     public final void rule__BodyClass__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2948:1: ( ( '::' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2949:1: ( '::' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3075:1: ( ( '::' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3076:1: ( '::' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2949:1: ( '::' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2950:1: '::'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3076:1: ( '::' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3077:1: '::'
             {
              before(grammarAccess.getBodyClassAccess().getColonColonKeyword_1()); 
-            match(input,20,FOLLOW_20_in_rule__BodyClass__Group__1__Impl5946); 
+            match(input,23,FOLLOW_23_in_rule__BodyClass__Group__1__Impl6207); 
              after(grammarAccess.getBodyClassAccess().getColonColonKeyword_1()); 
 
             }
@@ -8128,16 +8468,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyClass__Group__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2963:1: rule__BodyClass__Group__2 : rule__BodyClass__Group__2__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3090:1: rule__BodyClass__Group__2 : rule__BodyClass__Group__2__Impl ;
     public final void rule__BodyClass__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2967:1: ( rule__BodyClass__Group__2__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2968:2: rule__BodyClass__Group__2__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3094:1: ( rule__BodyClass__Group__2__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3095:2: rule__BodyClass__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__BodyClass__Group__2__Impl_in_rule__BodyClass__Group__25977);
+            pushFollow(FOLLOW_rule__BodyClass__Group__2__Impl_in_rule__BodyClass__Group__26238);
             rule__BodyClass__Group__2__Impl();
 
             state._fsp--;
@@ -8161,41 +8501,41 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyClass__Group__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2974:1: rule__BodyClass__Group__2__Impl : ( ( rule__BodyClass__PromiseTypeAssignment_2 )* ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3101:1: rule__BodyClass__Group__2__Impl : ( ( rule__BodyClass__PromiseTypeAssignment_2 )* ) ;
     public final void rule__BodyClass__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2978:1: ( ( ( rule__BodyClass__PromiseTypeAssignment_2 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2979:1: ( ( rule__BodyClass__PromiseTypeAssignment_2 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3105:1: ( ( ( rule__BodyClass__PromiseTypeAssignment_2 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3106:1: ( ( rule__BodyClass__PromiseTypeAssignment_2 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2979:1: ( ( rule__BodyClass__PromiseTypeAssignment_2 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2980:1: ( rule__BodyClass__PromiseTypeAssignment_2 )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3106:1: ( ( rule__BodyClass__PromiseTypeAssignment_2 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3107:1: ( rule__BodyClass__PromiseTypeAssignment_2 )*
             {
              before(grammarAccess.getBodyClassAccess().getPromiseTypeAssignment_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2981:1: ( rule__BodyClass__PromiseTypeAssignment_2 )*
-            loop25:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3108:1: ( rule__BodyClass__PromiseTypeAssignment_2 )*
+            loop26:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt26=2;
+                int LA26_0 = input.LA(1);
 
-                if ( (LA25_0==RULE_ID) ) {
-                    int LA25_2 = input.LA(2);
+                if ( (LA26_0==RULE_ID) ) {
+                    int LA26_2 = input.LA(2);
 
-                    if ( (LA25_2==22) ) {
-                        alt25=1;
+                    if ( (LA26_2==25) ) {
+                        alt26=1;
                     }
 
 
                 }
 
 
-                switch (alt25) {
+                switch (alt26) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2981:2: rule__BodyClass__PromiseTypeAssignment_2
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3108:2: rule__BodyClass__PromiseTypeAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__BodyClass__PromiseTypeAssignment_2_in_rule__BodyClass__Group__2__Impl6004);
+            	    pushFollow(FOLLOW_rule__BodyClass__PromiseTypeAssignment_2_in_rule__BodyClass__Group__2__Impl6265);
             	    rule__BodyClass__PromiseTypeAssignment_2();
 
             	    state._fsp--;
@@ -8205,7 +8545,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop26;
                 }
             } while (true);
 
@@ -8232,21 +8572,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:2997:1: rule__BodyFunction__Group__0 : rule__BodyFunction__Group__0__Impl rule__BodyFunction__Group__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3124:1: rule__BodyFunction__Group__0 : rule__BodyFunction__Group__0__Impl rule__BodyFunction__Group__1 ;
     public final void rule__BodyFunction__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3001:1: ( rule__BodyFunction__Group__0__Impl rule__BodyFunction__Group__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3002:2: rule__BodyFunction__Group__0__Impl rule__BodyFunction__Group__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3128:1: ( rule__BodyFunction__Group__0__Impl rule__BodyFunction__Group__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3129:2: rule__BodyFunction__Group__0__Impl rule__BodyFunction__Group__1
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group__0__Impl_in_rule__BodyFunction__Group__06041);
+            pushFollow(FOLLOW_rule__BodyFunction__Group__0__Impl_in_rule__BodyFunction__Group__06302);
             rule__BodyFunction__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyFunction__Group__1_in_rule__BodyFunction__Group__06044);
+            pushFollow(FOLLOW_rule__BodyFunction__Group__1_in_rule__BodyFunction__Group__06305);
             rule__BodyFunction__Group__1();
 
             state._fsp--;
@@ -8270,23 +8610,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3009:1: rule__BodyFunction__Group__0__Impl : ( ( rule__BodyFunction__NameAssignment_0 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3136:1: rule__BodyFunction__Group__0__Impl : ( ( rule__BodyFunction__NameAssignment_0 ) ) ;
     public final void rule__BodyFunction__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3013:1: ( ( ( rule__BodyFunction__NameAssignment_0 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3014:1: ( ( rule__BodyFunction__NameAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3140:1: ( ( ( rule__BodyFunction__NameAssignment_0 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3141:1: ( ( rule__BodyFunction__NameAssignment_0 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3014:1: ( ( rule__BodyFunction__NameAssignment_0 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3015:1: ( rule__BodyFunction__NameAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3141:1: ( ( rule__BodyFunction__NameAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3142:1: ( rule__BodyFunction__NameAssignment_0 )
             {
              before(grammarAccess.getBodyFunctionAccess().getNameAssignment_0()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3016:1: ( rule__BodyFunction__NameAssignment_0 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3016:2: rule__BodyFunction__NameAssignment_0
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3143:1: ( rule__BodyFunction__NameAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3143:2: rule__BodyFunction__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__BodyFunction__NameAssignment_0_in_rule__BodyFunction__Group__0__Impl6071);
+            pushFollow(FOLLOW_rule__BodyFunction__NameAssignment_0_in_rule__BodyFunction__Group__0__Impl6332);
             rule__BodyFunction__NameAssignment_0();
 
             state._fsp--;
@@ -8317,21 +8657,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3026:1: rule__BodyFunction__Group__1 : rule__BodyFunction__Group__1__Impl rule__BodyFunction__Group__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3153:1: rule__BodyFunction__Group__1 : rule__BodyFunction__Group__1__Impl rule__BodyFunction__Group__2 ;
     public final void rule__BodyFunction__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3030:1: ( rule__BodyFunction__Group__1__Impl rule__BodyFunction__Group__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3031:2: rule__BodyFunction__Group__1__Impl rule__BodyFunction__Group__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3157:1: ( rule__BodyFunction__Group__1__Impl rule__BodyFunction__Group__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3158:2: rule__BodyFunction__Group__1__Impl rule__BodyFunction__Group__2
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group__1__Impl_in_rule__BodyFunction__Group__16101);
+            pushFollow(FOLLOW_rule__BodyFunction__Group__1__Impl_in_rule__BodyFunction__Group__16362);
             rule__BodyFunction__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyFunction__Group__2_in_rule__BodyFunction__Group__16104);
+            pushFollow(FOLLOW_rule__BodyFunction__Group__2_in_rule__BodyFunction__Group__16365);
             rule__BodyFunction__Group__2();
 
             state._fsp--;
@@ -8355,20 +8695,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3038:1: rule__BodyFunction__Group__1__Impl : ( '=>' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3165:1: rule__BodyFunction__Group__1__Impl : ( '=>' ) ;
     public final void rule__BodyFunction__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3042:1: ( ( '=>' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3043:1: ( '=>' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3169:1: ( ( '=>' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3170:1: ( '=>' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3043:1: ( '=>' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3044:1: '=>'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3170:1: ( '=>' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3171:1: '=>'
             {
              before(grammarAccess.getBodyFunctionAccess().getEqualsSignGreaterThanSignKeyword_1()); 
-            match(input,22,FOLLOW_22_in_rule__BodyFunction__Group__1__Impl6132); 
+            match(input,25,FOLLOW_25_in_rule__BodyFunction__Group__1__Impl6393); 
              after(grammarAccess.getBodyFunctionAccess().getEqualsSignGreaterThanSignKeyword_1()); 
 
             }
@@ -8392,21 +8732,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3057:1: rule__BodyFunction__Group__2 : rule__BodyFunction__Group__2__Impl rule__BodyFunction__Group__3 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3184:1: rule__BodyFunction__Group__2 : rule__BodyFunction__Group__2__Impl rule__BodyFunction__Group__3 ;
     public final void rule__BodyFunction__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3061:1: ( rule__BodyFunction__Group__2__Impl rule__BodyFunction__Group__3 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3062:2: rule__BodyFunction__Group__2__Impl rule__BodyFunction__Group__3
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3188:1: ( rule__BodyFunction__Group__2__Impl rule__BodyFunction__Group__3 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3189:2: rule__BodyFunction__Group__2__Impl rule__BodyFunction__Group__3
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group__2__Impl_in_rule__BodyFunction__Group__26163);
+            pushFollow(FOLLOW_rule__BodyFunction__Group__2__Impl_in_rule__BodyFunction__Group__26424);
             rule__BodyFunction__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyFunction__Group__3_in_rule__BodyFunction__Group__26166);
+            pushFollow(FOLLOW_rule__BodyFunction__Group__3_in_rule__BodyFunction__Group__26427);
             rule__BodyFunction__Group__3();
 
             state._fsp--;
@@ -8430,23 +8770,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3069:1: rule__BodyFunction__Group__2__Impl : ( ( rule__BodyFunction__Alternatives_2 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3196:1: rule__BodyFunction__Group__2__Impl : ( ( rule__BodyFunction__Alternatives_2 ) ) ;
     public final void rule__BodyFunction__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3073:1: ( ( ( rule__BodyFunction__Alternatives_2 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3074:1: ( ( rule__BodyFunction__Alternatives_2 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3200:1: ( ( ( rule__BodyFunction__Alternatives_2 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3201:1: ( ( rule__BodyFunction__Alternatives_2 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3074:1: ( ( rule__BodyFunction__Alternatives_2 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3075:1: ( rule__BodyFunction__Alternatives_2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3201:1: ( ( rule__BodyFunction__Alternatives_2 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3202:1: ( rule__BodyFunction__Alternatives_2 )
             {
              before(grammarAccess.getBodyFunctionAccess().getAlternatives_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3076:1: ( rule__BodyFunction__Alternatives_2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3076:2: rule__BodyFunction__Alternatives_2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3203:1: ( rule__BodyFunction__Alternatives_2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3203:2: rule__BodyFunction__Alternatives_2
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Alternatives_2_in_rule__BodyFunction__Group__2__Impl6193);
+            pushFollow(FOLLOW_rule__BodyFunction__Alternatives_2_in_rule__BodyFunction__Group__2__Impl6454);
             rule__BodyFunction__Alternatives_2();
 
             state._fsp--;
@@ -8477,16 +8817,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group__3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3086:1: rule__BodyFunction__Group__3 : rule__BodyFunction__Group__3__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3213:1: rule__BodyFunction__Group__3 : rule__BodyFunction__Group__3__Impl ;
     public final void rule__BodyFunction__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3090:1: ( rule__BodyFunction__Group__3__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3091:2: rule__BodyFunction__Group__3__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3217:1: ( rule__BodyFunction__Group__3__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3218:2: rule__BodyFunction__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group__3__Impl_in_rule__BodyFunction__Group__36223);
+            pushFollow(FOLLOW_rule__BodyFunction__Group__3__Impl_in_rule__BodyFunction__Group__36484);
             rule__BodyFunction__Group__3__Impl();
 
             state._fsp--;
@@ -8510,20 +8850,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group__3__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3097:1: rule__BodyFunction__Group__3__Impl : ( ';' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3224:1: rule__BodyFunction__Group__3__Impl : ( ';' ) ;
     public final void rule__BodyFunction__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3101:1: ( ( ';' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3102:1: ( ';' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3228:1: ( ( ';' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3229:1: ( ';' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3102:1: ( ';' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3103:1: ';'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3229:1: ( ';' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3230:1: ';'
             {
              before(grammarAccess.getBodyFunctionAccess().getSemicolonKeyword_3()); 
-            match(input,21,FOLLOW_21_in_rule__BodyFunction__Group__3__Impl6251); 
+            match(input,24,FOLLOW_24_in_rule__BodyFunction__Group__3__Impl6512); 
              after(grammarAccess.getBodyFunctionAccess().getSemicolonKeyword_3()); 
 
             }
@@ -8547,21 +8887,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_1__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3124:1: rule__BodyFunction__Group_2_1__0 : rule__BodyFunction__Group_2_1__0__Impl rule__BodyFunction__Group_2_1__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3251:1: rule__BodyFunction__Group_2_1__0 : rule__BodyFunction__Group_2_1__0__Impl rule__BodyFunction__Group_2_1__1 ;
     public final void rule__BodyFunction__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3128:1: ( rule__BodyFunction__Group_2_1__0__Impl rule__BodyFunction__Group_2_1__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3129:2: rule__BodyFunction__Group_2_1__0__Impl rule__BodyFunction__Group_2_1__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3255:1: ( rule__BodyFunction__Group_2_1__0__Impl rule__BodyFunction__Group_2_1__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3256:2: rule__BodyFunction__Group_2_1__0__Impl rule__BodyFunction__Group_2_1__1
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__0__Impl_in_rule__BodyFunction__Group_2_1__06290);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__0__Impl_in_rule__BodyFunction__Group_2_1__06551);
             rule__BodyFunction__Group_2_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__1_in_rule__BodyFunction__Group_2_1__06293);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__1_in_rule__BodyFunction__Group_2_1__06554);
             rule__BodyFunction__Group_2_1__1();
 
             state._fsp--;
@@ -8585,23 +8925,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_1__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3136:1: rule__BodyFunction__Group_2_1__0__Impl : ( ( rule__BodyFunction__ListAssignment_2_1_0 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3263:1: rule__BodyFunction__Group_2_1__0__Impl : ( ( rule__BodyFunction__ListAssignment_2_1_0 ) ) ;
     public final void rule__BodyFunction__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3140:1: ( ( ( rule__BodyFunction__ListAssignment_2_1_0 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3141:1: ( ( rule__BodyFunction__ListAssignment_2_1_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3267:1: ( ( ( rule__BodyFunction__ListAssignment_2_1_0 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3268:1: ( ( rule__BodyFunction__ListAssignment_2_1_0 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3141:1: ( ( rule__BodyFunction__ListAssignment_2_1_0 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3142:1: ( rule__BodyFunction__ListAssignment_2_1_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3268:1: ( ( rule__BodyFunction__ListAssignment_2_1_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3269:1: ( rule__BodyFunction__ListAssignment_2_1_0 )
             {
              before(grammarAccess.getBodyFunctionAccess().getListAssignment_2_1_0()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3143:1: ( rule__BodyFunction__ListAssignment_2_1_0 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3143:2: rule__BodyFunction__ListAssignment_2_1_0
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3270:1: ( rule__BodyFunction__ListAssignment_2_1_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3270:2: rule__BodyFunction__ListAssignment_2_1_0
             {
-            pushFollow(FOLLOW_rule__BodyFunction__ListAssignment_2_1_0_in_rule__BodyFunction__Group_2_1__0__Impl6320);
+            pushFollow(FOLLOW_rule__BodyFunction__ListAssignment_2_1_0_in_rule__BodyFunction__Group_2_1__0__Impl6581);
             rule__BodyFunction__ListAssignment_2_1_0();
 
             state._fsp--;
@@ -8632,21 +8972,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_1__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3153:1: rule__BodyFunction__Group_2_1__1 : rule__BodyFunction__Group_2_1__1__Impl rule__BodyFunction__Group_2_1__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3280:1: rule__BodyFunction__Group_2_1__1 : rule__BodyFunction__Group_2_1__1__Impl rule__BodyFunction__Group_2_1__2 ;
     public final void rule__BodyFunction__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3157:1: ( rule__BodyFunction__Group_2_1__1__Impl rule__BodyFunction__Group_2_1__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3158:2: rule__BodyFunction__Group_2_1__1__Impl rule__BodyFunction__Group_2_1__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3284:1: ( rule__BodyFunction__Group_2_1__1__Impl rule__BodyFunction__Group_2_1__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3285:2: rule__BodyFunction__Group_2_1__1__Impl rule__BodyFunction__Group_2_1__2
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__1__Impl_in_rule__BodyFunction__Group_2_1__16350);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__1__Impl_in_rule__BodyFunction__Group_2_1__16611);
             rule__BodyFunction__Group_2_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__2_in_rule__BodyFunction__Group_2_1__16353);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__2_in_rule__BodyFunction__Group_2_1__16614);
             rule__BodyFunction__Group_2_1__2();
 
             state._fsp--;
@@ -8670,23 +9010,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_1__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3165:1: rule__BodyFunction__Group_2_1__1__Impl : ( ( rule__BodyFunction__ValuesAssignment_2_1_1 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3292:1: rule__BodyFunction__Group_2_1__1__Impl : ( ( rule__BodyFunction__ValuesAssignment_2_1_1 ) ) ;
     public final void rule__BodyFunction__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3169:1: ( ( ( rule__BodyFunction__ValuesAssignment_2_1_1 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3170:1: ( ( rule__BodyFunction__ValuesAssignment_2_1_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3296:1: ( ( ( rule__BodyFunction__ValuesAssignment_2_1_1 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3297:1: ( ( rule__BodyFunction__ValuesAssignment_2_1_1 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3170:1: ( ( rule__BodyFunction__ValuesAssignment_2_1_1 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3171:1: ( rule__BodyFunction__ValuesAssignment_2_1_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3297:1: ( ( rule__BodyFunction__ValuesAssignment_2_1_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3298:1: ( rule__BodyFunction__ValuesAssignment_2_1_1 )
             {
              before(grammarAccess.getBodyFunctionAccess().getValuesAssignment_2_1_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3172:1: ( rule__BodyFunction__ValuesAssignment_2_1_1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3172:2: rule__BodyFunction__ValuesAssignment_2_1_1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3299:1: ( rule__BodyFunction__ValuesAssignment_2_1_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3299:2: rule__BodyFunction__ValuesAssignment_2_1_1
             {
-            pushFollow(FOLLOW_rule__BodyFunction__ValuesAssignment_2_1_1_in_rule__BodyFunction__Group_2_1__1__Impl6380);
+            pushFollow(FOLLOW_rule__BodyFunction__ValuesAssignment_2_1_1_in_rule__BodyFunction__Group_2_1__1__Impl6641);
             rule__BodyFunction__ValuesAssignment_2_1_1();
 
             state._fsp--;
@@ -8717,21 +9057,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_1__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3182:1: rule__BodyFunction__Group_2_1__2 : rule__BodyFunction__Group_2_1__2__Impl rule__BodyFunction__Group_2_1__3 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3309:1: rule__BodyFunction__Group_2_1__2 : rule__BodyFunction__Group_2_1__2__Impl rule__BodyFunction__Group_2_1__3 ;
     public final void rule__BodyFunction__Group_2_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3186:1: ( rule__BodyFunction__Group_2_1__2__Impl rule__BodyFunction__Group_2_1__3 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3187:2: rule__BodyFunction__Group_2_1__2__Impl rule__BodyFunction__Group_2_1__3
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3313:1: ( rule__BodyFunction__Group_2_1__2__Impl rule__BodyFunction__Group_2_1__3 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3314:2: rule__BodyFunction__Group_2_1__2__Impl rule__BodyFunction__Group_2_1__3
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__2__Impl_in_rule__BodyFunction__Group_2_1__26410);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__2__Impl_in_rule__BodyFunction__Group_2_1__26671);
             rule__BodyFunction__Group_2_1__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__3_in_rule__BodyFunction__Group_2_1__26413);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__3_in_rule__BodyFunction__Group_2_1__26674);
             rule__BodyFunction__Group_2_1__3();
 
             state._fsp--;
@@ -8755,35 +9095,35 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_1__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3194:1: rule__BodyFunction__Group_2_1__2__Impl : ( ( rule__BodyFunction__Group_2_1_2__0 )* ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3321:1: rule__BodyFunction__Group_2_1__2__Impl : ( ( rule__BodyFunction__Group_2_1_2__0 )* ) ;
     public final void rule__BodyFunction__Group_2_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3198:1: ( ( ( rule__BodyFunction__Group_2_1_2__0 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3199:1: ( ( rule__BodyFunction__Group_2_1_2__0 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3325:1: ( ( ( rule__BodyFunction__Group_2_1_2__0 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3326:1: ( ( rule__BodyFunction__Group_2_1_2__0 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3199:1: ( ( rule__BodyFunction__Group_2_1_2__0 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3200:1: ( rule__BodyFunction__Group_2_1_2__0 )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3326:1: ( ( rule__BodyFunction__Group_2_1_2__0 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3327:1: ( rule__BodyFunction__Group_2_1_2__0 )*
             {
              before(grammarAccess.getBodyFunctionAccess().getGroup_2_1_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3201:1: ( rule__BodyFunction__Group_2_1_2__0 )*
-            loop26:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3328:1: ( rule__BodyFunction__Group_2_1_2__0 )*
+            loop27:
             do {
-                int alt26=2;
-                int LA26_0 = input.LA(1);
+                int alt27=2;
+                int LA27_0 = input.LA(1);
 
-                if ( (LA26_0==11) ) {
-                    alt26=1;
+                if ( (LA27_0==13) ) {
+                    alt27=1;
                 }
 
 
-                switch (alt26) {
+                switch (alt27) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3201:2: rule__BodyFunction__Group_2_1_2__0
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3328:2: rule__BodyFunction__Group_2_1_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__BodyFunction__Group_2_1_2__0_in_rule__BodyFunction__Group_2_1__2__Impl6440);
+            	    pushFollow(FOLLOW_rule__BodyFunction__Group_2_1_2__0_in_rule__BodyFunction__Group_2_1__2__Impl6701);
             	    rule__BodyFunction__Group_2_1_2__0();
 
             	    state._fsp--;
@@ -8793,7 +9133,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop26;
+            	    break loop27;
                 }
             } while (true);
 
@@ -8820,16 +9160,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_1__3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3211:1: rule__BodyFunction__Group_2_1__3 : rule__BodyFunction__Group_2_1__3__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3338:1: rule__BodyFunction__Group_2_1__3 : rule__BodyFunction__Group_2_1__3__Impl ;
     public final void rule__BodyFunction__Group_2_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3215:1: ( rule__BodyFunction__Group_2_1__3__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3216:2: rule__BodyFunction__Group_2_1__3__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3342:1: ( rule__BodyFunction__Group_2_1__3__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3343:2: rule__BodyFunction__Group_2_1__3__Impl
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__3__Impl_in_rule__BodyFunction__Group_2_1__36471);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1__3__Impl_in_rule__BodyFunction__Group_2_1__36732);
             rule__BodyFunction__Group_2_1__3__Impl();
 
             state._fsp--;
@@ -8853,20 +9193,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_1__3__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3222:1: rule__BodyFunction__Group_2_1__3__Impl : ( '}' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3349:1: rule__BodyFunction__Group_2_1__3__Impl : ( '}' ) ;
     public final void rule__BodyFunction__Group_2_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3226:1: ( ( '}' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3227:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3353:1: ( ( '}' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3354:1: ( '}' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3227:1: ( '}' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3228:1: '}'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3354:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3355:1: '}'
             {
              before(grammarAccess.getBodyFunctionAccess().getRightCurlyBracketKeyword_2_1_3()); 
-            match(input,18,FOLLOW_18_in_rule__BodyFunction__Group_2_1__3__Impl6499); 
+            match(input,21,FOLLOW_21_in_rule__BodyFunction__Group_2_1__3__Impl6760); 
              after(grammarAccess.getBodyFunctionAccess().getRightCurlyBracketKeyword_2_1_3()); 
 
             }
@@ -8890,21 +9230,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_1_2__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3249:1: rule__BodyFunction__Group_2_1_2__0 : rule__BodyFunction__Group_2_1_2__0__Impl rule__BodyFunction__Group_2_1_2__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3376:1: rule__BodyFunction__Group_2_1_2__0 : rule__BodyFunction__Group_2_1_2__0__Impl rule__BodyFunction__Group_2_1_2__1 ;
     public final void rule__BodyFunction__Group_2_1_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3253:1: ( rule__BodyFunction__Group_2_1_2__0__Impl rule__BodyFunction__Group_2_1_2__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3254:2: rule__BodyFunction__Group_2_1_2__0__Impl rule__BodyFunction__Group_2_1_2__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3380:1: ( rule__BodyFunction__Group_2_1_2__0__Impl rule__BodyFunction__Group_2_1_2__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3381:2: rule__BodyFunction__Group_2_1_2__0__Impl rule__BodyFunction__Group_2_1_2__1
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1_2__0__Impl_in_rule__BodyFunction__Group_2_1_2__06538);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1_2__0__Impl_in_rule__BodyFunction__Group_2_1_2__06799);
             rule__BodyFunction__Group_2_1_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1_2__1_in_rule__BodyFunction__Group_2_1_2__06541);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1_2__1_in_rule__BodyFunction__Group_2_1_2__06802);
             rule__BodyFunction__Group_2_1_2__1();
 
             state._fsp--;
@@ -8928,20 +9268,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_1_2__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3261:1: rule__BodyFunction__Group_2_1_2__0__Impl : ( ',' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3388:1: rule__BodyFunction__Group_2_1_2__0__Impl : ( ',' ) ;
     public final void rule__BodyFunction__Group_2_1_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3265:1: ( ( ',' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3266:1: ( ',' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3392:1: ( ( ',' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3393:1: ( ',' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3266:1: ( ',' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3267:1: ','
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3393:1: ( ',' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3394:1: ','
             {
              before(grammarAccess.getBodyFunctionAccess().getCommaKeyword_2_1_2_0()); 
-            match(input,11,FOLLOW_11_in_rule__BodyFunction__Group_2_1_2__0__Impl6569); 
+            match(input,13,FOLLOW_13_in_rule__BodyFunction__Group_2_1_2__0__Impl6830); 
              after(grammarAccess.getBodyFunctionAccess().getCommaKeyword_2_1_2_0()); 
 
             }
@@ -8965,16 +9305,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_1_2__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3280:1: rule__BodyFunction__Group_2_1_2__1 : rule__BodyFunction__Group_2_1_2__1__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3407:1: rule__BodyFunction__Group_2_1_2__1 : rule__BodyFunction__Group_2_1_2__1__Impl ;
     public final void rule__BodyFunction__Group_2_1_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3284:1: ( rule__BodyFunction__Group_2_1_2__1__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3285:2: rule__BodyFunction__Group_2_1_2__1__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3411:1: ( rule__BodyFunction__Group_2_1_2__1__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3412:2: rule__BodyFunction__Group_2_1_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1_2__1__Impl_in_rule__BodyFunction__Group_2_1_2__16600);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_1_2__1__Impl_in_rule__BodyFunction__Group_2_1_2__16861);
             rule__BodyFunction__Group_2_1_2__1__Impl();
 
             state._fsp--;
@@ -8998,23 +9338,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_1_2__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3291:1: rule__BodyFunction__Group_2_1_2__1__Impl : ( ( rule__BodyFunction__ValuesAssignment_2_1_2_1 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3418:1: rule__BodyFunction__Group_2_1_2__1__Impl : ( ( rule__BodyFunction__ValuesAssignment_2_1_2_1 ) ) ;
     public final void rule__BodyFunction__Group_2_1_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3295:1: ( ( ( rule__BodyFunction__ValuesAssignment_2_1_2_1 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3296:1: ( ( rule__BodyFunction__ValuesAssignment_2_1_2_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3422:1: ( ( ( rule__BodyFunction__ValuesAssignment_2_1_2_1 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3423:1: ( ( rule__BodyFunction__ValuesAssignment_2_1_2_1 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3296:1: ( ( rule__BodyFunction__ValuesAssignment_2_1_2_1 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3297:1: ( rule__BodyFunction__ValuesAssignment_2_1_2_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3423:1: ( ( rule__BodyFunction__ValuesAssignment_2_1_2_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3424:1: ( rule__BodyFunction__ValuesAssignment_2_1_2_1 )
             {
              before(grammarAccess.getBodyFunctionAccess().getValuesAssignment_2_1_2_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3298:1: ( rule__BodyFunction__ValuesAssignment_2_1_2_1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3298:2: rule__BodyFunction__ValuesAssignment_2_1_2_1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3425:1: ( rule__BodyFunction__ValuesAssignment_2_1_2_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3425:2: rule__BodyFunction__ValuesAssignment_2_1_2_1
             {
-            pushFollow(FOLLOW_rule__BodyFunction__ValuesAssignment_2_1_2_1_in_rule__BodyFunction__Group_2_1_2__1__Impl6627);
+            pushFollow(FOLLOW_rule__BodyFunction__ValuesAssignment_2_1_2_1_in_rule__BodyFunction__Group_2_1_2__1__Impl6888);
             rule__BodyFunction__ValuesAssignment_2_1_2_1();
 
             state._fsp--;
@@ -9045,21 +9385,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_3__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3312:1: rule__BodyFunction__Group_2_3__0 : rule__BodyFunction__Group_2_3__0__Impl rule__BodyFunction__Group_2_3__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3439:1: rule__BodyFunction__Group_2_3__0 : rule__BodyFunction__Group_2_3__0__Impl rule__BodyFunction__Group_2_3__1 ;
     public final void rule__BodyFunction__Group_2_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3316:1: ( rule__BodyFunction__Group_2_3__0__Impl rule__BodyFunction__Group_2_3__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3317:2: rule__BodyFunction__Group_2_3__0__Impl rule__BodyFunction__Group_2_3__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3443:1: ( rule__BodyFunction__Group_2_3__0__Impl rule__BodyFunction__Group_2_3__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3444:2: rule__BodyFunction__Group_2_3__0__Impl rule__BodyFunction__Group_2_3__1
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__0__Impl_in_rule__BodyFunction__Group_2_3__06661);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__0__Impl_in_rule__BodyFunction__Group_2_3__06922);
             rule__BodyFunction__Group_2_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__1_in_rule__BodyFunction__Group_2_3__06664);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__1_in_rule__BodyFunction__Group_2_3__06925);
             rule__BodyFunction__Group_2_3__1();
 
             state._fsp--;
@@ -9083,20 +9423,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_3__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3324:1: rule__BodyFunction__Group_2_3__0__Impl : ( '{' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3451:1: rule__BodyFunction__Group_2_3__0__Impl : ( '{' ) ;
     public final void rule__BodyFunction__Group_2_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3328:1: ( ( '{' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3329:1: ( '{' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3455:1: ( ( '{' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3456:1: ( '{' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3329:1: ( '{' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3330:1: '{'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3456:1: ( '{' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3457:1: '{'
             {
              before(grammarAccess.getBodyFunctionAccess().getLeftCurlyBracketKeyword_2_3_0()); 
-            match(input,17,FOLLOW_17_in_rule__BodyFunction__Group_2_3__0__Impl6692); 
+            match(input,20,FOLLOW_20_in_rule__BodyFunction__Group_2_3__0__Impl6953); 
              after(grammarAccess.getBodyFunctionAccess().getLeftCurlyBracketKeyword_2_3_0()); 
 
             }
@@ -9120,21 +9460,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_3__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3343:1: rule__BodyFunction__Group_2_3__1 : rule__BodyFunction__Group_2_3__1__Impl rule__BodyFunction__Group_2_3__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3470:1: rule__BodyFunction__Group_2_3__1 : rule__BodyFunction__Group_2_3__1__Impl rule__BodyFunction__Group_2_3__2 ;
     public final void rule__BodyFunction__Group_2_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3347:1: ( rule__BodyFunction__Group_2_3__1__Impl rule__BodyFunction__Group_2_3__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3348:2: rule__BodyFunction__Group_2_3__1__Impl rule__BodyFunction__Group_2_3__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3474:1: ( rule__BodyFunction__Group_2_3__1__Impl rule__BodyFunction__Group_2_3__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3475:2: rule__BodyFunction__Group_2_3__1__Impl rule__BodyFunction__Group_2_3__2
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__1__Impl_in_rule__BodyFunction__Group_2_3__16723);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__1__Impl_in_rule__BodyFunction__Group_2_3__16984);
             rule__BodyFunction__Group_2_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__2_in_rule__BodyFunction__Group_2_3__16726);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__2_in_rule__BodyFunction__Group_2_3__16987);
             rule__BodyFunction__Group_2_3__2();
 
             state._fsp--;
@@ -9158,20 +9498,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_3__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3355:1: rule__BodyFunction__Group_2_3__1__Impl : ( '@' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3482:1: rule__BodyFunction__Group_2_3__1__Impl : ( '@' ) ;
     public final void rule__BodyFunction__Group_2_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3359:1: ( ( '@' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3360:1: ( '@' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3486:1: ( ( '@' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3487:1: ( '@' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3360:1: ( '@' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3361:1: '@'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3487:1: ( '@' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3488:1: '@'
             {
              before(grammarAccess.getBodyFunctionAccess().getCommercialAtKeyword_2_3_1()); 
-            match(input,23,FOLLOW_23_in_rule__BodyFunction__Group_2_3__1__Impl6754); 
+            match(input,26,FOLLOW_26_in_rule__BodyFunction__Group_2_3__1__Impl7015); 
              after(grammarAccess.getBodyFunctionAccess().getCommercialAtKeyword_2_3_1()); 
 
             }
@@ -9195,21 +9535,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_3__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3374:1: rule__BodyFunction__Group_2_3__2 : rule__BodyFunction__Group_2_3__2__Impl rule__BodyFunction__Group_2_3__3 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3501:1: rule__BodyFunction__Group_2_3__2 : rule__BodyFunction__Group_2_3__2__Impl rule__BodyFunction__Group_2_3__3 ;
     public final void rule__BodyFunction__Group_2_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3378:1: ( rule__BodyFunction__Group_2_3__2__Impl rule__BodyFunction__Group_2_3__3 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3379:2: rule__BodyFunction__Group_2_3__2__Impl rule__BodyFunction__Group_2_3__3
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3505:1: ( rule__BodyFunction__Group_2_3__2__Impl rule__BodyFunction__Group_2_3__3 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3506:2: rule__BodyFunction__Group_2_3__2__Impl rule__BodyFunction__Group_2_3__3
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__2__Impl_in_rule__BodyFunction__Group_2_3__26785);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__2__Impl_in_rule__BodyFunction__Group_2_3__27046);
             rule__BodyFunction__Group_2_3__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__3_in_rule__BodyFunction__Group_2_3__26788);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__3_in_rule__BodyFunction__Group_2_3__27049);
             rule__BodyFunction__Group_2_3__3();
 
             state._fsp--;
@@ -9233,20 +9573,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_3__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3386:1: rule__BodyFunction__Group_2_3__2__Impl : ( '(' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3513:1: rule__BodyFunction__Group_2_3__2__Impl : ( '(' ) ;
     public final void rule__BodyFunction__Group_2_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3390:1: ( ( '(' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3391:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3517:1: ( ( '(' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3518:1: ( '(' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3391:1: ( '(' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3392:1: '('
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3518:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3519:1: '('
             {
              before(grammarAccess.getBodyFunctionAccess().getLeftParenthesisKeyword_2_3_2()); 
-            match(input,14,FOLLOW_14_in_rule__BodyFunction__Group_2_3__2__Impl6816); 
+            match(input,15,FOLLOW_15_in_rule__BodyFunction__Group_2_3__2__Impl7077); 
              after(grammarAccess.getBodyFunctionAccess().getLeftParenthesisKeyword_2_3_2()); 
 
             }
@@ -9270,21 +9610,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_3__3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3405:1: rule__BodyFunction__Group_2_3__3 : rule__BodyFunction__Group_2_3__3__Impl rule__BodyFunction__Group_2_3__4 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3532:1: rule__BodyFunction__Group_2_3__3 : rule__BodyFunction__Group_2_3__3__Impl rule__BodyFunction__Group_2_3__4 ;
     public final void rule__BodyFunction__Group_2_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3409:1: ( rule__BodyFunction__Group_2_3__3__Impl rule__BodyFunction__Group_2_3__4 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3410:2: rule__BodyFunction__Group_2_3__3__Impl rule__BodyFunction__Group_2_3__4
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3536:1: ( rule__BodyFunction__Group_2_3__3__Impl rule__BodyFunction__Group_2_3__4 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3537:2: rule__BodyFunction__Group_2_3__3__Impl rule__BodyFunction__Group_2_3__4
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__3__Impl_in_rule__BodyFunction__Group_2_3__36847);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__3__Impl_in_rule__BodyFunction__Group_2_3__37108);
             rule__BodyFunction__Group_2_3__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__4_in_rule__BodyFunction__Group_2_3__36850);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__4_in_rule__BodyFunction__Group_2_3__37111);
             rule__BodyFunction__Group_2_3__4();
 
             state._fsp--;
@@ -9308,20 +9648,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_3__3__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3417:1: rule__BodyFunction__Group_2_3__3__Impl : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3544:1: rule__BodyFunction__Group_2_3__3__Impl : ( RULE_ID ) ;
     public final void rule__BodyFunction__Group_2_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3421:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3422:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3548:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3549:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3422:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3423:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3549:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3550:1: RULE_ID
             {
              before(grammarAccess.getBodyFunctionAccess().getIDTerminalRuleCall_2_3_3()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BodyFunction__Group_2_3__3__Impl6877); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BodyFunction__Group_2_3__3__Impl7138); 
              after(grammarAccess.getBodyFunctionAccess().getIDTerminalRuleCall_2_3_3()); 
 
             }
@@ -9345,21 +9685,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_3__4"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3434:1: rule__BodyFunction__Group_2_3__4 : rule__BodyFunction__Group_2_3__4__Impl rule__BodyFunction__Group_2_3__5 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3561:1: rule__BodyFunction__Group_2_3__4 : rule__BodyFunction__Group_2_3__4__Impl rule__BodyFunction__Group_2_3__5 ;
     public final void rule__BodyFunction__Group_2_3__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3438:1: ( rule__BodyFunction__Group_2_3__4__Impl rule__BodyFunction__Group_2_3__5 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3439:2: rule__BodyFunction__Group_2_3__4__Impl rule__BodyFunction__Group_2_3__5
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3565:1: ( rule__BodyFunction__Group_2_3__4__Impl rule__BodyFunction__Group_2_3__5 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3566:2: rule__BodyFunction__Group_2_3__4__Impl rule__BodyFunction__Group_2_3__5
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__4__Impl_in_rule__BodyFunction__Group_2_3__46906);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__4__Impl_in_rule__BodyFunction__Group_2_3__47167);
             rule__BodyFunction__Group_2_3__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__5_in_rule__BodyFunction__Group_2_3__46909);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__5_in_rule__BodyFunction__Group_2_3__47170);
             rule__BodyFunction__Group_2_3__5();
 
             state._fsp--;
@@ -9383,20 +9723,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_3__4__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3446:1: rule__BodyFunction__Group_2_3__4__Impl : ( ')' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3573:1: rule__BodyFunction__Group_2_3__4__Impl : ( ')' ) ;
     public final void rule__BodyFunction__Group_2_3__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3450:1: ( ( ')' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3451:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3577:1: ( ( ')' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3578:1: ( ')' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3451:1: ( ')' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3452:1: ')'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3578:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3579:1: ')'
             {
              before(grammarAccess.getBodyFunctionAccess().getRightParenthesisKeyword_2_3_4()); 
-            match(input,15,FOLLOW_15_in_rule__BodyFunction__Group_2_3__4__Impl6937); 
+            match(input,16,FOLLOW_16_in_rule__BodyFunction__Group_2_3__4__Impl7198); 
              after(grammarAccess.getBodyFunctionAccess().getRightParenthesisKeyword_2_3_4()); 
 
             }
@@ -9420,16 +9760,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_3__5"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3465:1: rule__BodyFunction__Group_2_3__5 : rule__BodyFunction__Group_2_3__5__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3592:1: rule__BodyFunction__Group_2_3__5 : rule__BodyFunction__Group_2_3__5__Impl ;
     public final void rule__BodyFunction__Group_2_3__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3469:1: ( rule__BodyFunction__Group_2_3__5__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3470:2: rule__BodyFunction__Group_2_3__5__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3596:1: ( rule__BodyFunction__Group_2_3__5__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3597:2: rule__BodyFunction__Group_2_3__5__Impl
             {
-            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__5__Impl_in_rule__BodyFunction__Group_2_3__56968);
+            pushFollow(FOLLOW_rule__BodyFunction__Group_2_3__5__Impl_in_rule__BodyFunction__Group_2_3__57229);
             rule__BodyFunction__Group_2_3__5__Impl();
 
             state._fsp--;
@@ -9453,20 +9793,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__Group_2_3__5__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3476:1: rule__BodyFunction__Group_2_3__5__Impl : ( '}' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3603:1: rule__BodyFunction__Group_2_3__5__Impl : ( '}' ) ;
     public final void rule__BodyFunction__Group_2_3__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3480:1: ( ( '}' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3481:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3607:1: ( ( '}' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3608:1: ( '}' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3481:1: ( '}' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3482:1: '}'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3608:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3609:1: '}'
             {
              before(grammarAccess.getBodyFunctionAccess().getRightCurlyBracketKeyword_2_3_5()); 
-            match(input,18,FOLLOW_18_in_rule__BodyFunction__Group_2_3__5__Impl6996); 
+            match(input,21,FOLLOW_21_in_rule__BodyFunction__Group_2_3__5__Impl7257); 
              after(grammarAccess.getBodyFunctionAccess().getRightCurlyBracketKeyword_2_3_5()); 
 
             }
@@ -9490,21 +9830,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3507:1: rule__SimpleFunction__Group__0 : rule__SimpleFunction__Group__0__Impl rule__SimpleFunction__Group__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3634:1: rule__SimpleFunction__Group__0 : rule__SimpleFunction__Group__0__Impl rule__SimpleFunction__Group__1 ;
     public final void rule__SimpleFunction__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3511:1: ( rule__SimpleFunction__Group__0__Impl rule__SimpleFunction__Group__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3512:2: rule__SimpleFunction__Group__0__Impl rule__SimpleFunction__Group__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3638:1: ( rule__SimpleFunction__Group__0__Impl rule__SimpleFunction__Group__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3639:2: rule__SimpleFunction__Group__0__Impl rule__SimpleFunction__Group__1
             {
-            pushFollow(FOLLOW_rule__SimpleFunction__Group__0__Impl_in_rule__SimpleFunction__Group__07039);
+            pushFollow(FOLLOW_rule__SimpleFunction__Group__0__Impl_in_rule__SimpleFunction__Group__07300);
             rule__SimpleFunction__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleFunction__Group__1_in_rule__SimpleFunction__Group__07042);
+            pushFollow(FOLLOW_rule__SimpleFunction__Group__1_in_rule__SimpleFunction__Group__07303);
             rule__SimpleFunction__Group__1();
 
             state._fsp--;
@@ -9528,23 +9868,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3519:1: rule__SimpleFunction__Group__0__Impl : ( ( rule__SimpleFunction__IdAssignment_0 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3646:1: rule__SimpleFunction__Group__0__Impl : ( ( rule__SimpleFunction__IdAssignment_0 ) ) ;
     public final void rule__SimpleFunction__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3523:1: ( ( ( rule__SimpleFunction__IdAssignment_0 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3524:1: ( ( rule__SimpleFunction__IdAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3650:1: ( ( ( rule__SimpleFunction__IdAssignment_0 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3651:1: ( ( rule__SimpleFunction__IdAssignment_0 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3524:1: ( ( rule__SimpleFunction__IdAssignment_0 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3525:1: ( rule__SimpleFunction__IdAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3651:1: ( ( rule__SimpleFunction__IdAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3652:1: ( rule__SimpleFunction__IdAssignment_0 )
             {
              before(grammarAccess.getSimpleFunctionAccess().getIdAssignment_0()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3526:1: ( rule__SimpleFunction__IdAssignment_0 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3526:2: rule__SimpleFunction__IdAssignment_0
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3653:1: ( rule__SimpleFunction__IdAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3653:2: rule__SimpleFunction__IdAssignment_0
             {
-            pushFollow(FOLLOW_rule__SimpleFunction__IdAssignment_0_in_rule__SimpleFunction__Group__0__Impl7069);
+            pushFollow(FOLLOW_rule__SimpleFunction__IdAssignment_0_in_rule__SimpleFunction__Group__0__Impl7330);
             rule__SimpleFunction__IdAssignment_0();
 
             state._fsp--;
@@ -9575,21 +9915,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3536:1: rule__SimpleFunction__Group__1 : rule__SimpleFunction__Group__1__Impl rule__SimpleFunction__Group__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3663:1: rule__SimpleFunction__Group__1 : rule__SimpleFunction__Group__1__Impl rule__SimpleFunction__Group__2 ;
     public final void rule__SimpleFunction__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3540:1: ( rule__SimpleFunction__Group__1__Impl rule__SimpleFunction__Group__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3541:2: rule__SimpleFunction__Group__1__Impl rule__SimpleFunction__Group__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3667:1: ( rule__SimpleFunction__Group__1__Impl rule__SimpleFunction__Group__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3668:2: rule__SimpleFunction__Group__1__Impl rule__SimpleFunction__Group__2
             {
-            pushFollow(FOLLOW_rule__SimpleFunction__Group__1__Impl_in_rule__SimpleFunction__Group__17099);
+            pushFollow(FOLLOW_rule__SimpleFunction__Group__1__Impl_in_rule__SimpleFunction__Group__17360);
             rule__SimpleFunction__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleFunction__Group__2_in_rule__SimpleFunction__Group__17102);
+            pushFollow(FOLLOW_rule__SimpleFunction__Group__2_in_rule__SimpleFunction__Group__17363);
             rule__SimpleFunction__Group__2();
 
             state._fsp--;
@@ -9613,20 +9953,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3548:1: rule__SimpleFunction__Group__1__Impl : ( '(' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3675:1: rule__SimpleFunction__Group__1__Impl : ( '(' ) ;
     public final void rule__SimpleFunction__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3552:1: ( ( '(' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3553:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3679:1: ( ( '(' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3680:1: ( '(' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3553:1: ( '(' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3554:1: '('
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3680:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3681:1: '('
             {
              before(grammarAccess.getSimpleFunctionAccess().getLeftParenthesisKeyword_1()); 
-            match(input,14,FOLLOW_14_in_rule__SimpleFunction__Group__1__Impl7130); 
+            match(input,15,FOLLOW_15_in_rule__SimpleFunction__Group__1__Impl7391); 
              after(grammarAccess.getSimpleFunctionAccess().getLeftParenthesisKeyword_1()); 
 
             }
@@ -9650,21 +9990,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3567:1: rule__SimpleFunction__Group__2 : rule__SimpleFunction__Group__2__Impl rule__SimpleFunction__Group__3 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3694:1: rule__SimpleFunction__Group__2 : rule__SimpleFunction__Group__2__Impl rule__SimpleFunction__Group__3 ;
     public final void rule__SimpleFunction__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3571:1: ( rule__SimpleFunction__Group__2__Impl rule__SimpleFunction__Group__3 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3572:2: rule__SimpleFunction__Group__2__Impl rule__SimpleFunction__Group__3
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3698:1: ( rule__SimpleFunction__Group__2__Impl rule__SimpleFunction__Group__3 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3699:2: rule__SimpleFunction__Group__2__Impl rule__SimpleFunction__Group__3
             {
-            pushFollow(FOLLOW_rule__SimpleFunction__Group__2__Impl_in_rule__SimpleFunction__Group__27161);
+            pushFollow(FOLLOW_rule__SimpleFunction__Group__2__Impl_in_rule__SimpleFunction__Group__27422);
             rule__SimpleFunction__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleFunction__Group__3_in_rule__SimpleFunction__Group__27164);
+            pushFollow(FOLLOW_rule__SimpleFunction__Group__3_in_rule__SimpleFunction__Group__27425);
             rule__SimpleFunction__Group__3();
 
             state._fsp--;
@@ -9688,23 +10028,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3579:1: rule__SimpleFunction__Group__2__Impl : ( ( rule__SimpleFunction__ValuesAssignment_2 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3706:1: rule__SimpleFunction__Group__2__Impl : ( ( rule__SimpleFunction__ValuesAssignment_2 ) ) ;
     public final void rule__SimpleFunction__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3583:1: ( ( ( rule__SimpleFunction__ValuesAssignment_2 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3584:1: ( ( rule__SimpleFunction__ValuesAssignment_2 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3710:1: ( ( ( rule__SimpleFunction__ValuesAssignment_2 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3711:1: ( ( rule__SimpleFunction__ValuesAssignment_2 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3584:1: ( ( rule__SimpleFunction__ValuesAssignment_2 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3585:1: ( rule__SimpleFunction__ValuesAssignment_2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3711:1: ( ( rule__SimpleFunction__ValuesAssignment_2 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3712:1: ( rule__SimpleFunction__ValuesAssignment_2 )
             {
              before(grammarAccess.getSimpleFunctionAccess().getValuesAssignment_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3586:1: ( rule__SimpleFunction__ValuesAssignment_2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3586:2: rule__SimpleFunction__ValuesAssignment_2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3713:1: ( rule__SimpleFunction__ValuesAssignment_2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3713:2: rule__SimpleFunction__ValuesAssignment_2
             {
-            pushFollow(FOLLOW_rule__SimpleFunction__ValuesAssignment_2_in_rule__SimpleFunction__Group__2__Impl7191);
+            pushFollow(FOLLOW_rule__SimpleFunction__ValuesAssignment_2_in_rule__SimpleFunction__Group__2__Impl7452);
             rule__SimpleFunction__ValuesAssignment_2();
 
             state._fsp--;
@@ -9735,21 +10075,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group__3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3596:1: rule__SimpleFunction__Group__3 : rule__SimpleFunction__Group__3__Impl rule__SimpleFunction__Group__4 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3723:1: rule__SimpleFunction__Group__3 : rule__SimpleFunction__Group__3__Impl rule__SimpleFunction__Group__4 ;
     public final void rule__SimpleFunction__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3600:1: ( rule__SimpleFunction__Group__3__Impl rule__SimpleFunction__Group__4 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3601:2: rule__SimpleFunction__Group__3__Impl rule__SimpleFunction__Group__4
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3727:1: ( rule__SimpleFunction__Group__3__Impl rule__SimpleFunction__Group__4 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3728:2: rule__SimpleFunction__Group__3__Impl rule__SimpleFunction__Group__4
             {
-            pushFollow(FOLLOW_rule__SimpleFunction__Group__3__Impl_in_rule__SimpleFunction__Group__37221);
+            pushFollow(FOLLOW_rule__SimpleFunction__Group__3__Impl_in_rule__SimpleFunction__Group__37482);
             rule__SimpleFunction__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleFunction__Group__4_in_rule__SimpleFunction__Group__37224);
+            pushFollow(FOLLOW_rule__SimpleFunction__Group__4_in_rule__SimpleFunction__Group__37485);
             rule__SimpleFunction__Group__4();
 
             state._fsp--;
@@ -9773,35 +10113,35 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group__3__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3608:1: rule__SimpleFunction__Group__3__Impl : ( ( rule__SimpleFunction__Group_3__0 )* ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3735:1: rule__SimpleFunction__Group__3__Impl : ( ( rule__SimpleFunction__Group_3__0 )* ) ;
     public final void rule__SimpleFunction__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3612:1: ( ( ( rule__SimpleFunction__Group_3__0 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3613:1: ( ( rule__SimpleFunction__Group_3__0 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3739:1: ( ( ( rule__SimpleFunction__Group_3__0 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3740:1: ( ( rule__SimpleFunction__Group_3__0 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3613:1: ( ( rule__SimpleFunction__Group_3__0 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3614:1: ( rule__SimpleFunction__Group_3__0 )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3740:1: ( ( rule__SimpleFunction__Group_3__0 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3741:1: ( rule__SimpleFunction__Group_3__0 )*
             {
              before(grammarAccess.getSimpleFunctionAccess().getGroup_3()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3615:1: ( rule__SimpleFunction__Group_3__0 )*
-            loop27:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3742:1: ( rule__SimpleFunction__Group_3__0 )*
+            loop28:
             do {
-                int alt27=2;
-                int LA27_0 = input.LA(1);
+                int alt28=2;
+                int LA28_0 = input.LA(1);
 
-                if ( (LA27_0==11) ) {
-                    alt27=1;
+                if ( (LA28_0==13) ) {
+                    alt28=1;
                 }
 
 
-                switch (alt27) {
+                switch (alt28) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3615:2: rule__SimpleFunction__Group_3__0
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3742:2: rule__SimpleFunction__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__SimpleFunction__Group_3__0_in_rule__SimpleFunction__Group__3__Impl7251);
+            	    pushFollow(FOLLOW_rule__SimpleFunction__Group_3__0_in_rule__SimpleFunction__Group__3__Impl7512);
             	    rule__SimpleFunction__Group_3__0();
 
             	    state._fsp--;
@@ -9811,7 +10151,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop27;
+            	    break loop28;
                 }
             } while (true);
 
@@ -9838,16 +10178,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group__4"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3625:1: rule__SimpleFunction__Group__4 : rule__SimpleFunction__Group__4__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3752:1: rule__SimpleFunction__Group__4 : rule__SimpleFunction__Group__4__Impl ;
     public final void rule__SimpleFunction__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3629:1: ( rule__SimpleFunction__Group__4__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3630:2: rule__SimpleFunction__Group__4__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3756:1: ( rule__SimpleFunction__Group__4__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3757:2: rule__SimpleFunction__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__SimpleFunction__Group__4__Impl_in_rule__SimpleFunction__Group__47282);
+            pushFollow(FOLLOW_rule__SimpleFunction__Group__4__Impl_in_rule__SimpleFunction__Group__47543);
             rule__SimpleFunction__Group__4__Impl();
 
             state._fsp--;
@@ -9871,20 +10211,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group__4__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3636:1: rule__SimpleFunction__Group__4__Impl : ( ')' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3763:1: rule__SimpleFunction__Group__4__Impl : ( ')' ) ;
     public final void rule__SimpleFunction__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3640:1: ( ( ')' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3641:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3767:1: ( ( ')' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3768:1: ( ')' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3641:1: ( ')' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3642:1: ')'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3768:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3769:1: ')'
             {
              before(grammarAccess.getSimpleFunctionAccess().getRightParenthesisKeyword_4()); 
-            match(input,15,FOLLOW_15_in_rule__SimpleFunction__Group__4__Impl7310); 
+            match(input,16,FOLLOW_16_in_rule__SimpleFunction__Group__4__Impl7571); 
              after(grammarAccess.getSimpleFunctionAccess().getRightParenthesisKeyword_4()); 
 
             }
@@ -9908,21 +10248,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group_3__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3665:1: rule__SimpleFunction__Group_3__0 : rule__SimpleFunction__Group_3__0__Impl rule__SimpleFunction__Group_3__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3792:1: rule__SimpleFunction__Group_3__0 : rule__SimpleFunction__Group_3__0__Impl rule__SimpleFunction__Group_3__1 ;
     public final void rule__SimpleFunction__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3669:1: ( rule__SimpleFunction__Group_3__0__Impl rule__SimpleFunction__Group_3__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3670:2: rule__SimpleFunction__Group_3__0__Impl rule__SimpleFunction__Group_3__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3796:1: ( rule__SimpleFunction__Group_3__0__Impl rule__SimpleFunction__Group_3__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3797:2: rule__SimpleFunction__Group_3__0__Impl rule__SimpleFunction__Group_3__1
             {
-            pushFollow(FOLLOW_rule__SimpleFunction__Group_3__0__Impl_in_rule__SimpleFunction__Group_3__07351);
+            pushFollow(FOLLOW_rule__SimpleFunction__Group_3__0__Impl_in_rule__SimpleFunction__Group_3__07612);
             rule__SimpleFunction__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SimpleFunction__Group_3__1_in_rule__SimpleFunction__Group_3__07354);
+            pushFollow(FOLLOW_rule__SimpleFunction__Group_3__1_in_rule__SimpleFunction__Group_3__07615);
             rule__SimpleFunction__Group_3__1();
 
             state._fsp--;
@@ -9946,20 +10286,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group_3__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3677:1: rule__SimpleFunction__Group_3__0__Impl : ( ',' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3804:1: rule__SimpleFunction__Group_3__0__Impl : ( ',' ) ;
     public final void rule__SimpleFunction__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3681:1: ( ( ',' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3682:1: ( ',' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3808:1: ( ( ',' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3809:1: ( ',' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3682:1: ( ',' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3683:1: ','
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3809:1: ( ',' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3810:1: ','
             {
              before(grammarAccess.getSimpleFunctionAccess().getCommaKeyword_3_0()); 
-            match(input,11,FOLLOW_11_in_rule__SimpleFunction__Group_3__0__Impl7382); 
+            match(input,13,FOLLOW_13_in_rule__SimpleFunction__Group_3__0__Impl7643); 
              after(grammarAccess.getSimpleFunctionAccess().getCommaKeyword_3_0()); 
 
             }
@@ -9983,16 +10323,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group_3__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3696:1: rule__SimpleFunction__Group_3__1 : rule__SimpleFunction__Group_3__1__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3823:1: rule__SimpleFunction__Group_3__1 : rule__SimpleFunction__Group_3__1__Impl ;
     public final void rule__SimpleFunction__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3700:1: ( rule__SimpleFunction__Group_3__1__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3701:2: rule__SimpleFunction__Group_3__1__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3827:1: ( rule__SimpleFunction__Group_3__1__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3828:2: rule__SimpleFunction__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__SimpleFunction__Group_3__1__Impl_in_rule__SimpleFunction__Group_3__17413);
+            pushFollow(FOLLOW_rule__SimpleFunction__Group_3__1__Impl_in_rule__SimpleFunction__Group_3__17674);
             rule__SimpleFunction__Group_3__1__Impl();
 
             state._fsp--;
@@ -10016,23 +10356,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__Group_3__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3707:1: rule__SimpleFunction__Group_3__1__Impl : ( ( rule__SimpleFunction__ValuesAssignment_3_1 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3834:1: rule__SimpleFunction__Group_3__1__Impl : ( ( rule__SimpleFunction__ValuesAssignment_3_1 ) ) ;
     public final void rule__SimpleFunction__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3711:1: ( ( ( rule__SimpleFunction__ValuesAssignment_3_1 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3712:1: ( ( rule__SimpleFunction__ValuesAssignment_3_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3838:1: ( ( ( rule__SimpleFunction__ValuesAssignment_3_1 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3839:1: ( ( rule__SimpleFunction__ValuesAssignment_3_1 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3712:1: ( ( rule__SimpleFunction__ValuesAssignment_3_1 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3713:1: ( rule__SimpleFunction__ValuesAssignment_3_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3839:1: ( ( rule__SimpleFunction__ValuesAssignment_3_1 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3840:1: ( rule__SimpleFunction__ValuesAssignment_3_1 )
             {
              before(grammarAccess.getSimpleFunctionAccess().getValuesAssignment_3_1()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3714:1: ( rule__SimpleFunction__ValuesAssignment_3_1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3714:2: rule__SimpleFunction__ValuesAssignment_3_1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3841:1: ( rule__SimpleFunction__ValuesAssignment_3_1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3841:2: rule__SimpleFunction__ValuesAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__SimpleFunction__ValuesAssignment_3_1_in_rule__SimpleFunction__Group_3__1__Impl7440);
+            pushFollow(FOLLOW_rule__SimpleFunction__ValuesAssignment_3_1_in_rule__SimpleFunction__Group_3__1__Impl7701);
             rule__SimpleFunction__ValuesAssignment_3_1();
 
             state._fsp--;
@@ -10063,21 +10403,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3728:1: rule__SpecialFunction__Group__0 : rule__SpecialFunction__Group__0__Impl rule__SpecialFunction__Group__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3855:1: rule__SpecialFunction__Group__0 : rule__SpecialFunction__Group__0__Impl rule__SpecialFunction__Group__1 ;
     public final void rule__SpecialFunction__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3732:1: ( rule__SpecialFunction__Group__0__Impl rule__SpecialFunction__Group__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3733:2: rule__SpecialFunction__Group__0__Impl rule__SpecialFunction__Group__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3859:1: ( rule__SpecialFunction__Group__0__Impl rule__SpecialFunction__Group__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3860:2: rule__SpecialFunction__Group__0__Impl rule__SpecialFunction__Group__1
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group__0__Impl_in_rule__SpecialFunction__Group__07474);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__0__Impl_in_rule__SpecialFunction__Group__07735);
             rule__SpecialFunction__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SpecialFunction__Group__1_in_rule__SpecialFunction__Group__07477);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__1_in_rule__SpecialFunction__Group__07738);
             rule__SpecialFunction__Group__1();
 
             state._fsp--;
@@ -10101,23 +10441,23 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3740:1: rule__SpecialFunction__Group__0__Impl : ( ( rule__SpecialFunction__IdAssignment_0 ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3867:1: rule__SpecialFunction__Group__0__Impl : ( ( rule__SpecialFunction__IdAssignment_0 ) ) ;
     public final void rule__SpecialFunction__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3744:1: ( ( ( rule__SpecialFunction__IdAssignment_0 ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3745:1: ( ( rule__SpecialFunction__IdAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3871:1: ( ( ( rule__SpecialFunction__IdAssignment_0 ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3872:1: ( ( rule__SpecialFunction__IdAssignment_0 ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3745:1: ( ( rule__SpecialFunction__IdAssignment_0 ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3746:1: ( rule__SpecialFunction__IdAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3872:1: ( ( rule__SpecialFunction__IdAssignment_0 ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3873:1: ( rule__SpecialFunction__IdAssignment_0 )
             {
              before(grammarAccess.getSpecialFunctionAccess().getIdAssignment_0()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3747:1: ( rule__SpecialFunction__IdAssignment_0 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3747:2: rule__SpecialFunction__IdAssignment_0
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3874:1: ( rule__SpecialFunction__IdAssignment_0 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3874:2: rule__SpecialFunction__IdAssignment_0
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__IdAssignment_0_in_rule__SpecialFunction__Group__0__Impl7504);
+            pushFollow(FOLLOW_rule__SpecialFunction__IdAssignment_0_in_rule__SpecialFunction__Group__0__Impl7765);
             rule__SpecialFunction__IdAssignment_0();
 
             state._fsp--;
@@ -10148,21 +10488,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3757:1: rule__SpecialFunction__Group__1 : rule__SpecialFunction__Group__1__Impl rule__SpecialFunction__Group__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3884:1: rule__SpecialFunction__Group__1 : rule__SpecialFunction__Group__1__Impl rule__SpecialFunction__Group__2 ;
     public final void rule__SpecialFunction__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3761:1: ( rule__SpecialFunction__Group__1__Impl rule__SpecialFunction__Group__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3762:2: rule__SpecialFunction__Group__1__Impl rule__SpecialFunction__Group__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3888:1: ( rule__SpecialFunction__Group__1__Impl rule__SpecialFunction__Group__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3889:2: rule__SpecialFunction__Group__1__Impl rule__SpecialFunction__Group__2
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group__1__Impl_in_rule__SpecialFunction__Group__17534);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__1__Impl_in_rule__SpecialFunction__Group__17795);
             rule__SpecialFunction__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SpecialFunction__Group__2_in_rule__SpecialFunction__Group__17537);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__2_in_rule__SpecialFunction__Group__17798);
             rule__SpecialFunction__Group__2();
 
             state._fsp--;
@@ -10186,20 +10526,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3769:1: rule__SpecialFunction__Group__1__Impl : ( '(' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3896:1: rule__SpecialFunction__Group__1__Impl : ( '(' ) ;
     public final void rule__SpecialFunction__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3773:1: ( ( '(' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3774:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3900:1: ( ( '(' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3901:1: ( '(' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3774:1: ( '(' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3775:1: '('
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3901:1: ( '(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3902:1: '('
             {
              before(grammarAccess.getSpecialFunctionAccess().getLeftParenthesisKeyword_1()); 
-            match(input,14,FOLLOW_14_in_rule__SpecialFunction__Group__1__Impl7565); 
+            match(input,15,FOLLOW_15_in_rule__SpecialFunction__Group__1__Impl7826); 
              after(grammarAccess.getSpecialFunctionAccess().getLeftParenthesisKeyword_1()); 
 
             }
@@ -10223,21 +10563,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3788:1: rule__SpecialFunction__Group__2 : rule__SpecialFunction__Group__2__Impl rule__SpecialFunction__Group__3 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3915:1: rule__SpecialFunction__Group__2 : rule__SpecialFunction__Group__2__Impl rule__SpecialFunction__Group__3 ;
     public final void rule__SpecialFunction__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3792:1: ( rule__SpecialFunction__Group__2__Impl rule__SpecialFunction__Group__3 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3793:2: rule__SpecialFunction__Group__2__Impl rule__SpecialFunction__Group__3
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3919:1: ( rule__SpecialFunction__Group__2__Impl rule__SpecialFunction__Group__3 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3920:2: rule__SpecialFunction__Group__2__Impl rule__SpecialFunction__Group__3
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group__2__Impl_in_rule__SpecialFunction__Group__27596);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__2__Impl_in_rule__SpecialFunction__Group__27857);
             rule__SpecialFunction__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SpecialFunction__Group__3_in_rule__SpecialFunction__Group__27599);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__3_in_rule__SpecialFunction__Group__27860);
             rule__SpecialFunction__Group__3();
 
             state._fsp--;
@@ -10261,35 +10601,35 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3800:1: rule__SpecialFunction__Group__2__Impl : ( ( rule__SpecialFunction__Alternatives_2 )* ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3927:1: rule__SpecialFunction__Group__2__Impl : ( ( rule__SpecialFunction__Alternatives_2 )* ) ;
     public final void rule__SpecialFunction__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3804:1: ( ( ( rule__SpecialFunction__Alternatives_2 )* ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3805:1: ( ( rule__SpecialFunction__Alternatives_2 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3931:1: ( ( ( rule__SpecialFunction__Alternatives_2 )* ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3932:1: ( ( rule__SpecialFunction__Alternatives_2 )* )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3805:1: ( ( rule__SpecialFunction__Alternatives_2 )* )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3806:1: ( rule__SpecialFunction__Alternatives_2 )*
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3932:1: ( ( rule__SpecialFunction__Alternatives_2 )* )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3933:1: ( rule__SpecialFunction__Alternatives_2 )*
             {
              before(grammarAccess.getSpecialFunctionAccess().getAlternatives_2()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3807:1: ( rule__SpecialFunction__Alternatives_2 )*
-            loop28:
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3934:1: ( rule__SpecialFunction__Alternatives_2 )*
+            loop29:
             do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
+                int alt29=2;
+                int LA29_0 = input.LA(1);
 
-                if ( ((LA28_0>=RULE_ANY_OTHER && LA28_0<=RULE_STRING)||LA28_0==11||(LA28_0>=25 && LA28_0<=26)) ) {
-                    alt28=1;
+                if ( ((LA29_0>=RULE_ANY_OTHER && LA29_0<=RULE_STRING)||LA29_0==13||(LA29_0>=28 && LA29_0<=29)) ) {
+                    alt29=1;
                 }
 
 
-                switch (alt28) {
+                switch (alt29) {
             	case 1 :
-            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3807:2: rule__SpecialFunction__Alternatives_2
+            	    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3934:2: rule__SpecialFunction__Alternatives_2
             	    {
-            	    pushFollow(FOLLOW_rule__SpecialFunction__Alternatives_2_in_rule__SpecialFunction__Group__2__Impl7626);
+            	    pushFollow(FOLLOW_rule__SpecialFunction__Alternatives_2_in_rule__SpecialFunction__Group__2__Impl7887);
             	    rule__SpecialFunction__Alternatives_2();
 
             	    state._fsp--;
@@ -10299,7 +10639,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop28;
+            	    break loop29;
                 }
             } while (true);
 
@@ -10326,16 +10666,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group__3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3817:1: rule__SpecialFunction__Group__3 : rule__SpecialFunction__Group__3__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3944:1: rule__SpecialFunction__Group__3 : rule__SpecialFunction__Group__3__Impl ;
     public final void rule__SpecialFunction__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3821:1: ( rule__SpecialFunction__Group__3__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3822:2: rule__SpecialFunction__Group__3__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3948:1: ( rule__SpecialFunction__Group__3__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3949:2: rule__SpecialFunction__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group__3__Impl_in_rule__SpecialFunction__Group__37657);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group__3__Impl_in_rule__SpecialFunction__Group__37918);
             rule__SpecialFunction__Group__3__Impl();
 
             state._fsp--;
@@ -10359,20 +10699,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group__3__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3828:1: rule__SpecialFunction__Group__3__Impl : ( ')' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3955:1: rule__SpecialFunction__Group__3__Impl : ( ')' ) ;
     public final void rule__SpecialFunction__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3832:1: ( ( ')' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3833:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3959:1: ( ( ')' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3960:1: ( ')' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3833:1: ( ')' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3834:1: ')'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3960:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3961:1: ')'
             {
              before(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_3()); 
-            match(input,15,FOLLOW_15_in_rule__SpecialFunction__Group__3__Impl7685); 
+            match(input,16,FOLLOW_16_in_rule__SpecialFunction__Group__3__Impl7946); 
              after(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_3()); 
 
             }
@@ -10396,21 +10736,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group_2_4__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3855:1: rule__SpecialFunction__Group_2_4__0 : rule__SpecialFunction__Group_2_4__0__Impl rule__SpecialFunction__Group_2_4__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3982:1: rule__SpecialFunction__Group_2_4__0 : rule__SpecialFunction__Group_2_4__0__Impl rule__SpecialFunction__Group_2_4__1 ;
     public final void rule__SpecialFunction__Group_2_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3859:1: ( rule__SpecialFunction__Group_2_4__0__Impl rule__SpecialFunction__Group_2_4__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3860:2: rule__SpecialFunction__Group_2_4__0__Impl rule__SpecialFunction__Group_2_4__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3986:1: ( rule__SpecialFunction__Group_2_4__0__Impl rule__SpecialFunction__Group_2_4__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3987:2: rule__SpecialFunction__Group_2_4__0__Impl rule__SpecialFunction__Group_2_4__1
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_4__0__Impl_in_rule__SpecialFunction__Group_2_4__07724);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_4__0__Impl_in_rule__SpecialFunction__Group_2_4__07985);
             rule__SpecialFunction__Group_2_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_4__1_in_rule__SpecialFunction__Group_2_4__07727);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_4__1_in_rule__SpecialFunction__Group_2_4__07988);
             rule__SpecialFunction__Group_2_4__1();
 
             state._fsp--;
@@ -10434,20 +10774,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group_2_4__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3867:1: rule__SpecialFunction__Group_2_4__0__Impl : ( '$(' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3994:1: rule__SpecialFunction__Group_2_4__0__Impl : ( '$(' ) ;
     public final void rule__SpecialFunction__Group_2_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3871:1: ( ( '$(' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3872:1: ( '$(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3998:1: ( ( '$(' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3999:1: ( '$(' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3872:1: ( '$(' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3873:1: '$('
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3999:1: ( '$(' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4000:1: '$('
             {
              before(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftParenthesisKeyword_2_4_0()); 
-            match(input,25,FOLLOW_25_in_rule__SpecialFunction__Group_2_4__0__Impl7755); 
+            match(input,28,FOLLOW_28_in_rule__SpecialFunction__Group_2_4__0__Impl8016); 
              after(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftParenthesisKeyword_2_4_0()); 
 
             }
@@ -10471,21 +10811,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group_2_4__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3886:1: rule__SpecialFunction__Group_2_4__1 : rule__SpecialFunction__Group_2_4__1__Impl rule__SpecialFunction__Group_2_4__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4013:1: rule__SpecialFunction__Group_2_4__1 : rule__SpecialFunction__Group_2_4__1__Impl rule__SpecialFunction__Group_2_4__2 ;
     public final void rule__SpecialFunction__Group_2_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3890:1: ( rule__SpecialFunction__Group_2_4__1__Impl rule__SpecialFunction__Group_2_4__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3891:2: rule__SpecialFunction__Group_2_4__1__Impl rule__SpecialFunction__Group_2_4__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4017:1: ( rule__SpecialFunction__Group_2_4__1__Impl rule__SpecialFunction__Group_2_4__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4018:2: rule__SpecialFunction__Group_2_4__1__Impl rule__SpecialFunction__Group_2_4__2
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_4__1__Impl_in_rule__SpecialFunction__Group_2_4__17786);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_4__1__Impl_in_rule__SpecialFunction__Group_2_4__18047);
             rule__SpecialFunction__Group_2_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_4__2_in_rule__SpecialFunction__Group_2_4__17789);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_4__2_in_rule__SpecialFunction__Group_2_4__18050);
             rule__SpecialFunction__Group_2_4__2();
 
             state._fsp--;
@@ -10509,20 +10849,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group_2_4__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3898:1: rule__SpecialFunction__Group_2_4__1__Impl : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4025:1: rule__SpecialFunction__Group_2_4__1__Impl : ( RULE_ID ) ;
     public final void rule__SpecialFunction__Group_2_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3902:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3903:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4029:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4030:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3903:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3904:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4030:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4031:1: RULE_ID
             {
              before(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_4_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_2_4__1__Impl7816); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_2_4__1__Impl8077); 
              after(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_4_1()); 
 
             }
@@ -10546,16 +10886,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group_2_4__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3915:1: rule__SpecialFunction__Group_2_4__2 : rule__SpecialFunction__Group_2_4__2__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4042:1: rule__SpecialFunction__Group_2_4__2 : rule__SpecialFunction__Group_2_4__2__Impl ;
     public final void rule__SpecialFunction__Group_2_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3919:1: ( rule__SpecialFunction__Group_2_4__2__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3920:2: rule__SpecialFunction__Group_2_4__2__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4046:1: ( rule__SpecialFunction__Group_2_4__2__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4047:2: rule__SpecialFunction__Group_2_4__2__Impl
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_4__2__Impl_in_rule__SpecialFunction__Group_2_4__27845);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_4__2__Impl_in_rule__SpecialFunction__Group_2_4__28106);
             rule__SpecialFunction__Group_2_4__2__Impl();
 
             state._fsp--;
@@ -10579,20 +10919,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group_2_4__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3926:1: rule__SpecialFunction__Group_2_4__2__Impl : ( ')' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4053:1: rule__SpecialFunction__Group_2_4__2__Impl : ( ')' ) ;
     public final void rule__SpecialFunction__Group_2_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3930:1: ( ( ')' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3931:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4057:1: ( ( ')' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4058:1: ( ')' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3931:1: ( ')' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3932:1: ')'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4058:1: ( ')' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4059:1: ')'
             {
              before(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_2_4_2()); 
-            match(input,15,FOLLOW_15_in_rule__SpecialFunction__Group_2_4__2__Impl7873); 
+            match(input,16,FOLLOW_16_in_rule__SpecialFunction__Group_2_4__2__Impl8134); 
              after(grammarAccess.getSpecialFunctionAccess().getRightParenthesisKeyword_2_4_2()); 
 
             }
@@ -10616,21 +10956,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group_2_5__0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3951:1: rule__SpecialFunction__Group_2_5__0 : rule__SpecialFunction__Group_2_5__0__Impl rule__SpecialFunction__Group_2_5__1 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4078:1: rule__SpecialFunction__Group_2_5__0 : rule__SpecialFunction__Group_2_5__0__Impl rule__SpecialFunction__Group_2_5__1 ;
     public final void rule__SpecialFunction__Group_2_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3955:1: ( rule__SpecialFunction__Group_2_5__0__Impl rule__SpecialFunction__Group_2_5__1 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3956:2: rule__SpecialFunction__Group_2_5__0__Impl rule__SpecialFunction__Group_2_5__1
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4082:1: ( rule__SpecialFunction__Group_2_5__0__Impl rule__SpecialFunction__Group_2_5__1 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4083:2: rule__SpecialFunction__Group_2_5__0__Impl rule__SpecialFunction__Group_2_5__1
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__0__Impl_in_rule__SpecialFunction__Group_2_5__07910);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__0__Impl_in_rule__SpecialFunction__Group_2_5__08171);
             rule__SpecialFunction__Group_2_5__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__1_in_rule__SpecialFunction__Group_2_5__07913);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__1_in_rule__SpecialFunction__Group_2_5__08174);
             rule__SpecialFunction__Group_2_5__1();
 
             state._fsp--;
@@ -10654,20 +10994,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group_2_5__0__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3963:1: rule__SpecialFunction__Group_2_5__0__Impl : ( '${' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4090:1: rule__SpecialFunction__Group_2_5__0__Impl : ( '${' ) ;
     public final void rule__SpecialFunction__Group_2_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3967:1: ( ( '${' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3968:1: ( '${' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4094:1: ( ( '${' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4095:1: ( '${' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3968:1: ( '${' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3969:1: '${'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4095:1: ( '${' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4096:1: '${'
             {
              before(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftCurlyBracketKeyword_2_5_0()); 
-            match(input,26,FOLLOW_26_in_rule__SpecialFunction__Group_2_5__0__Impl7941); 
+            match(input,29,FOLLOW_29_in_rule__SpecialFunction__Group_2_5__0__Impl8202); 
              after(grammarAccess.getSpecialFunctionAccess().getDollarSignLeftCurlyBracketKeyword_2_5_0()); 
 
             }
@@ -10691,21 +11031,21 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group_2_5__1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3982:1: rule__SpecialFunction__Group_2_5__1 : rule__SpecialFunction__Group_2_5__1__Impl rule__SpecialFunction__Group_2_5__2 ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4109:1: rule__SpecialFunction__Group_2_5__1 : rule__SpecialFunction__Group_2_5__1__Impl rule__SpecialFunction__Group_2_5__2 ;
     public final void rule__SpecialFunction__Group_2_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3986:1: ( rule__SpecialFunction__Group_2_5__1__Impl rule__SpecialFunction__Group_2_5__2 )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3987:2: rule__SpecialFunction__Group_2_5__1__Impl rule__SpecialFunction__Group_2_5__2
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4113:1: ( rule__SpecialFunction__Group_2_5__1__Impl rule__SpecialFunction__Group_2_5__2 )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4114:2: rule__SpecialFunction__Group_2_5__1__Impl rule__SpecialFunction__Group_2_5__2
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__1__Impl_in_rule__SpecialFunction__Group_2_5__17972);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__1__Impl_in_rule__SpecialFunction__Group_2_5__18233);
             rule__SpecialFunction__Group_2_5__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__2_in_rule__SpecialFunction__Group_2_5__17975);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__2_in_rule__SpecialFunction__Group_2_5__18236);
             rule__SpecialFunction__Group_2_5__2();
 
             state._fsp--;
@@ -10729,20 +11069,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group_2_5__1__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3994:1: rule__SpecialFunction__Group_2_5__1__Impl : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4121:1: rule__SpecialFunction__Group_2_5__1__Impl : ( RULE_ID ) ;
     public final void rule__SpecialFunction__Group_2_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3998:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3999:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4125:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4126:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:3999:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4000:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4126:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4127:1: RULE_ID
             {
              before(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_5_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_2_5__1__Impl8002); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_2_5__1__Impl8263); 
              after(grammarAccess.getSpecialFunctionAccess().getIDTerminalRuleCall_2_5_1()); 
 
             }
@@ -10766,16 +11106,16 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group_2_5__2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4011:1: rule__SpecialFunction__Group_2_5__2 : rule__SpecialFunction__Group_2_5__2__Impl ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4138:1: rule__SpecialFunction__Group_2_5__2 : rule__SpecialFunction__Group_2_5__2__Impl ;
     public final void rule__SpecialFunction__Group_2_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4015:1: ( rule__SpecialFunction__Group_2_5__2__Impl )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4016:2: rule__SpecialFunction__Group_2_5__2__Impl
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4142:1: ( rule__SpecialFunction__Group_2_5__2__Impl )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4143:2: rule__SpecialFunction__Group_2_5__2__Impl
             {
-            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__2__Impl_in_rule__SpecialFunction__Group_2_5__28031);
+            pushFollow(FOLLOW_rule__SpecialFunction__Group_2_5__2__Impl_in_rule__SpecialFunction__Group_2_5__28292);
             rule__SpecialFunction__Group_2_5__2__Impl();
 
             state._fsp--;
@@ -10799,20 +11139,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__Group_2_5__2__Impl"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4022:1: rule__SpecialFunction__Group_2_5__2__Impl : ( '}' ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4149:1: rule__SpecialFunction__Group_2_5__2__Impl : ( '}' ) ;
     public final void rule__SpecialFunction__Group_2_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4026:1: ( ( '}' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4027:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4153:1: ( ( '}' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4154:1: ( '}' )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4027:1: ( '}' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4028:1: '}'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4154:1: ( '}' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4155:1: '}'
             {
              before(grammarAccess.getSpecialFunctionAccess().getRightCurlyBracketKeyword_2_5_2()); 
-            match(input,18,FOLLOW_18_in_rule__SpecialFunction__Group_2_5__2__Impl8059); 
+            match(input,21,FOLLOW_21_in_rule__SpecialFunction__Group_2_5__2__Impl8320); 
              after(grammarAccess.getSpecialFunctionAccess().getRightCurlyBracketKeyword_2_5_2()); 
 
             }
@@ -10836,20 +11176,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__CfModel__ElementsAssignment"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4048:1: rule__CfModel__ElementsAssignment : ( ruleAbstractElement ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4175:1: rule__CfModel__ElementsAssignment : ( ruleAbstractElement ) ;
     public final void rule__CfModel__ElementsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4052:1: ( ( ruleAbstractElement ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4053:1: ( ruleAbstractElement )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4179:1: ( ( ruleAbstractElement ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4180:1: ( ruleAbstractElement )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4053:1: ( ruleAbstractElement )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4054:1: ruleAbstractElement
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4180:1: ( ruleAbstractElement )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4181:1: ruleAbstractElement
             {
              before(grammarAccess.getCfModelAccess().getElementsAbstractElementParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleAbstractElement_in_rule__CfModel__ElementsAssignment8101);
+            pushFollow(FOLLOW_ruleAbstractElement_in_rule__CfModel__ElementsAssignment8362);
             ruleAbstractElement();
 
             state._fsp--;
@@ -10877,20 +11217,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__ComponentAssignment_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4063:1: rule__Bundle__ComponentAssignment_1 : ( ruleBundleComponent ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4190:1: rule__Bundle__ComponentAssignment_1 : ( ruleBundleComponent ) ;
     public final void rule__Bundle__ComponentAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4067:1: ( ( ruleBundleComponent ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4068:1: ( ruleBundleComponent )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4194:1: ( ( ruleBundleComponent ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4195:1: ( ruleBundleComponent )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4068:1: ( ruleBundleComponent )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4069:1: ruleBundleComponent
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4195:1: ( ruleBundleComponent )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4196:1: ruleBundleComponent
             {
              before(grammarAccess.getBundleAccess().getComponentBundleComponentParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleBundleComponent_in_rule__Bundle__ComponentAssignment_18132);
+            pushFollow(FOLLOW_ruleBundleComponent_in_rule__Bundle__ComponentAssignment_18393);
             ruleBundleComponent();
 
             state._fsp--;
@@ -10918,20 +11258,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__NameAssignment_2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4078:1: rule__Bundle__NameAssignment_2 : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4205:1: rule__Bundle__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Bundle__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4082:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4083:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4209:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4210:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4083:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4084:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4210:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4211:1: RULE_ID
             {
              before(grammarAccess.getBundleAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Bundle__NameAssignment_28163); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Bundle__NameAssignment_28424); 
              after(grammarAccess.getBundleAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -10955,20 +11295,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__VariablesAssignment_3_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4093:1: rule__Bundle__VariablesAssignment_3_1 : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4220:1: rule__Bundle__VariablesAssignment_3_1 : ( RULE_ID ) ;
     public final void rule__Bundle__VariablesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4097:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4098:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4224:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4225:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4098:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4099:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4225:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4226:1: RULE_ID
             {
              before(grammarAccess.getBundleAccess().getVariablesIDTerminalRuleCall_3_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Bundle__VariablesAssignment_3_18194); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Bundle__VariablesAssignment_3_18455); 
              after(grammarAccess.getBundleAccess().getVariablesIDTerminalRuleCall_3_1_0()); 
 
             }
@@ -10992,20 +11332,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__VariablesAssignment_3_2_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4108:1: rule__Bundle__VariablesAssignment_3_2_1 : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4235:1: rule__Bundle__VariablesAssignment_3_2_1 : ( RULE_ID ) ;
     public final void rule__Bundle__VariablesAssignment_3_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4112:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4113:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4239:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4240:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4113:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4114:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4240:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4241:1: RULE_ID
             {
              before(grammarAccess.getBundleAccess().getVariablesIDTerminalRuleCall_3_2_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Bundle__VariablesAssignment_3_2_18225); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Bundle__VariablesAssignment_3_2_18486); 
              after(grammarAccess.getBundleAccess().getVariablesIDTerminalRuleCall_3_2_1_0()); 
 
             }
@@ -11029,20 +11369,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Bundle__PromiseTypeAssignment_5"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4123:1: rule__Bundle__PromiseTypeAssignment_5 : ( ruleBundlePromiseType ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4250:1: rule__Bundle__PromiseTypeAssignment_5 : ( ruleBundlePromiseType ) ;
     public final void rule__Bundle__PromiseTypeAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4127:1: ( ( ruleBundlePromiseType ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4128:1: ( ruleBundlePromiseType )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4254:1: ( ( ruleBundlePromiseType ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4255:1: ( ruleBundlePromiseType )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4128:1: ( ruleBundlePromiseType )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4129:1: ruleBundlePromiseType
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4255:1: ( ruleBundlePromiseType )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4256:1: ruleBundlePromiseType
             {
              before(grammarAccess.getBundleAccess().getPromiseTypeBundlePromiseTypeParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleBundlePromiseType_in_rule__Bundle__PromiseTypeAssignment_58256);
+            pushFollow(FOLLOW_ruleBundlePromiseType_in_rule__Bundle__PromiseTypeAssignment_58517);
             ruleBundlePromiseType();
 
             state._fsp--;
@@ -11070,20 +11410,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromiseType__NameAssignment_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4138:1: rule__BundlePromiseType__NameAssignment_0 : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4265:1: rule__BundlePromiseType__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__BundlePromiseType__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4142:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4143:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4269:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4270:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4143:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4144:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4270:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4271:1: RULE_ID
             {
              before(grammarAccess.getBundlePromiseTypeAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BundlePromiseType__NameAssignment_08287); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BundlePromiseType__NameAssignment_08548); 
              after(grammarAccess.getBundlePromiseTypeAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -11107,20 +11447,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromiseType__PromisesAssignment_2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4153:1: rule__BundlePromiseType__PromisesAssignment_2 : ( ruleBundlePromise ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4280:1: rule__BundlePromiseType__PromisesAssignment_2 : ( ruleBundlePromise ) ;
     public final void rule__BundlePromiseType__PromisesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4157:1: ( ( ruleBundlePromise ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4158:1: ( ruleBundlePromise )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4284:1: ( ( ruleBundlePromise ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4285:1: ( ruleBundlePromise )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4158:1: ( ruleBundlePromise )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4159:1: ruleBundlePromise
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4285:1: ( ruleBundlePromise )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4286:1: ruleBundlePromise
             {
              before(grammarAccess.getBundlePromiseTypeAccess().getPromisesBundlePromiseParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleBundlePromise_in_rule__BundlePromiseType__PromisesAssignment_28318);
+            pushFollow(FOLLOW_ruleBundlePromise_in_rule__BundlePromiseType__PromisesAssignment_28579);
             ruleBundlePromise();
 
             state._fsp--;
@@ -11148,20 +11488,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromiseType__ClassesAssignment_3"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4168:1: rule__BundlePromiseType__ClassesAssignment_3 : ( ruleBundleClass ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4295:1: rule__BundlePromiseType__ClassesAssignment_3 : ( ruleBundleClass ) ;
     public final void rule__BundlePromiseType__ClassesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4172:1: ( ( ruleBundleClass ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4173:1: ( ruleBundleClass )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4299:1: ( ( ruleBundleClass ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4300:1: ( ruleBundleClass )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4173:1: ( ruleBundleClass )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4174:1: ruleBundleClass
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4300:1: ( ruleBundleClass )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4301:1: ruleBundleClass
             {
              before(grammarAccess.getBundlePromiseTypeAccess().getClassesBundleClassParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleBundleClass_in_rule__BundlePromiseType__ClassesAssignment_38349);
+            pushFollow(FOLLOW_ruleBundleClass_in_rule__BundlePromiseType__ClassesAssignment_38610);
             ruleBundleClass();
 
             state._fsp--;
@@ -11189,20 +11529,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundleClass__NameAssignment_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4183:1: rule__BundleClass__NameAssignment_0 : ( ruleCLASS_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4310:1: rule__BundleClass__NameAssignment_0 : ( ruleCLASS_ID ) ;
     public final void rule__BundleClass__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4187:1: ( ( ruleCLASS_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4188:1: ( ruleCLASS_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4314:1: ( ( ruleCLASS_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4315:1: ( ruleCLASS_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4188:1: ( ruleCLASS_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4189:1: ruleCLASS_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4315:1: ( ruleCLASS_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4316:1: ruleCLASS_ID
             {
              before(grammarAccess.getBundleClassAccess().getNameCLASS_IDParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__BundleClass__NameAssignment_08380);
+            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__BundleClass__NameAssignment_08641);
             ruleCLASS_ID();
 
             state._fsp--;
@@ -11230,20 +11570,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundleClass__PromisesAssignment_2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4198:1: rule__BundleClass__PromisesAssignment_2 : ( ruleBundlePromise ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4325:1: rule__BundleClass__PromisesAssignment_2 : ( ruleBundlePromise ) ;
     public final void rule__BundleClass__PromisesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4202:1: ( ( ruleBundlePromise ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4203:1: ( ruleBundlePromise )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4329:1: ( ( ruleBundlePromise ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4330:1: ( ruleBundlePromise )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4203:1: ( ruleBundlePromise )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4204:1: ruleBundlePromise
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4330:1: ( ruleBundlePromise )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4331:1: ruleBundlePromise
             {
              before(grammarAccess.getBundleClassAccess().getPromisesBundlePromiseParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleBundlePromise_in_rule__BundleClass__PromisesAssignment_28411);
+            pushFollow(FOLLOW_ruleBundlePromise_in_rule__BundleClass__PromisesAssignment_28672);
             ruleBundlePromise();
 
             state._fsp--;
@@ -11271,20 +11611,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__NameAssignment_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4213:1: rule__BundlePromise__NameAssignment_0 : ( RULE_STRING ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4340:1: rule__BundlePromise__NameAssignment_0 : ( RULE_STRING ) ;
     public final void rule__BundlePromise__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4217:1: ( ( RULE_STRING ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4218:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4344:1: ( ( RULE_STRING ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4345:1: ( RULE_STRING )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4218:1: ( RULE_STRING )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4219:1: RULE_STRING
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4345:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4346:1: RULE_STRING
             {
              before(grammarAccess.getBundlePromiseAccess().getNameSTRINGTerminalRuleCall_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BundlePromise__NameAssignment_08442); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BundlePromise__NameAssignment_08703); 
              after(grammarAccess.getBundlePromiseAccess().getNameSTRINGTerminalRuleCall_0_0()); 
 
             }
@@ -11308,20 +11648,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__ValuesAssignment_1_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4228:1: rule__BundlePromise__ValuesAssignment_1_0 : ( rulePromiseValue ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4355:1: rule__BundlePromise__ValuesAssignment_1_0 : ( rulePromiseValue ) ;
     public final void rule__BundlePromise__ValuesAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4232:1: ( ( rulePromiseValue ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4233:1: ( rulePromiseValue )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4359:1: ( ( rulePromiseValue ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4360:1: ( rulePromiseValue )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4233:1: ( rulePromiseValue )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4234:1: rulePromiseValue
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4360:1: ( rulePromiseValue )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4361:1: rulePromiseValue
             {
              before(grammarAccess.getBundlePromiseAccess().getValuesPromiseValueParserRuleCall_1_0_0()); 
-            pushFollow(FOLLOW_rulePromiseValue_in_rule__BundlePromise__ValuesAssignment_1_08473);
+            pushFollow(FOLLOW_rulePromiseValue_in_rule__BundlePromise__ValuesAssignment_1_08734);
             rulePromiseValue();
 
             state._fsp--;
@@ -11349,20 +11689,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundlePromise__ValuesAssignment_1_1_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4243:1: rule__BundlePromise__ValuesAssignment_1_1_1 : ( rulePromiseValue ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4370:1: rule__BundlePromise__ValuesAssignment_1_1_1 : ( rulePromiseValue ) ;
     public final void rule__BundlePromise__ValuesAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4247:1: ( ( rulePromiseValue ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4248:1: ( rulePromiseValue )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4374:1: ( ( rulePromiseValue ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4375:1: ( rulePromiseValue )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4248:1: ( rulePromiseValue )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4249:1: rulePromiseValue
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4375:1: ( rulePromiseValue )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4376:1: rulePromiseValue
             {
              before(grammarAccess.getBundlePromiseAccess().getValuesPromiseValueParserRuleCall_1_1_1_0()); 
-            pushFollow(FOLLOW_rulePromiseValue_in_rule__BundlePromise__ValuesAssignment_1_1_18504);
+            pushFollow(FOLLOW_rulePromiseValue_in_rule__BundlePromise__ValuesAssignment_1_1_18765);
             rulePromiseValue();
 
             state._fsp--;
@@ -11390,20 +11730,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__KeywordAssignment_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4258:1: rule__PromiseValue__KeywordAssignment_0 : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4385:1: rule__PromiseValue__KeywordAssignment_0 : ( RULE_ID ) ;
     public final void rule__PromiseValue__KeywordAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4262:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4263:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4389:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4390:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4263:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4264:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4390:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4391:1: RULE_ID
             {
              before(grammarAccess.getPromiseValueAccess().getKeywordIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PromiseValue__KeywordAssignment_08535); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PromiseValue__KeywordAssignment_08796); 
              after(grammarAccess.getPromiseValueAccess().getKeywordIDTerminalRuleCall_0_0()); 
 
             }
@@ -11427,20 +11767,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__ValuesAssignment_2_0_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4273:1: rule__PromiseValue__ValuesAssignment_2_0_0 : ( RULE_STRING ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4400:1: rule__PromiseValue__ValuesAssignment_2_0_0 : ( RULE_STRING ) ;
     public final void rule__PromiseValue__ValuesAssignment_2_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4277:1: ( ( RULE_STRING ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4278:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4404:1: ( ( RULE_STRING ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4405:1: ( RULE_STRING )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4278:1: ( RULE_STRING )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4279:1: RULE_STRING
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4405:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4406:1: RULE_STRING
             {
              before(grammarAccess.getPromiseValueAccess().getValuesSTRINGTerminalRuleCall_2_0_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__PromiseValue__ValuesAssignment_2_0_08566); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__PromiseValue__ValuesAssignment_2_0_08827); 
              after(grammarAccess.getPromiseValueAccess().getValuesSTRINGTerminalRuleCall_2_0_0_0()); 
 
             }
@@ -11464,20 +11804,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__FunctionsAssignment_2_0_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4288:1: rule__PromiseValue__FunctionsAssignment_2_0_1 : ( ruleSimpleFunction ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4415:1: rule__PromiseValue__FunctionsAssignment_2_0_1 : ( ruleSimpleFunction ) ;
     public final void rule__PromiseValue__FunctionsAssignment_2_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4292:1: ( ( ruleSimpleFunction ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4293:1: ( ruleSimpleFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4419:1: ( ( ruleSimpleFunction ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4420:1: ( ruleSimpleFunction )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4293:1: ( ruleSimpleFunction )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4294:1: ruleSimpleFunction
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4420:1: ( ruleSimpleFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4421:1: ruleSimpleFunction
             {
              before(grammarAccess.getPromiseValueAccess().getFunctionsSimpleFunctionParserRuleCall_2_0_1_0()); 
-            pushFollow(FOLLOW_ruleSimpleFunction_in_rule__PromiseValue__FunctionsAssignment_2_0_18597);
+            pushFollow(FOLLOW_ruleSimpleFunction_in_rule__PromiseValue__FunctionsAssignment_2_0_18858);
             ruleSimpleFunction();
 
             state._fsp--;
@@ -11505,20 +11845,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__ValuesAssignment_2_0_2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4303:1: rule__PromiseValue__ValuesAssignment_2_0_2 : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4430:1: rule__PromiseValue__ValuesAssignment_2_0_2 : ( RULE_ID ) ;
     public final void rule__PromiseValue__ValuesAssignment_2_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4307:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4308:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4434:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4435:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4308:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4309:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4435:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4436:1: RULE_ID
             {
              before(grammarAccess.getPromiseValueAccess().getValuesIDTerminalRuleCall_2_0_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PromiseValue__ValuesAssignment_2_0_28628); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PromiseValue__ValuesAssignment_2_0_28889); 
              after(grammarAccess.getPromiseValueAccess().getValuesIDTerminalRuleCall_2_0_2_0()); 
 
             }
@@ -11542,20 +11882,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__ValuesAssignment_2_1_1_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4318:1: rule__PromiseValue__ValuesAssignment_2_1_1_0 : ( RULE_STRING ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4445:1: rule__PromiseValue__ValuesAssignment_2_1_1_0 : ( RULE_STRING ) ;
     public final void rule__PromiseValue__ValuesAssignment_2_1_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4322:1: ( ( RULE_STRING ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4323:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4449:1: ( ( RULE_STRING ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4450:1: ( RULE_STRING )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4323:1: ( RULE_STRING )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4324:1: RULE_STRING
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4450:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4451:1: RULE_STRING
             {
              before(grammarAccess.getPromiseValueAccess().getValuesSTRINGTerminalRuleCall_2_1_1_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__PromiseValue__ValuesAssignment_2_1_1_08659); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__PromiseValue__ValuesAssignment_2_1_1_08920); 
              after(grammarAccess.getPromiseValueAccess().getValuesSTRINGTerminalRuleCall_2_1_1_0_0()); 
 
             }
@@ -11579,20 +11919,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__FunctionsAssignment_2_1_1_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4333:1: rule__PromiseValue__FunctionsAssignment_2_1_1_1 : ( ruleSimpleFunction ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4460:1: rule__PromiseValue__FunctionsAssignment_2_1_1_1 : ( ruleSimpleFunction ) ;
     public final void rule__PromiseValue__FunctionsAssignment_2_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4337:1: ( ( ruleSimpleFunction ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4338:1: ( ruleSimpleFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4464:1: ( ( ruleSimpleFunction ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4465:1: ( ruleSimpleFunction )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4338:1: ( ruleSimpleFunction )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4339:1: ruleSimpleFunction
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4465:1: ( ruleSimpleFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4466:1: ruleSimpleFunction
             {
              before(grammarAccess.getPromiseValueAccess().getFunctionsSimpleFunctionParserRuleCall_2_1_1_1_0()); 
-            pushFollow(FOLLOW_ruleSimpleFunction_in_rule__PromiseValue__FunctionsAssignment_2_1_1_18690);
+            pushFollow(FOLLOW_ruleSimpleFunction_in_rule__PromiseValue__FunctionsAssignment_2_1_1_18951);
             ruleSimpleFunction();
 
             state._fsp--;
@@ -11620,20 +11960,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__ValuesAssignment_2_1_2_1_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4348:1: rule__PromiseValue__ValuesAssignment_2_1_2_1_0 : ( RULE_STRING ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4475:1: rule__PromiseValue__ValuesAssignment_2_1_2_1_0 : ( RULE_STRING ) ;
     public final void rule__PromiseValue__ValuesAssignment_2_1_2_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4352:1: ( ( RULE_STRING ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4353:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4479:1: ( ( RULE_STRING ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4480:1: ( RULE_STRING )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4353:1: ( RULE_STRING )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4354:1: RULE_STRING
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4480:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4481:1: RULE_STRING
             {
              before(grammarAccess.getPromiseValueAccess().getValuesSTRINGTerminalRuleCall_2_1_2_1_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__PromiseValue__ValuesAssignment_2_1_2_1_08721); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__PromiseValue__ValuesAssignment_2_1_2_1_08982); 
              after(grammarAccess.getPromiseValueAccess().getValuesSTRINGTerminalRuleCall_2_1_2_1_0_0()); 
 
             }
@@ -11657,20 +11997,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__PromiseValue__FunctionsAssignment_2_1_2_1_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4363:1: rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 : ( ruleSimpleFunction ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4490:1: rule__PromiseValue__FunctionsAssignment_2_1_2_1_1 : ( ruleSimpleFunction ) ;
     public final void rule__PromiseValue__FunctionsAssignment_2_1_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4367:1: ( ( ruleSimpleFunction ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4368:1: ( ruleSimpleFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4494:1: ( ( ruleSimpleFunction ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4495:1: ( ruleSimpleFunction )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4368:1: ( ruleSimpleFunction )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4369:1: ruleSimpleFunction
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4495:1: ( ruleSimpleFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4496:1: ruleSimpleFunction
             {
              before(grammarAccess.getPromiseValueAccess().getFunctionsSimpleFunctionParserRuleCall_2_1_2_1_1_0()); 
-            pushFollow(FOLLOW_ruleSimpleFunction_in_rule__PromiseValue__FunctionsAssignment_2_1_2_1_18752);
+            pushFollow(FOLLOW_ruleSimpleFunction_in_rule__PromiseValue__FunctionsAssignment_2_1_2_1_19013);
             ruleSimpleFunction();
 
             state._fsp--;
@@ -11698,20 +12038,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__ComponentAssignment_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4378:1: rule__Body__ComponentAssignment_1 : ( ruleBodyComponent ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4505:1: rule__Body__ComponentAssignment_1 : ( ruleBodyComponent ) ;
     public final void rule__Body__ComponentAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4382:1: ( ( ruleBodyComponent ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4383:1: ( ruleBodyComponent )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4509:1: ( ( ruleBodyComponent ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4510:1: ( ruleBodyComponent )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4383:1: ( ruleBodyComponent )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4384:1: ruleBodyComponent
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4510:1: ( ruleBodyComponent )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4511:1: ruleBodyComponent
             {
              before(grammarAccess.getBodyAccess().getComponentBodyComponentParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleBodyComponent_in_rule__Body__ComponentAssignment_18783);
+            pushFollow(FOLLOW_ruleBodyComponent_in_rule__Body__ComponentAssignment_19044);
             ruleBodyComponent();
 
             state._fsp--;
@@ -11739,20 +12079,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__NameAssignment_2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4393:1: rule__Body__NameAssignment_2 : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4520:1: rule__Body__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Body__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4397:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4398:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4524:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4525:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4398:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4399:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4525:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4526:1: RULE_ID
             {
              before(grammarAccess.getBodyAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Body__NameAssignment_28814); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Body__NameAssignment_29075); 
              after(grammarAccess.getBodyAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -11776,20 +12116,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__VariablesAssignment_3_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4408:1: rule__Body__VariablesAssignment_3_1 : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4535:1: rule__Body__VariablesAssignment_3_1 : ( RULE_ID ) ;
     public final void rule__Body__VariablesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4412:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4413:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4539:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4540:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4413:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4414:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4540:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4541:1: RULE_ID
             {
              before(grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_18845); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_19106); 
              after(grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_1_0()); 
 
             }
@@ -11813,20 +12153,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__VariablesAssignment_3_2_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4423:1: rule__Body__VariablesAssignment_3_2_1 : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4550:1: rule__Body__VariablesAssignment_3_2_1 : ( RULE_ID ) ;
     public final void rule__Body__VariablesAssignment_3_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4427:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4428:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4554:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4555:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4428:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4429:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4555:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4556:1: RULE_ID
             {
              before(grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_2_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_2_18876); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_2_19137); 
              after(grammarAccess.getBodyAccess().getVariablesIDTerminalRuleCall_3_2_1_0()); 
 
             }
@@ -11850,20 +12190,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__PromiseTypeAssignment_5"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4438:1: rule__Body__PromiseTypeAssignment_5 : ( ruleBodyFunction ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4565:1: rule__Body__PromiseTypeAssignment_5 : ( ruleBodyFunction ) ;
     public final void rule__Body__PromiseTypeAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4442:1: ( ( ruleBodyFunction ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4443:1: ( ruleBodyFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4569:1: ( ( ruleBodyFunction ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4570:1: ( ruleBodyFunction )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4443:1: ( ruleBodyFunction )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4444:1: ruleBodyFunction
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4570:1: ( ruleBodyFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4571:1: ruleBodyFunction
             {
              before(grammarAccess.getBodyAccess().getPromiseTypeBodyFunctionParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleBodyFunction_in_rule__Body__PromiseTypeAssignment_58907);
+            pushFollow(FOLLOW_ruleBodyFunction_in_rule__Body__PromiseTypeAssignment_59168);
             ruleBodyFunction();
 
             state._fsp--;
@@ -11891,20 +12231,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Body__ClassesAssignment_6"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4453:1: rule__Body__ClassesAssignment_6 : ( ruleBodyClass ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4580:1: rule__Body__ClassesAssignment_6 : ( ruleBodyClass ) ;
     public final void rule__Body__ClassesAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4457:1: ( ( ruleBodyClass ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4458:1: ( ruleBodyClass )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4584:1: ( ( ruleBodyClass ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4585:1: ( ruleBodyClass )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4458:1: ( ruleBodyClass )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4459:1: ruleBodyClass
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4585:1: ( ruleBodyClass )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4586:1: ruleBodyClass
             {
              before(grammarAccess.getBodyAccess().getClassesBodyClassParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleBodyClass_in_rule__Body__ClassesAssignment_68938);
+            pushFollow(FOLLOW_ruleBodyClass_in_rule__Body__ClassesAssignment_69199);
             ruleBodyClass();
 
             state._fsp--;
@@ -11932,20 +12272,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyClass__NameAssignment_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4468:1: rule__BodyClass__NameAssignment_0 : ( ruleCLASS_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4595:1: rule__BodyClass__NameAssignment_0 : ( ruleCLASS_ID ) ;
     public final void rule__BodyClass__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4472:1: ( ( ruleCLASS_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4473:1: ( ruleCLASS_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4599:1: ( ( ruleCLASS_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4600:1: ( ruleCLASS_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4473:1: ( ruleCLASS_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4474:1: ruleCLASS_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4600:1: ( ruleCLASS_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4601:1: ruleCLASS_ID
             {
              before(grammarAccess.getBodyClassAccess().getNameCLASS_IDParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__BodyClass__NameAssignment_08969);
+            pushFollow(FOLLOW_ruleCLASS_ID_in_rule__BodyClass__NameAssignment_09230);
             ruleCLASS_ID();
 
             state._fsp--;
@@ -11973,20 +12313,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyClass__PromiseTypeAssignment_2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4483:1: rule__BodyClass__PromiseTypeAssignment_2 : ( ruleBodyFunction ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4610:1: rule__BodyClass__PromiseTypeAssignment_2 : ( ruleBodyFunction ) ;
     public final void rule__BodyClass__PromiseTypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4487:1: ( ( ruleBodyFunction ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4488:1: ( ruleBodyFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4614:1: ( ( ruleBodyFunction ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4615:1: ( ruleBodyFunction )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4488:1: ( ruleBodyFunction )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4489:1: ruleBodyFunction
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4615:1: ( ruleBodyFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4616:1: ruleBodyFunction
             {
              before(grammarAccess.getBodyClassAccess().getPromiseTypeBodyFunctionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleBodyFunction_in_rule__BodyClass__PromiseTypeAssignment_29000);
+            pushFollow(FOLLOW_ruleBodyFunction_in_rule__BodyClass__PromiseTypeAssignment_29261);
             ruleBodyFunction();
 
             state._fsp--;
@@ -12014,20 +12354,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__NameAssignment_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4498:1: rule__BodyFunction__NameAssignment_0 : ( ruleBodyPromiseType ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4625:1: rule__BodyFunction__NameAssignment_0 : ( ruleBodyPromiseType ) ;
     public final void rule__BodyFunction__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4502:1: ( ( ruleBodyPromiseType ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4503:1: ( ruleBodyPromiseType )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4629:1: ( ( ruleBodyPromiseType ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4630:1: ( ruleBodyPromiseType )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4503:1: ( ruleBodyPromiseType )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4504:1: ruleBodyPromiseType
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4630:1: ( ruleBodyPromiseType )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4631:1: ruleBodyPromiseType
             {
              before(grammarAccess.getBodyFunctionAccess().getNameBodyPromiseTypeParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleBodyPromiseType_in_rule__BodyFunction__NameAssignment_09031);
+            pushFollow(FOLLOW_ruleBodyPromiseType_in_rule__BodyFunction__NameAssignment_09292);
             ruleBodyPromiseType();
 
             state._fsp--;
@@ -12055,20 +12395,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__ValuesAssignment_2_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4513:1: rule__BodyFunction__ValuesAssignment_2_0 : ( RULE_STRING ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4640:1: rule__BodyFunction__ValuesAssignment_2_0 : ( RULE_STRING ) ;
     public final void rule__BodyFunction__ValuesAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4517:1: ( ( RULE_STRING ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4518:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4644:1: ( ( RULE_STRING ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4645:1: ( RULE_STRING )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4518:1: ( RULE_STRING )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4519:1: RULE_STRING
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4645:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4646:1: RULE_STRING
             {
              before(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_09062); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_09323); 
              after(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_0_0()); 
 
             }
@@ -12092,24 +12432,24 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__ListAssignment_2_1_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4528:1: rule__BodyFunction__ListAssignment_2_1_0 : ( ( '{' ) ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4655:1: rule__BodyFunction__ListAssignment_2_1_0 : ( ( '{' ) ) ;
     public final void rule__BodyFunction__ListAssignment_2_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4532:1: ( ( ( '{' ) ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4533:1: ( ( '{' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4659:1: ( ( ( '{' ) ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4660:1: ( ( '{' ) )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4533:1: ( ( '{' ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4534:1: ( '{' )
-            {
-             before(grammarAccess.getBodyFunctionAccess().getListLeftCurlyBracketKeyword_2_1_0_0()); 
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4535:1: ( '{' )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4536:1: '{'
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4660:1: ( ( '{' ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4661:1: ( '{' )
             {
              before(grammarAccess.getBodyFunctionAccess().getListLeftCurlyBracketKeyword_2_1_0_0()); 
-            match(input,17,FOLLOW_17_in_rule__BodyFunction__ListAssignment_2_1_09098); 
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4662:1: ( '{' )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4663:1: '{'
+            {
+             before(grammarAccess.getBodyFunctionAccess().getListLeftCurlyBracketKeyword_2_1_0_0()); 
+            match(input,20,FOLLOW_20_in_rule__BodyFunction__ListAssignment_2_1_09359); 
              after(grammarAccess.getBodyFunctionAccess().getListLeftCurlyBracketKeyword_2_1_0_0()); 
 
             }
@@ -12137,20 +12477,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__ValuesAssignment_2_1_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4551:1: rule__BodyFunction__ValuesAssignment_2_1_1 : ( RULE_STRING ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4678:1: rule__BodyFunction__ValuesAssignment_2_1_1 : ( RULE_STRING ) ;
     public final void rule__BodyFunction__ValuesAssignment_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4555:1: ( ( RULE_STRING ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4556:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4682:1: ( ( RULE_STRING ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4683:1: ( RULE_STRING )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4556:1: ( RULE_STRING )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4557:1: RULE_STRING
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4683:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4684:1: RULE_STRING
             {
              before(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_19137); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_19398); 
              after(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_1_0()); 
 
             }
@@ -12174,20 +12514,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__ValuesAssignment_2_1_2_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4566:1: rule__BodyFunction__ValuesAssignment_2_1_2_1 : ( RULE_STRING ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4693:1: rule__BodyFunction__ValuesAssignment_2_1_2_1 : ( RULE_STRING ) ;
     public final void rule__BodyFunction__ValuesAssignment_2_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4570:1: ( ( RULE_STRING ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4571:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4697:1: ( ( RULE_STRING ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4698:1: ( RULE_STRING )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4571:1: ( RULE_STRING )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4572:1: RULE_STRING
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4698:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4699:1: RULE_STRING
             {
              before(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_2_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_2_19168); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_2_19429); 
              after(grammarAccess.getBodyFunctionAccess().getValuesSTRINGTerminalRuleCall_2_1_2_1_0()); 
 
             }
@@ -12211,20 +12551,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyFunction__FunctionAssignment_2_2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4581:1: rule__BodyFunction__FunctionAssignment_2_2 : ( ruleSpecialFunction ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4708:1: rule__BodyFunction__FunctionAssignment_2_2 : ( ruleSpecialFunction ) ;
     public final void rule__BodyFunction__FunctionAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4585:1: ( ( ruleSpecialFunction ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4586:1: ( ruleSpecialFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4712:1: ( ( ruleSpecialFunction ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4713:1: ( ruleSpecialFunction )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4586:1: ( ruleSpecialFunction )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4587:1: ruleSpecialFunction
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4713:1: ( ruleSpecialFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4714:1: ruleSpecialFunction
             {
              before(grammarAccess.getBodyFunctionAccess().getFunctionSpecialFunctionParserRuleCall_2_2_0()); 
-            pushFollow(FOLLOW_ruleSpecialFunction_in_rule__BodyFunction__FunctionAssignment_2_29199);
+            pushFollow(FOLLOW_ruleSpecialFunction_in_rule__BodyFunction__FunctionAssignment_2_29460);
             ruleSpecialFunction();
 
             state._fsp--;
@@ -12252,20 +12592,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__IdAssignment_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4596:1: rule__SimpleFunction__IdAssignment_0 : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4723:1: rule__SimpleFunction__IdAssignment_0 : ( RULE_ID ) ;
     public final void rule__SimpleFunction__IdAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4600:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4601:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4727:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4728:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4601:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4602:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4728:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4729:1: RULE_ID
             {
              before(grammarAccess.getSimpleFunctionAccess().getIdIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SimpleFunction__IdAssignment_09230); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SimpleFunction__IdAssignment_09491); 
              after(grammarAccess.getSimpleFunctionAccess().getIdIDTerminalRuleCall_0_0()); 
 
             }
@@ -12289,20 +12629,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__ValuesAssignment_2"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4611:1: rule__SimpleFunction__ValuesAssignment_2 : ( RULE_STRING ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4738:1: rule__SimpleFunction__ValuesAssignment_2 : ( RULE_STRING ) ;
     public final void rule__SimpleFunction__ValuesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4615:1: ( ( RULE_STRING ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4616:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4742:1: ( ( RULE_STRING ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4743:1: ( RULE_STRING )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4616:1: ( RULE_STRING )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4617:1: RULE_STRING
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4743:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4744:1: RULE_STRING
             {
              before(grammarAccess.getSimpleFunctionAccess().getValuesSTRINGTerminalRuleCall_2_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SimpleFunction__ValuesAssignment_29261); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SimpleFunction__ValuesAssignment_29522); 
              after(grammarAccess.getSimpleFunctionAccess().getValuesSTRINGTerminalRuleCall_2_0()); 
 
             }
@@ -12326,20 +12666,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SimpleFunction__ValuesAssignment_3_1"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4626:1: rule__SimpleFunction__ValuesAssignment_3_1 : ( RULE_STRING ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4753:1: rule__SimpleFunction__ValuesAssignment_3_1 : ( RULE_STRING ) ;
     public final void rule__SimpleFunction__ValuesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4630:1: ( ( RULE_STRING ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4631:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4757:1: ( ( RULE_STRING ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4758:1: ( RULE_STRING )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4631:1: ( RULE_STRING )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4632:1: RULE_STRING
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4758:1: ( RULE_STRING )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4759:1: RULE_STRING
             {
              before(grammarAccess.getSimpleFunctionAccess().getValuesSTRINGTerminalRuleCall_3_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SimpleFunction__ValuesAssignment_3_19292); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SimpleFunction__ValuesAssignment_3_19553); 
              after(grammarAccess.getSimpleFunctionAccess().getValuesSTRINGTerminalRuleCall_3_1_0()); 
 
             }
@@ -12363,20 +12703,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__IdAssignment_0"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4641:1: rule__SpecialFunction__IdAssignment_0 : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4768:1: rule__SpecialFunction__IdAssignment_0 : ( RULE_ID ) ;
     public final void rule__SpecialFunction__IdAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4645:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4646:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4772:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4773:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4646:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4647:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4773:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4774:1: RULE_ID
             {
              before(grammarAccess.getSpecialFunctionAccess().getIdIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__IdAssignment_09323); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SpecialFunction__IdAssignment_09584); 
              after(grammarAccess.getSpecialFunctionAccess().getIdIDTerminalRuleCall_0_0()); 
 
             }
@@ -12400,20 +12740,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__SpecialFunction__FuncAssignment_2_6"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4656:1: rule__SpecialFunction__FuncAssignment_2_6 : ( ruleSpecialFunction ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4783:1: rule__SpecialFunction__FuncAssignment_2_6 : ( ruleSpecialFunction ) ;
     public final void rule__SpecialFunction__FuncAssignment_2_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4660:1: ( ( ruleSpecialFunction ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4661:1: ( ruleSpecialFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4787:1: ( ( ruleSpecialFunction ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4788:1: ( ruleSpecialFunction )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4661:1: ( ruleSpecialFunction )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4662:1: ruleSpecialFunction
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4788:1: ( ruleSpecialFunction )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4789:1: ruleSpecialFunction
             {
              before(grammarAccess.getSpecialFunctionAccess().getFuncSpecialFunctionParserRuleCall_2_6_0()); 
-            pushFollow(FOLLOW_ruleSpecialFunction_in_rule__SpecialFunction__FuncAssignment_2_69354);
+            pushFollow(FOLLOW_ruleSpecialFunction_in_rule__SpecialFunction__FuncAssignment_2_69615);
             ruleSpecialFunction();
 
             state._fsp--;
@@ -12441,20 +12781,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyPromiseType__NameAssignment"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4671:1: rule__BodyPromiseType__NameAssignment : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4798:1: rule__BodyPromiseType__NameAssignment : ( RULE_ID ) ;
     public final void rule__BodyPromiseType__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4675:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4676:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4802:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4803:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4676:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4677:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4803:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4804:1: RULE_ID
             {
              before(grammarAccess.getBodyPromiseTypeAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BodyPromiseType__NameAssignment9385); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BodyPromiseType__NameAssignment9646); 
              after(grammarAccess.getBodyPromiseTypeAccess().getNameIDTerminalRuleCall_0()); 
 
             }
@@ -12478,20 +12818,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BundleComponent__NameAssignment"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4686:1: rule__BundleComponent__NameAssignment : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4813:1: rule__BundleComponent__NameAssignment : ( RULE_ID ) ;
     public final void rule__BundleComponent__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4690:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4691:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4817:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4818:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4691:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4692:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4818:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4819:1: RULE_ID
             {
              before(grammarAccess.getBundleComponentAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BundleComponent__NameAssignment9416); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BundleComponent__NameAssignment9677); 
              after(grammarAccess.getBundleComponentAccess().getNameIDTerminalRuleCall_0()); 
 
             }
@@ -12515,20 +12855,20 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__BodyComponent__NameAssignment"
-    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4701:1: rule__BodyComponent__NameAssignment : ( RULE_ID ) ;
+    // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4828:1: rule__BodyComponent__NameAssignment : ( RULE_ID ) ;
     public final void rule__BodyComponent__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4705:1: ( ( RULE_ID ) )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4706:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4832:1: ( ( RULE_ID ) )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4833:1: ( RULE_ID )
             {
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4706:1: ( RULE_ID )
-            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4707:1: RULE_ID
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4833:1: ( RULE_ID )
+            // ../org.cfeditor.cfengine.ui/src-gen/org/cfeditor/cfengine/ui/contentassist/antlr/internal/InternalCfengine.g:4834:1: RULE_ID
             {
              before(grammarAccess.getBodyComponentAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BodyComponent__NameAssignment9447); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BodyComponent__NameAssignment9708); 
              after(grammarAccess.getBodyComponentAccess().getNameIDTerminalRuleCall_0()); 
 
             }
@@ -12557,7 +12897,7 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
 
     public static final BitSet FOLLOW_ruleCfModel_in_entryRuleCfModel61 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCfModel68 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CfModel__ElementsAssignment_in_ruleCfModel94 = new BitSet(new long[]{0x0000000001010002L});
+    public static final BitSet FOLLOW_rule__CfModel__ElementsAssignment_in_ruleCfModel94 = new BitSet(new long[]{0x0000000008080002L});
     public static final BitSet FOLLOW_ruleCLASS_ID_in_entryRuleCLASS_ID122 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCLASS_ID129 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__CLASS_ID__Alternatives_in_ruleCLASS_ID155 = new BitSet(new long[]{0x0000000000000002L});
@@ -12606,355 +12946,366 @@ public class InternalCfengineParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_rule__CLASS_ID__Group_0__0_in_rule__CLASS_ID__Alternatives1031 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__CLASS_ID__Group_1__0_in_rule__CLASS_ID__Alternatives1049 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__CLASS_ID__Group_2__0_in_rule__CLASS_ID__Alternatives1067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundle_in_rule__AbstractElement__Alternatives1100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBody_in_rule__AbstractElement__Alternatives1117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Alternatives_2_0_in_rule__PromiseValue__Alternatives_21149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__0_in_rule__PromiseValue__Alternatives_21167 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__0_in_rule__PromiseValue__Alternatives_21185 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__ValuesAssignment_2_0_0_in_rule__PromiseValue__Alternatives_2_01218 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__FunctionsAssignment_2_0_1_in_rule__PromiseValue__Alternatives_2_01236 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__ValuesAssignment_2_0_2_in_rule__PromiseValue__Alternatives_2_01254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__ValuesAssignment_2_1_1_0_in_rule__PromiseValue__Alternatives_2_1_11287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__FunctionsAssignment_2_1_1_1_in_rule__PromiseValue__Alternatives_2_1_11305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__ValuesAssignment_2_1_2_1_0_in_rule__PromiseValue__Alternatives_2_1_2_11338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__FunctionsAssignment_2_1_2_1_1_in_rule__PromiseValue__Alternatives_2_1_2_11356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__ValuesAssignment_2_0_in_rule__BodyFunction__Alternatives_21389 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__0_in_rule__BodyFunction__Alternatives_21407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__FunctionAssignment_2_2_in_rule__BodyFunction__Alternatives_21425 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__0_in_rule__BodyFunction__Alternatives_21443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_rule__SpecialFunction__Alternatives_21476 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__Alternatives_21493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SpecialFunction__Alternatives_21510 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__SpecialFunction__Alternatives_21528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_4__0_in_rule__SpecialFunction__Alternatives_21547 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__0_in_rule__SpecialFunction__Alternatives_21565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__FuncAssignment_2_6_in_rule__SpecialFunction__Alternatives_21583 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0__0__Impl_in_rule__CLASS_ID__Group_0__01614 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0__1_in_rule__CLASS_ID__Group_0__01617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CLASS_ID__Group_0__0__Impl1644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0__1__Impl_in_rule__CLASS_ID__Group_0__11673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0_1__0_in_rule__CLASS_ID__Group_0__1__Impl1700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0_1__0__Impl_in_rule__CLASS_ID__Group_0_1__01735 = new BitSet(new long[]{0x0000000000006020L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0_1__1_in_rule__CLASS_ID__Group_0_1__01738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__CLASS_ID__Group_0_1__0__Impl1766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0_1__1__Impl_in_rule__CLASS_ID__Group_0_1__11797 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_0_1__1__Impl1824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_1__0__Impl_in_rule__CLASS_ID__Group_1__01857 = new BitSet(new long[]{0x0000000000006020L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_1__1_in_rule__CLASS_ID__Group_1__01860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__CLASS_ID__Group_1__0__Impl1888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_1__1__Impl_in_rule__CLASS_ID__Group_1__11919 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_1__1__Impl1946 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2__0__Impl_in_rule__CLASS_ID__Group_2__01979 = new BitSet(new long[]{0x0000000000006020L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2__1_in_rule__CLASS_ID__Group_2__01982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__CLASS_ID__Group_2__0__Impl2010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2__1__Impl_in_rule__CLASS_ID__Group_2__12041 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2__2_in_rule__CLASS_ID__Group_2__12044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_2__1__Impl2071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2__2__Impl_in_rule__CLASS_ID__Group_2__22100 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2__3_in_rule__CLASS_ID__Group_2__22103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__CLASS_ID__Group_2__2__Impl2131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2__3__Impl_in_rule__CLASS_ID__Group_2__32162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2_3__0_in_rule__CLASS_ID__Group_2__3__Impl2189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2_3__0__Impl_in_rule__CLASS_ID__Group_2_3__02228 = new BitSet(new long[]{0x0000000000006020L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2_3__1_in_rule__CLASS_ID__Group_2_3__02231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__CLASS_ID__Group_2_3__0__Impl2259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2_3__1__Impl_in_rule__CLASS_ID__Group_2_3__12290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_2_3__1__Impl2317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__Group__0__Impl_in_rule__Bundle__Group__02350 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Bundle__Group__1_in_rule__Bundle__Group__02353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Bundle__Group__0__Impl2381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__Group__1__Impl_in_rule__Bundle__Group__12412 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Bundle__Group__2_in_rule__Bundle__Group__12415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__ComponentAssignment_1_in_rule__Bundle__Group__1__Impl2442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__Group__2__Impl_in_rule__Bundle__Group__22472 = new BitSet(new long[]{0x0000000000024000L});
-    public static final BitSet FOLLOW_rule__Bundle__Group__3_in_rule__Bundle__Group__22475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__NameAssignment_2_in_rule__Bundle__Group__2__Impl2502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__Group__3__Impl_in_rule__Bundle__Group__32532 = new BitSet(new long[]{0x0000000000024000L});
-    public static final BitSet FOLLOW_rule__Bundle__Group__4_in_rule__Bundle__Group__32535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__Group_3__0_in_rule__Bundle__Group__3__Impl2562 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__Group__4__Impl_in_rule__Bundle__Group__42593 = new BitSet(new long[]{0x0000000000040020L});
-    public static final BitSet FOLLOW_rule__Bundle__Group__5_in_rule__Bundle__Group__42596 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Bundle__Group__4__Impl2624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__Group__5__Impl_in_rule__Bundle__Group__52655 = new BitSet(new long[]{0x0000000000040020L});
-    public static final BitSet FOLLOW_rule__Bundle__Group__6_in_rule__Bundle__Group__52658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__PromiseTypeAssignment_5_in_rule__Bundle__Group__5__Impl2685 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_rule__Bundle__Group__6__Impl_in_rule__Bundle__Group__62716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Bundle__Group__6__Impl2744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__Group_3__0__Impl_in_rule__Bundle__Group_3__02789 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Bundle__Group_3__1_in_rule__Bundle__Group_3__02792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Bundle__Group_3__0__Impl2820 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__Group_3__1__Impl_in_rule__Bundle__Group_3__12851 = new BitSet(new long[]{0x0000000000008800L});
-    public static final BitSet FOLLOW_rule__Bundle__Group_3__2_in_rule__Bundle__Group_3__12854 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__VariablesAssignment_3_1_in_rule__Bundle__Group_3__1__Impl2881 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__Group_3__2__Impl_in_rule__Bundle__Group_3__22911 = new BitSet(new long[]{0x0000000000008800L});
-    public static final BitSet FOLLOW_rule__Bundle__Group_3__3_in_rule__Bundle__Group_3__22914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__Group_3_2__0_in_rule__Bundle__Group_3__2__Impl2941 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_rule__Bundle__Group_3__3__Impl_in_rule__Bundle__Group_3__32972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Bundle__Group_3__3__Impl3000 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__Group_3_2__0__Impl_in_rule__Bundle__Group_3_2__03039 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Bundle__Group_3_2__1_in_rule__Bundle__Group_3_2__03042 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Bundle__Group_3_2__0__Impl3070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__Group_3_2__1__Impl_in_rule__Bundle__Group_3_2__13101 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bundle__VariablesAssignment_3_2_1_in_rule__Bundle__Group_3_2__1__Impl3128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__0__Impl_in_rule__BundlePromiseType__Group__03162 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__1_in_rule__BundlePromiseType__Group__03165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromiseType__NameAssignment_0_in_rule__BundlePromiseType__Group__0__Impl3192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__1__Impl_in_rule__BundlePromiseType__Group__13222 = new BitSet(new long[]{0x0000000000006060L});
-    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__2_in_rule__BundlePromiseType__Group__13225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__BundlePromiseType__Group__1__Impl3253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__2__Impl_in_rule__BundlePromiseType__Group__23284 = new BitSet(new long[]{0x0000000000006060L});
-    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__3_in_rule__BundlePromiseType__Group__23287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromiseType__PromisesAssignment_2_in_rule__BundlePromiseType__Group__2__Impl3314 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__3__Impl_in_rule__BundlePromiseType__Group__33345 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromiseType__ClassesAssignment_3_in_rule__BundlePromiseType__Group__3__Impl3372 = new BitSet(new long[]{0x0000000000006022L});
-    public static final BitSet FOLLOW_rule__BundleClass__Group__0__Impl_in_rule__BundleClass__Group__03411 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__BundleClass__Group__1_in_rule__BundleClass__Group__03414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundleClass__NameAssignment_0_in_rule__BundleClass__Group__0__Impl3441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundleClass__Group__1__Impl_in_rule__BundleClass__Group__13471 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__BundleClass__Group__2_in_rule__BundleClass__Group__13474 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__BundleClass__Group__1__Impl3502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundleClass__Group__2__Impl_in_rule__BundleClass__Group__23533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundleClass__PromisesAssignment_2_in_rule__BundleClass__Group__2__Impl3562 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__BundleClass__PromisesAssignment_2_in_rule__BundleClass__Group__2__Impl3574 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__BundlePromise__Group__0__Impl_in_rule__BundlePromise__Group__03613 = new BitSet(new long[]{0x0000000000200020L});
-    public static final BitSet FOLLOW_rule__BundlePromise__Group__1_in_rule__BundlePromise__Group__03616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromise__NameAssignment_0_in_rule__BundlePromise__Group__0__Impl3643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromise__Group__1__Impl_in_rule__BundlePromise__Group__13673 = new BitSet(new long[]{0x0000000000200020L});
-    public static final BitSet FOLLOW_rule__BundlePromise__Group__2_in_rule__BundlePromise__Group__13676 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromise__Group_1__0_in_rule__BundlePromise__Group__1__Impl3703 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromise__Group__2__Impl_in_rule__BundlePromise__Group__23734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__BundlePromise__Group__2__Impl3762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromise__Group_1__0__Impl_in_rule__BundlePromise__Group_1__03799 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_rule__BundlePromise__Group_1__1_in_rule__BundlePromise__Group_1__03802 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromise__ValuesAssignment_1_0_in_rule__BundlePromise__Group_1__0__Impl3829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromise__Group_1__1__Impl_in_rule__BundlePromise__Group_1__13859 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromise__Group_1_1__0_in_rule__BundlePromise__Group_1__1__Impl3886 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_rule__BundlePromise__Group_1_1__0__Impl_in_rule__BundlePromise__Group_1_1__03921 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__BundlePromise__Group_1_1__1_in_rule__BundlePromise__Group_1_1__03924 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__BundlePromise__Group_1_1__0__Impl3952 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromise__Group_1_1__1__Impl_in_rule__BundlePromise__Group_1_1__13983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BundlePromise__ValuesAssignment_1_1_1_in_rule__BundlePromise__Group_1_1__1__Impl4010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group__0__Impl_in_rule__PromiseValue__Group__04044 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group__1_in_rule__PromiseValue__Group__04047 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__KeywordAssignment_0_in_rule__PromiseValue__Group__0__Impl4074 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group__1__Impl_in_rule__PromiseValue__Group__14104 = new BitSet(new long[]{0x0000000000020060L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group__2_in_rule__PromiseValue__Group__14107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__PromiseValue__Group__1__Impl4135 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group__2__Impl_in_rule__PromiseValue__Group__24166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Alternatives_2_in_rule__PromiseValue__Group__2__Impl4193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__0__Impl_in_rule__PromiseValue__Group_2_1__04229 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__1_in_rule__PromiseValue__Group_2_1__04232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__PromiseValue__Group_2_1__0__Impl4260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__1__Impl_in_rule__PromiseValue__Group_2_1__14291 = new BitSet(new long[]{0x0000000000040800L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__2_in_rule__PromiseValue__Group_2_1__14294 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Alternatives_2_1_1_in_rule__PromiseValue__Group_2_1__1__Impl4321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__2__Impl_in_rule__PromiseValue__Group_2_1__24351 = new BitSet(new long[]{0x0000000000040800L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__3_in_rule__PromiseValue__Group_2_1__24354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1_2__0_in_rule__PromiseValue__Group_2_1__2__Impl4381 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__3__Impl_in_rule__PromiseValue__Group_2_1__34412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__PromiseValue__Group_2_1__3__Impl4440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1_2__0__Impl_in_rule__PromiseValue__Group_2_1_2__04479 = new BitSet(new long[]{0x0000000000000060L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1_2__1_in_rule__PromiseValue__Group_2_1_2__04482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__PromiseValue__Group_2_1_2__0__Impl4510 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1_2__1__Impl_in_rule__PromiseValue__Group_2_1_2__14541 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Alternatives_2_1_2_1_in_rule__PromiseValue__Group_2_1_2__1__Impl4568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__0__Impl_in_rule__PromiseValue__Group_2_2__04602 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__1_in_rule__PromiseValue__Group_2_2__04605 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__PromiseValue__Group_2_2__0__Impl4633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__1__Impl_in_rule__PromiseValue__Group_2_2__14664 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__2_in_rule__PromiseValue__Group_2_2__14667 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__PromiseValue__Group_2_2__1__Impl4695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__2__Impl_in_rule__PromiseValue__Group_2_2__24726 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__3_in_rule__PromiseValue__Group_2_2__24729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__PromiseValue__Group_2_2__2__Impl4757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__3__Impl_in_rule__PromiseValue__Group_2_2__34788 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__4_in_rule__PromiseValue__Group_2_2__34791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PromiseValue__Group_2_2__3__Impl4818 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__4__Impl_in_rule__PromiseValue__Group_2_2__44847 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__5_in_rule__PromiseValue__Group_2_2__44850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__PromiseValue__Group_2_2__4__Impl4878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__5__Impl_in_rule__PromiseValue__Group_2_2__54909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__PromiseValue__Group_2_2__5__Impl4937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group__0__Impl_in_rule__Body__Group__04980 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Body__Group__1_in_rule__Body__Group__04983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Body__Group__0__Impl5011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group__1__Impl_in_rule__Body__Group__15042 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Body__Group__2_in_rule__Body__Group__15045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__ComponentAssignment_1_in_rule__Body__Group__1__Impl5072 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group__2__Impl_in_rule__Body__Group__25102 = new BitSet(new long[]{0x0000000000024000L});
-    public static final BitSet FOLLOW_rule__Body__Group__3_in_rule__Body__Group__25105 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__NameAssignment_2_in_rule__Body__Group__2__Impl5132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group__3__Impl_in_rule__Body__Group__35162 = new BitSet(new long[]{0x0000000000024000L});
-    public static final BitSet FOLLOW_rule__Body__Group__4_in_rule__Body__Group__35165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_3__0_in_rule__Body__Group__3__Impl5192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group__4__Impl_in_rule__Body__Group__45223 = new BitSet(new long[]{0x0000000000046020L});
-    public static final BitSet FOLLOW_rule__Body__Group__5_in_rule__Body__Group__45226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Body__Group__4__Impl5254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group__5__Impl_in_rule__Body__Group__55285 = new BitSet(new long[]{0x0000000000046020L});
-    public static final BitSet FOLLOW_rule__Body__Group__6_in_rule__Body__Group__55288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__PromiseTypeAssignment_5_in_rule__Body__Group__5__Impl5315 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_rule__Body__Group__6__Impl_in_rule__Body__Group__65346 = new BitSet(new long[]{0x0000000000046020L});
-    public static final BitSet FOLLOW_rule__Body__Group__7_in_rule__Body__Group__65349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__ClassesAssignment_6_in_rule__Body__Group__6__Impl5376 = new BitSet(new long[]{0x0000000000006022L});
-    public static final BitSet FOLLOW_rule__Body__Group__7__Impl_in_rule__Body__Group__75407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Body__Group__7__Impl5435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_3__0__Impl_in_rule__Body__Group_3__05482 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Body__Group_3__1_in_rule__Body__Group_3__05485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Body__Group_3__0__Impl5513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_3__1__Impl_in_rule__Body__Group_3__15544 = new BitSet(new long[]{0x0000000000008800L});
-    public static final BitSet FOLLOW_rule__Body__Group_3__2_in_rule__Body__Group_3__15547 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__VariablesAssignment_3_1_in_rule__Body__Group_3__1__Impl5574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_3__2__Impl_in_rule__Body__Group_3__25604 = new BitSet(new long[]{0x0000000000008800L});
-    public static final BitSet FOLLOW_rule__Body__Group_3__3_in_rule__Body__Group_3__25607 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_3_2__0_in_rule__Body__Group_3__2__Impl5634 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_rule__Body__Group_3__3__Impl_in_rule__Body__Group_3__35665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Body__Group_3__3__Impl5693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_3_2__0__Impl_in_rule__Body__Group_3_2__05732 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Body__Group_3_2__1_in_rule__Body__Group_3_2__05735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Body__Group_3_2__0__Impl5763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group_3_2__1__Impl_in_rule__Body__Group_3_2__15794 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__VariablesAssignment_3_2_1_in_rule__Body__Group_3_2__1__Impl5821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyClass__Group__0__Impl_in_rule__BodyClass__Group__05855 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__BodyClass__Group__1_in_rule__BodyClass__Group__05858 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyClass__NameAssignment_0_in_rule__BodyClass__Group__0__Impl5885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyClass__Group__1__Impl_in_rule__BodyClass__Group__15915 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__BodyClass__Group__2_in_rule__BodyClass__Group__15918 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__BodyClass__Group__1__Impl5946 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyClass__Group__2__Impl_in_rule__BodyClass__Group__25977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyClass__PromiseTypeAssignment_2_in_rule__BodyClass__Group__2__Impl6004 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group__0__Impl_in_rule__BodyFunction__Group__06041 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group__1_in_rule__BodyFunction__Group__06044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__NameAssignment_0_in_rule__BodyFunction__Group__0__Impl6071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group__1__Impl_in_rule__BodyFunction__Group__16101 = new BitSet(new long[]{0x0000000000020060L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group__2_in_rule__BodyFunction__Group__16104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__BodyFunction__Group__1__Impl6132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group__2__Impl_in_rule__BodyFunction__Group__26163 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group__3_in_rule__BodyFunction__Group__26166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Alternatives_2_in_rule__BodyFunction__Group__2__Impl6193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group__3__Impl_in_rule__BodyFunction__Group__36223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__BodyFunction__Group__3__Impl6251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__0__Impl_in_rule__BodyFunction__Group_2_1__06290 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__1_in_rule__BodyFunction__Group_2_1__06293 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__ListAssignment_2_1_0_in_rule__BodyFunction__Group_2_1__0__Impl6320 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__1__Impl_in_rule__BodyFunction__Group_2_1__16350 = new BitSet(new long[]{0x0000000000040800L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__2_in_rule__BodyFunction__Group_2_1__16353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__ValuesAssignment_2_1_1_in_rule__BodyFunction__Group_2_1__1__Impl6380 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__2__Impl_in_rule__BodyFunction__Group_2_1__26410 = new BitSet(new long[]{0x0000000000040800L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__3_in_rule__BodyFunction__Group_2_1__26413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1_2__0_in_rule__BodyFunction__Group_2_1__2__Impl6440 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__3__Impl_in_rule__BodyFunction__Group_2_1__36471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__BodyFunction__Group_2_1__3__Impl6499 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1_2__0__Impl_in_rule__BodyFunction__Group_2_1_2__06538 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1_2__1_in_rule__BodyFunction__Group_2_1_2__06541 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__BodyFunction__Group_2_1_2__0__Impl6569 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1_2__1__Impl_in_rule__BodyFunction__Group_2_1_2__16600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__ValuesAssignment_2_1_2_1_in_rule__BodyFunction__Group_2_1_2__1__Impl6627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__0__Impl_in_rule__BodyFunction__Group_2_3__06661 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__1_in_rule__BodyFunction__Group_2_3__06664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__BodyFunction__Group_2_3__0__Impl6692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__1__Impl_in_rule__BodyFunction__Group_2_3__16723 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__2_in_rule__BodyFunction__Group_2_3__16726 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__BodyFunction__Group_2_3__1__Impl6754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__2__Impl_in_rule__BodyFunction__Group_2_3__26785 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__3_in_rule__BodyFunction__Group_2_3__26788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__BodyFunction__Group_2_3__2__Impl6816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__3__Impl_in_rule__BodyFunction__Group_2_3__36847 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__4_in_rule__BodyFunction__Group_2_3__36850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__BodyFunction__Group_2_3__3__Impl6877 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__4__Impl_in_rule__BodyFunction__Group_2_3__46906 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__5_in_rule__BodyFunction__Group_2_3__46909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__BodyFunction__Group_2_3__4__Impl6937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__5__Impl_in_rule__BodyFunction__Group_2_3__56968 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__BodyFunction__Group_2_3__5__Impl6996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__Group__0__Impl_in_rule__SimpleFunction__Group__07039 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__Group__1_in_rule__SimpleFunction__Group__07042 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__IdAssignment_0_in_rule__SimpleFunction__Group__0__Impl7069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__Group__1__Impl_in_rule__SimpleFunction__Group__17099 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__Group__2_in_rule__SimpleFunction__Group__17102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__SimpleFunction__Group__1__Impl7130 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__Group__2__Impl_in_rule__SimpleFunction__Group__27161 = new BitSet(new long[]{0x0000000000008800L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__Group__3_in_rule__SimpleFunction__Group__27164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__ValuesAssignment_2_in_rule__SimpleFunction__Group__2__Impl7191 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__Group__3__Impl_in_rule__SimpleFunction__Group__37221 = new BitSet(new long[]{0x0000000000008800L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__Group__4_in_rule__SimpleFunction__Group__37224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__Group_3__0_in_rule__SimpleFunction__Group__3__Impl7251 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__Group__4__Impl_in_rule__SimpleFunction__Group__47282 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__SimpleFunction__Group__4__Impl7310 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__Group_3__0__Impl_in_rule__SimpleFunction__Group_3__07351 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__Group_3__1_in_rule__SimpleFunction__Group_3__07354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__SimpleFunction__Group_3__0__Impl7382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__Group_3__1__Impl_in_rule__SimpleFunction__Group_3__17413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SimpleFunction__ValuesAssignment_3_1_in_rule__SimpleFunction__Group_3__1__Impl7440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group__0__Impl_in_rule__SpecialFunction__Group__07474 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group__1_in_rule__SpecialFunction__Group__07477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__IdAssignment_0_in_rule__SpecialFunction__Group__0__Impl7504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group__1__Impl_in_rule__SpecialFunction__Group__17534 = new BitSet(new long[]{0x0000000006008870L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group__2_in_rule__SpecialFunction__Group__17537 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__SpecialFunction__Group__1__Impl7565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group__2__Impl_in_rule__SpecialFunction__Group__27596 = new BitSet(new long[]{0x0000000006008870L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group__3_in_rule__SpecialFunction__Group__27599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Alternatives_2_in_rule__SpecialFunction__Group__2__Impl7626 = new BitSet(new long[]{0x0000000006000872L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group__3__Impl_in_rule__SpecialFunction__Group__37657 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__SpecialFunction__Group__3__Impl7685 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_4__0__Impl_in_rule__SpecialFunction__Group_2_4__07724 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_4__1_in_rule__SpecialFunction__Group_2_4__07727 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__SpecialFunction__Group_2_4__0__Impl7755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_4__1__Impl_in_rule__SpecialFunction__Group_2_4__17786 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_4__2_in_rule__SpecialFunction__Group_2_4__17789 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_2_4__1__Impl7816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_4__2__Impl_in_rule__SpecialFunction__Group_2_4__27845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__SpecialFunction__Group_2_4__2__Impl7873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__0__Impl_in_rule__SpecialFunction__Group_2_5__07910 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__1_in_rule__SpecialFunction__Group_2_5__07913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__SpecialFunction__Group_2_5__0__Impl7941 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__1__Impl_in_rule__SpecialFunction__Group_2_5__17972 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__2_in_rule__SpecialFunction__Group_2_5__17975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_2_5__1__Impl8002 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__2__Impl_in_rule__SpecialFunction__Group_2_5__28031 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__SpecialFunction__Group_2_5__2__Impl8059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractElement_in_rule__CfModel__ElementsAssignment8101 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundleComponent_in_rule__Bundle__ComponentAssignment_18132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Bundle__NameAssignment_28163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Bundle__VariablesAssignment_3_18194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Bundle__VariablesAssignment_3_2_18225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundlePromiseType_in_rule__Bundle__PromiseTypeAssignment_58256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__BundlePromiseType__NameAssignment_08287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundlePromise_in_rule__BundlePromiseType__PromisesAssignment_28318 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundleClass_in_rule__BundlePromiseType__ClassesAssignment_38349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__BundleClass__NameAssignment_08380 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBundlePromise_in_rule__BundleClass__PromisesAssignment_28411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__BundlePromise__NameAssignment_08442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePromiseValue_in_rule__BundlePromise__ValuesAssignment_1_08473 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePromiseValue_in_rule__BundlePromise__ValuesAssignment_1_1_18504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PromiseValue__KeywordAssignment_08535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__PromiseValue__ValuesAssignment_2_0_08566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleFunction_in_rule__PromiseValue__FunctionsAssignment_2_0_18597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PromiseValue__ValuesAssignment_2_0_28628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__PromiseValue__ValuesAssignment_2_1_1_08659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleFunction_in_rule__PromiseValue__FunctionsAssignment_2_1_1_18690 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__PromiseValue__ValuesAssignment_2_1_2_1_08721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSimpleFunction_in_rule__PromiseValue__FunctionsAssignment_2_1_2_1_18752 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyComponent_in_rule__Body__ComponentAssignment_18783 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Body__NameAssignment_28814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_18845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_2_18876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyFunction_in_rule__Body__PromiseTypeAssignment_58907 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyClass_in_rule__Body__ClassesAssignment_68938 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__BodyClass__NameAssignment_08969 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyFunction_in_rule__BodyClass__PromiseTypeAssignment_29000 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBodyPromiseType_in_rule__BodyFunction__NameAssignment_09031 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_09062 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__BodyFunction__ListAssignment_2_1_09098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_19137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_2_19168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSpecialFunction_in_rule__BodyFunction__FunctionAssignment_2_29199 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SimpleFunction__IdAssignment_09230 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SimpleFunction__ValuesAssignment_29261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SimpleFunction__ValuesAssignment_3_19292 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__IdAssignment_09323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSpecialFunction_in_rule__SpecialFunction__FuncAssignment_2_69354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__BodyPromiseType__NameAssignment9385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__BundleComponent__NameAssignment9416 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__BodyComponent__NameAssignment9447 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_3__0_in_rule__CLASS_ID__Alternatives1085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_4__0_in_rule__CLASS_ID__Alternatives1103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__CLASS_ID__Alternatives_0_1_01137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__CLASS_ID__Alternatives_0_1_01157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundle_in_rule__AbstractElement__Alternatives1191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBody_in_rule__AbstractElement__Alternatives1208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Alternatives_2_0_in_rule__PromiseValue__Alternatives_21240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__0_in_rule__PromiseValue__Alternatives_21258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__0_in_rule__PromiseValue__Alternatives_21276 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__ValuesAssignment_2_0_0_in_rule__PromiseValue__Alternatives_2_01309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__FunctionsAssignment_2_0_1_in_rule__PromiseValue__Alternatives_2_01327 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__ValuesAssignment_2_0_2_in_rule__PromiseValue__Alternatives_2_01345 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__ValuesAssignment_2_1_1_0_in_rule__PromiseValue__Alternatives_2_1_11378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__FunctionsAssignment_2_1_1_1_in_rule__PromiseValue__Alternatives_2_1_11396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__ValuesAssignment_2_1_2_1_0_in_rule__PromiseValue__Alternatives_2_1_2_11429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__FunctionsAssignment_2_1_2_1_1_in_rule__PromiseValue__Alternatives_2_1_2_11447 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__ValuesAssignment_2_0_in_rule__BodyFunction__Alternatives_21480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__0_in_rule__BodyFunction__Alternatives_21498 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__FunctionAssignment_2_2_in_rule__BodyFunction__Alternatives_21516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__0_in_rule__BodyFunction__Alternatives_21534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ANY_OTHER_in_rule__SpecialFunction__Alternatives_21567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__Alternatives_21584 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SpecialFunction__Alternatives_21601 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__SpecialFunction__Alternatives_21619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_4__0_in_rule__SpecialFunction__Alternatives_21638 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__0_in_rule__SpecialFunction__Alternatives_21656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__FuncAssignment_2_6_in_rule__SpecialFunction__Alternatives_21674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0__0__Impl_in_rule__CLASS_ID__Group_0__01705 = new BitSet(new long[]{0x000000000006D820L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0__1_in_rule__CLASS_ID__Group_0__01708 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CLASS_ID__Group_0__0__Impl1735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0__1__Impl_in_rule__CLASS_ID__Group_0__11764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0_1__0_in_rule__CLASS_ID__Group_0__1__Impl1791 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0_1__0__Impl_in_rule__CLASS_ID__Group_0_1__01826 = new BitSet(new long[]{0x000000000006D820L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0_1__1_in_rule__CLASS_ID__Group_0_1__01829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Alternatives_0_1_0_in_rule__CLASS_ID__Group_0_1__0__Impl1856 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_0_1__1__Impl_in_rule__CLASS_ID__Group_0_1__11887 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_0_1__1__Impl1914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_1__0__Impl_in_rule__CLASS_ID__Group_1__01947 = new BitSet(new long[]{0x000000000006D820L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_1__1_in_rule__CLASS_ID__Group_1__01950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__CLASS_ID__Group_1__0__Impl1978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_1__1__Impl_in_rule__CLASS_ID__Group_1__12009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_1__1__Impl2036 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2__0__Impl_in_rule__CLASS_ID__Group_2__02069 = new BitSet(new long[]{0x000000000006D820L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2__1_in_rule__CLASS_ID__Group_2__02072 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__CLASS_ID__Group_2__0__Impl2100 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2__1__Impl_in_rule__CLASS_ID__Group_2__12131 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2__2_in_rule__CLASS_ID__Group_2__12134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_2__1__Impl2161 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_2__2__Impl_in_rule__CLASS_ID__Group_2__22190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__CLASS_ID__Group_2__2__Impl2218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_3__0__Impl_in_rule__CLASS_ID__Group_3__02255 = new BitSet(new long[]{0x000000000006D820L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_3__1_in_rule__CLASS_ID__Group_3__02258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__CLASS_ID__Group_3__0__Impl2286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_3__1__Impl_in_rule__CLASS_ID__Group_3__12317 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_3__2_in_rule__CLASS_ID__Group_3__12320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_3__1__Impl2347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_3__2__Impl_in_rule__CLASS_ID__Group_3__22376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__CLASS_ID__Group_3__2__Impl2404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_4__0__Impl_in_rule__CLASS_ID__Group_4__02441 = new BitSet(new long[]{0x000000000006D820L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_4__1_in_rule__CLASS_ID__Group_4__02444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__CLASS_ID__Group_4__0__Impl2472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_4__1__Impl_in_rule__CLASS_ID__Group_4__12503 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_4__2_in_rule__CLASS_ID__Group_4__12506 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__CLASS_ID__Group_4__1__Impl2533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CLASS_ID__Group_4__2__Impl_in_rule__CLASS_ID__Group_4__22562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__CLASS_ID__Group_4__2__Impl2590 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group__0__Impl_in_rule__Bundle__Group__02627 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Bundle__Group__1_in_rule__Bundle__Group__02630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__Bundle__Group__0__Impl2658 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group__1__Impl_in_rule__Bundle__Group__12689 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Bundle__Group__2_in_rule__Bundle__Group__12692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__ComponentAssignment_1_in_rule__Bundle__Group__1__Impl2719 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group__2__Impl_in_rule__Bundle__Group__22749 = new BitSet(new long[]{0x0000000000108000L});
+    public static final BitSet FOLLOW_rule__Bundle__Group__3_in_rule__Bundle__Group__22752 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__NameAssignment_2_in_rule__Bundle__Group__2__Impl2779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group__3__Impl_in_rule__Bundle__Group__32809 = new BitSet(new long[]{0x0000000000108000L});
+    public static final BitSet FOLLOW_rule__Bundle__Group__4_in_rule__Bundle__Group__32812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group_3__0_in_rule__Bundle__Group__3__Impl2839 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group__4__Impl_in_rule__Bundle__Group__42870 = new BitSet(new long[]{0x0000000000200020L});
+    public static final BitSet FOLLOW_rule__Bundle__Group__5_in_rule__Bundle__Group__42873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__Bundle__Group__4__Impl2901 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group__5__Impl_in_rule__Bundle__Group__52932 = new BitSet(new long[]{0x0000000000200020L});
+    public static final BitSet FOLLOW_rule__Bundle__Group__6_in_rule__Bundle__Group__52935 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__PromiseTypeAssignment_5_in_rule__Bundle__Group__5__Impl2962 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_rule__Bundle__Group__6__Impl_in_rule__Bundle__Group__62993 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Bundle__Group__6__Impl3021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group_3__0__Impl_in_rule__Bundle__Group_3__03066 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Bundle__Group_3__1_in_rule__Bundle__Group_3__03069 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Bundle__Group_3__0__Impl3097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group_3__1__Impl_in_rule__Bundle__Group_3__13128 = new BitSet(new long[]{0x0000000000012000L});
+    public static final BitSet FOLLOW_rule__Bundle__Group_3__2_in_rule__Bundle__Group_3__13131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__VariablesAssignment_3_1_in_rule__Bundle__Group_3__1__Impl3158 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group_3__2__Impl_in_rule__Bundle__Group_3__23188 = new BitSet(new long[]{0x0000000000012000L});
+    public static final BitSet FOLLOW_rule__Bundle__Group_3__3_in_rule__Bundle__Group_3__23191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group_3_2__0_in_rule__Bundle__Group_3__2__Impl3218 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group_3__3__Impl_in_rule__Bundle__Group_3__33249 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Bundle__Group_3__3__Impl3277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group_3_2__0__Impl_in_rule__Bundle__Group_3_2__03316 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Bundle__Group_3_2__1_in_rule__Bundle__Group_3_2__03319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Bundle__Group_3_2__0__Impl3347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__Group_3_2__1__Impl_in_rule__Bundle__Group_3_2__13378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bundle__VariablesAssignment_3_2_1_in_rule__Bundle__Group_3_2__1__Impl3405 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__0__Impl_in_rule__BundlePromiseType__Group__03439 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__1_in_rule__BundlePromiseType__Group__03442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromiseType__NameAssignment_0_in_rule__BundlePromiseType__Group__0__Impl3469 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__1__Impl_in_rule__BundlePromiseType__Group__13499 = new BitSet(new long[]{0x000000000006D860L});
+    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__2_in_rule__BundlePromiseType__Group__13502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__BundlePromiseType__Group__1__Impl3530 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__2__Impl_in_rule__BundlePromiseType__Group__23561 = new BitSet(new long[]{0x000000000006D860L});
+    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__3_in_rule__BundlePromiseType__Group__23564 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromiseType__PromisesAssignment_2_in_rule__BundlePromiseType__Group__2__Impl3591 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__BundlePromiseType__Group__3__Impl_in_rule__BundlePromiseType__Group__33622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromiseType__ClassesAssignment_3_in_rule__BundlePromiseType__Group__3__Impl3649 = new BitSet(new long[]{0x000000000006D822L});
+    public static final BitSet FOLLOW_rule__BundleClass__Group__0__Impl_in_rule__BundleClass__Group__03688 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__BundleClass__Group__1_in_rule__BundleClass__Group__03691 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundleClass__NameAssignment_0_in_rule__BundleClass__Group__0__Impl3718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundleClass__Group__1__Impl_in_rule__BundleClass__Group__13748 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__BundleClass__Group__2_in_rule__BundleClass__Group__13751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__BundleClass__Group__1__Impl3779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundleClass__Group__2__Impl_in_rule__BundleClass__Group__23810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundleClass__PromisesAssignment_2_in_rule__BundleClass__Group__2__Impl3837 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__BundlePromise__Group__0__Impl_in_rule__BundlePromise__Group__03874 = new BitSet(new long[]{0x0000000001000020L});
+    public static final BitSet FOLLOW_rule__BundlePromise__Group__1_in_rule__BundlePromise__Group__03877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromise__NameAssignment_0_in_rule__BundlePromise__Group__0__Impl3904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromise__Group__1__Impl_in_rule__BundlePromise__Group__13934 = new BitSet(new long[]{0x0000000001000020L});
+    public static final BitSet FOLLOW_rule__BundlePromise__Group__2_in_rule__BundlePromise__Group__13937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromise__Group_1__0_in_rule__BundlePromise__Group__1__Impl3964 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_rule__BundlePromise__Group__2__Impl_in_rule__BundlePromise__Group__23995 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__BundlePromise__Group__2__Impl4023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromise__Group_1__0__Impl_in_rule__BundlePromise__Group_1__04060 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__BundlePromise__Group_1__1_in_rule__BundlePromise__Group_1__04063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromise__ValuesAssignment_1_0_in_rule__BundlePromise__Group_1__0__Impl4090 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromise__Group_1__1__Impl_in_rule__BundlePromise__Group_1__14120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromise__Group_1_1__0_in_rule__BundlePromise__Group_1__1__Impl4147 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_rule__BundlePromise__Group_1_1__0__Impl_in_rule__BundlePromise__Group_1_1__04182 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__BundlePromise__Group_1_1__1_in_rule__BundlePromise__Group_1_1__04185 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__BundlePromise__Group_1_1__0__Impl4213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromise__Group_1_1__1__Impl_in_rule__BundlePromise__Group_1_1__14244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BundlePromise__ValuesAssignment_1_1_1_in_rule__BundlePromise__Group_1_1__1__Impl4271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group__0__Impl_in_rule__PromiseValue__Group__04305 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group__1_in_rule__PromiseValue__Group__04308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__KeywordAssignment_0_in_rule__PromiseValue__Group__0__Impl4335 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group__1__Impl_in_rule__PromiseValue__Group__14365 = new BitSet(new long[]{0x0000000000100060L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group__2_in_rule__PromiseValue__Group__14368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__PromiseValue__Group__1__Impl4396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group__2__Impl_in_rule__PromiseValue__Group__24427 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Alternatives_2_in_rule__PromiseValue__Group__2__Impl4454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__0__Impl_in_rule__PromiseValue__Group_2_1__04490 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__1_in_rule__PromiseValue__Group_2_1__04493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__PromiseValue__Group_2_1__0__Impl4521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__1__Impl_in_rule__PromiseValue__Group_2_1__14552 = new BitSet(new long[]{0x0000000000202000L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__2_in_rule__PromiseValue__Group_2_1__14555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Alternatives_2_1_1_in_rule__PromiseValue__Group_2_1__1__Impl4582 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__2__Impl_in_rule__PromiseValue__Group_2_1__24612 = new BitSet(new long[]{0x0000000000202000L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__3_in_rule__PromiseValue__Group_2_1__24615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1_2__0_in_rule__PromiseValue__Group_2_1__2__Impl4642 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1__3__Impl_in_rule__PromiseValue__Group_2_1__34673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__PromiseValue__Group_2_1__3__Impl4701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1_2__0__Impl_in_rule__PromiseValue__Group_2_1_2__04740 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1_2__1_in_rule__PromiseValue__Group_2_1_2__04743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__PromiseValue__Group_2_1_2__0__Impl4771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_1_2__1__Impl_in_rule__PromiseValue__Group_2_1_2__14802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Alternatives_2_1_2_1_in_rule__PromiseValue__Group_2_1_2__1__Impl4829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__0__Impl_in_rule__PromiseValue__Group_2_2__04863 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__1_in_rule__PromiseValue__Group_2_2__04866 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__PromiseValue__Group_2_2__0__Impl4894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__1__Impl_in_rule__PromiseValue__Group_2_2__14925 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__2_in_rule__PromiseValue__Group_2_2__14928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__PromiseValue__Group_2_2__1__Impl4956 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__2__Impl_in_rule__PromiseValue__Group_2_2__24987 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__3_in_rule__PromiseValue__Group_2_2__24990 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__PromiseValue__Group_2_2__2__Impl5018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__3__Impl_in_rule__PromiseValue__Group_2_2__35049 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__4_in_rule__PromiseValue__Group_2_2__35052 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PromiseValue__Group_2_2__3__Impl5079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__4__Impl_in_rule__PromiseValue__Group_2_2__45108 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__5_in_rule__PromiseValue__Group_2_2__45111 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__PromiseValue__Group_2_2__4__Impl5139 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PromiseValue__Group_2_2__5__Impl_in_rule__PromiseValue__Group_2_2__55170 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__PromiseValue__Group_2_2__5__Impl5198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__0__Impl_in_rule__Body__Group__05241 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Body__Group__1_in_rule__Body__Group__05244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__Body__Group__0__Impl5272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__1__Impl_in_rule__Body__Group__15303 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Body__Group__2_in_rule__Body__Group__15306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__ComponentAssignment_1_in_rule__Body__Group__1__Impl5333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__2__Impl_in_rule__Body__Group__25363 = new BitSet(new long[]{0x0000000000108000L});
+    public static final BitSet FOLLOW_rule__Body__Group__3_in_rule__Body__Group__25366 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__NameAssignment_2_in_rule__Body__Group__2__Impl5393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__3__Impl_in_rule__Body__Group__35423 = new BitSet(new long[]{0x0000000000108000L});
+    public static final BitSet FOLLOW_rule__Body__Group__4_in_rule__Body__Group__35426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_3__0_in_rule__Body__Group__3__Impl5453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__4__Impl_in_rule__Body__Group__45484 = new BitSet(new long[]{0x000000000026D820L});
+    public static final BitSet FOLLOW_rule__Body__Group__5_in_rule__Body__Group__45487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__Body__Group__4__Impl5515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__5__Impl_in_rule__Body__Group__55546 = new BitSet(new long[]{0x000000000026D820L});
+    public static final BitSet FOLLOW_rule__Body__Group__6_in_rule__Body__Group__55549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__PromiseTypeAssignment_5_in_rule__Body__Group__5__Impl5576 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_rule__Body__Group__6__Impl_in_rule__Body__Group__65607 = new BitSet(new long[]{0x000000000026D820L});
+    public static final BitSet FOLLOW_rule__Body__Group__7_in_rule__Body__Group__65610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__ClassesAssignment_6_in_rule__Body__Group__6__Impl5637 = new BitSet(new long[]{0x000000000006D822L});
+    public static final BitSet FOLLOW_rule__Body__Group__7__Impl_in_rule__Body__Group__75668 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Body__Group__7__Impl5696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_3__0__Impl_in_rule__Body__Group_3__05743 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Body__Group_3__1_in_rule__Body__Group_3__05746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Body__Group_3__0__Impl5774 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_3__1__Impl_in_rule__Body__Group_3__15805 = new BitSet(new long[]{0x0000000000012000L});
+    public static final BitSet FOLLOW_rule__Body__Group_3__2_in_rule__Body__Group_3__15808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__VariablesAssignment_3_1_in_rule__Body__Group_3__1__Impl5835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_3__2__Impl_in_rule__Body__Group_3__25865 = new BitSet(new long[]{0x0000000000012000L});
+    public static final BitSet FOLLOW_rule__Body__Group_3__3_in_rule__Body__Group_3__25868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_3_2__0_in_rule__Body__Group_3__2__Impl5895 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_rule__Body__Group_3__3__Impl_in_rule__Body__Group_3__35926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Body__Group_3__3__Impl5954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_3_2__0__Impl_in_rule__Body__Group_3_2__05993 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Body__Group_3_2__1_in_rule__Body__Group_3_2__05996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Body__Group_3_2__0__Impl6024 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_3_2__1__Impl_in_rule__Body__Group_3_2__16055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__VariablesAssignment_3_2_1_in_rule__Body__Group_3_2__1__Impl6082 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyClass__Group__0__Impl_in_rule__BodyClass__Group__06116 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__BodyClass__Group__1_in_rule__BodyClass__Group__06119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyClass__NameAssignment_0_in_rule__BodyClass__Group__0__Impl6146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyClass__Group__1__Impl_in_rule__BodyClass__Group__16176 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__BodyClass__Group__2_in_rule__BodyClass__Group__16179 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__BodyClass__Group__1__Impl6207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyClass__Group__2__Impl_in_rule__BodyClass__Group__26238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyClass__PromiseTypeAssignment_2_in_rule__BodyClass__Group__2__Impl6265 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group__0__Impl_in_rule__BodyFunction__Group__06302 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group__1_in_rule__BodyFunction__Group__06305 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__NameAssignment_0_in_rule__BodyFunction__Group__0__Impl6332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group__1__Impl_in_rule__BodyFunction__Group__16362 = new BitSet(new long[]{0x0000000000100060L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group__2_in_rule__BodyFunction__Group__16365 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__BodyFunction__Group__1__Impl6393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group__2__Impl_in_rule__BodyFunction__Group__26424 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group__3_in_rule__BodyFunction__Group__26427 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Alternatives_2_in_rule__BodyFunction__Group__2__Impl6454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group__3__Impl_in_rule__BodyFunction__Group__36484 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__BodyFunction__Group__3__Impl6512 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__0__Impl_in_rule__BodyFunction__Group_2_1__06551 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__1_in_rule__BodyFunction__Group_2_1__06554 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__ListAssignment_2_1_0_in_rule__BodyFunction__Group_2_1__0__Impl6581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__1__Impl_in_rule__BodyFunction__Group_2_1__16611 = new BitSet(new long[]{0x0000000000202000L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__2_in_rule__BodyFunction__Group_2_1__16614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__ValuesAssignment_2_1_1_in_rule__BodyFunction__Group_2_1__1__Impl6641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__2__Impl_in_rule__BodyFunction__Group_2_1__26671 = new BitSet(new long[]{0x0000000000202000L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__3_in_rule__BodyFunction__Group_2_1__26674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1_2__0_in_rule__BodyFunction__Group_2_1__2__Impl6701 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1__3__Impl_in_rule__BodyFunction__Group_2_1__36732 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__BodyFunction__Group_2_1__3__Impl6760 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1_2__0__Impl_in_rule__BodyFunction__Group_2_1_2__06799 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1_2__1_in_rule__BodyFunction__Group_2_1_2__06802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__BodyFunction__Group_2_1_2__0__Impl6830 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_1_2__1__Impl_in_rule__BodyFunction__Group_2_1_2__16861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__ValuesAssignment_2_1_2_1_in_rule__BodyFunction__Group_2_1_2__1__Impl6888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__0__Impl_in_rule__BodyFunction__Group_2_3__06922 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__1_in_rule__BodyFunction__Group_2_3__06925 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__BodyFunction__Group_2_3__0__Impl6953 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__1__Impl_in_rule__BodyFunction__Group_2_3__16984 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__2_in_rule__BodyFunction__Group_2_3__16987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__BodyFunction__Group_2_3__1__Impl7015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__2__Impl_in_rule__BodyFunction__Group_2_3__27046 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__3_in_rule__BodyFunction__Group_2_3__27049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__BodyFunction__Group_2_3__2__Impl7077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__3__Impl_in_rule__BodyFunction__Group_2_3__37108 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__4_in_rule__BodyFunction__Group_2_3__37111 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__BodyFunction__Group_2_3__3__Impl7138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__4__Impl_in_rule__BodyFunction__Group_2_3__47167 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__5_in_rule__BodyFunction__Group_2_3__47170 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__BodyFunction__Group_2_3__4__Impl7198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BodyFunction__Group_2_3__5__Impl_in_rule__BodyFunction__Group_2_3__57229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__BodyFunction__Group_2_3__5__Impl7257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__Group__0__Impl_in_rule__SimpleFunction__Group__07300 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__Group__1_in_rule__SimpleFunction__Group__07303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__IdAssignment_0_in_rule__SimpleFunction__Group__0__Impl7330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__Group__1__Impl_in_rule__SimpleFunction__Group__17360 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__Group__2_in_rule__SimpleFunction__Group__17363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__SimpleFunction__Group__1__Impl7391 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__Group__2__Impl_in_rule__SimpleFunction__Group__27422 = new BitSet(new long[]{0x0000000000012000L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__Group__3_in_rule__SimpleFunction__Group__27425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__ValuesAssignment_2_in_rule__SimpleFunction__Group__2__Impl7452 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__Group__3__Impl_in_rule__SimpleFunction__Group__37482 = new BitSet(new long[]{0x0000000000012000L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__Group__4_in_rule__SimpleFunction__Group__37485 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__Group_3__0_in_rule__SimpleFunction__Group__3__Impl7512 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__Group__4__Impl_in_rule__SimpleFunction__Group__47543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__SimpleFunction__Group__4__Impl7571 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__Group_3__0__Impl_in_rule__SimpleFunction__Group_3__07612 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__Group_3__1_in_rule__SimpleFunction__Group_3__07615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__SimpleFunction__Group_3__0__Impl7643 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__Group_3__1__Impl_in_rule__SimpleFunction__Group_3__17674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SimpleFunction__ValuesAssignment_3_1_in_rule__SimpleFunction__Group_3__1__Impl7701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__0__Impl_in_rule__SpecialFunction__Group__07735 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__1_in_rule__SpecialFunction__Group__07738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__IdAssignment_0_in_rule__SpecialFunction__Group__0__Impl7765 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__1__Impl_in_rule__SpecialFunction__Group__17795 = new BitSet(new long[]{0x0000000030012070L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__2_in_rule__SpecialFunction__Group__17798 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__SpecialFunction__Group__1__Impl7826 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__2__Impl_in_rule__SpecialFunction__Group__27857 = new BitSet(new long[]{0x0000000030012070L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__3_in_rule__SpecialFunction__Group__27860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Alternatives_2_in_rule__SpecialFunction__Group__2__Impl7887 = new BitSet(new long[]{0x0000000030002072L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group__3__Impl_in_rule__SpecialFunction__Group__37918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__SpecialFunction__Group__3__Impl7946 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_4__0__Impl_in_rule__SpecialFunction__Group_2_4__07985 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_4__1_in_rule__SpecialFunction__Group_2_4__07988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__SpecialFunction__Group_2_4__0__Impl8016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_4__1__Impl_in_rule__SpecialFunction__Group_2_4__18047 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_4__2_in_rule__SpecialFunction__Group_2_4__18050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_2_4__1__Impl8077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_4__2__Impl_in_rule__SpecialFunction__Group_2_4__28106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__SpecialFunction__Group_2_4__2__Impl8134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__0__Impl_in_rule__SpecialFunction__Group_2_5__08171 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__1_in_rule__SpecialFunction__Group_2_5__08174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__SpecialFunction__Group_2_5__0__Impl8202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__1__Impl_in_rule__SpecialFunction__Group_2_5__18233 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__2_in_rule__SpecialFunction__Group_2_5__18236 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__Group_2_5__1__Impl8263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SpecialFunction__Group_2_5__2__Impl_in_rule__SpecialFunction__Group_2_5__28292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__SpecialFunction__Group_2_5__2__Impl8320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractElement_in_rule__CfModel__ElementsAssignment8362 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundleComponent_in_rule__Bundle__ComponentAssignment_18393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Bundle__NameAssignment_28424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Bundle__VariablesAssignment_3_18455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Bundle__VariablesAssignment_3_2_18486 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundlePromiseType_in_rule__Bundle__PromiseTypeAssignment_58517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__BundlePromiseType__NameAssignment_08548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundlePromise_in_rule__BundlePromiseType__PromisesAssignment_28579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundleClass_in_rule__BundlePromiseType__ClassesAssignment_38610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__BundleClass__NameAssignment_08641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBundlePromise_in_rule__BundleClass__PromisesAssignment_28672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__BundlePromise__NameAssignment_08703 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePromiseValue_in_rule__BundlePromise__ValuesAssignment_1_08734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePromiseValue_in_rule__BundlePromise__ValuesAssignment_1_1_18765 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PromiseValue__KeywordAssignment_08796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__PromiseValue__ValuesAssignment_2_0_08827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleFunction_in_rule__PromiseValue__FunctionsAssignment_2_0_18858 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PromiseValue__ValuesAssignment_2_0_28889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__PromiseValue__ValuesAssignment_2_1_1_08920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleFunction_in_rule__PromiseValue__FunctionsAssignment_2_1_1_18951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__PromiseValue__ValuesAssignment_2_1_2_1_08982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSimpleFunction_in_rule__PromiseValue__FunctionsAssignment_2_1_2_1_19013 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyComponent_in_rule__Body__ComponentAssignment_19044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Body__NameAssignment_29075 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_19106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Body__VariablesAssignment_3_2_19137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyFunction_in_rule__Body__PromiseTypeAssignment_59168 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyClass_in_rule__Body__ClassesAssignment_69199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCLASS_ID_in_rule__BodyClass__NameAssignment_09230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyFunction_in_rule__BodyClass__PromiseTypeAssignment_29261 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBodyPromiseType_in_rule__BodyFunction__NameAssignment_09292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_09323 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__BodyFunction__ListAssignment_2_1_09359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_19398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__BodyFunction__ValuesAssignment_2_1_2_19429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSpecialFunction_in_rule__BodyFunction__FunctionAssignment_2_29460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SimpleFunction__IdAssignment_09491 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SimpleFunction__ValuesAssignment_29522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SimpleFunction__ValuesAssignment_3_19553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SpecialFunction__IdAssignment_09584 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSpecialFunction_in_rule__SpecialFunction__FuncAssignment_2_69615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__BodyPromiseType__NameAssignment9646 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__BundleComponent__NameAssignment9677 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__BodyComponent__NameAssignment9708 = new BitSet(new long[]{0x0000000000000002L});
 
 }

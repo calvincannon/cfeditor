@@ -38,6 +38,7 @@ public class CfengineParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getCLASS_IDAccess().getAlternatives(), "rule__CLASS_ID__Alternatives");
+					put(grammarAccess.getCLASS_IDAccess().getAlternatives_0_1_0(), "rule__CLASS_ID__Alternatives_0_1_0");
 					put(grammarAccess.getAbstractElementAccess().getAlternatives(), "rule__AbstractElement__Alternatives");
 					put(grammarAccess.getPromiseValueAccess().getAlternatives_2(), "rule__PromiseValue__Alternatives_2");
 					put(grammarAccess.getPromiseValueAccess().getAlternatives_2_0(), "rule__PromiseValue__Alternatives_2_0");
@@ -49,7 +50,8 @@ public class CfengineParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCLASS_IDAccess().getGroup_0_1(), "rule__CLASS_ID__Group_0_1__0");
 					put(grammarAccess.getCLASS_IDAccess().getGroup_1(), "rule__CLASS_ID__Group_1__0");
 					put(grammarAccess.getCLASS_IDAccess().getGroup_2(), "rule__CLASS_ID__Group_2__0");
-					put(grammarAccess.getCLASS_IDAccess().getGroup_2_3(), "rule__CLASS_ID__Group_2_3__0");
+					put(grammarAccess.getCLASS_IDAccess().getGroup_3(), "rule__CLASS_ID__Group_3__0");
+					put(grammarAccess.getCLASS_IDAccess().getGroup_4(), "rule__CLASS_ID__Group_4__0");
 					put(grammarAccess.getBundleAccess().getGroup(), "rule__Bundle__Group__0");
 					put(grammarAccess.getBundleAccess().getGroup_3(), "rule__Bundle__Group_3__0");
 					put(grammarAccess.getBundleAccess().getGroup_3_2(), "rule__Bundle__Group_3_2__0");
