@@ -5,7 +5,7 @@
       version="1.0.0.qualifier"
       provider-name="cfeditor.org">
 
-   <description url="http://code.google.com/a/eclipselabs.org/p/cfeditor/">
+   <description url="http://cfeditor.org/">
       cfeditor stays for configuration editor and is designed for the
 cfengine version 3 Configuration Management Engine. More about
 cfengine: http://www.cfengine.org.
